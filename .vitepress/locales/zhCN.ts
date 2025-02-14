@@ -127,7 +127,7 @@ function sidebarDeploy(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-export const search: DefaultTheme.AlgoliaSearchOptions["locales"] = {
+export const zhSearch: DefaultTheme.AlgoliaSearchOptions["locales"] = {
   root: {
     placeholder: "搜索文档",
     translations: {

@@ -26,7 +26,7 @@ export const enUS = defineConfig({
     footer: {
       message:
         "Technical support provided by Xinjiang Mengsen Software Development Studio",
-      copyright: `Copyright © 2023-${new Date().getFullYear()} <a href="https://beian.miit.gov.cn" rel="noreferrer" target="_blank">XinICP No. 2023003452-1</a>`,
+      copyright: `Copyright © 2023-${new Date().getFullYear()} <a href="https://beian.miit.gov.cn" rel="noreferrer" target="_blank">新ICP备2023003452号-1</a>`,
     },
 
     docFooter: {
@@ -127,8 +127,8 @@ function sidebarDeploy(): DefaultTheme.SidebarItem[] {
   ];
 }
 
-export const search: DefaultTheme.AlgoliaSearchOptions["locales"] = {
-  root: {
+export const enSearch: DefaultTheme.AlgoliaSearchOptions["locales"] = {
+  en: {
     placeholder: "Search documents",
     translations: {
       button: {

@@ -2,8 +2,8 @@ import { defineConfig } from "vitepress";
 import { route } from "./config/config.base.route.mts";
 import { markdown } from "./config/config.base.markdown.mts";
 import { build } from "./config/config.base.build.mts";
-import { zhCN } from "./locales/zhCN";
-import { enUS } from "./locales/enUS";
+import { zhCN, zhSearch } from "./locales/zhCN";
+import { enSearch, enUS } from "./locales/enUS";
 
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -44,6 +44,7 @@ export default defineConfig({
   ],
   lang: "zh-CN",
   base: "/",
+  lastUpdated: true,
   sitemap: {
     hostname: "https://ammds.lifebus.top",
     transformItems(items) {
@@ -58,6 +59,15 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/QYG2297248353/AMMDS-Docker" },
       { icon: "twitter", link: "https://blog.lifebus.top" },
     ],
+    search: {
+      provider: "local",
+      options: {
+        locales: {
+          ...zhSearch,
+          ...enSearch,
+        },
+      },
+    },
   },
   locales: {
     root: {

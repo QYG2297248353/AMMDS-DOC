@@ -19,3 +19,5 @@ docker run -itd \
 ```
 
 通过浏览器，访问 http://127.0.0.1:8080 即可开始。
+
+<!--@include: ../snippets/copyright.md-->

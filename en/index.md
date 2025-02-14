@@ -6,6 +6,9 @@ hero:
   name: "AMMDS"
   text: "Personal Media Data Management Platform"
   tagline: Private Exclusive Data Platform
+  image:
+      src: /login-banner.png
+      alt: AMMDS
   actions:
     - theme: brand
       text: Quick Start
