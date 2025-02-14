@@ -1,0 +1,24 @@
+{
+  "name": "ammds",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "AMMDS 影视管理平台",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "author": "新疆萌森软件开发工作室",
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.56.3",
+    "@arco-plugins/vite-vue": "^1.4.5",
+    "less": "^4.2.2",
+    "unplugin-auto-import": "^19.0.0",
+    "unplugin-vue-components": "^28.0.0",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "markdown-it-mathjax3": "^4.3.2"
+  }
+}
