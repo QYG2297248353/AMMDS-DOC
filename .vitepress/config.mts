@@ -5,11 +5,6 @@ import { build } from "./config/config.base.build.mts";
 import { zhCN, zhSearch } from "./locales/zhCN";
 import { enSearch, enUS } from "./locales/enUS";
 
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import { ArcoResolver } from "unplugin-vue-components/resolvers";
-import { vitePluginForArco } from "@arco-plugins/vite-vue";
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ...route,
@@ -81,21 +76,6 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [
-      vitePluginForArco({
-        style: "css",
-      }),
-      AutoImport({
-        resolvers: [ArcoResolver()],
-      }),
-      Components({
-        resolvers: [
-          ArcoResolver({
-            sideEffect: true,
-          }),
-        ],
-      }),
-    ],
     server: {
       open: true,
       host: "127.0.0.1",

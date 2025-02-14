@@ -14,8 +14,6 @@
     "@arco-design/web-vue": "^2.56.3",
     "@arco-plugins/vite-vue": "^1.4.5",
     "less": "^4.2.2",
-    "unplugin-auto-import": "^19.0.0",
-    "unplugin-vue-components": "^28.0.0",
     "vitepress": "^1.6.3"
   },
   "dependencies": {
