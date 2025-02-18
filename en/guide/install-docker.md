@@ -17,7 +17,7 @@ docker run -itd \
   -v $(pwd)/download:/ammds/download \
   -v $(pwd)/media:/media \
   --restart always \
-  qyg2297248353/ammds-docker:latest
+  qyg2297248353/ammds:latest
 ```
 
 ::: details Command Explanation
@@ -31,7 +31,7 @@ docker run -itd \
 | `-v $(pwd)/download:/ammds/download`     | Mounts the `./download` folder from the current working directory to `/ammds/download` inside the container, used for storing downloaded content.                                                                                                                                                                                                                                                                    |
 | `-v $(pwd)/media:/media`                 | Mounts the `./media` folder from the current working directory to `/media` inside the container, suitable for mounting media directories; users should choose their own mount paths as needed.                                                                                                                                                                                                                       |
 | `--restart always`                       | Configures the container to always restart automatically, ensuring it starts up under all circumstances, including system restarts.                                                                                                                                                                                                                                                                                  |
-| `qyg2297248353/ammds-docker:latest`      | The Docker image name and tag used, specifying which image to run.                                                                                                                                                                                                                                                                                                                                                   |
+| `qyg2297248353/ammds:latest`             | The Docker image name and tag used, specifying which image to run.                                                                                                                                                                                                                                                                                                                                                   |
 :::
 
 ## Start Enjoying

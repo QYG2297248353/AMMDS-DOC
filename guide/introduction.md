@@ -9,11 +9,17 @@ AMMDS (Adult Movie MetaData Scraper)
 一款私人专属数据平台
 
 ::: danger 温馨提示
-如需使用在线模式，您需要配置集成插件。
+该软件为离线产品，数据来源由使用者手动录入。
 
-您在未开启集成插件前，所有操作均为离线模式，不受隐私协议限制。
+请勿在国内宣传该产品，如有需要请使用简称：`AMMDS`
+:::
 
-受到网络限制影响，部分集成插件需要网络支持。您可以通过购买会员加入我们的云服务。
+---
+
+::: danger 插件提示
+集成插件需要**网络功能**。
+
+如开启任一集成插件，将视为您**已同意接入网络连接**。
 :::
 
 ## 关于我们
@@ -57,7 +63,8 @@ AMMDS (Adult Movie MetaData Scraper)
 如果你喜欢这个应用程序或者它对你有所帮助，请考虑支持我们的项目。您的支持将帮助我们继续开发和维护这个应用，为用户提供更好的体验。
 
 - [快速开始](/guide/quick-start)
-- [官网](https://blog.lifebus.top)
+- [博客](https://blog.lifebus.top)
+- [官网](https://ammds.lifebus.top)
 - [GitHub](https://github.com/QYG2297248353/AMMDS-Docker)
 
 <!--@include: ../snippets/copyright.md-->

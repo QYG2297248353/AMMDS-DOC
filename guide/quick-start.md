@@ -15,7 +15,7 @@ docker run -itd \
   -v $(pwd)/download:/ammds/download \
   -v $(pwd)/media:/media \
   --restart always \
-  qyg2297248353/ammds-docker:latest
+  qyg2297248353/ammds:latest
 ```
 
 通过浏览器，访问 http://127.0.0.1:8080 即可开始。

@@ -23,7 +23,7 @@ mkdir ammds && cd ammds
 ```yaml
 services:
   ammds:
-    image: qyg2297248353/ammds-docker:latest  # 使用的镜像名称及版本标签
+    image: qyg2297248353/ammds:latest  # 使用的镜像名称及版本标签
     container_name: AMMDS  # 容器名称
     ports:
       - "8080:80"  # 端口映射：主机端口8080映射到容器内的80端口

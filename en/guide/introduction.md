@@ -8,6 +8,18 @@ AMMDS (Adult Movie MetaData Scraper)
 
 A private, dedicated data platform.
 
+::: danger Friendly Reminder
+This software is an offline product, and the data source is manually entered by the user.
+:::
+
+---
+
+::: danger Plugin Reminder
+Integrating plugins requires **network functionality**.
+
+By enabling any integrated plugin, you are considered to have **agreed to connect to the network**.
+:::
+
 ## About Us
 
 We are a group of people passionate about technology and innovation. Our team members not only have a strong background in software engineering but also a unique enthusiasm for movies and TV series. This passion inspired us to create AMMDS.

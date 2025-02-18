@@ -17,7 +17,7 @@ docker run -itd \
   -v $(pwd)/download:/ammds/download \
   -v $(pwd)/media:/media \
   --restart always \
-  qyg2297248353/ammds-docker:latest
+  qyg2297248353/ammds:latest
 ```
 
 ::: details 命令解释
@@ -31,7 +31,7 @@ docker run -itd \
 | `-v $(pwd)/download:/ammds/download`     | 将当前工作目录下的 `./download` 文件夹挂载到容器内的 `/ammds/download` 路径，用于下载内容的存储。                                                                                                                                                                                         |
 | `-v $(pwd)/media:/media`                 | 将当前工作目录下的 `./media` 文件夹挂载到容器内的 `/media` 路径，适，用于挂载媒体目录，用户请自行选择挂载路径。                                                                                                                                                                           |
 | `--restart always`                       | 设置容器总是自动重启，确保容器在任何情况下（包括系统重启）都能自动启动。                                                                                                                                                                                                                  |
-| `qyg2297248353/ammds-docker:latest`      | 使用的 Docker 镜像名称及标签，指定要运行哪个镜像。                                                                                                                                                                                                                                        |
+| `qyg2297248353/ammds:latest`             | 使用的 Docker 镜像名称及标签，指定要运行哪个镜像。                                                                                                                                                                                                                                        |
 :::
 
 ## 开始享受

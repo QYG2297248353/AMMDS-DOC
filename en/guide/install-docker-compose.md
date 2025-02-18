@@ -23,7 +23,7 @@ Within the `ammds` directory, create and edit a `docker-compose.yml` file. Paste
 ```yaml
 services:
   ammds:
-    image: qyg2297248353/ammds-docker:latest  # The name and tag of the image used
+    image: qyg2297248353/ammds:latest  # The name and tag of the image used
     container_name: AMMDS  # Name of the container
     ports:
       - "8080:80"  # Port mapping: host port 8080 to container port 80

@@ -15,7 +15,7 @@ docker run -itd \
   -v $(pwd)/download:/ammds/download \
   -v $(pwd)/media:/media \
   --restart always \
-  qyg2297248353/ammds-docker:latest
+  qyg2297248353/ammds:latest
 ```
 
 Through the browser, access http://127.0.0.1:8080 to get started.
