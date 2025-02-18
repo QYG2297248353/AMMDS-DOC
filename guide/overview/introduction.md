@@ -67,4 +67,4 @@ AMMDS (Adult Movie MetaData Scraper)
 - [官网](https://ammds.lifebus.top)
 - [GitHub](https://github.com/QYG2297248353/AMMDS-Docker)
 
-<!--@include: ../snippets/copyright.md-->
+<!--@include: ../../snippets/copyright.md-->

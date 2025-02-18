@@ -42,4 +42,4 @@ docker run -itd \
 
 🎉 现在您可以开始享受 AMMDS 提供的功能了！
 
-<!--@include: ../snippets/copyright.md-->
+<!--@include: ../../snippets/copyright.md-->

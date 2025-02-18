@@ -34,4 +34,4 @@ AMMDS需要带有Docker Compose插件的Docker：
 - **Docker Desktop**: 此GUI变体不推荐用于Linux，但可用于Windows或macOS。
 
 
-<!--@include: ../snippets/copyright.md-->
+<!--@include: ../../snippets/copyright.md-->

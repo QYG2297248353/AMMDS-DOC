@@ -41,4 +41,4 @@ AMMDS是一款专为影视爱好者设计的数据管理平台，它可以帮助
 - 在线商店：[立即访问](https://store.lifebus.top/)
 - GitHub：[参与贡献](https://github.com/QYG2297248353/AMMDS-Docker)
 
-<!--@include: ../snippets/copyright.md-->
+<!--@include: ../../snippets/copyright.md-->

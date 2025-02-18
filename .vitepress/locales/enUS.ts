@@ -59,7 +59,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "Guide",
-      link: "/en/guide/introduction",
+      link: "/en/guide/overview/introduction",
       activeMatch: "/en/guide/",
     },
     {
@@ -76,7 +76,7 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
           text: "Docker Hub",
-          link: "https://hub.docker.com/r/QYG2297248353/AMMDS-Docker",
+          link: "https://hub.docker.com/r/QYG2297248353/AMMDS",
         },
       ],
     },
@@ -96,18 +96,19 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: "Overview",
       collapsed: false,
       items: [
-        { text: "Introduction", link: "introduction" },
-        { text: "Quick start", link: "quick-start" },
-        { text: "Support The Project", link: "support-the-project" },
+        { text: "Introduction", link: "overview/introduction" },
+        { text: "Quick start", link: "overview/quick-start" },
+        { text: "Support The Project", link: "overview/support-the-project" },
       ],
     },
     {
       text: "Deployment",
       collapsed: false,
       items: [
-        { text: "Preface", link: "install-requirements" },
-        { text: "Docker", link: "install-docker" },
-        { text: "Docker Compose", link: "install-docker-compose" },
+        { text: "Preface", link: "deploy/install-requirements" },
+        { text: "Docker", link: "deploy/install-docker" },
+        { text: "Docker Compose", link: "deploy/install-docker-compose" },
+        { text: "1Panel", link: "deploy/install-1panel" },
       ],
     },
   ];

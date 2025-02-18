@@ -58,7 +58,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "使用指南",
-      link: "/guide/introduction",
+      link: "/guide/overview/introduction",
       activeMatch: "/guide/",
     },
     {
@@ -75,7 +75,7 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
           text: "Docker Hub",
-          link: "https://hub.docker.com/r/QYG2297248353/AMMDS-Docker",
+          link: "https://hub.docker.com/r/QYG2297248353/AMMDS",
         },
       ],
     },
@@ -96,18 +96,57 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: "概览",
       collapsed: false,
       items: [
-        { text: "简介", link: "introduction" },
-        { text: "快速开始", link: "quick-start" },
-        { text: "支持一下", link: "support-the-project" },
+        { text: "简介", link: "overview/introduction" },
+        { text: "快速开始", link: "overview/quick-start" },
+        { text: "支持一下", link: "overview/support-the-project" },
       ],
     },
     {
       text: "部署",
       collapsed: false,
       items: [
-        { text: "前言", link: "install-requirements" },
-        { text: "Docker", link: "install-docker" },
-        { text: "Docker Compose", link: "install-docker-compose" },
+        { text: "前言", link: "deploy/install-requirements" },
+        { text: "Docker", link: "deploy/install-docker" },
+        { text: "Docker Compose", link: "deploy/install-docker-compose" },
+        { text: "1Panel", link: "deploy/install-1panel" },
+      ],
+    },
+    {
+      text: "使用教程",
+      collapsed: false,
+      items: [
+        {
+          text: "任务管理",
+          collapsed: true,
+          items: [
+            { text: "任务配置", link: "usage/task/config" },
+            { text: "扫描日志", link: "usage/task/scan-log" },
+            { text: "刮削入库", link: "usage/task/scrape" },
+            { text: "刮削日志", link: "usage/task/scrape-log" },
+          ],
+        },
+        {
+          text: "媒体管理",
+          collapsed: true,
+          items: [
+            { text: "媒体库", link: "usage/library/media" },
+            { text: "演员库", link: "usage/library/actor" },
+          ],
+        },
+        {
+          text: "集成应用",
+          collapsed: true,
+          items: [
+            { text: "MetaTube", link: "usage/integration/MetaTube" },
+            { text: "Prowlarr", link: "usage/integration/Prowlarr" },
+            { text: "JellyFin", link: "usage/integration/JellyFin" },
+          ],
+        },
+        {
+          text: "系统管理",
+          collapsed: true,
+          items: [{ text: "标签管理", link: "usage/system/label" }],
+        },
       ],
     },
   ];

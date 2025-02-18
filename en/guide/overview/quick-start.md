@@ -2,9 +2,9 @@
 outline: deep
 ---
 
-# 快速开始
+# Quick start
 
-在已安装Docker的终端中执行
+Execute in a terminal with Docker installed
 
 ```sh [docker-cli]
 docker run -itd \
@@ -18,6 +18,8 @@ docker run -itd \
   qyg2297248353/ammds:latest
 ```
 
-通过浏览器，访问 http://127.0.0.1:8080 即可开始。
+Through the browser, access http://127.0.0.1:8080 to get started.
 
-<!--@include: ../snippets/copyright.md-->
+<!--@include: ../../snippets/setup-finish.md-->
+
+<!--@include: ../../snippets/copyright.md-->
