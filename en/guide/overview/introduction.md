@@ -26,6 +26,8 @@ We are a group of people passionate about technology and innovation. Our team me
 
 A platform specifically designed for managing and enjoying personal film and television libraries.
 
+<a-image style="border-radius: 12px" src="/ammds-banner.png" />
+
 ## Project Origin
 
 One day, while discussing how to better save, share, and organize our collections of movies and TV series, we found that there was a lack of applications that could automatically organize, enrich metadata, and support multi-platform access. Thus, we decided to develop such a tool that not only helps users easily manage their film and television collections but also greatly improves organization efficiency through smart algorithms that match local files with online metadata.
