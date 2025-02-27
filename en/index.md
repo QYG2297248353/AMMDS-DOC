@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /guide/quick-start
+      link: /en/guide/overview/quick-start
     - theme: alt
       text: Official Website
       link: https://blog.lifebus.top
