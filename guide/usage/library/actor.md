@@ -6,7 +6,7 @@ outline: deep
 
 演员管理界面用于管理媒体库中的演员信息。用户可以搜索、添加、查看和管理演员的详细信息。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/media-actor-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/media-actor-001.png" />
 
 ## 主要功能
 

@@ -6,7 +6,7 @@ outline: deep
 
 扫描日志界面用于显示和管理媒体扫描任务的执行情况。用户可以查看任务的详细信息，包括任务名称、类型、耗时、状态等，并进行相应的操作。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/task-scan-log-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/task-scan-log-001.png" />
 
 ### 任务筛选
 - **功能描述**：允许用户根据不同的条件筛选任务，以便快速找到所需的任务记录。

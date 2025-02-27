@@ -6,7 +6,7 @@ outline: deep
 
 刮削日志界面用于显示和管理媒体刮削任务的执行情况。用户可以查看任务的详细信息，包括任务名称、刮削结果、耗时、状态等，并进行相应的操作。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/task-scrape-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/task-scrape-001.png" />
 
 ### 检索条件
 - **功能描述**：允许用户根据不同的条件筛选刮削任务，以便快速找到所需的任务记录。

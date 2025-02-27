@@ -10,7 +10,7 @@ outline: deep
 该功能需要集成插件 `MetaTube` 的支持。
 :::
 
-<a-image style="border-radius: 12px" src="/public/images/usage/task-scrape-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/task-scrape-001.png" />
 
 ### 刮削入库
 - **功能描述**：自动从数据库中获取视频的元数据，并将视频文件添加到媒体库中。

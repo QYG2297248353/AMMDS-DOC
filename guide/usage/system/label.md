@@ -6,7 +6,7 @@ outline: deep
 
 标签管理界面用于管理系统中的各种标签，包括影视标签、演员标签、影视类型、演员风格和演员特征。用户可以添加、编辑和删除标签，以便更好地组织和分类媒体内容。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/system-label-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/system-label-001.png" />
 
 ### 添加标签
 - **功能描述**：允许用户添加新的标签到系统中。

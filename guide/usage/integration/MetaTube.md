@@ -6,7 +6,7 @@ outline: deep
 
 MetaTube 插件是一个媒体服务器插件，主要用于 Emby 和 Jellyfin 媒体服务器。它从互联网上抓取内容并响应 JSON 数据，然后通过预安装的 MetaTube 插件请求服务器并下载相应的元数据，以与 Jellyfin/Emby 服务器配合使用。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/integration-metatube-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/integration-metatube-001.png" />
 
 ### 启用状态
 - **功能描述**：控制 MetaTube 插件的启用或禁用。

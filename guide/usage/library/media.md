@@ -6,7 +6,7 @@ outline: deep
 
 媒体库界面用于展示和管理用户收藏的媒体资源。用户可以搜索、添加、查看和管理媒体信息，包括封面、标题、描述、标签等。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/media-movie-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/media-movie-001.png" />
 
 ### 搜索条件
 - **功能描述**：允许用户根据不同的条件搜索媒体资源。

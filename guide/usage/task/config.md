@@ -14,10 +14,10 @@ outline: deep
 
 建议针对不同目录，创建不同任务类型。
 
-<a-image style="border-radius: 12px" src="/public/images/usage/task-config-001.png" />
+<a-image style="border-radius: 12px" src="/images/usage/task-config-001.png" />
 
 
-<a-image style="border-radius: 12px" src="/public/images/usage/task-config-002.png" />
+<a-image style="border-radius: 12px" src="/images/usage/task-config-002.png" />
 
 
 | 字段名称             | 描述                                       | 备注                           |
