@@ -154,14 +154,18 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
 function sidebarDeploy(): DefaultTheme.SidebarItem[] {
   return [
     {
+      text: "集成说明",
+      link: "introduction",
+    },
+    {
       text: "已支持应用",
       collapsed: false,
-      items: [{ text: "前言", link: "introduction" }],
+      items: [{ text: "MetaTube", link: "support/MetaTube" }],
     },
     {
       text: "即将支持应用",
       collapsed: false,
-      items: [{ text: "前言", link: "introduction" }],
+      items: [{ text: "IYUU", link: "unsupport/IYUU" }],
     },
   ];
 }
