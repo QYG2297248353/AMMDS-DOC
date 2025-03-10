@@ -109,6 +109,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: "Docker", link: "deploy/install-docker" },
         { text: "Docker Compose", link: "deploy/install-docker-compose" },
         { text: "1Panel", link: "deploy/install-1panel" },
+        { text: "环境变量", link: "deploy/install-environment" },
       ],
     },
     {
@@ -149,8 +150,23 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
       ],
     },
+    {
+      text: "快捷教程",
+      collapsed: false,
+      items: [
+        {
+          text: "扫描刮削",
+          link: "quick/scan-scrape/scan-scrape",
+        },
+        {
+          text: "自动辅种",
+          link: "quick/auto-seed/auto-seed",
+        },
+      ],
+    },
   ];
 }
+
 function sidebarDeploy(): DefaultTheme.SidebarItem[] {
   return [
     {
@@ -160,12 +176,15 @@ function sidebarDeploy(): DefaultTheme.SidebarItem[] {
     {
       text: "已支持应用",
       collapsed: false,
-      items: [{ text: "MetaTube", link: "support/MetaTube" }],
+      items: [
+        { text: "MetaTube", link: "support/MetaTube" },
+        { text: "IYUU", link: "support/IYUU" },
+      ],
     },
     {
       text: "即将支持应用",
       collapsed: false,
-      items: [{ text: "IYUU", link: "unsupport/IYUU" }],
+      items: [{ text: "Prowlarr", link: "unsupport/Prowlarr" }],
     },
   ];
 }

@@ -43,6 +43,10 @@ networks:
     driver: bridge  # 使用Docker默认的bridge网络驱动
 ```
 
+::: tip 提示
+请自行挂载媒体目录到容器中，请勿使用 `/ammds/data` 和 `/ammds/db` 作为媒体挂载目录使用。避免造成数据丢失。
+:::
+
 ## 启动服务
 
 使用以下命令来启动服务。这将在后台运行 AMMDS 容器，并应用 `docker-compose.yml` 中的所有配置：
@@ -59,12 +63,6 @@ docker compose up -d
 docker compose down
 ```
 
-## 开始享受
-
-通过浏览器访问 `<主机IP>:8080` ，开始体验您的 AMMDS 应用🥳~ 
-
-例如，如果您在本地运行，可以通过访问 `http://localhost:8080` 来查看应用。 
-
-🎉 现在您可以开始享受 AMMDS 提供的功能了！
+<!--@include: ../../snippets/setup-finish.md-->
 
 <!--@include: ../../snippets/copyright.md-->
