@@ -18,6 +18,8 @@ outline: deep
 | AMMDS_SCHEDULER_ENABLE     | true       | 启用定时任务                      |
 | AMMDS_MONITOR_ENABLE       | true       | 启用目录监控                      |
 | AMMDS_NETWORK_TIMEOUT      | 60         | 网络请求超时时间 (单位: 秒)       |
+| AMMDS_MAX_FILE_SIZE        | 10MB       | 单次请求中的文件最大值            |
+| AMMDS_MAX_REQUEST_SIZE     | 100MB      | 单次请求体最大值                  |
 | AMMDS_IYUU_TOKEN           | (无默认值) | 【插件】IYUU 服务的Token          |
 | AMMDS_METATUBE_TOKEN       | (无默认值) | 【插件】MetaTube 服务的Token      |
 | AMMDS_METATUBE_URL         | (无默认值) | 【插件】MetaTube 服务的URL        |
