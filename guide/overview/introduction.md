@@ -69,4 +69,18 @@ AMMDS (Adult Movie MetaData Scraper)
 - [官网](https://ammds.lifebus.top)
 - [GitHub](https://github.com/QYG2297248353/AMMDS-Docker)
 
+## 官方群组
+
+- **Telegram**: [点击加入频道](https://t.me/+vYaL76Z5GKU0YzNl)
+
+<img src="https://file.lifebus.top/ammds/ammds-tg.png" width="300"/>
+
+- **Telegram Chat**： [点击加入群组](https://t.me/+9bvCp3LqLUo1N2Q1)
+
+<img src="https://file.lifebus.top/ammds/ammds-tg-chat.png" width="300"/>
+
+- **QQ群组**：[点击加入群组(443266144)](https://qm.qq.com/q/dZ0wTXdFCw)
+
+<img src="https://file.lifebus.top/ammds/ammds-qq-chat.png" width="300"/>
+
 <!--@include: ../../snippets/copyright.md-->
