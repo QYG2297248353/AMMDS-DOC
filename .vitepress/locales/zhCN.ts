@@ -264,13 +264,15 @@ function sidebarDeploy(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: "MetaTube", link: "support/MetaTube" },
+        { text: "ThePornDB", link: "support/ThePornDB" },
+        { text: "Prowlarr", link: "support/Prowlarr" },
         { text: "IYUU", link: "support/IYUU" },
       ],
     },
     {
       text: "即将支持应用",
       collapsed: false,
-      items: [{ text: "Prowlarr", link: "unsupport/Prowlarr" }],
+      items: [{ text: "JellyFin", link: "unsupport/JellyFin" }],
     },
   ];
 }
