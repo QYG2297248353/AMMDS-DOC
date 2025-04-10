@@ -147,7 +147,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           text: "信息管理",
           collapsed: true,
           items: [
-            { text: "RSS管理", link: "usage/information/rss" },
+            { text: "RSS 管理", link: "usage/information/rss" },
             { text: "消息管理", link: "usage/information/message" },
             { text: "分享管理", link: "usage/information/share" },
           ],
@@ -215,7 +215,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           collapsed: true,
           items: [
             { text: "用户信息", link: "usage/user/info" },
-            { text: "站点认证", link: "usage/system/certification" },
+            { text: "站点认证", link: "usage/user/certification" },
           ],
         },
       ],
