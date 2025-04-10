@@ -201,6 +201,20 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           ],
         },
         {
+          text: "工具箱",
+          collapsed: true,
+          items: [
+            {
+              text: "PT辅种",
+              link: "usage/toolbox/iyuu"
+            },
+            {
+              text: "下载器",
+              link: "usage/toolbox/downloader"
+            },
+          ],
+        },
+        {
           text: "系统管理",
           collapsed: true,
           items: [
