@@ -260,6 +260,15 @@ function sidebarDeploy(): DefaultTheme.SidebarItem[] {
       link: "introduction",
     },
     {
+      text: "AMMDS 助手",
+      collapsed: false,
+      items: [
+        { text: "概述", link: "assistant/overview" },
+        { text: "安装", link: "assistant/install" },
+        { text: "使用", link: "assistant/usage" },
+      ],
+    },
+    {
       text: "已支持应用",
       collapsed: false,
       items: [

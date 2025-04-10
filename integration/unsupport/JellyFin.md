@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # JellyFin
 
 Jellyfin是一套多媒体应用程序软件套装，旨在组织、管理和共享数字媒体文件。

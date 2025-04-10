@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Prowlarr
 
 索引器及代理管理工具
