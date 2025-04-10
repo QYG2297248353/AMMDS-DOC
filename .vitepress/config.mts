@@ -52,6 +52,7 @@ export default defineConfig({
     i18nRouting: true,
     socialLinks: [
       { icon: "github", link: "https://github.com/QYG2297248353/AMMDS-Docker" },
+      { icon: "docker", link: "https://hub.docker.com/r/qyg2297248353/ammds" },
       { icon: "twitter", link: "https://x.com/ms2297248353" },
     ],
     search: {

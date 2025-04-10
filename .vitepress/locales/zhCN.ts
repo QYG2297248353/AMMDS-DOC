@@ -114,7 +114,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     },
     {
       text: "使用教程",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "任务管理",
@@ -132,27 +132,97 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
           items: [
             { text: "媒体库", link: "usage/library/media" },
             { text: "演员库", link: "usage/library/actor" },
+            { text: "漫画库", link: "usage/library/comics" },
+          ],
+        },
+        {
+          text: "订阅检索",
+          collapsed: true,
+          items: [
+            { text: "站点检索", link: "usage/search/site" },
+            { text: "订阅管理", link: "usage/search/subscribe" },
+          ],
+        },
+        {
+          text: "信息管理",
+          collapsed: true,
+          items: [
+            { text: "RSS管理", link: "usage/information/rss" },
+            { text: "消息管理", link: "usage/information/message" },
+            { text: "分享管理", link: "usage/information/share" },
           ],
         },
         {
           text: "集成应用",
           collapsed: true,
           items: [
-            { text: "MetaTube", link: "usage/integration/MetaTube" },
-            { text: "Prowlarr", link: "usage/integration/Prowlarr" },
-            { text: "JellyFin", link: "usage/integration/JellyFin" },
+            {
+              text: "元数据",
+              collapsed: true,
+              items: [
+                { text: "MetaTube", link: "usage/integration/MetaTube" },
+                { text: "ThePornDB", link: "usage/integration/ThePornDB" },
+              ],
+            },
+            {
+              text: "站点检索",
+              collapsed: true,
+              items: [
+                { text: "M-Team", link: "usage/integration/MTeam" },
+                { text: "FSM", link: "usage/integration/FSM" },
+                { text: "Prowlarr", link: "usage/integration/Prowlarr" },
+              ],
+            },
+            {
+              text: "下载器",
+              collapsed: true,
+              items: [
+                { text: "qBittorrent", link: "usage/integration/qBittorrent" },
+                { text: "Transmission", link: "usage/integration/Transmission" },
+              ],
+            },
+            {
+              text: "推送通知",
+              collapsed: true,
+              items: [
+                { text: "爱语飞飞", link: "usage/integration/IYUU" },
+                { text: "Bark", link: "usage/integration/Bark" },
+              ],
+            },
+            {
+              text: "媒体服务器",
+              collapsed: true,
+              items: [
+                { text: "JellyFin", link: "usage/integration/JellyFin" },
+                { text: "Emby", link: "usage/integration/Emby" },
+                { text: "飞牛影视", link: "usage/integration/FnMedia" },
+              ],
+            },
           ],
         },
         {
           text: "系统管理",
           collapsed: true,
-          items: [{ text: "标签管理", link: "usage/system/label" }],
+          items: [
+            { text: "标签管理", link: "usage/system/label" },
+            { text: "密钥管理", link: "usage/system/secret" },
+            { text: "登录日志", link: "usage/system/login" },
+            { text: "运行日志", link: "usage/system/runlog" },
+          ],
+        },
+        {
+          text: "用户管理",
+          collapsed: true,
+          items: [
+            { text: "用户信息", link: "usage/user/info" },
+            { text: "站点认证", link: "usage/system/certification" },
+          ],
         },
       ],
     },
     {
       text: "快捷教程",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: "扫描刮削",
@@ -164,6 +234,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
       ],
     },
+    { text: "常见问题", link: "qa" },
+    { text: "更新日志", link: "changelog" },
   ];
 }
 

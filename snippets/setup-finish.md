@@ -21,3 +21,9 @@ const data = ref([{
 ### 开始享受🥳
 
 <a-descriptions style="margin-top: 20px" :data="data" size="medium" :column="1"/>
+
+<a-typography-text type="secondary">
+      如果看不清，请改为亮色模式
+</a-typography-text>
+
+<br />
