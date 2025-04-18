@@ -187,6 +187,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
               items: [
                 { text: "爱语飞飞", link: "usage/integration/IYUU" },
                 { text: "Bark", link: "usage/integration/Bark" },
+                { text: "Telegram", link: "usage/integration/Telegram" },
               ],
             },
             {
