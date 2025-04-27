@@ -30,6 +30,6 @@ outline: deep
 :::
 
 ::: details 如何挂载云盘 .strm 文件
-云盘用户可以通过 Alist、alist-strm 等方式，先将云盘文件挂载至本地(.strm)，再将其挂载至应用中来。
+云盘用户可以通过 Alist、alist-strm、NetMount 等方式，先将云盘文件挂载至本地(.strm)，再将其挂载至应用中来。
 在扫描配置中，添加媒体识别类型为 strm，即可扫描到本地的.strm 文件。
 :::
