@@ -15,7 +15,7 @@ outline: deep
 | ADMIN_USER                 | ammds      | 管理员用户名 (禁止修改)                                          |
 | ADMIN_PASS                 | ammds      | 管理员密码 (仅首次安装生效)                                      |
 | AMMDS_SYSTEM_MODE          | full       | 系统运行模式, 完整模式(full)、纯后台模式(backend)、API 模式(api) |
-| AMMDS_SERVICE_ADDRESS     | (无默认值) | 系统实际访问地址                                                 |
+| AMMDS_SERVICE_ADDRESS      | (无默认值) | 系统实际访问地址                                                 |
 | AMMDS_SCHEDULER_ENABLE     | true       | 启用定时任务                                                     |
 | AMMDS_MONITOR_ENABLE       | true       | 启用目录监控                                                     |
 | AMMDS_NETWORK_TIMEOUT      | 60         | 网络请求超时时间 (单位: 秒)                                      |
