@@ -47,6 +47,45 @@ networks:
 请自行挂载媒体目录到容器中，请勿使用 `/ammds/data` 和 `/ammds/db` 作为媒体挂载目录使用。避免造成数据丢失。
 :::
 
+::: details 云盘用户须知
+如果您使用 CloudDrive 等云盘挂载媒体目录的方式，请注意以下几点：
+
+```yaml
+services:
+  ammds:
+    image: qyg2297248353/ammds:latest
+    container_name: AMMDS
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/ammds/data
+      - ./db:/ammds/db
+      - ./download:/ammds/download
+      - /media:/media:rw,rshared
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    cap_add:
+      - SYS_ADMIN
+    devices:
+      - "/dev/fuse:/dev/fuse"
+    security_opt:
+      - apparmor:unconfined
+    networks:
+      - ammds-network
+
+networks:
+  ammds-network:
+    driver: bridge
+```
+
+特别注意：
++ `:rw,rshared` 除了基本的读写权限外，`rshared` 让容器之间保持共享传播。
++ `SYS_ADMIN` 允许容器访问系统资源。
++ `/dev/fuse:/dev/fuse` 允许容器访问 FUSE 设备。
++ `apparmor:unconfined` 允许容器使用不受限制的 AppArmor 配置。
+:::
+
 ## 启动服务
 
 使用以下命令来启动服务。这将在后台运行 AMMDS 容器，并应用 `docker-compose.yml` 中的所有配置：

@@ -38,6 +38,33 @@ docker run -itd \
 | `qyg2297248353/ammds:latest`             | 使用的 Docker 镜像名称及标签，指定要运行哪个镜像。                                                                                                                                                                                                                                        |
 :::
 
+
+::: details 云盘用户须知
+如果您使用 CloudDrive 等云盘挂载媒体目录的方式，请注意以下几点：
+
+```sh [docker-cli]
+docker run -itd \
+  --name AMMDS \
+  -p 8080:80 \
+  -v $(pwd)/data:/ammds/data \
+  -v $(pwd)/db:/ammds/db \
+  -v $(pwd)/download:/ammds/download \
+  -v /media:/media:rw,rshared \
+  --cap-add=SYS_ADMIN \
+  --device /dev/fuse \
+  --security-opt apparmor:unconfined \
+  --restart always \
+  qyg2297248353/ammds:latest
+```
+
+特别注意：
++ `:rw,rshared` 除了基本的读写权限外，`rshared` 让容器之间保持共享传播。
++ `--cap-add=SYS_ADMIN` 允许容器访问系统资源。
++ `--device /dev/fuse` 允许容器访问 FUSE 设备。
++ `--security-opt apparmor:unconfined` 允许容器使用不受限制的 AppArmor 配置。
+:::
+
+
 <!--@include: ../../snippets/setup-finish.md-->
 
 <!--@include: ../../snippets/copyright.md-->
