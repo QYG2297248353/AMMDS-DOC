@@ -29,8 +29,8 @@ outline: deep
 | AMMDS_QBITTORRENT_URL      | (无默认值) | 【插件】qBittorrent 插件服务地址                                 |
 | AMMDS_QBITTORRENT_USERNAME | (无默认值) | 【插件】qBittorrent 用户名                                       |
 | AMMDS_QBITTORRENT_PASSWORD | (无默认值) | 【插件】qBittorrent 密码                                         |
-| AMMDS_TELEGRAM_BOT_TOKEN   | (无默认值) | Telegram Bot 授权码                                              |
-| AMMDS_TELEGRAM_CHAT_ID     | (无默认值) | Telegram Chat 聊天 ID                                            |
+| AMMDS_TELEGRAM_BOT_TOKEN   | (无默认值) | 【插件】Telegram Bot 授权码                                              |
+| AMMDS_TELEGRAM_CHAT_ID     | (无默认值) | 【插件】Telegram Chat 聊天 ID                                            |
 
 ::: tip 提示
 关于 URL 配置，末尾均不要携带 `/` 作为结束符号。

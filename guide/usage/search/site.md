@@ -6,6 +6,8 @@ outline: deep
 
 ::: tip 提示
 检索功能依赖于集成插件，未启用插件情况下，不会返回任何结果。
+
+如需调用 `Prowlarr` 站点检索功能，请添加环境变量 `AMMDS_NETWORK_TIMEOUT` 将响应超时时间设置为 `60` 秒以上。
 :::
 
 <a-image style="border-radius: 12px" src="/images/usage/search-site-001.png" />
