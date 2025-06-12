@@ -62,6 +62,8 @@ docker run -itd \
 + `--cap-add=SYS_ADMIN` 允许容器访问系统资源。
 + `--device /dev/fuse` 允许容器访问 FUSE 设备。
 + `--security-opt apparmor:unconfined` 允许容器使用不受限制的 AppArmor 配置。
+
+该部署方案不适用于 `云盘挂载` + `目录监控` 的方案，请使用 `定时扫描` 代替  `目录监控`。
 :::
 
 
