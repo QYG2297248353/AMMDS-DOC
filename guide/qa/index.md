@@ -18,6 +18,24 @@ outline: deep
 - 通过手动下载资源后，重启应用。
 :::
 
+::: details 目录监控失败，启动后立即退出？
+这种情况通常是由于应用的配置文件或环境变量错误导致的。请检查应用的配置文件是否正确，并确保环境变量设置正确。
+
+如果您有在运行日志中看到以下日志：
++ `Error creating bean with name 'directoryWatcherService': Instantiation of supplied bean failed`
++ `ser limit of inotify instances reached or too many open files`
+
+请尝试增加系统的 inotify 实例限制。
+```bash
+# 增加 inotify 实例限制
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+```
+
+
+:::
+
 ## 使用相关
 
 ::: details 为什么点击菜单，没有任何反应？
