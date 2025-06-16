@@ -60,3 +60,16 @@ sudo sysctl -p
 请注意您的网络可以访问互联网，否则无法进行时区的自动检测。
 代理网络请注意避开：`suning.com` 代理域名。
 :::
+
+
+::: details [Metatube] 404 (Not Found)
+检查 MetaTube 插件的服务器地址是否配置正确。
+
+如果您使用了自定义域名，请确保域名解析正确。
+
+如果您使用了反向代理，请确保反向代理配置正确。
+
+请检查 MetaTube 容器的日志是否正常，确保没有错误信息。
+
+请查看 [MetaTube 插件配置](/guide/usage/integration/MetaTube) 文档。
+:::
