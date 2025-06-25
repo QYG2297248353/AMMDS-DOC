@@ -8,6 +8,10 @@ outline: deep
 
 ## 部署相关
 
+::: details 日志提示 `CPU does not support x86-64-v2` ？
+说明您设备的 `CPU` 版本过于陈旧。您可以选择标签中带有 `ol8` 字样的镜像。
+:::
+
 ::: details 为什么首次部署后，页面没有任何反应？
 首次部署时，系统需要下载并初始化必要的资源文件，这个过程需要一定时间。请耐心等待几分钟，如果仍然没有响应，可以尝试刷新页面。
 :::
@@ -18,12 +22,13 @@ outline: deep
 - 通过手动下载资源后，重启应用。
 :::
 
-::: details 目录监控失败，启动后立即退出？
+::: details 监控目录注册失败，启动一半立即退出？
 这种情况通常是由于应用的配置文件或环境变量错误导致的。请检查应用的配置文件是否正确，并确保环境变量设置正确。
 
 如果您有在运行日志中看到以下日志：
 + `Error creating bean with name 'directoryWatcherService': Instantiation of supplied bean failed`
 + `ser limit of inotify instances reached or too many open files`
++ `User limit of inotify watches reached`
 
 请尝试增加系统的 inotify 实例限制。
 ```bash
@@ -52,13 +57,13 @@ sudo sysctl -p
 在扫描配置中，添加媒体识别类型为 strm，即可扫描到本地的.strm 文件。
 :::
 
-::: details 提示时区错误
+::: details 提示时区错误，提示系统时间不正确
 这种情况通常是由于应用的时区与服务器的时区不一致导致的。请检查应用的时区设置是否正确，并确保与服务器的时区一致。
 1. 如果您配置了环境变量 TZ，则需要将其设置为正确的时区。
 2. 如果您配置网络代理，请确保代理服务器的时区与服务器的时区一致。
 3. 如果您使用的是 Docker 部署，请确保 Docker 容器的时区设置正确。
 请注意您的网络可以访问互联网，否则无法进行时区的自动检测。
-代理网络请注意避开：`suning.com` 代理域名。
+代理网络请注意避开：`suning.com`, `taobao.com`, `meituan.com` 等国内代理域名。
 :::
 
 
