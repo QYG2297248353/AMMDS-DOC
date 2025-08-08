@@ -12,8 +12,17 @@ outline: deep
 
 ## 安装应用
 
+> 已放弃镜像
+> 
+> ```sh [docker-cli]
+> 
+> docker run -d -p 8080:8080 --name metatube metatube/metatube-server:latest
+> 
+> ```
+
+### 新版镜像
 ```sh [docker-cli]
-docker run -d -p 8080:8080 --name metatube metatube/metatube-server:latest
+docker run -d -p 8080:8080 --name metatube ghcr.io/metatube-community/metatube-server:latest
 ```
 
 服务启动后，将配置信息写入集成应用中即可。
