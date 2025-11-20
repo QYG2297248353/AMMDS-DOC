@@ -109,6 +109,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: "Docker", link: "deploy/install-docker" },
         { text: "Docker Compose", link: "deploy/install-docker-compose" },
         { text: "1Panel", link: "deploy/install-1panel" },
+        { text: "飞牛Nas", link: "deploy/install-fnnas" },
+        { text: "Windows", link: "deploy/install-windows" },
         { text: "环境变量", link: "deploy/install-environment" },
       ],
     },
