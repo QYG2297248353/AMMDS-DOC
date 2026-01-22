@@ -1,95 +1,60 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 type FeatureItem = {
-  title: string;
+  title: ReactNode;
   icon: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Movie Library Management',
+    title: <Translate id="homepage.features.library.title" description="Movie Library Management feature title">Movie Library Management</Translate>,
     icon: '🎬',
-    description: (
-      <>
-        Supports multiple video formats, automatically scrapes metadata, and creates a personalized movie library
-      </>
-    ),
+    description: <Translate id="homepage.features.library.description" description="Movie Library Management feature description">Supports multiple video formats, automatically scrapes metadata, and creates a personalized movie library</Translate>,
   },
   {
-    title: 'Automatic Actor Recognition',
+    title: <Translate id="homepage.features.actorRecognition.title" description="Automatic Actor Recognition feature title">Automatic Actor Recognition</Translate>,
     icon: '👤',
-    description: (
-      <>
-        Automatically recognizes actor information in films and provides detailed actor profiles and filmography
-      </>
-    ),
+    description: <Translate id="homepage.features.actorRecognition.description" description="Automatic Actor Recognition feature description">Automatically recognizes actor information in films and provides detailed actor profiles and filmography</Translate>,
   },
   {
-    title: 'Automatic Metadata Scraping',
+    title: <Translate id="homepage.features.metadataScraping.title" description="Automatic Metadata Scraping feature title">Automatic Metadata Scraping</Translate>,
     icon: '📄',
-    description: (
-      <>
-        Automatically retrieves metadata for films from the internet, including posters, summaries, ratings, etc.
-      </>
-    ),
+    description: <Translate id="homepage.features.metadataScraping.description" description="Automatic Metadata Scraping feature description">Automatically retrieves metadata for films from the internet, including posters, summaries, ratings, etc.</Translate>,
   },
   {
-    title: 'Sharing Functionality',
+    title: <Translate id="homepage.features.sharing.title" description="Sharing Functionality feature title">Sharing Functionality</Translate>,
     icon: '📤',
-    description: (
-      <>
-        Share your movie library with friends or family, easily share your film collection
-      </>
-    ),
+    description: <Translate id="homepage.features.sharing.description" description="Sharing Functionality feature description">Share your movie library with friends or family, easily share your film collection</Translate>,
   },
   {
-    title: 'Plugin Integration',
+    title: <Translate id="homepage.features.plugin.title" description="Plugin Integration feature title">Plugin Integration</Translate>,
     icon: '🔌',
-    description: (
-      <>
-        Offers rich plugin support, easily integrates with existing media servers or players
-      </>
-    ),
+    description: <Translate id="homepage.features.plugin.description" description="Plugin Integration feature description">Offers rich plugin support, easily integrates with existing media servers or players</Translate>,
   },
   {
-    title: 'Multi-source Scraping',
+    title: <Translate id="homepage.features.multiSource.title" description="Multi-source Scraping feature title">Multi-source Scraping</Translate>,
     icon: '🌐',
-    description: (
-      <>
-        Supports scraping film information from multiple data sources, ensuring comprehensive and accurate data
-      </>
-    ),
+    description: <Translate id="homepage.features.multiSource.description" description="Multi-source Scraping feature description">Supports scraping film information from multiple data sources, ensuring comprehensive and accurate data</Translate>,
   },
   {
-    title: 'Intelligent Matching',
+    title: <Translate id="homepage.features.intelligentMatching.title" description="Intelligent Matching feature title">Intelligent Matching</Translate>,
     icon: '🤖',
-    description: (
-      <>
-        Automatically matches local files with online metadata through intelligent algorithms, reducing manual operations
-      </>
-    ),
+    description: <Translate id="homepage.features.intelligentMatching.description" description="Intelligent Matching feature description">Automatically matches local files with online metadata through intelligent algorithms, reducing manual operations</Translate>,
   },
   {
-    title: 'Batch Processing',
+    title: <Translate id="homepage.features.batchProcessing.title" description="Batch Processing feature title">Batch Processing</Translate>,
     icon: '⚡',
-    description: (
-      <>
-        Supports batch processing of multiple video files, improving management efficiency
-      </>
-    ),
+    description: <Translate id="homepage.features.batchProcessing.description" description="Batch Processing feature description">Supports batch processing of multiple video files, improving management efficiency</Translate>,
   },
   {
-    title: 'Custom Tags',
+    title: <Translate id="homepage.features.customTags.title" description="Custom Tags feature title">Custom Tags</Translate>,
     icon: '🏷️',
-    description: (
-      <>
-        Supports custom tags for personalized classification and management of film resources
-      </>
-    ),
+    description: <Translate id="homepage.features.customTags.description" description="Custom Tags feature description">Supports custom tags for personalized classification and management of film resources</Translate>,
   },
 ];
 
