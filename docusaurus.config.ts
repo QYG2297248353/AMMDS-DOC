@@ -40,6 +40,30 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/QYG2297248353/AMMDS-Doc/tree/master/",
+          lastVersion: "current",
+          versions: {
+            current: {
+              label: "v1.6.47",
+            },
+            "v1.5.0": {
+              label: "v1.5.0",
+            },
+            "v1.4.0": {
+              label: "v1.4.0",
+            },
+            "v1.3.0": {
+              label: "v1.3.0",
+            },
+            "v1.2.0": {
+              label: "v1.2.0",
+            },
+            "v1.1.0": {
+              label: "v1.1.0",
+            },
+            "v1.0.0": {
+              label: "v1.0.0",
+            },
+          },
         },
         blog: {
           blogTitle: "AMMDS Blog",
@@ -91,8 +115,7 @@ const config: Config = {
     announcementBar: {
       id: "announcement_bar",
       content:
-        'AMMDS 1.6.47 已发布！<a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47">查看详情</a>',
-      backgroundColor: "#fafbfc",
+        'AMMDS 1.6.47 (公测版) 已发布！<a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47">查看详情</a>',
       textColor: "#091E42",
       isCloseable: true,
     },
@@ -129,6 +152,33 @@ const config: Config = {
           label: "Blog",
           to: "/blog",
           position: "left",
+        },
+        {
+          type: 'docsVersionDropdown',
+          versions: {
+            current: {
+              label: "v1.6.47",
+            },
+            "v1.5.0": {
+              label: "v1.5.0",
+            },
+            "v1.4.0": {
+              label: "v1.4.0",
+            },
+            "v1.3.0": {
+              label: "v1.3.0",
+            },
+            "v1.2.0": {
+              label: "v1.2.0",
+            },
+            "v1.1.0": {
+              label: "v1.1.0",
+            },
+            "v1.0.0": {
+              label: "v1.0.0",
+            },
+          },
+          position: "right",
         },
         {
           type: "localeDropdown",
