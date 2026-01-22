@@ -8,11 +8,11 @@
     "description": "AMMDS website title"
   },
   "homepage.subtitle": {
-    "message": "Adult Movie MetaData Scraper",
+    "message": "成人电影元数据刮削器",
     "description": "AMMDS website subtitle"
   },
   "homepage.description": {
-    "message": "Create an exclusive home theater experience with intelligent scraping metadata, actor recognition, multi-source data matching and more",
+    "message": "通过智能元数据刮削、演员识别、多源数据匹配等功能，打造专属家庭影院体验",
     "description": "AMMDS website main description"
   },
   "homepage.button.quickStart": {
@@ -24,7 +24,7 @@
     "description": "Learn More button text"
   },
   "AMMDS - Adult Movie MetaData Scraper": {
-    "message": "AMMDS - Adult Movie MetaData Scraper",
+    "message": "AMMDS - 成人电影元数据刮削器",
     "description": "Website description"
   },
   "homepage.quickStart.title": {
@@ -32,59 +32,59 @@
     "description": "Quick Start section title"
   },
   "homepage.quickStart.installation": {
-    "message": "1. Installation",
+    "message": "1. 安装",
     "description": "Installation step title"
   },
   "homepage.quickStart.installation.description": {
-    "message": "Choose the deployment method that suits you best, including Docker, Windows, Linux, etc.",
+    "message": "选择最适合您的部署方式，包括 Docker、Windows、Linux 等",
     "description": "Installation step description"
   },
   "homepage.quickStart.viewDeployment": {
-    "message": "View Deployment Guide",
+    "message": "查看部署指南",
     "description": "View Deployment Guide link text"
   },
   "homepage.quickStart.start": {
-    "message": "2. Quick Start",
+    "message": "2. 快速开始",
     "description": "Quick Start step title"
   },
   "homepage.quickStart.start.description": {
-    "message": "Get started with AMMDS in just a few simple steps",
+    "message": "通过几个简单的步骤开始使用 AMMDS",
     "description": "Quick Start step description"
   },
   "homepage.quickStart.viewQuickStart": {
-    "message": "View Quick Start Guide",
+    "message": "查看快速开始指南",
     "description": "View Quick Start Guide link text"
   },
   "homepage.quickStart.support": {
-    "message": "3. Support & Help",
+    "message": "3. 支持与帮助",
     "description": "Support & Help step title"
   },
   "homepage.quickStart.support.description": {
-    "message": "Get technical support and answers to common questions about AMMDS",
+    "message": "获取 AMMDS 的技术支持和常见问题解答",
     "description": "Support & Help step description"
   },
   "homepage.quickStart.viewSupport": {
-    "message": "View Support Guide",
+    "message": "查看支持指南",
     "description": "View Support Guide link text"
   },
   "homepage.quickStart.questions": {
-    "message": "4. Common Questions",
+    "message": "4. 常见问题",
     "description": "Common Questions step title"
   },
   "homepage.quickStart.questions.description": {
-    "message": "Find answers to common questions about AMMDS",
+    "message": "查找关于 AMMDS 的常见问题解答",
     "description": "Common Questions step description"
   },
   "homepage.quickStart.viewQuestions": {
-    "message": "View Common Questions",
+    "message": "查看常见问题",
     "description": "View Common Questions link text"
   },
   "homepage.community.title": {
-    "message": "Community & Support",
+    "message": "社区与支持",
     "description": "Community & Support section title"
   },
   "homepage.community.description": {
-    "message": "Join our community to get help and support",
+    "message": "加入我们的社区，获取帮助和支持",
     "description": "Community & Support section description"
   },
   "homepage.community.github": {
@@ -92,11 +92,11 @@
     "description": "GitHub link text"
   },
   "homepage.community.telegramChannel": {
-    "message": "Telegram Channel",
+    "message": "Telegram 频道",
     "description": "Telegram Channel link text"
   },
   "homepage.community.telegramGroup": {
-    "message": "Telegram Group",
+    "message": "Telegram 群组",
     "description": "Telegram Group link text"
   },
   "homepage.community.discord": {
@@ -104,27 +104,27 @@
     "description": "Discord link text"
   },
   "homepage.community.qqGroup": {
-    "message": "QQ Group",
+    "message": "QQ 群",
     "description": "QQ Group link text"
   },
   "homepage.sponsorship.title": {
-    "message": "Sponsorship",
+    "message": "赞助支持",
     "description": "Sponsorship section title"
   },
   "homepage.sponsorship.description": {
-    "message": "Your support is our driving force to continue advancing",
+    "message": "您的支持是我们不断前进的动力",
     "description": "Sponsorship section description"
   },
   "homepage.sponsorship.afdian": {
-    "message": "Sponsor AMMDS on 爱发电",
+    "message": "在爱发电赞助 AMMDS",
     "description": "Sponsor AMMDS on 爱发电 title"
   },
   "homepage.sponsorship.afdian.description": {
-    "message": "Support AMMDS development and get exclusive benefits",
+    "message": "支持 AMMDS 开发并获得专属福利",
     "description": "Sponsor AMMDS on 爱发电 description"
   },
   "homepage.sponsorship.afdian.button": {
-    "message": "Go to 爱发电",
+    "message": "前往爱发电",
     "description": "Go to 爱发电 button text"
   },
   "爱发电": {
@@ -132,27 +132,27 @@
     "description": "爱发电 logo purple"
   },
   "homepage.updates.title": {
-    "message": "Latest Updates",
+    "message": "最新更新",
     "description": "Latest Updates section title"
   },
   "homepage.updates.description": {
-    "message": "Stay up-to-date with the latest developments and version updates of AMMDS",
+    "message": "随时了解 AMMDS 的最新发展和版本更新",
     "description": "Latest Updates section description"
   },
   "homepage.updates.blog": {
-    "message": "Blog Updates",
+    "message": "博客更新",
     "description": "Blog Updates title"
   },
   "homepage.updates.blog.description": {
-    "message": "Latest news and updates about AMMDS",
+    "message": "关于 AMMDS 的最新新闻和更新",
     "description": "Blog Updates description"
   },
   "homepage.updates.viewBlog": {
-    "message": "View Blog",
+    "message": "查看博客",
     "description": "View Blog button text"
   },
   "homepage.updates.version": {
-    "message": "Latest Version",
+    "message": "最新版本",
     "description": "Latest Version title"
   },
   "homepage.updates.version.prefix": {
@@ -160,79 +160,79 @@
     "description": "Latest Version prefix"
   },
   "homepage.updates.viewChangelog": {
-    "message": "View Changelog",
+    "message": "查看更新日志",
     "description": "View Changelog button text"
   },
   "homepage.features.library.title": {
-    "message": "Movie Library Management",
+    "message": "电影库管理",
     "description": "Movie Library Management feature title"
   },
   "homepage.features.library.description": {
-    "message": "Supports multiple video formats, automatically scrapes metadata, and creates a personalized movie library",
+    "message": "支持多种视频格式，自动刮削元数据，创建个性化电影库",
     "description": "Movie Library Management feature description"
   },
   "homepage.features.actorRecognition.title": {
-    "message": "Automatic Actor Recognition",
+    "message": "自动演员识别",
     "description": "Automatic Actor Recognition feature title"
   },
   "homepage.features.actorRecognition.description": {
-    "message": "Automatically recognizes actor information in films and provides detailed actor profiles and filmography",
+    "message": "自动识别影片中的演员信息，提供详细的演员资料和作品列表",
     "description": "Automatic Actor Recognition feature description"
   },
   "homepage.features.metadataScraping.title": {
-    "message": "Automatic Metadata Scraping",
+    "message": "自动元数据刮削",
     "description": "Automatic Metadata Scraping feature title"
   },
   "homepage.features.metadataScraping.description": {
-    "message": "Automatically retrieves metadata for films from the internet, including posters, summaries, ratings, etc.",
+    "message": "自动从互联网获取影片元数据，包括海报、简介、评分等",
     "description": "Automatic Metadata Scraping feature description"
   },
   "homepage.features.sharing.title": {
-    "message": "Sharing Functionality",
+    "message": "分享功能",
     "description": "Sharing Functionality feature title"
   },
   "homepage.features.sharing.description": {
-    "message": "Share your movie library with friends or family, easily share your film collection",
+    "message": "与朋友或家人分享您的电影库，轻松分享您的影片收藏",
     "description": "Sharing Functionality feature description"
   },
   "homepage.features.plugin.title": {
-    "message": "Plugin Integration",
+    "message": "插件集成",
     "description": "Plugin Integration feature title"
   },
   "homepage.features.plugin.description": {
-    "message": "Offers rich plugin support, easily integrates with existing media servers or players",
+    "message": "提供丰富的插件支持，轻松与现有媒体服务器或播放器集成",
     "description": "Plugin Integration feature description"
   },
   "homepage.features.multiSource.title": {
-    "message": "Multi-source Scraping",
+    "message": "多源刮削",
     "description": "Multi-source Scraping feature title"
   },
   "homepage.features.multiSource.description": {
-    "message": "Supports scraping film information from multiple data sources, ensuring comprehensive and accurate data",
+    "message": "支持从多个数据源刮削影片信息，确保数据全面准确",
     "description": "Multi-source Scraping feature description"
   },
   "homepage.features.intelligentMatching.title": {
-    "message": "Intelligent Matching",
+    "message": "智能匹配",
     "description": "Intelligent Matching feature title"
   },
   "homepage.features.intelligentMatching.description": {
-    "message": "Automatically matches local files with online metadata through intelligent algorithms, reducing manual operations",
+    "message": "通过智能算法自动匹配本地文件与在线元数据，减少手动操作",
     "description": "Intelligent Matching feature description"
   },
   "homepage.features.batchProcessing.title": {
-    "message": "Batch Processing",
+    "message": "批量处理",
     "description": "Batch Processing feature title"
   },
   "homepage.features.batchProcessing.description": {
-    "message": "Supports batch processing of multiple video files, improving management efficiency",
+    "message": "支持批量处理多个视频文件，提高管理效率",
     "description": "Batch Processing feature description"
   },
   "homepage.features.customTags.title": {
-    "message": "Custom Tags",
+    "message": "自定义标签",
     "description": "Custom Tags feature title"
   },
   "homepage.features.customTags.description": {
-    "message": "Supports custom tags for personalized classification and management of film resources",
+    "message": "支持自定义标签，个性化分类和管理影片资源",
     "description": "Custom Tags feature description"
   },
   "theme.ErrorPageContent.title": {
