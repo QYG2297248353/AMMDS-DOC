@@ -15,6 +15,9 @@ const config: Config = {
   organizationName: "QYG2297248353",
   projectName: "AMMDS-Doc",
   onBrokenLinks: "throw",
+  customFields: {
+    version: "v1.6.47",
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en", "zh-Hans"],

@@ -11,83 +11,83 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '影视库管理',
+    title: 'Movie Library Management',
     icon: '🎬',
     description: (
       <>
-        支持多种格式的视频文件，自动刮削元数据，打造专属影视库
+        Supports multiple video formats, automatically scrapes metadata, and creates a personalized movie library
       </>
     ),
   },
   {
-    title: '演员自动识别',
+    title: 'Automatic Actor Recognition',
     icon: '👤',
     description: (
       <>
-        自动识别影视作品中的演员信息，提供详细的演员资料和作品列表
+        Automatically recognizes actor information in films and provides detailed actor profiles and filmography
       </>
     ),
   },
   {
-    title: '元数据自动刮削',
+    title: 'Automatic Metadata Scraping',
     icon: '📄',
     description: (
       <>
-        自动从互联网获取影视作品的元数据，包括封面、简介、评分等
+        Automatically retrieves metadata for films from the internet, including posters, summaries, ratings, etc.
       </>
     ),
   },
   {
-    title: '分享功能',
+    title: 'Sharing Functionality',
     icon: '📤',
     description: (
       <>
-        支持将影视库分享给朋友或家人，轻松共享你的影视收藏
+        Share your movie library with friends or family, easily share your film collection
       </>
     ),
   },
   {
-    title: '插件集成',
+    title: 'Plugin Integration',
     icon: '🔌',
     description: (
       <>
-        提供丰富的插件支持，轻松集成到现有的媒体服务器或播放器中
+        Offers rich plugin support, easily integrates with existing media servers or players
       </>
     ),
   },
   {
-    title: '多源刮削',
+    title: 'Multi-source Scraping',
     icon: '🌐',
     description: (
       <>
-        支持从多个数据源刮削影视信息，确保数据全面且准确
+        Supports scraping film information from multiple data sources, ensuring comprehensive and accurate data
       </>
     ),
   },
   {
-    title: '智能匹配',
+    title: 'Intelligent Matching',
     icon: '🤖',
     description: (
       <>
-        通过智能算法自动匹配本地文件与在线元数据，减少手动操作
+        Automatically matches local files with online metadata through intelligent algorithms, reducing manual operations
       </>
     ),
   },
   {
-    title: '批量处理',
+    title: 'Batch Processing',
     icon: '⚡',
     description: (
       <>
-        支持批量处理多个影视文件，提高管理效率
+        Supports batch processing of multiple video files, improving management efficiency
       </>
     ),
   },
   {
-    title: '自定义标签',
+    title: 'Custom Tags',
     icon: '🏷️',
     description: (
       <>
-        支持自定义标签，便于对影视资源进行个性化分类和管理
+        Supports custom tags for personalized classification and management of film resources
       </>
     ),
   },

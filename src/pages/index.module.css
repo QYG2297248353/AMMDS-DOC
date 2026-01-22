@@ -11,8 +11,15 @@
 }
 
 .logo {
-  max-width: 120px;
+  width: 160px;
+  max-width: 220px;
   margin-bottom: 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.03);
 }
 
 .description {
@@ -105,7 +112,7 @@
 .communityLinks {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 6rem;
   flex-wrap: wrap;
 }
 
@@ -165,15 +172,14 @@
 .sponsorshipImage {
   flex-shrink: 0;
   max-width: 200px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sponsorshipImage img {
   max-width: 100%;
   height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: opacity 0.3s ease;
 }
 
@@ -207,18 +213,29 @@
   box-shadow: var(--ifm-card-box-shadow);
   text-align: center;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .changelogCard h3 {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .changelogCard p {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  max-width: 100%;
+}
+
+.changelogCard p:last-of-type:not(:has(+ .button)) {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
   color: var(--ifm-primary-color);
+  opacity: 1;
 }
 
 /* Responsive Styles */

@@ -13,7 +13,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="/img/ammds.png" alt="AMMDS Logo" className={styles.logo} />
+        <img src="/img/ammds-transparent.png" alt="AMMDS Logo" className={styles.logo} />
         <Heading as="h1" className="hero__title">
           AMMDS
         </Heading>
@@ -40,6 +40,7 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
+  const version = siteConfig.customFields?.version || "v1.6.47";
   
   return (
     <Layout
@@ -98,11 +99,11 @@ export default function Home(): ReactNode {
               </a>
               <a href="https://t.me/ammds_official" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
                 <span className={styles.communityIcon}>💬</span>
-                <span>Telegram 频道</span>
+                <span>Telegram Channel</span>
               </a>
               <a href="https://t.me/+9bvCp3LqLUo1N2Q1" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
                 <span className={styles.communityIcon}>👥</span>
-                <span>Telegram 群组</span>
+                <span>Telegram Group</span>
               </a>
               <a href="https://discord.gg/sxkpPZzPeJ" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
                 <span className={styles.communityIcon}>🎮</span>
@@ -110,7 +111,7 @@ export default function Home(): ReactNode {
               </a>
               <a href="https://qm.qq.com/q/ZTXsLnEAM4" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
                 <span className={styles.communityIcon}>💬</span>
-                <span>QQ 群组</span>
+                <span>QQ Group</span>
               </a>
             </div>
           </div>
@@ -140,19 +141,23 @@ export default function Home(): ReactNode {
         {/* Latest Updates */}
         <section className={styles.latestUpdates}>
           <div className="container">
+            <Heading as="h2" className={styles.sectionTitle}>Latest Updates</Heading>
+            <p className={styles.sectionDescription}>Stay up-to-date with the latest developments and version updates of AMMDS</p>
             <div className="row">
               <div className="col col--8">
-                <Heading as="h2" className={styles.sectionTitle}>Latest Updates</Heading>
-                <p className={styles.sectionDescription}>Stay up-to-date with the latest developments and version updates of AMMDS</p>
-                <Link to="/blog" className="button button--secondary">
-                  View Blog
-                </Link>
+                <div className={styles.changelogCard}>
+                  <h3>Blog Updates</h3>
+                  <p>Latest news and updates about AMMDS</p>
+                  <Link to="/blog" className="button button--secondary">
+                    View Blog
+                  </Link>
+                </div>
               </div>
               <div className="col col--4">
                 <div className={styles.changelogCard}>
                   <h3>Latest Version</h3>
-                  <p>AMMDS 1.6.47</p>
-                  <a href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47" target="_blank" rel="noopener noreferrer" className="button button--outline">
+                  <p>AMMDS {String(version)}</p>
+                  <a href={`https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/${version}`} target="_blank" rel="noopener noreferrer" className="button button--secondary">
                     View Changelog
                   </a>
                 </div>
