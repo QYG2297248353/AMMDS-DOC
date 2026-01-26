@@ -52,7 +52,7 @@ sidebar_label: "快速入门"
 
 对于已安装 Docker 的用户，使用单个命令部署 AMMDS：
 
-```bash
+```bash showLineNumbers title="Docker Command"
 docker run -itd \
    --name AMMDS \
    -p 8080:80 \

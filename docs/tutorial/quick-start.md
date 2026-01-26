@@ -52,7 +52,7 @@ For Feiniu Nas users, we offer an FPK package designed for direct import into th
 
 For users with Docker installed, deploy AMMDS with a single command:
 
-```bash
+```bash showLineNumbers title="Docker Command"
 docker run -itd \
    --name AMMDS \
    -p 8080:80 \

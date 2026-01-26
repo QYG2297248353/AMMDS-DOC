@@ -105,50 +105,53 @@ const config: Config = {
   themeConfig: {
     image: "img/ammds-social-card.png",
     metadata: [
-    // 核心 SEO
-    {
-      name: "description",
-      content:
-        "AMMDS 是高效的媒体元数据抓取与整理工具，支持电影/视频自动刮削、海报下载、演员与标签管理，兼容 Emby、Jellyfin、Plex 等服务，助你构建专业媒体库。",
-    },
-    {
-      name: "keywords",
-      content:
-        "AMMDS, 媒体刮削, Movie metadata scraper, 元数据抓取工具, Emby, Jellyfin, Plex, 媒体库整理, 海报下载, 演员管理, NSFW 内容管理, 自动整理, 影视元数据",
-    },
-    { name: "author", content: "新疆萌森软件开发工作室" },
-    { name: "robots", content: "index, follow" },
-    { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-    { name: "theme-color", content: "#4a90e2" },
-    { name: "language", content: "zh-CN" },
+      // 核心 SEO
+      {
+        name: "description",
+        content:
+          "AMMDS 是高效的媒体元数据抓取与整理工具，支持电影/视频自动刮削、海报下载、演员与标签管理，兼容 Emby、Jellyfin、Plex 等服务，助你构建专业媒体库。",
+      },
+      {
+        name: "keywords",
+        content:
+          "AMMDS, 媒体刮削, Movie metadata scraper, 元数据抓取工具, Emby, Jellyfin, Plex, 媒体库整理, 海报下载, 演员管理, NSFW 内容管理, 自动整理, 影视元数据",
+      },
+      { name: "author", content: "新疆萌森软件开发工作室" },
+      { name: "robots", content: "index, follow" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { name: "theme-color", content: "#4a90e2" },
+      { name: "language", content: "zh-CN" },
 
-    // Open Graph (社交媒体分享)
-    { property: "og:title", content: "AMMDS 文档中心 | 媒体元数据刮削与整理工具" },
-    {
-      property: "og:description",
-      content:
-        "AMMDS 提供高效的媒体刮削、海报下载、演员与标签管理等功能，支持多媒体服务器兼容，提升媒体库管理体验。",
-    },
-    {
-      property: "og:image",
-      content: "https://ammds.lifebus.top/img/ammds-social-card.png",
-    },
-    { property: "og:url", content: "https://ammds.lifebus.top" },
-    { property: "og:type", content: "website" },
+      // Open Graph (社交媒体分享)
+      {
+        property: "og:title",
+        content: "AMMDS 文档中心 | 媒体元数据刮削与整理工具",
+      },
+      {
+        property: "og:description",
+        content:
+          "AMMDS 提供高效的媒体刮削、海报下载、演员与标签管理等功能，支持多媒体服务器兼容，提升媒体库管理体验。",
+      },
+      {
+        property: "og:image",
+        content: "https://ammds.lifebus.top/img/ammds-social-card.png",
+      },
+      { property: "og:url", content: "https://ammds.lifebus.top" },
+      { property: "og:type", content: "website" },
 
-    // Twitter Card
-    { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "AMMDS 文档中心" },
-    {
-      name: "twitter:description",
-      content: "AMMDS — 强大的媒体元数据抓取与整理工具",
-    },
-    {
-      name: "twitter:image",
-      content: "https://ammds.lifebus.top/img/ammds-social-card.png",
-    },
-    { name: "twitter:site", content: "@MS2297248353" },
-  ],
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AMMDS 文档中心" },
+      {
+        name: "twitter:description",
+        content: "AMMDS — 强大的媒体元数据抓取与整理工具",
+      },
+      {
+        name: "twitter:image",
+        content: "https://ammds.lifebus.top/img/ammds-social-card.png",
+      },
+      { name: "twitter:site", content: "@MS2297248353" },
+    ],
     announcementBar: {
       id: "announcement_bar",
       content:
@@ -261,6 +264,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "java", "graphql"],
     },
   } satisfies Preset.ThemeConfig,
 };
