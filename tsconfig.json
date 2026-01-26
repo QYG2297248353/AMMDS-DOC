@@ -2,7 +2,11 @@
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es2020",
+    "esModuleInterop": true,
+    "ignoreDeprecations": "6.0"
   },
   "exclude": [".docusaurus", "build"]
 }

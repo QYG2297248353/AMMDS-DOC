@@ -155,29 +155,6 @@ const config: Config = {
         },
         {
           type: 'docsVersionDropdown',
-          versions: {
-            current: {
-              label: "v1.6.47",
-            },
-            "v1.5.0": {
-              label: "v1.5.0",
-            },
-            "v1.4.0": {
-              label: "v1.4.0",
-            },
-            "v1.3.0": {
-              label: "v1.3.0",
-            },
-            "v1.2.0": {
-              label: "v1.2.0",
-            },
-            "v1.1.0": {
-              label: "v1.1.0",
-            },
-            "v1.0.0": {
-              label: "v1.0.0",
-            },
-          },
           position: "right",
         },
         {
