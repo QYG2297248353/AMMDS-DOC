@@ -1,20 +1,20 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="./img/ammds-transparent.png" alt={translate({message: 'AMMDS Logo', description: 'AMMDS website logo'})} className={styles.logo} />
+        <img src="./img/ammds-transparent.png" alt={translate({ message: 'AMMDS Logo', description: 'AMMDS website logo' })} className={styles.logo} />
         <Heading as="h1" className="hero__title">
           <Translate id="homepage.title" description="AMMDS website title">AMMDS</Translate>
         </Heading>
@@ -42,17 +42,17 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   const version = siteConfig.customFields?.version || "v1.6.47";
-  
+
   return (
     <Layout
-      title={translate({message: siteConfig.title, description: 'Website title'})}
-      description={translate({message: 'AMMDS - Adult Movie MetaData Scraper', description: 'Website description'})}>
+      title={translate({ message: siteConfig.title, description: 'Website title' })}
+      description={translate({ message: 'AMMDS - Adult Movie MetaData Scraper', description: 'Website description' })}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        
+
         {/* Quick Start Guide */}
         <section className={styles.quickStart}>
           <div className="container">
@@ -74,7 +74,7 @@ export default function Home(): ReactNode {
               </div>
               <div className="col col--6">
                 <div className={styles.quickStartCard}>
-                  <h3><Translate id="homepage.quickStart.support" description="Support & Help step title">3. Support & Help</Translate></h3>  
+                  <h3><Translate id="homepage.quickStart.support" description="Support & Help step title">3. Support & Help</Translate></h3>
                   <p><Translate id="homepage.quickStart.support.description" description="Support & Help step description">Get technical support and answers to common questions about AMMDS</Translate></p>
                   <Link to="/docs/tutorial/support"><Translate id="homepage.quickStart.viewSupport" description="View Support Guide link text">View Support Guide</Translate></Link>
                 </div>
@@ -89,7 +89,7 @@ export default function Home(): ReactNode {
             </div>
           </div>
         </section>
-        
+
         {/* Community & Support */}
         <section className={styles.community}>
           <div className="container">
@@ -119,7 +119,7 @@ export default function Home(): ReactNode {
             </div>
           </div>
         </section>
-        
+
         {/* Sponsorship */}
         <section className={styles.sponsorship}>
           <div className="container">
@@ -134,13 +134,13 @@ export default function Home(): ReactNode {
                 </a>
               </div>
               <div className={styles.sponsorshipImage}>
-                <img src="./img/afd-logo-white.png" alt={translate({message: '爱发电', description: '爱发电 logo white'})} className={styles.afdLogoWhite} />
-                <img src="./img/afd-logo-purple.png" alt={translate({message: '爱发电', description: '爱发电 logo purple'})} className={styles.afdLogoPurple} />
+                <img src="./img/afd-logo-white.png" alt={translate({ message: '爱发电', description: '爱发电 logo white' })} className={styles.afdLogoWhite} />
+                <img src="./img/afd-logo-purple.png" alt={translate({ message: '爱发电', description: '爱发电 logo purple' })} className={styles.afdLogoPurple} />
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* Latest Updates */}
         <section className={styles.latestUpdates}>
           <div className="container">

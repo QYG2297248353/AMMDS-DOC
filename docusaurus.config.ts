@@ -35,7 +35,7 @@ const config: Config = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
           sidebarPath: "./sidebars.ts",
@@ -76,11 +76,11 @@ const config: Config = {
               options: { wordsPerMinute: 300 },
             }),
           feedOptions: {
-            type: 'all',
+            type: "all",
             xslt: true,
             copyright: `Copyright © ${new Date().getFullYear()} 新疆萌森软件开发工作室, Inc.`,
             createFeedItems: async (params) => {
-              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
                 blogPosts: blogPosts.filter((item, index) => index < 10),
                 ...rest,
@@ -105,17 +105,54 @@ const config: Config = {
   themeConfig: {
     image: "img/ammds-social-card.png",
     metadata: [
-      { name: "description", content: "AMMDS 文档中心" },
-      {
-        name: "keywords",
-        content: "AMMDS, 刮削, 整理, 成人电影, 小姐姐, MDCx, mdc-ng",
-      },
-      { name: "author", content: "新疆萌森软件开发工作室" },
-    ],
+    // 核心 SEO
+    {
+      name: "description",
+      content:
+        "AMMDS 是高效的媒体元数据抓取与整理工具，支持电影/视频自动刮削、海报下载、演员与标签管理，兼容 Emby、Jellyfin、Plex 等服务，助你构建专业媒体库。",
+    },
+    {
+      name: "keywords",
+      content:
+        "AMMDS, 媒体刮削, Movie metadata scraper, 元数据抓取工具, Emby, Jellyfin, Plex, 媒体库整理, 海报下载, 演员管理, NSFW 内容管理, 自动整理, 影视元数据",
+    },
+    { name: "author", content: "新疆萌森软件开发工作室" },
+    { name: "robots", content: "index, follow" },
+    { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+    { name: "theme-color", content: "#4a90e2" },
+    { name: "language", content: "zh-CN" },
+
+    // Open Graph (社交媒体分享)
+    { property: "og:title", content: "AMMDS 文档中心 | 媒体元数据刮削与整理工具" },
+    {
+      property: "og:description",
+      content:
+        "AMMDS 提供高效的媒体刮削、海报下载、演员与标签管理等功能，支持多媒体服务器兼容，提升媒体库管理体验。",
+    },
+    {
+      property: "og:image",
+      content: "https://ammds.lifebus.top/img/ammds-social-card.png",
+    },
+    { property: "og:url", content: "https://ammds.lifebus.top" },
+    { property: "og:type", content: "website" },
+
+    // Twitter Card
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "AMMDS 文档中心" },
+    {
+      name: "twitter:description",
+      content: "AMMDS — 强大的媒体元数据抓取与整理工具",
+    },
+    {
+      name: "twitter:image",
+      content: "https://ammds.lifebus.top/img/ammds-social-card.png",
+    },
+    { name: "twitter:site", content: "@MS2297248353" },
+  ],
     announcementBar: {
       id: "announcement_bar",
       content:
-        'AMMDS 1.6.47 (公测版) 已发布！<a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47">查看详情</a>',
+        'AMMDS v1.6.47 (公测版) 已发布！<a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47">查看详情</a>',
       textColor: "#091E42",
       isCloseable: true,
     },
@@ -154,7 +191,7 @@ const config: Config = {
           position: "left",
         },
         {
-          type: 'docsVersionDropdown',
+          type: "docsVersionDropdown",
           position: "right",
         },
         {
