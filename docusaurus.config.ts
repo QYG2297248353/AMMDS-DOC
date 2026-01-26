@@ -78,7 +78,7 @@ const config: Config = {
           feedOptions: {
             type: "all",
             xslt: true,
-            copyright: `Copyright © ${new Date().getFullYear()} 新疆萌森软件开发工作室, Inc.`,
+            copyright: `Copyright © ${new Date().getFullYear()} 新疆萌森软件开发工作室`,
             createFeedItems: async (params) => {
               const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
