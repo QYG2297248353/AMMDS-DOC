@@ -98,6 +98,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: ["docusaurus-plugin-image-zoom"],
   themes: ["@docusaurus/theme-mermaid"],
   markdown: {
     mermaid: true,
@@ -173,6 +174,14 @@ const config: Config = {
       sidebar: {
         groupByYear: true,
       },
+    },
+    zoom: {
+      selector: ".markdown > img",
+      background: {
+        light: "rgb(255, 255, 255)",
+        dark: "rgb(50, 50, 50)",
+      },
+      config: {},
     },
     navbar: {
       title: "AMMDS",
