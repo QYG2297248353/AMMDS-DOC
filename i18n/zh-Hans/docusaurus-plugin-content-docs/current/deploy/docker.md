@@ -33,7 +33,7 @@ docker run -itd \
 
 | 参数 | 说明 |
 |------|------|
-| `-itd` 或 `--interactive --tty --detach` | 组合选项：<br>- `-i` 或 `--interactive`：即使未附加也保持 STDIN 打开<br>- `-t` 或 `--tty`：为容器交互分配伪终端<br>- `-d` 或 `--detach`：在后台以守护进程方式运行容器 |
+| `-itd` 或 `--interactive --tty --detach` | 组合选项：<br />- `-i` 或 `--interactive`：即使未附加也保持 STDIN 打开<br />- `-t` 或 `--tty`：为容器交互分配伪终端<br />- `-d` 或 `--detach`：在后台以守护进程方式运行容器 |
 | `--name AMMDS` | 指定容器名称为 AMMDS |
 | `-p 8080:80` | 将主机的 8080 端口映射到容器的 80 端口，格式：`-p <主机端口>:<容器端口>` |
 | `-v $(pwd)/data:/ammds/data` | 将当前目录的 `./data` 文件夹挂载到容器的 `/ammds/data`，用于数据持久化 |

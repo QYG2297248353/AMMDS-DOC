@@ -33,7 +33,7 @@ Please mount your local media directory to the container yourself. Do not use `/
 
 | Parameter | Description |
 |-----------|-------------|
-| `-itd` or `--interactive --tty --detach` | Combined options:<br>- `-i` or `--interactive`: Keep STDIN open even if not attached<br>- `-t` or `--tty`: Allocate a pseudo-TTY (terminal) for container interaction<br>- `-d` or `--detach`: Run the container in the background as a daemon |
+| `-itd` or `--interactive --tty --detach` | Combined options:<br />- `-i` or `--interactive`: Keep STDIN open even if not attached<br />- `-t` or `--tty`: Allocate a pseudo-TTY (terminal) for container interaction<br />- `-d` or `--detach`: Run the container in the background as a daemon |
 | `--name AMMDS` | Specify the container name as AMMDS |
 | `-p 8080:80` | Map port 8080 on the host to port 80 in the container, format: `-p <host port>:<container port>` |
 | `-v $(pwd)/data:/ammds/data` | Mount the current directory's `./data` folder to `/ammds/data` in the container for data persistence |
