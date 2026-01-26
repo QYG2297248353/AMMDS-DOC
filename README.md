@@ -1,6 +1,6 @@
-# AMMDS-DOC
-
 <div align="center">
+
+# AMMDS-DOC
 
 [![Version](https://img.shields.io/badge/Version-1.6.47-blue.svg)](https://github.com/QYG2297248353/AMMDS-Doc)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -8,7 +8,11 @@
 
 </div>
 
+---
+
 ## 📋 目录
+
+<div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; border: 1px solid #e0e0e0;">
 
 - [项目简介](#项目简介)
 - [技术栈](#技术栈)
@@ -32,6 +36,8 @@
 - [贡献指南](#贡献指南)
   - [代码规范](#代码规范)
 - [许可证](#许可证)
+
+</div>
 
 ---
 
