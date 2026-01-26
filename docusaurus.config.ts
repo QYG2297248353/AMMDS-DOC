@@ -64,6 +64,8 @@ const config: Config = {
               label: "v1.0.0",
             },
           },
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: {
           blogTitle: "AMMDS Blog",
