@@ -1,0 +1,23 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  background-color: var(--ifm-background-color);
+}
+
+.featureIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.featureIcon:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 996px) {
+  .featureIcon {
+    font-size: 3rem;
+  }
+}

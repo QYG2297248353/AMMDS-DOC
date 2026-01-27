@@ -1,23 +1,58 @@
 {
   "name": "ammds",
+  "version": "1.6.47",
   "private": true,
-  "type": "module",
-  "version": "1.0.0",
-  "description": "AMMDS 影视管理平台",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
-  },
-  "author": "新疆萌森软件开发工作室",
-  "devDependencies": {
-    "@arco-design/web-vue": "^2.56.3",
-    "@arco-plugins/vite-vue": "^1.4.5",
-    "less": "^4.2.2",
-    "vitepress": "^1.6.3"
+    "gen:webp": "ts-node scripts/gen-webp.ts",
+    "prebuild": "npm run gen:webp",
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "axios": "^1.8.4",
-    "markdown-it-mathjax3": "^4.3.2"
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/plugin-pwa": "^3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
+    "@docusaurus/theme-mermaid": "^3.9.2",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "docusaurus-plugin-image-zoom": "^3.0.1",
+    "prism-react-renderer": "^2.3.0",
+    "raw-loader": "^4.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/eslint-plugin": "^3.9.2",
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
+    "@types/node": "^25.0.10",
+    "fast-glob": "^3.3.3",
+    "sharp": "^0.34.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0"
   }
 }

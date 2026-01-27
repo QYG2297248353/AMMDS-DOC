@@ -4,6 +4,8 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+  release:
+    types: [created]
 
 permissions:
   contents: write
@@ -21,30 +23,37 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 9
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
-      - name: Build with VitePress
-        run: pnpm run build
+      - name: Build with Docusaurus
+        run: npm run build
 
       - name: Create dist.zip
         run: |
-          zip -r dist.zip dist
+          zip -r dist.zip build
 
       - name: Commit and Push dist files
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist dist.zip
+          git add dist.zip static/img
           git commit -m "chore: update dist files"
           git push origin master
+
+      - name: Upload dist.zip to Release
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist.zip
+          asset_name: dist.zip
+          asset_content_type: application/zip

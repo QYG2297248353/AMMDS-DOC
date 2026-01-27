@@ -1,0 +1,281 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 160px;
+  max-width: 220px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.description {
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+  
+  .logo {
+    max-width: 100px;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttons .button {
+  margin: 0.5rem;
+}
+
+/* Section Styles */
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sectionDescription {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Quick Start Section */
+.quickStart {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.quickStartCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--ifm-card-box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quickStartCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quickStartCard h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.quickStartCard p {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Community Section */
+.community {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.communityLinks {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+.communityLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--ifm-text-color);
+  padding: 1rem;
+  border-radius: var(--ifm-card-border-radius);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.communityLink:hover {
+  transform: translateY(-5px);
+  background-color: var(--ifm-card-background-color);
+}
+
+.communityIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Sponsorship Section */
+.sponsorship {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+}
+
+.sponsorshipCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  box-shadow: var(--ifm-card-box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.sponsorshipContent {
+  flex: 1;
+}
+
+.sponsorshipContent h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.sponsorshipContent p {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.sponsorshipImage {
+  flex-shrink: 0;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsorshipImage img {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.afdLogoWhite {
+  display: block;
+}
+
+.afdLogoPurple {
+  display: none;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .afdLogoWhite {
+  display: none;
+}
+
+[data-theme='dark'] .afdLogoPurple {
+  display: block;
+}
+
+/* Latest Updates Section */
+.latestUpdates {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.changelogCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  box-shadow: var(--ifm-card-box-shadow);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.changelogCard h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.changelogCard p {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  max-width: 100%;
+}
+
+.changelogCard p:last-of-type:not(:has(+ .button)) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--ifm-primary-color);
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 996px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .sponsorshipCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .communityLinks {
+    gap: 1rem;
+  }
+  
+  .communityLink {
+    padding: 0.8rem;
+  }
+  
+  .communityIcon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .quickStartCard {
+    padding: 1.5rem;
+  }
+  
+  .changelogCard {
+    padding: 1.5rem;
+  }
+  
+  .changelogCard p {
+    font-size: 1.2rem;
+  }
+}
