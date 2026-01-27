@@ -1,10 +1,12 @@
 ---
 sidebar_position: 6
-sidebar_label: "宝塔面板"
+sidebar_label: "Baota Panel"
 ---
 
-# 宝塔面板
+# Baota Panel
 
-宝塔(bt.cn)，让运维简单高效。面板支持Linux与Windows系统。一键配置：LAMP/LNMP、网站、数据库、FTP、SSL，通过Web端轻松管理服务器。
+Baota (bt.cn) makes operation and maintenance simple and efficient. The panel supports Linux and Windows systems. One-click configuration: LAMP/LNMP, websites, databases, FTP, SSL, easily manage servers through the web interface.
 
 <!-- truncate -->
+
+Coming Soon
