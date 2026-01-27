@@ -44,10 +44,11 @@ curl -sSL https://install.lifebus.top/app_install.sh | bash
 1. **进入商店设置**
    通过左侧导航栏进入应用商店，点击进入商店设置页面。
 
-   ![更新商店内容](/img/deploy/install-1panel-00.png)
 
 2. **执行更新操作**
 
+   ![更新商店内容](/img/deploy/install-1panel-00.png)
+   
    #### v1 版本
    在商店页面的右上角点击「更新应用列表」按钮。
 

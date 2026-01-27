@@ -44,9 +44,9 @@ curl -sSL https://install.lifebus.top/app_install.sh | bash
 1. **Access Store Settings**
    Navigate to the App Store via the left sidebar and click to enter the Store Settings page.
 
-   ![Update Store Content](/img/deploy/install-1panel-00.png)
-
 2. **Execute Update Operation**
+
+   ![Update Store Content](/img/deploy/install-1panel-00.png)
 
    #### v1 Version
    Click the "Update App List" button in the upper right corner of the store page.
