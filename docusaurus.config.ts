@@ -158,7 +158,7 @@ const config: Config = {
     announcementBar: {
       id: "announcement_bar",
       content:
-        'AMMDS v1.6.47 (公测版) 已发布！<a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47">查看详情</a>',
+        '🎉️ <a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/tag/1.6.47">AMMDS v1.6.47</a> (公测版) 已发布！🥳️',
       textColor: "#091E42",
       isCloseable: true,
     },
