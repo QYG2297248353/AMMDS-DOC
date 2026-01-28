@@ -20,7 +20,7 @@ const config: Config = {
   },
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "zh-Hans"],
+    locales: ["en", "zh-Hans", "ja", "ko"],
     localeConfigs: {
       en: {
         label: "English",
@@ -55,23 +55,8 @@ const config: Config = {
             current: {
               label: "v1.6.47",
             },
-            "v1.5.0": {
-              label: "v1.5.0",
-            },
-            "v1.4.0": {
-              label: "v1.4.0",
-            },
-            "v1.3.0": {
-              label: "v1.3.0",
-            },
-            "v1.2.0": {
-              label: "v1.2.0",
-            },
-            "v1.1.0": {
-              label: "v1.1.0",
-            },
-            "v1.0.0": {
-              label: "v1.0.0",
+            "v1.6.0": {
+              label: "v1.6.0",
             },
           },
           showLastUpdateAuthor: true,
