@@ -4,19 +4,19 @@
     "description": "The label for version current"
   },
   "sidebar.guideSidebar.category.Tutorial": {
-    "message": "Tutorial",
+    "message": "튜토리얼",
     "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Deploy": {
-    "message": "Deploy",
+    "message": "배포",
     "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Plugin": {
-    "message": "Plugin",
+    "message": "플러그인",
     "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Metadata": {
-    "message": "Metadata",
+    "message": "메타데이터",
     "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
   }
 }

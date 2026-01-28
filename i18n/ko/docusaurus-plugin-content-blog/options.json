@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "AMMDS Blog",
+    "message": "AMMDS 블로그",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "AMMDS Development Blog",
+    "message": "AMMDS 개발 블로그",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
-    "message": "Recent posts",
+    "message": "최근 게시물",
     "description": "The label for the left sidebar"
   }
 }

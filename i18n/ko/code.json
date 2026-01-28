@@ -8,83 +8,83 @@
     "description": "AMMDS website title"
   },
   "homepage.subtitle": {
-    "message": "Adult Movie MetaData Scraper",
+    "message": "성인 영화 메타데이터 스크래퍼",
     "description": "AMMDS website subtitle"
   },
   "homepage.description": {
-    "message": "Create an exclusive home theater experience with intelligent scraping metadata, actor recognition, multi-source data matching and more",
+    "message": "지능형 메타데이터 스크래핑, 배우 인식, 다중 소스 데이터 매칭 등을 통해 독점적인 홈씨어터 경험을 만드세요",
     "description": "AMMDS website main description"
   },
   "homepage.button.quickStart": {
-    "message": "Quick Start",
+    "message": "빠른 시작",
     "description": "Quick Start button text"
   },
   "homepage.button.learnMore": {
-    "message": "Learn More",
+    "message": "자세히 알아보기",
     "description": "Learn More button text"
   },
   "AMMDS - Adult Movie MetaData Scraper": {
-    "message": "AMMDS - Adult Movie MetaData Scraper",
+    "message": "AMMDS - 성인 영화 메타데이터 스크래퍼",
     "description": "Website description"
   },
   "homepage.quickStart.title": {
-    "message": "Quick Start",
+    "message": "빠른 시작",
     "description": "Quick Start section title"
   },
   "homepage.quickStart.installation": {
-    "message": "1. Installation",
+    "message": "1. 설치",
     "description": "Installation step title"
   },
   "homepage.quickStart.installation.description": {
-    "message": "Choose the deployment method that suits you best, including Docker, Windows, Linux, etc.",
+    "message": "Docker, Windows, Linux 등을 포함하여 가장 적합한 배포 방법을 선택하세요",
     "description": "Installation step description"
   },
   "homepage.quickStart.viewDeployment": {
-    "message": "View Deployment Guide",
+    "message": "배포 가이드 보기",
     "description": "View Deployment Guide link text"
   },
   "homepage.quickStart.start": {
-    "message": "2. Quick Start",
+    "message": "2. 빠른 시작",
     "description": "Quick Start step title"
   },
   "homepage.quickStart.start.description": {
-    "message": "Get started with AMMDS in just a few simple steps",
+    "message": "몇 단계만으로 AMMDS 사용을 시작하세요",
     "description": "Quick Start step description"
   },
   "homepage.quickStart.viewQuickStart": {
-    "message": "View Quick Start Guide",
+    "message": "빠른 시작 가이드 보기",
     "description": "View Quick Start Guide link text"
   },
   "homepage.quickStart.support": {
-    "message": "3. Support & Help",
+    "message": "3. 지원 및 도움",
     "description": "Support & Help step title"
   },
   "homepage.quickStart.support.description": {
-    "message": "Get technical support and answers to common questions about AMMDS",
+    "message": "AMMDS에 대한 기술 지원과 자주 묻는 질문에 대한 답을 얻으세요",
     "description": "Support & Help step description"
   },
   "homepage.quickStart.viewSupport": {
-    "message": "View Support Guide",
+    "message": "지원 가이드 보기",
     "description": "View Support Guide link text"
   },
   "homepage.quickStart.questions": {
-    "message": "4. Common Questions",
+    "message": "4. 자주 묻는 질문",
     "description": "Common Questions step title"
   },
   "homepage.quickStart.questions.description": {
-    "message": "Find answers to common questions about AMMDS",
+    "message": "AMMDS에 대한 자주 묻는 질문에 대한 답을 찾으세요",
     "description": "Common Questions step description"
   },
   "homepage.quickStart.viewQuestions": {
-    "message": "View Common Questions",
+    "message": "자주 묻는 질문 보기",
     "description": "View Common Questions link text"
   },
   "homepage.community.title": {
-    "message": "Community & Support",
+    "message": "커뮤니티 및 지원",
     "description": "Community & Support section title"
   },
   "homepage.community.description": {
-    "message": "Join our community to get help and support",
+    "message": "도움과 지원을 받기 위해 커뮤니티에 가입하세요",
     "description": "Community & Support section description"
   },
   "homepage.community.github": {
@@ -92,11 +92,11 @@
     "description": "GitHub link text"
   },
   "homepage.community.telegramChannel": {
-    "message": "Telegram Channel",
+    "message": "Telegram 채널",
     "description": "Telegram Channel link text"
   },
   "homepage.community.telegramGroup": {
-    "message": "Telegram Group",
+    "message": "Telegram 그룹",
     "description": "Telegram Group link text"
   },
   "homepage.community.discord": {
@@ -104,27 +104,27 @@
     "description": "Discord link text"
   },
   "homepage.community.qqGroup": {
-    "message": "QQ Group",
+    "message": "QQ 그룹",
     "description": "QQ Group link text"
   },
   "homepage.sponsorship.title": {
-    "message": "Sponsorship",
+    "message": "후원 지원",
     "description": "Sponsorship section title"
   },
   "homepage.sponsorship.description": {
-    "message": "Your support is our driving force to continue advancing",
+    "message": "귀하의 지원은 우리가 계속 발전하는 원동력입니다",
     "description": "Sponsorship section description"
   },
   "homepage.sponsorship.afdian": {
-    "message": "Sponsor AMMDS on 爱发电",
+    "message": "爱发电에서 AMMDS 후원",
     "description": "Sponsor AMMDS on 爱发电 title"
   },
   "homepage.sponsorship.afdian.description": {
-    "message": "Support AMMDS development and get exclusive benefits",
+    "message": "AMMDS 개발을 지원하고 특별 혜택을 받으세요",
     "description": "Sponsor AMMDS on 爱发电 description"
   },
   "homepage.sponsorship.afdian.button": {
-    "message": "Go to 爱发电",
+    "message": "爱发电로 이동",
     "description": "Go to 爱发电 button text"
   },
   "爱发电": {
@@ -132,27 +132,27 @@
     "description": "爱发电 logo purple"
   },
   "homepage.updates.title": {
-    "message": "Latest Updates",
+    "message": "최신 업데이트",
     "description": "Latest Updates section title"
   },
   "homepage.updates.description": {
-    "message": "Stay up-to-date with the latest developments and version updates of AMMDS",
+    "message": "AMMDS의 최신 발전과 버전 업데이트를随时了解하세요",
     "description": "Latest Updates section description"
   },
   "homepage.updates.blog": {
-    "message": "Blog Updates",
+    "message": "블로그 업데이트",
     "description": "Blog Updates title"
   },
   "homepage.updates.blog.description": {
-    "message": "Latest news and updates about AMMDS",
+    "message": "AMMDS에 대한 최신 소식과 업데이트",
     "description": "Blog Updates description"
   },
   "homepage.updates.viewBlog": {
-    "message": "View Blog",
+    "message": "블로그 보기",
     "description": "View Blog button text"
   },
   "homepage.updates.version": {
-    "message": "Latest Version",
+    "message": "최신 버전",
     "description": "Latest Version title"
   },
   "homepage.updates.version.prefix": {
@@ -160,79 +160,79 @@
     "description": "Latest Version prefix"
   },
   "homepage.updates.viewChangelog": {
-    "message": "View Changelog",
+    "message": "변경 로그 보기",
     "description": "View Changelog button text"
   },
   "homepage.features.library.title": {
-    "message": "Movie Library Management",
+    "message": "영화 라이브러리 관리",
     "description": "Movie Library Management feature title"
   },
   "homepage.features.library.description": {
-    "message": "Supports multiple video formats, automatically scrapes metadata, and creates a personalized movie library",
+    "message": "다양한 비디오 형식을 지원하고, 메타데이터를 자동으로 스크래핑하여 개인화된 영화 라이브러리를 만듭니다",
     "description": "Movie Library Management feature description"
   },
   "homepage.features.actorRecognition.title": {
-    "message": "Automatic Actor Recognition",
+    "message": "자동 배우 인식",
     "description": "Automatic Actor Recognition feature title"
   },
   "homepage.features.actorRecognition.description": {
-    "message": "Automatically recognizes actor information in films and provides detailed actor profiles and filmography",
+    "message": "영화에서 배우 정보를 자동으로 인식하고 상세한 배우 프로필과 필모그래피를 제공합니다",
     "description": "Automatic Actor Recognition feature description"
   },
   "homepage.features.metadataScraping.title": {
-    "message": "Automatic Metadata Scraping",
+    "message": "자동 메타데이터 스크래핑",
     "description": "Automatic Metadata Scraping feature title"
   },
   "homepage.features.metadataScraping.description": {
-    "message": "Automatically retrieves metadata for films from the internet, including posters, summaries, ratings, etc.",
+    "message": "포스터, 요약, 평점 등을 포함하여 인터넷에서 영화 메타데이터를 자동으로 검색합니다",
     "description": "Automatic Metadata Scraping feature description"
   },
   "homepage.features.sharing.title": {
-    "message": "Sharing Functionality",
+    "message": "공유 기능",
     "description": "Sharing Functionality feature title"
   },
   "homepage.features.sharing.description": {
-    "message": "Share your movie library with friends or family, easily share your film collection",
+    "message": "친구나 가족과 영화 라이브러리를 공유하고, 영화 컬렉션을 쉽게 공유하세요",
     "description": "Sharing Functionality feature description"
   },
   "homepage.features.plugin.title": {
-    "message": "Plugin Integration",
+    "message": "플러그인 통합",
     "description": "Plugin Integration feature title"
   },
   "homepage.features.plugin.description": {
-    "message": "Offers rich plugin support, easily integrates with existing media servers or players",
+    "message": "풍부한 플러그인 지원을 제공하여 기존 미디어 서버 또는 플레이어와 쉽게 통합합니다",
     "description": "Plugin Integration feature description"
   },
   "homepage.features.multiSource.title": {
-    "message": "Multi-source Scraping",
+    "message": "다중 소스 스크래핑",
     "description": "Multi-source Scraping feature title"
   },
   "homepage.features.multiSource.description": {
-    "message": "Supports scraping film information from multiple data sources, ensuring comprehensive and accurate data",
+    "message": "데이터의 완전성과 정확성을 보장하기 위해 여러 데이터 소스에서 영화 정보를 스크래핑합니다",
     "description": "Multi-source Scraping feature description"
   },
   "homepage.features.intelligentMatching.title": {
-    "message": "Intelligent Matching",
+    "message": "지능형 매칭",
     "description": "Intelligent Matching feature title"
   },
   "homepage.features.intelligentMatching.description": {
-    "message": "Automatically matches local files with online metadata through intelligent algorithms, reducing manual operations",
+    "message": "지능형 알고리즘을 통해 로컬 파일과 온라인 메타데이터를 자동으로 매칭하여 수동 작업을 줄입니다",
     "description": "Intelligent Matching feature description"
   },
   "homepage.features.batchProcessing.title": {
-    "message": "Batch Processing",
+    "message": "일괄 처리",
     "description": "Batch Processing feature title"
   },
   "homepage.features.batchProcessing.description": {
-    "message": "Supports batch processing of multiple video files, improving management efficiency",
+    "message": "여러 비디오 파일을 일괄 처리하여 관리 효율성을 향상시킵니다",
     "description": "Batch Processing feature description"
   },
   "homepage.features.customTags.title": {
-    "message": "Custom Tags",
+    "message": "사용자 정의 태그",
     "description": "Custom Tags feature title"
   },
   "homepage.features.customTags.description": {
-    "message": "Supports custom tags for personalized classification and management of film resources",
+    "message": "영화 자원을 개인화된 분류와 관리하기 위한 사용자 정의 태그를 지원합니다",
     "description": "Custom Tags feature description"
   },
   "theme.ErrorPageContent.title": {
@@ -280,7 +280,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "시스템 모드",
     "description": "The name for the system color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
@@ -415,7 +415,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(새 탭에서 열기)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
@@ -495,11 +495,11 @@
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "드롭다운 확장",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "드롭다운 접기",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {

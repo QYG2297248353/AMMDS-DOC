@@ -8,83 +8,83 @@
     "description": "AMMDS website title"
   },
   "homepage.subtitle": {
-    "message": "Adult Movie MetaData Scraper",
+    "message": "アダルト映画メタデータスクレイパー",
     "description": "AMMDS website subtitle"
   },
   "homepage.description": {
-    "message": "Create an exclusive home theater experience with intelligent scraping metadata, actor recognition, multi-source data matching and more",
+    "message": "インテリジェントなメタデータスクレイピング、俳優認識、マルチソースデータマッチングなどで独占的なホームシアター体験を作成します",
     "description": "AMMDS website main description"
   },
   "homepage.button.quickStart": {
-    "message": "Quick Start",
+    "message": "クイックスタート",
     "description": "Quick Start button text"
   },
   "homepage.button.learnMore": {
-    "message": "Learn More",
+    "message": "詳しく知る",
     "description": "Learn More button text"
   },
   "AMMDS - Adult Movie MetaData Scraper": {
-    "message": "AMMDS - Adult Movie MetaData Scraper",
+    "message": "AMMDS - アダルト映画メタデータスクレイパー",
     "description": "Website description"
   },
   "homepage.quickStart.title": {
-    "message": "Quick Start",
+    "message": "クイックスタート",
     "description": "Quick Start section title"
   },
   "homepage.quickStart.installation": {
-    "message": "1. Installation",
+    "message": "1. インストール",
     "description": "Installation step title"
   },
   "homepage.quickStart.installation.description": {
-    "message": "Choose the deployment method that suits you best, including Docker, Windows, Linux, etc.",
+    "message": "Docker、Windows、Linuxなど、最適なデプロイ方法を選択してください",
     "description": "Installation step description"
   },
   "homepage.quickStart.viewDeployment": {
-    "message": "View Deployment Guide",
+    "message": "デプロイガイドを表示",
     "description": "View Deployment Guide link text"
   },
   "homepage.quickStart.start": {
-    "message": "2. Quick Start",
+    "message": "2. クイックスタート",
     "description": "Quick Start step title"
   },
   "homepage.quickStart.start.description": {
-    "message": "Get started with AMMDS in just a few simple steps",
+    "message": "数ステップでAMMDSの使用を開始しましょう",
     "description": "Quick Start step description"
   },
   "homepage.quickStart.viewQuickStart": {
-    "message": "View Quick Start Guide",
+    "message": "クイックスタートガイドを表示",
     "description": "View Quick Start Guide link text"
   },
   "homepage.quickStart.support": {
-    "message": "3. Support & Help",
+    "message": "3. サポートとヘルプ",
     "description": "Support & Help step title"
   },
   "homepage.quickStart.support.description": {
-    "message": "Get technical support and answers to common questions about AMMDS",
+    "message": "AMMDSの技術サポートとよくある質問の回答を入手してください",
     "description": "Support & Help step description"
   },
   "homepage.quickStart.viewSupport": {
-    "message": "View Support Guide",
+    "message": "サポートガイドを表示",
     "description": "View Support Guide link text"
   },
   "homepage.quickStart.questions": {
-    "message": "4. Common Questions",
+    "message": "4. よくある質問",
     "description": "Common Questions step title"
   },
   "homepage.quickStart.questions.description": {
-    "message": "Find answers to common questions about AMMDS",
+    "message": "AMMDSに関するよくある質問の回答を見つけてください",
     "description": "Common Questions step description"
   },
   "homepage.quickStart.viewQuestions": {
-    "message": "View Common Questions",
+    "message": "よくある質問を表示",
     "description": "View Common Questions link text"
   },
   "homepage.community.title": {
-    "message": "Community & Support",
+    "message": "コミュニティとサポート",
     "description": "Community & Support section title"
   },
   "homepage.community.description": {
-    "message": "Join our community to get help and support",
+    "message": "ヘルプとサポートを受けるためにコミュニティに参加してください",
     "description": "Community & Support section description"
   },
   "homepage.community.github": {
@@ -92,11 +92,11 @@
     "description": "GitHub link text"
   },
   "homepage.community.telegramChannel": {
-    "message": "Telegram Channel",
+    "message": "Telegramチャンネル",
     "description": "Telegram Channel link text"
   },
   "homepage.community.telegramGroup": {
-    "message": "Telegram Group",
+    "message": "Telegramグループ",
     "description": "Telegram Group link text"
   },
   "homepage.community.discord": {
@@ -104,27 +104,27 @@
     "description": "Discord link text"
   },
   "homepage.community.qqGroup": {
-    "message": "QQ Group",
+    "message": "QQグループ",
     "description": "QQ Group link text"
   },
   "homepage.sponsorship.title": {
-    "message": "Sponsorship",
+    "message": "スポンサーシップ",
     "description": "Sponsorship section title"
   },
   "homepage.sponsorship.description": {
-    "message": "Your support is our driving force to continue advancing",
+    "message": "あなたのサポートは私たちの継続的な進歩の原動力です",
     "description": "Sponsorship section description"
   },
   "homepage.sponsorship.afdian": {
-    "message": "Sponsor AMMDS on 爱发电",
+    "message": "爱发电でAMMDSをスポンサー",
     "description": "Sponsor AMMDS on 爱发电 title"
   },
   "homepage.sponsorship.afdian.description": {
-    "message": "Support AMMDS development and get exclusive benefits",
+    "message": "AMMDSの開発をサポートし、独占的な特典を獲得しましょう",
     "description": "Sponsor AMMDS on 爱发电 description"
   },
   "homepage.sponsorship.afdian.button": {
-    "message": "Go to 爱发电",
+    "message": "爱发电に行く",
     "description": "Go to 爱发电 button text"
   },
   "爱发电": {
@@ -132,27 +132,27 @@
     "description": "爱发电 logo purple"
   },
   "homepage.updates.title": {
-    "message": "Latest Updates",
+    "message": "最新の更新",
     "description": "Latest Updates section title"
   },
   "homepage.updates.description": {
-    "message": "Stay up-to-date with the latest developments and version updates of AMMDS",
+    "message": "AMMDSの最新の発展とバージョンアップデートを常に把握してください",
     "description": "Latest Updates section description"
   },
   "homepage.updates.blog": {
-    "message": "Blog Updates",
+    "message": "ブログの更新",
     "description": "Blog Updates title"
   },
   "homepage.updates.blog.description": {
-    "message": "Latest news and updates about AMMDS",
+    "message": "AMMDSに関する最新のニュースと更新",
     "description": "Blog Updates description"
   },
   "homepage.updates.viewBlog": {
-    "message": "View Blog",
+    "message": "ブログを表示",
     "description": "View Blog button text"
   },
   "homepage.updates.version": {
-    "message": "Latest Version",
+    "message": "最新バージョン",
     "description": "Latest Version title"
   },
   "homepage.updates.version.prefix": {
@@ -160,79 +160,79 @@
     "description": "Latest Version prefix"
   },
   "homepage.updates.viewChangelog": {
-    "message": "View Changelog",
+    "message": "変更履歴を表示",
     "description": "View Changelog button text"
   },
   "homepage.features.library.title": {
-    "message": "Movie Library Management",
+    "message": "映画ライブラリ管理",
     "description": "Movie Library Management feature title"
   },
   "homepage.features.library.description": {
-    "message": "Supports multiple video formats, automatically scrapes metadata, and creates a personalized movie library",
+    "message": "複数の動画形式をサポートし、メタデータを自動的にスクレイピングして、パーソナライズされた映画ライブラリを作成します",
     "description": "Movie Library Management feature description"
   },
   "homepage.features.actorRecognition.title": {
-    "message": "Automatic Actor Recognition",
+    "message": "自動俳優認識",
     "description": "Automatic Actor Recognition feature title"
   },
   "homepage.features.actorRecognition.description": {
-    "message": "Automatically recognizes actor information in films and provides detailed actor profiles and filmography",
+    "message": "映画の俳優情報を自動的に認識し、詳細な俳優プロフィールとフィルモグラフィを提供します",
     "description": "Automatic Actor Recognition feature description"
   },
   "homepage.features.metadataScraping.title": {
-    "message": "Automatic Metadata Scraping",
+    "message": "自動メタデータスクレイピング",
     "description": "Automatic Metadata Scraping feature title"
   },
   "homepage.features.metadataScraping.description": {
-    "message": "Automatically retrieves metadata for films from the internet, including posters, summaries, ratings, etc.",
+    "message": "ポスター、概要、評価などを含む映画のメタデータをインターネットから自動的に取得します",
     "description": "Automatic Metadata Scraping feature description"
   },
   "homepage.features.sharing.title": {
-    "message": "Sharing Functionality",
+    "message": "共有機能",
     "description": "Sharing Functionality feature title"
   },
   "homepage.features.sharing.description": {
-    "message": "Share your movie library with friends or family, easily share your film collection",
+    "message": "友達や家族と映画ライブラリを共有し、映画コレクションを簡単に共有しましょう",
     "description": "Sharing Functionality feature description"
   },
   "homepage.features.plugin.title": {
-    "message": "Plugin Integration",
+    "message": "プラグイン統合",
     "description": "Plugin Integration feature title"
   },
   "homepage.features.plugin.description": {
-    "message": "Offers rich plugin support, easily integrates with existing media servers or players",
+    "message": "豊富なプラグインサポートを提供し、既存のメディアサーバーやプレイヤーと簡単に統合します",
     "description": "Plugin Integration feature description"
   },
   "homepage.features.multiSource.title": {
-    "message": "Multi-source Scraping",
+    "message": "マルチソーススクレイピング",
     "description": "Multi-source Scraping feature title"
   },
   "homepage.features.multiSource.description": {
-    "message": "Supports scraping film information from multiple data sources, ensuring comprehensive and accurate data",
+    "message": "データの包括性と正確性を確保するために、複数のデータソースから映画情報をスクレイピングします",
     "description": "Multi-source Scraping feature description"
   },
   "homepage.features.intelligentMatching.title": {
-    "message": "Intelligent Matching",
+    "message": "インテリジェントマッチング",
     "description": "Intelligent Matching feature title"
   },
   "homepage.features.intelligentMatching.description": {
-    "message": "Automatically matches local files with online metadata through intelligent algorithms, reducing manual operations",
+    "message": "インテリジェントなアルゴリズムを通じてローカルファイルとオンラインメタデータを自動的にマッチングし、手動操作を減らします",
     "description": "Intelligent Matching feature description"
   },
   "homepage.features.batchProcessing.title": {
-    "message": "Batch Processing",
+    "message": "バッチ処理",
     "description": "Batch Processing feature title"
   },
   "homepage.features.batchProcessing.description": {
-    "message": "Supports batch processing of multiple video files, improving management efficiency",
+    "message": "複数の動画ファイルのバッチ処理をサポートし、管理効率を向上させます",
     "description": "Batch Processing feature description"
   },
   "homepage.features.customTags.title": {
-    "message": "Custom Tags",
+    "message": "カスタムタグ",
     "description": "Custom Tags feature title"
   },
   "homepage.features.customTags.description": {
-    "message": "Supports custom tags for personalized classification and management of film resources",
+    "message": "映画リソースのパーソナライズされた分類と管理のためのカスタムタグをサポートします",
     "description": "Custom Tags feature description"
   },
   "theme.ErrorPageContent.title": {
@@ -362,13 +362,13 @@
     "message": "{atDate}{byUser}最終更新",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "他のバージョン",
-    "description": "The label for the navbar versions dropdown on mobile view"
-  },
   "theme.NotFound.title": {
     "message": "ページが見つかりません",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "他のバージョン",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "タグ:",
@@ -415,7 +415,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(新しいタブで開く)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
@@ -495,11 +495,11 @@
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "ドロップダウンを展開",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "ドロップダウンを折りたたむ",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
