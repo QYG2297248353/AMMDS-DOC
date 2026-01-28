@@ -5,68 +5,68 @@ sidebar_label: "Telegram"
 
 # Telegram
 
-Telegram 是一款基于云架构的即时通讯应用平台，支持文本、语音、视频、图像等多种消息格式的发送与接收。该插件为 AMMDS 提供 Telegram 消息推送能力，实现系统事件的实时通知。
+Telegram is a cloud-based instant messaging platform that supports sending and receiving various message formats including text, voice, video, and images. This plugin provides Telegram message push capabilities for AMMDS, enabling real-time notification of system events.
 
-## 插件配置
+## Plugin Configuration
 
-![插件配置](/img/plugin/telegram-01.png)
+![Plugin Configuration](/img/plugin/telegram-01.png)
 
-### 基本配置
+### Basic Configuration
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| 启用状态 | 控制是否启用 Telegram 推送插件 | 关闭 |
-| 服务地址 | Telegram API 服务端点 | `https://api.telegram.org` |
-| Bot Token | Telegram 机器人的认证令牌 | - |
-| Chat ID | Telegram 目标聊天的唯一标识 | - |
-| Webhook URL | (可选) Telegram 机器人的 Webhook 回调地址 | - |
-| 剧透模式 | 控制是否对推送的图像添加蒙版处理 | 关闭 |
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| Enable Status | Controls whether to enable the Telegram push plugin | Disabled |
+| Service Address | Telegram API service endpoint | `https://api.telegram.org` |
+| Bot Token | Telegram bot authentication token | - |
+| Chat ID | Unique identifier for the target Telegram chat | - |
+| Webhook URL | (Optional) Telegram bot webhook callback address | - |
+| Spoiler Mode | Controls whether to add blur effect to pushed images | Disabled |
 
-![插件配置](/img/plugin/telegram-02.png)
+![Plugin Configuration](/img/plugin/telegram-02.png)
 
-### 配置说明
+### Configuration Notes
 
-- **服务地址**：默认指向官方 API 端点，如需使用代理或自建服务，可在此处修改
-- **Bot Token**：可通过 Telegram 中的 `@BotFather` 机器人获取
-- **Chat ID**：可通过 Telegram 中的 `@RawDataBot` 机器人获取
-- **Webhook URL**：仅建议公网部署的用户配置，非公网环境可能导致消息接收失败
-- **剧透模式**：开启后会对推送的图像添加蒙版，保护隐私内容
+- **Service Address**: Defaults to the official API endpoint. Can be modified here if using a proxy or self-hosted service
+- **Bot Token**: Can be obtained through the `@BotFather` bot in Telegram
+- **Chat ID**: Can be obtained through the `@RawDataBot` bot in Telegram
+- **Webhook URL**: Only recommended for users with public network deployment. Non-public network environments may cause message reception failures
+- **Spoiler Mode**: When enabled, adds blur effect to pushed images to protect privacy content
 
-### 获取认证信息
+### Obtaining Authentication Information
 
-1. **获取 Bot Token**：
-   - 在 Telegram 中搜索并启动 `@BotFather`
-   - 按照指引创建新机器人并获取 Token
+1. **Obtaining Bot Token**:
+   - Search for and start `@BotFather` in Telegram
+   - Follow the instructions to create a new bot and obtain the Token
 
-2. **获取 Chat ID**：
-   - 在 Telegram 中搜索并启动 `@RawDataBot`
-   - 发送任意消息后，机器人会返回包含 Chat ID 的信息
+2. **Obtaining Chat ID**:
+   - Search for and start `@RawDataBot` in Telegram
+   - Send any message, and the bot will return information containing the Chat ID
 
-## 测试模块
+## Test Module
 
-### 推送测试
+### Push Test
 
-- **功能**：测试 Telegram 推送配置是否正确
-- **操作**：点击测试按钮后，系统会向配置的 Chat ID 发送测试消息
-- **验证**：成功后会在目标聊天中收到测试消息
+- **Function**: Test if Telegram push configuration is correct
+- **Operation**: After clicking the test button, the system will send a test message to the configured Chat ID
+- **Verification**: A test message will be received in the target chat upon success
 
-## 功能特性
+## Features
 
-- **多格式支持**：支持文本、图像等多种消息格式
-- **实时推送**：系统事件实时推送到 Telegram
-- **剧透保护**：图像内容可选择添加蒙版保护
-- **灵活配置**：支持自定义服务地址和 Webhook
+- **Multi-format Support**: Supports multiple message formats including text and images
+- **Real-time Push**: System events are pushed to Telegram in real-time
+- **Spoiler Protection**: Image content can optionally have blur protection added
+- **Flexible Configuration**: Supports custom service address and Webhook
 
-## 注意事项
+## Notes
 
-:::warning Webhook 配置
-非公网部署的用户不建议配置 Webhook URL，否则可能导致无法接收消息。
+:::warning Webhook Configuration
+Users with non-public network deployment are not recommended to configure Webhook URL, as this may result in inability to receive messages.
 :::
 
-:::info 服务稳定性
-由于 Telegram 服务的网络特性，建议确保服务器网络环境能够稳定访问 Telegram API。
+:::info Service Stability
+Due to the network characteristics of Telegram services, it is recommended to ensure that the server network environment can stably access the Telegram API.
 :::
 
-:::tip 安全建议
-Bot Token 属于敏感信息，请妥善保管，避免泄露给未授权人员。
+:::tip Security Advice
+Bot Token is sensitive information, please keep it secure and avoid disclosing it to unauthorized personnel.
 :::

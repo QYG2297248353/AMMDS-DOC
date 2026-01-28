@@ -5,49 +5,49 @@ sidebar_label: "Emby"
 
 # Emby
 
-Emby 是一套功能强大的多媒体管理应用套件，专为组织、管理和分享数字媒体文件而设计。通过该插件，AMMDS 可与 Emby 媒体服务器建立集成，实现元数据同步与媒体库管理。
+Emby is a powerful multimedia management application suite designed for organizing, managing, and sharing digital media files. Through this plugin, AMMDS can integrate with Emby media server to implement metadata synchronization and media library management.
 
-## 插件配置
+## Plugin Configuration
 
-![插件配置](/img/plugin/emby-01.png)
+![Plugin Configuration](/img/plugin/emby-01.png)
 
-### 基本配置
+### Basic Configuration
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| 启用状态 | 控制是否启用 Emby 插件 | 关闭 |
-| 服务地址 | Emby 服务器的网络端点 | `http://127.0.0.1:8096` |
-| API 密钥 | Emby 服务器的认证令牌 | - |
-| 用户名 | (可选) Emby 服务器的登录用户名 | - |
-| 密码 | (可选) Emby 服务器的登录密码 | - |
-| 绑定用户 | 选择要绑定的 Emby 用户账号 | - |
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| Enable Status | Controls whether to enable the Emby plugin | Disabled |
+| Service Address | Emby server network endpoint | `http://127.0.0.1:8096` |
+| API Key | Emby server authentication token | - |
+| Username | (Optional) Emby server login username | - |
+| Password | (Optional) Emby server login password | - |
+| Bind User | Select the Emby user account to bind | - |
 
-![插件配置](/img/plugin/emby-02.png)
+![Plugin Configuration](/img/plugin/emby-02.png)
 
-### 配置说明
+### Configuration Notes
 
-- **服务地址**：请使用服务器的实际网络地址，避免使用 `localhost` 或 `127.0.0.1`，否则可能导致容器化部署时连接失败
-- **API 密钥**：可在 Emby 管理界面的「系统」→「高级」→「API 密钥」中生成
-- **绑定用户**：需先填写正确的服务地址和 API 密钥并保存后，才能在下拉列表中选择用户
+- **Service Address**: Please use the server's actual network address. Avoid using `localhost` or `127.0.0.1`, as this may cause connection failures in containerized deployments
+- **API Key**: Can be generated in the Emby management interface under "System" → "Advanced" → "API Keys"
+- **Bind User**: You must first enter the correct service address and API key and save before you can select a user from the dropdown list
 
-### 连接验证
+### Connection Verification
 
-- **网络连通性**：确保 AMMDS 服务器能够访问 Emby 服务地址
-- **认证信息**：API 密钥需具有足够的权限执行所需操作
-- **服务状态**：确保 Emby 服务器处于运行状态且可正常响应 API 请求
+- **Network Connectivity**: Ensure the AMMDS server can access the Emby service address
+- **Authentication Information**: API key must have sufficient permissions to perform required operations
+- **Service Status**: Ensure the Emby server is running and can properly respond to API requests
 
-## 功能特性
+## Features
 
-- **元数据同步**：支持与 Emby 媒体库的元数据双向同步
-- **用户绑定**：可绑定特定 Emby 用户，实现个性化配置
-- **状态监控**：实时监控 Emby 服务器的运行状态
+- **Metadata Synchronization**: Supports bidirectional metadata synchronization with Emby media libraries
+- **User Binding**: Can bind to specific Emby users for personalized configuration
+- **Status Monitoring**: Real-time monitoring of Emby server running status
 
-## 注意事项
+## Notes
 
-:::warning 服务地址配置
-请勿使用 `localhost` 或 `127.0.0.1` 作为服务地址，特别是在容器化部署环境中，否则可能导致连接失败。
+:::warning Service Address Configuration
+Do not use `localhost` or `127.0.0.1` as the service address, especially in containerized deployment environments, as this may cause connection failures.
 :::
 
-:::info API 密钥权限
-建议为 AMMDS 创建专用的 API 密钥，并赋予适当的权限范围，以确保系统安全性。
+:::info API Key Permissions
+It is recommended to create a dedicated API key for AMMDS with appropriate permission scope to ensure system security.
 :::

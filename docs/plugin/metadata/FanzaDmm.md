@@ -5,38 +5,38 @@ sidebar_label: "Fanza DMM"
 
 # Fanza DMM
 
-FANZA 是日本领先的成人内容平台，提供线上 DVD 贩售、影片租赁与流媒体服务。平台与多家知名片商建立合作关系，推出专属频道服务，并提供基于订阅制的「見放題 ch」（随心看）服务，涵盖平台内大部分视频内容。
+FANZA is Japan's leading adult content platform, offering online DVD sales, video rental, and streaming services. The platform has established partnerships with multiple well-known studios, launched exclusive channel services, and provides a subscription-based "見放題 ch" (all-you-can-watch) service covering most video content on the platform.
 
-## 插件配置
+## Plugin Configuration
 
-![插件配置](/img/plugin/fanzadmm-01.png)
+![Plugin Configuration](/img/plugin/fanzadmm-01.png)
 
-### 基本配置
+### Basic Configuration
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| 启用状态 | 控制是否启用 Fanza DMM 插件 | 关闭 |
-| Ranking 榜单数据 | 控制是否采集 FANZA 的排行榜数据 | 关闭 |
-| 影视检索 | 控制是否开启 FANZA 的影视内容检索功能 | 关闭 |
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| Enable Status | Controls whether to enable the Fanza DMM plugin | Disabled |
+| Ranking Data | Controls whether to collect FANZA's ranking data | Disabled |
+| Video Search | Controls whether to enable FANZA's video content search functionality | Disabled |
 
-### 配置说明
+### Configuration Notes
 
-- **榜单数据采集**：启用后将定期同步 FANZA 各分类的排行榜数据，为媒体库提供热门内容参考
-- **影视检索**：开启后可通过 FANZA 数据源进行影视内容检索，提升元数据匹配准确度
-- **数据更新频率**：系统会根据配置自动调整数据更新周期，确保数据时效性
+- **Ranking Data Collection**: When enabled, it will regularly synchronize ranking data from various FANZA categories, providing reference for popular content in the media library
+- **Video Search**: When enabled, video content can be searched through FANZA data sources, improving metadata matching accuracy
+- **Data Update Frequency**: The system will automatically adjust the data update cycle based on configuration to ensure data timeliness
 
-## 功能特性
+## Features
 
-- **多维度数据**：涵盖影片、演员、榜单等多维度数据
-- **实时同步**：支持定期同步最新的平台数据
-- **精准匹配**：基于 FANZA 官方数据的高精度元数据匹配
+- **Multi-dimensional Data**: Covers multiple dimensions of data including videos, actors, and rankings
+- **Real-time Synchronization**: Supports regular synchronization of the latest platform data
+- **Precise Matching**: High-precision metadata matching based on official FANZA data
 
-## 注意事项
+## Notes
 
-:::info 地域限制
-FANZA 服务可能存在地域访问限制，建议在部署时考虑网络环境因素
+:::info Regional Restrictions
+FANZA services may have regional access restrictions. It is recommended to consider network environment factors during deployment
 :::
 
-:::note 数据来源
-插件数据来源于 FANZA 官方 API，确保数据的合法性与准确性
+:::note Data Source
+Plugin data comes from FANZA's official API, ensuring data legality and accuracy
 :::

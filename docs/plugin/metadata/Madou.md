@@ -5,35 +5,35 @@ sidebar_label: "麻豆传媒映画"
 
 # 麻豆传媒映画
 
-麻豆传媒映画是一家专注于成人内容制作与分发的媒体公司，注册于美国加利福尼亚州，服务端基础设施部署于美国境内。该插件为 AMMDS 提供麻豆传媒的影视与演员元数据采集能力。
+麻豆传媒映画 is a media company focused on adult content production and distribution, registered in California, USA, with server infrastructure deployed within the United States. This plugin provides AMMDS with the ability to collect video and actor metadata from 麻豆传媒映画.
 
-## 插件配置
+## Plugin Configuration
 
-![插件配置](/img/plugin/madou-01.png)
+![Plugin Configuration](/img/plugin/madou-01.png)
 
-### 基本配置
+### Basic Configuration
 
-| 参数 | 说明 | 默认值 |
-|------|------|--------|
-| 启用状态 | 控制是否启用麻豆传媒映画插件 | 关闭 |
-| 服务地址 | 麻豆传媒的 API 服务端点 | `https://api.modelmediaasia.com` |
-| 影视采集 | 控制是否采集麻豆传媒的影视元数据（采用提前缓存机制） | 关闭 |
-| 演员采集 | 控制是否采集麻豆传媒的演员元数据（采用提前缓存机制） | 关闭 |
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| Enable Status | Controls whether to enable the Madou Media plugin | Disabled |
+| Service Address | Madou Media API service endpoint | `https://api.modelmediaasia.com` |
+| Video Collection | Controls whether to collect Madou Media's video metadata (using advance caching mechanism) | Disabled |
+| Actor Collection | Controls whether to collect Madou Media's actor metadata (using advance caching mechanism) | Disabled |
 
-### 配置说明
+### Configuration Notes
 
-- **服务地址**：默认指向官方 API 端点，如需使用代理或自建服务，可在此处修改
-- **元数据采集**：采用提前缓存机制，确保数据获取速度与稳定性
-- **数据同步**：启用采集后，系统将定期同步最新的影视与演员信息
+- **Service Address**: Defaults to the official API endpoint. Can be modified here if using a proxy or self-hosted service
+- **Metadata Collection**: Uses advance caching mechanism to ensure data retrieval speed and stability
+- **Data Synchronization**: When collection is enabled, the system will regularly synchronize the latest video and actor information
 
-## 注意事项
+## Notes
 
-:::note 数据采集机制
-目前插件采用提前缓存元数据的方式，确保在网络环境不稳定时仍能提供完整的元数据服务。
+:::note Data Collection Mechanism
+Currently, the plugin uses advance metadata caching to ensure complete metadata service even in unstable network environments.
 :::
 
-:::info 服务可用性
-由于服务部署于美国，建议确保网络连接稳定，必要时可配置代理以优化访问速度。
+:::info Service Availability
+Since the service is deployed in the United States, it is recommended to ensure stable network connection and configure proxy if necessary to optimize access speed.
 :::
 
 
