@@ -4,17 +4,19 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "AMMDS Documentation",
+  titleDelimiter: " | ",
   tagline: "Personal video data management platform",
   favicon: "img/favicon.ico",
-  staticDirectories: ["static"],
-  future: {
-    v4: true,
-  },
   url: "https://ammds.lifebus.top",
   baseUrl: "/",
   organizationName: "QYG2297248353",
-  projectName: "AMMDS-Doc",
+  projectName: "AMMDS-Docker",
+  staticDirectories: ["static"],
   onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  future: {
+    v4: true,
+  },
   customFields: {
     version: "v1.6.47",
   },
@@ -29,20 +31,68 @@ const config: Config = {
       "zh-Hans": {
         label: "简体中文",
         htmlLang: "zh-Hans",
-        direction: "ltr",
       },
       ja: {
         label: "日本語",
         htmlLang: "ja-JP",
-        direction: "ltr",
       },
       ko: {
         label: "한국어",
         htmlLang: "ko-KR",
-        direction: "ltr",
       },
     },
   },
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "canonical",
+        href: "https://ammds.lifebus.top",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://www.google-analytics.com",
+      },
+    },
+    {
+      tagName: "script",
+      attributes: { type: "application/ld+json" },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "AMMDS",
+        url: "https://ammds.lifebus.top",
+        logo: "https://ammds.lifebus.top/img/logo.png",
+        sameAs: [
+          "https://github.com/QYG2297248353/AMMDS-Docker",
+          "https://hub.docker.com/r/qyg2297248353/ammds",
+          "https://t.me/ammds_official",
+        ],
+      }),
+    },
+    {
+      tagName: "script",
+      attributes: { type: "application/ld+json" },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "AMMDS",
+        operatingSystem: "Linux, Windows, macOS",
+        applicationCategory: "MultimediaApplication",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        description:
+          "AMMDS 是一个媒体元数据抓取与管理工具，支持 Emby、Jellyfin、Plex。",
+        url: "https://ammds.lifebus.top",
+      }),
+    },
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -95,7 +145,18 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  plugins: ["docusaurus-plugin-image-zoom"],
+  plugins: [
+    "docusaurus-plugin-image-zoom",
+    "./src/plugin/plugin-umami.ts",
+    [
+      "@docusaurus/plugin-sitemap",
+      {
+        changefreq: "weekly",
+        priority: 0.5,
+        ignorePatterns: ["/tags/**"],
+      },
+    ],
+  ],
   themes: ["@docusaurus/theme-mermaid"],
   markdown: {
     mermaid: true,
@@ -103,7 +164,6 @@ const config: Config = {
   themeConfig: {
     image: "img/ammds-social-card.png",
     metadata: [
-      // 核心 SEO
       {
         name: "description",
         content:
@@ -136,6 +196,11 @@ const config: Config = {
       },
       { property: "og:url", content: "https://ammds.lifebus.top" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "AMMDS Documentation" },
+      { property: "og:locale", content: "zh_CN" },
+      { property: "og:locale:alternate", content: "en_US" },
+      { property: "og:locale:alternate", content: "ja_JP" },
+      { property: "og:locale:alternate", content: "ko_KR" },
 
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
@@ -171,6 +236,20 @@ const config: Config = {
       sidebar: {
         groupByYear: true,
       },
+    },
+    algolia: {
+      appId: '5TII7256K5',
+      apiKey: 'fdb0bd02dc7a07752ed9688b1ca985bb',
+      indexName: 'ammds',
+      contextualSearch: true,
+      externalUrlRegex: 'external\\.com|domain\\.com',
+      replaceSearchResultPathname: {
+        from: '/docs/',
+        to: '/',
+      },
+      searchParameters: {},
+      searchPagePath: 'search',
+      insights: false,
     },
     zoom: {
       selector: ".markdown img",
