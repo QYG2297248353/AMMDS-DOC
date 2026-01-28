@@ -1,22 +1,22 @@
 {
   "version.label": {
-    "message": "最新",
+    "message": "v1.6.47",
     "description": "The label for version current"
   },
   "sidebar.guideSidebar.category.Tutorial": {
-    "message": "教程",
+    "message": "Tutorial",
     "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Deploy": {
-    "message": "部署",
+    "message": "Deploy",
     "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Plugin": {
-    "message": "插件",
+    "message": "Plugin",
     "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Metadata": {
-    "message": "元数据",
+    "message": "Metadata",
     "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
   }
 }

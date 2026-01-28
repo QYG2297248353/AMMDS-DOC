@@ -31,6 +31,16 @@ const config: Config = {
         htmlLang: "zh-Hans",
         direction: "ltr",
       },
+      ja: {
+        label: "日本語",
+        htmlLang: "ja-JP",
+        direction: "ltr",
+      },
+      ko: {
+        label: "한국어",
+        htmlLang: "ko-KR",
+        direction: "ltr",
+      },
     },
   },
   presets: [

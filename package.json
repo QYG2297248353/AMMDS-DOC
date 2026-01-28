@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "gen:webp": "ts-node scripts/gen-webp.ts",
+    "gen:zhhans": "npm run write-translations -- --locale zh-Hans",
+    "gen:ja": "npm run write-translations -- --locale ja",
+    "gen:ko": "npm run write-translations -- --locale ko",
+    "gen:lang": "npm run gen:zhhans && npm run gen:ja && npm run gen:ko",
     "prebuild": "npm run gen:webp",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
