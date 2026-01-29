@@ -5,28 +5,29 @@ sidebar_label: "M-Team"
 
 # M-Team
 
-综合性讨论区,拥有多元化讨论版块及组合群组,提供天下时事及资讯探讨.
+M-Team is a comprehensive discussion forum with diverse discussion sections and combined groups, providing discussion on current affairs and information worldwide.
 
-私有站点：该站点需要通过邀请注册，有一定门槛。
+Private site: This site requires registration by invitation and has certain thresholds.
 
 <!-- truncate -->
 
-## 插件配置
+## Plugin Configuration
 
-![插件配置](/img/plugin/m-team-01.png)
+![Plugin Configuration](/img/plugin/m-team-01.png)
 
-启用状态: 控制是否启用M-Team插件。
+Enable Status: Controls whether to enable the M-Team plugin.
 
-服务地址: M-Team API服务端地址。 默认值为 `https://api.m-team.io/api`。可根据实际情况修改。
-    目前M-Team API服务端地址有三个,分别为:
-    - https://api.m-team.cc/api
-    - https://api.m-team.io/api
-    - https://api2.m-team.cc/api
+Service Address: M-Team API server address. The default value is `https://api.m-team.io/api`, which can be modified according to actual conditions.
 
-密钥(Passkey): 密钥，可在 控制台 >> 設置 >> 主頁 >> 密匙 >> 发送至邮箱 按钮获取。并在邮箱中获取结果。默认值为空。
+Currently, there are three M-Team API server addresses:
+- https://api.m-team.cc/api
+- https://api.m-team.io/api
+- https://api2.m-team.cc/api
 
-存取令牌(Token): 存取令牌，可在 控制台 >> 設置 >> 實驗室 >> 存取令牌 >> 建立存取令牌 按钮创建。默认值为空。
+Passkey: Key used for authentication, which can be obtained by clicking the "Send to Email" button in "Console >> Settings >> Home >> Passkey" and checking the result in the email. The default value is empty.
 
-![存取令牌](/img/plugin/m-team-02.png)
+Access Token: Token used for API access, which can be created by clicking the "Create Access Token" button in "Console >> Settings >> Laboratory >> Access Token". The default value is empty.
 
-账户保护通知：如果您的账户超过14天未重新登录，系统将发送通知提醒您，需要重新登录以保护您的账户避免被注销。
+![Access Token](/img/plugin/m-team-02.png)
+
+Account Protection Notification: If the account has not logged in again for more than 14 days, the system will send a notification reminder, requiring re-login to protect the account from being deleted.

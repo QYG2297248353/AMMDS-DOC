@@ -5,23 +5,23 @@ sidebar_label: "Prowlarr"
 
 # Prowlarr
 
-Prowlarr 是一款专为影音自动化设计的强大索引器管理器和代理工具，基于 .NET/React 技术栈构建。它作为集中式中心，统一管理数百个 Torrent 跟踪器和 Usenet 索引器，并与 Sonarr、Radarr、Lidarr、Readarr 等应用无缝同步
+Prowlarr is a powerful indexer manager and proxy tool specifically designed for media automation, built on the .NET/React technology stack. It serves as a centralized hub that unifies the management of hundreds of Torrent trackers and Usenet indexers, seamlessly synchronizing with applications like Sonarr, Radarr, Lidarr, and Readarr.
 
-官网：[https://prowlarr.com/](https://prowlarr.com/)
+Official website: [https://prowlarr.com/](https://prowlarr.com/)
 
 <!-- truncate -->
 
-## 插件配置
+## Plugin Configuration
 
-![Prowlarr 插件配置](./img/plugin/prowlarr-01.png)
+![Prowlarr Plugin Configuration](./img/plugin/prowlarr-01.png)
 
-启用状态：是否启用该插件
+Enable Status: Controls whether to enable the plugin.
 
-服务地址：Prowlarr 服务的地址。
+Service Address: The access address of the Prowlarr service.
 
-鉴权密钥：Prowlarr 服务的鉴权密钥。
+Authentication Key: The authentication key for the Prowlarr service, used for identity verification.
 
-## 自部署
+## Self-deployment
 
 ### Docker-Cli
 
