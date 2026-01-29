@@ -7,6 +7,8 @@ sidebar_label: "Fanza DMM"
 
 FANZA is Japan's leading adult content platform, offering online DVD sales, video rental, and streaming services. The platform has established partnerships with multiple well-known studios, launched exclusive channel services, and provides a subscription-based "見放題 ch" (all-you-can-watch) service covering most video content on the platform.
 
+<!-- truncate -->
+
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/fanzadmm-01.png)

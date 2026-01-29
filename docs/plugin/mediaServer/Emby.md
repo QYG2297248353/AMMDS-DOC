@@ -7,6 +7,8 @@ sidebar_label: "Emby"
 
 Emby is a powerful multimedia management application suite designed for organizing, managing, and sharing digital media files. Through this plugin, AMMDS can integrate with Emby media server to implement metadata synchronization and media library management.
 
+<!-- truncate -->
+
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/emby-01.png)

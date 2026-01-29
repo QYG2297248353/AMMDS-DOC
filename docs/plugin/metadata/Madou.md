@@ -7,6 +7,8 @@ sidebar_label: "麻豆传媒映画"
 
 麻豆传媒映画 is a media company focused on adult content production and distribution, registered in California, USA, with server infrastructure deployed within the United States. This plugin provides AMMDS with the ability to collect video and actor metadata from 麻豆传媒映画.
 
+<!-- truncate -->
+
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/madou-01.png)

@@ -7,6 +7,8 @@ sidebar_label: "Telegram"
 
 Telegram is a cloud-based instant messaging platform that supports sending and receiving various message formats including text, voice, video, and images. This plugin provides Telegram message push capabilities for AMMDS, enabling real-time notification of system events.
 
+<!-- truncate -->
+
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/telegram-01.png)

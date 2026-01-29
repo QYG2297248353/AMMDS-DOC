@@ -7,6 +7,8 @@ sidebar_label: "Jellyfin"
 
 Jellyfin is an open-source multimedia management application suite designed for organizing, managing, and sharing digital media files. Through this plugin, AMMDS can establish deep integration with Jellyfin media server to implement advanced features such as metadata synchronization and automatic actor avatar completion.
 
+<!-- truncate -->
+
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/jellyfin-01.png)
