@@ -267,9 +267,9 @@ const config: Config = {
       },
     },
     algolia: {
-      appId: '5TII7256K5',
-      apiKey: 'fdb0bd02dc7a07752ed9688b1ca985bb',
-      indexName: 'ammdsammds_doc_pages',
+      appId: 'VIZF28CBV3',
+      apiKey: '53c721a0594a68372eeb648cf0c59fe2',
+      indexName: 'ammds',
       contextualSearch: true,
       searchParameters: {},
       searchPagePath: 'search',
