@@ -102,10 +102,7 @@ const config: Config = {
           lastVersion: "current",
           versions: {
             current: {
-              label: "最新版本",
-            },
-            "v1.6.0": {
-              label: "v1.6.0",
+              label: "最新",
             },
           },
           showLastUpdateAuthor: true,
@@ -272,13 +269,8 @@ const config: Config = {
     algolia: {
       appId: '5TII7256K5',
       apiKey: 'fdb0bd02dc7a07752ed9688b1ca985bb',
-      indexName: 'ammds',
+      indexName: 'ammdsammds_doc_pages',
       contextualSearch: true,
-      externalUrlRegex: 'external\\.com|domain\\.com',
-      replaceSearchResultPathname: {
-        from: '/docs/',
-        to: '/',
-      },
       searchParameters: {},
       searchPagePath: 'search',
       insights: false,
