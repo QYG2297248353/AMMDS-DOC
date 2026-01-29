@@ -15,11 +15,11 @@ Official website: [https://prowlarr.com/](https://prowlarr.com/)
 
 ![Prowlarr Plugin Configuration](/img/plugin/prowlarr-01.png)
 
-Enable Status: Controls whether to enable the plugin.
+### Basic Configuration
 
-Service Address: The access address of the Prowlarr service.
-
-Authentication Key: The authentication key for the Prowlarr service, used for identity verification.
+- **Enable Status**：Controls whether to enable the plugin.
+- **Service Address**：The access address of the Prowlarr service.
+- **Authentication Key**：The authentication key for the Prowlarr service, used for identity verification.
 
 ## Self-deployment
 
