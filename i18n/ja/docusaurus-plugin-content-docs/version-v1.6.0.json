@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "v1.6.0",
+    "description": "The label for version v1.6.0"
+  },
+  "sidebar.guideSidebar.category.Tutorial": {
+    "message": "Tutorial",
+    "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Deploy": {
+    "message": "Deploy",
+    "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
+  }
+}

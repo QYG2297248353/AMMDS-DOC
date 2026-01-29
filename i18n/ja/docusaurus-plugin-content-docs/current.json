@@ -18,5 +18,17 @@
   "sidebar.guideSidebar.category.Metadata": {
     "message": "メタデータ",
     "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Site Search": {
+    "message": "サイト検索",
+    "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Push Notice": {
+    "message": "プッシュ通知",
+    "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Media Server": {
+    "message": "メディアサーバー",
+    "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
   }
 }
