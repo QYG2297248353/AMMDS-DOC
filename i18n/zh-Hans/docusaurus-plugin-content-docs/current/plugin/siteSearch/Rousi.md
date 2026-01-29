@@ -13,7 +13,7 @@ Rousi（肉丝）是一个专注于提供高质量、高效率的综合站点搜
 
 ## 插件配置
 
-![Rousi 插件配置](./img/plugin/rousi-01.png)
+![Rousi 插件配置](/img/plugin/rousi-01.png)
 
 启用状态：控制是否启用该插件。
 
@@ -21,7 +21,7 @@ RSS 服务地址：站点域名，默认值为 `https://rousi.pro`。
 
 API 服务地址：站点 API 域名，默认值为 `https://rousi.pro/api`。
 
-![Rousi 插件配置](./img/plugin/rousi-02.png)
+![Rousi 插件配置](/img/plugin/rousi-02.png)
 
 密钥（PassKey）：站点 API 密钥，用于身份验证和授权。在右上角头像 >> 账户设置 -> Passkey 中获取。
 

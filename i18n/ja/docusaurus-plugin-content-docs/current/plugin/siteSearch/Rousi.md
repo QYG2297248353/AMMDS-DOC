@@ -13,7 +13,7 @@ Rousi（肉丝）は高品質、高効率な総合サイト検索サービスを
 
 ## プラグイン設定
 
-![Rousiプラグイン設定](./img/plugin/rousi-01.png)
+![Rousiプラグイン設定](/img/plugin/rousi-01.png)
 
 有効状態：プラグインの有効化を制御します。
 
@@ -21,7 +21,7 @@ RSSサービスアドレス：サイトドメイン名，デフォルト値は `
 
 APIサービスアドレス：サイトAPIドメイン名，デフォルト値は `https://rousi.pro/api` です。
 
-![Rousiプラグイン設定](./img/plugin/rousi-02.png)
+![Rousiプラグイン設定](/img/plugin/rousi-02.png)
 
 PassKey：サイトAPIキーで、認証と認可に使用されます。右上隅のアバター >> アカウント設定 -> PassKey で取得します。
 

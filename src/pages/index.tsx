@@ -14,7 +14,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="./img/ammds-transparent.png" alt={translate({ message: 'AMMDS Logo', description: 'AMMDS website logo' })} className={styles.logo} />
+        <img src="/img/ammds-transparent.png" alt={translate({ message: 'AMMDS Logo', description: 'AMMDS website logo' })} className={styles.logo} />
         <Heading as="h1" className="hero__title">
           <Translate id="homepage.title" description="AMMDS website title">AMMDS</Translate>
         </Heading>
@@ -134,8 +134,8 @@ export default function Home(): ReactNode {
                 </a>
               </div>
               <div className={styles.sponsorshipImage}>
-                <img src="./img/afd-logo-white.png" alt={translate({ message: '爱发电', description: '爱发电 logo white' })} className={styles.afdLogoWhite} />
-                <img src="./img/afd-logo-purple.png" alt={translate({ message: '爱发电', description: '爱发电 logo purple' })} className={styles.afdLogoPurple} />
+                <img src="/img/afd-logo-white.png" alt={translate({ message: '爱发电', description: '爱发电 logo white' })} className={styles.afdLogoWhite} />
+                <img src="/img/afd-logo-purple.png" alt={translate({ message: '爱发电', description: '爱发电 logo purple' })} className={styles.afdLogoPurple} />
               </div>
             </div>
           </div>

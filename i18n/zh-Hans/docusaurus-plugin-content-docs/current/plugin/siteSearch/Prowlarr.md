@@ -13,7 +13,7 @@ Prowlarr 是一款专为影音自动化设计的强大索引器管理器和代�
 
 ## 插件配置
 
-![Prowlarr 插件配置](./img/plugin/prowlarr-01.png)
+![Prowlarr 插件配置](/img/plugin/prowlarr-01.png)
 
 启用状态：控制是否启用该插件。
 

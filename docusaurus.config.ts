@@ -13,7 +13,6 @@ const config: Config = {
   projectName: "AMMDS-Docker",
   staticDirectories: ["static"],
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   future: {
     v4: true,
   },
@@ -151,6 +150,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-pwa',
       {
+        id: 'ammds-pwa',
         debug: true,
         offlineModeActivationStrategies: [
           'appInstalled',
@@ -179,6 +179,7 @@ const config: Config = {
     [
       "@docusaurus/plugin-sitemap",
       {
+        id: "ammds-sitemap",
         changefreq: "weekly",
         priority: 0.5,
         ignorePatterns: ["/tags/**"],
@@ -188,6 +189,9 @@ const config: Config = {
   themes: ["@docusaurus/theme-mermaid"],
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw'
+    }
   },
   themeConfig: {
     image: "img/ammds-social-card.png",

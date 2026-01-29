@@ -13,7 +13,7 @@ Private site: This site requires registration by invitation and has certain thre
 
 ## Plugin Configuration
 
-![Rousi Plugin Configuration](./img/plugin/rousi-01.png)
+![Rousi Plugin Configuration](/img/plugin/rousi-01.png)
 
 Enable Status: Controls whether to enable the plugin.
 
@@ -21,7 +21,7 @@ RSS Service Address: Site domain name, default value is `https://rousi.pro`.
 
 API Service Address: Site API domain name, default value is `https://rousi.pro/api`.
 
-![Rousi Plugin Configuration](./img/plugin/rousi-02.png)
+![Rousi Plugin Configuration](/img/plugin/rousi-02.png)
 
 PassKey: Site API key, used for authentication and authorization. Obtained in the upper right corner avatar >> Account Settings -> Passkey.
 

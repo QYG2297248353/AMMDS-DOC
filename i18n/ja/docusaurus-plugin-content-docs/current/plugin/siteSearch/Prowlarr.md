@@ -13,7 +13,7 @@ Prowlarrは.NET/React技術スタックをベースに構築された、メデ�
 
 ## プラグイン設定
 
-![Prowlarrプラグイン設定](./img/plugin/prowlarr-01.png)
+![Prowlarrプラグイン設定](/img/plugin/prowlarr-01.png)
 
 有効状態：プラグインの有効化を制御します。
 
