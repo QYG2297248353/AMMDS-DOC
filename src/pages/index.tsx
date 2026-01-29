@@ -43,7 +43,7 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
-  const version = siteConfig.customFields?.version || "v1.6.47";
+  const version = siteConfig.customFields?.version || "v1.6.48";
 
   return (
     <Layout

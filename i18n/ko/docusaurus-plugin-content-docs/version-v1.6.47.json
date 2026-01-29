@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "최신",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.Tutorial": {
+    "message": "튜토리얼",
+    "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Deploy": {
+    "message": "배포",
+    "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Plugin": {
+    "message": "플러그인",
+    "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Metadata": {
+    "message": "메타데이터",
+    "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Site Search": {
+    "message": "사이트 검색",
+    "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Push Notice": {
+    "message": "푸시 알림",
+    "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Media Server": {
+    "message": "미디어 서버",
+    "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  }
+}

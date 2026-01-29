@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "最新",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.Tutorial": {
+    "message": "教程",
+    "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Deploy": {
+    "message": "部署",
+    "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Plugin": {
+    "message": "插件",
+    "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Metadata": {
+    "message": "元数据",
+    "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Site Search": {
+    "message": "站点检索",
+    "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Push Notice": {
+    "message": "推送通知",
+    "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Media Server": {
+    "message": "媒体服务器",
+    "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  }
+}
