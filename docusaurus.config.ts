@@ -138,6 +138,10 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        gtag: {
+          trackingID: "G-9R3SQ829S2",
+          anonymizeIP: true,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -145,30 +149,30 @@ const config: Config = {
     "docusaurus-plugin-image-zoom",
     "./src/plugin/plugin-umami.ts",
     [
-      '@docusaurus/plugin-pwa',
+      "@docusaurus/plugin-pwa",
       {
-        id: 'ammds-pwa',
+        id: "ammds-pwa",
         debug: true,
         offlineModeActivationStrategies: [
-          'appInstalled',
-          'standalone',
-          'queryString',
+          "appInstalled",
+          "standalone",
+          "queryString",
         ],
         pwaHead: [
           {
-            tagName: 'link',
-            rel: 'icon',
-            href: '/img/pwa/icon-maskable-192.png',
+            tagName: "link",
+            rel: "icon",
+            href: "/img/pwa/icon-maskable-192.png",
           },
           {
-            tagName: 'link',
-            rel: 'manifest',
-            href: '/manifest.json',
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json",
           },
           {
-            tagName: 'meta',
-            name: 'theme-color',
-            content: 'rgb(37, 194, 160)',
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(37, 194, 160)",
           },
         ],
       },
@@ -187,8 +191,8 @@ const config: Config = {
   markdown: {
     mermaid: true,
     hooks: {
-      onBrokenMarkdownLinks: 'throw'
-    }
+      onBrokenMarkdownLinks: "throw",
+    },
   },
   themeConfig: {
     image: "img/ammds-social-card.png",
@@ -267,12 +271,12 @@ const config: Config = {
       },
     },
     algolia: {
-      appId: 'VIZF28CBV3',
-      apiKey: '53c721a0594a68372eeb648cf0c59fe2',
-      indexName: 'ammds',
+      appId: "VIZF28CBV3",
+      apiKey: "53c721a0594a68372eeb648cf0c59fe2",
+      indexName: "ammds",
       contextualSearch: true,
       searchParameters: {},
-      searchPagePath: 'search',
+      searchPagePath: "search",
       insights: false,
     },
     zoom: {
