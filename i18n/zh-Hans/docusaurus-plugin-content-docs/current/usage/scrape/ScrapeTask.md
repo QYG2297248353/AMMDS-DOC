@@ -23,8 +23,8 @@ sidebar_label: "执行刮削任务"
 
 + [Metatube 插件](/docs/plugin/metadata/Metatube)
 + [ThePornDB 插件](/docs/plugin/metadata/ThePornDB)
-+ [StashBox 插件](/docs/plugin/metadata/StashBox)
-+ [FanzaDMM 插件](/docs/plugin/metadata/FanzaDMM)
++ [StashBox 插件](/docs/plugin/metadata/ThePornDB)
++ [FanzaDMM 插件](/docs/plugin/metadata/FanzaDmm)
 + [Madou 插件](/docs/plugin/metadata/Madou)
 
 :::warning 重要提醒

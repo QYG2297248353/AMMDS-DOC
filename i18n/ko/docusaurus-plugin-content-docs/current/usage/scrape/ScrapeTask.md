@@ -23,8 +23,8 @@ sidebar_label: "스크래핑 작업 실행"
 
 + [Metatube 플러그인](/docs/plugin/metadata/Metatube)
 + [ThePornDB 플러그인](/docs/plugin/metadata/ThePornDB)
-+ [StashBox 플러그인](/docs/plugin/metadata/StashBox)
-+ [FanzaDMM 플러그인](/docs/plugin/metadata/FanzaDMM)
++ [StashBox 플러그인](/docs/plugin/metadata/ThePornDB)
++ [FanzaDMM 플러그인](/docs/plugin/metadata/FanzaDmm)
 + [Madou 플러그인](/docs/plugin/metadata/Madou)
 
 :::warning 중요한 경고

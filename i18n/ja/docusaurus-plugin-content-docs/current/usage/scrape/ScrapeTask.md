@@ -23,8 +23,8 @@ sidebar_label: "スクレイピングタスクの実行"
 
 + [Metatube プラグイン](/docs/plugin/metadata/Metatube)
 + [ThePornDB プラグイン](/docs/plugin/metadata/ThePornDB)
-+ [StashBox プラグイン](/docs/plugin/metadata/StashBox)
-+ [FanzaDMM プラグイン](/docs/plugin/metadata/FanzaDMM)
++ [StashBox プラグイン](/docs/plugin/metadata/ThePornDB)
++ [FanzaDMM プラグイン](/docs/plugin/metadata/FanzaDmm)
 + [Madou プラグイン](/docs/plugin/metadata/Madou)
 
 :::warning 重要な注意事項

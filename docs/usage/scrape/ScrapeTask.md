@@ -23,8 +23,8 @@ Please confirm that relevant metadata plugins are enabled and correctly configur
 
 + [Metatube Plugin](/docs/plugin/metadata/Metatube)
 + [ThePornDB Plugin](/docs/plugin/metadata/ThePornDB)
-+ [StashBox Plugin](/docs/plugin/metadata/StashBox)
-+ [FanzaDMM Plugin](/docs/plugin/metadata/FanzaDMM)
++ [StashBox Plugin](/docs/plugin/metadata/ThePornDB)
++ [FanzaDMM Plugin](/docs/plugin/metadata/FanzaDmm)
 + [Madou Plugin](/docs/plugin/metadata/Madou)
 
 :::warning Important Reminder
