@@ -1,214 +1,214 @@
 ---
 sidebar_position: 1
-sidebar_label: "挂载关系"
+sidebar_label: "マウント関係"
 ---
 
-# 挂载关系详解
+# マウント関係の詳細説明
 
-本文档详细介绍 AMMDS 相关的挂载关系，包括部署时的挂载逻辑和媒体整理的挂载逻辑，帮助您理解整个系统的目录结构和数据流向。
+本ドキュメントでは、AMMDS に関連するマウント関係について詳しく説明します。デプロイ時のマウントロジックとメディア整理のマウントロジックを含み、システム全体のディレクトリ構造とデータフローを理解するのに役立ちます。
 
 :::tip
-如果您是第一次使用 AMMDS，建议您先阅读本文档，了解系统的挂载关系，这样可以避免在部署和使用过程中出现数据丢失或配置错误的问题。
+初めて AMMDS を使用する場合は、システムのマウント関係を理解するためにまずこのドキュメントを読むことをお勧めします。これにより、デプロイと使用中のデータ損失や設定エラーを回避できます。
 :::
 
-## 一、部署时的挂载逻辑
+## 一、デプロイ時のマウントロジック
 
-### 1. 基础挂载配置
+### 1. 基本マウント設定
 
-在使用 Docker Compose 部署 AMMDS 时，需要在 `docker-compose.yml` 文件中配置挂载目录：
+Docker Compose を使用して AMMDS をデプロイする場合、`docker-compose.yml` ファイルでマウントディレクトリを設定する必要があります。
 
 ```yaml
 volumes:
-  - ./data:/ammds/data  # 挂载当前目录的 data 文件夹到容器的 /ammds/data
-  - ./db:/ammds/db  # 挂载当前目录的 db 文件夹到容器的 /ammds/db
-  - ./download:/data/download  # 挂载当前目录的 download 文件夹到容器的 /data/download
-  - ./media:/data/media  # 挂载当前目录的 media 文件夹到容器的 /data/media
+  - ./data:/ammds/data  # 現在のディレクトリの data フォルダをコンテナの /ammds/data にマウント
+  - ./db:/ammds/db  # 現在のディレクトリの db フォルダをコンテナの /ammds/db にマウント
+  - ./download:/data/download  # 現在のディレクトリの download フォルダをコンテナの /data/download にマウント
+  - ./media:/data/media  # 現在のディレクトリの media フォルダをコンテナの /data/media にマウント
 ```
 
-### 2. 目录说明
+### 2. ディレクトリの説明
 
-| 宿主机目录 | 容器目录 | 用途 |
-| ---------- | -------- | ---- |
-| `./data` | `/ammds/data` | 存储 AMMDS 的配置文件和临时数据 |
-| `./db` | `/ammds/db` | 存储 AMMDS 的数据库文件 |
-| `./download` | `/data/download` | 存储下载的未整理电影文件 |
-| `./media` | `/data/media` | 存储整理后的电影文件，供 Jellyfin 等媒体服务器访问 |
+| ホストマシンのディレクトリ | コンテナのディレクトリ | 用途 |
+| -------------------------- | ---------------------- | ---- |
+| `./data` | `/ammds/data` | AMMDS の設定ファイルと一時データを保存 |
+| `./db` | `/ammds/db` | AMMDS のデータベースファイルを保存 |
+| `./download` | `/data/download` | 整理されていない映画ファイルを保存 |
+| `./media` | `/data/media` | Jellyfin などのメディアサーバーからアクセスするための整理済み映画ファイルを保存 |
 
-### 3. 部署挂载示意图
+### 3. デプロイマウントの図
 
 ```mermaid
 flowchart TD
-    %% 宿主机目录
-    subgraph HOST["宿主机"]
+    %% ホストマシンのディレクトリ
+    subgraph HOST["ホストマシン"]
         H_DATA["./data"]
         H_DB["./db"]
         H_DOWNLOAD["./download"]
         H_MEDIA["./media"]
     end
 
-    %% AMMDS容器
-    subgraph AMMDS["AMMDS容器"]
+    %% AMMDS コンテナ
+    subgraph AMMDS["AMMDS コンテナ"]
         A_DATA["/ammds/data"]
         A_DB["/ammds/db"]
         A_DOWNLOAD["/data/download"]
         A_MEDIA["/data/media"]
     end
 
-    %% 挂载关系
+    %% マウント関係
     H_DATA -->|"- ./data:/ammds/data"| A_DATA
     H_DB -->|"- ./db:/ammds/db"| A_DB
     H_DOWNLOAD -->|"- ./download:/data/download"| A_DOWNLOAD
     H_MEDIA -->|"- ./media:/data/media"| A_MEDIA
 
-    %% 说明
-    A_DATA -->|"存储配置文件和临时数据"| CONFIG["配置文件"]
-    A_DB -->|"存储数据库文件"| DATABASE["数据库"]
-    A_DOWNLOAD -->|"存储未整理电影文件"| RAW_MEDIA["未整理电影"]
-    A_MEDIA -->|"存储整理后电影文件"| PROCESSED_MEDIA["已整理电影"]
+    %% 説明
+    A_DATA -->|"設定ファイルと一時データを保存"| CONFIG["設定ファイル"]
+    A_DB -->|"データベースファイルを保存"| DATABASE["データベース"]
+    A_DOWNLOAD -->|"整理されていない映画ファイルを保存"| RAW_MEDIA["整理されていない映画"]
+    A_MEDIA -->|"整理済み映画ファイルを保存"| PROCESSED_MEDIA["整理済み映画"]
 ```
 
-## 二、媒体整理的挂载逻辑
+## 二、メディア整理のマウントロジック
 
-### 1. 整体架构
+### 1. 全体アーキテクチャ
 
 ```mermaid
 flowchart LR
     %% =========================
-    %% 宿主机（只保留事实）
+    %% ホストマシン（事実のみ保持）
     %% =========================
-    subgraph HOST["宿主机（真实磁盘）"]
-        D1["/data/download<br/>下载的电影（未整理）"]
-        D2["/data/media<br/>下载的电影（已整理）"]
+    subgraph HOST["ホストマシン (実ディスク)"]
+        D1["/data/download<br/>ダウンロードした映画 (整理されていない)"]
+        D2["/data/media<br/>ダウンロードした映画 (整理済み)"]
     end
 
     %% =========================
     %% ammds
     %% =========================
-    subgraph AMMDS["ammds（媒体刮削 / 整理）"]
-        A1["/data/download<br/>数据源目录"]
-        A2["/data/media<br/>整理目标目录"]
+    subgraph AMMDS["ammds (メディアスクレイピング / 整理)"]
+        A1["/data/download<br/>データソースディレクトリ"]
+        A2["/data/media<br/>整理ターゲットディレクトリ"]
     end
 
     %% =========================
     %% jellyfin
     %% =========================
-    subgraph JELLYFIN["Jellyfin（媒体库）"]
-        J["/data/media<br/>媒体库路径"]
+    subgraph JELLYFIN["Jellyfin (メディアライブラリ)"]
+        J["/data/media<br/>メディアライブラリパス"]
     end
 
     %% =========================
-    %% 挂载关系（只剩必要的）
+    %% マウント関係（必要なもののみ）
     %% =========================
-    D1 -->|"volume 挂载 /data/download"| A1
-    D2 -->|"volume 挂载 /data/media"| A2
-    D2 -->|"volume 挂载 /data/media"| J
+    D1 -->|"volume マウント /data/download"| A1
+    D2 -->|"volume マウント /data/media"| A2
+    D2 -->|"volume マウント /data/media"| J
 
 ```
 
-### 2. 宿主机与AMMDS的关系
+### 2. ホストマシンと AMMDS の関係
 
-宿主机的 `/data/download` 目录（存储未整理的电影文件）通过 Docker volume 挂载到 AMMDS 容器的 `/data/download` 目录。这样，AMMDS 就可以访问到宿主机上的未整理电影文件，进行刮削和整理操作。
+ホストマシンの `/data/download` ディレクトリ（整理されていない映画ファイルを保存）は、Docker ボリュームを介して AMMDS コンテナの `/data/download` ディレクトリにマウントされます。これにより、AMMDS はホストマシン上の整理されていない映画ファイルにアクセスし、スクレイピングと整理操作を実行できます。
 
-具体来说：
-- 宿主机上的 `/data/download` 目录对应 AMMDS 容器内的 `/data/download` 目录
-- AMMDS 会扫描 `/data/download` 目录中的电影文件
-- 经过刮削和整理后，AMMDS 会将整理好的电影文件保存到 `/data/media` 目录
-
-:::tip
-**为什么要这样挂载？**
-
-- AMMDS 需要访问未整理的电影文件进行刮削和整理，所以需要挂载 `/data/download` 目录
-- AMMDS 需要将整理好的电影文件保存到一个可被 Jellyfin 访问的位置，所以需要挂载 `/data/media` 目录
-- 这种挂载方式确保了 AMMDS 和 Jellyfin 可以共享同一个媒体库目录，避免了数据重复存储
-- 使用相同的路径可以减少用户的困惑，让用户更容易理解和管理
-:::
-
-### 3. 宿主机与Jellyfin的关系
-
-宿主机的 `/data/media` 目录（存储已整理的电影文件）通过 Docker volume 挂载到 Jellyfin 容器的 `/data/media` 目录。这样，Jellyfin 就可以访问到整理好的电影文件，构建媒体库并提供流媒体服务。
-
-具体来说：
-- 宿主机上的 `/data/media` 目录对应 Jellyfin 容器内的 `/data/media` 目录
-- Jellyfin 会扫描 `/data/media` 目录中的电影文件
-- 根据文件结构和元数据，Jellyfin 会构建媒体库，提供分类、搜索和播放功能
+具体的には：
+- ホストマシン上の `/data/download` ディレクトリは、AMMDS コンテナ内の `/data/download` ディレクトリに対応します
+- AMMDS は `/data/download` ディレクトリ内の映画ファイルをスキャンします
+- スクレイピングと整理の後、AMMDS は整理済みの映画ファイルを `/data/media` ディレクトリに保存します
 
 :::tip
-**为什么Jellyfin只需要挂载 `/data/media` 目录？**
+**なぜこのようにマウントするのですか？**
 
-- Jellyfin 作为媒体服务器，只需要访问整理好的电影文件，不需要访问未整理的电影文件
-- 整理好的电影文件已经包含了完整的元数据和规范的文件结构，Jellyfin 可以直接识别和使用
-- 这种挂载方式简化了 Jellyfin 的配置，提高了系统的安全性
+- AMMDS はスクレイピングと整理のために整理されていない映画ファイルにアクセスする必要があるため、`/data/download` ディレクトリをマウントする必要があります
+- AMMDS は整理済みの映画ファイルを Jellyfin からアクセス可能な場所に保存する必要があるため、`/data/media` ディレクトリをマウントする必要があります
+- このマウント方法により、AMMDS と Jellyfin が同じメディアライブラリディレクトリを共有でき、データの重複保存を回避できます
+- 同じパスを使用することで、ユーザーの混乱を減らし、理解と管理を容易にします
 :::
 
-### 4. AMMDS与电影文件的关系
+### 3. ホストマシンと Jellyfin の関係
 
-AMMDS 在处理电影文件时，会经历以下流程：
+ホストマシンの `/data/media` ディレクトリ（整理済みの映画ファイルを保存）は、Docker ボリュームを介して Jellyfin コンテナの `/data/media` ディレクトリにマウントされます。これにより、Jellyfin は整理済みの映画ファイルにアクセスし、メディアライブラリを構築してストリーミングサービスを提供できます。
 
-1. **扫描阶段**：AMMDS 扫描 `/data/download` 目录中的未整理电影文件
-2. **刮削阶段**：根据文件名或文件内容，AMMDS 从网络上获取电影文件的元数据（如标题、海报、简介等）
-3. **整理阶段**：根据刮削得到的元数据，AMMDS 会将电影文件重命名并按照一定的目录结构组织到 `/data/media` 目录
-4. **更新阶段**：整理完成后，电影文件就可以被 Jellyfin 等媒体服务器识别和使用
+具体的には：
+- ホストマシン上の `/data/media` ディレクトリは、Jellyfin コンテナ内の `/data/media` ディレクトリに対応します
+- Jellyfin は `/data/media` ディレクトリ内の映画ファイルをスキャンします
+- ファイル構造とメタデータに基づいて、Jellyfin はメディアライブラリを構築し、分類、検索、再生機能を提供します
 
-### 5. 数据流向
+:::tip
+**なぜ Jellyfin は `/data/media` ディレクトリのみマウントすればよいのですか？**
+
+- メディアサーバーとして、Jellyfin は整理済みの映画ファイルにのみアクセスすればよく、整理されていない映画ファイルにはアクセスする必要がありません
+- 整理済みの映画ファイルには、完全なメタデータと標準化されたファイル構造がすでに含まれているため、Jellyfin は直接認識して使用できます
+- このマウント方法により、Jellyfin の設定が簡素化され、システムのセキュリティが向上します
+:::
+
+### 4. AMMDS と映画ファイルの関係
+
+AMMDS は映画ファイルを処理する際に、次のプロセスを経ます：
+
+1. **スキャンフェーズ**：AMMDS は `/data/download` ディレクトリ内の整理されていない映画ファイルをスキャンします
+2. **スクレイピングフェーズ**：ファイル名またはファイル内容に基づいて、AMMDS はインターネットから映画ファイルのメタデータ（タイトル、ポスター、あらすじなど）を取得します
+3. **整理フェーズ**：スクレイピングして得たメタデータに基づいて、AMMDS は映画ファイルの名前を変更し、一定のディレクトリ構造に従って `/data/media` ディレクトリに整理します
+4. **更新フェーズ**：整理が完了すると、映画ファイルは Jellyfin などのメディアサーバーによって認識され使用されるようになります
+
+### 5. データフロー
 
 ```mermaid
 flowchart TD
-    %% 数据流向图
-    HOST_DOWNLOAD["宿主机<br/>/data/download"] -->|"挂载"| AMMDS_DOWNLOAD["AMMDS<br/>/data/download"]
-    AMMDS_DOWNLOAD -->|"刮削整理"| AMMDS_MEDIA["AMMDS<br/>/data/media"]
-    AMMDS_MEDIA -->|"写入"| HOST_MEDIA["宿主机<br/>/data/media"]
-    HOST_MEDIA -->|"挂载"| JELLYFIN_MEDIA["Jellyfin<br/>/data/media"]
-    JELLYFIN_MEDIA -->|"构建媒体库"| JELLYFIN_SERVER["Jellyfin<br/>媒体服务器"]
+    %% データフロー図
+    HOST_DOWNLOAD["ホストマシン<br/>/data/download"] -->|"マウント"| AMMDS_DOWNLOAD["AMMDS<br/>/data/download"]
+    AMMDS_DOWNLOAD -->|"スクレイピングと整理"| AMMDS_MEDIA["AMMDS<br/>/data/media"]
+    AMMDS_MEDIA -->|"書き込み"| HOST_MEDIA["ホストマシン<br/>/data/media"]
+    HOST_MEDIA -->|"マウント"| JELLYFIN_MEDIA["Jellyfin<br/>/data/media"]
+    JELLYFIN_MEDIA -->|"メディアライブラリの構築"| JELLYFIN_SERVER["Jellyfin<br/>メディアサーバー"]
 ```
 
-### 6. 媒体整理流程示意图
+### 6. メディア整理プロセス図
 
 ```mermaid
 flowchart TD
-    %% 开始
-    START["开始"] --> DOWNLOAD["下载电影文件"]
+    %% 開始
+    START["開始"] --> DOWNLOAD["映画ファイルのダウンロード"]
     
-    %% 下载阶段
-    DOWNLOAD --> SAVE_RAW["保存到宿主机<br/>/data/download"]
+    %% ダウンロードフェーズ
+    DOWNLOAD --> SAVE_RAW["ホストマシンに保存<br/>/data/download"]
     
-    %% AMMDS处理阶段
-    SAVE_RAW --> MOUNT_TO_AMMDS["挂载到AMMDS<br/>/data/download"]
-    MOUNT_TO_AMMDS --> SCAN["AMMDS扫描电影文件"]
-    SCAN --> SCRAPE["AMMDS刮削元数据"]
-    SCRAPE --> ORGANIZE["AMMDS整理文件结构"]
-    ORGANIZE --> SAVE_PROCESSED["保存到AMMDS<br/>/data/media"]
+    %% AMMDS 処理フェーズ
+    SAVE_RAW --> MOUNT_TO_AMMDS["AMMDS にマウント<br/>/data/download"]
+    MOUNT_TO_AMMDS --> SCAN["AMMDS が映画ファイルをスキャン"]
+    SCAN --> SCRAPE["AMMDS がメタデータをスクレイピング"]
+    SCRAPE --> ORGANIZE["AMMDS がファイル構造を整理"]
+    ORGANIZE --> SAVE_PROCESSED["AMMDS に保存<br/>/data/media"]
     
-    %% 宿主机同步阶段
-    SAVE_PROCESSED --> SYNC_TO_HOST["同步到宿主机<br/>/data/media"]
+    %% ホストマシン同期フェーズ
+    SAVE_PROCESSED --> SYNC_TO_HOST["ホストマシンに同期<br/>/data/media"]
     
-    %% Jellyfin处理阶段
-    SYNC_TO_HOST --> MOUNT_TO_JELLYFIN["挂载到Jellyfin<br/>/data/media"]
-    MOUNT_TO_JELLYFIN --> JELLYFIN_SCAN["Jellyfin扫描媒体库"]
-    JELLYFIN_SCAN --> BUILD_LIBRARY["Jellyfin构建媒体库"]
-    BUILD_LIBRARY --> PROVIDE_STREAM["Jellyfin提供流媒体服务"]
+    %% Jellyfin 処理フェーズ
+    SYNC_TO_HOST --> MOUNT_TO_JELLYFIN["Jellyfin にマウント<br/>/data/media"]
+    MOUNT_TO_JELLYFIN --> JELLYFIN_SCAN["Jellyfin がメディアライブラリをスキャン"]
+    JELLYFIN_SCAN --> BUILD_LIBRARY["Jellyfin がメディアライブラリを構築"]
+    BUILD_LIBRARY --> PROVIDE_STREAM["Jellyfin がストリーミングサービスを提供"]
     
-    %% 结束
-    PROVIDE_STREAM --> END["结束"]
+    %% 終了
+    PROVIDE_STREAM --> END["終了"]
     
-    %% 流程说明
-    DOWNLOAD -->|"通过下载工具获取电影文件"| DOWNLOAD_TOOL["下载工具"]
-    SCAN -->|"定期或手动扫描"| SCAN_MODE["扫描模式"]
-    SCRAPE -->|"从TMDB等网站获取元数据"| METADATA["元数据"]
-    ORGANIZE -->|"按照电影分类"| CATEGORIZE["分类整理"]
-    PROVIDE_STREAM -->|"用户通过浏览器或客户端访问"| USER_ACCESS["用户访问"]
+    %% プロセスの説明
+    DOWNLOAD -->|"ダウンロードツールを介して映画ファイルを取得"| DOWNLOAD_TOOL["ダウンロードツール"]
+    SCAN -->|"定期的または手動でスキャン"| SCAN_MODE["スキャンモード"]
+    SCRAPE -->|"TMDB などのウェブサイトからメタデータを取得"| METADATA["メタデータ"]
+    ORGANIZE -->|"映画のカテゴリに従って分類"| CATEGORIZE["カテゴリ分け"]
+    PROVIDE_STREAM -->|"ユーザーがブラウザまたはクライアントを介してアクセス"| USER_ACCESS["ユーザーアクセス"]
 ```
 
-### 7. 详细目录结构
+### 7. 詳細なディレクトリ構造
 
-#### 宿主机目录结构
+#### ホストマシンのディレクトリ構造
 
 ```
 /data/
-├── download/           # 未整理的电影文件
-│   ├── movie1.mp4      # 电影文件
+├── download/           # 整理されていない映画ファイル
+│   ├── movie1.mp4      # 映画ファイル
 │   └── ...
-└── media/              # 已整理的电影文件
-    ├── Movies/         # 电影目录
+└── media/              # 整理済みの映画ファイル
+    ├── Movies/         # 映画ディレクトリ
     │   ├── Movie 1 (2023)/
     │   │   ├── Movie 1 (2023).mp4
     │   │   └── poster.jpg
@@ -216,66 +216,66 @@ flowchart TD
     └── ...
 ```
 
-#### AMMDS容器目录结构
+#### AMMDS コンテナのディレクトリ構造
 
 ```
 /ammds/
-├── data/               # 映射自宿主机的 /data
-│   ├── config.json     # 配置文件
+├── data/               # ホストマシンの /data からマップ
+│   ├── config.json     # 設定ファイル
 │   └── ...
-├── db/                 # 映射自宿主机的 /data/db
-│   ├── ammds.db        # 数据库文件
+├── db/                 # ホストマシンの /data/db からマップ
+│   ├── ammds.db        # データベースファイル
 │   └── ...
-├── download/           # 映射自宿主机的 /data/download
+├── download/           # ホストマシンの /data/download からマップ
 │   ├── movie1.mp4
 │   └── ...
-/media/                  # 映射自宿主机的 /data/media
+/media/                  # ホストマシンの /data/media からマップ
 ├── Movies/
 └── ...
 ```
 
-#### Jellyfin容器目录结构
+#### Jellyfin コンテナのディレクトリ構造
 
 ```
 /data/
-└── media/              # 映射自宿主机的 /data/media
+└── media/              # ホストマシンの /data/media からマップ
     ├── Movies/
     └── ...
 ```
 
-## 三、完整挂载关系示意图
+## 三、完全なマウント関係図
 
 ```mermaid
 flowchart LR
     %% =========================
-    %% 宿主机
+    %% ホストマシン
     %% =========================
-    subgraph HOST["宿主机"]
-        H_DOWNLOAD["/data/download<br/>未整理电影"]
-        H_MEDIA["/data/media<br/>已整理电影"]
-        H_CONFIG["/data<br/>配置文件"]
-        H_DB["/data/db<br/>数据库文件"]
+    subgraph HOST["ホストマシン"]
+        H_DOWNLOAD["/data/download<br/>整理されていない映画"]
+        H_MEDIA["/data/media<br/>整理済み映画"]
+        H_CONFIG["/data<br/>設定ファイル"]
+        H_DB["/data/db<br/>データベースファイル"]
     end
 
     %% =========================
     %% AMMDS
     %% =========================
-    subgraph AMMDS["AMMDS容器"]
-        A_DATA["/ammds/data<br/>配置和临时数据"]
-        A_DB["/ammds/db<br/>数据库"]
-        A_DOWNLOAD["/data/download<br/>未整理电影"]
-        A_MEDIA["/data/media<br/>已整理电影"]
+    subgraph AMMDS["AMMDS コンテナ"]
+        A_DATA["/ammds/data<br/>設定と一時データ"]
+        A_DB["/ammds/db<br/>データベース"]
+        A_DOWNLOAD["/data/download<br/>整理されていない映画"]
+        A_MEDIA["/data/media<br/>整理済み映画"]
     end
 
     %% =========================
     %% Jellyfin
     %% =========================
-    subgraph JELLYFIN["Jellyfin容器"]
-        J_MEDIA["/data/media<br/>媒体库"]
+    subgraph JELLYFIN["Jellyfin コンテナ"]
+        J_MEDIA["/data/media<br/>メディアライブラリ"]
     end
 
     %% =========================
-    %% 挂载关系
+    %% マウント関係
     %% =========================
     H_DOWNLOAD -->|"- /data/download:/data/download"| A_DOWNLOAD
     H_MEDIA -->|"- /data/media:/data/media"| A_MEDIA
@@ -284,55 +284,55 @@ flowchart LR
     H_MEDIA -->|"- /data/media:/data/media"| J_MEDIA
 
     %% =========================
-    %% 数据流向
+    %% データフロー
     %% =========================
-    A_DOWNLOAD -->|"刮削整理"| A_MEDIA
-    A_MEDIA -->|"写入"| H_MEDIA
-    H_MEDIA -->|"读取"| J_MEDIA
+    A_DOWNLOAD -->|"スクレイピングと整理"| A_MEDIA
+    A_MEDIA -->|"書き込み"| H_MEDIA
+    H_MEDIA -->|"読み込み"| J_MEDIA
 
     %% =========================
-    %% 功能说明
+    %% 機能説明
     %% =========================
-    A_DOWNLOAD -.->|"扫描"| SCAN["电影扫描"]
-    SCAN -.->|"刮削"| SCRAPE["元数据刮削"]
-    SCRAPE -.->|"整理"| ORGANIZE["文件整理"]
+    A_DOWNLOAD -.->|"スキャン"| SCAN["映画スキャン"]
+    SCAN -.->|"スクレイピング"| SCRAPE["メタデータスクレイピング"]
+    SCRAPE -.->|"整理"| ORGANIZE["ファイル整理"]
     ORGANIZE -.->|"保存"| A_MEDIA
-    J_MEDIA -.->|"构建"| LIBRARY["电影媒体库"]
-    LIBRARY -.->|"提供"| STREAM["流媒体服务"]
+    J_MEDIA -.->|"構築"| LIBRARY["映画メディアライブラリ"]
+    LIBRARY -.->|"提供"| STREAM["ストリーミングサービス"]
 ```
 
-## 四、常见问题解答
+## 四、よくある質問
 
-### 1. 挂载失败怎么办？
+### 1. マウントに失敗した場合はどうすればよいですか？
 
-- **检查路径是否正确**：确保宿主机目录存在，路径格式正确
-- **检查权限是否足够**：确保宿主机目录有读写权限
-- **检查Docker服务是否运行**：确保Docker服务正常运行
-- **检查挂载语法是否正确**：确保docker-compose.yml中的挂载语法正确，格式为 `- 宿主机路径:容器路径`
+- **パスが正しいか確認**：ホストマシンのディレクトリが存在し、パス形式が正しいことを確認してください
+- **権限が十分か確認**：ホストマシンのディレクトリに読み書き権限があることを確認してください
+- **Docker サービスが実行中か確認**：Docker サービスが正常に実行されていることを確認してください
+- **マウント構文が正しいか確認**：docker-compose.yml のマウント構文が正しいことを確認してください。形式は `- ホストパス:コンテナパス` です
 
-### 2. 电影文件整理后在Jellyfin中看不到怎么办？
+### 2. 整理後の映画ファイルが Jellyfin で表示されない場合はどうすればよいですか？
 
-- **检查挂载是否正确**：确保Jellyfin容器正确挂载了 `/data/media` 目录
-- **检查媒体库配置**：确保Jellyfin中添加了正确的媒体库路径
-- **手动扫描媒体库**：在Jellyfin中手动扫描媒体库，更新媒体库内容
-- **检查文件权限**：确保电影文件有可读权限
+- **マウントが正しいか確認**：Jellyfin コンテナが `/data/media` ディレクトリを正しくマウントしていることを確認してください
+- **メディアライブラリの設定を確認**：Jellyfin に正しいメディアライブラリパスが追加されていることを確認してください
+- **メディアライブラリを手動でスキャン**：Jellyfin でメディアライブラリを手動でスキャンし、メディアライブラリの内容を更新してください
+- **ファイル権限を確認**：映画ファイルに読み取り権限があることを確認してください
 
-### 3. 整理后的电影文件大小变了怎么办？
+### 3. 整理後の映画ファイルのサイズが変わった場合はどうすればよいですか？
 
-- **检查是否开启了压缩**：AMMDS默认不会压缩电影文件，检查是否有其他工具在压缩文件
-- **检查文件格式**：确保整理过程中没有改变文件格式
-- **检查元数据大小**：整理过程中会添加元数据文件（如nfo文件、海报等），这会增加总大小
+- **圧縮が有効になっていないか確認**：AMMDS はデフォルトで映画ファイルを圧縮しません。他のツールがファイルを圧縮していないか確認してください
+- **ファイル形式を確認**：整理プロセス中にファイル形式が変更されていないことを確認してください
+- **メタデータサイズを確認**：整理プロセス中にメタデータファイル（nfo ファイル、ポスターなど）が追加されるため、総サイズが増加する場合があります
 
-### 4. 如何备份挂载的目录？
+### 4. マウントされたディレクトリをバックアップするにはどうすればよいですか？
 
-- **定期备份**：定期备份宿主机上的 `/data/download` 和 `/data/media` 目录
-- **备份数据库**：同时备份 `/data/db` 目录，以保存AMMDS的配置和刮削记录
-- **测试备份**：定期测试备份是否可以正常恢复
+- **定期的なバックアップ**：ホストマシン上の `/data/download` と `/data/media` ディレクトリを定期的にバックアップしてください
+- **データベースのバックアップ**：同時に `/data/db` ディレクトリもバックアップして、AMMDS の設定とスクレイピング記録を保存してください
+- **バックアップのテスト**：定期的にバックアップが正常に復元できるかテストしてください
 
 :::warning
-**重要提醒**
+**重要なお知らせ**
 
-- 不要在容器运行时直接修改挂载目录的权限，可能会导致容器无法正常访问
-- 定期清理未整理的电影文件，避免占用过多存储空间
-- 确保宿主机有足够的存储空间，避免因空间不足导致整理失败
+- コンテナが実行中のときにマウントされたディレクトリの権限を直接変更しないでください。コンテナが正常にアクセスできなくなる可能性があります
+- 整理されていない映画ファイルを定期的にクリーンアップして、過剰なストレージスペースの占有を避けてください
+- ホストマシンに十分なストレージスペースがあることを確認して、スペース不足による整理の失敗を避けてください
 :::

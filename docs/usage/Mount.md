@@ -1,214 +1,214 @@
 ---
 sidebar_position: 1
-sidebar_label: "挂载关系"
+sidebar_label: "Mount Relationships"
 ---
 
-# 挂载关系详解
+# Detailed Explanation of Mount Relationships
 
-本文档详细介绍 AMMDS 相关的挂载关系，包括部署时的挂载逻辑和媒体整理的挂载逻辑，帮助您理解整个系统的目录结构和数据流向。
+This document details the mount relationships related to AMMDS, including the mounting logic during deployment and media organization, helping you understand the entire system's directory structure and data flow.
 
 :::tip
-如果您是第一次使用 AMMDS，建议您先阅读本文档，了解系统的挂载关系，这样可以避免在部署和使用过程中出现数据丢失或配置错误的问题。
+If you are using AMMDS for the first time, it is recommended that you read this document first to understand the system's mount relationships, which can avoid data loss or configuration errors during deployment and use.
 :::
 
-## 一、部署时的挂载逻辑
+## 1. Mounting Logic During Deployment
 
-### 1. 基础挂载配置
+### 1. Basic Mount Configuration
 
-在使用 Docker Compose 部署 AMMDS 时，需要在 `docker-compose.yml` 文件中配置挂载目录：
+When deploying AMMDS using Docker Compose, you need to configure mount directories in the `docker-compose.yml` file:
 
 ```yaml
 volumes:
-  - ./data:/ammds/data  # 挂载当前目录的 data 文件夹到容器的 /ammds/data
-  - ./db:/ammds/db  # 挂载当前目录的 db 文件夹到容器的 /ammds/db
-  - ./download:/data/download  # 挂载当前目录的 download 文件夹到容器的 /data/download
-  - ./media:/data/media  # 挂载当前目录的 media 文件夹到容器的 /data/media
+  - ./data:/ammds/data  # Mount the current directory's data folder to the container's /ammds/data
+  - ./db:/ammds/db  # Mount the current directory's db folder to the container's /ammds/db
+  - ./download:/data/download  # Mount the current directory's download folder to the container's /data/download
+  - ./media:/data/media  # Mount the current directory's media folder to the container's /data/media
 ```
 
-### 2. 目录说明
+### 2. Directory Description
 
-| 宿主机目录 | 容器目录 | 用途 |
-| ---------- | -------- | ---- |
-| `./data` | `/ammds/data` | 存储 AMMDS 的配置文件和临时数据 |
-| `./db` | `/ammds/db` | 存储 AMMDS 的数据库文件 |
-| `./download` | `/data/download` | 存储下载的未整理电影文件 |
-| `./media` | `/data/media` | 存储整理后的电影文件，供 Jellyfin 等媒体服务器访问 |
+| Host Directory | Container Directory | Purpose |
+| -------------- | ------------------- | ------- |
+| `./data` | `/ammds/data` | Store AMMDS configuration files and temporary data |
+| `./db` | `/ammds/db` | Store AMMDS database files |
+| `./download` | `/data/download` | Store unorganized movie files |
+| `./media` | `/data/media` | Store organized movie files for access by media servers like Jellyfin |
 
-### 3. 部署挂载示意图
+### 3. Deployment Mount Diagram
 
 ```mermaid
 flowchart TD
-    %% 宿主机目录
-    subgraph HOST["宿主机"]
+    %% Host directories
+    subgraph HOST["Host Machine"]
         H_DATA["./data"]
         H_DB["./db"]
         H_DOWNLOAD["./download"]
         H_MEDIA["./media"]
     end
 
-    %% AMMDS容器
-    subgraph AMMDS["AMMDS容器"]
+    %% AMMDS container
+    subgraph AMMDS["AMMDS Container"]
         A_DATA["/ammds/data"]
         A_DB["/ammds/db"]
         A_DOWNLOAD["/data/download"]
         A_MEDIA["/data/media"]
     end
 
-    %% 挂载关系
+    %% Mount relationships
     H_DATA -->|"- ./data:/ammds/data"| A_DATA
     H_DB -->|"- ./db:/ammds/db"| A_DB
     H_DOWNLOAD -->|"- ./download:/data/download"| A_DOWNLOAD
     H_MEDIA -->|"- ./media:/data/media"| A_MEDIA
 
-    %% 说明
-    A_DATA -->|"存储配置文件和临时数据"| CONFIG["配置文件"]
-    A_DB -->|"存储数据库文件"| DATABASE["数据库"]
-    A_DOWNLOAD -->|"存储未整理电影文件"| RAW_MEDIA["未整理电影"]
-    A_MEDIA -->|"存储整理后电影文件"| PROCESSED_MEDIA["已整理电影"]
+    %% Description
+    A_DATA -->|"Store configuration files and temporary data"| CONFIG["Configuration Files"]
+    A_DB -->|"Store database files"| DATABASE["Database"]
+    A_DOWNLOAD -->|"Store unorganized movie files"| RAW_MEDIA["Unorganized Movies"]
+    A_MEDIA -->|"Store organized movie files"| PROCESSED_MEDIA["Organized Movies"]
 ```
 
-## 二、媒体整理的挂载逻辑
+## 2. Mounting Logic for Media Organization
 
-### 1. 整体架构
+### 1. Overall Architecture
 
 ```mermaid
 flowchart LR
     %% =========================
-    %% 宿主机（只保留事实）
+    %% Host machine (only keep facts)
     %% =========================
-    subgraph HOST["宿主机（真实磁盘）"]
-        D1["/data/download<br/>下载的电影（未整理）"]
-        D2["/data/media<br/>下载的电影（已整理）"]
+    subgraph HOST["Host Machine (Real Disk)"]
+        D1["/data/download<br/>Downloaded movies (unorganized)"]
+        D2["/data/media<br/>Downloaded movies (organized)"]
     end
 
     %% =========================
     %% ammds
     %% =========================
-    subgraph AMMDS["ammds（媒体刮削 / 整理）"]
-        A1["/data/download<br/>数据源目录"]
-        A2["/data/media<br/>整理目标目录"]
+    subgraph AMMDS["ammds (Media Scraping / Organization)"]
+        A1["/data/download<br/>Data source directory"]
+        A2["/data/media<br/>Organization target directory"]
     end
 
     %% =========================
     %% jellyfin
     %% =========================
-    subgraph JELLYFIN["Jellyfin（媒体库）"]
-        J["/data/media<br/>媒体库路径"]
+    subgraph JELLYFIN["Jellyfin (Media Library)"]
+        J["/data/media<br/>Media library path"]
     end
 
     %% =========================
-    %% 挂载关系（只剩必要的）
+    %% Mount relationships (only necessary ones)
     %% =========================
-    D1 -->|"volume 挂载 /data/download"| A1
-    D2 -->|"volume 挂载 /data/media"| A2
-    D2 -->|"volume 挂载 /data/media"| J
+    D1 -->|"volume mount /data/download"| A1
+    D2 -->|"volume mount /data/media"| A2
+    D2 -->|"volume mount /data/media"| J
 
 ```
 
-### 2. 宿主机与AMMDS的关系
+### 2. Relationship Between Host and AMMDS
 
-宿主机的 `/data/download` 目录（存储未整理的电影文件）通过 Docker volume 挂载到 AMMDS 容器的 `/data/download` 目录。这样，AMMDS 就可以访问到宿主机上的未整理电影文件，进行刮削和整理操作。
+The host's `/data/download` directory (storing unorganized movie files) is mounted to the AMMDS container's `/data/download` directory via Docker volume. This allows AMMDS to access the unorganized movie files on the host for scraping and organization operations.
 
-具体来说：
-- 宿主机上的 `/data/download` 目录对应 AMMDS 容器内的 `/data/download` 目录
-- AMMDS 会扫描 `/data/download` 目录中的电影文件
-- 经过刮削和整理后，AMMDS 会将整理好的电影文件保存到 `/data/media` 目录
-
-:::tip
-**为什么要这样挂载？**
-
-- AMMDS 需要访问未整理的电影文件进行刮削和整理，所以需要挂载 `/data/download` 目录
-- AMMDS 需要将整理好的电影文件保存到一个可被 Jellyfin 访问的位置，所以需要挂载 `/data/media` 目录
-- 这种挂载方式确保了 AMMDS 和 Jellyfin 可以共享同一个媒体库目录，避免了数据重复存储
-- 使用相同的路径可以减少用户的困惑，让用户更容易理解和管理
-:::
-
-### 3. 宿主机与Jellyfin的关系
-
-宿主机的 `/data/media` 目录（存储已整理的电影文件）通过 Docker volume 挂载到 Jellyfin 容器的 `/data/media` 目录。这样，Jellyfin 就可以访问到整理好的电影文件，构建媒体库并提供流媒体服务。
-
-具体来说：
-- 宿主机上的 `/data/media` 目录对应 Jellyfin 容器内的 `/data/media` 目录
-- Jellyfin 会扫描 `/data/media` 目录中的电影文件
-- 根据文件结构和元数据，Jellyfin 会构建媒体库，提供分类、搜索和播放功能
+Specifically:
+- The `/data/download` directory on the host corresponds to the `/data/download` directory inside the AMMDS container
+- AMMDS will scan movie files in the `/data/download` directory
+- After scraping and organization, AMMDS will save the organized movie files to the `/data/media` directory
 
 :::tip
-**为什么Jellyfin只需要挂载 `/data/media` 目录？**
+**Why mount this way?**
 
-- Jellyfin 作为媒体服务器，只需要访问整理好的电影文件，不需要访问未整理的电影文件
-- 整理好的电影文件已经包含了完整的元数据和规范的文件结构，Jellyfin 可以直接识别和使用
-- 这种挂载方式简化了 Jellyfin 的配置，提高了系统的安全性
+- AMMDS needs to access unorganized movie files for scraping and organization, so it needs to mount the `/data/download` directory
+- AMMDS needs to save organized movie files to a location accessible by Jellyfin, so it needs to mount the `/data/media` directory
+- This mounting method ensures that AMMDS and Jellyfin can share the same media library directory, avoiding duplicate data storage
+- Using the same path reduces user confusion and makes it easier for users to understand and manage
 :::
 
-### 4. AMMDS与电影文件的关系
+### 3. Relationship Between Host and Jellyfin
 
-AMMDS 在处理电影文件时，会经历以下流程：
+The host's `/data/media` directory (storing organized movie files) is mounted to the Jellyfin container's `/data/media` directory via Docker volume. This allows Jellyfin to access the organized movie files, build a media library, and provide streaming services.
 
-1. **扫描阶段**：AMMDS 扫描 `/data/download` 目录中的未整理电影文件
-2. **刮削阶段**：根据文件名或文件内容，AMMDS 从网络上获取电影文件的元数据（如标题、海报、简介等）
-3. **整理阶段**：根据刮削得到的元数据，AMMDS 会将电影文件重命名并按照一定的目录结构组织到 `/data/media` 目录
-4. **更新阶段**：整理完成后，电影文件就可以被 Jellyfin 等媒体服务器识别和使用
+Specifically:
+- The `/data/media` directory on the host corresponds to the `/data/media` directory inside the Jellyfin container
+- Jellyfin will scan movie files in the `/data/media` directory
+- Based on the file structure and metadata, Jellyfin will build a media library, providing classification, search, and playback functions
 
-### 5. 数据流向
+:::tip
+**Why does Jellyfin only need to mount the `/data/media` directory?**
+
+- As a media server, Jellyfin only needs to access organized movie files, not unorganized ones
+- Organized movie files already contain complete metadata and standardized file structures, which Jellyfin can directly recognize and use
+- This mounting method simplifies Jellyfin's configuration and improves system security
+:::
+
+### 4. Relationship Between AMMDS and Movie Files
+
+When processing movie files, AMMDS goes through the following process:
+
+1. **Scanning Phase**: AMMDS scans unorganized movie files in the `/data/download` directory
+2. **Scraping Phase**: Based on file names or file content, AMMDS retrieves metadata for movie files from the internet (such as title, poster, synopsis, etc.)
+3. **Organization Phase**: Based on the scraped metadata, AMMDS renames movie files and organizes them into the `/data/media` directory according to a certain directory structure
+4. **Update Phase**: After organization is complete, movie files can be recognized and used by media servers like Jellyfin
+
+### 5. Data Flow
 
 ```mermaid
 flowchart TD
-    %% 数据流向图
-    HOST_DOWNLOAD["宿主机<br/>/data/download"] -->|"挂载"| AMMDS_DOWNLOAD["AMMDS<br/>/data/download"]
-    AMMDS_DOWNLOAD -->|"刮削整理"| AMMDS_MEDIA["AMMDS<br/>/data/media"]
-    AMMDS_MEDIA -->|"写入"| HOST_MEDIA["宿主机<br/>/data/media"]
-    HOST_MEDIA -->|"挂载"| JELLYFIN_MEDIA["Jellyfin<br/>/data/media"]
-    JELLYFIN_MEDIA -->|"构建媒体库"| JELLYFIN_SERVER["Jellyfin<br/>媒体服务器"]
+    %% Data flow diagram
+    HOST_DOWNLOAD["Host Machine<br/>/data/download"] -->|"Mount"| AMMDS_DOWNLOAD["AMMDS<br/>/data/download"]
+    AMMDS_DOWNLOAD -->|"Scrape and Organize"| AMMDS_MEDIA["AMMDS<br/>/data/media"]
+    AMMDS_MEDIA -->|"Write"| HOST_MEDIA["Host Machine<br/>/data/media"]
+    HOST_MEDIA -->|"Mount"| JELLYFIN_MEDIA["Jellyfin<br/>/data/media"]
+    JELLYFIN_MEDIA -->|"Build Media Library"| JELLYFIN_SERVER["Jellyfin<br/>Media Server"]
 ```
 
-### 6. 媒体整理流程示意图
+### 6. Media Organization Process Diagram
 
 ```mermaid
 flowchart TD
-    %% 开始
-    START["开始"] --> DOWNLOAD["下载电影文件"]
+    %% Start
+    START["Start"] --> DOWNLOAD["Download Movie Files"]
     
-    %% 下载阶段
-    DOWNLOAD --> SAVE_RAW["保存到宿主机<br/>/data/download"]
+    %% Download phase
+    DOWNLOAD --> SAVE_RAW["Save to Host Machine<br/>/data/download"]
     
-    %% AMMDS处理阶段
-    SAVE_RAW --> MOUNT_TO_AMMDS["挂载到AMMDS<br/>/data/download"]
-    MOUNT_TO_AMMDS --> SCAN["AMMDS扫描电影文件"]
-    SCAN --> SCRAPE["AMMDS刮削元数据"]
-    SCRAPE --> ORGANIZE["AMMDS整理文件结构"]
-    ORGANIZE --> SAVE_PROCESSED["保存到AMMDS<br/>/data/media"]
+    %% AMMDS processing phase
+    SAVE_RAW --> MOUNT_TO_AMMDS["Mount to AMMDS<br/>/data/download"]
+    MOUNT_TO_AMMDS --> SCAN["AMMDS Scans Movie Files"]
+    SCAN --> SCRAPE["AMMDS Scrapes Metadata"]
+    SCRAPE --> ORGANIZE["AMMDS Organizes File Structure"]
+    ORGANIZE --> SAVE_PROCESSED["Save to AMMDS<br/>/data/media"]
     
-    %% 宿主机同步阶段
-    SAVE_PROCESSED --> SYNC_TO_HOST["同步到宿主机<br/>/data/media"]
+    %% Host machine synchronization phase
+    SAVE_PROCESSED --> SYNC_TO_HOST["Sync to Host Machine<br/>/data/media"]
     
-    %% Jellyfin处理阶段
-    SYNC_TO_HOST --> MOUNT_TO_JELLYFIN["挂载到Jellyfin<br/>/data/media"]
-    MOUNT_TO_JELLYFIN --> JELLYFIN_SCAN["Jellyfin扫描媒体库"]
-    JELLYFIN_SCAN --> BUILD_LIBRARY["Jellyfin构建媒体库"]
-    BUILD_LIBRARY --> PROVIDE_STREAM["Jellyfin提供流媒体服务"]
+    %% Jellyfin processing phase
+    SYNC_TO_HOST --> MOUNT_TO_JELLYFIN["Mount to Jellyfin<br/>/data/media"]
+    MOUNT_TO_JELLYFIN --> JELLYFIN_SCAN["Jellyfin Scans Media Library"]
+    JELLYFIN_SCAN --> BUILD_LIBRARY["Jellyfin Builds Media Library"]
+    BUILD_LIBRARY --> PROVIDE_STREAM["Jellyfin Provides Streaming Services"]
     
-    %% 结束
-    PROVIDE_STREAM --> END["结束"]
+    %% End
+    PROVIDE_STREAM --> END["End"]
     
-    %% 流程说明
-    DOWNLOAD -->|"通过下载工具获取电影文件"| DOWNLOAD_TOOL["下载工具"]
-    SCAN -->|"定期或手动扫描"| SCAN_MODE["扫描模式"]
-    SCRAPE -->|"从TMDB等网站获取元数据"| METADATA["元数据"]
-    ORGANIZE -->|"按照电影分类"| CATEGORIZE["分类整理"]
-    PROVIDE_STREAM -->|"用户通过浏览器或客户端访问"| USER_ACCESS["用户访问"]
+    %% Process description
+    DOWNLOAD -->|"Obtain movie files through download tools"| DOWNLOAD_TOOL["Download Tools"]
+    SCAN -->|"Regular or manual scanning"| SCAN_MODE["Scanning Mode"]
+    SCRAPE -->|"Obtain metadata from websites like TMDB"| METADATA["Metadata"]
+    ORGANIZE -->|"Classify by movie category"| CATEGORIZE["Categorization"]
+    PROVIDE_STREAM -->|"Users access through browser or client"| USER_ACCESS["User Access"]
 ```
 
-### 7. 详细目录结构
+### 7. Detailed Directory Structure
 
-#### 宿主机目录结构
+#### Host Machine Directory Structure
 
 ```
 /data/
-├── download/           # 未整理的电影文件
-│   ├── movie1.mp4      # 电影文件
+├── download/           # Unorganized movie files
+│   ├── movie1.mp4      # Movie files
 │   └── ...
-└── media/              # 已整理的电影文件
-    ├── Movies/         # 电影目录
+└── media/              # Organized movie files
+    ├── Movies/         # Movie directory
     │   ├── Movie 1 (2023)/
     │   │   ├── Movie 1 (2023).mp4
     │   │   └── poster.jpg
@@ -216,66 +216,66 @@ flowchart TD
     └── ...
 ```
 
-#### AMMDS容器目录结构
+#### AMMDS Container Directory Structure
 
 ```
 /ammds/
-├── data/               # 映射自宿主机的 /data
-│   ├── config.json     # 配置文件
+├── data/               # Mapped from host's /data
+│   ├── config.json     # Configuration files
 │   └── ...
-├── db/                 # 映射自宿主机的 /data/db
-│   ├── ammds.db        # 数据库文件
+├── db/                 # Mapped from host's /data/db
+│   ├── ammds.db        # Database files
 │   └── ...
-├── download/           # 映射自宿主机的 /data/download
+├── download/           # Mapped from host's /data/download
 │   ├── movie1.mp4
 │   └── ...
-/media/                  # 映射自宿主机的 /data/media
+/media/                  # Mapped from host's /data/media
 ├── Movies/
 └── ...
 ```
 
-#### Jellyfin容器目录结构
+#### Jellyfin Container Directory Structure
 
 ```
 /data/
-└── media/              # 映射自宿主机的 /data/media
+└── media/              # Mapped from host's /data/media
     ├── Movies/
     └── ...
 ```
 
-## 三、完整挂载关系示意图
+## 3. Complete Mount Relationship Diagram
 
 ```mermaid
 flowchart LR
     %% =========================
-    %% 宿主机
+    %% Host machine
     %% =========================
-    subgraph HOST["宿主机"]
-        H_DOWNLOAD["/data/download<br/>未整理电影"]
-        H_MEDIA["/data/media<br/>已整理电影"]
-        H_CONFIG["/data<br/>配置文件"]
-        H_DB["/data/db<br/>数据库文件"]
+    subgraph HOST["Host Machine"]
+        H_DOWNLOAD["/data/download<br/>Unorganized Movies"]
+        H_MEDIA["/data/media<br/>Organized Movies"]
+        H_CONFIG["/data<br/>Configuration Files"]
+        H_DB["/data/db<br/>Database Files"]
     end
 
     %% =========================
     %% AMMDS
     %% =========================
-    subgraph AMMDS["AMMDS容器"]
-        A_DATA["/ammds/data<br/>配置和临时数据"]
-        A_DB["/ammds/db<br/>数据库"]
-        A_DOWNLOAD["/data/download<br/>未整理电影"]
-        A_MEDIA["/data/media<br/>已整理电影"]
+    subgraph AMMDS["AMMDS Container"]
+        A_DATA["/ammds/data<br/>Configuration and Temporary Data"]
+        A_DB["/ammds/db<br/>Database"]
+        A_DOWNLOAD["/data/download<br/>Unorganized Movies"]
+        A_MEDIA["/data/media<br/>Organized Movies"]
     end
 
     %% =========================
     %% Jellyfin
     %% =========================
-    subgraph JELLYFIN["Jellyfin容器"]
-        J_MEDIA["/data/media<br/>媒体库"]
+    subgraph JELLYFIN["Jellyfin Container"]
+        J_MEDIA["/data/media<br/>Media Library"]
     end
 
     %% =========================
-    %% 挂载关系
+    %% Mount relationships
     %% =========================
     H_DOWNLOAD -->|"- /data/download:/data/download"| A_DOWNLOAD
     H_MEDIA -->|"- /data/media:/data/media"| A_MEDIA
@@ -284,55 +284,55 @@ flowchart LR
     H_MEDIA -->|"- /data/media:/data/media"| J_MEDIA
 
     %% =========================
-    %% 数据流向
+    %% Data flow
     %% =========================
-    A_DOWNLOAD -->|"刮削整理"| A_MEDIA
-    A_MEDIA -->|"写入"| H_MEDIA
-    H_MEDIA -->|"读取"| J_MEDIA
+    A_DOWNLOAD -->|"Scrape and Organize"| A_MEDIA
+    A_MEDIA -->|"Write"| H_MEDIA
+    H_MEDIA -->|"Read"| J_MEDIA
 
     %% =========================
-    %% 功能说明
+    %% Function description
     %% =========================
-    A_DOWNLOAD -.->|"扫描"| SCAN["电影扫描"]
-    SCAN -.->|"刮削"| SCRAPE["元数据刮削"]
-    SCRAPE -.->|"整理"| ORGANIZE["文件整理"]
-    ORGANIZE -.->|"保存"| A_MEDIA
-    J_MEDIA -.->|"构建"| LIBRARY["电影媒体库"]
-    LIBRARY -.->|"提供"| STREAM["流媒体服务"]
+    A_DOWNLOAD -.->|"Scan"| SCAN["Movie Scanning"]
+    SCAN -.->|"Scrape"| SCRAPE["Metadata Scraping"]
+    SCRAPE -.->|"Organize"| ORGANIZE["File Organization"]
+    ORGANIZE -.->|"Save"| A_MEDIA
+    J_MEDIA -.->|"Build"| LIBRARY["Movie Media Library"]
+    LIBRARY -.->|"Provide"| STREAM["Streaming Services"]
 ```
 
-## 四、常见问题解答
+## 4. Frequently Asked Questions
 
-### 1. 挂载失败怎么办？
+### 1. What to do if mounting fails?
 
-- **检查路径是否正确**：确保宿主机目录存在，路径格式正确
-- **检查权限是否足够**：确保宿主机目录有读写权限
-- **检查Docker服务是否运行**：确保Docker服务正常运行
-- **检查挂载语法是否正确**：确保docker-compose.yml中的挂载语法正确，格式为 `- 宿主机路径:容器路径`
+- **Check if the path is correct**: Ensure the host directory exists and the path format is correct
+- **Check if permissions are sufficient**: Ensure the host directory has read and write permissions
+- **Check if Docker service is running**: Ensure the Docker service is running normally
+- **Check if the mounting syntax is correct**: Ensure the mounting syntax in docker-compose.yml is correct, in the format `- host path:container path`
 
-### 2. 电影文件整理后在Jellyfin中看不到怎么办？
+### 2. What to do if organized movie files are not visible in Jellyfin?
 
-- **检查挂载是否正确**：确保Jellyfin容器正确挂载了 `/data/media` 目录
-- **检查媒体库配置**：确保Jellyfin中添加了正确的媒体库路径
-- **手动扫描媒体库**：在Jellyfin中手动扫描媒体库，更新媒体库内容
-- **检查文件权限**：确保电影文件有可读权限
+- **Check if mounting is correct**: Ensure the Jellyfin container correctly mounts the `/data/media` directory
+- **Check media library configuration**: Ensure the correct media library path is added in Jellyfin
+- **Manually scan the media library**: Manually scan the media library in Jellyfin to update the media library content
+- **Check file permissions**: Ensure movie files have readable permissions
 
-### 3. 整理后的电影文件大小变了怎么办？
+### 3. What to do if the size of organized movie files changes?
 
-- **检查是否开启了压缩**：AMMDS默认不会压缩电影文件，检查是否有其他工具在压缩文件
-- **检查文件格式**：确保整理过程中没有改变文件格式
-- **检查元数据大小**：整理过程中会添加元数据文件（如nfo文件、海报等），这会增加总大小
+- **Check if compression is enabled**: AMMDS does not compress movie files by default, check if other tools are compressing files
+- **Check file format**: Ensure the file format is not changed during the organization process
+- **Check metadata size**: Metadata files (such as nfo files, posters, etc.) are added during the organization process, which will increase the total size
 
-### 4. 如何备份挂载的目录？
+### 4. How to back up mounted directories?
 
-- **定期备份**：定期备份宿主机上的 `/data/download` 和 `/data/media` 目录
-- **备份数据库**：同时备份 `/data/db` 目录，以保存AMMDS的配置和刮削记录
-- **测试备份**：定期测试备份是否可以正常恢复
+- **Regular backup**: Regularly back up the `/data/download` and `/data/media` directories on the host machine
+- **Backup database**: Also back up the `/data/db` directory to save AMMDS configuration and scraping records
+- **Test backup**: Regularly test if backups can be restored normally
 
 :::warning
-**重要提醒**
+**Important Reminder**
 
-- 不要在容器运行时直接修改挂载目录的权限，可能会导致容器无法正常访问
-- 定期清理未整理的电影文件，避免占用过多存储空间
-- 确保宿主机有足够的存储空间，避免因空间不足导致整理失败
+- Do not directly modify the permissions of mounted directories while containers are running, as this may cause containers to be unable to access them normally
+- Regularly clean up unorganized movie files to avoid occupying too much storage space
+- Ensure the host machine has sufficient storage space to avoid organization failure due to insufficient space
 :::

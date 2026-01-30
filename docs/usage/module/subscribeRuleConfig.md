@@ -1,69 +1,105 @@
 ---
 sidebar_position: 4
-sidebar_label: "订阅规则配置"
+sidebar_label: "Subscribe Rule Configuration"
 ---
 
-# 订阅规则配置
+# Subscribe Rule Configuration
 
-订阅规则配置用于在任务执行前，设置影视内容的订阅偏好和下载参数，确保系统能够按照您的需求自动获取和管理影视资源。
+Subscribe rule configuration is used to set the rules for subscribing to media resources, including site selection, keyword filtering, and other settings, helping you automatically obtain the media resources you are interested in.
 
 <!-- truncate -->
 
-## 访问订阅规则配置
+## Access Subscribe Rule Configuration
 
-您可以通过以下路径访问订阅规则配置页面：
+You can access the subscribe rule configuration page through the following path:
 
-**任务管理 >> 订阅规则**
+**Task Management >> Subscribe Rules**
 
-## 配置界面
+## Configuration Interface
 
-![订阅规则配置](/img/usage/module/subscribe-config-01.png)
+![Subscribe Rules](/img/usage/module/subscribe-rule-01.png)
 
-## 配置项说明
+## Function Description
 
-### 中字优先
+### Subscribe Rules
 
-**功能说明**：开启此选项后，系统会优先搜索和下载带有中文字幕或中文配音的影视版本。
+**Function Description**: By creating subscribe rules, you can specify which media resources to subscribe to and how to filter them, improving the efficiency and accuracy of resource subscription.
 
-**适用场景**：如果您更偏好观看中文内容，可以开启此选项，提高获取到中文版本的概率。
+**Applicable Scenarios**:
+- When you want to automatically obtain specific types of media resources
+- When you want to filter resources based on keywords, categories, etc.
+- When you want to set specific subscription conditions
 
-### 搜索顺序
+## Configuration Method
 
-**功能说明**：设置搜索源的优先级顺序，系统会按照您指定的顺序依次从各个搜索源获取影视资源。
+### Create Subscribe Rules
 
-**配置建议**：将您认为资源质量更高、更新速度更快的搜索源排在前面，以提高获取到优质资源的效率。
+1. On the **Subscribe Rules** page, click the **Create** button
+2. Fill in the rule name and configuration parameters
+3. Save the rule
 
-### 下载目录
+### Rule Parameters
 
-**功能说明**：指定下载器的下载目录路径。
+#### Site Selection
 
-**重要提示**：
+**Function Description**: Select the sites to be used for resource subscription.
 
-:::warning 注意事项
-- 此路径与 AMMDS 系统本身没有直接关系，需要根据您使用的下载器的配置进行设置
-- 请确保指定的目录存在且具有可写权限
-- 建议使用绝对路径，避免使用相对路径导致的路径解析错误
-:::
+**Configuration Suggestion**: Select sites that provide the type of media resources you are interested in.
 
-## 配置示例
+#### Keyword Filtering
 
-以下是一个典型的订阅规则配置示例：
+**Function Description**: Set keywords to filter resources.
 
-1. **中字优先**：开启
-2. **搜索顺序**：搜索源 A → 搜索源 B → 搜索源 C
-3. **下载目录**：`D:\Downloads\Movies`
+**Configuration Suggestion**: Set keywords related to the media resources you are interested in.
 
-## 常见问题
+#### Category Filtering
 
-### Q: 为什么设置了中字优先但还是下载到了非中字版本？
+**Function Description**: Set categories to filter resources.
 
-**A**：可能是因为当前影视资源尚未发布中字版本，系统会在没有中字版本的情况下，下载其他版本以确保您能够及时获取到资源。
+**Configuration Suggestion**: Select categories that match your interests.
 
-### Q: 下载目录设置错误会导致什么问题？
+## Configuration Examples
 
-**A**：如果下载目录设置错误，可能会导致以下问题：
-- 下载器无法正常保存文件
-- 系统无法找到下载完成的文件
-- 存储空间不足时的下载失败
+Here are several examples of subscribe rules:
 
-请确保设置正确的下载目录路径。
+| Rule Name | Sites | Keywords | Categories |
+|-----------|-------|----------|------------|
+| Japanese Movies | Site A, Site B | keyword1, keyword2 | Category A, Category B |
+| Western Movies | Site C, Site D | keyword3, keyword4 | Category C, Category D |
+| All Movies | Site A, Site B, Site C, Site D | - | All Categories |
+
+## Common Questions
+
+### Q: What is the purpose of subscribe rules?
+
+**A**: Subscribe rules are used to guide the resource subscription process, helping the system select appropriate sites and filter resources according to your needs, improving subscription efficiency and resource quality.
+
+### Q: How to set up effective subscribe rules?
+
+**A**: You can set up effective subscribe rules through the following methods:
+1. Select sites that provide the type of resources you are interested in
+2. Reasonably set keywords and categories based on your needs
+3. Regularly update and optimize subscribe rules based on actual usage
+
+### Q: Can I create multiple subscribe rules?
+
+**A**: Yes, you can create multiple subscribe rules for different types of resources, and the system will process them according to the rules.
+
+### Q: What happens if no subscribe rule is selected?
+
+**A**: If no subscribe rule is selected, the system will not automatically subscribe to any resources. You need to manually create and configure subscribe rules.
+
+### Q: How to test if the subscribe rule is effective?
+
+**A**: You can test through the following methods:
+1. Configure subscribe rules
+2. Run the subscribe task
+3. Check if the system has obtained the resources you are interested in
+4. Adjust the rules based on the results
+
+## Best Practices
+
+- **Clear rule naming**: Use descriptive rule names for easy subsequent management
+- **Reasonable site selection**: Select sites that are reliable and provide high-quality resources
+- **Effective keyword filtering**: Set accurate keywords to filter the resources you need
+- **Regular rule maintenance**: Regularly review and update subscribe rules based on actual usage
