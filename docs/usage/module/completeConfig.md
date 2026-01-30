@@ -1,89 +1,89 @@
 ---
 sidebar_position: 3
-sidebar_label: "Number Completion Configuration"
+sidebar_label: "番号补全配置"
 ---
 
-# Number Completion Configuration
+# 番号补全配置
 
-Number completion configuration is a number identification auxiliary function used to complete numbers during organization, improving the accuracy and completeness of number identification.
+番号补全配置是一项番号识别辅助功能，用于在整理时对识别结果进行番号补全，提高番号识别的准确性和完整性。
 
 <!-- truncate -->
 
-## Access Number Completion Configuration
+## 访问番号补全配置
 
-You can access the number completion rule configuration page through the following path:
+您可以通过以下路径访问番号补全规则配置页面：
 
-**Task Management >> Number Completion Rules**
+**任务管理 >> 番号补全规则**
 
-## Configuration Interface
+## 配置界面
 
-![Number Completion Rules](/img/usage/module/number-complete-01.png)
+![番号补全规则](/img/usage/module/number-complete-01.png)
 
-## Function Description
+## 功能说明
 
-### Number Completion Rules
+### 番号补全规则
 
-**Function Description**: By creating number completion rules, the system can automatically complete missing parts when identifying numbers, improving the accuracy of number identification.
+**功能说明**：通过创建番号补全规则，系统可以在识别番号时自动补全缺失的部分，提高番号识别的准确性。
 
-**Applicable Scenarios**:
-- Incomplete numbers in file names
-- Non-standard number formats
-- Numbers using abbreviations or variations
+**适用场景**：
+- 文件名中的番号不完整
+- 番号格式不规范
+- 番号使用了缩写或变体
 
-## Configuration Method
+## 配置方法
 
-### Create Number Completion Rules
+### 创建番号补全规则
 
-1. On the **Number Completion Rules** page, click the **Create** button
-2. Fill in the rule name and completion rule
-3. Save the rule
+1. 在 **番号补全规则** 页面，点击 **创建** 按钮
+2. 填写规则名称和补全规则
+3. 保存规则
 
-### Rule Format
+### 规则格式
 
-Number completion rules usually consist of two parts:
-- **Matching pattern**: Used to identify numbers that need completion
-- **Completion pattern**: Used to specify how to complete numbers
+番号补全规则通常由两部分组成：
+- **匹配模式**：用于识别需要补全的番号
+- **补全模式**：用于指定如何补全番号
 
-## Configuration Examples
+## 配置示例
 
-Here are several examples of number completion rules:
+以下是几个番号补全规则的示例：
 
-| Rule Name | Matching Pattern | Completion Pattern | Description |
-|-----------|------------------|--------------------|-------------|
-| Complete Prefix | `^([0-9]+)$` | `ABC-$1` | Complete pure number numbers to ABC-number format |
-| Complete Suffix | `^(XYZ)([0-9]+)$` | `$1-$2` | Complete XYZ123 format numbers to XYZ-123 format |
-| Replace Separator | `^([A-Z]+)_([0-9]+)$` | `$1-$2` | Replace underscore-separated numbers with hyphen-separated |
+| 规则名称 | 匹配模式 | 补全模式 | 说明 |
+|---------|---------|---------|------|
+| 补全前缀 | `^([0-9]+)$` | `ABC-$1` | 将纯数字番号补全为 ABC-数字 的格式 |
+| 补全后缀 | `^(XYZ)([0-9]+)$` | `$1-$2` | 将 XYZ123 格式的番号补全为 XYZ-123 的格式 |
+| 替换分隔符 | `^([A-Z]+)_([0-9]+)$` | `$1-$2` | 将下划线分隔的番号替换为连字符分隔 |
 
-## Common Questions
+## 常见问题
 
-### Q: What is number completion?
+### Q: 什么是番号补全？
 
-**A**: Number completion is an auxiliary function used to automatically complete or correct incomplete, non-standard numbers during the number identification process, improving the accuracy of number identification.
+**A**：番号补全是一种辅助功能，用于在番号识别过程中自动补全或修正不完整、不规范的番号，提高番号识别的准确性。
 
-### Q: When do I need to use number completion rules?
+### Q: 什么时候需要使用番号补全规则？
 
-**A**: When the number format in your video file names is not uniform, incomplete, or uses special formats, using number completion rules can help the system more accurately identify numbers.
+**A**：当您的影视文件名中的番号格式不统一、不完整或使用了特殊格式时，使用番号补全规则可以帮助系统更准确地识别番号。
 
-### Q: How to judge if number completion rules are effective?
+### Q: 如何判断番号补全规则是否生效？
 
-**A**: You can verify through the following methods:
-1. Configure number completion rules
-2. Run a scanning task
-3. Check the number identification situation in the scanning results
-4. Check if the numbers were corrected according to the completion rules
+**A**：您可以通过以下方法验证：
+1. 配置番号补全规则
+2. 运行扫描任务
+3. 查看扫描结果中的番号识别情况
+4. 检查是否按照补全规则进行了番号修正
 
-### Q: Can I create multiple number completion rules?
+### Q: 可以创建多个番号补全规则吗？
 
-**A**: Yes, you can create multiple different number completion rules, and the system will apply them in the order of rule priority.
+**A**：是的，您可以创建多个不同的番号补全规则，系统会按照规则的优先级依次应用。
 
-### Q: What is the matching order of number completion rules?
+### Q: 番号补全规则的匹配顺序是什么？
 
-**A**: The system will apply them in the order they were created, with earlier created rules being applied first.
+**A**：系统会按照规则的创建顺序依次应用，先创建的规则会先被应用。
 
-## Best Practices
+## 最佳实践
 
-- **Rule name**: Use descriptive names for easy subsequent management
-- **Matching pattern**: When using regular expressions, ensure the pattern accurately matches the target number format
-- **Completion pattern**: Ensure the completed number format conforms to the standard format
-- **Rule quantity**: Avoid creating too many rules to prevent conflicts between rules
-- **Regular maintenance**: Regularly adjust and optimize rules based on actual usage conditions
+- **规则名称**：使用描述性的名称，便于后续管理
+- **匹配模式**：使用正则表达式时，确保模式准确匹配目标番号格式
+- **补全模式**：确保补全后的番号格式符合标准格式
+- **规则数量**：避免创建过多规则，以免规则之间产生冲突
+- **定期维护**：根据实际使用情况，定期调整和优化规则

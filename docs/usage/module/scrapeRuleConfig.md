@@ -1,107 +1,275 @@
 ---
 sidebar_position: 2
-sidebar_label: "Scrape Rule Configuration"
+sidebar_label: "刮削配置"
 ---
 
-# Scrape Rule Configuration
+# 刮削配置
 
-Scrape rule configuration is used to set the rules for scraping media metadata, including scraper selection, metadata fields, and other settings, helping you accurately obtain the metadata you need.
+刮削配置用于在任务执行前，设置系统如何从网络获取影视元数据、如何整理文件目录结构，以及其他与刮削相关的参数，确保刮削过程能够高效、准确地获取和组织影视资源。
 
 <!-- truncate -->
 
-## Access Scrape Rule Configuration
+## 访问刮削配置
 
-You can access the scrape rule configuration page through the following path:
+您可以通过以下路径访问刮削规则配置页面：
 
-**Task Management >> Scrape Rules**
+**任务管理 >> 刮削规则配置**
 
-## Configuration Interface
+:::info 操作提示
+更新配置后，请记得点击 **保存** 按钮，否则配置不会生效。
+:::
 
-![Scrape Rules](/img/usage/module/scrape-rule-01.png)
+## 配置界面
 
-## Function Description
+![刮削规则配置](/img/usage/module/scrape-config-01.png)
 
-### Scrape Rules
+![刮削规则配置](/img/usage/module/scrape-config-02.png)
 
-**Function Description**: By creating scrape rules, you can specify which scrapers to use and how to process metadata, improving the accuracy and completeness of metadata scraping.
+![刮削规则配置](/img/usage/module/scrape-config-03.png)
 
-**Applicable Scenarios**:
-- When you want to use specific scrapers for different types of media
-- When you want to customize which metadata fields to obtain
-- When you want to set specific scraping conditions
+## 基础配置
 
-## Configuration Method
+### 字符过滤
 
-### Create Scrape Rules
+**功能说明**：刮削时对文件名进行过滤，提前过滤掉一些不需要的字符，提高番号的识别率。
 
-1. On the **Scrape Rules** page, click the **Create** button
-2. Fill in the rule name and configuration parameters
-3. Save the rule
+**作用**：通过去除文件名中的干扰字符，使系统能够更准确地识别影视番号，从而获取更准确的元数据。
 
-### Rule Parameters
+### 允许图片下载失败
 
-#### Scraper Selection
+**功能说明**：设置当图片下载失败时，是否继续执行刮削任务。
 
-**Function Description**: Select the scrapers to be used for metadata scraping.
+**作用**：开启此选项后，即使图片下载失败，也不会影响刮削结果的获取，提高刮削的成功率。
 
-**Configuration Suggestion**: Select scrapers that are suitable for the type of media you want to scrape.
+### 整理目录格式
 
-#### Metadata Fields
+**功能说明**：设置刮削完成后目录的组织结构。
 
-**Function Description**: Set which metadata fields to obtain during scraping.
+**配置方法**：通过组合系统提供的变量，自定义目录的格式。
 
-**Configuration Suggestion**: Select the metadata fields you need, such as title, poster, synopsis, actors, etc.
+**示例**：`${actor}/${number}` 会创建以演员名称为一级目录，以影片编号为二级目录的结构。
 
-#### Scraping Priority
+### 整理文件名格式
 
-**Function Description**: Set the priority order of scrapers.
+**功能说明**：设置刮削完成后视频文件的命名格式。
 
-**Configuration Suggestion**: Arrange scrapers in order of reliability and completeness of metadata.
+**配置方法**：通过组合系统提供的变量，自定义文件名的格式。
 
-## Configuration Examples
+**示例**：`${title_safe}.${ext}` 会使用安全的影片标题作为文件名，并保留原始文件扩展名。
 
-Here are several examples of scrape rules:
+### 自动刮削
 
-| Rule Name | Scrapers | Metadata Fields | Scraping Priority |
-|-----------|----------|----------------|-------------------|
-| Japanese Media | Fanza, Metatube | Title, Poster, Synopsis, Actors | Fanza > Metatube |
-| Western Media | TMDB, IMDB | Title, Poster, Synopsis, Year, Genre | TMDB > IMDB |
-| All Media | TMDB, Fanza, Metatube | Title, Poster, Synopsis | TMDB > Fanza > Metatube |
+**功能说明**：设置扫描任务完成后是否自动触发刮削任务。
 
-## Common Questions
+**默认行为**：默认情况下，需要手动选择扫描到的文件执行刮削任务。
 
-### Q: What is the purpose of scrape rules?
+**开启效果**：开启后，系统会按照配置的规则，自动发现可刮削的影视文件并执行刮削。
 
-**A**: Scrape rules are used to guide the metadata scraping process, helping the system select appropriate scrapers and obtain the metadata fields you need, improving scraping efficiency and metadata quality.
+### 自动刮削间隔
 
-### Q: How to set up effective scrape rules?
+**功能说明**：设置自动刮削任务的执行间隔。
 
-**A**: You can set up effective scrape rules through the following methods:
-1. Select scrapers that are suitable for your media type
-2. Reasonably set metadata fields based on your needs
-3. Arrange scraper priority in a reasonable order
-4. Regularly update and optimize scrape rules based on actual usage
+**单位**：分钟
 
-### Q: Can I create multiple scrape rules?
+**默认值**：3分钟（开启自动刮削的情况下）
 
-**A**: Yes, you can create multiple scrape rules for different types of media, and select the appropriate scrape rule when creating a scraping task.
+### 高清封面下载
 
-### Q: What happens if no scrape rule is selected?
+**功能说明**：设置是否下载影视的高清封面。
 
-**A**: If no scrape rule is selected, the system will use the default scrape rule, which usually uses commonly used scrapers and obtains basic metadata fields.
+**下载来源**：开启后，系统会尝试从 Fanza DMM 获取高清封面；如果没有，会尝试从其他来源获取。
 
-### Q: How to test if the scrape rule is effective?
+### 外挂字幕搜索
 
-**A**: You can test through the following methods:
-1. Configure scrape rules
-2. Create a scraping task and select the scrape rule
-3. Run the scraping task
-4. Check if the metadata obtained meets your expectations
+**功能说明**：设置是否搜索并下载影视的外挂字幕（软字幕）。
 
-## Best Practices
+**存储位置**：下载的字幕文件会保存到最终的刮削目录中。
 
-- **Clear rule naming**: Use descriptive rule names for easy subsequent management
-- **Reasonable scraper selection**: Select scrapers that are suitable for your specific media type
-- **Appropriate metadata field settings**: Only select the metadata fields you actually need
-- **Effective scraper priority**: Arrange scrapers in order of reliability
-- **Regular rule maintenance**: Regularly review and update scrape rules based on actual usage
+### 番号混合
+
+**功能说明**：设置刮削后生成的 nfo 文件中，是否在标题等字段添加番号前缀。
+
+### 自动标签
+
+**功能说明**：设置是否在刮削后生成的 nfo 文件的 tag 标签中添加额外信息。
+
+**示例**：添加分辨率、番号、中字、破解等标签。
+
+### 自动分类标签
+
+**功能说明**：设置是否在刮削后生成的 nfo 文件的 genre 标签中添加额外信息。
+
+**示例**：添加分辨率、番号、中字、破解等标签。
+
+### 本地数据优先
+
+**功能说明**：设置刮削时是否优先使用本地已有的数据。
+
+**作用**：如果本地已有的数据符合刮削规则，会直接使用本地数据，而不会从网络上下载或更新数据，提高刮削效率。
+
+### 刮削器
+
+**功能说明**：选择系统使用的刮削器。
+
+**可用刮削器**：
+- **本地**：使用用户手动创建的影视信息
+- **Metatube** (插件)
+- **ThePornDB** (插件)
+- **Stash** (插件)
+- **Fanza DMM** (插件)
+
+### 刮削剧照
+
+**功能说明**：设置是否下载影视的剧照。
+
+**存储位置**：下载的剧照文件会保存到指定的目录中。
+
+### 剧照目录
+
+**功能说明**：设置剧照文件的保存目录。
+
+**默认值**：保存到与视频文件相同目录的 `extrafanart` 目录中。
+
+### 多线程执行
+
+**功能说明**：设置是否开启多线程执行刮削任务。
+
+**优缺点**：
+- **优点**：开启后会提高刮削效率
+- **缺点**：会增加系统资源的消耗
+
+**建议**：根据系统资源情况，合理配置多线程执行。例如，如果系统有 4 个 CPU 核心，建议设置为 4 个线程。
+
+### 最大线程数
+
+**功能说明**：设置刮削时的最大线程数。
+
+**默认值**：5 个线程
+
+**建议**：根据系统资源情况，合理配置最大线程数。
+
+## 目录与文件名整理
+
+在配置项中，有 **整理目录格式** 和 **整理文件名格式** 两个选项。您可以通过组合系统提供的变量，自定义目录和文件名的格式。
+
+### 安全变量
+
+**作用**：在变量名后添加 `_safe` 后缀，用于避免文件名中包含特殊字符导致的问题。
+
+**示例**：`${actor_safe}` 如果演员名称中出现特殊字符，会被替换为安全的字符。
+
+**作用**：避免影视标题中的特殊字符导致目录层级被中断，确保目录结构的完整性。
+
+### 整理示例
+
+一个完整的视频文件，会被整理为：`${actor}/${number}/${title_safe}.${ext}`
+
+**示例**：
+- 演员名称："John Doe"
+- 影片编号："ABC-123"
+- 影片标题："Sample Title"
+- 文件扩展名："mkv"
+
+**最终整理后的路径**：`John Doe/ABC-123/Sample Title.mkv`
+
+### 整理目录变量
+
+**默认配置**：`${actor}/${number}`
+
+**注意**：`/` 会被识别为目录分隔符，可以创建不同的目录层级。
+
+| 变量名 | 安全变量名 | 描述 | 示例 |
+|--------|------------|------|------|
+| `${actor}` | `${actor_safe}` | 演员名称 | "John Smith" |
+| `${number}` | `${number_safe}` | 影片编号 | "ABC-123" |
+| `${title}` | `${title_safe}` | 影片标题 | "Sample Title" |
+| `${date}` | `${date_safe}` | 发行日期 | "2024/01/01" |
+| `${year}` | `${year_safe}` | 发行年份 | "2024" |
+| `${month}` | `${month_safe}` | 发行月份 | "01" |
+| `${day}` | `${day_safe}` | 发行日期 | "01" |
+| `${mosaic}` | `${mosaic_safe}` | 马赛克类型 | "无码/有码" |
+| `${resolution}` | `${resolution_safe}` | 视频分辨率 | "1080p" |
+| `${director}` | `${director_safe}` | 导演名称 | "Director Name" |
+| `${studio}` | `${studio_safe}` | 制作商名称 | "Studio Name" |
+
+**默认值**：所有变量均有默认值，若未指定，会使用默认值。
+
+### 整理文件名变量
+
+**默认配置**：`${number}`
+
+| 变量名 | 安全变量名 | 描述 | 示例 |
+|--------|------------|------|------|
+| `${actor}` | `${actor_safe}` | 演员名称 | "John Smith" |
+| `${number}` | `${number_safe}` | 影片编号 | "ABC-123" |
+| `${title}` | `${title_safe}` | 影片标题 | "Sample Title" |
+| `${date}` | `${date_safe}` | 发行日期 | "2024/01/01" |
+| `${year}` | `${year_safe}` | 发行年份 | "2024" |
+| `${month}` | `${month_safe}` | 发行月份 | "01" |
+| `${day}` | `${day_safe}` | 发行日期 | "01" |
+| `${mosaic}` | `${mosaic_safe}` | 马赛克类型 | "无码/有码" |
+| `${resolution}` | `${resolution_safe}` | 视频分辨率 | "1080p" |
+| `${director}` | `${director_safe}` | 导演名称 | "Director Name" |
+| `${studio}` | `${studio_safe}` | 制作商名称 | "Studio Name" |
+
+## 配置示例
+
+以下是一个典型的刮削配置示例：
+
+| 配置项 | 设置值 |
+|--------|--------|
+| 字符过滤 | 开启 |
+| 允许图片下载失败 | 开启 |
+| 整理目录格式 | `${actor}/${number}` |
+| 整理文件名格式 | `${title_safe}.${ext}` |
+| 自动刮削 | 开启 |
+| 自动刮削间隔 | 5分钟 |
+| 高清封面下载 | 开启 |
+| 外挂字幕搜索 | 开启 |
+| 番号混合 | 开启 |
+| 自动标签 | 开启 |
+| 自动分类标签 | 开启 |
+| 本地数据优先 | 开启 |
+| 刮削器 | Metatube, Fanza DMM |
+| 刮削剧照 | 开启 |
+| 剧照目录 | extrafanart |
+| 多线程执行 | 开启 |
+| 最大线程数 | 4 |
+
+## 常见问题
+
+### Q: 为什么刮削失败？
+
+**A**：可能的原因包括：
+- 番号识别错误
+- 网络连接问题
+- 刮削器无法找到匹配的元数据
+- 配置错误
+
+### Q: 如何提高刮削成功率？
+
+**A**：可以尝试以下方法：
+- 确保文件名中的番号清晰可辨
+- 开启字符过滤功能
+- 配置多个刮削器
+- 确保网络连接正常
+
+### Q: 自动刮削和手动刮削有什么区别？
+
+**A**：
+- **自动刮削**：扫描完成后自动执行，无需手动干预，适合批量处理
+- **手动刮削**：需要手动选择文件执行刮削，适合对刮削结果要求较高的场景
+
+### Q: 为什么下载的字幕文件没有与视频文件匹配？
+
+**A**：可能的原因包括：
+- 字幕搜索时番号识别不准确
+- 网络连接问题导致字幕下载失败
+- 字幕文件命名与视频文件不一致
+
+### Q: 如何自定义目录结构？
+
+**A**：通过组合系统提供的变量，例如：
+- `${studio}/${actor}/${number}`：按制作商 → 演员 → 番号的层级组织
+- `${year}/${month}/${title_safe}`：按年份 → 月份 → 标题的层级组织
+

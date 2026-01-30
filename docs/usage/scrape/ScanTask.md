@@ -1,252 +1,252 @@
 ---
 sidebar_position: 1
-sidebar_label: "Create Scan Task"
+sidebar_label: "创建扫描任务"
 ---
 
-# Create Scan Task
+# 创建扫描任务
 
-Scan tasks are the first step in the scraping process, used to scan files in target directories according to scan rules, generate scan result files. Through scan tasks, you can selectively scrape files, improve scraping efficiency, and avoid scraping garbage files.
+扫描任务是刮削流程的第一步，用于根据扫描规则对目标目录下的文件进行扫描，生成扫描结果文件。通过扫描任务，您可以选择性地对文件进行刮削，提高刮削效率，同时规避对垃圾文件的刮削。
 
 <!-- truncate -->
 
-## Access Task List
+## 访问任务列表
 
-You can access the task list page through the following path:
+您可以通过以下路径访问任务列表页面：
 
-**Task Management >> Task Configuration >> Task List**
+**任务管理 >> 任务配置 >> 任务列表**
 
-On the task list page, click the **Create Task** button to create a scan task.
+在任务列表页面，点击 **创建任务** 按钮，即可创建一个扫描任务。
 
-## Multi-Task Management
+## 多任务管理
 
-You can configure multiple different scan tasks according to your needs. Each task can have different scan directories and output directories.
+您可以根据自己的需求，配置多个不同的扫描任务。每个任务可以有不同的扫描目录和输出目录。
 
-**Advantages of multi-task management**:
-- Helps classify and manage video files
-- Can set different processing rules for different types of video files
-- Improves overall processing efficiency
+**多任务管理的优势**：
+- 有助于对影视文件进行分类和管理
+- 可以针对不同类型的影视文件设置不同的处理规则
+- 提高整体处理效率
 
-**Examples**:
-- Create a scan task specifically for scanning Japanese video files and output them to a specified directory
-- Create another scan task specifically for scanning Western video files and output them to another directory
+**示例**：
+- 创建一个扫描任务，专门扫描日产影视文件，并将其输出到指定目录
+- 创建另一个扫描任务，专门扫描欧美影视文件，并将其输出到另一个目录
 
-## Create Scan Task
+## 创建扫描任务
 
-![Create Scan Task](/img/usage/scrape/task-scan-01.png)
+![创建扫描任务](/img/usage/scrape/task-scan-01.png)
 
-### Task Name
+### 任务名称
 
-**Function Description**: Set the name of the scan task.
+**功能说明**：设置扫描任务的名称。
 
-**Configuration Suggestion**: Use descriptive names for easy subsequent management and identification, such as: "Japanese Video Scan", "Western Video Scan", etc.
+**配置建议**：使用描述性的名称，便于后续管理和识别，例如："日产影视扫描"、"欧美影视扫描"等。
 
-### Media Type
+### 媒体类型
 
-**Function Description**: Set the media type of the scan task.
+**功能说明**：设置扫描任务的媒体类型。
 
-**Effect**: Assists the system in identifying numbers, improving number recognition rate.
+**作用**：辅助系统识别番号，提高番号识别率。
 
-**Configuration Suggestion**: If it is a mixed type of video files, select "All".
+**配置建议**：如果是混合类型的影视文件，选择"全部"即可。
 
-### Organization Mode
+### 整理模式
 
-**Function Description**: Set the way files are organized.
+**功能说明**：设置文件整理的方式。
 
-**Optional Modes**:
+**可选模式**：
 
-#### In-place Organization
-- **Function**: During organization, no operation is performed on the parent directory, and organization is directly performed in the original file directory
-- **Applicable Scenario**: Hope to keep the file location unchanged, only rename files or organize metadata
+#### 原地整理
+- **功能**：整理时不对父目录进行任何操作，直接在原始文件所在目录进行整理
+- **适用场景**：希望保持文件位置不变，仅对文件进行重命名或元数据整理
 
-#### Move Mode
-- **Function**: During organization, move files to the target directory
-- **Target Directory**: Format configured in scraping configuration
-- **Applicable Scenario**: Hope to centrally manage files to a specified directory
+#### 移动模式
+- **功能**：整理时将文件移动到目标目录
+- **目标目录**：刮削配置中配置的格式
+- **适用场景**：希望将文件集中管理到指定目录
 
-#### Copy Mode
-- **Function**: During organization, copy files to the target directory
-- **Target Directory**: Format configured in scraping configuration
-- **Applicable Scenario**: Hope to retain original files while creating organized copies in the specified directory
+#### 复制模式
+- **功能**：整理时将文件复制到目标目录
+- **目标目录**：刮削配置中配置的格式
+- **适用场景**：希望保留原始文件，同时在指定目录创建整理后的副本
 
-#### Soft Link Mode
-- **Function**: During organization, create soft links of files to the target directory
-- **Target Directory**: Format configured in scraping configuration
-- **Features**:
-  - Does not occupy additional disk space
-  - Soft link files are pointers to original files
-  - If the original file is deleted or moved, the soft link file will become invalid
-- **Applicable Scenario**: Hope to create file access entries in the specified directory without occupying additional space
+#### 软链接模式
+- **功能**：整理时创建文件的软链接到目标目录
+- **目标目录**：刮削配置中配置的格式
+- **特点**：
+  - 不占用额外的磁盘空间
+  - 软链接文件是一个指向原始文件的指针
+  - 如果原始文件被删除或移动，软链接文件将变得无效
+- **适用场景**：希望在不占用额外空间的情况下，在指定目录创建文件的访问入口
 
-#### Hard Link Mode
-- **Function**: During organization, create hard links of files to the target directory
-- **Target Directory**: Format configured in scraping configuration
-- **Features**:
-  - Will occupy additional disk space
-  - Hard link files are pointers to original files
-  - If the original file is deleted or moved, the hard link file will remain valid
-  - Hard link files can only be created in the same file system
-- **Applicable Scenario**: Hope to create multiple references to files in the same file system to ensure file security
-- **Note**: The hard conditions are very high, generally not recommended
+#### 硬链接模式
+- **功能**：整理时创建文件的硬链接到目标目录
+- **目标目录**：刮削配置中配置的格式
+- **特点**：
+  - 会占用额外的磁盘空间
+  - 硬链接文件是一个指向原始文件的指针
+  - 如果原始文件被删除或移动，硬链接文件将保持有效
+  - 硬链接文件只能在同一文件系统中创建
+- **适用场景**：希望在同一文件系统中创建文件的多个引用，确保文件安全性
+- **注意**：硬性条件很高，一般不建议使用
 
-:::info Tip
-Except for the in-place organization mode, other organization modes require specifying a target directory.
+:::info 提示
+除了原地整理模式，其他整理模式都需要指定目标目录。
 :::
 
-### Scan Directory
+### 扫描目录
 
-**Function Description**: Set the target directory for the scan task.
+**功能说明**：设置扫描任务的目标目录。
 
-**Effect**: The system will recursively scan all files in this directory.
+**作用**：系统会递归扫描该目录下的所有文件。
 
-**Configuration Suggestion**: Select the directory containing the video files you need to process.
+**配置建议**：选择包含您需要处理的影视文件的目录。
 
-### Organization Directory
+### 整理目录
 
-**Function Description**: Set the target directory for file organization.
+**功能说明**：设置文件整理的目标目录。
 
-**Applicable Scenario**: Except for the in-place organization mode, other organization modes need to specify this directory.
+**适用场景**：除了原地整理模式，其他整理模式都需要指定此目录。
 
-**Configuration Suggestion**: Select a directory with sufficient storage space for storing organized files.
+**配置建议**：选择一个有足够存储空间的目录，用于存放整理后的文件。
 
-### Rename Rule
+### 重命名规则
 
-**Function Description**: Set the way files are renamed.
+**功能说明**：设置文件重命名的方式。
 
-**Optional Rules**:
+**可选规则**：
 
-#### Original File Name
-- **Function**: Keep the original file name unchanged during organization
-- **Applicable Scenario**: Hope to retain the original naming of files
+#### 原文件名
+- **功能**：整理时保持原始文件名不变
+- **适用场景**：希望保留文件的原始命名
 
-#### Standardized File Name
-- **Function**: During organization, standardize file names according to the file name format configured in scraping configuration
-- **Naming Basis**: Depends on the file name format configured in scraping configuration
-- **Applicable Scenario**: Hope to unify file naming format and improve the standardization of file management
+#### 标准化文件名
+- **功能**：整理时根据刮削配置中配置的文件名格式，对文件名进行标准化
+- **命名依据**：取决于刮削配置中配置的文件名格式
+- **适用场景**：希望统一文件命名格式，提高文件管理的规范性
 
-### Duplicate File Handling
+### 重复文件处理
 
-**Function Description**: Set the processing method for cases where target files already exist.
+**功能说明**：设置针对目标文件已存在的情况的处理方式。
 
-**Configuration Suggestion**: Select the appropriate processing method according to your needs, such as: skip, overwrite, rename, etc.
+**配置建议**：根据您的需求选择合适的处理方式，例如：跳过、覆盖、重命名等。
 
-### Directory Monitoring
+### 目录监控
 
-**Function Description**: When enabled, after the initial initialization of the scan task, the system will monitor this directory, and when new files appear, it will automatically scan and add them to the scan result file.
+**功能说明**：开启后，在首次初始化扫描任务后，系统会监控此目录，当出现新增文件时，会自动进行扫描并添加到扫描结果文件中。
 
-**Applicable Scenario**: Hope the system automatically processes newly added files without manual triggering of scanning
+**适用场景**：希望系统自动处理新添加的文件，无需手动触发扫描
 
-### Add to Favorites
+### 加入收藏
 
-**Function Description**: When enabled, it will automatically favorite this video metadata after organization.
+**功能说明**：开启后，整理后会自动收藏此影视元数据。
 
-**Applicable Scenario**: Hope to quickly mark and access important video resources
+**适用场景**：希望快速标记和访问重要的影视资源
 
-### Scheduled Task
+### 计划任务
 
-**Function Description**: Set the automatic execution time of the scan task.
+**功能说明**：设置扫描任务的自动执行时间。
 
-**Note**: This conflicts with directory monitoring, only one can be selected.
+**注意**：此项与目录监控冲突，只可选择其一。
 
-**Configuration Format**: Use Spring-style cron expressions
+**配置格式**：使用 Spring 风格的 cron 表达式
 
-**Example**: Execute the scan task every hour, fill in `0 0 * * * ?`
+**示例**：每小时执行一次扫描任务，填写 `0 0 * * * ?`
 
-## Execute Scan Task
+## 执行扫描任务
 
-After creation, click the **Scan Now** button to execute the scan task.
+创建完成后，点击 **立即扫描** 按钮，即可执行扫描任务。
 
-![Execute Scan Task](/img/usage/scrape/task-scan-02.png)
+![执行扫描任务](/img/usage/scrape/task-scan-02.png)
 
-### Task Management Operations
+### 任务管理操作
 
-- **Edit**: Click the **Edit** button to modify the configuration of the scan task
-- **Records**: Click the **Records** button to view the execution history records of the scan task
-- **Delete**: Click the **Delete** button to delete unnecessary scan tasks
+- **编辑**：点击 **编辑** 按钮，即可修改扫描任务的配置
+- **记录**：点击 **记录** 按钮，即可查看扫描任务的执行历史记录
+- **删除**：点击 **删除** 按钮，即可删除不需要的扫描任务
 
-### View Scan Results
+### 扫描结果查看
 
-![View Scan Results](/img/usage/scrape/task-scan-03.png)
+![扫描结果查看](/img/usage/scrape/task-scan-03.png)
 
-After scanning is completed, newly added scrapable files can be viewed and processed in **Task Management >> Scrape and Storage**.
+扫描结束后，新增的可刮削文件请前往 **任务管理 >> 刮削入库** 中进行查看和处理。
 
-## Scheduled Tasks
+## 计划任务
 
-The project uses Spring-style cron expressions to specify the execution time of scheduled tasks.
+项目使用 Spring 风格的 cron 表达式，用于指定计划任务的执行时间。
 
-### Common Expressions
+### 常用表达式
 
-| Expression | Description |
-|------------|-------------|
-| `0 0 * * * ?` | Execute once every hour |
-| `0 0 0 * * ?` | Execute once every day at midnight |
-| `0 0 0 * * 1` | Execute once every Monday at midnight |
-| `0 0 0 1 * ?` | Execute once every month on the 1st at midnight |
+| 表达式 | 说明 |
+|--------|------|
+| `0 0 * * * ?` | 每小时执行一次 |
+| `0 0 0 * * ?` | 每天凌晨执行一次 |
+| `0 0 0 * * 1` | 每周一凌晨执行一次 |
+| `0 0 0 1 * ?` | 每月1日凌晨执行一次 |
 
-## Configuration Example
+## 配置示例
 
-Here is a typical scan task configuration example:
+以下是一个典型的扫描任务配置示例：
 
-| Configuration Item | Setting Value |
-|--------------------|---------------|
-| Task Name | Japanese Video Scan |
-| Media Type | Japanese |
-| Organization Mode | Move Mode |
-| Scan Directory | `D:\Downloads\NewMovies` |
-| Organization Directory | `E:\Media\Movies\Japanese` |
-| Rename Rule | Standardized File Name |
-| Duplicate File Handling | Skip |
-| Directory Monitoring | Enabled |
-| Add to Favorites | Disabled |
-| Scheduled Task | - |
+| 配置项 | 设置值 |
+|--------|--------|
+| 任务名称 | 日产影视扫描 |
+| 媒体类型 | 日产 |
+| 整理模式 | 移动模式 |
+| 扫描目录 | `D:\Downloads\NewMovies` |
+| 整理目录 | `E:\Media\Movies\Japanese` |
+| 重命名规则 | 标准化文件名 |
+| 重复文件处理 | 跳过 |
+| 目录监控 | 开启 |
+| 加入收藏 | 关闭 |
+| 计划任务 | - |
 
-## Common Questions
+## 常见问题
 
-### Q: What to do if the scan task execution fails?
+### Q: 扫描任务执行失败怎么办？
 
-**A**: Possible reasons include:
-- The scan directory does not exist or has no access permission
-- The organization directory does not exist or has no write permission
-- Configuration errors
-- Insufficient system resources
+**A**：可能的原因包括：
+- 扫描目录不存在或无权限访问
+- 整理目录不存在或无权限写入
+- 配置错误
+- 系统资源不足
 
-**Solutions**:
-- Check directory paths and permissions
-- Check configuration parameters
-- Ensure the system has sufficient resources
-- View execution records to understand specific error information
+**解决方案**：
+- 检查目录路径和权限
+- 检查配置参数
+- 确保系统有足够的资源
+- 查看执行记录了解具体错误信息
 
-### Q: What is the difference between directory monitoring and scheduled tasks?
+### Q: 目录监控和计划任务有什么区别？
 
-**A**:
-- **Directory monitoring**: Real-time monitoring of directory changes, immediate processing when new files are added
-- **Scheduled tasks**: Regular execution of scans at preset time intervals
+**A**：
+- **目录监控**：实时监控目录变化，当有新文件添加时立即处理
+- **计划任务**：按照预设的时间间隔定期执行扫描
 
-### Q: What is the difference between soft links and hard links?
+### Q: 软链接和硬链接有什么区别？
 
-**A**:
-- **Soft links**: Equivalent to Windows shortcuts, do not occupy additional space, but depend on the original file
-- **Hard links**: Equivalent to multiple references to files, occupy additional space, but do not depend on the original file (still usable after original file deletion)
+**A**：
+- **软链接**：相当于Windows的快捷方式，不占用额外空间，但依赖原始文件
+- **硬链接**：相当于文件的多个引用，占用额外空间，但不依赖原始文件（原始文件删除后仍可使用）
 
-### Q: Why are some files not displayed in the scan results?
+### Q: 为什么扫描结果中没有显示某些文件？
 
-**A**: Possible reasons include:
-- The file format is not in the format restriction list of scan rules
-- The file directory is added to the ignore directory
-- The file name contains ignored strings
-- The file size is smaller than the set minimum video size threshold
+**A**：可能的原因包括：
+- 文件格式不在扫描规则的格式限制列表中
+- 文件所在目录被添加到了忽略目录中
+- 文件名包含被忽略的字符串
+- 文件大小小于设置的最小视频大小阈值
 
-### Q: How to improve scan efficiency?
+### Q: 如何提高扫描效率？
 
-**A**: You can try the following methods:
-- Reasonably set ignore directories and ignore files
-- Create specialized scan tasks for different types of files
-- Use directory monitoring function to avoid repeated scanning
-- Appropriately adjust system resource allocation
+**A**：可以尝试以下方法：
+- 合理设置忽略目录和忽略文件
+- 针对不同类型的文件创建专门的扫描任务
+- 使用目录监控功能，避免重复扫描
+- 适当调整系统资源分配
 
-## Best Practices
+## 最佳实践
 
-- **Task classification**: Create different scan tasks according to video types to improve processing efficiency
-- **Reasonable naming**: Use descriptive task names for easy subsequent management
-- **Regular maintenance**: Regularly check and clean up unnecessary scan tasks
-- **Backup configuration**: Record the current configuration before modifying important configurations, so that it can be restored if problems occur
-- **Monitor execution**: Regularly view the execution records of scan tasks, discover and solve problems in time
+- **任务分类**：根据影视类型创建不同的扫描任务，提高处理效率
+- **合理命名**：使用描述性的任务名称，便于后续管理
+- **定期维护**：定期检查和清理不需要的扫描任务
+- **备份配置**：在修改重要配置前，记录当前配置，以便在出现问题时恢复
+- **监控执行**：定期查看扫描任务的执行记录，及时发现和解决问题

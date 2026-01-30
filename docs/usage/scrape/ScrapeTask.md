@@ -1,119 +1,121 @@
 ---
 sidebar_position: 2
-sidebar_label: "Create Scrape Task"
+sidebar_label: "执行刮削任务"
 ---
 
-# Create Scrape Task
+# 执行刮削任务
 
-Scrape tasks are used to scrape metadata for media files, including movie titles, posters, synopses, etc., helping you organize and manage media files more effectively.
+刮削任务是刮削流程的第二步，用于根据刮削规则对扫描结果文件进行刮削，获取影视元数据并生成最终的影视文件，完成影视整理工作。
 
 <!-- truncate -->
 
-## Access Scrape Task
+## 前置条件
 
-You can access the scrape task page through the following path:
+在执行刮削任务前，请确保满足以下条件：
 
-**Task Management >> Scrape and Storage**
+### 网络连接
 
-## Scrape Process
+整理文件需要通过互联网获取影视元数据，因此需要确保项目能够正常访问互联网。
 
-### 1. Select Files to Scrape
+### 元数据插件
 
-![Select Files to Scrape](/img/usage/scrape/task-scrape-04.png)
+请确认已开启并正确配置相关元数据插件，这些插件是获取影视元数据的关键：
 
-On the **Scrape and Storage** page, select the files you want to scrape, then click the **Scrape** button.
++ [Metatube 插件](/docs/plugin/metadata/Metatube)
++ [ThePornDB 插件](/docs/plugin/metadata/ThePornDB)
++ [StashBox 插件](/docs/plugin/metadata/StashBox)
++ [FanzaDMM 插件](/docs/plugin/metadata/FanzaDMM)
++ [Madou 插件](/docs/plugin/metadata/Madou)
 
-### 2. Configure Scrape Parameters
+:::warning 重要提醒
+没有开启相关元数据插件，将无法获取影视元数据，会导致刮削失败。
+:::
 
-![Configure Scrape Parameters](/img/usage/scrape/task-scrape-05.png)
+:::info 数据来源声明
+本软件不提供任何源数据，所有影视元数据均来自用户自行配置的插件服务。
+:::
 
-In the scrape configuration dialog, set the following parameters:
+## 执行刮削任务
 
-- **Scrape Rule**: Select the appropriate scrape rule
-- **Organization Mode**: Select the file organization mode
-- **Rename Rule**: Select the file rename rule
-- **Organization Directory**: Set the target directory for organized files
+### 步骤 1：进入刮削入库页面
 
-### 3. Execute Scrape Task
+通过左侧导航栏进入 **任务管理**，然后选择 **刮削入库** 选项，进入刮削入库页面。
 
-![Execute Scrape Task](/img/usage/scrape/task-scrape-06.png)
+![刮削入库页面](/img/usage/scrape/task-scrape-01.png)
 
-After configuring the parameters, click the **Start Scrape** button to execute the scrape task.
+### 步骤 2：选择需要刮削的文件
 
-### 4. View Scrape Results
+在刮削入库页面中，您可以看到通过扫描任务记录的所有待刮削文件列表。根据需要，勾选您想要进行刮削的文件。
 
-![View Scrape Results](/img/usage/scrape/task-scrape-07.png)
+### 步骤 3：开始执行刮削任务
 
-After scraping is completed, you can view the scrape results, including the obtained metadata and organized files.
+点击页面中的 **刮削整理** 按钮，系统将开始执行刮削任务。
 
-## Scrape Modes
+![执行刮削任务](/img/usage/scrape/task-scrape-02.png)
 
-### Automatic Scrape
+### 步骤 4：查看任务执行状态
 
-**Function Description**: The system automatically scrapes metadata based on file names or content.
+任务执行过程中，页面会实时展示刮削任务的执行情况，包括：
+- 成功刮削的文件数量
+- 刮削失败的文件数量
+- 已跳过的文件数量
 
-**Applicable Scenario**: Suitable for files with clear naming conventions, can quickly obtain metadata.
+### 步骤 5：终止刮削任务（如需）
 
-### Manual Scrape
+在执行过程中，如需终止刮削任务，您可以随时点击 **取消** 按钮来停止任务执行。
 
-**Function Description**: Manually search and select metadata from scrapers.
+## 刮削原理说明
 
-**Applicable Scenario**: Suitable for files with unclear naming conventions, can accurately obtain the desired metadata.
+刮削任务的工作原理如下：
 
-## Metadata Fields
+1. **读取刮削规则**：系统根据您配置的刮削规则，确定如何处理不同类型的文件
+2. **匹配元数据**：通过启用的元数据插件，尝试匹配并获取影视的详细信息
+3. **生成影视文件**：根据获取到的元数据，系统会生成标准化的影视文件
+4. **整理文件结构**：按照预设的命名规则和目录结构，对影视文件进行整理
 
-The following metadata fields can be obtained through scraping:
+## 常见问题与解决方案
 
-- **Title**: Movie title
-- **Poster**: Movie poster image
-- **Synopsis**: Movie synopsis
-- **Actors**: Movie actors
-- **Director**: Movie director
-- **Year**: Release year
-- **Genre**: Movie genre
-- **Runtime**: Movie duration
-- **Rating**: Movie rating
+### 问题：刮削失败
 
-## Common Questions
+**可能原因**：
+- 网络连接问题
+- 元数据插件未开启或配置错误
+- 刮削规则设置不当
+- 文件命名不符合匹配规则
 
-### Q: What to do if scraping fails?
+**解决方案**：
+- 检查网络连接是否正常
+- 确认已开启并正确配置元数据插件
+- 检查刮削规则设置是否合理
+- 尝试修改文件命名格式，使其更符合匹配规则
 
-**A**: Possible reasons include:
-- The file name does not contain valid number information
-- The selected scraper cannot find matching metadata
-- Network connection issues
-- Scraper API limitations
+### 问题：元数据获取不全
 
-**Solutions**:
-- Try using different scrape rules
-- Try manual scraping mode
-- Check network connections
-- Try again later
+**可能原因**：
+- 插件服务暂时不可用
+- 影视信息在插件服务中不存在
+- 网络延迟导致获取超时
 
-### Q: How to improve scraping accuracy?
+**解决方案**：
+- 稍后重试，可能插件服务暂时不可用
+- 尝试使用其他元数据插件
+- 检查网络连接稳定性
 
-**A**:
-- Ensure file names contain clear number information
-- Select appropriate scrape rules for different types of media
-- Use manual scraping mode for files with unclear naming
-- Regularly update scrape rules and scrapers
+## 最佳实践
 
-### Q: Can I edit metadata after scraping?
+1. **分批处理**：对于大量文件，建议分批进行刮削，避免系统负载过高
+2. **优先配置**：在执行刮削前，确保已正确配置刮削规则和元数据插件
+3. **定期更新**：定期更新元数据插件，以获取更好的匹配效果
+4. **检查日志**：刮削失败时，查看系统日志以获取详细错误信息
 
-**A**: Yes, you can edit the scraped metadata in the metadata management interface to correct or supplement information.
+## 注意事项
 
-### Q: What to do if duplicate metadata is obtained?
+:::caution 注意
+刮削任务可能需要较长时间完成，具体取决于文件数量和网络速度，请耐心等待。
+:::
 
-**A**: You can manually select the correct metadata from multiple scraping results, or set the priority of scrapers in scrape rules to avoid duplicate metadata.
+:::tip 提示
+为获得最佳刮削效果，建议确保文件命名尽可能规范，包含必要的识别信息（如编号、标题等）。
+:::
 
-### Q: How to batch process multiple files?
 
-**A**: You can select multiple files on the **Scrape and Storage** page, then click the **Scrape** button to batch process them.
-
-## Best Practices
-
-- **File naming**: Ensure file names contain clear number information to improve scraping accuracy
-- **Scrape rule selection**: Select appropriate scrape rules for different types of media
-- **Organization planning**: Plan the directory structure in advance to facilitate subsequent management
-- **Metadata review**: Regularly review and correct scraped metadata to ensure data accuracy
-- **Backup**: Regularly back up metadata to prevent data loss

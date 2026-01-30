@@ -1,157 +1,157 @@
 ---
 sidebar_position: 5
-sidebar_label: "Network Proxy Configuration"
+sidebar_label: "网络代理配置"
 ---
 
-# Network Proxy Configuration
+# 网络代理配置
 
-Network proxy configuration is used to set up proxy servers for the program to access network resources, ensuring the program can normally access resources that require a proxy.
+网络代理配置用于设置程序访问网络资源时使用的代理服务器，确保程序能够正常访问需要通过代理才能访问的资源。
 
 <!-- truncate -->
 
-## Access Network Proxy Configuration
+## 访问网络代理配置
 
-You can access the network proxy configuration page through the following two paths:
+您可以通过以下两种路径访问网络代理配置页面：
 
-1. **Task Management >> Network Proxy**
-2. **System Management >> System Configuration >> Network Configuration**
+1. **任务管理 >> 网络代理**
+2. **系统管理 >> 系统配置 >> 网络配置**
 
-## Configuration Interface
+## 配置界面
 
-![Network Proxy Configuration](/img/usage/module/proxy-config-01.png)
+![网络代理配置](/img/usage/module/proxy-config-01.png)
 
-![Network Proxy Configuration](/img/usage/module/proxy-config-02.png)
+![网络代理配置](/img/usage/module/proxy-config-02.png)
 
-## Configuration Item Description
+## 配置项说明
 
-### Enable Proxy
+### 开启代理
 
-**Function Description**: Set whether to enable the network proxy function.
+**功能说明**：设置是否启用网络代理功能。
 
-**Effect**: When enabled, the program will access network resources through the configured proxy server.
+**作用**：开启后，程序会通过配置的代理服务器访问网络资源。
 
-### Proxy Protocol
+### 代理协议
 
-**Function Description**: Select the network proxy protocol type.
+**功能说明**：选择网络代理的协议类型。
 
-**Available Protocols**:
+**可选协议**：
 - HTTP
 - SOCKS4
 - SOCKS5
 
-**Recommendation**: Choose the appropriate protocol based on your proxy server type.
+**建议**：根据您的代理服务器类型选择合适的协议。
 
-### Proxy Host
+### 代理主机
 
-**Function Description**: Enter the host address of the network proxy server.
+**功能说明**：输入网络代理服务器的主机地址。
 
-**Format**: Can be an IP address (e.g., `192.168.1.1`) or a domain name (e.g., `proxy.example.com`).
+**格式**：可以是 IP 地址（如 `192.168.1.1`）或域名（如 `proxy.example.com`）。
 
-### Proxy Port
+### 代理端口
 
-**Function Description**: Enter the port number of the network proxy server.
+**功能说明**：输入网络代理服务器的端口号。
 
-**Common Ports**:
-- HTTP proxy: 8080, 3128
-- SOCKS proxy: 1080
+**常见端口**：
+- HTTP 代理：8080、3128
+- SOCKS 代理：1080
 
-### Username
+### 用户名
 
-**Function Description**: If the network proxy server requires authentication, enter the authentication username.
+**功能说明**：如果网络代理服务器需要认证，输入认证用户名。
 
-### Password
+### 密码
 
-**Function Description**: If the network proxy server requires authentication, enter the authentication password.
+**功能说明**：如果网络代理服务器需要认证，输入认证密码。
 
-### No Proxy Hosts
+### 免代理主机
 
-**Function Description**: Set host addresses that do not need to be accessed through a proxy.
+**功能说明**：设置不需要通过代理访问的主机地址。
 
-**Add Method**: Enter the host address and press **Enter** to confirm addition.
+**添加方法**：输入主机地址后按下 **回车 (Enter)** 键确认添加。
 
-**Applicable Scenarios**:
-- Local network resources
-- Public resources that do not require proxy access
+**适用场景**：
+- 本地网络资源
+- 不需要通过代理访问的公共资源
 
-![Network Proxy Configuration](/img/usage/module/proxy-config-03.png)
+![网络代理配置](/img/usage/module/proxy-config-03.png)
 
-![Network Proxy Configuration](/img/usage/module/proxy-config-04.png)
+![网络代理配置](/img/usage/module/proxy-config-04.png)
 
-## Configuration Examples
+## 配置示例
 
-Here are several common network proxy configuration examples:
+以下是几个常见的网络代理配置示例：
 
-### Example 1: HTTP Proxy
+### 示例 1：HTTP 代理
 
-| Configuration Item | Setting Value |
-|--------------------|---------------|
-| Enable Proxy | Enabled |
-| Proxy Protocol | HTTP |
-| Proxy Host | 192.168.1.100 |
-| Proxy Port | 8080 |
-| Username | user |
-| Password | password |
-| No Proxy Hosts | localhost, 127.0.0.1 |
+| 配置项 | 设置值 |
+|--------|--------|
+| 开启代理 | 开启 |
+| 代理协议 | HTTP |
+| 代理主机 | 192.168.1.100 |
+| 代理端口 | 8080 |
+| 用户名 | user |
+| 密码 | password |
+| 免代理主机 | localhost, 127.0.0.1 |
 
-### Example 2: SOCKS5 Proxy
+### 示例 2：SOCKS5 代理
 
-| Configuration Item | Setting Value |
-|--------------------|---------------|
-| Enable Proxy | Enabled |
-| Proxy Protocol | SOCKS5 |
-| Proxy Host | proxy.example.com |
-| Proxy Port | 1080 |
-| Username | - |
-| Password | - |
-| No Proxy Hosts | localhost, 192.168.1.* |
+| 配置项 | 设置值 |
+|--------|--------|
+| 开启代理 | 开启 |
+| 代理协议 | SOCKS5 |
+| 代理主机 | proxy.example.com |
+| 代理端口 | 1080 |
+| 用户名 | - |
+| 密码 | - |
+| 免代理主机 | localhost, 192.168.1.* |
 
-## Notes
+## 注意事项
 
-:::warning Important Note
-- **After configuration is completed, you need to restart the program for it to take effect**
-- **Configuration errors may cause the program to not run normally**
-- **Ensure the proxy server address and port are correct**
-- **Ensure the proxy server can be accessed normally**
-- **For proxies that require authentication, ensure the username and password are correct**
+:::warning 重要提示
+- **配置完成后，需要重启程序才能生效**
+- **配置错误可能导致程序无法正常运行**
+- **确保代理服务器地址和端口正确**
+- **确保代理服务器能够正常访问**
+- **对于需要认证的代理，确保用户名和密码正确**
 :::
 
-## Common Questions
+## 常见问题
 
-### Q: Why do I need to configure a network proxy?
+### Q: 为什么需要配置网络代理？
 
-**A**: Some network resources may require access through a specific network environment, and configuring a network proxy can help the program normally access these resources, such as:
-- Some scrapers need to access network resources in specific regions
-- Some plugins need to access external APIs
+**A**：部分网络资源可能需要通过特定的网络环境才能访问，配置网络代理可以帮助程序正常访问这些资源，例如：
+- 某些刮削器需要访问特定地区的网络资源
+- 某些插件需要访问外部 API
 
-### Q: How to test if the proxy configuration is correct?
+### Q: 如何测试代理配置是否正确？
 
-**A**: You can test through the following methods:
-1. Configure proxy settings
-2. Restart the program
-3. Try to perform operations that require network access (such as scraping)
-4. Check if the operation is completed successfully
+**A**：您可以通过以下方法测试：
+1. 配置代理设置
+2. 重启程序
+3. 尝试执行需要网络访问的操作（如刮削）
+4. 查看操作是否成功完成
 
-### Q: After the proxy configuration takes effect, will all network requests go through the proxy?
+### Q: 代理配置生效后，所有网络请求都会通过代理吗？
 
-**A**: No, only specific operations that require network access will go through the proxy, and you can specify resources that do not need to go through the proxy by setting no proxy hosts.
+**A**：不是，只有需要网络访问的特定操作会通过代理，而且您可以通过设置免代理主机来指定不需要通过代理访问的资源。
 
-### Q: Why is it still accessing through the proxy even though I set no proxy hosts?
+### Q: 为什么设置了免代理主机但仍然通过代理访问？
 
-**A**: Possible reasons include:
-- The no proxy host format is incorrect
-- The configuration has not taken effect (needs to restart the program)
-- The program's internal logic prioritizes using the proxy
+**A**：可能的原因包括：
+- 免代理主机格式不正确
+- 配置未生效（需要重启程序）
+- 程序内部逻辑优先使用代理
 
-### Q: What impact will proxy server connection failure have?
+### Q: 代理服务器连接失败会有什么影响？
 
-**A**: If the proxy server connection fails, it may cause the following problems:
-- Scraping failure
-- Plugins not working properly
-- Unable to get online resources
+**A**：如果代理服务器连接失败，可能会导致以下问题：
+- 刮削失败
+- 插件无法正常工作
+- 无法获取在线资源
 
-## Best Practices
+## 最佳实践
 
-- **Use a stable proxy server**: Ensure the proxy server is stable and reliable to avoid frequent disconnections
-- **Reasonably set no proxy hosts**: Add local resources and public resources that do not need a proxy to the no proxy list to improve access speed
-- **Regularly check proxy configuration**: If the network environment changes, update the proxy configuration in time
-- **Backup proxy configuration**: Record the current configuration before modifying it, so that it can be restored if problems occur
+- **使用稳定的代理服务器**：确保代理服务器稳定可靠，避免频繁断开连接
+- **合理设置免代理主机**：将本地资源和不需要代理的公共资源添加到免代理列表，提高访问速度
+- **定期检查代理配置**：如果网络环境发生变化，及时更新代理配置
+- **备份代理配置**：在修改配置前，记录当前配置，以便在出现问题时恢复

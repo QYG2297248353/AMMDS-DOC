@@ -1,113 +1,134 @@
 ---
 sidebar_position: 1
-sidebar_label: "Scan Rule Configuration"
+sidebar_label: "扫描配置"
 ---
 
-# Scan Rule Configuration
+# 扫描配置
 
-Scan rule configuration is used to set the rules for scanning media files, including file format filtering, directory exclusion, and other settings, helping you accurately scan the media files you need.
+扫描配置用于在任务执行前，设置系统如何识别和处理媒体文件，确保扫描过程能够准确、高效地识别您的影视资源。
 
 <!-- truncate -->
 
-## Access Scan Rule Configuration
+## 访问扫描配置
 
-You can access the scan rule configuration page through the following path:
+您可以通过以下路径访问扫描规则配置页面：
 
-**Task Management >> Scan Rules**
+**任务管理 >> 扫描规则配置**
 
-## Configuration Interface
+:::info 操作提示
+更新配置后，请记得点击 **保存** 按钮，否则配置不会生效。
+:::
 
-![Scan Rules](/img/usage/module/scan-rule-01.png)
+## 配置界面
 
-## Function Description
+![扫描规则配置](/img/usage/module/scan-config-01.png)
 
-### Scan Rules
+![扫描规则配置](/img/usage/module/scan-config-02.png)
 
-**Function Description**: By creating scan rules, you can specify which files to scan and which files to exclude, improving the efficiency and accuracy of scanning.
+## 配置项说明
 
-**Applicable Scenarios**:
-- When you only want to scan specific types of media files
-- When you want to exclude certain directories or files
-- When you want to set specific scanning conditions
+### 格式限制
 
-## Configuration Method
+**功能说明**：设置系统能够识别的媒体文件类型。
 
-### Create Scan Rules
+**默认支持**：系统内置了一些常见的媒体文件类型，如：`.mp4`, `.mkv`, `.avi`, `.mov` 等。
 
-1. On the **Scan Rules** page, click the **Create** button
-2. Fill in the rule name and configuration parameters
-3. Save the rule
+**自定义添加**：您可以根据需要，添加其他文件类型。添加时，输入文件类型的扩展名（如：`.strm`）后按下 **回车 (Enter)** 键确认输入。
 
-### Rule Parameters
+### 忽略目录
 
-#### File Formats
+**功能说明**：配置扫描时需要忽略的目录，这些目录及其子目录下的文件将不会被扫描到。
 
-**Function Description**: Set the file formats to be scanned.
+**配置方法**：输入目录的相对路径（如：`sample`, `tmp`），目录名称忽略大小写。
 
-**Configuration Suggestion**: Select the media file formats you want to scan, such as MP4, MKV, AVI, etc.
+**适用场景**：可以用于忽略包含样片、临时文件或其他非影视资源的目录。
 
-#### Exclude Directories
+### 忽略文件
 
-**Function Description**: Set directories that do not need to be scanned.
+**功能说明**：配置扫描时需要忽略的文件，包含指定字符串的文件将不会被扫描到。
 
-**Configuration Suggestion**: Add directories that do not contain media files, such as system directories, temporary directories, etc.
+**配置方法**：输入文件名称中包含的字符串（如：`sample`, `hh800.com@`），字符串忽略大小写。
 
-#### Exclude Files
+**适用场景**：可以用于忽略样片文件、带有特定标记的文件或其他不需要处理的文件。
 
-**Function Description**: Set files that do not need to be scanned.
+### 分段标记
 
-**Configuration Suggestion**: Add files that are not media files, such as text files, image files, etc.
+**功能说明**：配置分段视频文件的标记字符串，辅助系统识别分段视频，避免将其作为单独的文件处理。
 
-#### Minimum File Size
+**配置方法**：输入分段标记的字符串（如：`part`, `cd`），字符串忽略大小写。
 
-**Function Description**: Set the minimum size of files to be scanned.
+**适用场景**：适用于处理被分割成多个部分的视频文件，确保系统能够正确识别它们属于同一个影视资源。
 
-**Configuration Suggestion**: Set an appropriate value to exclude small files that are not media files.
+### 字幕格式
 
-## Configuration Examples
+**功能说明**：配置系统能够识别的字幕文件格式，辅助系统正确添加字幕标签。
 
-Here are several examples of scan rules:
+**配置方法**：输入字幕文件的扩展名（如：`.srt`, `.ass`, `.idx`）后按下 **回车 (Enter)** 键确认输入。
 
-| Rule Name | File Formats | Exclude Directories | Exclude Files | Minimum File Size |
-|-----------|-------------|---------------------|---------------|-------------------|
-| Video Files | MP4, MKV, AVI | temp, system | *.txt, *.jpg | 100MB |
-| High Quality Videos | MP4, MKV | downloads/incomplete | *.sample.* | 500MB |
-| All Media | MP4, MKV, AVI, MOV, WMV | - | - | 50MB |
 
-## Common Questions
+### 最小视频大小
 
-### Q: What is the purpose of scan rules?
+**功能说明**：设置视频文件的最小大小阈值，扫描时小于该大小的视频文件会被忽略。
 
-**A**: Scan rules are used to filter and identify media files during the scanning process, helping the system accurately find the media files you need to process, improving scanning efficiency and reducing unnecessary processing.
+**单位**：MB
 
-### Q: How to set up effective scan rules?
+**默认值**：100MB
 
-**A**: You can set up effective scan rules through the following methods:
-1. Clearly define the file formats you want to scan
-2. Reasonably set exclude directories to avoid scanning unnecessary directories
-3. Set an appropriate minimum file size to exclude non-media files
-4. Regularly update and optimize scan rules based on actual usage
+**特殊情况**：如果您使用 `.strm` 等文件类型的视频，建议将最小视频大小设置为 **0MB**，否则可能会导致无法正常扫描到这些文件。
 
-### Q: Can I create multiple scan rules?
+### 中文字幕识别
 
-**A**: Yes, you can create multiple scan rules for different scenarios, and select the appropriate scan rule when creating a scanning task.
+**功能说明**：配置中文字幕的识别关键词，当视频文件名中包含这些关键词时，系统会自动添加中文字幕标签。
 
-### Q: What happens if no scan rule is selected?
+**示例**：`-C`, `.chs` 等，关键词忽略大小写。
 
-**A**: If no scan rule is selected, the system will use the default scan rule, which usually scans common media file formats and does not exclude any directories or files.
+### 马赛克破解识别
 
-### Q: How to test if the scan rule is effective?
+**功能说明**：配置马赛克破解的识别关键词，当视频文件名中包含这些关键词时，系统会自动添加马赛克破解标签。
 
-**A**: You can test through the following methods:
-1. Configure scan rules
-2. Create a scanning task and select the scan rule
-3. Run the scanning task
-4. Check if the scanning results meet your expectations
+**示例**：`-u`, `.uc` 等，关键词忽略大小写。
 
-## Best Practices
+### 读取本地 nfo
 
-- **Clear rule naming**: Use descriptive rule names for easy subsequent management
-- **Reasonable file format settings**: Only select the media file formats you actually need
-- **Effective directory exclusion**: Add directories that definitely do not contain media files to improve scanning speed
-- **Appropriate file size setting**: Set a reasonable minimum file size to filter out non-media files
-- **Regular rule maintenance**: Regularly review and update scan rules based on actual usage
+**功能说明**：开启后，系统会自动读取视频文件所在目录下的同名 `.nfo` 文件，并解析其中的信息。
+
+**作用**：解析到的信息会自动创建媒体元数据，并存储到数据库中，减少手动编辑元数据的工作量。
+
+## 配置示例
+
+以下是一个典型的扫描配置示例：
+
+| 配置项 | 设置值 |
+|--------|--------|
+| 格式限制 | `.mp4`, `.mkv`, `.avi`, `.mov`, `.strm` |
+| 忽略目录 | `sample`, `tmp`, `Extras` |
+| 忽略文件 | `sample`, `trailer`, `preview` |
+| 分段标记 | `part`, `cd`, `disc` |
+| 字幕格式 | `.srt`, `.ass`, `.idx`, `.sub` |
+| 最小视频大小 | 100MB |
+| 中文字幕识别 | `-C`, `.chs`, `.zh` |
+| 马赛克破解识别 | `-u`, `.uc`, `uncensored` |
+| 读取本地 nfo | 开启 |
+
+## 常见问题
+
+### Q: 为什么有些视频文件没有被扫描到？
+
+**A**：可能的原因包括：
+- 文件格式不在格式限制列表中
+- 文件所在目录被添加到了忽略目录中
+- 文件名包含被忽略的字符串
+- 文件大小小于设置的最小视频大小阈值
+
+### Q: 如何正确添加自定义文件格式？
+
+**A**：添加自定义文件格式时，需要注意以下几点：
+- 必须包含文件扩展名的点号（如：`.strm` 而不是 `strm`）
+- 每个文件格式需要单独添加，添加后按回车键确认
+- 确保添加的文件格式是系统能够处理的类型
+
+### Q: 分段标记有什么作用？
+
+**A**：分段标记用于帮助系统识别属于同一影视资源的多个分段文件，确保它们被正确地作为一个整体处理，而不是被视为多个独立的文件。
+
+
