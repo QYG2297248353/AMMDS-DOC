@@ -1,6 +1,16 @@
+plugin:
+  label: "Plugin"
+  permalink: "/plugin"
+  description: "Plugin documentation"
+
+
+metadata:
+  label: "Metadata"
+  permalink: "/metadata"
+  description: "Metadata documentation"
+
+
 release:
   label: "Release"
   permalink: "/release"
   description: "Release notes"
-
-
