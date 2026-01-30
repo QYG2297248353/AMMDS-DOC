@@ -30,5 +30,17 @@
   "sidebar.guideSidebar.category.Media Server": {
     "message": "미디어 서버",
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Usage": {
+    "message": "사용법",
+    "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Module": {
+    "message": "모듈",
+    "description": "The label for category 'Module' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Scrape": {
+    "message": "스크래핑",
+    "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   }
 }

@@ -30,5 +30,17 @@
   "sidebar.guideSidebar.category.Media Server": {
     "message": "媒体服务器",
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Usage": {
+    "message": "教程",
+    "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Module": {
+    "message": "模块",
+    "description": "The label for category 'Module' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Scrape": {
+    "message": "刮削",
+    "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   }
 }

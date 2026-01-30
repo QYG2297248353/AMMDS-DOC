@@ -30,5 +30,17 @@
   "sidebar.guideSidebar.category.Media Server": {
     "message": "メディアサーバー",
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Usage": {
+    "message": "チュートリアル",
+    "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Module": {
+    "message": "モジュール",
+    "description": "The label for category 'Module' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Scrape": {
+    "message": "スクレイピング",
+    "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   }
 }
