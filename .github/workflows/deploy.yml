@@ -23,8 +23,8 @@ jobs:
 
       - name: Check Release Tag Format
         run: |
-          if [[ ! "${{ github.event.release.tag_name }}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "Error: Release tag must be in format vx.x.x"
+          if [[ ! "${{ github.event.release.tag_name }}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?$ ]]; then
+            echo "Error: Release tag must be in format vX.Y.Z or vX.Y.Z.N"
             exit 1
           fi
           echo "Release tag format is valid: ${{ github.event.release.tag_name }}"
