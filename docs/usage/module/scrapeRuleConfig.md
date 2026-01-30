@@ -1,275 +1,274 @@
 ---
 sidebar_position: 2
-sidebar_label: "刮削配置"
+sidebar_label: "Scrape Configuration"
 ---
 
-# 刮削配置
+# Scrape Configuration
 
-刮削配置用于在任务执行前，设置系统如何从网络获取影视元数据、如何整理文件目录结构，以及其他与刮削相关的参数，确保刮削过程能够高效、准确地获取和组织影视资源。
+Scrape configuration is used to set how the system obtains movie metadata from the network, how to organize file directory structure, and other scrape-related parameters before task execution, ensuring the scrape process can efficiently and accurately obtain and organize movie resources.
 
 <!-- truncate -->
 
-## 访问刮削配置
+## Access Scrape Configuration
 
-您可以通过以下路径访问刮削规则配置页面：
+You can access the scrape rule configuration page through the following path:
 
-**任务管理 >> 刮削规则配置**
+**Task Management >> Scrape Rule Configuration**
 
-:::info 操作提示
-更新配置后，请记得点击 **保存** 按钮，否则配置不会生效。
+:::info Operation Tip
+After updating the configuration, please remember to click the **Save** button, otherwise the configuration will not take effect.
 :::
 
-## 配置界面
+## Configuration Interface
 
-![刮削规则配置](/img/usage/module/scrape-config-01.png)
+![Scrape Rule Configuration](/img/usage/module/scrape-config-01.png)
 
-![刮削规则配置](/img/usage/module/scrape-config-02.png)
+![Scrape Rule Configuration](/img/usage/module/scrape-config-02.png)
 
-![刮削规则配置](/img/usage/module/scrape-config-03.png)
+![Scrape Rule Configuration](/img/usage/module/scrape-config-03.png)
 
-## 基础配置
+## Basic Configuration
 
-### 字符过滤
+### Character Filtering
 
-**功能说明**：刮削时对文件名进行过滤，提前过滤掉一些不需要的字符，提高番号的识别率。
+**Function Description**: Filter file names during scraping to remove unnecessary characters in advance, improving the recognition rate of numbers.
 
-**作用**：通过去除文件名中的干扰字符，使系统能够更准确地识别影视番号，从而获取更准确的元数据。
+**Role**: By removing interfering characters from file names, the system can more accurately identify movie numbers, thereby obtaining more accurate metadata.
 
-### 允许图片下载失败
+### Allow Image Download Failure
 
-**功能说明**：设置当图片下载失败时，是否继续执行刮削任务。
+**Function Description**: Set whether to continue executing the scrape task when image download fails.
 
-**作用**：开启此选项后，即使图片下载失败，也不会影响刮削结果的获取，提高刮削的成功率。
+**Role**: After enabling this option, even if image download fails, it will not affect the acquisition of scrape results, improving the success rate of scraping.
 
-### 整理目录格式
+### Organization Directory Format
 
-**功能说明**：设置刮削完成后目录的组织结构。
+**Function Description**: Set the organizational structure of directories after scraping is completed.
 
-**配置方法**：通过组合系统提供的变量，自定义目录的格式。
+**Configuration Method**: Customize the directory format by combining variables provided by the system.
 
-**示例**：`${actor}/${number}` 会创建以演员名称为一级目录，以影片编号为二级目录的结构。
+**Example**: `${actor}/${number}` will create a structure with actor name as the first-level directory and movie number as the second-level directory.
 
-### 整理文件名格式
+### Organization File Name Format
 
-**功能说明**：设置刮削完成后视频文件的命名格式。
+**Function Description**: Set the naming format of video files after scraping is completed.
 
-**配置方法**：通过组合系统提供的变量，自定义文件名的格式。
+**Configuration Method**: Customize the file name format by combining variables provided by the system.
 
-**示例**：`${title_safe}.${ext}` 会使用安全的影片标题作为文件名，并保留原始文件扩展名。
+**Example**: `${title_safe}.${ext}` will use the safe movie title as the file name and retain the original file extension.
 
-### 自动刮削
+### Auto Scrape
 
-**功能说明**：设置扫描任务完成后是否自动触发刮削任务。
+**Function Description**: Set whether to automatically trigger scrape tasks after scan tasks are completed.
 
-**默认行为**：默认情况下，需要手动选择扫描到的文件执行刮削任务。
+**Default Behavior**: By default, you need to manually select scanned files to execute scrape tasks.
 
-**开启效果**：开启后，系统会按照配置的规则，自动发现可刮削的影视文件并执行刮削。
+**Enable Effect**: After enabling, the system will automatically discover scrapable movie files and execute scraping according to configured rules.
 
-### 自动刮削间隔
+### Auto Scrape Interval
 
-**功能说明**：设置自动刮削任务的执行间隔。
+**Function Description**: Set the execution interval of auto scrape tasks.
 
-**单位**：分钟
+**Unit**: Minutes
 
-**默认值**：3分钟（开启自动刮削的情况下）
+**Default Value**: 3 minutes (when auto scrape is enabled)
 
-### 高清封面下载
+### HD Cover Download
 
-**功能说明**：设置是否下载影视的高清封面。
+**Function Description**: Set whether to download HD covers for movies.
 
-**下载来源**：开启后，系统会尝试从 Fanza DMM 获取高清封面；如果没有，会尝试从其他来源获取。
+**Download Source**: After enabling, the system will try to obtain HD covers from Fanza DMM; if not available, it will try to obtain from other sources.
 
-### 外挂字幕搜索
+### External Subtitle Search
 
-**功能说明**：设置是否搜索并下载影视的外挂字幕（软字幕）。
+**Function Description**: Set whether to search for and download external subtitles (soft subtitles) for movies.
 
-**存储位置**：下载的字幕文件会保存到最终的刮削目录中。
+**Storage Location**: Downloaded subtitle files will be saved to the final scrape directory.
 
-### 番号混合
+### Number Mixing
 
-**功能说明**：设置刮削后生成的 nfo 文件中，是否在标题等字段添加番号前缀。
+**Function Description**: Set whether to add number prefixes to fields such as titles in the nfo files generated after scraping.
 
-### 自动标签
+### Auto Tags
 
-**功能说明**：设置是否在刮削后生成的 nfo 文件的 tag 标签中添加额外信息。
+**Function Description**: Set whether to add additional information to the tag tags in the nfo files generated after scraping.
 
-**示例**：添加分辨率、番号、中字、破解等标签。
+**Example**: Add tags such as resolution, number, Chinese subtitles, uncensored, etc.
 
-### 自动分类标签
+### Auto Category Tags
 
-**功能说明**：设置是否在刮削后生成的 nfo 文件的 genre 标签中添加额外信息。
+**Function Description**: Set whether to add additional information to the genre tags in the nfo files generated after scraping.
 
-**示例**：添加分辨率、番号、中字、破解等标签。
+**Example**: Add tags such as resolution, number, Chinese subtitles, uncensored, etc.
 
-### 本地数据优先
+### Local Data Priority
 
-**功能说明**：设置刮削时是否优先使用本地已有的数据。
+**Function Description**: Set whether to prioritize using local existing data during scraping.
 
-**作用**：如果本地已有的数据符合刮削规则，会直接使用本地数据，而不会从网络上下载或更新数据，提高刮削效率。
+**Role**: If local existing data meets scrape rules, it will directly use local data instead of downloading or updating data from the network, improving scrape efficiency.
 
-### 刮削器
+### Scraper
 
-**功能说明**：选择系统使用的刮削器。
+**Function Description**: Select the scraper used by the system.
 
-**可用刮削器**：
-- **本地**：使用用户手动创建的影视信息
-- **Metatube** (插件)
-- **ThePornDB** (插件)
-- **Stash** (插件)
-- **Fanza DMM** (插件)
+**Available Scrapers**:
+- **Local**: Use manually created movie information
+- **Metatube** (plugin)
+- **ThePornDB** (plugin)
+- **Stash** (plugin)
+- **Fanza DMM** (plugin)
 
-### 刮削剧照
+### Scrape Stills
 
-**功能说明**：设置是否下载影视的剧照。
+**Function Description**: Set whether to download movie stills.
 
-**存储位置**：下载的剧照文件会保存到指定的目录中。
+**Storage Location**: Downloaded still files will be saved to the specified directory.
 
-### 剧照目录
+### Stills Directory
 
-**功能说明**：设置剧照文件的保存目录。
+**Function Description**: Set the save directory for still files.
 
-**默认值**：保存到与视频文件相同目录的 `extrafanart` 目录中。
+**Default Value**: Save to the `extrafanart` directory in the same directory as the video file.
 
-### 多线程执行
+### Multi-threaded Execution
 
-**功能说明**：设置是否开启多线程执行刮削任务。
+**Function Description**: Set whether to enable multi-threaded execution of scrape tasks.
 
-**优缺点**：
-- **优点**：开启后会提高刮削效率
-- **缺点**：会增加系统资源的消耗
+**Pros and Cons**:
+- **Pros**: Enabling will improve scrape efficiency
+- **Cons**: Will increase system resource consumption
 
-**建议**：根据系统资源情况，合理配置多线程执行。例如，如果系统有 4 个 CPU 核心，建议设置为 4 个线程。
+**Suggestion**: According to system resource conditions, reasonably configure multi-threaded execution. For example, if the system has 4 CPU cores, it is recommended to set 4 threads.
 
-### 最大线程数
+### Maximum Thread Count
 
-**功能说明**：设置刮削时的最大线程数。
+**Function Description**: Set the maximum number of threads during scraping.
 
-**默认值**：5 个线程
+**Default Value**: 5 threads
 
-**建议**：根据系统资源情况，合理配置最大线程数。
+**Suggestion**: According to system resource conditions, reasonably configure the maximum thread count.
 
-## 目录与文件名整理
+## Directory and File Name Organization
 
-在配置项中，有 **整理目录格式** 和 **整理文件名格式** 两个选项。您可以通过组合系统提供的变量，自定义目录和文件名的格式。
+In the configuration items, there are two options: **Organization Directory Format** and **Organization File Name Format**. You can customize the directory and file name formats by combining variables provided by the system.
 
-### 安全变量
+### Safe Variables
 
-**作用**：在变量名后添加 `_safe` 后缀，用于避免文件名中包含特殊字符导致的问题。
+**Role**: Add `_safe` suffix after variable names to avoid problems caused by special characters in file names.
 
-**示例**：`${actor_safe}` 如果演员名称中出现特殊字符，会被替换为安全的字符。
+**Example**: `${actor_safe}` If there are special characters in the actor name, they will be replaced with safe characters.
 
-**作用**：避免影视标题中的特殊字符导致目录层级被中断，确保目录结构的完整性。
+**Role**: Avoid special characters in movie titles causing directory levels to be interrupted, ensuring the integrity of the directory structure.
 
-### 整理示例
+### Organization Example
 
-一个完整的视频文件，会被整理为：`${actor}/${number}/${title_safe}.${ext}`
+A complete video file will be organized as: `${actor}/${number}/${title_safe}.${ext}`
 
-**示例**：
-- 演员名称："John Doe"
-- 影片编号："ABC-123"
-- 影片标题："Sample Title"
-- 文件扩展名："mkv"
+**Example**:
+- Actor Name: "John Doe"
+- Movie Number: "ABC-123"
+- Movie Title: "Sample Title"
+- File Extension: "mkv"
 
-**最终整理后的路径**：`John Doe/ABC-123/Sample Title.mkv`
+**Final Organized Path**: `John Doe/ABC-123/Sample Title.mkv`
 
-### 整理目录变量
+### Organization Directory Variables
 
-**默认配置**：`${actor}/${number}`
+**Default Configuration**: `${actor}/${number}`
 
-**注意**：`/` 会被识别为目录分隔符，可以创建不同的目录层级。
+**Note**: `/` will be recognized as a directory separator, which can create different directory levels.
 
-| 变量名 | 安全变量名 | 描述 | 示例 |
-|--------|------------|------|------|
-| `${actor}` | `${actor_safe}` | 演员名称 | "John Smith" |
-| `${number}` | `${number_safe}` | 影片编号 | "ABC-123" |
-| `${title}` | `${title_safe}` | 影片标题 | "Sample Title" |
-| `${date}` | `${date_safe}` | 发行日期 | "2024/01/01" |
-| `${year}` | `${year_safe}` | 发行年份 | "2024" |
-| `${month}` | `${month_safe}` | 发行月份 | "01" |
-| `${day}` | `${day_safe}` | 发行日期 | "01" |
-| `${mosaic}` | `${mosaic_safe}` | 马赛克类型 | "无码/有码" |
-| `${resolution}` | `${resolution_safe}` | 视频分辨率 | "1080p" |
-| `${director}` | `${director_safe}` | 导演名称 | "Director Name" |
-| `${studio}` | `${studio_safe}` | 制作商名称 | "Studio Name" |
+| Variable Name | Safe Variable Name | Description | Example |
+|--------------|-------------------|-------------|---------|
+| `${actor}` | `${actor_safe}` | Actor name | "John Smith" |
+| `${number}` | `${number_safe}` | Movie number | "ABC-123" |
+| `${title}` | `${title_safe}` | Movie title | "Sample Title" |
+| `${date}` | `${date_safe}` | Release date | "2024/01/01" |
+| `${year}` | `${year_safe}` | Release year | "2024" |
+| `${month}` | `${month_safe}` | Release month | "01" |
+| `${day}` | `${day_safe}` | Release date | "01" |
+| `${mosaic}` | `${mosaic_safe}` | Mosaic type | "Uncensored/Censored" |
+| `${resolution}` | `${resolution_safe}` | Video resolution | "1080p" |
+| `${director}` | `${director_safe}` | Director name | "Director Name" |
+| `${studio}` | `${studio_safe}` | Studio name | "Studio Name" |
 
-**默认值**：所有变量均有默认值，若未指定，会使用默认值。
+**Default Values**: All variables have default values, if not specified, default values will be used.
 
-### 整理文件名变量
+### Organization File Name Variables
 
-**默认配置**：`${number}`
+**Default Configuration**: `${number}`
 
-| 变量名 | 安全变量名 | 描述 | 示例 |
-|--------|------------|------|------|
-| `${actor}` | `${actor_safe}` | 演员名称 | "John Smith" |
-| `${number}` | `${number_safe}` | 影片编号 | "ABC-123" |
-| `${title}` | `${title_safe}` | 影片标题 | "Sample Title" |
-| `${date}` | `${date_safe}` | 发行日期 | "2024/01/01" |
-| `${year}` | `${year_safe}` | 发行年份 | "2024" |
-| `${month}` | `${month_safe}` | 发行月份 | "01" |
-| `${day}` | `${day_safe}` | 发行日期 | "01" |
-| `${mosaic}` | `${mosaic_safe}` | 马赛克类型 | "无码/有码" |
-| `${resolution}` | `${resolution_safe}` | 视频分辨率 | "1080p" |
-| `${director}` | `${director_safe}` | 导演名称 | "Director Name" |
-| `${studio}` | `${studio_safe}` | 制作商名称 | "Studio Name" |
+| Variable Name | Safe Variable Name | Description | Example |
+|--------------|-------------------|-------------|---------|
+| `${actor}` | `${actor_safe}` | Actor name | "John Smith" |
+| `${number}` | `${number_safe}` | Movie number | "ABC-123" |
+| `${title}` | `${title_safe}` | Movie title | "Sample Title" |
+| `${date}` | `${date_safe}` | Release date | "2024/01/01" |
+| `${year}` | `${year_safe}` | Release year | "2024" |
+| `${month}` | `${month_safe}` | Release month | "01" |
+| `${day}` | `${day_safe}` | Release date | "01" |
+| `${mosaic}` | `${mosaic_safe}` | Mosaic type | "Uncensored/Censored" |
+| `${resolution}` | `${resolution_safe}` | Video resolution | "1080p" |
+| `${director}` | `${director_safe}` | Director name | "Director Name" |
+| `${studio}` | `${studio_safe}` | Studio name | "Studio Name" |
 
-## 配置示例
+## Configuration Example
 
-以下是一个典型的刮削配置示例：
+The following is a typical scrape configuration example:
 
-| 配置项 | 设置值 |
-|--------|--------|
-| 字符过滤 | 开启 |
-| 允许图片下载失败 | 开启 |
-| 整理目录格式 | `${actor}/${number}` |
-| 整理文件名格式 | `${title_safe}.${ext}` |
-| 自动刮削 | 开启 |
-| 自动刮削间隔 | 5分钟 |
-| 高清封面下载 | 开启 |
-| 外挂字幕搜索 | 开启 |
-| 番号混合 | 开启 |
-| 自动标签 | 开启 |
-| 自动分类标签 | 开启 |
-| 本地数据优先 | 开启 |
-| 刮削器 | Metatube, Fanza DMM |
-| 刮削剧照 | 开启 |
-| 剧照目录 | extrafanart |
-| 多线程执行 | 开启 |
-| 最大线程数 | 4 |
+| Configuration Item | Setting Value |
+|-------------------|---------------|
+| Character Filtering | Enabled |
+| Allow Image Download Failure | Enabled |
+| Organization Directory Format | `${actor}/${number}` |
+| Organization File Name Format | `${title_safe}.${ext}` |
+| Auto Scrape | Enabled |
+| Auto Scrape Interval | 5 minutes |
+| HD Cover Download | Enabled |
+| External Subtitle Search | Enabled |
+| Number Mixing | Enabled |
+| Auto Tags | Enabled |
+| Auto Category Tags | Enabled |
+| Local Data Priority | Enabled |
+| Scraper | Metatube, Fanza DMM |
+| Scrape Stills | Enabled |
+| Stills Directory | extrafanart |
+| Multi-threaded Execution | Enabled |
+| Maximum Thread Count | 4 |
 
-## 常见问题
+## Common Questions
 
-### Q: 为什么刮削失败？
+### Q: Why does scraping fail?
 
-**A**：可能的原因包括：
-- 番号识别错误
-- 网络连接问题
-- 刮削器无法找到匹配的元数据
-- 配置错误
+**A**: Possible reasons include:
+- Number recognition error
+- Network connection issue
+- Scraper cannot find matching metadata
+- Configuration error
 
-### Q: 如何提高刮削成功率？
+### Q: How to improve scraping success rate?
 
-**A**：可以尝试以下方法：
-- 确保文件名中的番号清晰可辨
-- 开启字符过滤功能
-- 配置多个刮削器
-- 确保网络连接正常
+**A**: You can try the following methods:
+- Ensure the number in the file name is clearly recognizable
+- Enable character filtering function
+- Configure multiple scrapers
+- Ensure network connection is normal
 
-### Q: 自动刮削和手动刮削有什么区别？
+### Q: What is the difference between auto scrape and manual scrape?
 
-**A**：
-- **自动刮削**：扫描完成后自动执行，无需手动干预，适合批量处理
-- **手动刮削**：需要手动选择文件执行刮削，适合对刮削结果要求较高的场景
+**A**:
+- **Auto Scrape**: Automatically executed after scanning is completed, no manual intervention required, suitable for batch processing
+- **Manual Scrape**: Requires manual selection of files to execute scraping, suitable for scenarios with high requirements for scrape results
 
-### Q: 为什么下载的字幕文件没有与视频文件匹配？
+### Q: Why are downloaded subtitle files not matching video files?
 
-**A**：可能的原因包括：
-- 字幕搜索时番号识别不准确
-- 网络连接问题导致字幕下载失败
-- 字幕文件命名与视频文件不一致
+**A**: Possible reasons include:
+- Inaccurate number recognition during subtitle search
+- Subtitle download failure due to network connection issues
+- Subtitle file naming inconsistent with video file
 
-### Q: 如何自定义目录结构？
+### Q: How to customize directory structure?
 
-**A**：通过组合系统提供的变量，例如：
-- `${studio}/${actor}/${number}`：按制作商 → 演员 → 番号的层级组织
-- `${year}/${month}/${title_safe}`：按年份 → 月份 → 标题的层级组织
-
+**A**: By combining variables provided by the system, for example:
+- `${studio}/${actor}/${number}`: Organize by studio → actor → number hierarchy
+- `${year}/${month}/${title_safe}`: Organize by year → month → title hierarchy

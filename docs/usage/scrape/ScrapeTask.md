@@ -1,121 +1,119 @@
 ---
 sidebar_position: 2
-sidebar_label: "执行刮削任务"
+sidebar_label: "Execute Scrape Task"
 ---
 
-# 执行刮削任务
+# Execute Scrape Task
 
-刮削任务是刮削流程的第二步，用于根据刮削规则对扫描结果文件进行刮削，获取影视元数据并生成最终的影视文件，完成影视整理工作。
+Scrape task is the second step in the scraping process. It is used to scrape scan result files according to scraping rules, obtain movie metadata, generate final movie files, and complete movie organization work.
 
 <!-- truncate -->
 
-## 前置条件
+## Prerequisites
 
-在执行刮削任务前，请确保满足以下条件：
+Before executing a scrape task, please ensure the following conditions are met:
 
-### 网络连接
+### Network Connection
 
-整理文件需要通过互联网获取影视元数据，因此需要确保项目能够正常访问互联网。
+Organizing files requires obtaining movie metadata through the internet, so you need to ensure the project can normally access the internet.
 
-### 元数据插件
+### Metadata Plugins
 
-请确认已开启并正确配置相关元数据插件，这些插件是获取影视元数据的关键：
+Please confirm that relevant metadata plugins are enabled and correctly configured. These plugins are the key to obtaining movie metadata:
 
-+ [Metatube 插件](/docs/plugin/metadata/Metatube)
-+ [ThePornDB 插件](/docs/plugin/metadata/ThePornDB)
-+ [StashBox 插件](/docs/plugin/metadata/StashBox)
-+ [FanzaDMM 插件](/docs/plugin/metadata/FanzaDMM)
-+ [Madou 插件](/docs/plugin/metadata/Madou)
++ [Metatube Plugin](/docs/plugin/metadata/Metatube)
++ [ThePornDB Plugin](/docs/plugin/metadata/ThePornDB)
++ [StashBox Plugin](/docs/plugin/metadata/StashBox)
++ [FanzaDMM Plugin](/docs/plugin/metadata/FanzaDMM)
++ [Madou Plugin](/docs/plugin/metadata/Madou)
 
-:::warning 重要提醒
-没有开启相关元数据插件，将无法获取影视元数据，会导致刮削失败。
+:::warning Important Reminder
+Without enabling relevant metadata plugins, you will not be able to obtain movie metadata, which will cause scraping to fail.
 :::
 
-:::info 数据来源声明
-本软件不提供任何源数据，所有影视元数据均来自用户自行配置的插件服务。
+:::info Data Source Declaration
+This software does not provide any source data. All movie metadata comes from user-configured plugin services.
 :::
 
-## 执行刮削任务
+## Execute Scrape Task
 
-### 步骤 1：进入刮削入库页面
+### Step 1: Enter the Scrape Storage Page
 
-通过左侧导航栏进入 **任务管理**，然后选择 **刮削入库** 选项，进入刮削入库页面。
+Access **Task Management** through the left navigation bar, then select the **Scrape Storage** option to enter the scrape storage page.
 
-![刮削入库页面](/img/usage/scrape/task-scrape-01.png)
+![Scrape Storage Page](/img/usage/scrape/task-scrape-01.png)
 
-### 步骤 2：选择需要刮削的文件
+### Step 2: Select Files to Scrape
 
-在刮削入库页面中，您可以看到通过扫描任务记录的所有待刮削文件列表。根据需要，勾选您想要进行刮削的文件。
+On the scrape storage page, you can see a list of all files to be scraped recorded through scan tasks. Check the files you want to scrape as needed.
 
-### 步骤 3：开始执行刮削任务
+### Step 3: Start Executing Scrape Task
 
-点击页面中的 **刮削整理** 按钮，系统将开始执行刮削任务。
+Click the **Scrape and Organize** button on the page, and the system will start executing the scrape task.
 
-![执行刮削任务](/img/usage/scrape/task-scrape-02.png)
+![Execute Scrape Task](/img/usage/scrape/task-scrape-02.png)
 
-### 步骤 4：查看任务执行状态
+### Step 4: View Task Execution Status
 
-任务执行过程中，页面会实时展示刮削任务的执行情况，包括：
-- 成功刮削的文件数量
-- 刮削失败的文件数量
-- 已跳过的文件数量
+During task execution, the page will display the execution status of the scrape task in real-time, including:
+- Number of successfully scraped files
+- Number of failed scraped files
+- Number of skipped files
 
-### 步骤 5：终止刮削任务（如需）
+### Step 5: Terminate Scrape Task (if needed)
 
-在执行过程中，如需终止刮削任务，您可以随时点击 **取消** 按钮来停止任务执行。
+During execution, if you need to terminate the scrape task, you can click the **Cancel** button at any time to stop task execution.
 
-## 刮削原理说明
+## Scrape Principle Explanation
 
-刮削任务的工作原理如下：
+The working principle of scrape task is as follows:
 
-1. **读取刮削规则**：系统根据您配置的刮削规则，确定如何处理不同类型的文件
-2. **匹配元数据**：通过启用的元数据插件，尝试匹配并获取影视的详细信息
-3. **生成影视文件**：根据获取到的元数据，系统会生成标准化的影视文件
-4. **整理文件结构**：按照预设的命名规则和目录结构，对影视文件进行整理
+1. **Read Scrape Rules**: The system determines how to handle different types of files based on the scrape rules you configured
+2. **Match Metadata**: Through enabled metadata plugins, try to match and obtain detailed information about movies
+3. **Generate Movie Files**: Based on the obtained metadata, the system generates standardized movie files
+4. **Organize File Structure**: Organize movie files according to preset naming rules and directory structure
 
-## 常见问题与解决方案
+## Common Problems and Solutions
 
-### 问题：刮削失败
+### Problem: Scraping Failed
 
-**可能原因**：
-- 网络连接问题
-- 元数据插件未开启或配置错误
-- 刮削规则设置不当
-- 文件命名不符合匹配规则
+**Possible Causes**:
+- Network connection issues
+- Metadata plugins not enabled or configured incorrectly
+- Inappropriate scrape rule settings
+- File naming does not match matching rules
 
-**解决方案**：
-- 检查网络连接是否正常
-- 确认已开启并正确配置元数据插件
-- 检查刮削规则设置是否合理
-- 尝试修改文件命名格式，使其更符合匹配规则
+**Solutions**:
+- Check if network connection is normal
+- Confirm that metadata plugins are enabled and correctly configured
+- Check if scrape rule settings are reasonable
+- Try modifying file naming format to better match matching rules
 
-### 问题：元数据获取不全
+### Problem: Incomplete Metadata Acquisition
 
-**可能原因**：
-- 插件服务暂时不可用
-- 影视信息在插件服务中不存在
-- 网络延迟导致获取超时
+**Possible Causes**:
+- Plugin service temporarily unavailable
+- Movie information does not exist in plugin service
+- Network delay causes acquisition timeout
 
-**解决方案**：
-- 稍后重试，可能插件服务暂时不可用
-- 尝试使用其他元数据插件
-- 检查网络连接稳定性
+**Solutions**:
+- Try again later, the plugin service may be temporarily unavailable
+- Try using other metadata plugins
+- Check network connection stability
 
-## 最佳实践
+## Best Practices
 
-1. **分批处理**：对于大量文件，建议分批进行刮削，避免系统负载过高
-2. **优先配置**：在执行刮削前，确保已正确配置刮削规则和元数据插件
-3. **定期更新**：定期更新元数据插件，以获取更好的匹配效果
-4. **检查日志**：刮削失败时，查看系统日志以获取详细错误信息
+1. **Batch Processing**: For large numbers of files, it is recommended to scrape in batches to avoid excessive system load
+2. **Priority Configuration**: Before executing scraping, ensure scrape rules and metadata plugins are correctly configured
+3. **Regular Updates**: Regularly update metadata plugins to obtain better matching results
+4. **Check Logs**: When scraping fails, check system logs to obtain detailed error information
 
-## 注意事项
+## Notes
 
-:::caution 注意
-刮削任务可能需要较长时间完成，具体取决于文件数量和网络速度，请耐心等待。
+:::caution Note
+Scrape tasks may take a long time to complete, depending on the number of files and network speed. Please be patient.
 :::
 
-:::tip 提示
-为获得最佳刮削效果，建议确保文件命名尽可能规范，包含必要的识别信息（如编号、标题等）。
+:::tip Tip
+For optimal scraping results, it is recommended to ensure file naming is as standardized as possible, including necessary identification information (such as numbers, titles, etc.).
 :::
-
-

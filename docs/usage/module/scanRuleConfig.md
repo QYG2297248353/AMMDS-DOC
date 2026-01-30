@@ -1,134 +1,132 @@
 ---
 sidebar_position: 1
-sidebar_label: "扫描配置"
+sidebar_label: "Scan Configuration"
 ---
 
-# 扫描配置
+# Scan Configuration
 
-扫描配置用于在任务执行前，设置系统如何识别和处理媒体文件，确保扫描过程能够准确、高效地识别您的影视资源。
+Scan configuration is used to set how the system identifies and processes media files before task execution, ensuring the scanning process can accurately and efficiently identify your movie resources.
 
 <!-- truncate -->
 
-## 访问扫描配置
+## Access Scan Configuration
 
-您可以通过以下路径访问扫描规则配置页面：
+You can access the scan rule configuration page through the following path:
 
-**任务管理 >> 扫描规则配置**
+**Task Management >> Scan Rule Configuration**
 
-:::info 操作提示
-更新配置后，请记得点击 **保存** 按钮，否则配置不会生效。
+:::info Operation Tip
+After updating the configuration, please remember to click the **Save** button, otherwise the configuration will not take effect.
 :::
 
-## 配置界面
+## Configuration Interface
 
-![扫描规则配置](/img/usage/module/scan-config-01.png)
+![Scan Rule Configuration](/img/usage/module/scan-config-01.png)
 
-![扫描规则配置](/img/usage/module/scan-config-02.png)
+![Scan Rule Configuration](/img/usage/module/scan-config-02.png)
 
-## 配置项说明
+## Configuration Item Description
 
-### 格式限制
+### Format Restrictions
 
-**功能说明**：设置系统能够识别的媒体文件类型。
+**Function Description**: Set the media file types that the system can recognize.
 
-**默认支持**：系统内置了一些常见的媒体文件类型，如：`.mp4`, `.mkv`, `.avi`, `.mov` 等。
+**Default Support**: The system has built-in support for some common media file types, such as: `.mp4`, `.mkv`, `.avi`, `.mov`, etc.
 
-**自定义添加**：您可以根据需要，添加其他文件类型。添加时，输入文件类型的扩展名（如：`.strm`）后按下 **回车 (Enter)** 键确认输入。
+**Custom Addition**: You can add other file types as needed. When adding, enter the file type extension (such as: `.strm`) and press **Enter** to confirm input.
 
-### 忽略目录
+### Ignore Directories
 
-**功能说明**：配置扫描时需要忽略的目录，这些目录及其子目录下的文件将不会被扫描到。
+**Function Description**: Configure directories to be ignored during scanning. Files in these directories and their subdirectories will not be scanned.
 
-**配置方法**：输入目录的相对路径（如：`sample`, `tmp`），目录名称忽略大小写。
+**Configuration Method**: Enter the relative path of the directory (such as: `sample`, `tmp`), directory names are case-insensitive.
 
-**适用场景**：可以用于忽略包含样片、临时文件或其他非影视资源的目录。
+**Applicable Scenario**: Can be used to ignore directories containing samples, temporary files, or other non-movie resources.
 
-### 忽略文件
+### Ignore Files
 
-**功能说明**：配置扫描时需要忽略的文件，包含指定字符串的文件将不会被扫描到。
+**Function Description**: Configure files to be ignored during scanning. Files containing specified strings will not be scanned.
 
-**配置方法**：输入文件名称中包含的字符串（如：`sample`, `hh800.com@`），字符串忽略大小写。
+**Configuration Method**: Enter strings contained in file names (such as: `sample`, `hh800.com@`), strings are case-insensitive.
 
-**适用场景**：可以用于忽略样片文件、带有特定标记的文件或其他不需要处理的文件。
+**Applicable Scenario**: Can be used to ignore sample files, files with specific marks, or other files that do not need to be processed.
 
-### 分段标记
+### Segment Markers
 
-**功能说明**：配置分段视频文件的标记字符串，辅助系统识别分段视频，避免将其作为单独的文件处理。
+**Function Description**: Configure marker strings for segmented video files to help the system identify segmented videos and avoid processing them as separate files.
 
-**配置方法**：输入分段标记的字符串（如：`part`, `cd`），字符串忽略大小写。
+**Configuration Method**: Enter segment marker strings (such as: `part`, `cd`), strings are case-insensitive.
 
-**适用场景**：适用于处理被分割成多个部分的视频文件，确保系统能够正确识别它们属于同一个影视资源。
+**Applicable Scenario**: Suitable for processing video files that are split into multiple parts, ensuring the system can correctly identify that they belong to the same movie resource.
 
-### 字幕格式
+### Subtitle Formats
 
-**功能说明**：配置系统能够识别的字幕文件格式，辅助系统正确添加字幕标签。
+**Function Description**: Configure subtitle file formats that the system can recognize to help the system correctly add subtitle tags.
 
-**配置方法**：输入字幕文件的扩展名（如：`.srt`, `.ass`, `.idx`）后按下 **回车 (Enter)** 键确认输入。
-
-
-### 最小视频大小
-
-**功能说明**：设置视频文件的最小大小阈值，扫描时小于该大小的视频文件会被忽略。
-
-**单位**：MB
-
-**默认值**：100MB
-
-**特殊情况**：如果您使用 `.strm` 等文件类型的视频，建议将最小视频大小设置为 **0MB**，否则可能会导致无法正常扫描到这些文件。
-
-### 中文字幕识别
-
-**功能说明**：配置中文字幕的识别关键词，当视频文件名中包含这些关键词时，系统会自动添加中文字幕标签。
-
-**示例**：`-C`, `.chs` 等，关键词忽略大小写。
-
-### 马赛克破解识别
-
-**功能说明**：配置马赛克破解的识别关键词，当视频文件名中包含这些关键词时，系统会自动添加马赛克破解标签。
-
-**示例**：`-u`, `.uc` 等，关键词忽略大小写。
-
-### 读取本地 nfo
-
-**功能说明**：开启后，系统会自动读取视频文件所在目录下的同名 `.nfo` 文件，并解析其中的信息。
-
-**作用**：解析到的信息会自动创建媒体元数据，并存储到数据库中，减少手动编辑元数据的工作量。
-
-## 配置示例
-
-以下是一个典型的扫描配置示例：
-
-| 配置项 | 设置值 |
-|--------|--------|
-| 格式限制 | `.mp4`, `.mkv`, `.avi`, `.mov`, `.strm` |
-| 忽略目录 | `sample`, `tmp`, `Extras` |
-| 忽略文件 | `sample`, `trailer`, `preview` |
-| 分段标记 | `part`, `cd`, `disc` |
-| 字幕格式 | `.srt`, `.ass`, `.idx`, `.sub` |
-| 最小视频大小 | 100MB |
-| 中文字幕识别 | `-C`, `.chs`, `.zh` |
-| 马赛克破解识别 | `-u`, `.uc`, `uncensored` |
-| 读取本地 nfo | 开启 |
-
-## 常见问题
-
-### Q: 为什么有些视频文件没有被扫描到？
-
-**A**：可能的原因包括：
-- 文件格式不在格式限制列表中
-- 文件所在目录被添加到了忽略目录中
-- 文件名包含被忽略的字符串
-- 文件大小小于设置的最小视频大小阈值
-
-### Q: 如何正确添加自定义文件格式？
-
-**A**：添加自定义文件格式时，需要注意以下几点：
-- 必须包含文件扩展名的点号（如：`.strm` 而不是 `strm`）
-- 每个文件格式需要单独添加，添加后按回车键确认
-- 确保添加的文件格式是系统能够处理的类型
-
-### Q: 分段标记有什么作用？
-
-**A**：分段标记用于帮助系统识别属于同一影视资源的多个分段文件，确保它们被正确地作为一个整体处理，而不是被视为多个独立的文件。
+**Configuration Method**: Enter subtitle file extensions (such as: `.srt`, `.ass`, `.idx`) and press **Enter** to confirm input.
 
 
+### Minimum Video Size
+
+**Function Description**: Set the minimum size threshold for video files. Video files smaller than this size will be ignored during scanning.
+
+**Unit**: MB
+
+**Default Value**: 100MB
+
+**Special Case**: If you use video file types like `.strm`, it is recommended to set the minimum video size to **0MB**, otherwise it may cause these files to not be scanned normally.
+
+### Chinese Subtitle Recognition
+
+**Function Description**: Configure recognition keywords for Chinese subtitles. When video file names contain these keywords, the system will automatically add Chinese subtitle tags.
+
+**Example**: `-C`, `.chs`, etc., keywords are case-insensitive.
+
+### Mosaic Uncensored Recognition
+
+**Function Description**: Configure recognition keywords for mosaic uncensored content. When video file names contain these keywords, the system will automatically add mosaic uncensored tags.
+
+**Example**: `-u`, `.uc`, etc., keywords are case-insensitive.
+
+### Read Local NFO
+
+**Function Description**: After enabling, the system will automatically read the same-name `.nfo` file in the directory where the video file is located and parse the information in it.
+
+**Role**: The parsed information will automatically create media metadata and store it in the database, reducing the workload of manually editing metadata.
+
+## Configuration Example
+
+The following is a typical scan configuration example:
+
+| Configuration Item | Setting Value |
+|-------------------|---------------|
+| Format Restrictions | `.mp4`, `.mkv`, `.avi`, `.mov`, `.strm` |
+| Ignore Directories | `sample`, `tmp`, `Extras` |
+| Ignore Files | `sample`, `trailer`, `preview` |
+| Segment Markers | `part`, `cd`, `disc` |
+| Subtitle Formats | `.srt`, `.ass`, `.idx`, `.sub` |
+| Minimum Video Size | 100MB |
+| Chinese Subtitle Recognition | `-C`, `.chs`, `.zh` |
+| Mosaic Uncensored Recognition | `-u`, `.uc`, `uncensored` |
+| Read Local NFO | Enabled |
+
+## Common Questions
+
+### Q: Why are some video files not being scanned?
+
+**A**: Possible reasons include:
+- File format is not in the format restriction list
+- The directory where the file is located has been added to the ignore directory
+- File name contains ignored strings
+- File size is smaller than the set minimum video size threshold
+
+### Q: How to correctly add custom file formats?
+
+**A**: When adding custom file formats, you need to pay attention to the following points:
+- Must include the dot of the file extension (such as: `.strm` instead of `strm`)
+- Each file format needs to be added separately, press Enter to confirm after adding
+- Ensure the added file format is a type that the system can handle
+
+### Q: What is the function of segment markers?
+
+**A**: Segment markers are used to help the system identify multiple segmented files belonging to the same movie resource, ensuring they are correctly processed as a whole rather than as multiple independent files.
