@@ -247,7 +247,7 @@ npm run gen:ko      # 韩文
 2. 运行命令创建新版本文档：
 
 ```bash
-npm run docusaurus docs:version 1.6.48
+npm run docusaurus docs:version v1.6.48
 ```
 
 3. 编辑 `docusaurus.config.ts` 中的版本配置
