@@ -42,5 +42,9 @@
   "sidebar.guideSidebar.category.Scrape": {
     "message": "刮削",
     "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Auxiliary": {
+    "message": "辅助工具",
+    "description": "The label for category 'Auxiliary' in sidebar 'guideSidebar'"
   }
 }

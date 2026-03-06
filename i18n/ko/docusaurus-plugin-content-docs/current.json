@@ -42,5 +42,9 @@
   "sidebar.guideSidebar.category.Scrape": {
     "message": "스크래핑",
     "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Auxiliary": {
+    "message": "Auxiliary",
+    "description": "The label for category 'Auxiliary' in sidebar 'guideSidebar'"
   }
 }

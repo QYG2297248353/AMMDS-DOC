@@ -1,46 +1,46 @@
 {
   "version.label": {
-    "message": "v1.6.50",
-    "description": "The label for version current"
+    "message": "v1.6.53",
+    "description": "The label for version v1.6.53"
   },
   "sidebar.guideSidebar.category.Tutorial": {
-    "message": "チュートリアル",
+    "message": "教程",
     "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Deploy": {
-    "message": "デプロイ",
+    "message": "部署",
     "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Plugin": {
-    "message": "プラグイン",
+    "message": "插件",
     "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Metadata": {
-    "message": "メタデータ",
+    "message": "元数据",
     "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Site Search": {
-    "message": "サイト検索",
+    "message": "站点检索",
     "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Push Notice": {
-    "message": "プッシュ通知",
+    "message": "推送通知",
     "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Media Server": {
-    "message": "メディアサーバー",
+    "message": "媒体服务器",
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Usage": {
-    "message": "チュートリアル",
+    "message": "教程",
     "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Module": {
-    "message": "モジュール",
+    "message": "模块",
     "description": "The label for category 'Module' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Scrape": {
-    "message": "スクレイピング",
+    "message": "刮削",
     "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Auxiliary": {

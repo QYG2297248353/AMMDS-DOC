@@ -1,46 +1,46 @@
 {
   "version.label": {
-    "message": "v1.6.50",
-    "description": "The label for version current"
+    "message": "v1.6.53",
+    "description": "The label for version v1.6.53"
   },
   "sidebar.guideSidebar.category.Tutorial": {
-    "message": "チュートリアル",
+    "message": "튜토리얼",
     "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Deploy": {
-    "message": "デプロイ",
+    "message": "배포",
     "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Plugin": {
-    "message": "プラグイン",
+    "message": "플러그인",
     "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Metadata": {
-    "message": "メタデータ",
+    "message": "메타데이터",
     "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Site Search": {
-    "message": "サイト検索",
+    "message": "사이트 검색",
     "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Push Notice": {
-    "message": "プッシュ通知",
+    "message": "푸시 알림",
     "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Media Server": {
-    "message": "メディアサーバー",
+    "message": "미디어 서버",
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Usage": {
-    "message": "チュートリアル",
+    "message": "사용법",
     "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Module": {
-    "message": "モジュール",
+    "message": "모듈",
     "description": "The label for category 'Module' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Scrape": {
-    "message": "スクレイピング",
+    "message": "스크래핑",
     "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Auxiliary": {
