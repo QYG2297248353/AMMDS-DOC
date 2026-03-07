@@ -1,107 +1,107 @@
 ---
 sidebar_position: 1
-sidebar_label: "智能翻译"
+sidebar_label: "Smart Translation"
 ---
 
-# 智能翻译
+# Smart Translation
 
-智能翻译插件为AMMDS平台提供专业的多语言翻译能力，支持用户在不同语言之间进行精准翻译。该插件通过融合先进的机器翻译与AI翻译技术，为用户提供高质量、上下文准确的翻译服务，满足多样化的翻译需求。
+The Smart Translation plugin provides professional multilingual translation capabilities for the AMMDS platform, supporting users in performing precise translations between different languages. By integrating advanced machine translation and AI translation technologies, this plugin offers high-quality, contextually accurate translation services to meet diverse translation needs.
 
-本插件采用系统级翻译方案，支持多种翻译引擎和AI模型，用户可根据具体场景选择最适合的翻译方式，确保翻译质量与准确性。
+This plugin adopts a system-level translation solution that supports multiple translation engines and AI models. Users can select the most suitable translation method based on specific scenarios to ensure translation quality and accuracy.
 
 <!-- truncate -->
 
-## 插件配置
+## Plugin Configuration
 
-![智能翻译插件配置](/img/plugin/translation-01.png)
+![Smart Translation Plugin Configuration](/img/plugin/translation-01.png)
 
-### 基本配置项
+### Basic Configuration Items
 
-- **启用翻译**：控制是否开启智能翻译功能。启用后，系统将根据配置的翻译服务处理翻译请求。
-- **AI优先**：设置是否优先使用AI翻译服务。当AI翻译不可用时，系统将自动切换至机器翻译，确保翻译服务的连续性。
-- **默认翻译方式**：系统默认采用MetaTube翻译，用户可根据需求选择是否启用智能翻译功能。
+- **Enable Translation**: Controls whether to enable the smart translation feature. Once enabled, the system will process translation requests according to the configured translation services.
+- **AI Priority**: Sets whether to prioritize AI translation services. When AI translation is unavailable, the system will automatically switch to machine translation to ensure continuity of translation services.
+- **Default Translation Method**: The system defaults to using MetaTube translation. Users can choose whether to enable the smart translation feature based on their needs.
 
-### 添加机器翻译
+### Add Machine Translation
 
-![添加机器翻译](/img/plugin/translation-02.png)
+![Add Machine Translation](/img/plugin/translation-02.png)
 
-用户可配置多个机器翻译服务，建立翻译服务集群，提高翻译的可靠性和多样性：
+Users can configure multiple machine translation services to establish a translation service cluster, improving translation reliability and diversity:
 
-- **供应商名称**：为翻译引擎设置标识名称，便于用户管理和识别不同的翻译服务。
-- **翻译供应商**：选择不同的翻译服务提供商，如Google Translate、百度翻译、腾讯翻译等。
-- **优先级**：设置翻译引擎的优先级顺序，系统将按照优先级使用翻译服务。当高优先级服务不可用时，自动切换到低优先级服务。
+- **Provider Name**: Set an identifier name for the translation engine, facilitating user management and identification of different translation services.
+- **Translation Provider**: Select different translation service providers, such as Google Translate, Baidu Translate, Tencent Translate, etc.
+- **Priority**: Set the priority order of translation engines. The system will use translation services according to priority. When a high-priority service is unavailable, it automatically switches to a lower-priority service.
 
-> 注意：选择不同的翻译供应商后，系统会展示相应的配置项，用户需根据实际需求填写API密钥等必要信息。
+> Note: After selecting different translation providers, the system will display corresponding configuration items. Users need to fill in necessary information such as API keys according to actual requirements.
 
-### 添加AI翻译
+### Add AI Translation
 
-![添加AI翻译](/img/plugin/translation-03.png)
+![Add AI Translation](/img/plugin/translation-03.png)
 
-用户可配置AI翻译服务，利用先进的大语言模型提供更加自然、准确的翻译结果：
+Users can configure AI translation services, utilizing advanced large language models to provide more natural and accurate translation results:
 
-- **供应商名称**：为AI翻译服务设置标识名称，便于管理和识别。
-- **服务类型**：支持OpenAI端点和Gemini端点两种服务类型，用户可根据实际情况选择。
-- **服务地址**：填写AI翻译服务的API地址，支持官方API地址或自建代理地址。
-- **API密钥**：填写访问AI翻译服务的密钥，确保服务调用的安全性。
-- **模型**：选择使用的AI模型，不同模型在翻译质量和速度上可能有所差异。
-- **温度**：设置AI翻译的温度参数（0-1之间），调整翻译结果的创造性。温度越低，翻译结果越保守准确；温度越高，翻译结果越灵活多样。
+- **Provider Name**: Set an identifier name for the AI translation service for easy management and identification.
+- **Service Type**: Supports two service types: OpenAI endpoint and Gemini endpoint. Users can choose according to actual situations.
+- **Service Address**: Fill in the API address of the AI translation service, supporting official API addresses or self-built proxy addresses.
+- **API Key**: Fill in the key to access the AI translation service to ensure service call security.
+- **Model**: Select the AI model to use. Different models may vary in translation quality and speed.
+- **Temperature**: Set the temperature parameter for AI translation (between 0-1) to adjust the creativity of translation results. Lower temperature results in more conservative and accurate translations; higher temperature results in more flexible and diverse translations.
 
-### 配置AI翻译提示词
+### Configure AI Translation Prompts
 
-![配置AI翻译提示词](/img/plugin/translation-04.png)
+![Configure AI Translation Prompts](/img/plugin/translation-04.png)
 
-用户可根据具体翻译场景配置AI翻译提示词，优化翻译结果，适应不同领域的专业需求：
+Users can configure AI translation prompts according to specific translation scenarios to optimize translation results and adapt to professional needs in different fields:
 
-- **提示词**：设置指导AI翻译的提示文本，可根据翻译需求进行定制。例如：
-  - 专业领域翻译："请将以下文本翻译成专业的技术文档风格，保持术语的准确性。"
-  - 文学作品翻译："请将以下文本翻译成流畅的文学风格，保持原文的情感和意境。"
-  - 商务文档翻译："请将以下文本翻译成正式的商务风格，确保专业术语的正确使用。"
+- **Prompt**: Set the prompt text to guide AI translation, which can be customized according to translation needs. For example:
+  - Professional domain translation: "Please translate the following text into a professional technical document style, maintaining the accuracy of terminology."
+  - Literary work translation: "Please translate the following text into a fluent literary style, maintaining the emotion and artistic conception of the original text."
+  - Business document translation: "Please translate the following text into a formal business style, ensuring the correct use of professional terminology."
 
-### 翻译测试
+### Translation Testing
 
-![翻译测试](/img/plugin/translation-05.png)
+![Translation Testing](/img/plugin/translation-05.png)
 
-完成配置后，用户可在翻译测试界面输入文本，实时查看翻译结果，验证翻译效果。测试功能支持：
-- 多语言互译测试
-- 不同翻译引擎对比测试
-- 翻译速度和质量评估
+After completing configuration, users can input text in the translation testing interface to view translation results in real-time and verify translation effects. The testing function supports:
+- Multilingual mutual translation testing
+- Comparison testing of different translation engines
+- Translation speed and quality evaluation
 
-## 支持的语言
+## Supported Languages
 
-智能翻译插件支持多种常用语言的互译，包括但不限于：
-- 中文（简体/繁体）
-- 英语
-- 日语
-- 韩语
-- 法语
-- 德语
-- 西班牙语
-- 俄语
-- 阿拉伯语
+The Smart Translation plugin supports mutual translation of multiple commonly used languages, including but not limited to:
+- Chinese (Simplified/Traditional)
+- English
+- Japanese
+- Korean
+- French
+- German
+- Spanish
+- Russian
+- Arabic
 
-具体支持的语言范围取决于配置的翻译服务提供商。
+The specific range of supported languages depends on the configured translation service providers.
 
-## 使用场景
+## Use Cases
 
-智能翻译插件适用于以下场景：
+The Smart Translation plugin is suitable for the following scenarios:
 
-1. **多语言内容管理**：为AMMDS平台的多语言内容提供翻译支持，确保内容在不同语言版本中的一致性。
-2. **国际化应用**：帮助开发者将应用界面和文档翻译为多种语言，提升全球用户体验。
-3. **跨语言沟通**：在多语言环境中，实时翻译沟通内容，消除语言障碍。
-4. **专业文档翻译**：为技术文档、商务文档等提供专业的翻译服务，确保术语准确性。
-5. **内容本地化**：将内容适配到特定语言和文化背景，提高目标用户的接受度。
+1. **Multilingual Content Management**: Provide translation support for multilingual content on the AMMDS platform, ensuring consistency of content across different language versions.
+2. **Internationalization Applications**: Help developers translate application interfaces and documents into multiple languages, improving global user experience.
+3. **Cross-language Communication**: Real-time translation of communication content in multilingual environments to eliminate language barriers.
+4. **Professional Document Translation**: Provide professional translation services for technical documents, business documents, etc., ensuring terminology accuracy.
+5. **Content Localization**: Adapt content to specific languages and cultural backgrounds to improve target user acceptance.
 
-## 最佳实践
+## Best Practices
 
-1. **混合使用翻译服务**：根据翻译内容的类型和重要性，选择合适的翻译服务。对于专业术语较多的内容，建议使用AI翻译；对于日常内容，可使用机器翻译以提高速度。
-2. **合理配置翻译服务优先级**：将可靠性高的翻译服务设置为高优先级，确保翻译服务的稳定性。
-3. **优化AI翻译提示词**：根据不同的翻译场景，定制合适的提示词，提高翻译质量。
-4. **定期测试翻译服务**：定期测试配置的翻译服务，确保服务可用性和翻译质量。
-5. **监控翻译使用情况**：监控翻译服务的使用情况，及时发现和解决问题，优化翻译配置。
+1. **Mixed Use of Translation Services**: Choose appropriate translation services based on the type and importance of translation content. For content with many professional terms, it is recommended to use AI translation; for daily content, machine translation can be used to improve speed.
+2. **Reasonable Configuration of Translation Service Priority**: Set high-priority translation services with high reliability to ensure translation service stability.
+3. **Optimize AI Translation Prompts**: Customize appropriate prompts according to different translation scenarios to improve translation quality.
+4. **Regularly Test Translation Services**: Regularly test configured translation services to ensure service availability and translation quality.
+5. **Monitor Translation Usage**: Monitor the usage of translation services to discover and resolve problems in a timely manner and optimize translation configuration.
 
-## 故障排除
+## Troubleshooting
 
-1. **翻译服务不可用**：检查翻译服务的API密钥是否正确，网络连接是否正常，服务提供商是否有服务中断。
-2. **翻译质量不佳**：调整AI翻译的温度参数，优化提示词，或尝试使用不同的翻译服务。
-3. **翻译速度慢**：检查网络连接，减少单次翻译的文本长度，或选择响应速度更快的翻译服务。
-4. **翻译结果不一致**：确保使用相同的翻译服务和配置，避免在不同场景下使用不同的翻译参数。
+1. **Translation Service Unavailable**: Check if the API key of the translation service is correct, if the network connection is normal, and if the service provider has service interruptions.
+2. **Poor Translation Quality**: Adjust the temperature parameter of AI translation, optimize prompts, or try using different translation services.
+3. **Slow Translation Speed**: Check network connection, reduce the text length of single translation, or select translation services with faster response speed.
+4. **Inconsistent Translation Results**: Ensure using the same translation service and configuration, and avoid using different translation parameters in different scenarios.

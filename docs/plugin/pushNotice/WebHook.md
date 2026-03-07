@@ -5,57 +5,57 @@ sidebar_label: "WebHook"
 
 # WebHook
 
-WebHook插件为AMMDS平台提供了向指定WebHook URL发送推送通知的能力，使用户能够实时接收系统事件通知。通过WebHook，用户可以将AMMDS平台的各类事件（如任务完成、系统告警、状态变更等）实时推送到外部系统，实现与第三方服务的集成。
+The WebHook plugin provides the AMMDS platform with the ability to send push notifications to specified WebHook URLs, enabling users to receive real-time system event notifications. Through WebHook, users can push various events from the AMMDS platform (such as task completion, system alerts, status changes, etc.) to external systems in real-time, achieving integration with third-party services.
 
 <!-- truncate -->
 
-## 插件配置
+## Plugin Configuration
 
-![插件配置](/img/plugin/webhook-01.png)
+![Plugin Configuration](/img/plugin/webhook-01.png)
 
-### 插件配置项
+### Plugin Configuration Items
 
-- **启用状态**：控制是否启用WebHook插件。禁用后，所有WebHook服务将停止发送通知。
-- **重试次数**：设置通知发送失败后的重试次数。当WebHook请求失败时，系统将按照设置的次数自动重试。
-- **重试间隔**：设置每次重试之间的时间间隔（单位：秒）。合理设置重试间隔可以避免对目标服务器造成过大压力。
+- **Enable Status**: Controls whether to enable the WebHook plugin. After disabling, all WebHook services will stop sending notifications.
+- **Retry Count**: Sets the number of retries after notification sending fails. When a WebHook request fails, the system will automatically retry according to the set number of times.
+- **Retry Interval**: Sets the time interval between each retry (unit: seconds). Reasonably setting the retry interval can avoid causing excessive pressure on the target server.
 
-## WebHook 服务配置
+## WebHook Service Configuration
 
-![WebHook 服务配置](/img/plugin/webhook-02.png)
+![WebHook Service Configuration](/img/plugin/webhook-02.png)
 
-插件支持同时配置多个WebHook服务，每个服务可独立设置URL和通知内容格式。用户可以根据不同的通知场景创建多个WebHook服务，例如：
-- 系统告警通知
-- 任务状态变更通知
-- 重要事件通知
-- 数据同步通知
+The plugin supports configuring multiple WebHook services simultaneously. Each service can independently set URL and notification content format. Users can create multiple WebHook services according to different notification scenarios, for example:
+- System alert notifications
+- Task status change notifications
+- Important event notifications
+- Data synchronization notifications
 
-### 新增 WebHook 服务
+### Add WebHook Service
 
-点击“新增”按钮，打开新增WebHook服务的配置对话框。
+Click the "Add" button to open the configuration dialog for adding a new WebHook service.
 
-![新增 WebHook 服务](/img/plugin/webhook-03.png)
-![WebHook 服务配置项](/img/plugin/webhook-04.png)
+![Add WebHook Service](/img/plugin/webhook-03.png)
+![WebHook Service Configuration Items](/img/plugin/webhook-04.png)
 
-### WebHook 服务配置项
+### WebHook Service Configuration Items
 
-#### 基础配置
+#### Basic Configuration
 
-- **服务名称**：为WebHook服务设置标识名称，用于管理和识别。建议使用具有描述性的名称，如"系统告警通知"、"任务完成通知"等。
-- **URL**：指定接收推送通知的WebHook地址。确保该地址可以正常访问，并且能够处理POST请求。
-- **描述**：为WebHook服务添加说明，用于描述服务的用途或目标。详细的描述有助于后续的管理和维护。
-- **启用状态**：控制是否启用该WebHook服务。禁用后，该服务将停止发送通知，但配置会被保留。
+- **Service Name**: Set an identifier name for the WebHook service for management and identification. It is recommended to use descriptive names, such as "System Alert Notification", "Task Completion Notification", etc.
+- **URL**: Specify the WebHook address to receive push notifications. Ensure that this address can be accessed normally and can handle POST requests.
+- **Description**: Add an explanation for the WebHook service to describe the purpose or target of the service. Detailed descriptions help with subsequent management and maintenance.
+- **Enable Status**: Controls whether to enable this WebHook service. After disabling, this service will stop sending notifications, but the configuration will be retained.
 
-#### 请求头配置
+#### Request Header Configuration
 
-- **请求头**：为WebHook请求设置自定义请求头，格式为`键: 值`，每行一个。常见的请求头包括：
-  - `Content-Type: application/json`：指定请求体格式为JSON
-  - `Authorization: Bearer <token>`：添加认证令牌，确保API调用的安全性
-  - `X-Custom-Header: <value>`：添加自定义业务头信息
-- 点击“添加”按钮可添加多个自定义请求头
+- **Request Headers**: Set custom request headers for WebHook requests, in the format `key: value`, one per line. Common request headers include:
+  - `Content-Type: application/json`: Specifies the request body format as JSON
+  - `Authorization: Bearer <token>`: Adds authentication token to ensure API call security
+  - `X-Custom-Header: <value>`: Adds custom business header information
+- Click the "Add" button to add multiple custom request headers
 
-#### 请求体配置
+#### Request Body Configuration
 
-- **内容格式**：请求体必须为JSON格式，插件将自动将通知内容转换为JSON字符串并发送。用户可以根据接收端的需求自定义JSON结构，例如：
+- **Content Format**: The request body must be in JSON format. The plugin will automatically convert the notification content into a JSON string and send it. Users can customize the JSON structure according to the needs of the receiving end, for example:
   ```json
   {
     "event": "{{type}}",
@@ -70,42 +70,42 @@ WebHook插件为AMMDS平台提供了向指定WebHook URL发送推送通知的能
   }
   ```
 
-#### 推送检查
+#### Push Verification
 
-- **检查类型**：设置WebHook响应的验证方式，确保通知发送成功
-  - **状态码**：验证响应状态码是否为200。适用于标准REST API接口。
-  - **内容**：验证响应内容是否包含指定字符串。适用于自定义接口或需要特定响应内容的场景。
+- **Check Type**: Set the verification method for WebHook response to ensure notification sending is successful
+  - **Status Code**: Verify whether the response status code is 200. Applicable to standard REST API interfaces.
+  - **Content**: Verify whether the response content contains the specified string. Applicable to custom interfaces or scenarios requiring specific response content.
 
-### 变量说明
+### Variable Description
 
-![变量说明](/img/plugin/webhook-05.png)
+![Variable Description](/img/plugin/webhook-05.png)
 
-| 变量 | 描述 |
-|------|------|
-| `{{sign}}` | 签名，用于验证通知的真实性 |
-| `{{title}}` | 通知标题，简要描述事件内容 |
-| `{{subTitle}}` | 通知副标题，提供额外的事件信息 |
-| `{{logo}}` | Logo URL，事件相关的图标或标识 |
-| `{{image}}` | 图片 URL，事件相关的图片资源 |
-| `{{message}}` | 消息正文，详细描述事件内容 |
-| `{{time}}` | 推送时间，事件发生的时间戳 |
-| `{{type}}` | 事件类型，标识事件的类别 |
+| Variable | Description |
+|----------|-------------|
+| `{{sign}}` | Signature, used to verify the authenticity of notifications |
+| `{{title}}` | Notification title, briefly describing event content |
+| `{{subTitle}}` | Notification subtitle, providing additional event information |
+| `{{logo}}` | Logo URL, icons or identifiers related to the event |
+| `{{image}}` | Image URL, image resources related to the event |
+| `{{message}}` | Message body, detailed description of event content |
+| `{{time}}` | Push time, timestamp when the event occurred |
+| `{{type}}` | Event type, identifying the category of the event |
 
-> 支持在请求体和请求头中使用以上变量，插件将自动替换为实际值
+> The above variables are supported in request body and request headers. The plugin will automatically replace them with actual values.
 
-## 使用场景
+## Use Cases
 
-WebHook插件适用于以下场景：
+The WebHook plugin is suitable for the following scenarios:
 
-1. **系统监控集成**：将AMMDS平台的告警信息推送到监控系统，如Prometheus、Grafana等。
-2. **工作流自动化**：当AMMDS平台的任务完成时，触发外部系统的后续操作，如自动部署、数据同步等。
-3. **通知提醒**：将重要事件推送到企业内部通讯工具，如企业微信、钉钉、Slack等。
-4. **数据备份**：定期将AMMDS平台的关键数据通过WebHook推送到备份系统。
+1. **System Monitoring Integration**: Push alert information from the AMMDS platform to monitoring systems, such as Prometheus, Grafana, etc.
+2. **Workflow Automation**: When tasks on the AMMDS platform are completed, trigger subsequent operations of external systems, such as automatic deployment, data synchronization, etc.
+3. **Notification Reminders**: Push important events to enterprise internal communication tools, such as Enterprise WeChat, DingTalk, Slack, etc.
+4. **Data Backup**: Regularly push key data from the AMMDS platform to backup systems through WebHook.
 
-## 最佳实践
+## Best Practices
 
-1. **安全性**：在WebHook URL中使用HTTPS协议，避免明文传输。对于需要认证的接口，使用请求头添加认证信息。
-2. **可靠性**：合理设置重试次数和间隔，确保通知能够可靠送达。
-3. **性能**：避免在WebHook处理逻辑中执行耗时操作，保持响应迅速。
-4. **监控**：对WebHook的发送状态进行监控，及时发现和解决问题。
-5. **版本管理**：当修改WebHook配置时，注意向后兼容，避免影响现有集成。
+1. **Security**: Use HTTPS protocol in WebHook URLs to avoid plaintext transmission. For interfaces requiring authentication, use request headers to add authentication information.
+2. **Reliability**: Reasonably set the number of retries and intervals to ensure notifications can be delivered reliably.
+3. **Performance**: Avoid executing time-consuming operations in WebHook processing logic to keep responses rapid.
+4. **Monitoring**: Monitor the sending status of WebHook to discover and resolve problems in a timely manner.
+5. **Version Management**: When modifying WebHook configuration, pay attention to backward compatibility to avoid affecting existing integrations.
