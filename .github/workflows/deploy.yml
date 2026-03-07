@@ -45,14 +45,6 @@ jobs:
         run: |
           zip -r dist.zip build
 
-      - name: Commit and Push dist files
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist.zip static/img
-          git commit -m "chore: update dist files"
-          git push origin master
-
       - name: Upload dist.zip to Release
         if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1
