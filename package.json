@@ -1,6 +1,6 @@
 {
   "name": "ammds",
-  "version": "1.6.47",
+  "version": "1.6.60",
   "private": true,
   "scripts": {
     "gen:webp": "ts-node scripts/gen-webp.ts",

@@ -17,7 +17,7 @@ const config: Config = {
     v4: true,
   },
   customFields: {
-    version: "v1.6.54",
+    version: "v1.6.60",
   },
   i18n: {
     defaultLocale: "en",
@@ -251,7 +251,7 @@ const config: Config = {
     announcementBar: {
       id: "announcement_bar",
       content:
-        '🎉️ <a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/v1.6.54">AMMDS v1.6.54</a> (公测版) 已发布！🥳️',
+        '🎉️ <a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/v1.6.60">AMMDS v1.6.60</a> (公测版) 已发布！🥳️',
       textColor: "#091E42",
       isCloseable: true,
     },
