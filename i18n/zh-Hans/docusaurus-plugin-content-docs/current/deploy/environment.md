@@ -16,6 +16,9 @@ sidebar_label: "环境变量"
 | 变量名称 | 默认值 | 描述 |
 |---------|--------|------|
 | `NGINX_PORT` | `80` | Nginx 服务端口（适用于 Host 网络） |
+| `PUID` | `0` | AMMDS 用户 ID |
+| `PGID` | `0` | AMMDS 组 ID（默认值为 AMMDS 用户 ID） |
+| `UMASK` | `022` | AMMDS 文件权限掩码（默认值为 022） |
 | `AMMDS_SERVER_PORT` | `8080` | AMMDS 服务器端口（适用于 Host 网络） |
 | `ADMIN_USER` | `ammds` | 管理员用户名（禁止修改） |
 | `ADMIN_PASS` | `ammds` | 管理员密码（仅在首次安装时生效） |
@@ -24,8 +27,8 @@ sidebar_label: "环境变量"
 | `AMMDS_SCHEDULER_ENABLE` | `true` | 启用定时任务 |
 | `AMMDS_MONITOR_ENABLE` | `true` | 启用目录监控 |
 | `AMMDS_NETWORK_TIMEOUT` | `60` | 网络请求超时时间（单位：秒） |
-| `AMMDS_MAX_FILE_SIZE` | `10MB` | 单个请求中的最大文件大小 |
-| `AMMDS_MAX_REQUEST_SIZE` | `100MB` | 最大请求体大小 |
+| `AMMDS_MAX_FILE_SIZE` | `10MB` | 单个请求中的最大文件大小（支持 KB、MB、GB 等单位） |
+| `AMMDS_MAX_REQUEST_SIZE` | `100MB` | 最大请求体大小（支持 KB、MB、GB 等单位） |
 | `AMMDS_IYUU_TOKEN` | (无默认值) | [插件] IYUU 授权码 |
 | `AMMDS_METATUBE_URL` | (无默认值) | [插件] MetaTube 插件服务地址 |
 | `AMMDS_METATUBE_TOKEN` | (无默认值) | [插件] MetaTube 授权码 |

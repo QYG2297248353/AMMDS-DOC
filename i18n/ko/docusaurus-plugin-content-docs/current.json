@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "최신",
+    "message": "current",
     "description": "The label for version current"
   },
   "sidebar.guideSidebar.category.Tutorial": {

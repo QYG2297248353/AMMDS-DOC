@@ -44,6 +44,23 @@ sidebar_label: "快速入门"
 
 ---
 
+### 威联通 Nas 部署
+
+:::note
+**包类型**：QKPG（威联通包）
+:::
+
+对于威联通 Nas 用户，我们提供了一个 FPK 包，专为直接导入威联通应用商店而设计：
+
+1. 从 [威联通 Nas 发布页面](https://github.com/QYG2297248353/AMMDS-Offline-QNAP/releases) 下载最新的 `AMMDS_x86.qkpg` 或 `AMMDS_arm.qkpg`
+2. 访问您的威联通 Nas 仪表盘
+3. 打开 **威联通应用商店**
+4. 选择 **导入本地包** 并找到下载的 QKPG 文件
+5. 按照提示完成安装
+6. 服务将通过威联通 Nas 应用商店界面进行管理
+
+---
+
 ### Docker 部署
 
 :::note
