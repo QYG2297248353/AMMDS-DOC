@@ -1,0 +1,9 @@
+{
+  "label": "모듈 설정",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

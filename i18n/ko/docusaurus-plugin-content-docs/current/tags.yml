@@ -1,0 +1,16 @@
+plugin:
+  label: "플러그인"
+  permalink: "/plugin"
+  description: "플러그인 관련"
+
+
+metadata:
+  label: "메타데이터"
+  permalink: "/metadata"
+  description: "메타데이터 관련"
+
+
+release:
+  label: "릴리스"
+  permalink: "/release"
+  description: "릴리스 관련"

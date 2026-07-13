@@ -1,16 +1,16 @@
 plugin:
   label: "Plugin"
   permalink: "/plugin"
-  description: "Plugin documentation"
+  description: "插件相关"
 
 
 metadata:
   label: "Metadata"
   permalink: "/metadata"
-  description: "Metadata documentation"
+  description: "元数据相关"
 
 
 release:
   label: "Release"
   permalink: "/release"
-  description: "Release notes"
+  description: "发布相关"

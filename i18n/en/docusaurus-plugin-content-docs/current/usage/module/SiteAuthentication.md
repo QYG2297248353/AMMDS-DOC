@@ -5,15 +5,15 @@ sidebar_label: "Site Authentication"
 
 # Site Authentication
 
-Site authentication is an important feature. After authentication, you can enable advanced features such as leaderboards and search, enhancing the system's user experience and functional completeness.
+Site authentication is how the system "introduces itself" to a website. Once authenticated, you can use advanced features like leaderboards and search.
 
 <!-- truncate -->
 
 ## Accessing the Site Authentication Page
 
-You can access the site authentication page through the following path:
+Go to:
 
-**Backend top right corner avatar dropdown menu >> Site Authentication**
+**Backend top-right avatar dropdown >> Site Authentication**
 
 ## Authentication Interface
 
@@ -24,71 +24,71 @@ You can access the site authentication page through the following path:
 
 ### Select Authentication Site
 
-Based on your needs, select the site for which you have an account from the dropdown list.
+Pick a site you have an account for from the dropdown.
 
 ### Fill in Authentication Information
 
-Fill in the following authentication information for the selected site:
+Fill in the following:
 
-- **UID**: The unique identifier of the site user, usually a number, and for some sites, it is the username filled in during registration
-- **PassKey**: The site key, a security credential used to verify user identity
+- **UID**: Your user ID on that site, usually a number. For some sites, it's the username you registered with.
+- **PassKey**: The key the site gives you — think of it as your site "password."
 
 ### Submit Authentication
 
-After filling in the information, click the submit button to complete the authentication process.
+Once you've filled everything in, just click submit.
 
-## How to Obtain UID and PassKey
+## How to Get UID and PassKey
 
-### Obtaining UID
+### Getting the UID
 
-- The UID of most sites can be viewed on the user profile page
-- The UID of some sites will be displayed in user settings or account information
-- The UID of a few sites is the username used during registration
+- Most sites show your UID on your profile page
+- Some have it in settings or account info
+- A few sites use your registration username as the UID
 
-### Obtaining PassKey
+### Getting the PassKey
 
-The method of obtaining PassKey may vary for different sites, and it can generally be obtained through the following channels:
+Different sites have different methods. Generally, you can find it here:
 
-- **Site Settings**: Look for API key or PassKey options in user settings or security settings
-- **Profile**: Some sites provide PassKey viewing or resetting functions on the profile page
-- **Account Security**: Look for key management options on account security-related pages
+- **Site Settings**: Look for API key or PassKey options in user or security settings
+- **Profile**: Some sites let you view or reset your PassKey on your profile page
+- **Account Security**: Check security-related pages for key management options
 
 ## Notes
 
-:::warning Important Note
-- **Protect your PassKey**: PassKey is equivalent to your site account password, do not disclose it to others
-- **Fill in authentication information correctly**: Ensure that UID and PassKey are filled in correctly to avoid authentication failure
-- **Update authentication regularly**: If you modify relevant information on the site, you may need to re-authenticate
-- **Comply with site rules**: When using the site authentication function, please comply with the usage rules and terms of each site
+:::warning Important
+- **Don't leak your PassKey**: It's basically your site password — keep it to yourself
+- **Fill in correct info**: Make sure UID and PassKey are right, or authentication will fail
+- **Update regularly**: If you change your password on the site, you may need to re-authenticate here
+- **Follow site rules**: When using authentication features, respect each site's terms of use
 :::
 
-## Frequently Asked Questions
+## FAQ
 
-### Q: What is the function of site authentication?
+### Q: What's the point of site authentication?
 
-**A**: After site authentication, you can use advanced features such as leaderboards and search in the system, enhancing the system's user experience and functional completeness.
+**A**: Once authenticated, you can use advanced features like leaderboards and search for a better experience.
 
-### Q: What should I do if authentication fails?
+### Q: What if authentication fails?
 
-**A**: Authentication failure may be due to the following reasons:
-- UID or PassKey is filled in incorrectly
-- The site server is temporarily unavailable
-- Network connection issues
+**A**: Possible reasons:
+- UID or PassKey is wrong
+- The site server is temporarily unreachable
+- Your network has issues
 
-Please check if the authentication information is correct, confirm that the site is accessible normally, and then try authentication again.
+Double-check your info, make sure the site is accessible, and try again.
 
-### Q: Can I authenticate multiple sites at the same time?
+### Q: Can I authenticate multiple sites at once?
 
-**A**: Yes, you can authenticate multiple different sites as needed, and the authentication information of each site is independent of each other.
+**A**: Yes, you can authenticate as many as you want. Each site's info is independent.
 
-### Q: What should I do if PassKey is leaked?
+### Q: What if my PassKey is leaked?
 
-**A**: If your PassKey is accidentally leaked, please reset your PassKey at the corresponding site immediately and update the authentication information in the system.
+**A**: Go reset it on the site immediately, then update the authentication info in the system.
 
 ## Best Practices
 
-- **Check authentication status regularly**: Ensure that your site authentication remains valid
-- **Use a secure network environment**: Ensure a secure network environment when performing site authentication
-- **Save authentication information**: It is recommended to properly save your authentication information for future use
-- **Follow site rules**: When using the site authentication function, strictly comply with the usage rules of each site
-- **Update authentication information in a timely manner**: When you modify relevant information on the site, update the authentication information in the system in a timely manner
+- **Check auth status regularly**: Make sure your authentication is still valid
+- **Use a secure network**: Don't authenticate over public WiFi
+- **Keep your auth info safe**: Write it down somewhere for future reference
+- **Follow site rules**: Don't misuse the authentication feature
+- **Update when info changes**: If you change anything on the site, update it in the system too

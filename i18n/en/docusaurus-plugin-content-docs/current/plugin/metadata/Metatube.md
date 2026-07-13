@@ -5,41 +5,41 @@ sidebar_label: "Metatube"
 
 # Metatube
 
-MetaTube is an open-source media metadata scraping plugin backend designed specifically for Jellyfin, Emby, and Plex. It is primarily used to automatically retrieve video information, including posters, synopses, cast members, production studios, ratings, and more. This plugin effectively solves the problem of low recognition rates for Chinese resources, enabling high-precision "poster wall" management of media libraries through a self-built API.
+MetaTube is an open-source tool designed for Jellyfin, Emby, and Plex media servers to scrape video metadata. It automatically fetches posters, synopses, cast, studios, ratings, and more. This plugin is especially good at recognizing Chinese-language content, and with its self-hosted API, it helps you turn your media library into a beautiful "poster wall."
 
 <!-- truncate -->
 
 ## Features
 
-The MetaTube plugin offers the following core features:
+MetaTube offers these core features:
 
-- 🎯 **High-precision Identification**: Optimized recognition algorithm for Chinese resources, greatly improving recognition success rate
-- 🌍 **Multi-platform Support**: Compatible with mainstream media servers such as Jellyfin, Emby, and Plex
-- 📦 **Dual Service Modes**: Supports both remote deployment and built-in service operation modes
-- 🔐 **Secure Authentication**: Ensures service access security through TOKEN mechanism
-- 🌐 **Multiple Deployment Options**: Supports local Docker deployment and Koyeb cloud service deployment
-- 📝 **Automatic Translation**: Built-in multiple translation services, supporting automatic metadata translation
-- 🎭 **Rich Data Sources**: Integrates multiple actor and video data providers
+- 🎯 **High-precision Recognition**: Optimized for Chinese content, giving you much better recognition rates.
+- 🌍 **Multi-platform Support**: Works with Jellyfin, Emby, and Plex.
+- 📦 **Dual Service Modes**: Supports both remote deployment and built-in service.
+- 🔐 **Secure Authentication**: Uses a TOKEN mechanism to keep service access secure.
+- 🌐 **Multiple Deployment Options**: Supports Docker local deployment and Koyeb cloud deployment.
+- 📝 **Auto Translation**: Built-in multiple translation services for automatic metadata translation.
+- 🎭 **Rich Data Sources**: Integrates multiple actor and video data providers.
 
 ## Deployment Options
 
-MetaTube supports multiple deployment methods, and you can choose the most suitable one based on your actual needs:
+MetaTube has several deployment methods — pick what works best for you.
 
 ### Self-deployment Options
 
 :::info Official Documentation
-For detailed deployment documentation, please refer to the [MetaTube Official Documentation](https://metatube-community.github.io/)
+For detailed deployment instructions, check the [MetaTube Official Documentation](https://metatube-community.github.io/).
 :::
 
 #### Docker Deployment
 
-**Deployment Command**:
+**Deployment command**:
 
 ```bash
 docker run -d -p 8080:8080 -v $PWD/config:/config --name metatube ghcr.io/metatube-community/metatube-server:latest -dsn /config/metatube.db
 ```
 
-**Upgrade Operation**:
+**Upgrade**:
 
 ```bash
 docker stop metatube
@@ -49,13 +49,13 @@ docker run -d -p 8080:8080 -v $PWD/config:/config --name metatube ghcr.io/metatu
 
 #### Docker Compose Deployment
 
-**Create Configuration File**:
+**Create config file**:
 
 ```bash
 vi docker-compose.yml
 ```
 
-**Configuration Content**:
+**Config content**:
 
 ```yaml
 services:
@@ -73,13 +73,13 @@ services:
       - PORT=8080
 ```
 
-**Start Service**:
+**Start service**:
 
 ```bash
 docker-compose up -d
 ```
 
-**Upgrade Service**:
+**Upgrade service**:
 
 ```bash
 docker-compose up -d --force-recreate
@@ -87,12 +87,12 @@ docker-compose up -d --force-recreate
 
 #### Configure Access Token
 
-After deployment, record the following information for subsequent configuration:
+After deployment, make note of the following for later configuration:
 
-- **Access Address**: Typically the IP address of the deployment host plus port 8080, for example: `http://192.168.1.100:8080`
-- **TOKEN**: A 32-character string used for service authentication, it is recommended to generate it randomly
+- **Access Address**: Usually the deployment host's IP plus port 8080, e.g., `http://192.168.1.100:8080`.
+- **TOKEN**: A 32-character string for authentication — it's best to generate one randomly.
 
-**Generate Random TOKEN**:
+**Generate random TOKEN**:
 
 ```bash
 openssl rand -hex 16
@@ -100,13 +100,13 @@ openssl rand -hex 16
 
 **Configure TOKEN**:
 
-#### Docker Command Configuration
+#### Docker Command
 
 ```bash
 docker run -d -p 8080:8080 -v $PWD/config:/config --name metatube -e TOKEN=your_token ghcr.io/metatube-community/metatube-server:latest -dsn /config/metatube.db
 ```
 
-#### Docker Compose Configuration
+#### Docker Compose
 
 ```yaml
 services:
@@ -115,25 +115,25 @@ services:
       - TOKEN=your_token
 ```
 
-### Koyeb Deployment Option
+### Koyeb Deployment
 
-Koyeb provides a convenient cloud service deployment option, suitable for users without a server environment:
+Koyeb is a cloud platform for online deployment — great if you don't have your own server.
 
 :::info Account Preparation
-You need to register a Koyeb account before deployment; a free account is sufficient for basic needs.
+You'll need to register a Koyeb account first. A free account is enough for basic use.
 :::
 
-#### Quick Deployment
+#### Quick Deploy
 
-Click the following button to start quick deployment:
+Click the button below for one-click deployment:
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=metatube-ms&type=docker&image=ghcr.io/metatube-community/metatube-server:latest&instance_type=free&regions=was&instances_min=0&autoscaling_sleep_idle_delay=300&env[MT_PROVIDER_MADOUQU__PRIORITY]=1000&env[MT_PROVIDER_MODELMEDIAASIA__PRIORITY]=1000&env[PORT]=3000&ports=3000;http;/&hc_protocol[3000]=tcp&hc_grace_period[3000]=5&hc_interval[3000]=30&hc_restart_limit[3000]=3&hc_timeout[3000]=5&hc_path[3000]=/)
 
-**Deployment Steps**:
-1. Log in to your Koyeb account
-2. Click the button above to create an application
-3. Add `TOKEN` in the environment variable configuration (it is recommended to use a randomly generated 32-character string)
-4. Click the "Deploy" button and wait for the deployment to complete
+**Steps**:
+1. Log into your Koyeb account
+2. Click the button above to create an app
+3. Add `TOKEN` in environment variables (use a randomly generated 32-character string)
+4. Click "Deploy" and wait for it to finish
 
 #### Manual Deployment
 
@@ -141,9 +141,9 @@ Click the following button to start quick deployment:
 
 ![Create service](/img/plugin/metatube-koyeb-01.png)
 
-- Log in to the Koyeb console and click the "Create service" button on the left
-- Select "Web service" as the service type
-- Select "Docker" as the deployment method
+- Log into the Koyeb console and click "Create service" on the left
+- Service type: "Web service"
+- Deployment method: "Docker"
 
 **Step 2: Configure Image**
 
@@ -156,94 +156,94 @@ Click the following button to start quick deployment:
 ![Create service](/img/plugin/metatube-koyeb-03.png)
 
 - Free accounts only support the Washington, DC region
-- It is recommended to choose Japan or US regions for better access experience (requires paid account)
+- Japan or US regions are recommended for better access (paid accounts only)
 
 **Step 4: Configure Environment Variables**
 
 ![Create service](/img/plugin/metatube-koyeb-04.png)
 
-- Configure `PORT` to `3000`
-- Configure `TOKEN` as the authentication key to prevent unauthorized access
+- Set `PORT` to `3000`
+- Set `TOKEN` as the auth key to prevent unauthorized access
 
 **Step 5: Configure Port Mapping**
 
 ![Create service](/img/plugin/metatube-koyeb-05.png)
 
-- Port: `3000` (consistent with the `PORT` environment variable)
+- Port: `3000` (must match the `PORT` env variable)
 - Protocol: `http`
-- Check "Public HTTPS access" and set the path to `/`
+- Check "Public HTTPS access" and set path to `/`
 
 **Step 6: Configure Health Check**
 
 ![Create service](/img/plugin/metatube-koyeb-06.png)
 
 - Protocol: `tcp`
-- Port: `3000` (consistent with the `PORT` environment variable)
-- Keep other parameters as default
+- Port: `3000` (must match the `PORT` env variable)
+- Keep other settings as default
 
 **Step 7: Complete Deployment**
-Click the "Deploy" button and wait for the application deployment to complete.
+Click "Deploy" and wait for it to finish.
 
 #### Deployment Complete
 
 ![Create service](/img/plugin/metatube-koyeb-07.png)
 
-- You can view the application access address on the "Overview" page of the Koyeb console
+- You can find the app access address on the Koyeb console's "Overview" page.
 
 ![Create service](/img/plugin/metatube-koyeb-08.png)
 
-- Access this address to verify if the Metatube service responds normally
-- Service access address format: `https://xxxx-xxx-xxx.koyeb.app/` (where xxxx-xxx-xxx is the application name assigned by Koyeb)
+- Visit this address to verify the Metatube service is running.
+- Service address format: `https://xxxx-xxx-xxx.koyeb.app/` (where xxxx-xxx-xxx is the app name Koyeb assigned).
 
-:::tip Important Information
-Please record the access address and TOKEN for subsequent AMMDS plugin configuration.
+:::tip Important
+Make note of the access address and TOKEN — you'll need them for the AMMDS plugin configuration later.
 :::
 
 ## Plugin Configuration
 
-In the AMMDS management interface, access the configuration page through "Integrated Applications" → "Metadata" → "Metatube".
+In the AMMDS management interface, go to "Integrated Applications" → "Metadata" → "Metatube."
 
 ### Service Modes
 
-The MetaTube plugin supports two service modes:
+MetaTube supports two service modes:
 
-- **Remote Service**: Uses an externally deployed MetaTube service
-- **Built-in Service**: Uses the MetaTube service built into AMMDS
+- **Remote Service**: Uses an externally deployed MetaTube service.
+- **Built-in Service**: Uses the MetaTube service built into AMMDS.
 
-:::note Priority Note
-Only one service mode is active at a time, and the built-in service has higher priority than the remote service.
+:::note Priority
+Only one mode can be active at a time. The built-in service takes priority over the remote one.
 :::
 
 ### Quick Operations
 
-![Metatube 插件配置](/img/plugin/metatube-01.png)
+![Metatube Plugin Configuration](/img/plugin/metatube-01.png)
 
-The following quick operations are available in the upper right corner of the configuration page:
+These quick actions are available at the top-right of the config page:
 
-- **Start Service**: Starts the built-in Metatube service
-- **Stop Service**: Stops the built-in Metatube service
-- **Restart Service**: Restarts the built-in Metatube service
-- **Refresh Configuration**: Refreshes configuration items
-- **Save Configuration**: Saves the current configuration (all configuration changes require clicking this button to take effect)
+- **Start Service**: Starts the built-in Metatube service.
+- **Stop Service**: Stops the built-in Metatube service.
+- **Restart Service**: Restarts the built-in Metatube service.
+- **Refresh Configuration**: Refreshes config options.
+- **Save Configuration**: Saves current config (all changes need this button to take effect).
 
 ### Configuration Parameters
 
-![Metatube 插件配置](/img/plugin/metatube-02.png)
+![Metatube Plugin Configuration](/img/plugin/metatube-02.png)
 
 #### Basic Configuration
 
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
 | Enable Status | Controls whether to enable the Metatube plugin | Off |
-| Auto-start | Controls whether to automatically start the built-in Metatube service when AMMDS starts | Off |
+| Auto-start | Controls whether to auto-start the built-in Metatube service when AMMDS starts | Off |
 | Remote Service Address | Access address of the Metatube service | - |
 
 **Remote Service Address Examples**:
 - `https://xxxx-xxx-xxx.koyeb.app`
 - `http://192.168.1.100:3000`
 
-:::info Notes
-- The remote service address must not end with `/`, otherwise it will cause an access path error.
+:::info Note
+The remote service address must not end with `/`, or it will cause access path errors.
 :::
 
 #### Authentication Configuration
@@ -251,93 +251,93 @@ The following quick operations are available in the upper right corner of the co
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
 | Enable Authentication | Whether to enable Metatube service authentication | Off |
-| Token | Access token for the Metatube service | - |
+| Token | Metatube service access token | - |
 
 :::warning Authentication Note
-If a TOKEN is configured when deploying the Metatube service, this option must be enabled and the correct token must be filled in.
+If you configured a TOKEN when deploying the Metatube service, you must enable authentication here and enter the correct token.
 :::
 
 #### Data Source Configuration
 
-- **Priority**: Set the priority order of data sources; data sources with higher rankings will be used first
+- **Priority**: Set the order of data sources — higher-priority ones are used first.
 
 #### Translation Configuration
 
-![Metatube 插件配置](/img/plugin/metatube-03.png)
+![Metatube Plugin Configuration](/img/plugin/metatube-03.png)
 
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
-| Auto-translation | Whether to enable automatic translation service | Off |
+| Auto-translation | Whether to enable auto translation | Off |
 | Translation Service | Select translation service provider | - |
-| API Key | API key required for some translation services | - |
+| API Key | Required by some translation services | - |
 
 :::info Translation Note
-After enabling auto-translation, titles, descriptions, and other fields will be automatically translated, and this will also apply to data sources of other plugins.
+When auto-translation is enabled, titles, descriptions, and other fields will be automatically translated. This also applies to other plugins' data sources.
 :::
 
 ### Testing Module
 
-![Metatube 插件测试](/img/plugin/metatube-04.png)
+![Metatube Plugin Test](/img/plugin/metatube-04.png)
 
-**Quick Operations**:
+**Quick actions**:
 
-- **Test Connection**: Tests if the remote service address is reachable (only verifies network connectivity, not service status)
-- **Built-in Application Info**: Displays application information (version number, configuration, etc.) of the built-in Metatube service
-- **Remote Application Info**: Displays application information (version number, configuration, etc.) of the remote Metatube service
+- **Test Connection**: Tests if the remote service address is reachable (only checks network, not service status).
+- **Built-in App Info**: Shows app info (version, config, etc.) of the built-in Metatube service.
+- **Remote App Info**: Shows app info (version, config, etc.) of the remote Metatube service.
 
-![Metatube 插件测试](/img/plugin/metatube-05.png)
+![Metatube Plugin Test](/img/plugin/metatube-05.png)
 
-**Application Info Display**:
+**App info display**:
 
-- **Basic Info**: Includes version number, database version, etc.
-- **Actor Providers**: Data sources that provide actor data (avatars, basic information, etc.)
-- **Video Providers**: Data sources that provide video metadata (titles, descriptions, actors, directors, release dates, etc.)
+- **Basic Info**: Version, database version, etc.
+- **Actor Providers**: Data sources providing actor data (avatars, basic info, etc.).
+- **Video Providers**: Data sources providing video metadata (titles, descriptions, actors, directors, release dates, etc.).
 
 ### Notes
 
 #### Regional Restrictions
 
-Some provider sites (such as DMM) have strict restrictions on access regions, which may cause data retrieval failures.
+Some provider sites (like DMM) have strict regional access restrictions, which may cause data retrieval failures.
 
 :::tip Suggestion
-Deploy in Japan or US regions for optimal access results.
+Deploy in Japan or US regions for the best access results.
 :::
 
 #### Proxy Configuration
 
-- **Built-in Service**: Automatically synchronizes AMMDS's proxy configuration
-- **Remote Service**: You need to solve network access issues yourself to ensure the service can normally request provider sites
+- **Built-in Service**: Automatically uses AMMDS's proxy settings.
+- **Remote Service**: You need to handle network access yourself to ensure the service can reach provider sites.
 
 :::note Proxy Activation
-If the proxy does not take effect, it is recommended to restart the AMMDS service after configuring the proxy.
+If the proxy isn't working, try restarting the AMMDS service after configuring the proxy.
 :::
 
-## Common Issues
+## FAQ
 
 ### Service Unreachable
 
-**Troubleshooting Steps**:
-1. Check if the service is running normally
-2. Verify network connection is normal
-3. Confirm if the firewall allows access to the corresponding port
-4. Check if the TOKEN configuration is correct
+**Troubleshooting**:
+1. Check if the service is running.
+2. Verify network connectivity.
+3. Confirm firewall allows the port.
+4. Check if the TOKEN is configured correctly.
 
 ### Data Retrieval Failure
 
-**Possible Causes**:
-- Network environment restrictions (such as regional restrictions)
-- Data source sites temporarily unavailable
-- Service configuration errors
+**Possible causes**:
+- Network restrictions (like regional blocks).
+- Data source site temporarily unavailable.
+- Service configuration error.
 
 **Solutions**:
-- Try changing the deployment region
-- Check network proxy settings
-- Verify if data source configuration is correct
+- Try a different deployment region.
+- Check network proxy settings.
+- Verify data source configuration.
 
-### Translation Service Not Working
+### Translation Not Working
 
-**Troubleshooting Steps**:
-1. Confirm auto-translation feature is enabled
-2. Check if the translation service API key is correct
-3. Verify network connection is normal
-4. Try changing the translation service provider
+**Troubleshooting**:
+1. Confirm auto-translation is enabled.
+2. Check the translation service API key.
+3. Verify network connectivity.
+4. Try a different translation provider.

@@ -5,208 +5,208 @@ sidebar_label: "ThePornDB"
 
 # ThePornDB
 
-ThePornDB is a professional adult video metadata management tool primarily used for renaming video files, ensuring that media server plugins like Plex, Jellyfin, and Stash scripts can automatically match metadata without manual intervention. The tool supports both server mode and command-line mode operation, providing an efficient solution for media library management.
+ThePornDB is a professional adult video metadata management tool. Its main job is to rename video files so that media servers like Plex, Jellyfin, and Stash scripts can automatically match metadata — no manual renaming needed. It supports both server mode and command-line mode for easy media library management.
 
-Official Website: [https://theporndb.net/](https://theporndb.net/)
+Official Site: [https://theporndb.net/](https://theporndb.net/)
 
 <!-- truncate -->
 
 ## Core Features
 
-- 🎯 **Automatic Matching**: Intelligently identifies video files and automatically matches corresponding metadata
-- 🔧 **Multi-Mode Operation**: Supports both server mode and command-line mode
-- 🌍 **Multi-Platform Compatibility**: Seamlessly integrates with mainstream media servers like Plex and Jellyfin
-- 📦 **Rich Data Sources**: Provides comprehensive video metadata information
-- 🔗 **Stash-Box Support**: Compatible with Stash-Box metadata management system
+- 🎯 **Auto Matching**: Automatically identifies video files and finds matching metadata.
+- 🔧 **Multi-mode Operation**: Supports both server and command-line modes.
+- 🌍 **Cross-platform**: Seamlessly integrates with Plex, Jellyfin, and other major media servers.
+- 📦 **Rich Data Sources**: Provides comprehensive video metadata.
+- 🔗 **Stash-Box Support**: Compatible with the Stash-Box metadata management system.
 
 # Stash-Box
 
-Stash-Box is a self-hosted metadata management system developed in Go language, designed specifically for organizing and providing diverse content collections while meeting both SFW (Safe for Work) and NSFW (Not Safe for Work) management needs.
+Stash-Box is a self-hosted metadata management system written in Go, designed for organizing and serving all kinds of content collections — both SFW and NSFW.
 
-Official Website: [https://docs.stashapp.cc/](https://docs.stashapp.cc/)
+Official Site: [https://docs.stashapp.cc/](https://docs.stashapp.cc/)
 
 ## Plugin Configuration
 
 ### Prerequisites
 
-Before configuring the plugin, complete the following preparations:
+Before configuring the plugin, get these things ready:
 
 #### ThePornDB
 
 ##### Account Registration
 
-Visit ThePornDB official registration page to create an account:
+Visit ThePornDB's official registration page to create an account:
 
-- Registration Address: [https://theporndb.net/register](https://theporndb.net/register)
+- Registration: [https://theporndb.net/register](https://theporndb.net/register)
 
 ![ThePornDB Account Registration](/img/plugin/theporndb-04.png)
 
-##### API Key Acquisition
+##### Get Your API Key
 
-After registration, log in to your account and obtain an API key:
+After registering, log in and get your API key:
 
-- API Key Acquisition Address: [https://theporndb.net/user/api-tokens](https://theporndb.net/user/api-tokens)
+- API Key Page: [https://theporndb.net/user/api-tokens](https://theporndb.net/user/api-tokens)
 
 #### Stash-Box
 
-Stash-Box is the metadata management component of the Stash project, providing standardized metadata storage and retrieval services:
+Stash-Box is the metadata management component of the Stash project, providing standardized metadata storage and search:
 
 ##### Official Instances
 
-Visit the Stash-Box official documentation to view supported public instances:
+Visit the Stash-Box official docs to see supported public instances:
 
 - Instance List: [https://docs.stashapp.cc/metadata-sources/stash-box-instances/](https://docs.stashapp.cc/metadata-sources/stash-box-instances/)
 
-:::info Instance Description
-On this page, you can see public sites supported by Stash-Box, including ThePornDB. You can also deploy private Stash-Box instances according to the official documentation.
+:::info Instance Info
+This page shows all public sites supported by Stash-Box, including ThePornDB. You can also deploy your own private Stash-Box instance following the official docs.
 :::
 
-:::tip Compatibility Tip
-ThePornDB also supports use as a Stash-Box client, providing richer metadata retrieval capabilities.
+:::tip Compatibility
+ThePornDB can also be used as a Stash-Box client for richer metadata.
 :::
 
 ![Stash-Box Configuration](/img/plugin/theporndb-05.png)
 
-##### API Key Acquisition
+##### Get Your API Key
 
-Log in to the selected Stash-Box instance, generate and obtain an API key in user settings for subsequent client configuration.
+Log into your chosen Stash-Box instance, generate and get an API key in user settings — you'll need it for client configuration later.
 
-### Configuration Information
+### Configuration
 
-In the AMMDS management interface, access the configuration page through "Integrated Applications" → "Metadata" → "ThePornDB".
+In the AMMDS management interface, go to "Integrated Applications" → "Metadata" → "ThePornDB."
 
 ![ThePornDB Plugin Configuration](/img/plugin/theporndb-01.png)
 
-#### Basic Configuration Parameters
+#### Basic Config Parameters
 
 | Parameter | Description | Default Value | Recommendation |
 |-----------|-------------|---------------|----------------|
-| Startup Status | Controls whether to enable ThePornDB plugin | Disabled | Enable according to actual needs |
-| Service Address | The access address of ThePornDB service | `https://theporndb.net` | Official address is stable and reliable, no need to modify |
-| API Key | ThePornDB API key for service authentication | - | Enter the API key obtained from the official site |
+| Startup Status | Controls whether to enable ThePornDB plugin | Disabled | Enable as needed |
+| Service Address | ThePornDB service address | `https://theporndb.net` | Official address is stable — no need to change |
+| API Key | ThePornDB API key for authentication | - | Enter the API key from the official site |
 
 ![ThePornDB Advanced Configuration](/img/plugin/theporndb-02.png)
 
-#### Advanced Configuration Parameters
+#### Advanced Config Parameters
 
 | Parameter | Description | Default Value | Recommendation |
 |-----------|-------------|---------------|----------------|
-| Perceptual Hash Calculation | Whether to enable video perceptual hash calculation | Enabled | Depends on original video files, recommended to disable for non-standard video files |
-| Fuzzy Matching | Whether to perform fuzzy matching by file name | Disabled | Recommended to enable when perceptual hash calculation is disabled |
+| Perceptual Hash Calculation | Whether to enable video perceptual hash (analyzes video features for identification) | Enabled | Depends on original video files — disable for non-standard videos |
+| Fuzzy Matching | Whether to do fuzzy matching by file name | Disabled | Recommended if perceptual hash is disabled |
 
-:::info Configuration Notes
-- Perceptual hash calculation can improve recognition accuracy but increases system resource consumption
-- Fuzzy matching is suitable for scenarios with standardized file names but special video files
+:::info Config Notes
+- Perceptual hash improves recognition accuracy but uses more system resources.
+- Fuzzy matching works well when file names are standardized but video files are unusual.
 :::
 
 ### Stash Client
 
-By configuring Stash-Box clients, you can obtain richer metadata information:
+By configuring Stash-Box clients, you can get even more metadata:
 
 #### Add Client
 
-Click the "Add Client" button to enter the Stash-Box client configuration interface:
+Click the "Add Client" button to open the Stash-Box client config:
 
 ![Stash-Box Client Configuration](/img/plugin/theporndb-03.png)
 
-#### Configuration Parameters
+#### Config Parameters
 
-| Parameter | Description | Configuration Recommendation |
-|-----------|-------------|-------------------------------|
-| Enabled | Controls whether this Stash-Box client is active | Enable according to actual needs |
-| Client Name | Custom client identification name | Recommended to use site name for easy identification |
-| GraphQL Address | API access address of the Stash-Box site | Select from dropdown or manually enter complete URL |
-| API Key | Access key for the Stash-Box site | Enter the API key obtained from the corresponding site |
+| Parameter | Description | Recommendation |
+|-----------|-------------|----------------|
+| Enabled | Controls whether this Stash-Box client is active | Enable as needed |
+| Client Name | Custom client identifier | Use the site name for easy recognition |
+| GraphQL Address | Stash-Box site API address | Select from dropdown or enter the full URL manually |
+| API Key | Stash-Box site access key | Enter the API key from the corresponding site |
 
-#### Configuration Method
+#### Configuration Methods
 
-1. **Select Preset Site**: Select an officially preset Stash-Box site from the client name dropdown list, and the system will automatically fill in the GraphQL address
-2. **Manual Configuration**: To add a custom Stash-Box instance, manually enter the following information:
-   - GraphQL Address: Usually in the format `https://{site}/graphql`
-   - API Key: Generated in user settings of the corresponding Stash-Box site
+1. **Select Preset Site**: Pick an official preset Stash-Box site from the client name dropdown — the GraphQL address fills in automatically.
+2. **Manual Configuration**: For a custom Stash-Box instance, enter:
+   - GraphQL Address: Usually `https://{site}/graphql` format.
+   - API Key: Generate this in the Stash-Box site's user settings.
 
-:::tip Configuration Recommendations
-- It is recommended to add multiple Stash-Box clients to obtain more comprehensive metadata
-- Priority order affects metadata retrieval order, which can be adjusted according to needs
+:::tip Recommendations
+- Add multiple Stash-Box clients for more comprehensive metadata.
+- Priority order affects metadata retrieval order — adjust as needed.
 :::
 
 ### Test Module
 
-The test module provides the following functions to verify plugin configuration and service status:
+The test module helps verify plugin configuration and service status:
 
 #### Test Functions
 
 | Function | Description | Purpose |
-|----------|-------------|----------|
-| Test Connection | Verifies network connectivity to the ThePornDB service address | Confirms network connection is normal and service address is reachable |
-| Get User Information | Attempts to retrieve and display ThePornDB account information | Verifies if API key is correct and service authorization is successful |
+|----------|-------------|---------|
+| Test Connection | Verifies connectivity to the ThePornDB service address | Confirms the network is OK and the address is reachable |
+| Get User Info | Tries to retrieve and show ThePornDB account info | Verifies the API key is correct and authorization succeeded |
 
-#### Usage Recommendations
+#### Usage Tips
 
-- **Pre-configuration Test**: Before saving the configuration, it is recommended to test the connection status to ensure the service address is correct
-- **API Key Verification**: Verify the validity of the API key through the Get User Information function
-- **Troubleshooting**: When metadata retrieval fails, the test functions can be used to quickly locate problems
+- **Test before saving**: Try the connection test first to make sure the service address is fine.
+- **Verify API key**: Use "Get User Info" to check if the API key is valid.
+- **Troubleshoot**: When metadata retrieval fails, the test functions can help you quickly find the issue.
 
 :::info Test Notes
-- Test Connection only verifies network connectivity, not service status
-- Get User Information requires a valid API key and network connection
+- Test Connection only checks network — not service status.
+- Get User Info requires a valid API key and network connection.
 :::
 
 ## Common Issues
 
 ### Service Connection Failure
 
-**Possible Causes**:
-- Network connection issues
-- Incorrect service address configuration
+**Possible causes**:
+- Network issues
+- Wrong service address
 - Invalid API key
 
 **Solutions**:
-- Check if the network connection is normal
-- Verify if the service address format is correct
-- Confirm if the API key has expired or is incorrect
-- Try using the official default service address
+- Check network connectivity
+- Verify the service address format
+- Confirm the API key isn't expired or wrong
+- Try the official default service address
 
 ### Metadata Retrieval Failure
 
-**Possible Causes**:
+**Possible causes**:
 - Non-standard video file naming
-- Perceptual hash calculation failure
+- Perceptual hash calculation failed
 - Data source site temporarily unavailable
 
 **Solutions**:
-- Enable fuzzy matching functionality
-- Check if the video file format is supported
-- Try replacing the Stash-Box client
-- Retry the retrieval operation later
+- Enable fuzzy matching
+- Check if the video format is supported
+- Try a different Stash-Box client
+- Retry later
 
-### Stash-Box Client Configuration Error
+### Stash-Box Client Config Error
 
-**Possible Causes**:
-- Incorrect GraphQL address format
+**Possible causes**:
+- Wrong GraphQL address format
 - Insufficient API key permissions
 - Site access restrictions
 
 **Solutions**:
-- Verify if the GraphQL address contains the complete path
+- Make sure the GraphQL address has the full path
 - Ensure the API key has sufficient permissions
-- Check if the network environment supports accessing the site
-- Try using other Stash-Box instances
+- Check if the network can reach the site
+- Try a different Stash-Box instance
 
 ### Performance Issues
 
-**Possible Causes**:
-- Perceptual hash calculation consuming system resources
+**Possible causes**:
+- Perceptual hash using system resources
 - Multiple clients requesting simultaneously
 - High network latency
 
 **Solutions**:
-- For performance-limited devices, consider disabling perceptual hash calculation
-- Reasonably configure client priorities to avoid simultaneous requests
-- Select Stash-Box instances with lower network latency
+- For low-powered devices, consider disabling perceptual hash
+- Configure client priorities to avoid simultaneous requests
+- Pick Stash-Box instances with lower latency
 
 :::tip Best Practices
-- Regularly update API keys to ensure security
-- Only add necessary Stash-Box clients to avoid resource waste
-- Combine use of ThePornDB and Stash-Box to obtain more comprehensive metadata
+- Update API keys regularly for security.
+- Only add the Stash-Box clients you need to avoid wasting resources.
+- Use ThePornDB and Stash-Box together for more comprehensive metadata.
 :::

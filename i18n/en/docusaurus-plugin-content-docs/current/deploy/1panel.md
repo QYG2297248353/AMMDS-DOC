@@ -5,17 +5,17 @@ sidebar_label: "1Panel"
 
 # 1Panel Deployment Guide
 
-1Panel is a powerful server management panel that provides an intuitive web interface to help users efficiently manage applications, websites, files, databases, and large language models (LLMs) on Linux servers. This guide will detail the deployment process of AMMDS in a 1Panel environment.
+1Panel is a server management panel that lets you manage apps, websites, files, databases, and large language models (LLMs) through a web interface. Here's how to deploy AMMDS on 1Panel.
 
 <!-- truncate -->
 
 ## Install Third-Party App Store
 
-This solution is applicable to both 1Panel v1 and v2 versions.
+This solution works with both 1Panel v1 and v2.
 
 ### Automatic Installation
 
-The automatic installation solution updates the third-party app store content every 3 hours, ensuring you always get the latest app resources.
+The automatic installation updates the third-party app store content every 3 hours, so you always get the latest apps.
 
 #### Installation Script
 
@@ -31,7 +31,7 @@ curl -sSL https://install.lifebus.top/auto_uninstall.sh | bash
 
 ### Manual Installation
 
-The manual installation script only pulls the latest third-party app store content once. You need to run this script again for subsequent store content or version updates.
+Manual installation pulls the latest app store content once. To update later, run the script again.
 
 ```bash
 curl -sSL https://install.lifebus.top/app_install.sh | bash
@@ -39,121 +39,119 @@ curl -sSL https://install.lifebus.top/app_install.sh | bash
 
 ## Update Store Content
 
-### Operation Steps
+### Steps
 
-1. **Access Store Settings**
-   Navigate to the App Store via the left sidebar and click to enter the Store Settings page.
+1. **Enter Store Settings**
+   Go to the App Store via the left sidebar and click into Store Settings.
 
-2. **Execute Update Operation**
+2. **Perform Update**
 
    ![Update Store Content](/img/deploy/install-1panel-00.png)
 
    #### v1 Version
-   Click the "Update App List" button in the upper right corner of the store page.
+   Click the "Update App List" button in the top right corner of the store page.
 
    ![Update Store Content](/img/deploy/install-1panel-01.png)
 
    #### v2 Version
-   Click the "Sync Local Apps" button in the upper left corner of the store page.
+   Click the "Sync Local Apps" button in the top left corner of the store page.
 
 ## Install Application
 
-### App Search and Selection
+### Search and Select
 
 ![Installation](/img/deploy/install-1panel-02.png)
 
-1. **Search for AMMDS App**
-   Search for the "ammds" app in the App Store.
+1. **Search for AMMDS**
+   Search for "ammds" in the App Store.
 
-2. **Version Selection**
-   The system will display two versions of the AMMDS app:
-   - **Compatible Version**: Suitable for devices with lower hardware configurations
-   - **Latest Version**: Suitable for devices with higher hardware configurations
+2. **Choose a Version**
+   Two versions will be shown:
+   - **Compatible Version**: Suitable for lower-end devices
+   - **Latest Version**: Suitable for higher-end devices
 
    ![Installation](/img/deploy/install-1panel-03.png)
 
-### Installation Parameter Configuration
+### Configure Parameters
 
-After clicking the install button, a parameter configuration panel will appear.
+After clicking install, a configuration panel will appear.
 
 #### Basic Configuration
 
-- **Name**: It is recommended to fill in "ammds", or customize as needed
-- **Version**: It is recommended to select "Latest Version" to get the latest features
-- **Network Mode**: If there are no special requirements, it is recommended to keep the default configuration
-- **Data Persistence Path**: Fill in the absolute path on the server for storing AMMDS application data
-- **WebUI Port**: It is recommended to fill in 8080, or customize as needed
-- **API Port**: It is recommended to fill in 8081, or customize as needed
+- **Name**: Fill in "ammds" or customize as you like
+- **Version**: Select "Latest Version" recommended
+- **Network Mode**: Keep the default unless you have special needs
+- **Data Persistence Path**: Enter an absolute path on the server for storing AMMDS data
+- **WebUI Port**: 8080 recommended, or customize
+- **API Port**: 8081 recommended, or customize
 
-Other parameters are optional and can be filled in according to actual needs.
+Other parameters are optional — fill them in as needed.
 
 ![Installation](/img/deploy/install-1panel-04.png)
 
 #### Mount Directory Settings
 
-**Custom Mount Directory**: It is recommended to fill in the directory where media files are located, which is optional.
+**Custom Mount Directory**: It's recommended to fill in the directory where your media files are located. Optional.
 
 ![Installation](/img/deploy/install-1panel-05.png)
 
 #### Port Access Configuration
 
-**You must check the "External Port Access" option**, otherwise you will not be able to access the WebUI and API via the network.
+**You must check "External Port Access"**, otherwise you won't be able to access the WebUI and API over the network.
 
-Click the "Confirm" button to start installing the AMMDS application.
+Click "Confirm" to start the installation.
 
 ## Installation Complete
 
 ![Installation Complete](/img/deploy/install-1panel-06.png)
 
-### Verify Installation Success
+### Verify Installation
 
-After installation is complete, you can view the installed AMMDS application in the "Installed" tab.
+After installation, you'll see AMMDS in the "Installed" tab.
 
-### Management Function Introduction
+### Management Features
 
-The application card provides multiple quick operation buttons, including:
-- **Terminal**: Access the application container terminal
-- **Logs**: View application running logs
-- **Start**: Start the application service
-- **Stop**: Stop the application service
-- **Restart**: Restart the application service
-- **Uninstall**: Remove the application
-- **Rebuild**: Rebuild the application container
+The app card provides several quick actions:
+- **Terminal**: Enter the app container terminal
+- **Logs**: View running logs
+- **Start/Stop/Restart**: Manage the app service
+- **Uninstall**: Remove the app
+- **Rebuild**: Rebuild the app container
 
 ## Access Application
 
 ![Access Application](/img/deploy/install-1panel-07.png)
 
-### Access Method
+### How to Access
 
-After installation is complete, you can access AMMDS's WebUI and API interfaces through a browser:
+After installation, you can access AMMDS's WebUI and API through a browser:
 
 - **WebUI Address**: http://&lt;ServerIP&gt;:&lt;WebUIPort&gt;
 - **API Address**: http://&lt;ServerIP&gt;:&lt;APIPort&gt;
 
-### Default Login Information
+### Default Login
 
 - **Username**: ammds
 - **Password**: ammds
 
 :::info Security Tip
-After first login, please immediately change the default password to ensure system security.
+After first login, immediately change the default password for security.
 :::
 
-## Advanced Attempts
+## Advanced Options
 
 ### Custom Configuration
 
-If you are familiar with Docker container management, you can perform more detailed settings for the AMMDS application through 1Panel's advanced configuration options, including:
+If you're familiar with Docker, you can use 1Panel's advanced settings for more detailed configuration, including:
 
-- Resource limit adjustments (CPU, memory)
-- Environment variable configuration
+- Resource limits (CPU, memory)
+- Environment variables
 - Advanced network settings
 - Storage volume management
 
 ### Multi-Instance Deployment
 
-For users who need to isolate different functional scenarios, you can deploy multiple AMMDS instances in 1Panel, distinguished by different ports and data paths.
+If you need to isolate different use cases, you can deploy multiple AMMDS instances in 1Panel, distinguished by different ports and data paths.
 
 ## Warnings and Precautions
 
@@ -161,10 +159,10 @@ For users who need to isolate different functional scenarios, you can deploy mul
 
 :::danger Important Security Tips
 
-- **Official Sources**: Only obtain application installation scripts from official channels, avoid using third-party download sources
-- **Password Security**: Set strong passwords and change them regularly, avoid using weak passwords
-- **Port Security**: Ensure to modify default ports to reduce the risk of attacks
-- **External Access**: Configure port external access according to actual needs, avoid unnecessary exposure
+- **Official Sources**: Only get installation scripts from official channels, don't use third-party sources
+- **Password Security**: Set strong passwords and change them regularly
+- **Port Security**: Change default ports to reduce attack risk
+- **External Access**: Only enable external port access when necessary
 
 :::
 
@@ -174,64 +172,64 @@ For users who need to isolate different functional scenarios, you can deploy mul
 
 #### Minimum Configuration
 
-- Operating System: Linux distribution (supporting 1Panel installation)
-- Processor: Intel Core i3 or equivalent performance
+- Operating System: Linux distribution (supporting 1Panel)
+- Processor: Intel Core i3 or equivalent
 - Memory: 4GB RAM
-- Disk Space: At least 10GB of available space
+- Disk Space: At least 10GB available
 - Network: Broadband internet connection
 
 #### Recommended Configuration
 
-- Operating System: Linux distribution (supporting 1Panel installation)
-- Processor: Intel Core i5 or equivalent performance
+- Operating System: Linux distribution (supporting 1Panel)
+- Processor: Intel Core i5 or equivalent
 - Memory: 8GB RAM or more
-- Disk Space: 20GB of available space
+- Disk Space: 20GB available
 - Network: Stable broadband internet connection
 
 :::
 
 ### Usage Precautions
 
-- **Data Backup**: Regularly back up AMMDS configuration files and important data
-- **Resource Management**: Monitor server resource usage to avoid excessive resource occupation
-- **Network Connection**: Ensure stable network connection, especially when downloading resources and updating
-- **System Maintenance**: Regularly update 1Panel and related applications to ensure system stability
+- **Data Backup**: Regularly back up configuration files and important data
+- **Resource Management**: Keep an eye on server resource usage
+- **Network Connection**: Ensure a stable network when downloading resources and updates
+- **System Maintenance**: Regularly update 1Panel and related apps
 
 ### Troubleshooting
 
 #### Common Issues
 
-- **Installation Failure**: Check if network connection is normal and if disk space is sufficient
-- **Startup Abnormality**: View application logs for detailed error information
-- **Access Failure**: Check if port configuration is correct and if firewall allows access
-- **Upgrade Failure**: Try uninstalling the old version first and then installing the new version
+- **Installation Failure**: Check network connection and disk space
+- **Startup Issues**: Check app logs for error details
+- **Access Failure**: Check port configuration and firewall settings
+- **Upgrade Failure**: Try uninstalling the old version first, then install the new version
 
 #### Contact Information
 
-If you encounter unsolvable problems, please visit the official GitHub repository to submit an Issue or seek help.
+If you encounter issues you can't resolve, submit an Issue on the official GitHub repository.
 
 ## Best Practices
 
 ### Daily Maintenance
 
-- **Regular Updates**: Keep 1Panel and AMMDS updated to the latest versions to get the latest features and security fixes
-- **Status Monitoring**: Regularly check application running status and server resource usage
-- **Cache Cleaning**: Regularly clean application cache to optimize storage space usage
+- **Regular Updates**: Keep 1Panel and AMMDS up to date
+- **Monitor Status**: Regularly check app status and resource usage
+- **Clean Cache**: Regularly clean cache to optimize storage
 
-### Optimization Configuration
+### Optimization
 
-- **Resource Allocation**: Reasonably allocate application resource limits based on server performance
-- **Network Optimization**: Configure reasonable network settings to ensure smooth application access
-- **Storage Planning**: Reasonably plan data storage paths for easy management and backup
+- **Resource Allocation**: Allocate resources based on server performance
+- **Network Optimization**: Configure network settings properly
+- **Storage Planning**: Plan data storage paths for easy management
 
 ### Security Hardening
 
-- **Regular Password Changes**: Regularly update login passwords and access credentials
-- **Access Control**: Configure access control policies according to actual needs
-- **Log Auditing**: Regularly check application logs to promptly discover abnormal situations
+- **Regular Password Changes**: Update passwords regularly
+- **Access Control**: Configure access control as needed
+- **Log Auditing**: Check logs regularly for anomalies
 
 ### Community Participation
 
-- **Feedback Issues**: Provide timely feedback when encountering problems to help improve the product
-- **Share Experience**: Participate in community discussions and share usage experience and best practices
-- **Contribute Code**: If capable, you can participate in project development and contribute code
+- **Report Issues**: Provide timely feedback on problems
+- **Share Experience**: Participate in community discussions
+- **Contribute Code**: Help with project development if you can

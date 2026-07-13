@@ -5,7 +5,7 @@ sidebar_label: "Windows"
 
 # Windows Deployment Guide
 
-Microsoft Windows (referred to as Windows) is a series of proprietary commercial operating systems developed by Microsoft Corporation, featuring a graphical user interface as its core characteristic. It is widely used on personal computers, servers, and other devices. This guide will detail the deployment process of AMMDS in a Windows environment.
+Windows (Microsoft Windows) is a desktop operating system developed by Microsoft, widely used on personal computers and servers. Here's how to deploy AMMDS on Windows.
 
 <!-- truncate -->
 
@@ -19,24 +19,24 @@ Microsoft Windows (referred to as Windows) is a series of proprietary commercial
 
 ### Available Installation Package Types
 
-| File Name         | Type             | Description                                                                                                                                      |
-| ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ammds-setup.exe` | Installer        | Complete AMMDS Launcher installation package, including automatic installation wizard and all necessary components                               |
-| `ammds.zip`       | Portable Version | Green, no-install version that can be run directly after extraction, suitable for temporary use or environments without administrator privileges |
+| File Name         | Type             | Description                                                                                                                      |
+| ----------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ammds-setup.exe` | Installer        | Complete AMMDS Launcher installation package with auto-installation wizard and all necessary components                          |
+| `ammds.zip`       | Portable Version | Green, no-install version — just extract and run, great for temporary use or environments without admin privileges               |
 
 ### Recommended Download
 
 **Recommended Download:** `ammds-setup.exe`
 
-Using the installer ensures all dependent components are correctly installed and provides a better system integration experience.
+Using the installer automatically sets up all dependencies, making things much easier.
 
 ## Installation
 
-### Preconditions
+### Prerequisites
 
 - Operating System: Windows 10 or higher
 - Permissions: Administrator privileges required for installation
-- Network: Internet connection required for first launch to download necessary resources
+- Network: Internet connection needed on first launch to download necessary resources
 
 ### Installation Steps
 
@@ -54,7 +54,7 @@ Using the installer ensures all dependent components are correctly installed and
 
    ![Additional Components Selection Interface](/img/deploy/install-windows-02.png)
 
-   In the component selection interface, the system will list all available additional components. It is recommended to **select all components** to get complete functionality:
+   In the component selection interface, it is recommended to **select all components** for the most complete functionality:
    - Core Components: AMMDS Launcher main program
    - Dependencies: Required runtime environment
    - System Integration: Tray icon and auto-start functionality
@@ -69,7 +69,7 @@ Using the installer ensures all dependent components are correctly installed and
 
    ![Installation Progress Interface](/img/deploy/install-windows-04.png)
 
-   The installer will display the current installation progress and status. Please wait patiently for the installation to complete.
+   The installer will show the current installation progress — just wait a moment.
 
 6. **Complete Installation**
 
@@ -83,62 +83,62 @@ After installation is complete, the system will automatically start AMMDS Launch
 
 ![First Launch White Screen Status](/img/deploy/install-windows-06.png)
 
-**Note:** If a white screen appears during the first launch, this is a normal initialization process. The system is downloading necessary resource files in the background. Please wait patiently, and the page will automatically refresh after the download is complete.
+**Note:** If a white screen appears on first launch, don't panic — this is normal. The system is downloading necessary resource files in the background. The page will refresh automatically once the download is complete.
 
 ![AMMDS Launcher Main Interface](/img/deploy/install-windows-07.png)
 
-After the resource download is complete, the system will automatically enter the AMMDS Launcher main interface, where you can start using all features.
+After the resource download is complete, the system will automatically enter the AMMDS Launcher main interface, and you can start using it.
 
 ### Installation Notes
 
-- Do not close the installation window during the installation process
-- Ensure network connection is normal during first launch
-- If installation fails, check if you have sufficient disk space and administrator privileges
+- Don't close the installation window during installation
+- Make sure you have a stable internet connection on first launch
+- If installation fails, check your disk space and make sure you have administrator privileges
 
 ## Upgrade
 
 ### Pre-upgrade Preparation
 
-- **Backup Data**: It is recommended to backup AMMDS configuration files and important data before upgrading
-- **Close Program**: Ensure AMMDS Launcher is completely closed, including the tray icon
-- **Download New Version**: Download the latest version of `ammds-setup.exe` from the official GitHub Releases page
+- **Backup Data**: It's a good idea to back up your configuration files and important data before upgrading
+- **Close Program**: Make sure AMMDS Launcher is completely closed, including the tray icon
+- **Download New Version**: Download the latest `ammds-setup.exe` from the official GitHub Releases page
 
 ### Upgrade Steps
 
 1. **Launch the Upgrade Program**
 
-   Double-click the downloaded new version of `ammds-setup.exe` file to start the upgrade wizard.
+   Double-click the downloaded new version of `ammds-setup.exe` to start the upgrade wizard.
 
 2. **Follow the Upgrade Wizard**
 
-   The upgrade wizard will automatically detect the installed version and prompt for an overwrite upgrade. Follow the wizard prompts to complete the upgrade process.
+   The upgrade wizard will automatically detect the installed version and prompt you for an overwrite upgrade. Just follow the wizard.
 
 3. **Complete the Upgrade**
 
-   After the upgrade is complete, click the "Finish" button to exit the wizard, and the system will automatically start the new version of AMMDS Launcher.
+   After the upgrade is complete, click the "Finish" button to exit the wizard. The system will automatically start the new version of AMMDS Launcher.
 
-### Upgrade Mechanism Description
+### Upgrade Mechanism
 
-AMMDS Launcher uses an **overwrite upgrade** mechanism with the following characteristics:
+AMMDS Launcher uses an **overwrite upgrade** with these characteristics:
 
-- Preserve user configuration and data: The upgrade process will retain existing configuration files and data directories
-- Update core components: Automatically replace old version executable files and dependency libraries
-- Maintain system integration: Tray icon, auto-start, and other system integration settings will be preserved
+- Preserves user configuration and data: Won't touch your existing configuration files and data
+- Updates core components: Automatically replaces old program files
+- Maintains system integration: Tray icon, auto-start, and other settings are preserved
 
 ### Post-upgrade Verification
 
-After the upgrade is complete, it is recommended to perform the following verifications:
+After the upgrade, it's recommended to check:
 
-1. Check if AMMDS Launcher starts normally
-2. Verify if the version number has been updated (can be viewed on the About page)
-3. Confirm all features are working normally
-4. Check if data and configurations are completely preserved
+1. AMMDS Launcher starts normally
+2. Version number is up to date (check on the About page)
+3. All features work correctly
+4. Data and configurations are preserved
 
 ### Upgrade Notes
 
-- Do not close the upgrade window during the upgrade process
-- If upgrade fails, try uninstalling the old version first and then installing the new version
-- Major version upgrades may require re-downloading some resource files
+- Don't close the upgrade window during the upgrade process
+- If the upgrade fails, try uninstalling the old version first, then install the new version
+- Major version upgrades might need to re-download some resource files
 
 ## System Tray Management
 
@@ -146,32 +146,32 @@ After the upgrade is complete, it is recommended to perform the following verifi
 
 ### Tray Function Overview
 
-After AMMDS Launcher is installed, it will create a dedicated icon in the Windows system tray, providing quick access and management functions. By right-clicking on the tray icon, you can open the function menu and perform various operations.
+After installation, an AMMDS icon will appear in the Windows system tray area (bottom right). Right-click to open the function menu.
 
 ### Tray Menu Functions
 
-| Menu Item               | Function Description                              | Technical Description                                                                           |
-| ----------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **Open Data Directory** | Open AMMDS resource storage directory             | Directly navigate to `%APPDATA%\AMMDS` directory, containing data, configuration, and log files |
-| **Start**               | Start AMMDS Launcher service                      | Start background service process, ready to receive connections                                  |
-| **Restart**             | Restart AMMDS Launcher                            | Stop existing process first, then restart, used to apply configuration changes                  |
-| **Stop**                | Stop AMMDS Launcher service                       | Stop background service process, release system resources                                       |
-| **Exit**                | Completely exit AMMDS Launcher                    | Stop service and remove tray icon, completely release all resources                             |
-| **Open Panel**          | Open AMMDS Launcher main interface                | Start and display Web management interface, used for configuring and managing AMMDS             |
-| **Start Auto-start**    | Toggle auto-start functionality at system startup | Add or remove AMMDS Launcher from Windows startup items                                         |
+| Menu Item               | Function                              | Description                                                                                   |
+| ----------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Open Data Directory** | Open AMMDS resource directory         | Goes directly to `%APPDATA%\AMMDS`, which contains data, configuration, and log files         |
+| **Start**               | Start AMMDS Launcher service          | Starts the background service process                                                         |
+| **Restart**             | Restart AMMDS Launcher                | Stops then starts again, used to apply configuration changes                                  |
+| **Stop**                | Stop AMMDS Launcher service           | Stops the background service and releases system resources                                    |
+| **Exit**                | Completely exit AMMDS Launcher        | Stops the service and removes the tray icon, completely releasing all resources               |
+| **Open Panel**          | Open AMMDS Launcher main interface    | Launches and displays the web management interface                                            |
+| **Start Auto-start**    | Toggle auto-start on system boot      | Adds or removes AMMDS Launcher from Windows startup items                                     |
 
-### Tray Icon Status Explanation
+### Tray Icon Status
 
 - **Color Icon**: AMMDS Launcher service is running
 - **Gray Icon**: AMMDS Launcher service has stopped
-- **Blinking Icon**: AMMDS Launcher is in the process of starting or restarting
+- **Blinking Icon**: AMMDS Launcher is starting or restarting
 
 ### Usage Suggestions
 
-- **Daily Management**: Use the tray menu for quick start, stop, and restart operations
-- **Troubleshooting**: When encountering problems, you can try to solve them through the restart function
-- **System Optimization**: If AMMDS is not used for a long time, it is recommended to use the exit function to completely release resources
-- **Auto-start**: For scenarios that require continuous operation, it is recommended to enable the auto-start function
+- **Daily Management**: Use the tray menu for quick start, stop, and restart
+- **Troubleshooting**: Try the restart function when you run into issues
+- **Long Periods of Inactivity**: Use the exit function to fully release resources
+- **Auto-start**: If you need it running all the time, it's recommended to enable auto-start
 
 ## Run Logs and Data Management
 
@@ -179,152 +179,65 @@ After AMMDS Launcher is installed, it will create a dedicated icon in the Window
 
 ![AMMDS Data Directory Structure](/img/deploy/install-windows-09.png)
 
-All AMMDS data and configuration files are stored in a dedicated data directory, with the default path: `%APPDATA%\AMMDS`
+All data and configuration files are stored at: `%APPDATA%\AMMDS`
 
-**Directory Structure Explanation:**
+**Directory Explanation:**
 
-| Directory | Function Description          | Technical Details                                                                                                                        |
-| --------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`    | Store AMMDS resource files    | Contains model files, configuration templates, presets and other core resources, which will be automatically downloaded on first startup |
-| `db`      | Store AMMDS database files    | Contains user configurations, operation history, task records and other structured data                                                  |
-| `logs`    | Store AMMDS running log files | Contains system logs, error records, resource download logs, etc.                                                                        |
+| Directory | Function                     | Description                                                                              |
+| --------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
+| `data`    | Store AMMDS resource files   | Contains model files, configuration templates, etc. — automatically downloaded on first startup |
+| `db`      | Store AMMDS database files   | Contains user configurations, operation history, etc.                                    |
+| `logs`    | Store AMMDS running logs     | Contains system logs, error records, etc.                                                 |
 
 ### Log File Description
 
 ![AMMDS Resource Download Log](/img/deploy/install-windows-10.png)
 
-#### Log File Storage Structure
-
-AMMDS log files are mainly stored in two locations:
+Log files are mainly stored in two locations:
 
 **1. AMMDS Core Logs (data/logs directory)**
-| Log File | Function Description |
-|----------|---------------------|
-| `data/logs/ammds.log` | System running log, recording AMMDS startup, stop, errors and other system events |
-| `data/logs/ammds-202x-xx-xx.log` | Date-named running log, recording AMMDS detailed running status and operation records |
-| `data/logs/ammds-error.log` | Error log, specifically recording error information during system operation |
+| Log File | Description |
+|----------|-------------|
+| `data/logs/ammds.log` | System running log, records startup, stop, errors, etc. |
+| `data/logs/ammds-202x-xx-xx.log` | Date-named running log, records detailed running status |
+| `data/logs/ammds-error.log` | Error log, specifically records error information |
 
 **2. Windows Launcher Logs (logs directory)**
-| Log File | Function Description |
-|----------|---------------------|
-| `logs/launcher.log` | Launcher log, recording Windows AMMDS Launcher startup process, configuration information and system integration status |
-
-#### Log Content Interpretation
-
-#### AMMDS Core Log Content
-
-**1. System Running Log (`data/logs/ammds.log`)**
-
-- Records AMMDS startup and stop events
-- System-level errors and warning information
-- Configuration loading and initialization status
-- Service startup and stop status
-
-**2. Detailed Running Log (`data/logs/ammds-202x-xx-xx.log`)**
-
-- Detailed operation records and status changes
-- User operations and system responses
-- Resource usage and performance metrics
-- Scheduled task execution status
-
-**3. Error Log (`data/logs/ammds-error.log`)**
-
-- Detailed error stack information
-- Context of exception occurrence
-- Time and conditions of error occurrence
-- Possible error cause analysis
-
-#### Windows Launcher Log Content
-
-**Launcher Log (`logs/launcher.log`)**
-
-- Launcher startup process and configuration loading
-- System integration status (tray icon, auto-start)
-- Communication status with AMMDS core
-- Launcher's own errors and warnings
-
-#### Resource Download Log
-
-**Resource Download Log** (included in relevant log files):
-
-- Resource file name and version information
-- Download progress and speed statistics
-- Download status (success/failure/retry)
-- Download timestamp and duration
-- Download server information
+| Log File | Description |
+|----------|-------------|
+| `logs/launcher.log` | Launcher log, records startup process, configuration, and system integration status |
 
 :::info Progress Indicator
-When the log shows the progress has reached 100%, it means all necessary resource files have been downloaded completely
+When the log shows the progress has reached 100%, it means all necessary resource files have been downloaded.
 :::
 
-### Log Usage Methods
+### Log Usage
 
-#### 1. Troubleshooting
+**Troubleshooting:**
+- First check `data/logs/ammds-error.log` for error details
+- Check `data/logs/ammds.log` to understand startup and initialization status
+- For launcher issues, check `logs/launcher.log`
 
-**AMMDS Core Issues**
+**Resource Management:**
+- Check logs to see which resources failed to download
+- Regularly clean up old logs to save disk space
 
-- Check `data/logs/ammds-error.log` for detailed error information
-- Refer to `data/logs/ammds.log` to understand system startup and initialization status
-- Analyze `data/logs/ammds-202x-xx-xx.log` to view operation records before and after the error occurred
+**Performance Analysis:**
+- Use log timestamps to see how long operations take
+- Analyze startup time to optimize configuration
 
-**Launcher Issues**
-
-- Check `logs/launcher.log` to understand the launcher startup process and configuration status
-- Check the communication status with AMMDS core
-
-#### 2. Resource Management
-
-**Resource Download Issues**
-
-- Analyze download records in the logs to troubleshoot failed resource downloads
-- Check download server connection status
-- Confirm resource file version and integrity
-
-**Disk Space Management**
-
-- Monitor log file sizes and regularly clean up expired logs
-- Analyze resource file download volume and plan disk space reasonably
-
-#### 3. Performance Analysis
-
-**System Performance**
-
-- Analyze timestamps in the logs to understand the execution time of various operations
-- Monitor resource usage and optimize system configuration
-- Identify performance bottlenecks and adjust system parameters
-
-**Startup Time Optimization**
-
-- Analyze startup process time consumption in `logs/launcher.log`
-- Check initialization time in `data/logs/ammds.log`
-- Optimize startup items and configurations to reduce startup time
-
-#### 4. Log File Management
-
-**Log Rotation**
-
-- AMMDS automatically performs log rotation, generating date-named log files
-- Expired logs will be compressed or cleaned up to maintain reasonable disk usage
-
-**Log Backup**
-
-- Regularly back up important log files, especially error logs
-- Back up current logs before system upgrades for problem comparison analysis
-
-**Log Level Adjustment**
-
-- Adjust log levels as needed to balance detail and performance impact
-- Use detailed logs when debugging issues, and standard logs during normal operation
+**Log Management:**
+- AMMDS automatically rotates logs by date, old logs are cleaned up automatically
+- You can adjust the log level in configuration (use detailed logs for debugging, standard logs for normal use)
 
 ### First Launch Notes
 
 :::warning First Launch Reminder
-When launching AMMDS for the first time, the system will perform the following operations. Please wait patiently:
+When launching AMMDS for the first time, the system will automatically download necessary resource files. Please be patient:
 
-- **Resource Download**: Automatically download necessary resource files, including model files, dependency libraries, etc.
-- **Time Estimation**: Depending on network speed, first launch may take 5-30 minutes
-- **Network Requirements**: Please ensure a stable network connection to avoid interrupting the network during download
-- **Disk Space**: Sufficient disk space is required to store downloaded resource files, it is recommended to reserve at least 10GB of space
+- **Time Estimate**: Depending on your network speed, first launch may take 5-30 minutes
+- **Network Requirements**: Make sure you have a stable internet connection, don't disconnect during download
+- **Disk Space**: It's recommended to have at least 10GB of free space
   :::
 
 ## Warnings and Notes
@@ -333,9 +246,9 @@ When launching AMMDS for the first time, the system will perform the following o
 
 :::danger Important Security Tips
 
-- **Official Source**: Only download AMMDS installation packages from the official GitHub Releases page, avoid using third-party download sources
-- **Antivirus Software**: If you encounter antivirus software prompts during installation, please confirm it is a false positive and add trust
-- **Administrator Privileges**: Installation and upgrade processes require administrator privileges, please ensure you run the installer as an administrator
+- **Official Source**: Only download AMMDS from the official GitHub Releases page, don't use third-party sources
+- **Antivirus Software**: If your antivirus alerts during installation, confirm it's a false positive and add an exception
+- **Administrator Privileges**: Installation and upgrades require admin privileges, make sure to run as administrator
   :::
 
 ### System Requirements
@@ -345,44 +258,43 @@ When launching AMMDS for the first time, the system will perform the following o
 #### Minimum Configuration
 
 - Operating System: Windows 10 64-bit
-- Processor: Intel Core i3 or equivalent performance
+- Processor: Intel Core i3 or equivalent
 - Memory: 4GB RAM
-- Disk Space: At least 10GB available space
+- Disk Space: At least 10GB available
 - Network: Broadband internet connection
 
 #### Recommended Configuration
 
 - Operating System: Windows 10/11 64-bit
-- Processor: Intel Core i5 or equivalent performance
+- Processor: Intel Core i5 or equivalent
 - Memory: 8GB RAM or more
-- Disk Space: 20GB available space
+- Disk Space: 20GB available
 - Network: Stable broadband internet connection
 
 :::
 
 ### Usage Notes
 
-- **Data Backup**: Regularly back up AMMDS data directory, especially important configuration files and model files
-- **Resource Management**: Monitor disk space usage and clean up unnecessary resource files in time
-- **Network Connection**: Ensure a stable network connection, especially when downloading resources and updates
-- **System Maintenance**: Regularly update Windows system and related drivers to ensure system stability
+- **Data Backup**: Regularly back up the AMMDS data directory, especially configuration and model files
+- **Resource Management**: Keep an eye on disk space and clean up unnecessary files in time
+- **Network Connection**: Make sure your network is stable when downloading resources and updates
+- **System Maintenance**: Regularly update Windows and drivers
 
 ### Troubleshooting
 
 #### Common Issues
 
-- **Installation Failure**: Check administrator privileges and disk space
-- **White Screen on Startup**: Wait for resource download to complete, or check network connection
-- **Function Abnormalities**: View log files to locate issues, or restart AMMDS Launcher
-- **Upgrade Failure**: Try uninstalling the old version first and then installing the new version
+- **Installation Failure**: Check admin privileges and disk space
+- **White Screen on Startup**: Wait for resources to download, or check your network connection
+- **Feature Issues**: Check logs to find the problem, or restart AMMDS Launcher
+- **Upgrade Failure**: Try uninstalling the old version first, then install the new version
 
 #### Contact Information
 
-If you encounter problems that cannot be resolved, please visit the official GitHub repository to submit an Issue or seek help
+If you encounter issues you can't resolve, submit an Issue on the official GitHub repository.
 
 ### Best Practices
 
-- **Regular Updates**: Keep AMMDS Launcher updated to the latest version to get the latest features and security fixes
-- **Reasonable Configuration**: Configure AMMDS parameters reasonably based on system performance to avoid excessive resource usage
-- **Safe Usage**: Follow the official documentation guidelines and avoid modifying core configuration files
-- **Community Participation**: Participate in the AMMDS community, share usage experience and provide feedback on issues
+- **Regular Updates**: Keep AMMDS Launcher up to date
+- **Reasonable Configuration**: Set parameters based on your computer's performance
+- **Safe Usage**: Follow the official documentation and don't modify core configuration files

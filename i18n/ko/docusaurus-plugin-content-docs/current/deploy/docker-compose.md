@@ -5,56 +5,56 @@ sidebar_label: "Docker Compose"
 
 # Docker Compose 
 
-Docker Compose는 다중 컨테이너 Docker 애플리케이션을 정의하고 실행하기 위한 도구입니다. 단일 YAML 파일(docker-compose.yml)을 통해 애플리케이션의 모든 서비스를 구성한 다음 한 명령으로 모든 서비스를 시작할 수 있습니다. 개발, 테스트 및 스테이징 환경에서 애플리케이션을 신속하게 배포하고 관리하는 데 매우 적합합니다.
+Docker Compose는 "원클릭 실행 도구"입니다. 여러 컨테이너를 함께 실행해야 할 때, 매번 명령어를 입력하는 번거로움을 없애줍니다. Compose를 사용하면 모든 설정을 하나의 파일에 작성하고, 앞으로는 한 줄의 명령어로 모든 것을 처리할 수 있습니다.
 
 <!-- truncate -->
 
 ## 서비스 생성
 
-### 응용 프로그램 디렉터리 생성
+### 애플리케이션 디렉터리 생성
 
-먼저 관련 파일을 저장할 `ammds`라는 디렉터리를 생성합니다:
+먼저 `ammds`라는 폴더를 만들어서 관련 파일을 저장하세요:
 
 ```bash
 mkdir ammds && cd ammds
 ```
 
-### 구성 파일 생성
+### 설정 파일 생성
 
-`ammds` 디렉터리에서 `docker-compose.yml` 파일을 생성하고 편집합니다. 다음 내용을 파일에 붙여넣습니다:
+`ammds` 폴더에 `docker-compose.yml` 파일을 만들고, 다음 내용을 복사하여 붙여넣으세요:
 
 ```yaml
 services:
   ammds:
-    image: qyg2297248353/ammds:latest  # Docker 이미지 이름 및 버전 태그
+    image: qyg2297248353/ammds:latest  # AMMDS의 "설치 패키지" 주소
     container_name: AMMDS  # 컨테이너 이름
     ports:
-      - "8080:80"  # 포트 매핑: 호스트 포트 8080을 컨테이너 포트 80에 매핑
+      - "8080:80"  # 서버의 8080 포트를 AMMDS(80 포트)에 "연결", 접속 시 8080 사용
     volumes:
-      - ./data:/ammds/data  # 현재 디렉터리의 data 폴더를 컨테이너의 /ammds/data에 마운트
-      - ./db:/ammds/db  # 현재 디렉터리의 db 폴더를 컨테이너의 /ammds/db에 마운트
-      - ./download:/ammds/download  # 현재 디렉터리의 download 폴더를 컨테이너의 /ammds/download에 마운트
-      - ./media:/media  # 현재 디렉터리의 media 폴더를 컨테이너의 /media에 마운트
-    restart: always  # 컨테이너가 실패할 때 항상 자동으로 재시작하도록 설정
+      - ./data:/ammds/data  # ./data 폴더를 AMMDS와 공유하여 데이터 저장
+      - ./db:/ammds/db  # ./db 폴더를 AMMDS와 공유하여 데이터베이스 저장
+      - ./download:/ammds/download  # ./download 폴더를 공유하여 다운로드 파일 저장
+      - ./media:/media  # ./media 폴더를 공유하여 영화 파일 저장
+    restart: always  # 오류 발생 시 자동 재시작
     environment:
-      - TZ=Asia/Shanghai  # 시간대를 Asia/Shanghai로 설정
+      - TZ=Asia/Shanghai  # 시간대를 동8구(베이징 시간)로 설정
     networks:
-      - ammds-network  # 사용자 정의 네트워크 사용
+      - ammds-network  # 사용자 정의 네트워크에 연결
 
 networks:
-  ammds-network:  # 사용자 정의 네트워크 구성
-    driver: bridge  # Docker의 기본 bridge 네트워크 드라이버 사용
+  ammds-network:  # 사용자 정의 네트워크, 여러 컨테이너가 통신할 수 있도록 함
+    driver: bridge  # Docker 기본 네트워크 모드 사용
 ```
 
 :::note
-로컬 미디어 디렉터리를 컨테이너에 마운트하십시오. 데이터 손실을 방지하려면 /ammds를 미디어 마운트 디렉터리 접두사로 사용하지 마십시오.
+로컬 미디어 디렉터리를 컨테이너에 마운트하세요. 데이터 손실을 방지하려면 `/ammds`를 미디어 마운트 디렉터리 접두사로 사용하지 마세요.
 
-**예시:** 호스트 디렉터리가 `/mnt/movie`인 경우 권장되는 마운트 형식은 `- /mnt/movie:/mnt/movie`입니다.
+**예시:** 호스트 디렉터리가 `/mnt/movie`인 경우 권장 마운트 형식은 `- /mnt/movie:/mnt/movie`입니다.
 :::
 
-## 클라우드 드라이브 사용자를 위한 특별 구성
+## 클라우드 드라이브 사용자를 위한 특별 설정
 
-CloudDrive와 같은 클라우드 드라이브 마운트를 사용하는 경우 `docker-compose.yml` 파일에서 다음 구성을 사용하십시오:
+CloudDrive와 같은 클라우드 드라이브 마운트를 사용하는 경우 설정 파일을 약간 수정해야 합니다:
 
 ```yaml
 services:
@@ -87,18 +87,18 @@ networks:
 
 ### 클라우드 드라이브 사용자 특별 설명
 
-- `:rw,rshared`：기본 읽기/쓰기 권한 외에도 `rshared`는 컨테이너 간에 공유 전파를 유지할 수 있습니다.
-- `cap_add: - SYS_ADMIN`：컨테이너가 시스템 리소스에 액세스하도록 허용합니다.
-- `devices: - "/dev/fuse:/dev/fuse"`：컨테이너가 FUSE 장치에 액세스하도록 허용합니다.
-- `security_opt: - apparmor:unconfined`：컨테이너가 제한되지 않은 AppArmor 구성을 사용하도록 허용합니다.
+- `:rw,rshared`: 읽기/쓰기뿐만 아니라 여러 컨테이너 간에 폴더를 "공유"할 수 있습니다
+- `cap_add: - SYS_ADMIN`: 컨테이너에 일부 시스템 관리 권한을 부여하여 클라우드 드라이브가 정상 작동하도록 합니다
+- `devices: - "/dev/fuse:/dev/fuse"`: 컨테이너가 FUSE 장치(클라우드 드라이브 마운트에 필요한 "브리지")에 접근할 수 있도록 허용
+- `security_opt: - apparmor:unconfined`: 보안 제한을 해제하여 클라우드 드라이브 마운트 오류 방지
 
 :::warning
-이 배포 방식은 "클라우드 드라이브 마운트 + 디렉토리 모니터링" 방식에는 적합하지 않습니다. "디렉토리 모니터링" 대신 "주기적 스캔"을 사용하십시오.
+이 방식은 "클라우드 드라이브 마운트 + 디렉터리 모니터링" 기능을 사용할 수 없습니다. "정기 스캔"을 대신 사용하세요.
 :::
 
 ## 서비스 시작
 
-다음 명령을 사용하여 서비스를 시작합니다. 이렇게 하면 AMMDS 컨테이너가 백그라운드에서 실행되고 docker-compose.yml 파일의 모든 구성이 적용됩니다:
+`ammds` 폴더에서 다음 명령어를 실행하면 모든 서비스가 시작됩니다:
 
 ```bash
 docker compose up -d
@@ -106,27 +106,27 @@ docker compose up -d
 
 ## 서비스 중지
 
-서비스를 중지하고 제거해야 하는 경우 다음 명령을 사용하십시오:
+서비스를 중지하고 제거하려면 다음 명령어를 사용하세요:
 
 ```bash
 docker compose down
 ```
 
-## 서비스 액세스
+## 서비스 접속
 
-브라우저를 통해 서비스에 액세스할 수 있습니다:
+브라우저를 열고 다음 주소를 입력하세요:
 
 ```
 http://127.0.0.1:8080
 ```
 
-액세스 URL 형식: `호스트 IP 주소 + 서비스 포트`
+서버에 배포한 경우 `127.0.0.1`을 서버의 IP 주소로 바꾸면 됩니다.
 
-## 기본 자격 증명
+## 기본 계정 정보
 
-- **사용자 이름**：`ammds`
-- **비밀번호**：`ammds`
+- **사용자 이름**: `ammds`
+- **비밀번호**: `ammds`
 
 :::tip
-자격 증명이 명확하게 보이지 않는 경우 밝은 모드로 전환하십시오.
+글자가 잘 보이지 않으면 라이트 모드로 전환하세요.
 :::

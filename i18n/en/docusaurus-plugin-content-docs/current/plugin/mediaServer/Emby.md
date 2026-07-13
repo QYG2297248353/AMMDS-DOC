@@ -5,9 +5,7 @@ sidebar_label: "Emby"
 
 # Emby
 
-Emby is a powerful multimedia management application suite designed for organizing, managing, and sharing digital media files. Through this plugin, AMMDS can integrate with Emby media server to implement metadata synchronization and media library management.
-
-<!-- truncate -->
+Emby is a powerful multimedia management tool for organizing, managing, and sharing your videos, music, and other digital files. Through this plugin, AMMDS can connect with Emby to sync metadata and manage media libraries.
 
 ## Plugin Configuration
 
@@ -18,38 +16,38 @@ Emby is a powerful multimedia management application suite designed for organizi
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
 | Enable Status | Controls whether to enable the Emby plugin | Disabled |
-| Service Address | Emby server network endpoint | `http://127.0.0.1:8096` |
+| Service Address | Emby server access address | `http://127.0.0.1:8096` |
 | API Key | Emby server authentication token | - |
-| Username | (Optional) Emby server login username | - |
-| Password | (Optional) Emby server login password | - |
+| Username | (Optional) Emby login username | - |
+| Password | (Optional) Emby login password | - |
 | Bind User | Select the Emby user account to bind | - |
 
 ![Plugin Configuration](/img/plugin/emby-02.png)
 
 ### Configuration Notes
 
-- **Service Address**: Please use the server's actual network address. Avoid using `localhost` or `127.0.0.1`, as this may cause connection failures in containerized deployments
-- **API Key**: Can be generated in the Emby management interface under "System" → "Advanced" → "API Keys"
-- **Bind User**: You must first enter the correct service address and API key and save before you can select a user from the dropdown list
+- **Service Address**: Use the server's actual network address. Don't use `localhost` or `127.0.0.1`, or it may not connect properly in Docker deployments.
+- **API Key**: Generate this in Emby's admin panel at "System" → "Advanced" → "API Keys."
+- **Bind User**: You must enter the correct service address and API key and save first, then you can select a user from the dropdown.
 
 ### Connection Verification
 
-- **Network Connectivity**: Ensure the AMMDS server can access the Emby service address
-- **Authentication Information**: API key must have sufficient permissions to perform required operations
-- **Service Status**: Ensure the Emby server is running and can properly respond to API requests
+- **Network Connectivity**: Make sure the AMMDS server can reach the Emby service address.
+- **Authentication**: The API key needs sufficient permissions to perform the required operations.
+- **Service Status**: Make sure Emby is running and can respond to API requests.
 
 ## Features
 
-- **Metadata Synchronization**: Supports bidirectional metadata synchronization with Emby media libraries
-- **User Binding**: Can bind to specific Emby users for personalized configuration
-- **Status Monitoring**: Real-time monitoring of Emby server running status
+- **Metadata Sync**: Bidirectional metadata sync with Emby media libraries.
+- **User Binding**: Bind to a specific Emby user for personalized setup.
+- **Status Monitoring**: Monitors Emby server status in real-time.
 
 ## Notes
 
-:::warning Service Address Configuration
-Do not use `localhost` or `127.0.0.1` as the service address, especially in containerized deployment environments, as this may cause connection failures.
+:::warning Service Address
+Don't use `localhost` or `127.0.0.1` as the service address, especially in Docker environments — it may cause connection issues.
 :::
 
 :::info API Key Permissions
-It is recommended to create a dedicated API key for AMMDS with appropriate permission scope to ensure system security.
+It's recommended to create a dedicated API key for AMMDS with only the necessary permissions — more secure that way.
 :::

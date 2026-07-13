@@ -5,7 +5,7 @@ sidebar_label: "常见问题"
 
 # 常见问题
 
-使用过程中常见的问题。
+这里汇总了使用 AMMDS 时常见的问题和解决办法。
 
 <!-- truncate -->
 
@@ -14,36 +14,36 @@ sidebar_label: "常见问题"
 <details>
   <summary>🔍 日志显示 CPU 不支持 x86-64-v2？</summary>
   
-  您设备的 CPU 太旧了。您可以选择带有 `ol8` 标签的镜像。
+  你设备的 CPU 太老了。可以选择带 `ol8` 标签的镜像来用。
 </details>
 
 <details>
-  <summary>⌛ 首次部署后为什么没有响应？</summary>
+  <summary>⌛ 首次部署后为什么没反应？</summary>
   
-  首次部署时，系统需要下载并初始化必要的资源文件，这需要一些时间。请等待几分钟。如果仍然没有响应，请尝试刷新页面。
+  第一次部署时，系统要下载和初始化必要的资源文件，需要等一会儿。等几分钟后如果还是没反应，试试刷新页面。
 </details>
 
 <details>
-  <summary>⏬ 资源下载很慢？</summary>
+  <summary>⏬ 下载资源太慢？</summary>
   
-  由于资源文件较大，下载速度可能会很慢。您可以尝试以下方法来加速：
-  - 更改网络环境，例如配置 HTTP_PROXY 和 HTTPS_PROXY 环境变量来加速网络
-  - 手动下载资源并重启应用
+  资源文件比较大，下载慢是正常的。可以试试下面的方法加速：
+  - 换个网络环境，比如配置 HTTP_PROXY 和 HTTPS_PROXY 环境变量来加速
+  - 手动下载资源，然后重启应用
 </details>
 
 <details>
-  <summary>📁 监控目录注册失败，启动立即退出？</summary>
+  <summary>📁 监控目录注册失败（系统监控文件夹出问题了），启动后马上退出？</summary>
   
-  这通常是由于配置文件或环境变量不正确导致的。请检查应用程序的配置文件是否正确，并确保环境变量设置正确。
+  这通常是配置文件或环境变量没设对导致的。请检查配置文件和环境变量是否正确。
   
-  如果您看到以下日志：
+  如果你看到下面这些日志：
   ```
   Error creating bean with name 'directoryWatcherService': Instantiation of supplied bean failed
   User limit of inotify instances reached or too many open files
   User limit of inotify watches reached
   ```
   
-  请尝试增加系统的 inotify 实例限制：
+  试试增加系统的 inotify 限制：
   ```bash
   echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
   echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf
@@ -56,43 +56,43 @@ sidebar_label: "常见问题"
 ## 💡 使用问题
 
 <details>
-  <summary>🖱️ 点击菜单时为什么没有响应？</summary>
+  <summary>🖱️ 点了菜单没反应？</summary>
   
-  这通常是由于页面暂时卡住或资源未完全加载导致的。尝试刷新页面。如果问题仍然存在，请检查浏览器控制台是否有错误消息。
+  可能是页面卡住了，或者资源没加载完。先试试刷新页面。如果还是不行，看看浏览器控制台有没有报错。
 </details>
 
 <details>
-  <summary>⚪ 打开后为什么是白屏？</summary>
+  <summary>⚪ 打开后是白屏？</summary>
   
-  这通常是由于网络资源加载不完全导致的。尝试刷新页面。如果问题仍然存在，请检查浏览器控制台是否有错误消息。建议保持网络连接稳定，避免网络波动。
+  通常是网络资源没加载完全导致的。试试刷新页面。如果还是不行，检查浏览器控制台有没有报错。建议保持网络稳定，别让网络波动太大。
 </details>
 
 <details>
-  <summary>☁️ 如何挂载云盘 .strm 文件？</summary>
+  <summary>☁️ 怎么挂载云盘上的 .strm 文件？</summary>
   
-  云盘用户可以先通过 Alist、alist-strm、NetMount 等工具将云盘文件本地挂载为 .strm 文件，然后将其挂载到应用程序中。
+  云盘用户可以先通过 Alist、alist-strm、NetMount 等工具把云盘文件挂载成本地的 .strm 文件，然后再挂载到应用中。
   
-  在扫描配置中，添加媒体识别类型为 `strm` 以扫描本地 .strm 文件。
+  在扫描配置里，把媒体识别类型设为 `strm`，就能扫描本地的 .strm 文件了。
 </details>
 
 <details>
-  <summary>🌍 时区错误，系统时间不正确？</summary>
+  <summary>🌍 时区不对，系统时间错了？</summary>
   
-  这通常是由于应用程序的时区与服务器的时区不一致导致的。请检查应用程序的时区设置是否正确，并确保它们与服务器的时区一致。
+  这通常是应用的时区和服务器时区没对上导致的。请检查时区设置是否正确。
   
-  - 如果您配置了 TZ 环境变量，请将其设置为正确的时区
-  - 如果您使用网络代理，请确保代理服务器的时区与服务器的时区一致
-  - 如果您使用 Docker 部署，请确保 Docker 容器的时区设置正确
+  - 如果配了 TZ 环境变量，确保设的是正确的时区
+  - 如果用网络代理，确保代理服务器的时区跟服务器一致
+  - 如果用 Docker 部署，确保容器时区设置正确
   
-  请注意，您的网络应该能够访问互联网，否则无法执行自动时区检测。
+  注意，你的网络得能访问互联网，不然没法自动检测时区。
   
-  对于代理网络，请避免使用：suning.com、taobao.com、meituan.com 等国内代理域名。
+  如果用代理网络，避免使用 suning.com、taobao.com、meituan.com 这类国内域名。
 </details>
 
 <details>
-  <summary>🔌 [Metatube] 404 (未找到)</summary>
+  <summary>🔌 [Metatube] 404（未找到）</summary>
   
-  请检查 MetaTube 插件的服务器地址是否配置正确。如果您使用自定义域名，请确保域名解析正确。如果您使用反向代理，请确保反向代理配置正确。检查 MetaTube 容器日志是否正常，确保没有错误消息。
+  检查 MetaTube 插件的服务器地址有没有配对。如果用自定义域名，确保域名解析正确。如果用反向代理，确保代理配置没问题。再看看 MetaTube 容器日志是否正常，有没有报错。
   
-  请参考 [MetaTube 插件配置文档](https://ammds.lifebus.top/guide/plugins/metatube/)。
+  参考 [MetaTube 插件配置文档](https://ammds.lifebus.top/guide/plugins/metatube/)。
 </details>

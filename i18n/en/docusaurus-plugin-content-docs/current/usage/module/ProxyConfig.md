@@ -5,13 +5,13 @@ sidebar_label: "Network Proxy Configuration"
 
 # Network Proxy Configuration
 
-Network proxy configuration is used to set the proxy server used by the program when accessing network resources, ensuring the program can normally access resources that require a proxy to access.
+Network proxy configuration lets you set which proxy server the program uses when accessing the internet. Some network resources need a proxy to be accessible — this is exactly what it's for.
 
 <!-- truncate -->
 
 ## Access Network Proxy Configuration
 
-You can access the network proxy configuration page through the following two paths:
+You can get to the proxy config page through either of these:
 
 1. **Task Management >> Network Proxy**
 2. **System Management >> System Configuration >> Network Configuration**
@@ -26,60 +26,58 @@ You can access the network proxy configuration page through the following two pa
 
 ### Enable Proxy
 
-**Function Description**: Set whether to enable the network proxy function.
+**What it does**: Whether to turn on the proxy feature.
 
-**Role**: After enabling, the program will access network resources through the configured proxy server.
+**Why it matters**: When enabled, the program will access the network through the configured proxy server.
 
 ### Proxy Protocol
 
-**Function Description**: Select the protocol type of the network proxy.
+**What it does**: Select the proxy type.
 
-**Optional Protocols**:
+**Available protocols**:
 - HTTP
 - SOCKS4
 - SOCKS5
 
-**Suggestion**: Choose the appropriate protocol based on your proxy server type.
+**Suggestion**: Choose based on what your proxy provider supports.
 
 ### Proxy Host
 
-**Function Description**: Enter the host address of the network proxy server.
+**What it does**: Enter the proxy server address.
 
-**Format**: Can be an IP address (such as `192.168.1.1`) or a domain name (such as `proxy.example.com`).
+**Format**: Can be an IP address (e.g., `192.168.1.1`) or a domain name (e.g., `proxy.example.com`).
 
 ### Proxy Port
 
-**Function Description**: Enter the port number of the network proxy server.
+**What it does**: Enter the proxy server port number.
 
-**Common Ports**:
+**Common ports**:
 - HTTP proxy: 8080, 3128
 - SOCKS proxy: 1080
 
 ### Username
 
-**Function Description**: If the network proxy server requires authentication, enter the authentication username.
+**What it does**: If the proxy server requires login authentication, enter the username here.
 
 ### Password
 
-**Function Description**: If the network proxy server requires authentication, enter the authentication password.
+**What it does**: If the proxy server requires login authentication, enter the password here.
 
 ### Bypass Proxy Hosts
 
-**Function Description**: Set host addresses that do not need to be accessed through a proxy.
+**What it does**: Set which addresses should connect directly instead of going through the proxy.
 
-**Add Method**: Enter the host address and press **Enter** to confirm addition.
+**How to add**: Type the address and press **Enter** to confirm.
 
-**Applicable Scenario**:
-- Local network resources
-- Public resources that do not need to be accessed through a proxy
+**When to use**:
+- Accessing internal network resources (e.g., local NAS)
+- Websites that don't need a proxy
 
 ![Network Proxy Configuration](/img/usage/module/proxy-config-03.png)
 
 ![Network Proxy Configuration](/img/usage/module/proxy-config-04.png)
 
 ## Configuration Examples
-
-The following are several common network proxy configuration examples:
 
 ### Example 1: HTTP Proxy
 
@@ -107,51 +105,51 @@ The following are several common network proxy configuration examples:
 
 ## Notes
 
-:::warning Important Tips
-- **After configuration is completed, you need to restart the program for it to take effect**
-- **Configuration errors may cause the program to not run normally**
-- **Ensure the proxy server address and port are correct**
-- **Ensure the proxy server can be accessed normally**
-- **For proxies that require authentication, ensure the username and password are correct**
+:::warning Important
+- **You need to restart the program after changing proxy config for it to take effect**
+- **Wrong config may prevent the program from running properly**
+- **Make sure the proxy address and port are correct**
+- **Make sure the proxy server is actually accessible**
+- **For proxies that need authentication, make sure username and password are correct**
 :::
 
-## Common Questions
+## FAQ
 
-### Q: Why do I need to configure a network proxy?
+### Q: Why do I need to configure a proxy?
 
-**A**: Some network resources may require specific network environments to access. Configuring a network proxy can help the program normally access these resources, such as:
-- Some scrapers need to access network resources in specific regions
-- Some plugins need to access external APIs
+**A**: Some network resources require a specific network environment. For example:
+- Some scrapers need to access resources in specific regions
+- Some plugins need to call external APIs
 
-### Q: How to test if the proxy configuration is correct?
+### Q: How do I test if the proxy is set up correctly?
 
-**A**: You can test through the following methods:
-1. Configure proxy settings
+**A**: Give this a try:
+1. Set up the proxy
 2. Restart the program
-3. Try to execute operations that require network access (such as scraping)
-4. Check if the operation is completed successfully
+3. Try something that needs internet access (like scraping)
+4. See if it succeeds
 
-### Q: After the proxy configuration takes effect, will all network requests go through the proxy?
+### Q: Once the proxy is on, do all requests go through it?
 
-**A**: No, only specific operations that require network access will go through the proxy, and you can specify resources that do not need to be accessed through the proxy by setting bypass proxy hosts.
+**A**: No, only specific network-dependent operations use it. Plus, you can set "Bypass Proxy Hosts" to exclude certain addresses.
 
-### Q: Why is it still accessing through the proxy even after setting bypass proxy hosts?
+### Q: I set bypass hosts but it still goes through the proxy — why?
 
-**A**: Possible reasons include:
-- Incorrect bypass proxy host format
-- Configuration not taking effect (needs program restart)
-- Program internal logic prioritizes using proxy
+**A**: Possible reasons:
+- The bypass host format is wrong
+- Config hasn't taken effect yet (restart needed)
+- The program internally prioritizes using the proxy
 
-### Q: What impact will proxy server connection failure have?
+### Q: What happens if the proxy server is unreachable?
 
-**A**: If the proxy server connection fails, it may cause the following problems:
-- Scraping failure
-- Plugins not working properly
-- Unable to obtain online resources
+**A**: This could cause:
+- Scraping failures
+- Plugins not working
+- Inability to fetch online resources
 
 ## Best Practices
 
-- **Use a stable proxy server**: Ensure the proxy server is stable and reliable to avoid frequent disconnections
-- **Reasonably set bypass proxy hosts**: Add local resources and public resources that do not need a proxy to the bypass list to improve access speed
-- **Regularly check proxy configuration**: If the network environment changes, update the proxy configuration in a timely manner
-- **Backup proxy configuration**: Record the current configuration before modifying it to restore it in case of problems
+- **Use a stable proxy**: Don't use one that drops connections frequently, or things will break constantly
+- **Set bypass hosts wisely**: Add local resources and directly-accessible addresses to the bypass list for better speed
+- **Check periodically**: When your network environment changes, update the proxy config
+- **Backup your config**: Note down the current config before making changes, so you can restore if something goes wrong

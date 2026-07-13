@@ -5,21 +5,23 @@ sidebar_label: "Execute Scrape Task"
 
 # Execute Scrape Task
 
-Scrape task is the second step in the scraping process. It is used to scrape scan result files according to scraping rules, obtain movie metadata, generate final movie files, and complete movie organization work.
+The scrape task is the second step in organizing your movies. Simply put: the system looks up movie info online (posters, descriptions, cast, etc.) based on your scrape rules, then organizes everything into the right place.
+
+> **What does "scraping" mean?** Scraping is when the system automatically searches online for movie information — cover images, plot summaries, cast, ratings, etc. (collectively called "metadata") — and downloads it to match up with your video files. Think of it as "tagging" your movie files.
 
 <!-- truncate -->
 
 ## Prerequisites
 
-Before executing a scrape task, please ensure the following conditions are met:
+Before running a scrape task, make sure the following is ready:
 
 ### Network Connection
 
-Organizing files requires obtaining movie metadata through the internet, so you need to ensure the project can normally access the internet.
+You need internet access to look up movie info online.
 
 ### Metadata Plugins
 
-Please confirm that relevant metadata plugins are enabled and correctly configured. These plugins are the key to obtaining movie metadata:
+Make sure the relevant metadata plugins are enabled and configured. These are the tools that find movie info for you:
 
 + [Metatube Plugin](/docs/plugin/metadata/Metatube)
 + [ThePornDB Plugin](/docs/plugin/metadata/ThePornDB)
@@ -27,93 +29,93 @@ Please confirm that relevant metadata plugins are enabled and correctly configur
 + [FanzaDMM Plugin](/docs/plugin/metadata/FanzaDmm)
 + [Madou Plugin](/docs/plugin/metadata/Madou)
 
-:::warning Important Reminder
-Without enabling relevant metadata plugins, you will not be able to obtain movie metadata, which will cause scraping to fail.
+:::warning Important
+Without metadata plugins enabled, the system can't fetch movie info — scraping will definitely fail.
 :::
 
-:::info Data Source Declaration
-This software does not provide any source data. All movie metadata comes from user-configured plugin services.
+:::info Data Source Disclaimer
+This software does not provide any source data. All movie info comes from the plugin services you configure.
 :::
 
 ## Execute Scrape Task
 
 ### Step 1: Enter the Scrape Storage Page
 
-Access **Task Management** through the left navigation bar, then select the **Scrape Storage** option to enter the scrape storage page.
+Go to **Task Management** from the left nav, then select **Scrape Storage**.
 
 ![Scrape Storage Page](/img/usage/scrape/task-scrape-01.png)
 
 ### Step 2: Select Files to Scrape
 
-On the scrape storage page, you can see a list of all files to be scraped recorded through scan tasks. Check the files you want to scrape as needed.
+On the scrape storage page, you'll see a list of all files waiting to be scraped. Check the ones you want to process.
 
-### Step 3: Start Executing Scrape Task
+### Step 3: Start Scraping
 
-Click the **Scrape and Organize** button on the page, and the system will start executing the scrape task.
+Click the **Scrape and Organize** button, and the system gets to work.
 
 ![Execute Scrape Task](/img/usage/scrape/task-scrape-02.png)
 
-### Step 4: View Task Execution Status
+### Step 4: Check Task Status
 
-During task execution, the page will display the execution status of the scrape task in real-time, including:
+During execution, the page shows progress in real-time:
 - Number of successfully scraped files
-- Number of failed scraped files
+- Number of failed files
 - Number of skipped files
 
-### Step 5: Terminate Scrape Task (if needed)
+### Step 5: Cancel the Task (If Needed)
 
-During execution, if you need to terminate the scrape task, you can click the **Cancel** button at any time to stop task execution.
+If you need to stop during execution, click the **Cancel** button at any time.
 
-## Scrape Principle Explanation
+## How Scraping Works
 
-The working principle of scrape task is as follows:
+Here's the full scraping workflow:
 
-1. **Read Scrape Rules**: The system determines how to handle different types of files based on the scrape rules you configured
-2. **Match Metadata**: Through enabled metadata plugins, try to match and obtain detailed information about movies
-3. **Generate Movie Files**: Based on the obtained metadata, the system generates standardized movie files
-4. **Organize File Structure**: Organize movie files according to preset naming rules and directory structure
+1. **Read scrape rules**: The system determines how to handle files based on your configured rules
+2. **Match metadata**: Using your enabled metadata plugins, it tries to find detailed movie info
+3. **Generate media files**: Based on the found info, it creates standardized media files
+4. **Organize file structure**: Files are arranged according to your preset naming rules and directory structure
 
 ## Common Problems and Solutions
 
 ### Problem: Scraping Failed
 
-**Possible Causes**:
+**Possible causes**:
 - Network connection issues
-- Metadata plugins not enabled or configured incorrectly
-- Inappropriate scrape rule settings
-- File naming does not match matching rules
+- Metadata plugin not enabled or misconfigured
+- Scrape rules set up incorrectly
+- File naming doesn't match recognition rules
 
 **Solutions**:
-- Check if network connection is normal
-- Confirm that metadata plugins are enabled and correctly configured
-- Check if scrape rule settings are reasonable
-- Try modifying file naming format to better match matching rules
+- Check if the network is working
+- Confirm metadata plugins are enabled and configured correctly
+- Review scrape rule settings
+- Try changing the file name to make it easier to recognize
 
-### Problem: Incomplete Metadata Acquisition
+### Problem: Incomplete Movie Info
 
-**Possible Causes**:
+**Possible causes**:
 - Plugin service temporarily unavailable
-- Movie information does not exist in plugin service
-- Network delay causes acquisition timeout
+- The movie isn't found in the plugin service
+- Network is slow, causing timeouts
 
 **Solutions**:
-- Try again later, the plugin service may be temporarily unavailable
-- Try using other metadata plugins
-- Check network connection stability
+- Try again later — it might just be a temporary glitch
+- Switch to a different metadata plugin
+- Check network stability
 
 ## Best Practices
 
-1. **Batch Processing**: For large numbers of files, it is recommended to scrape in batches to avoid excessive system load
-2. **Priority Configuration**: Before executing scraping, ensure scrape rules and metadata plugins are correctly configured
-3. **Regular Updates**: Regularly update metadata plugins to obtain better matching results
-4. **Check Logs**: When scraping fails, check system logs to obtain detailed error information
+1. **Batch process**: If you have lots of files, scrape them in batches to avoid overloading the system
+2. **Configure first**: Make sure scrape rules and metadata plugins are all set up before scraping
+3. **Update plugins regularly**: Newer plugin versions have better matching results
+4. **Check logs when things fail**: Look at system logs for detailed error info
 
 ## Notes
 
 :::caution Note
-Scrape tasks may take a long time to complete, depending on the number of files and network speed. Please be patient.
+Scrape tasks may take a while, depending on file count and network speed. Just be patient.
 :::
 
 :::tip Tip
-For optimal scraping results, it is recommended to ensure file naming is as standardized as possible, including necessary identification information (such as numbers, titles, etc.).
+For better scraping results, make sure file names are as standardized as possible, including key identifying info (like video numbers, titles, etc.).
 :::

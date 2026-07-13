@@ -5,18 +5,18 @@ sidebar_label: "Scan Configuration"
 
 # Scan Configuration
 
-Scan configuration is used to set how the system identifies and processes media files before task execution, ensuring the scanning process can accurately and efficiently identify your movie resources.
+Scan configuration tells the system what to process, what to skip, and how to identify media files when scanning.
 
 <!-- truncate -->
 
 ## Access Scan Configuration
 
-You can access the scan rule configuration page through the following path:
+You can find the scan rule config page here:
 
 **Task Management >> Scan Rule Configuration**
 
-:::info Operation Tip
-After updating the configuration, please remember to click the **Save** button, otherwise the configuration will not take effect.
+:::info Tip
+Remember to click **Save** after changing the config, or it won't take effect.
 :::
 
 ## Configuration Interface
@@ -29,74 +29,73 @@ After updating the configuration, please remember to click the **Save** button, 
 
 ### Format Restrictions
 
-**Function Description**: Set the media file types that the system can recognize.
+**What it does**: Tell the system which file types count as media files — it will only recognize these.
 
-**Default Support**: The system has built-in support for some common media file types, such as: `.mp4`, `.mkv`, `.avi`, `.mov`, etc.
+**Default support**: The system comes with common formats like `.mp4`, `.mkv`, `.avi`, `.mov`, etc.
 
-**Custom Addition**: You can add other file types as needed. When adding, enter the file type extension (such as: `.strm`) and press **Enter** to confirm input.
+**Add your own**: Enter a file extension (e.g., `.strm`) and press **Enter** to add it.
 
 ### Ignore Directories
 
-**Function Description**: Configure directories to be ignored during scanning. Files in these directories and their subdirectories will not be scanned.
+**What it does**: Skip certain directories during scanning (e.g., folders with samples or temp files).
 
-**Configuration Method**: Enter the relative path of the directory (such as: `sample`, `tmp`), directory names are case-insensitive.
+**How to configure**: Enter a relative path (e.g., `sample`, `tmp`). Case-insensitive.
 
-**Applicable Scenario**: Can be used to ignore directories containing samples, temporary files, or other non-movie resources.
+**When to use**: Say your download folder has a `sample` directory with preview clips — you can add it here to skip it.
 
 ### Ignore Files
 
-**Function Description**: Configure files to be ignored during scanning. Files containing specified strings will not be scanned.
+**What it does**: Skip files whose names contain specific keywords (e.g., `sample`).
 
-**Configuration Method**: Enter strings contained in file names (such as: `sample`, `hh800.com@`), strings are case-insensitive.
+**How to configure**: Enter strings found in file names (e.g., `sample`, `hh800.com@`). Case-insensitive.
 
-**Applicable Scenario**: Can be used to ignore sample files, files with specific marks, or other files that do not need to be processed.
+**When to use**: Some files have ad markings in their names that you want to filter out.
 
 ### Segment Markers
 
-**Function Description**: Configure marker strings for segmented video files to help the system identify segmented videos and avoid processing them as separate files.
+**What it does**: Some videos are split into multiple parts (e.g., CD1, CD2). Segment markers help the system recognize they belong together and not treat them as separate movies.
 
-**Configuration Method**: Enter segment marker strings (such as: `part`, `cd`), strings are case-insensitive.
+**How to configure**: Enter segment markers (e.g., `part`, `cd`). Case-insensitive.
 
-**Applicable Scenario**: Suitable for processing video files that are split into multiple parts, ensuring the system can correctly identify that they belong to the same movie resource.
+**When to use**: Movies split into multiple files or multi-part content.
 
 ### Subtitle Formats
 
-**Function Description**: Configure subtitle file formats that the system can recognize to help the system correctly add subtitle tags.
+**What it does**: Set which subtitle file formats the system can recognize.
 
-**Configuration Method**: Enter subtitle file extensions (such as: `.srt`, `.ass`, `.idx`) and press **Enter** to confirm input.
-
+**How to configure**: Enter subtitle file extensions (e.g., `.srt`, `.ass`, `.idx`) and press **Enter** to confirm.
 
 ### Minimum Video Size
 
-**Function Description**: Set the minimum size threshold for video files. Video files smaller than this size will be ignored during scanning.
+**What it does**: Set a size threshold. Files smaller than this will be ignored (tiny files are usually not real movies).
 
 **Unit**: MB
 
-**Default Value**: 100MB
+**Default value**: 100MB
 
-**Special Case**: If you use video file types like `.strm`, it is recommended to set the minimum video size to **0MB**, otherwise it may cause these files to not be scanned normally.
+**Special case**: If you use `.strm` files (which are just links and take no space), set this to **0MB**, or they won't be detected.
 
 ### Chinese Subtitle Recognition
 
-**Function Description**: Configure recognition keywords for Chinese subtitles. When video file names contain these keywords, the system will automatically add Chinese subtitle tags.
+**What it does**: If file names contain certain keywords, the system will automatically tag them as "Chinese subtitles."
 
-**Example**: `-C`, `.chs`, etc., keywords are case-insensitive.
+**Example**: `-C`, `.chs`, etc. Case-insensitive.
 
 ### Mosaic Uncensored Recognition
 
-**Function Description**: Configure recognition keywords for mosaic uncensored content. When video file names contain these keywords, the system will automatically add mosaic uncensored tags.
+**What it does**: If file names contain certain keywords, the system will automatically add an "uncensored" tag.
 
-**Example**: `-u`, `.uc`, etc., keywords are case-insensitive.
+**Example**: `-u`, `.uc`, etc. Case-insensitive.
 
 ### Read Local NFO
 
-**Function Description**: After enabling, the system will automatically read the same-name `.nfo` file in the directory where the video file is located and parse the information in it.
+**What it does**: When enabled, the system will automatically read `.nfo` files next to the video files and parse the info inside.
 
-**Role**: The parsed information will automatically create media metadata and store it in the database, reducing the workload of manually editing metadata.
+**Why it matters**: The parsed info is automatically stored in the database, saving you from manually entering movie metadata.
 
 ## Configuration Example
 
-The following is a typical scan configuration example:
+Here's a typical scan config:
 
 | Configuration Item | Setting Value |
 |-------------------|---------------|
@@ -110,23 +109,23 @@ The following is a typical scan configuration example:
 | Mosaic Uncensored Recognition | `-u`, `.uc`, `uncensored` |
 | Read Local NFO | Enabled |
 
-## Common Questions
+## FAQ
 
-### Q: Why are some video files not being scanned?
+### Q: Why aren't some video files being scanned?
 
-**A**: Possible reasons include:
-- File format is not in the format restriction list
-- The directory where the file is located has been added to the ignore directory
-- File name contains ignored strings
-- File size is smaller than the set minimum video size threshold
+**A**: Possible reasons:
+- The file format isn't in your format restrictions list
+- The file's directory is in your ignore directories list
+- The file name contains ignored strings
+- The file is smaller than the minimum video size threshold
 
-### Q: How to correctly add custom file formats?
+### Q: How do I add custom file formats correctly?
 
-**A**: When adding custom file formats, you need to pay attention to the following points:
-- Must include the dot of the file extension (such as: `.strm` instead of `strm`)
-- Each file format needs to be added separately, press Enter to confirm after adding
-- Ensure the added file format is a type that the system can handle
+**A**: A few things to note:
+- Include the dot in the extension (e.g., `.strm`, not `strm`)
+- Add each format individually and press Enter to confirm
+- Make sure the format is one the system can handle
 
-### Q: What is the function of segment markers?
+### Q: What are segment markers for?
 
-**A**: Segment markers are used to help the system identify multiple segmented files belonging to the same movie resource, ensuring they are correctly processed as a whole rather than as multiple independent files.
+**A**: They help the system recognize that multiple file segments belong to the same movie, so they're processed as a whole rather than as unrelated files.

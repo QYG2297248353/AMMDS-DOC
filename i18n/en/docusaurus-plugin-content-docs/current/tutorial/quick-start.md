@@ -6,7 +6,7 @@ sidebar_label: "Quick Start"
 # Quick Start
 
 :::info
-Welcome to AMMDS! This guide will help you deploy AMMDS using one of the supported methods: Windows, Feiniu Nas, or Docker.
+Welcome to AMMDS! Follow this guide to deploy AMMDS using Windows, FnOS, QNAP, or Docker.
 :::
 
 ## 🚀 Deployment Methods
@@ -14,33 +14,50 @@ Welcome to AMMDS! This guide will help you deploy AMMDS using one of the support
 ### Windows Deployment
 
 :::note
-**Package Type**: EXE Setup Package
+**Package Type**: EXE Setup
 :::
 
-For Windows users, we provide a straightforward executable setup package:
+For Windows users, we provide a simple setup package:
 
 1. Download the latest `ammds-setup.exe` from the [AMMDS Launcher releases page](https://github.com/QYG2297248353/AMMDS-Launcher/releases)
 2. Locate the downloaded `ammds-setup.exe` file
 3. Right-click and select **Run as administrator**
-4. Follow the intuitive on-screen wizard to complete the installation
-5. The service will start automatically after installation completes
+4. Follow the installation wizard step by step
+5. After installation, the service will start automatically
 
 ---
 
-### Feiniu Nas Deployment
+### FnOS Deployment
 
 :::note
-**Package Type**: FPK (Feiniu Package)
+**Package Type**: FPK (FnOS Package)
 :::
 
-For Feiniu Nas users, we offer an FPK package designed for direct import into the Feiniu App Store:
+For FnOS users, we provide an FPK package that can be directly imported into the FnOS App Store:
 
-1. Download the latest `AMMDS.offline.fpk` from the [Feiniu Nas releases page](https://github.com/QYG2297248353/AMMDS-Offline-FnNas/releases)
-2. Access your Feiniu Nas dashboard
-3. Open the **Feiniu App Store**
+1. Download the latest `AMMDS-Offline-FnNas.fpk` from the [FnOS releases page](https://github.com/QYG2297248353/AMMDS-Offline-FnNas/releases)
+2. Log into your FnOS management interface
+3. Open the **FnOS App Store**
 4. Select **Import Local Package** and locate the downloaded FPK file
-5. Follow the prompts to complete the installation
-6. The service will be managed through the Feiniu Nas App Store interface
+5. Follow the prompts to complete installation
+6. You can manage the service in the FnOS App Store afterwards
+
+---
+
+### QNAP Deployment
+
+:::note
+**Package Type**: QKPG (QNAP Package)
+:::
+
+For QNAP users, we provide a QKPG package that can be directly imported into the QNAP App Store:
+
+1. Download the latest `AMMDS_x86.qkpg` or `AMMDS_arm.qkpg` from the [QNAP releases page](https://github.com/QYG2297248353/AMMDS-Offline-QNAP/releases)
+2. Log into your QNAP management interface
+3. Open the **QNAP App Store**
+4. Select **Import Local Package** and locate the downloaded QKPG file
+5. Follow the prompts to complete installation
+6. You can manage the service in the QNAP App Store afterwards
 
 ---
 
@@ -50,7 +67,7 @@ For Feiniu Nas users, we offer an FPK package designed for direct import into th
 **Package Type**: Docker Image
 :::
 
-For users with Docker installed, deploy AMMDS with a single command:
+Already have Docker installed? Deploy AMMDS with a single command:
 
 ```bash showLineNumbers title="Docker Command"
 docker run -itd \
@@ -62,51 +79,51 @@ docker run -itd \
    qyg2297248353/ammds:latest
 ```
 
-#### Docker Command Breakdown
+#### Command Parameters
 
 | Option | Description |
 |--------|-------------|
-| `-itd` | Run container in interactive mode with pseudo-TTY, detached from terminal |
-| `--name AMMDS` | Assigns the name "AMMDS" for easy container management |
-| `-p 8080:80` | Maps host port 8080 to container port 80 (web interface) |
-| `-v $(pwd)/data:/ammds/data` | Persistent storage for application data |
-| `-v $(pwd)/db:/ammds/db` | Persistent storage for database files |
-| `--restart always` | Automatically restarts the container if it stops unexpectedly |
-| `qyg2297248353/ammds:latest` | Uses the latest AMMDS Docker image |
+| `-itd` | Run container in the background, doesn't occupy your terminal |
+| `--name AMMDS` | Name the container "AMMDS" for easy management |
+| `-p 8080:80` | Map local port 8080 to container port 80 (web interface) |
+| `-v $(pwd)/data:/ammds/data` | Store data locally so it's not lost when the container is deleted |
+| `-v $(pwd)/db:/ammds/db` | Store the database locally so it's not lost when the container is deleted |
+| `--restart always` | Auto-restart the container if it crashes unexpectedly |
+| `qyg2297248353/ammds:latest` | Use the latest AMMDS Docker image |
 
 ---
 
 ## 🌐 Accessing the Service
 
-After successful deployment, access AMMDS through your web browser:
+After deployment, open your browser to access AMMDS:
 
-1. Open your preferred web browser
-2. Navigate to `http://localhost:8080` (replace `localhost` with your server's IP if deploying remotely)
-3. You will see the AMMDS login page
+1. Open your preferred browser
+2. Go to `http://localhost:8080` (if remote, replace `localhost` with your server's IP)
+3. You'll see the AMMDS login page
 
 ### 📝 Default Credentials
 
-| Credential | Value |
-|------------|-------|
+| Credential | Default Value |
+|------------|--------------|
 | **Username** | `ammds` |
 | **Password** | `ammds` |
 
-### 💡 First Time Access Tips
+### 💡 First Login Tips
 
 :::warning
-If you don't see the login page immediately, please be patient. The system may still be downloading and initializing resources in the background. This process can take a few minutes depending on your network speed.
+If the login page doesn't appear immediately, don't worry. The system may be downloading and initializing resources in the background. Depending on your network speed, this may take a few minutes.
 :::
 
-- After logging in, **immediately change your default password** from the Settings menu
-- Explore the intuitive dashboard to familiarize yourself with AMMDS features
-- Check the system status in the bottom right corner to ensure all services are running
+- After logging in, **change the default password in Settings immediately**
+- Browse around the main interface to get familiar with AMMDS features
+- Check the system status in the bottom right corner to make sure all services are running
 
 ## 📋 Next Steps
 
-1. **Check the Documentation**: Review the [Introduction](/docs/intro) for detailed usage instructions
-2. **Configure Preferences**: Customize your experience in the Settings menu
-3. **Add Media Sources**: Connect your media libraries to start using AMMDS
-4. **Explore Features**: Try out the various tools and functionalities available
+1. **Check the Docs**: Review the [Introduction](/docs/intro) for detailed instructions
+2. **Adjust Settings**: Customize your preferences in the Settings menu
+3. **Add Media Sources**: Connect your media library and start using AMMDS
+4. **Explore Features**: Try out various tools and features available
 
 ---
 

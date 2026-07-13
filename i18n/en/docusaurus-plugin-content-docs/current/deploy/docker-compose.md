@@ -3,9 +3,9 @@ sidebar_position: 2
 sidebar_label: "Docker Compose"
 ---
 
-# Docker Compose 
+# Docker Compose
 
-Docker Compose is a tool for defining and running multi-container Docker applications. With a single YAML file (docker-compose.yml), you can configure all the services of your application, and then start all services with just one command. It's ideal for quick deployment and management in development, testing, and staging environments.
+Docker Compose is a "one-click launch tool." If you need to start several containers that work together, typing out a bunch of commands is tedious. Compose lets you put all your configuration in one file, and from then on you just run one command to get everything up and running.
 
 <!-- truncate -->
 
@@ -13,7 +13,7 @@ Docker Compose is a tool for defining and running multi-container Docker applica
 
 ### Create Application Directory
 
-First, create a directory named `ammds` to store related files:
+First, create a folder called `ammds` to store related files:
 
 ```bash
 mkdir ammds && cd ammds
@@ -21,29 +21,29 @@ mkdir ammds && cd ammds
 
 ### Create Configuration File
 
-Create and edit a `docker-compose.yml` file in the `ammds` directory. Paste the following content into the file:
+Create a `docker-compose.yml` file in the `ammds` folder and copy the content below into it:
 
 ```yaml
 services:
   ammds:
-    image: qyg2297248353/ammds:latest  # Docker image name and version tag
-    container_name: AMMDS  # Container name
+    image: qyg2297248353/ammds:latest  # AMMDS's "installer package" address
+    container_name: AMMDS  # Give the container a name
     ports:
-      - "8080:80"  # Port mapping: host port 8080 maps to container port 80
+      - "8080:80"  # "Connect" your server's port 8080 to AMMDS (port 80), access via 8080
     volumes:
-      - ./data:/ammds/data  # Mount current directory's data folder to /ammds/data in container
-      - ./db:/ammds/db  # Mount current directory's db folder to /ammds/db in container
-      - ./download:/ammds/download  # Mount current directory's download folder to /ammds/download in container
-      - ./media:/media  # Mount current directory's media folder to /media in container
-    restart: always  # Set container to always restart automatically on failure
+      - ./data:/ammds/data  # Share the ./data folder with AMMDS for storing data
+      - ./db:/ammds/db  # Share the ./db folder with AMMDS for storing the database
+      - ./download:/ammds/download  # Share the ./download folder with AMMDS for downloads
+      - ./media:/media  # Share the ./media folder with AMMDS for movie files
+    restart: always  # Auto-restart on failure, hassle-free
     environment:
-      - TZ=Asia/Shanghai  # Set timezone to Asia/Shanghai
+      - TZ=Asia/Shanghai  # Set timezone to UTC+8 (Beijing time)
     networks:
-      - ammds-network  # Use custom network
+      - ammds-network  # Join a custom network
 
 networks:
-  ammds-network:  # Custom network configuration
-    driver: bridge  # Use Docker's default bridge network driver
+  ammds-network:  # Custom network, lets multiple containers talk to each other
+    driver: bridge  # Uses Docker's default network mode
 ```
 
 :::note
@@ -54,7 +54,7 @@ Please mount your local media directory to the container yourself. Do not use `/
 
 ## Special Configuration for Cloud Drive Users
 
-If you use cloud drive mounting like CloudDrive, use the following configuration in your `docker-compose.yml` file:
+If you use cloud drive mounting like CloudDrive, adjust the configuration slightly:
 
 ```yaml
 services:
@@ -87,18 +87,18 @@ networks:
 
 ### Special Notes for Cloud Drive Users
 
-- `:rw,rshared`: In addition to basic read-write permissions, `rshared` maintains shared propagation between containers
-- `cap_add: - SYS_ADMIN`: Allows the container to access system resources
-- `devices: - "/dev/fuse:/dev/fuse"`: Allows the container to access FUSE devices
-- `security_opt: - apparmor:unconfined`: Allows the container to use unrestricted AppArmor configuration
+- `:rw,rshared`: Read and write capable, and "shares" the folder across multiple containers
+- `cap_add: - SYS_ADMIN`: Gives the container some system admin privileges so cloud drives work properly
+- `devices: - "/dev/fuse:/dev/fuse"`: Allows the container to access the FUSE device (a "bridge" needed for cloud drive mounting)
+- `security_opt: - apparmor:unconfined`: Relaxes security restrictions so cloud drive mounting doesn't error out
 
 :::warning
-This deployment solution is not suitable for "cloud drive mounting + directory monitoring" scheme. Please use "scheduled scanning" instead of "directory monitoring".
+This setup doesn't work with "cloud drive mounting + directory monitoring." Please use "scheduled scanning" instead.
 :::
 
 ## Start Service
 
-Use the following command to start the service. This will run the AMMDS container in the background and apply all configurations from the docker-compose.yml file:
+Run the following command in the `ammds` folder to start all services:
 
 ```bash
 docker compose up -d
@@ -106,7 +106,7 @@ docker compose up -d
 
 ## Stop Service
 
-If you need to stop and remove the service, you can use the following command:
+To stop and remove the services, use this command:
 
 ```bash
 docker compose down
@@ -114,13 +114,13 @@ docker compose down
 
 ## Access Service
 
-You can access the service through a browser:
+Open your browser and enter:
 
 ```
 http://127.0.0.1:8080
 ```
 
-Access URL format: `Host IP Address + Service Port`
+If you're deploying on a server, just replace `127.0.0.1` with your server's IP address.
 
 ## Default Credentials
 
@@ -128,5 +128,5 @@ Access URL format: `Host IP Address + Service Port`
 - **Password**: `ammds`
 
 :::tip
-If you can't see the credentials clearly, please switch to light mode.
+If you can't see the text clearly, switch to light mode.
 :::

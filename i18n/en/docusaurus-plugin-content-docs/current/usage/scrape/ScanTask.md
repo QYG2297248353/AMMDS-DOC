@@ -5,30 +5,30 @@ sidebar_label: "Create Scan Task"
 
 # Create Scan Task
 
-Scan task is the first step in the scraping process, used to scan files in the target directory according to scan rules and generate scan result files. Through scan tasks, you can selectively scrape files, improve scraping efficiency, and avoid scraping junk files.
+The scan task is the first step in organizing your movies. The system looks through your specified folders for movie files based on the scan rules you configured, and generates a list of files to process. This way, you can pick and choose which ones to scrape — no junk files get processed.
 
 <!-- truncate -->
 
 ## Access Task List
 
-You can access the task list page through the following path:
+Go to:
 
 **Task Management >> Task Configuration >> Task List**
 
-On the task list page, click the **Create Task** button to create a scan task.
+On the task list page, click the **Create Task** button to create a new scan task.
 
 ## Multi-task Management
 
-You can configure multiple different scan tasks according to your needs. Each task can have different scan directories and output directories.
+You can create multiple scan tasks as needed. Each task can have its own scan directory and output directory.
 
-**Advantages of multi-task management**:
-- Helps classify and manage movie files
-- Can set different processing rules for different types of movie files
-- Improves overall processing efficiency
+**Why multiple tasks are useful**:
+- Organize different types of media separately
+- Apply different rules to different content types
+- Better overall efficiency
 
-**Examples**:
-- Create a scan task specifically for scanning Japanese movie files and output them to a specified directory
-- Create another scan task specifically for scanning European and American movie files and output them to another directory
+**For example**:
+- Create one task specifically for Japanese movies, output to a specified folder
+- Create another task for Western movies, output to a different folder
 
 ## Create Scan Task
 
@@ -36,155 +36,154 @@ You can configure multiple different scan tasks according to your needs. Each ta
 
 ### Task Name
 
-**Function Description**: Set the name of the scan task.
+**What it does**: Give your scan task a name.
 
-**Configuration Suggestion**: Use descriptive names for easier subsequent management and identification, such as: "Japanese Movie Scan", "European and American Movie Scan", etc.
+**Suggestion**: Use something clear and descriptive for easy management. Like "Japanese Movie Scan" or "Western Movie Scan."
 
 ### Media Type
 
-**Function Description**: Set the media type of the scan task.
+**What it does**: Set the media type for the scan task.
 
-**Role**: Assists the system in identifying numbers, improving number recognition rate.
+**Why it matters**: Helps the system identify video numbers more accurately.
 
-**Configuration Suggestion**: If it's a mixed type of movie files, just select "All".
+**Suggestion**: If you have mixed content types, just pick "All."
 
 ### Organization Mode
 
-**Function Description**: Set the file organization method.
+**What it does**: Set how files should be organized.
 
-**Optional Modes**:
+**Available modes**:
 
 #### In-place Organization
-- **Function**: During organization, no operations are performed on the parent directory, and organization is performed directly in the original file's directory
-- **Applicable Scenario**: Want to keep the file location unchanged, only rename files or organize metadata
+- **What it does**: Files stay where they are — organized right in their current location (renamed, metadata added, etc.)
+- **Best for**: When you don't want to move files, just rename or organize metadata
 
 #### Move Mode
-- **Function**: Move files to the target directory during organization
-- **Target Directory**: Format configured in scrape configuration
-- **Applicable Scenario**: Want to centrally manage files in a specified directory
+- **What it does**: Files are moved to a target directory during organization
+- **Target directory**: Uses the directory format from scrape config
+- **Best for**: Centralizing files into a specific folder
 
 #### Copy Mode
-- **Function**: Copy files to the target directory during organization
-- **Target Directory**: Format configured in scrape configuration
-- **Applicable Scenario**: Want to keep the original files while creating organized copies in the specified directory
+- **What it does**: Files are copied to a target directory during organization
+- **Target directory**: Uses the directory format from scrape config
+- **Best for**: Keeping the original files while also having organized copies in another location
 
 #### Soft Link Mode
-- **Function**: Create soft links to files in the target directory during organization
-- **Target Directory**: Format configured in scrape configuration
+- **What it does**: Creates a "shortcut" pointing to the original file in the target directory
+- **Target directory**: Uses the directory format from scrape config
 - **Features**:
-  - Does not occupy additional disk space
-  - Soft link files are pointers to original files
-  - If the original file is deleted or moved, the soft link file will become invalid
-- **Applicable Scenario**: Want to create file access entries in the specified directory without occupying additional space
+  - Takes no extra disk space (it's just a shortcut)
+  - If the original file is deleted or moved, the shortcut breaks
+- **Best for**: Accessing files from a specific directory without using extra space
 
 #### Hard Link Mode
-- **Function**: Create hard links to files in the target directory during organization
-- **Target Directory**: Format configured in scrape configuration
+- **What it does**: Creates a "clone" of the original file in the target directory
+- **Target directory**: Uses the directory format from scrape config
 - **Features**:
-  - Will occupy additional disk space
-  - Hard link files are pointers to original files
-  - If the original file is deleted or moved, hard link files will remain valid
-  - Hard link files can only be created in the same file system
-- **Applicable Scenario**: Want to create multiple references to files in the same file system to ensure file security
-- **Note**: Has high requirements, generally not recommended
+  - Takes extra disk space
+  - The "clone" and the original point to the same data
+  - Deleting the original doesn't affect the clone
+  - Clones can only be created on the same disk partition
+- **Best for**: Having multiple access points to files on the same partition for safety
+- **Note**: Has strict requirements — generally not recommended
 
 :::info Tip
-Except for in-place organization mode, other organization modes require specifying a target directory.
+Except for "In-place Organization," all other modes require specifying a target directory.
 :::
 
 ### Scan Directory
 
-**Function Description**: Set the target directory for the scan task.
+**What it does**: Tell the system which folder to look for files in.
 
-**Role**: The system will recursively scan all files under this directory.
+**Why it matters**: The system will scan through all files in this folder (including subfolders).
 
-**Configuration Suggestion**: Select a directory containing the movie files you need to process.
+**Suggestion**: Pick the folder where you store your media files.
 
 ### Organization Directory
 
-**Function Description**: Set the target directory for file organization.
+**What it does**: Where to put the organized files.
 
-**Applicable Scenario**: Except for in-place organization mode, other organization modes require specifying this directory.
+**When needed**: All modes except "In-place Organization" require this.
 
-**Configuration Suggestion**: Select a directory with sufficient storage space for storing organized files.
+**Suggestion**: Pick a folder with plenty of free space.
 
 ### Rename Rule
 
-**Function Description**: Set the file renaming method.
+**What it does**: Set how files should be renamed.
 
-**Optional Rules**:
+**Available rules**:
 
 #### Original File Name
-- **Function**: Keep the original file name unchanged during organization
-- **Applicable Scenario**: Want to retain the original naming of files
+- **What it does**: Keep the original file name as-is
+- **Best for**: When you want to preserve the original naming
 
 #### Standardized File Name
-- **Function**: During organization, standardize file names according to the file name format configured in scrape configuration
-- **Naming Basis**: Depends on the file name format configured in scrape configuration
-- **Applicable Scenario**: Want to unify file naming format and improve file management standardization
+- **What it does**: Rename files according to the naming format set in scrape config
+- **Naming basis**: Depends on the file name format in scrape config
+- **Best for**: Consistent, standardized file naming across all files
 
 ### Duplicate File Handling
 
-**Function Description**: Set the processing method for cases where the target file already exists.
+**What it does**: What to do if the target directory already has a file with the same name.
 
-**Configuration Suggestion**: Choose an appropriate processing method according to your needs, such as: skip, overwrite, rename, etc.
+**Suggestion**: Pick based on your needs — skip, overwrite, rename, etc.
 
 ### Directory Monitoring
 
-**Function Description**: After enabling, the system will monitor this directory after the initial scan task initialization, and when new files appear, it will automatically scan and add them to the scan result file.
+**What it does**: When enabled, the system watches this folder after the first scan. If new files are added, it automatically scans and adds them to the results list.
 
-**Applicable Scenario**: Want the system to automatically process newly added files without manually triggering scans
+**Best for**: Having the system automatically handle newly downloaded files without manual scanning
 
 ### Add to Favorites
 
-**Function Description**: After enabling, this movie metadata will be automatically added to favorites after organization.
+**What it does**: When enabled, organized movies are automatically added to favorites.
 
-**Applicable Scenario**: Want to quickly mark and access important movie resources
+**Best for**: Quickly marking and finding important movies
 
 ### Scheduled Task
 
-**Function Description**: Set the automatic execution time of the scan task.
+**What it does**: Set the scan task to run automatically on a schedule.
 
-**Note**: This conflicts with directory monitoring, only one can be selected.
+**Note**: This conflicts with directory monitoring — you can only use one.
 
-**Configuration Format**: Use Spring-style cron expressions
+**Format**: Uses Spring-style cron expressions
 
-**Example**: To execute the scan task every hour, fill in `0 0 * * * ?`
+**Example**: To scan every hour, enter `0 0 * * * ?`
 
 ## Execute Scan Task
 
-After creation, click the **Scan Now** button to execute the scan task.
+Once created, click **Scan Now** to start.
 
 ![Execute Scan Task](/img/usage/scrape/task-scan-02.png)
 
 ### Task Management Operations
 
-- **Edit**: Click the **Edit** button to modify the scan task configuration
-- **Record**: Click the **Record** button to view the execution history of the scan task
-- **Delete**: Click the **Delete** button to delete unnecessary scan tasks
+- **Edit**: Click **Edit** to modify the task config
+- **Record**: Click **Record** to view scan history
+- **Delete**: Click **Delete** to remove unwanted tasks
 
 ### Scan Result View
 
 ![Scan Result View](/img/usage/scrape/task-scan-03.png)
 
-After scanning, newly added scrapable files can be viewed and processed in **Task Management >> Scrape Storage**.
+After scanning, newly discovered scrapable files can be viewed and processed in **Task Management >> Scrape Storage**.
 
 ## Scheduled Tasks
 
-The project uses Spring-style cron expressions to specify the execution time of scheduled tasks.
+The system uses Spring-style cron expressions for scheduled tasks.
 
 ### Common Expressions
 
 | Expression | Description |
 |------------|-------------|
-| `0 0 * * * ?` | Execute once every hour |
-| `0 0 0 * * ?` | Execute once every day at midnight |
-| `0 0 0 * * 1` | Execute once every Monday at midnight |
-| `0 0 0 1 * ?` | Execute once every month on the 1st at midnight |
+| `0 0 * * * ?` | Every hour |
+| `0 0 0 * * ?` | Every day at midnight |
+| `0 0 0 * * 1` | Every Monday at midnight |
+| `0 0 0 1 * ?` | Every 1st of the month at midnight |
 
 ## Configuration Example
 
-The following is a typical scan task configuration example:
+Here's a typical scan task config:
 
 | Configuration Item | Setting Value |
 |-------------------|---------------|
@@ -199,54 +198,54 @@ The following is a typical scan task configuration example:
 | Add to Favorites | Disabled |
 | Scheduled Task | - |
 
-## Common Questions
+## FAQ
 
-### Q: What to do if the scan task execution fails?
+### Q: What if the scan task fails?
 
-**A**: Possible reasons include:
-- Scan directory does not exist or no permission to access
-- Organization directory does not exist or no permission to write
-- Configuration error
-- Insufficient system resources
+**A**: Possible reasons:
+- Scan directory doesn't exist or isn't accessible
+- Organization directory doesn't exist or isn't writable
+- Configuration is wrong
+- Not enough system resources
 
 **Solutions**:
 - Check directory paths and permissions
-- Check configuration parameters
-- Ensure the system has sufficient resources
-- View execution records to understand specific error information
+- Review configuration parameters
+- Make sure system resources are sufficient
+- Check execution records for error details
 
-### Q: What is the difference between directory monitoring and scheduled tasks?
-
-**A**:
-- **Directory Monitoring**: Real-time monitoring of directory changes, immediate processing when new files are added
-- **Scheduled Tasks**: Regular scanning according to preset time intervals
-
-### Q: What is the difference between soft links and hard links?
+### Q: What's the difference between directory monitoring and scheduled tasks?
 
 **A**:
-- **Soft Links**: Equivalent to Windows shortcuts, do not occupy additional space, but depend on the original file
-- **Hard Links**: Equivalent to multiple references to files, occupy additional space, but do not depend on the original file (still usable after original file deletion)
+- **Directory Monitoring**: Watches the folder in real-time — new files get processed immediately
+- **Scheduled Task**: Runs at set times, regardless of file changes
 
-### Q: Why are some files not displayed in the scan results?
+### Q: What's the difference between soft links and hard links?
 
-**A**: Possible reasons include:
-- File format is not in the format restriction list of scan rules
-- The directory where the file is located has been added to the ignore directory
-- File name contains ignored strings
-- File size is smaller than the set minimum video size threshold
+**A**:
+- **Soft Link**: Like a Windows shortcut — takes no space, but breaks if the original file is gone
+- **Hard Link**: Like a "clone" of the file — takes space, but survives the original being deleted
 
-### Q: How to improve scan efficiency?
+### Q: Why don't some files show up in the scan results?
 
-**A**: You can try the following methods:
-- Reasonably set ignore directories and ignore files
-- Create specialized scan tasks for different types of files
-- Use directory monitoring function to avoid repeated scanning
-- Appropriately adjust system resource allocation
+**A**: Possible reasons:
+- The file format isn't in the format restrictions list
+- The file's directory is in the ignore list
+- The file name contains ignored strings
+- The file is smaller than the minimum video size threshold
+
+### Q: How can I improve scan efficiency?
+
+**A**: Try this:
+- Set up ignore directories and ignore files properly so you're not scanning junk
+- Create dedicated scan tasks for different content types
+- Use directory monitoring to avoid re-scanning
+- Adjust system resource allocation as needed
 
 ## Best Practices
 
-- **Task Classification**: Create different scan tasks based on movie types to improve processing efficiency
-- **Reasonable Naming**: Use descriptive task names for easier subsequent management
-- **Regular Maintenance**: Regularly check and clean up unnecessary scan tasks
-- **Backup Configuration**: Record current configuration before modifying important configurations to restore in case of problems
-- **Monitor Execution**: Regularly check scan task execution records to discover and solve problems in a timely manner
+- **Categorize tasks**: Create different scan tasks by media type for better efficiency
+- **Name clearly**: Use descriptive task names for easy management
+- **Maintain regularly**: Check and clean up unnecessary scan tasks periodically
+- **Backup config**: Note down current configuration before making important changes
+- **Monitor execution**: Check scan task execution records regularly to catch issues early

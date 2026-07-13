@@ -1,13 +1,11 @@
 ---
 sidebar_position: 3
-sidebar_label: "麻豆传媒映画"
+sidebar_label: "Madou Media"
 ---
 
-# 麻豆传媒映画
+# Madou Media
 
-麻豆传媒映画 is a media company focused on adult content production and distribution, registered in California, USA, with server infrastructure deployed within the United States. This plugin provides AMMDS with the ability to collect video and actor metadata from 麻豆传媒映画.
-
-<!-- truncate -->
+Madou Media (麻豆传媒映画) is a company focused on adult content production and distribution, registered in California, USA, with servers also in the US. This plugin lets AMMDS collect Madou Media's video and actor information.
 
 ## Plugin Configuration
 
@@ -18,24 +16,22 @@ sidebar_label: "麻豆传媒映画"
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
 | Enable Status | Controls whether to enable the Madou Media plugin | Disabled |
-| Service Address | Madou Media API service endpoint | `https://api.modelmediaasia.com` |
-| Video Collection | Controls whether to collect Madou Media's video metadata (using advance caching mechanism) | Disabled |
-| Actor Collection | Controls whether to collect Madou Media's actor metadata (using advance caching mechanism) | Disabled |
+| Service Address | Madou Media API service address | `https://api.modelmediaasia.com` |
+| Video Collection | Controls whether to collect Madou Media's video info (uses advance caching) | Disabled |
+| Actor Collection | Controls whether to collect Madou Media's actor info (uses advance caching) | Disabled |
 
 ### Configuration Notes
 
-- **Service Address**: Defaults to the official API endpoint. Can be modified here if using a proxy or self-hosted service
-- **Metadata Collection**: Uses advance caching mechanism to ensure data retrieval speed and stability
-- **Data Synchronization**: When collection is enabled, the system will regularly synchronize the latest video and actor information
+- **Service Address**: Defaults to the official API address. You can change it here if you want to use a proxy or self-hosted service.
+- **Metadata Collection**: Uses advance caching for faster and more stable data retrieval.
+- **Data Sync**: When collection is enabled, the system will regularly sync the latest video and actor information.
 
 ## Notes
 
 :::note Data Collection Mechanism
-Currently, the plugin uses advance metadata caching to ensure complete metadata service even in unstable network environments.
+The plugin caches metadata in advance, so even if the network is a bit unstable, things still work fine.
 :::
 
 :::info Service Availability
-Since the service is deployed in the United States, it is recommended to ensure stable network connection and configure proxy if necessary to optimize access speed.
+Since the servers are in the US, make sure your network connection is stable. If it's slow, consider setting up a proxy to speed things up.
 :::
-
-

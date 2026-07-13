@@ -5,7 +5,7 @@ sidebar_label: "Docker"
 
 # Docker
 
-Docker is an open-source platform for automating the deployment, scaling, and management of applications. It uses containerization technology to package applications and their dependencies into independent containers, ensuring consistent operation across any environment. Containers are lightweight and portable, making them ideal for microservices architectures and CI/CD workflows.
+Docker is like a "lightweight virtual machine." It packages the software you need and its runtime environment into a "container," so no matter which machine you move to, it just works out of the box — no need to reconfigure a bunch of stuff.
 
 <!-- truncate -->
 
@@ -31,21 +31,21 @@ Please mount your local media directory to the container yourself. Do not use `/
 
 ## Parameter Explanation
 
-| Parameter | Description |
+| Parameter | Explanation |
 |-----------|-------------|
-| `-itd` or `--interactive --tty --detach` | Combined options:<br />- `-i` or `--interactive`: Keep STDIN open even if not attached<br />- `-t` or `--tty`: Allocate a pseudo-TTY (terminal) for container interaction<br />- `-d` or `--detach`: Run the container in the background as a daemon |
-| `--name AMMDS` | Specify the container name as AMMDS |
-| `-p 8080:80` | Map port 8080 on the host to port 80 in the container, format: `-p <host port>:<container port>` |
-| `-v $(pwd)/data:/ammds/data` | Mount the current directory's `./data` folder to `/ammds/data` in the container for data persistence |
-| `-v $(pwd)/db:/ammds/db` | Mount the current directory's `./db` folder to `/ammds/db` in the container for database file storage |
-| `-v $(pwd)/download:/ammds/download` | Mount the current directory's `./download` folder to `/ammds/download` in the container for download storage |
-| `-v $(pwd)/media:/media` | Mount the current directory's `./media` folder to `/media` in the container, suitable for mounting media directories |
-| `--restart always` | Set the container to always restart automatically, ensuring it starts automatically in any situation (including system restart) |
-| `qyg2297248353/ammds:latest` | Docker image name and tag, specifying which image to run |
+| `-itd` | Combined options: `-i` (keep input channel open) + `-t` (allocate terminal) + `-d` (run in background) — lets the container run quietly in the background without taking over your command window |
+| `--name AMMDS` | Give your container a name so you can manage it (start/stop) using that name |
+| `-p 8080:80` | Map host port 8080 to container port 80 — "connect" port 8080 on your server to AMMDS, access it via `http://server-ip:8080` in your browser |
+| `-v $(pwd)/data:/ammds/data` | Mount a local folder to the container — "share" your `./data` folder with AMMDS so data isn't lost |
+| `-v $(pwd)/db:/ammds/db` | Mount a local folder to the container — share your `./db` folder with AMMDS for database storage |
+| `-v $(pwd)/download:/ammds/download` | Mount a local folder to the container — share your `./download` folder with AMMDS for downloads |
+| `-v $(pwd)/media:/media` | Mount a local folder to the container — share your movie folder with AMMDS, good for media directories |
+| `--restart always` | Auto-restart the container if it exits — if something goes wrong or the server reboots, AMMDS will come back up automatically |
+| `qyg2297248353/ammds:latest` | Docker image name and tag — this is AMMDS's "installer package," `latest` means the newest version |
 
 ## Cloud Drive Users
 
-If you use cloud drive mounting like CloudDrive, please use the following command:
+If you use cloud drive mounting like CloudDrive, use the following command:
 
 ```bash
 docker run -itd \
@@ -64,24 +64,24 @@ docker run -itd \
 
 ### Special Notes for Cloud Drive Users
 
-- `:rw,rshared`: In addition to basic read-write permissions, `rshared` maintains shared propagation between containers
-- `--cap-add=SYS_ADMIN`: Allows the container to access system resources
-- `--device /dev/fuse`: Allows the container to access FUSE devices
-- `--security-opt apparmor:unconfined`: Allows the container to use unrestricted AppArmor configuration
+- `:rw,rshared`: Read and write capable, and "shares" the folder across multiple containers
+- `--cap-add=SYS_ADMIN`: Gives the container some system admin privileges so cloud drives work properly
+- `--device /dev/fuse`: Allows the container to access the FUSE device (a "bridge" needed for cloud drive mounting)
+- `--security-opt apparmor:unconfined`: Relaxes security restrictions so cloud drive mounting doesn't error out
 
 :::warning
-This deployment solution is not suitable for "cloud drive mounting + directory monitoring" scheme. Please use "scheduled scanning" instead of "directory monitoring".
+This setup doesn't work with "cloud drive mounting + directory monitoring." Please use "scheduled scanning" instead.
 :::
 
 ## Access Service
 
-You can access the service through a browser:
+Open your browser and enter the following address:
 
 ```
 http://127.0.0.1:8080
 ```
 
-Access URL format: `Host IP Address + Service Port`
+If you're deploying on a server, just replace `127.0.0.1` with your server's IP address.
 
 ## Default Credentials
 
@@ -89,5 +89,5 @@ Access URL format: `Host IP Address + Service Port`
 - **Password**: `ammds`
 
 :::tip
-If you can't see the credentials clearly, please switch to light mode.
+If you can't see the text clearly, switch to light mode.
 :::

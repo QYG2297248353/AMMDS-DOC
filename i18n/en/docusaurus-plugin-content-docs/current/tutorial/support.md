@@ -1,35 +1,35 @@
 ---
 sidebar_position: 1
-sidebar_label: "Support Me"
+sidebar_label: "Support Us"
 ---
 
-# Support Me
+# Support Us
 
 🥳 Let's grow together!
 
-Welcome to the AMMDS support page! Thank you for your attention and support. Every bit of support you provide will directly help us improve and expand AMMDS's features and services, providing a better experience for you and other users.
+Welcome to the AMMDS support page! Thank you for your attention and support. Every bit of support helps us improve AMMDS and bring you a better experience.
 
 ## How to Support Us?
 
 ### 1. Become a Member
 
-Visit our online store to purchase AMMDS-related products or services. This not only allows you to get high-quality products but also greatly supports our work.
+Visit our online store to purchase AMMDS-related products or services. You get a great product, and it supports our work.
 
 ### 2. Share with Friends
 
-If you like using AMMDS, please don't hesitate to recommend it to your family and friends! Sharing is not only encouragement for us but also helps more people discover and use this application.
+Like AMMDS? Tell your family and friends! Sharing is the best encouragement, and it helps more people discover this tool.
 
-### 3. Data Contribution
+### 3. Contribute Data
 
-The data in the AMMDS project supports a sharing model, which means anyone can view, modify, and suggest improvements. If you have other questions, please report the issues you encounter on GitHub.
+AMMDS data is shared — anyone can view, edit, and suggest improvements. If you run into issues, you can report them on GitHub.
 
 ### 4. Provide Feedback
 
-Your opinions are crucial to us. Whether it's feature requests, bug reports, or any other ideas, please feel free to let us know. You can contact us through our official website or directly submit issues on GitHub.
+Your feedback matters to us. Whether it's new feature requests, bug reports, or other ideas, let us know. You can reach us through the official website or submit an issue directly on GitHub.
 
 ### 5. Sponsor Us
 
-If you like our work and want to support our continuous development, please consider donating to our project. Your support will help us pay for server costs, domain fees, and other necessary expenses.
+If you like our work and want to support us in continuing development, consider making a donation. Your support helps us pay for servers, domains, and other necessary expenses.
 
 **Preferred Sponsorship Platforms:**
 
@@ -38,9 +38,9 @@ If you like our work and want to support our continuous development, please cons
 
 ## Our Commitment
 
-We promise to always be committed to providing high-quality products and services. Our team will continue to work hard to meet your needs and bring you a better experience.
+We will keep working hard to provide high-quality products and services. The team will continue to improve, meet your needs, and deliver the best experience possible.
 
-AMMDS is a data management platform designed specifically for movie and TV enthusiasts. It can help you easily manage and enjoy your personal movie and TV library. From automatically scraping metadata to intelligently matching local files, to cross-platform support, AMMDS aims to provide you with the best user experience.
+AMMDS is a data management platform built for movie and TV enthusiasts. It helps you easily manage and enjoy your personal media library — from automatically scraping metadata to intelligently matching local files, to cross-platform support. AMMDS is designed to give you the best experience.
 
 ## Learn More
 
@@ -49,9 +49,8 @@ AMMDS is a data management platform designed specifically for movie and TV enthu
 
 ## Contact Us
 
-Have any questions or need help? Please don't hesitate to contact us through the following methods:
+Have questions or need help? Feel free to reach out through any of these channels:
 
 - Email: [support@lifebus.top](mailto:support@lifebus.top)
 - Online Store: [足迹店铺](https://shop.lifebus.top/)
 - GitHub Support: [AMMDS on GitHub](https://github.com/QYG2297248353/AMMDS-Docker)
-

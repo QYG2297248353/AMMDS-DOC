@@ -5,9 +5,9 @@ sidebar_label: "Prowlarr"
 
 # Prowlarr
 
-Prowlarr is a powerful indexer manager and proxy tool specifically designed for media automation, built on the .NET/React technology stack. It serves as a centralized hub that unifies the management of hundreds of Torrent trackers and Usenet indexers, seamlessly synchronizing with applications like Sonarr, Radarr, Lidarr, and Readarr.
+Prowlarr is an indexer manager built for media automation, using .NET/React. It serves as a central hub for managing hundreds of Torrent trackers and Usenet indexers, and can seamlessly sync with Sonarr, Radarr, Lidarr, Readarr, and more.
 
-Official website: [https://prowlarr.com/](https://prowlarr.com/)
+Official Site: [https://prowlarr.com/](https://prowlarr.com/)
 
 <!-- truncate -->
 
@@ -17,9 +17,9 @@ Official website: [https://prowlarr.com/](https://prowlarr.com/)
 
 ### Basic Configuration
 
-- **Enable Status**：Controls whether to enable the plugin.
-- **Service Address**：The access address of the Prowlarr service.
-- **Authentication Key**：The authentication key for the Prowlarr service, used for identity verification.
+- **Enable Status**: Controls whether to enable the plugin.
+- **Service Address**: The access address of the Prowlarr service.
+- **Authentication Key**: The authentication key for Prowlarr, used for identity verification.
 
 ## Self-deployment
 

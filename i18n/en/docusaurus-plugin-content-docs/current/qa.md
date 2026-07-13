@@ -5,7 +5,7 @@ sidebar_label: "Q&A"
 
 # Q&A
 
-Problems frequently encountered during use.
+Here's a collection of common questions and solutions when using AMMDS.
 
 <!-- truncate -->
 
@@ -14,27 +14,27 @@ Problems frequently encountered during use.
 <details>
   <summary>🔍 Log shows CPU does not support x86-64-v2?</summary>
   
-  Your device's CPU is too old. You can choose images with the `ol8` tag.
+  Your device's CPU is too old. You can use images with the `ol8` tag instead.
 </details>
 
 <details>
-  <summary>⌛ Why is there no response after the first deployment?</summary>
+  <summary>⌛ No response after the first deployment?</summary>
   
-  During the first deployment, the system needs to download and initialize necessary resource files, which takes some time. Please wait a few minutes. If there's still no response, try refreshing the page.
+  On the first deployment, the system needs to download and initialize necessary resource files. Please wait a few minutes. If there's still no response after a while, try refreshing the page.
 </details>
 
 <details>
   <summary>⏬ Resource download is very slow?</summary>
   
-  Due to the large size of resource files, the download speed may be slow. You can try the following methods to speed it up:
-  - Change network environment, such as configuring HTTP_PROXY and HTTPS_PROXY environment variables to accelerate the network
-  - Manually download resources and restart the application
+  The resource files are quite large, so slow downloads are normal. Here are some ways to speed it up:
+  - Change your network environment, e.g., configure HTTP_PROXY and HTTPS_PROXY environment variables to speed things up
+  - Manually download the resources and restart the app
 </details>
 
 <details>
-  <summary>📁 Monitoring directory registration failed, and the startup exits immediately?</summary>
+  <summary>📁 Directory monitoring registration failed, and the app exits right after starting?</summary>
   
-  This usually happens due to incorrect configuration files or environment variables. Please check if the application's configuration files are correct and ensure environment variables are set properly.
+  This is usually caused by incorrect configuration files or environment variables. Please check if your configuration files and environment variables are set correctly.
   
   If you see the following logs:
   ```
@@ -43,7 +43,7 @@ Problems frequently encountered during use.
   User limit of inotify watches reached
   ```
   
-  Please try increasing the system's inotify instance limits:
+  Try increasing the system's inotify limits:
   ```bash
   echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
   echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf
@@ -56,43 +56,43 @@ Problems frequently encountered during use.
 ## 💡 Usage Issues
 
 <details>
-  <summary>🖱️ Why is there no response when clicking the menu?</summary>
+  <summary>🖱️ Clicking the menu does nothing?</summary>
   
-  This usually happens because the page is temporarily stuck or resources are not fully loaded. Try refreshing the page. If the problem persists, check the browser console for error messages.
+  The page might be stuck, or the resources haven't finished loading. Try refreshing the page first. If it still doesn't work, check the browser console for error messages.
 </details>
 
 <details>
-  <summary>⚪ Why is it a white screen after opening?</summary>
+  <summary>⚪ White screen after opening?</summary>
   
-  This is usually caused by incomplete loading of web resources. Try refreshing the page. If the problem persists, check the browser console for error messages. It is recommended to keep the network connection stable to avoid network fluctuations.
+  This is usually caused by incomplete loading of web resources. Try refreshing the page. If the problem persists, check the browser console for errors. It's recommended to keep a stable network connection.
 </details>
 
 <details>
-  <summary>☁️ How to mount cloud disk .strm files?</summary>
+  <summary>☁️ How to mount .strm files from cloud drives?</summary>
   
-  Cloud disk users can first mount cloud disk files locally (.strm) through Alist, alist-strm, NetMount, etc., and then mount them to the application.
+  Cloud drive users can first mount cloud drive files locally as .strm files using tools like Alist, alist-strm, or NetMount, and then mount them to the app.
   
-  In the scan configuration, add the media recognition type as `strm` to scan local .strm files.
+  In the scan configuration, set the media recognition type to `strm`, and it will scan local .strm files.
 </details>
 
 <details>
-  <summary>🌍 Timezone error, system time is incorrect?</summary>
+  <summary>🌍 Wrong timezone, system time is incorrect?</summary>
   
-  This usually happens because the application's timezone is inconsistent with the server's timezone. Please check if the application's timezone settings are correct and ensure they are consistent with the server's timezone.
+  This usually happens because the app's timezone doesn't match the server's timezone. Please check if the timezone settings are correct.
   
-  - If you have configured the TZ environment variable, set it to the correct timezone
-  - If you are using a network proxy, ensure the proxy server's timezone is consistent with the server's timezone
-  - If you are using Docker deployment, ensure the Docker container's timezone is set correctly
+  - If you configured a TZ environment variable, make sure it's set to the correct timezone
+  - If using a network proxy, ensure the proxy server's timezone matches the server's timezone
+  - If using Docker deployment, make sure the container's timezone is set correctly
   
-  Please note that your network should be able to access the internet, otherwise automatic timezone detection cannot be performed.
+  Note that your network needs to be able to access the internet, otherwise automatic timezone detection won't work.
   
-  For proxy networks, please avoid: suning.com, taobao.com, meituan.com and other domestic proxy domains.
+  If using a proxy network, avoid domestic proxy domains like suning.com, taobao.com, meituan.com.
 </details>
 
 <details>
   <summary>🔌 [Metatube] 404 (Not Found)</summary>
   
-  Check if the MetaTube plugin's server address is configured correctly. If you are using a custom domain, ensure the domain resolution is correct. If you are using a reverse proxy, ensure the reverse proxy configuration is correct. Check if the MetaTube container logs are normal and ensure there are no error messages. 
+  Check if the MetaTube plugin's server address is configured correctly. If using a custom domain, make sure domain resolution is correct. If using a reverse proxy, ensure the proxy configuration is correct. Check the MetaTube container logs for any errors.
   
-  Please refer to the [MetaTube plugin configuration documentation](https://ammds.lifebus.top/guide/plugins/metatube/).
+  Refer to the [MetaTube plugin configuration docs](https://ammds.lifebus.top/guide/plugins/metatube/).
 </details>

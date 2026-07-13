@@ -3,9 +3,9 @@ sidebar_position: 2
 sidebar_label: "Docker Compose"
 ---
 
-# Docker Compose 
+# Docker Compose
 
-Docker Compose は、マルチコンテナ Docker アプリケーションを定義して実行するためのツールです。単一の YAML ファイル（docker-compose.yml）を通じて、アプリケーションのすべてのサービスを設定し、1 つのコマンドですべてのサービスを起動することができます。開発、テスト、ステージング環境におけるアプリケーションの迅速なデプロイと管理に非常に適しています。
+Docker Compose は「ワンクリック起動ツール」です。複数のコンテナを連携して動かす必要があるときに、たくさんのコマンドを手打ちするのは面倒ですよね。Compose を使えば、すべての設定を 1 つのファイルに書いておくだけで、あとは 1 行のコマンドを打つだけで全部をセットアップできます。
 
 <!-- truncate -->
 
@@ -13,7 +13,7 @@ Docker Compose は、マルチコンテナ Docker アプリケーションを定
 
 ### アプリケーションディレクトリの作成
 
-まず、関連ファイルを格納するための `ammds` という名前のディレクトリを作成します：
+まず、`ammds` という名前のフォルダを作成して、関連ファイルをまとめます：
 
 ```bash
 mkdir ammds && cd ammds
@@ -21,40 +21,40 @@ mkdir ammds && cd ammds
 
 ### 設定ファイルの作成
 
-`ammds` ディレクトリで `docker-compose.yml` ファイルを作成して編集します。以下の内容をファイルに貼り付けます：
+`ammds` フォルダ内に `docker-compose.yml` ファイルを作成し、以下の内容をコピー＆ペーストしてください：
 
 ```yaml
 services:
   ammds:
-    image: qyg2297248353/ammds:latest  # Docker イメージ名とバージョンタグ
-    container_name: AMMDS  # コンテナ名
+    image: qyg2297248353/ammds:latest  # AMMDS の「インストールパッケージ」のアドレス
+    container_name: AMMDS  # コンテナに名前を付ける
     ports:
-      - "8080:80"  # ポートマッピング：ホストポート 8080 をコンテナポート 80 にマッピング
+      - "8080:80"  # サーバーの 8080 ポートを AMMDS（80 ポート）に「接続」。アクセス時は 8080 を使う
     volumes:
-      - ./data:/ammds/data  # 現在のディレクトリの data フォルダをコンテナの /ammds/data にマウント
-      - ./db:/ammds/db  # 現在のディレクトリの db フォルダをコンテナの /ammds/db にマウント
-      - ./download:/ammds/download  # 現在のディレクトリの download フォルダをコンテナの /ammds/download にマウント
-      - ./media:/media  # 現在のディレクトリの media フォルダをコンテナの /media にマウント
-    restart: always  # コンテナが失敗したときに常に自動的に再起動するように設定
+      - ./data:/ammds/data  # ./data フォルダを AMMDS に共有。データ保存用
+      - ./db:/ammds/db  # ./db フォルダを AMMDS に共有。データベース保存用
+      - ./download:/ammds/download  # ./download フォルダを AMMDS に共有。ダウンロードファイル保存用
+      - ./media:/media  # ./media フォルダを AMMDS に共有。映画ファイル保管用
+    restart: always  # エラー時は自動再起動。面倒なし
     environment:
-      - TZ=Asia/Shanghai  # タイムゾーンを Asia/Shanghai に設定
+      - TZ=Asia/Shanghai  # タイムゾーンを東8区（北京時間）に設定
     networks:
-      - ammds-network  # カスタムネットワークを使用
+      - ammds-network  # カスタムネットワークに参加
 
 networks:
-  ammds-network:  # カスタムネットワーク設定
-    driver: bridge  # Docker のデフォルトの bridge ネットワークドライバを使用
+  ammds-network:  # カスタムネットワーク。複数コンテナ間の通信を可能に
+    driver: bridge  # Docker デフォルトのネットワークモード
 ```
 
 :::note
-ローカルのメディアディレクトリをコンテナにマウントしてください。データ損失を避けるために、メディアマウントディレクトリのプレフィックスとして `/ammds` を使用しないでください。
+ローカルのメディアディレクトリはご自身でコンテナにマウントしてください。データ損失を防ぐため、メディアのマウントディレクトリのプレフィックスに `/ammds` は使わないでください。
 
-**例：** ホストディレクトリが `/mnt/movie` の場合、推奨されるマウント形式は `- /mnt/movie:/mnt/movie` です。
+**例：** ホストのディレクトリが `/mnt/movie` の場合、推奨するマウント形式は `- /mnt/movie:/mnt/movie` です。
 :::
 
 ## クラウドストレージユーザー向けの特別設定
 
-CloudDrive などのクラウドストレージマウントを使用している場合は、`docker-compose.yml` ファイルで以下の設定を使用してください：
+CloudDrive などのクラウドストレージを使っている場合は、設定ファイルを少し変更します：
 
 ```yaml
 services:
@@ -85,20 +85,20 @@ networks:
     driver: bridge
 ```
 
-### クラウドストレージユーザー向けの特別な説明
+### クラウドストレージユーザー向けの補足説明
 
-- `:rw,rshared`：基本的な読み書き権限に加えて、`rshared` はコンテナ間で共有の伝播を維持します
-- `cap_add: - SYS_ADMIN`：コンテナにシステムリソースへのアクセスを許可します
-- `devices: - "/dev/fuse:/dev/fuse"`：コンテナに FUSE デバイスへのアクセスを許可します
-- `security_opt: - apparmor:unconfined`：コンテナに制限のない AppArmor 設定の使用を許可します
+- `:rw,rshared`：読み書きだけでなく、複数のコンテナ間でフォルダを「共有」できます
+- `cap_add: - SYS_ADMIN`：コンテナにシステム管理権限を付与し、クラウドストレージを正常に動作させます
+- `devices: - "/dev/fuse:/dev/fuse"`：コンテナが FUSE デバイスにアクセスできるようにします（クラウドストレージが使う「橋渡し」）
+- `security_opt: - apparmor:unconfined`：セキュリティ制限を解除し、クラウドストレージのマウントがエラーにならないようにします
 
 :::warning
-このデプロイ方法は、「クラウドストレージマウント + ディレクトリ監視」の方法には適用されません。「ディレクトリ監視」の代わりに「定期スキャン」を使用してください。
+この構成では「クラウドストレージマウント ＋ ディレクトリ監視」機能は使えません。「定期スキャン」に切り替えてください。
 :::
 
 ## サービスの起動
 
-以下のコマンドを使用してサービスを起動します。これにより、AMMDS コンテナがバックグラウンドで実行され、docker-compose.yml ファイルのすべての設定が適用されます：
+`ammds` フォルダ内で以下のコマンドを実行すれば、すべてのサービスが起動します：
 
 ```bash
 docker compose up -d
@@ -106,7 +106,7 @@ docker compose up -d
 
 ## サービスの停止
 
-サービスを停止して削除する必要がある場合は、以下のコマンドを使用します：
+サービスを停止して削除するには、以下のコマンドを使います：
 
 ```bash
 docker compose down
@@ -114,19 +114,19 @@ docker compose down
 
 ## サービスへのアクセス
 
-ブラウザを使用してサービスにアクセスできます：
+ブラウザを開いて以下のアドレスを入力します：
 
 ```
 http://127.0.0.1:8080
 ```
 
-アクセス URL の形式：`ホストの IP アドレス + サービスポート`
+サーバーにデプロイしている場合は、`127.0.0.1` をサーバーの IP アドレスに置き換えてください。
 
-## デフォルトの認証情報
+## デフォルトのアカウントとパスワード
 
 - **ユーザー名**：`ammds`
 - **パスワード**：`ammds`
 
 :::tip
-認証情報がはっきり見えない場合は、ライトモードに切り替えてください。
+文字が見づらい場合は、ライトモードに切り替えてください。
 :::

@@ -5,18 +5,20 @@ sidebar_label: "Scrape Configuration"
 
 # Scrape Configuration
 
-Scrape configuration is used to set how the system obtains movie metadata from the network, how to organize file directory structure, and other scrape-related parameters before task execution, ensuring the scrape process can efficiently and accurately obtain and organize movie resources.
+Scrape configuration tells the system how to find movie info online (posters, descriptions, cast, etc.) and how to organize the files afterward.
+
+> **What's "scraping"?** Scraping means the system automatically searches online for movie information — like title, poster, cast, description (collectively called "metadata") — and downloads it to go with your video files.
 
 <!-- truncate -->
 
 ## Access Scrape Configuration
 
-You can access the scrape rule configuration page through the following path:
+You can find the scrape rule config page here:
 
 **Task Management >> Scrape Rule Configuration**
 
-:::info Operation Tip
-After updating the configuration, please remember to click the **Save** button, otherwise the configuration will not take effect.
+:::info Tip
+Remember to click **Save** after changing the config, or it won't take effect.
 :::
 
 ## Configuration Interface
@@ -31,88 +33,88 @@ After updating the configuration, please remember to click the **Save** button, 
 
 ### Character Filtering
 
-**Function Description**: Filter file names during scraping to remove unnecessary characters in advance, improving the recognition rate of numbers.
+**What it does**: Filter out messy characters from file names before scraping, improving recognition accuracy.
 
-**Role**: By removing interfering characters from file names, the system can more accurately identify movie numbers, thereby obtaining more accurate metadata.
+**Why it matters**: Removing distracting characters helps the system identify the video number more accurately, so it finds the right movie info.
 
 ### Allow Image Download Failure
 
-**Function Description**: Set whether to continue executing the scrape task when image download fails.
+**What it does**: Even if image downloads fail, the scrape task keeps going.
 
-**Role**: After enabling this option, even if image download fails, it will not affect the acquisition of scrape results, improving the success rate of scraping.
+**Why it matters**: With this on, a few failed images won't block the whole scraping process, improving overall success rate.
 
 ### Organization Directory Format
 
-**Function Description**: Set the organizational structure of directories after scraping is completed.
+**What it does**: Set how folders are organized after scraping.
 
-**Configuration Method**: Customize the directory format by combining variables provided by the system.
+**How to configure**: Combine the system's built-in variables to create your desired directory structure.
 
-**Example**: `${actor}/${number}` will create a structure with actor name as the first-level directory and movie number as the second-level directory.
+**Example**: `${actor}/${number}` creates a two-level structure: "actor name/video number."
 
 ### Organization File Name Format
 
-**Function Description**: Set the naming format of video files after scraping is completed.
+**What it does**: Set how video files are named after scraping.
 
-**Configuration Method**: Customize the file name format by combining variables provided by the system.
+**How to configure**: Combine the system's built-in variables to create your desired file name format.
 
-**Example**: `${title_safe}.${ext}` will use the safe movie title as the file name and retain the original file extension.
+**Example**: `${title_safe}.${ext}` uses a safe version of the movie title as the file name, keeping the original extension.
 
 ### Auto Scrape
 
-**Function Description**: Set whether to automatically trigger scrape tasks after scan tasks are completed.
+**What it does**: Whether to automatically start scraping after a scan finishes.
 
-**Default Behavior**: By default, you need to manually select scanned files to execute scrape tasks.
+**Default**: You need to manually select files to scrape.
 
-**Enable Effect**: After enabling, the system will automatically discover scrapable movie files and execute scraping according to configured rules.
+**When enabled**: The system will automatically find scrapable movie files and start working.
 
 ### Auto Scrape Interval
 
-**Function Description**: Set the execution interval of auto scrape tasks.
+**What it does**: How often auto-scrape runs.
 
 **Unit**: Minutes
 
-**Default Value**: 3 minutes (when auto scrape is enabled)
+**Default**: 3 minutes (when auto-scrape is enabled)
 
 ### HD Cover Download
 
-**Function Description**: Set whether to download HD covers for movies.
+**What it does**: Whether to download HD cover images for movies.
 
-**Download Source**: After enabling, the system will try to obtain HD covers from Fanza DMM; if not available, it will try to obtain from other sources.
+**Download source**: When enabled, it first tries Fanza DMM for HD covers; if not available, it looks elsewhere.
 
 ### External Subtitle Search
 
-**Function Description**: Set whether to search for and download external subtitles (soft subtitles) for movies.
+**What it does**: Whether to search for and download external subtitles (soft subtitles).
 
-**Storage Location**: Downloaded subtitle files will be saved to the final scrape directory.
+**Storage**: Downloaded subtitles are saved in the final scrape directory.
 
 ### Number Mixing
 
-**Function Description**: Set whether to add number prefixes to fields such as titles in the nfo files generated after scraping.
+**What it does**: Whether to prepend the video number to fields like title in the generated nfo file.
 
 ### Auto Tags
 
-**Function Description**: Set whether to add additional information to the tag tags in the nfo files generated after scraping.
+**What it does**: Whether to add extra info to the tag field in the generated nfo file.
 
-**Example**: Add tags such as resolution, number, Chinese subtitles, uncensored, etc.
+**Example**: Tags like resolution, number, Chinese subtitles, uncensored, etc.
 
 ### Auto Category Tags
 
-**Function Description**: Set whether to add additional information to the genre tags in the nfo files generated after scraping.
+**What it does**: Whether to add extra info to the genre field in the generated nfo file.
 
-**Example**: Add tags such as resolution, number, Chinese subtitles, uncensored, etc.
+**Example**: Genre tags like resolution, number, Chinese subtitles, uncensored, etc.
 
 ### Local Data Priority
 
-**Function Description**: Set whether to prioritize using local existing data during scraping.
+**What it does**: Prioritize using locally available data instead of fetching from the internet.
 
-**Role**: If local existing data meets scrape rules, it will directly use local data instead of downloading or updating data from the network, improving scrape efficiency.
+**Why it matters**: If local data already meets the requirements, use it — no need to download, making scraping faster.
 
 ### Scraper
 
-**Function Description**: Select the scraper used by the system.
+**What it does**: Choose which data source to search for movie info.
 
-**Available Scrapers**:
-- **Local**: Use manually created movie information
+**Available options**:
+- **Local**: Use your own manually created movie info
 - **Metatube** (plugin)
 - **ThePornDB** (plugin)
 - **Stash** (plugin)
@@ -120,93 +122,93 @@ After updating the configuration, please remember to click the **Save** button, 
 
 ### Scrape Stills
 
-**Function Description**: Set whether to download movie stills.
+**What it does**: Whether to download movie stills (screenshots, scene images).
 
-**Storage Location**: Downloaded still files will be saved to the specified directory.
+**Storage**: Downloaded stills are saved to your specified directory.
 
 ### Stills Directory
 
-**Function Description**: Set the save directory for still files.
+**What it does**: Set where still files are stored.
 
-**Default Value**: Save to the `extrafanart` directory in the same directory as the video file.
+**Default**: An `extrafanart` folder in the same directory as the video file.
 
 ### Multi-threaded Execution
 
-**Function Description**: Set whether to enable multi-threaded execution of scrape tasks.
+**What it does**: Whether to use multiple threads for scraping (process multiple files simultaneously for speed).
 
 **Pros and Cons**:
-- **Pros**: Enabling will improve scrape efficiency
-- **Cons**: Will increase system resource consumption
+- **Pros**: Faster scraping
+- **Cons**: More system resources used
 
-**Suggestion**: According to system resource conditions, reasonably configure multi-threaded execution. For example, if the system has 4 CPU cores, it is recommended to set 4 threads.
+**Suggestion**: Based on your hardware. For example, if your CPU has 4 cores, set it to 4 threads.
 
 ### Maximum Thread Count
 
-**Function Description**: Set the maximum number of threads during scraping.
+**What it does**: The maximum number of threads to use during scraping.
 
-**Default Value**: 5 threads
+**Default**: 5 threads
 
-**Suggestion**: According to system resource conditions, reasonably configure the maximum thread count.
+**Suggestion**: Base this on your hardware — don't set it too high or your system may slow down.
 
 ## Directory and File Name Organization
 
-In the configuration items, there are two options: **Organization Directory Format** and **Organization File Name Format**. You can customize the directory and file name formats by combining variables provided by the system.
+Two config options — **Organization Directory Format** and **Organization File Name Format** — let you customize how files and folders are structured using system variables.
 
 ### Safe Variables
 
-**Role**: Add `_safe` suffix after variable names to avoid problems caused by special characters in file names.
+**What it does**: Adding `_safe` to a variable name prevents special characters from causing issues in file names.
 
-**Example**: `${actor_safe}` If there are special characters in the actor name, they will be replaced with safe characters.
+**Example**: `${actor_safe}` will replace special characters in actor names with safe alternatives.
 
-**Role**: Avoid special characters in movie titles causing directory levels to be interrupted, ensuring the integrity of the directory structure.
+**Why it matters**: Prevents special characters in movie titles from breaking directory structures.
 
 ### Organization Example
 
-A complete video file will be organized as: `${actor}/${number}/${title_safe}.${ext}`
+A complete video file after organization: `${actor}/${number}/${title_safe}.${ext}`
 
 **Example**:
-- Actor Name: "John Doe"
-- Movie Number: "ABC-123"
+- Actor: "John Doe"
+- Video Number: "ABC-123"
 - Movie Title: "Sample Title"
 - File Extension: "mkv"
 
-**Final Organized Path**: `John Doe/ABC-123/Sample Title.mkv`
+**Final path**: `John Doe/ABC-123/Sample Title.mkv`
 
 ### Organization Directory Variables
 
-**Default Configuration**: `${actor}/${number}`
+**Default config**: `${actor}/${number}`
 
-**Note**: `/` will be recognized as a directory separator, which can create different directory levels.
+**Note**: `/` is treated as a separator, so you can create different directory levels.
 
-| Variable Name | Safe Variable Name | Description | Example |
-|--------------|-------------------|-------------|---------|
+| Variable | Safe Variable | Description | Example |
+|----------|---------------|-------------|---------|
 | `${actor}` | `${actor_safe}` | Actor name | "John Smith" |
-| `${number}` | `${number_safe}` | Movie number | "ABC-123" |
+| `${number}` | `${number_safe}` | Video number | "ABC-123" |
 | `${title}` | `${title_safe}` | Movie title | "Sample Title" |
 | `${date}` | `${date_safe}` | Release date | "2024/01/01" |
 | `${year}` | `${year_safe}` | Release year | "2024" |
 | `${month}` | `${month_safe}` | Release month | "01" |
-| `${day}` | `${day_safe}` | Release date | "01" |
+| `${day}` | `${day_safe}` | Release day | "01" |
 | `${mosaic}` | `${mosaic_safe}` | Mosaic type | "Uncensored/Censored" |
 | `${resolution}` | `${resolution_safe}` | Video resolution | "1080p" |
 | `${director}` | `${director_safe}` | Director name | "Director Name" |
 | `${studio}` | `${studio_safe}` | Studio name | "Studio Name" |
 
-**Default Values**: All variables have default values, if not specified, default values will be used.
+**Default values**: All variables have defaults — if not specified, the default is used.
 
 ### Organization File Name Variables
 
-**Default Configuration**: `${number}`
+**Default config**: `${number}`
 
-| Variable Name | Safe Variable Name | Description | Example |
-|--------------|-------------------|-------------|---------|
+| Variable | Safe Variable | Description | Example |
+|----------|---------------|-------------|---------|
 | `${actor}` | `${actor_safe}` | Actor name | "John Smith" |
-| `${number}` | `${number_safe}` | Movie number | "ABC-123" |
+| `${number}` | `${number_safe}` | Video number | "ABC-123" |
 | `${title}` | `${title_safe}` | Movie title | "Sample Title" |
 | `${date}` | `${date_safe}` | Release date | "2024/01/01" |
 | `${year}` | `${year_safe}` | Release year | "2024" |
 | `${month}` | `${month_safe}` | Release month | "01" |
-| `${day}` | `${day_safe}` | Release date | "01" |
+| `${day}` | `${day_safe}` | Release day | "01" |
 | `${mosaic}` | `${mosaic_safe}` | Mosaic type | "Uncensored/Censored" |
 | `${resolution}` | `${resolution_safe}` | Video resolution | "1080p" |
 | `${director}` | `${director_safe}` | Director name | "Director Name" |
@@ -214,7 +216,7 @@ A complete video file will be organized as: `${actor}/${number}/${title_safe}.${
 
 ## Configuration Example
 
-The following is a typical scrape configuration example:
+Here's a typical scrape config:
 
 | Configuration Item | Setting Value |
 |-------------------|---------------|
@@ -236,39 +238,39 @@ The following is a typical scrape configuration example:
 | Multi-threaded Execution | Enabled |
 | Maximum Thread Count | 4 |
 
-## Common Questions
+## FAQ
 
 ### Q: Why does scraping fail?
 
-**A**: Possible reasons include:
-- Number recognition error
-- Network connection issue
-- Scraper cannot find matching metadata
-- Configuration error
+**A**: Possible reasons:
+- The video number was recognized incorrectly
+- Network connection issues
+- The scraper couldn't find matching info
+- Configuration is wrong
 
-### Q: How to improve scraping success rate?
+### Q: How can I improve scraping success rate?
 
-**A**: You can try the following methods:
-- Ensure the number in the file name is clearly recognizable
-- Enable character filtering function
-- Configure multiple scrapers
-- Ensure network connection is normal
+**A**: Try these:
+- Make sure the video number in the file name is clear
+- Enable character filtering
+- Configure multiple scrapers as backups
+- Ensure the network connection is stable
 
-### Q: What is the difference between auto scrape and manual scrape?
+### Q: What's the difference between auto and manual scraping?
 
 **A**:
-- **Auto Scrape**: Automatically executed after scanning is completed, no manual intervention required, suitable for batch processing
-- **Manual Scrape**: Requires manual selection of files to execute scraping, suitable for scenarios with high requirements for scrape results
+- **Auto Scrape**: Starts automatically after scanning — no manual work needed, great for batch processing
+- **Manual Scrape**: You pick files and scrape them yourself, good when you want fine-grained control
 
-### Q: Why are downloaded subtitle files not matching video files?
+### Q: Why don't downloaded subtitles match the video?
 
-**A**: Possible reasons include:
-- Inaccurate number recognition during subtitle search
-- Subtitle download failure due to network connection issues
-- Subtitle file naming inconsistent with video file
+**A**: Possible reasons:
+- The number was recognized incorrectly during subtitle search
+- Network issues prevented the subtitle download
+- The subtitle file name doesn't match the video file name
 
-### Q: How to customize directory structure?
+### Q: How do I customize the directory structure?
 
-**A**: By combining variables provided by the system, for example:
-- `${studio}/${actor}/${number}`: Organize by studio → actor → number hierarchy
-- `${year}/${month}/${title_safe}`: Organize by year → month → title hierarchy
+**A**: Combine the system variables. For example:
+- `${studio}/${actor}/${number}`: Organize by "studio → actor → number"
+- `${year}/${month}/${title_safe}`: Organize by "year → month → title"

@@ -1,0 +1,9 @@
+{
+  "label": "사이트 검색",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index"
+  }
+}
