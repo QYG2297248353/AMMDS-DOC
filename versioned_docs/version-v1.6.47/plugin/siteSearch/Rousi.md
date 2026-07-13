@@ -5,24 +5,24 @@ sidebar_label: "Rousi"
 
 # Rousi
 
-Rousi (肉丝) is a platform focused on providing high-quality, efficient comprehensive site search services.
+Rousi（肉丝）是一个专注于提供高质量、高效率的综合站点搜索服务的平台。
 
-Private site: This site requires registration by invitation and has certain thresholds.
+私有站点：该站点需要通过邀请注册，具有一定门槛。
 
 <!-- truncate -->
 
-## Plugin Configuration
+## 插件配置
 
-![Rousi Plugin Configuration](/img/plugin/rousi-01.png)
+![Rousi 插件配置](/img/plugin/rousi-01.png)
 
-Enable Status: Controls whether to enable the plugin.
+启用状态：控制是否启用该插件。
 
-RSS Service Address: Site domain name, default value is `https://rousi.pro`.
+RSS 服务地址：站点域名，默认值为 `https://rousi.pro`。
 
-API Service Address: Site API domain name, default value is `https://rousi.pro/api`.
+API 服务地址：站点 API 域名，默认值为 `https://rousi.pro/api`。
 
-![Rousi Plugin Configuration](/img/plugin/rousi-02.png)
+![Rousi 插件配置](/img/plugin/rousi-02.png)
 
-PassKey: Site API key, used for authentication and authorization. Obtained in the upper right corner avatar >> Account Settings -> Passkey.
+密钥（PassKey）：站点 API 密钥，用于身份验证和授权。在右上角头像 >> 账户设置 -> Passkey 中获取。
 
-Account Protection Notification: Whether to enable account protection notification, default value is `false`.
+账户保护通知：是否开启账户保护通知，默认值为 `false`。

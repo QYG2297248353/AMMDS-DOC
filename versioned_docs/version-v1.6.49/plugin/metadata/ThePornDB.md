@@ -5,208 +5,208 @@ sidebar_label: "ThePornDB"
 
 # ThePornDB
 
-ThePornDB is a professional adult video metadata management tool primarily used for renaming video files, ensuring that media server plugins like Plex, Jellyfin, and Stash scripts can automatically match metadata without manual intervention. The tool supports both server mode and command-line mode operation, providing an efficient solution for media library management.
+ThePornDB 是一款专业的成人视频元数据管理工具，主要用于重命名视频文件，确保 Plex、Jellyfin 等媒体服务器插件和 Stash 脚本能够自动匹配元数据，无需用户手动干预。该工具支持服务器模式和命令行模式运行，为媒体库管理提供高效解决方案。
 
-Official Website: [https://theporndb.net/](https://theporndb.net/)
+官网：[https://theporndb.net/](https://theporndb.net/)
 
 <!-- truncate -->
 
-## Core Features
+## 核心特性
 
-- 🎯 **Automatic Matching**: Intelligently identifies video files and automatically matches corresponding metadata
-- 🔧 **Multi-Mode Operation**: Supports both server mode and command-line mode
-- 🌍 **Multi-Platform Compatibility**: Seamlessly integrates with mainstream media servers like Plex and Jellyfin
-- 📦 **Rich Data Sources**: Provides comprehensive video metadata information
-- 🔗 **Stash-Box Support**: Compatible with Stash-Box metadata management system
+- 🎯 **自动匹配**：智能识别视频文件，自动匹配对应元数据
+- 🔧 **多模式运行**：支持服务器模式和命令行模式
+- 🌍 **多平台兼容**：与 Plex、Jellyfin 等主流媒体服务器无缝集成
+- 📦 **丰富数据源**：提供全面的视频元数据信息
+- 🔗 **Stash-Box 支持**：兼容 Stash-Box 元数据管理系统
 
 # Stash-Box
 
-Stash-Box is a self-hosted metadata management system developed in Go language, designed specifically for organizing and providing diverse content collections while meeting both SFW (Safe for Work) and NSFW (Not Safe for Work) management needs.
+Stash-Box 是一个基于 Go 语言开发的自托管元数据管理系统，专为组织和提供多样化的内容集合而设计，同时满足 SFW（安全内容）和 NSFW（成人内容）的管理需求。
 
-Official Website: [https://docs.stashapp.cc/](https://docs.stashapp.cc/)
+官网：[https://docs.stashapp.cc/](https://docs.stashapp.cc/)
 
-## Plugin Configuration
+## 插件配置
 
-### Prerequisites
+### 前置条件
 
-Before configuring the plugin, complete the following preparations:
+在配置插件前，需完成以下准备工作：
 
 #### ThePornDB
 
-##### Account Registration
+##### 账户注册
 
-Visit ThePornDB official registration page to create an account:
+访问 ThePornDB 官方注册页面完成账户创建：
 
-- Registration Address: [https://theporndb.net/register](https://theporndb.net/register)
+- 注册地址：[https://theporndb.net/register](https://theporndb.net/register)
 
-![ThePornDB Account Registration](/img/plugin/theporndb-04.png)
+![ThePornDB 账户注册](/img/plugin/theporndb-04.png)
 
-##### API Key Acquisition
+##### API 密钥获取
 
-After registration, log in to your account and obtain an API key:
+注册完成后，登录账户并获取 API 密钥：
 
-- API Key Acquisition Address: [https://theporndb.net/user/api-tokens](https://theporndb.net/user/api-tokens)
+- API 密钥获取地址：[https://theporndb.net/user/api-tokens](https://theporndb.net/user/api-tokens)
 
 #### Stash-Box
 
-Stash-Box is the metadata management component of the Stash project, providing standardized metadata storage and retrieval services:
+Stash-Box 是 Stash 项目的元数据管理组件，提供标准化的元数据存储和检索服务：
 
-##### Official Instances
+##### 官方实例
 
-Visit the Stash-Box official documentation to view supported public instances:
+访问 Stash-Box 官方文档，查看支持的公共实例：
 
-- Instance List: [https://docs.stashapp.cc/metadata-sources/stash-box-instances/](https://docs.stashapp.cc/metadata-sources/stash-box-instances/)
+- 实例列表：[https://docs.stashapp.cc/metadata-sources/stash-box-instances/](https://docs.stashapp.cc/metadata-sources/stash-box-instances/)
 
-:::info Instance Description
-On this page, you can see public sites supported by Stash-Box, including ThePornDB. You can also deploy private Stash-Box instances according to the official documentation.
+:::info 实例说明
+在该页面可以看到 Stash-Box 支持的公共站点，包括 ThePornDB。你也可以根据官方文档自行部署私有 Stash-Box 实例。
 :::
 
-:::tip Compatibility Tip
-ThePornDB also supports use as a Stash-Box client, providing richer metadata retrieval capabilities.
+:::tip 兼容性提示
+ThePornDB 同时支持作为 Stash-Box 客户端使用，提供更丰富的元数据获取能力。
 :::
 
-![Stash-Box Configuration](/img/plugin/theporndb-05.png)
+![Stash-Box 配置](/img/plugin/theporndb-05.png)
 
-##### API Key Acquisition
+##### API 密钥获取
 
-Log in to the selected Stash-Box instance, generate and obtain an API key in user settings for subsequent client configuration.
+登录选定的 Stash-Box 实例，在用户设置中生成并获取 API 密钥，用于后续客户端配置。
 
-### Configuration Information
+### 配置信息
 
-In the AMMDS management interface, access the configuration page through "Integrated Applications" → "Metadata" → "ThePornDB".
+在 AMMDS 管理界面中，通过「集成应用」→「元数据」→「ThePornDB」进入配置页面。
 
-![ThePornDB Plugin Configuration](/img/plugin/theporndb-01.png)
+![ThePornDB 插件配置](/img/plugin/theporndb-01.png)
 
-#### Basic Configuration Parameters
+#### 基本配置参数
 
-| Parameter | Description | Default Value | Recommendation |
-|-----------|-------------|---------------|----------------|
-| Startup Status | Controls whether to enable ThePornDB plugin | Disabled | Enable according to actual needs |
-| Service Address | The access address of ThePornDB service | `https://theporndb.net` | Official address is stable and reliable, no need to modify |
-| API Key | ThePornDB API key for service authentication | - | Enter the API key obtained from the official site |
+| 参数 | 说明 | 默认值 | 建议 |
+|------|------|--------|------|
+| 启动状态 | 控制是否启用 ThePornDB 插件 | 关闭 | 根据实际需求开启 |
+| 服务地址 | ThePornDB 服务的访问地址 | `https://theporndb.net` | 官方地址稳定可靠，无需修改 |
+| 密钥 | ThePornDB API 密钥，用于服务鉴权 | - | 填写从官方站点获取的 API 密钥 |
 
-![ThePornDB Advanced Configuration](/img/plugin/theporndb-02.png)
+![ThePornDB 高级配置](/img/plugin/theporndb-02.png)
 
-#### Advanced Configuration Parameters
+#### 高级配置参数
 
-| Parameter | Description | Default Value | Recommendation |
-|-----------|-------------|---------------|----------------|
-| Perceptual Hash Calculation | Whether to enable video perceptual hash calculation | Enabled | Depends on original video files, recommended to disable for non-standard video files |
-| Fuzzy Matching | Whether to perform fuzzy matching by file name | Disabled | Recommended to enable when perceptual hash calculation is disabled |
+| 参数 | 说明 | 默认值 | 建议 |
+|------|------|--------|------|
+| 感知哈希计算 | 是否启用视频感知哈希计算功能 | 开启 | 依赖原始视频文件，非常规视频文件建议关闭 |
+| 模糊匹配 | 是否通过文件名进行模糊匹配 | 关闭 | 感知哈希计算关闭时建议开启 |
 
-:::info Configuration Notes
-- Perceptual hash calculation can improve recognition accuracy but increases system resource consumption
-- Fuzzy matching is suitable for scenarios with standardized file names but special video files
+:::info 配置说明
+- 感知哈希计算可提高识别准确率，但会增加系统资源消耗
+- 模糊匹配适用于文件名规范但视频文件特殊的场景
 :::
 
-### Stash Client
+### Stash 客户端
 
-By configuring Stash-Box clients, you can obtain richer metadata information:
+通过配置 Stash-Box 客户端，可以获取更丰富的元数据信息：
 
-#### Add Client
+#### 添加客户端
 
-Click the "Add Client" button to enter the Stash-Box client configuration interface:
+点击「添加客户端」按钮，进入 Stash-Box 客户端配置界面：
 
-![Stash-Box Client Configuration](/img/plugin/theporndb-03.png)
+![Stash-Box 客户端配置](/img/plugin/theporndb-03.png)
 
-#### Configuration Parameters
+#### 配置参数
 
-| Parameter | Description | Configuration Recommendation |
-|-----------|-------------|-------------------------------|
-| Enabled | Controls whether this Stash-Box client is active | Enable according to actual needs |
-| Client Name | Custom client identification name | Recommended to use site name for easy identification |
-| GraphQL Address | API access address of the Stash-Box site | Select from dropdown or manually enter complete URL |
-| API Key | Access key for the Stash-Box site | Enter the API key obtained from the corresponding site |
+| 参数 | 说明 | 配置建议 |
+|------|------|----------|
+| 是否启用 | 控制该 Stash-Box 客户端是否生效 | 根据实际需求开启 |
+| 客户端名称 | 自定义客户端标识名称 | 建议使用站点名称，便于识别 |
+| GraphQL 地址 | Stash-Box 站点的 API 访问地址 | 下拉选择或手动输入完整 URL |
+| API 密钥 | Stash-Box 站点的访问密钥 | 填写从对应站点获取的 API 密钥 |
 
-#### Configuration Method
+#### 配置方法
 
-1. **Select Preset Site**: Select an officially preset Stash-Box site from the client name dropdown list, and the system will automatically fill in the GraphQL address
-2. **Manual Configuration**: To add a custom Stash-Box instance, manually enter the following information:
-   - GraphQL Address: Usually in the format `https://{site}/graphql`
-   - API Key: Generated in user settings of the corresponding Stash-Box site
+1. **选择预设站点**：在客户端名称下拉列表中选择官方预设的 Stash-Box 站点，系统会自动填充 GraphQL 地址
+2. **手动配置**：如需添加自定义 Stash-Box 实例，可手动输入以下信息：
+   - GraphQL 地址：通常为 `https://{site}/graphql` 格式
+   - API 密钥：在对应 Stash-Box 站点的用户设置中生成
 
-:::tip Configuration Recommendations
-- It is recommended to add multiple Stash-Box clients to obtain more comprehensive metadata
-- Priority order affects metadata retrieval order, which can be adjusted according to needs
+:::tip 配置建议
+- 建议添加多个 Stash-Box 客户端以获取更全面的元数据
+- 优先级顺序会影响元数据获取顺序，可根据需求调整
 :::
 
-### Test Module
+### 测试模块
 
-The test module provides the following functions to verify plugin configuration and service status:
+测试模块提供以下功能，用于验证插件配置和服务状态：
 
-#### Test Functions
+#### 测试功能
 
-| Function | Description | Purpose |
-|----------|-------------|----------|
-| Test Connection | Verifies network connectivity to the ThePornDB service address | Confirms network connection is normal and service address is reachable |
-| Get User Information | Attempts to retrieve and display ThePornDB account information | Verifies if API key is correct and service authorization is successful |
+| 功能 | 说明 | 作用 |
+|------|------|------|
+| 测试连接 | 验证 ThePornDB 服务地址的网络连通性 | 确认网络连接正常，服务地址可达 |
+| 获取用户信息 | 尝试获取并展示 ThePornDB 账户信息 | 验证 API 密钥是否正确，服务授权是否成功 |
 
-#### Usage Recommendations
+#### 使用建议
 
-- **Pre-configuration Test**: Before saving the configuration, it is recommended to test the connection status to ensure the service address is correct
-- **API Key Verification**: Verify the validity of the API key through the Get User Information function
-- **Troubleshooting**: When metadata retrieval fails, the test functions can be used to quickly locate problems
+- **配置前测试**：在保存配置前，建议先测试连接状态，确保服务地址正确
+- **API 密钥验证**：通过获取用户信息功能，验证 API 密钥的有效性
+- **故障排查**：当元数据获取失败时，可通过测试功能快速定位问题
 
-:::info Test Notes
-- Test Connection only verifies network connectivity, not service status
-- Get User Information requires a valid API key and network connection
+:::info 测试说明
+- 测试连接仅验证网络连通性，不保证服务状态正常
+- 获取用户信息需要有效的 API 密钥和网络连接
 :::
 
-## Common Issues
+## 常见问题
 
-### Service Connection Failure
+### 服务连接失败
 
-**Possible Causes**:
-- Network connection issues
-- Incorrect service address configuration
-- Invalid API key
+**可能原因**：
+- 网络连接问题
+- 服务地址配置错误
+- API 密钥无效
 
-**Solutions**:
-- Check if the network connection is normal
-- Verify if the service address format is correct
-- Confirm if the API key has expired or is incorrect
-- Try using the official default service address
+**解决方案**：
+- 检查网络连接是否正常
+- 验证服务地址格式是否正确
+- 确认 API 密钥是否过期或错误
+- 尝试使用官方默认服务地址
 
-### Metadata Retrieval Failure
+### 元数据获取失败
 
-**Possible Causes**:
-- Non-standard video file naming
-- Perceptual hash calculation failure
-- Data source site temporarily unavailable
+**可能原因**：
+- 视频文件命名不规范
+- 感知哈希计算失败
+- 数据源站点暂时不可用
 
-**Solutions**:
-- Enable fuzzy matching functionality
-- Check if the video file format is supported
-- Try replacing the Stash-Box client
-- Retry the retrieval operation later
+**解决方案**：
+- 启用模糊匹配功能
+- 检查视频文件格式是否支持
+- 尝试更换 Stash-Box 客户端
+- 稍后重试获取操作
 
-### Stash-Box Client Configuration Error
+### Stash-Box 客户端配置错误
 
-**Possible Causes**:
-- Incorrect GraphQL address format
-- Insufficient API key permissions
-- Site access restrictions
+**可能原因**：
+- GraphQL 地址格式错误
+- API 密钥权限不足
+- 站点访问限制
 
-**Solutions**:
-- Verify if the GraphQL address contains the complete path
-- Ensure the API key has sufficient permissions
-- Check if the network environment supports accessing the site
-- Try using other Stash-Box instances
+**解决方案**：
+- 验证 GraphQL 地址是否包含完整路径
+- 确保 API 密钥具有足够权限
+- 检查网络环境是否支持访问该站点
+- 尝试使用其他 Stash-Box 实例
 
-### Performance Issues
+### 性能问题
 
-**Possible Causes**:
-- Perceptual hash calculation consuming system resources
-- Multiple clients requesting simultaneously
-- High network latency
+**可能原因**：
+- 感知哈希计算占用系统资源
+- 多客户端同时请求
+- 网络延迟较高
 
-**Solutions**:
-- For performance-limited devices, consider disabling perceptual hash calculation
-- Reasonably configure client priorities to avoid simultaneous requests
-- Select Stash-Box instances with lower network latency
+**解决方案**：
+- 对于性能受限的设备，考虑关闭感知哈希计算
+- 合理配置客户端优先级，避免同时请求
+- 选择网络延迟较低的 Stash-Box 实例
 
-:::tip Best Practices
-- Regularly update API keys to ensure security
-- Only add necessary Stash-Box clients to avoid resource waste
-- Combine use of ThePornDB and Stash-Box to obtain more comprehensive metadata
+:::tip 最佳实践
+- 定期更新 API 密钥，确保安全性
+- 仅添加必要的 Stash-Box 客户端，避免资源浪费
+- 结合使用 ThePornDB 和 Stash-Box，获取更全面的元数据
 :::

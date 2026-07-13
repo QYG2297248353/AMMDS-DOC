@@ -3,235 +3,236 @@ sidebar_position: 5
 sidebar_label: "1Panel"
 ---
 
-# 1Panel Deployment Guide
+# 1Panel 部署指南
 
-1Panel is a powerful server management panel that provides an intuitive web interface to help users efficiently manage applications, websites, files, databases, and large language models (LLMs) on Linux servers. This guide will detail the deployment process of AMMDS in a 1Panel environment.
+1Panel 是一款功能强大的服务器管理面板，提供直观的 Web 界面，帮助用户高效管理 Linux 服务器中的应用、网站、文件、数据库以及大语言模型（LLMs）等资源。本指南将详细介绍 AMMDS 在 1Panel 环境下的部署流程。
 
 <!-- truncate -->
 
-## Install Third-Party App Store
+## 安装第三方应用商店
 
-This solution is applicable to both 1Panel v1 and v2 versions.
+本方案适用于 1Panel v1 和 v2 版本。
 
-### Automatic Installation
+### 自动化安装
 
-The automatic installation solution updates the third-party app store content every 3 hours, ensuring you always get the latest app resources.
+自动化安装方案每 3 小时自动更新一次第三方应用商店内容，确保您始终获取最新的应用资源。
 
-#### Installation Script
+#### 安装脚本
 
 ```bash
 curl -sSL https://install.lifebus.top/auto_install.sh | bash
 ```
 
-#### Uninstallation Script
+#### 卸载脚本
 
 ```bash
 curl -sSL https://install.lifebus.top/auto_uninstall.sh | bash
 ```
 
-### Manual Installation
+### 手动安装
 
-The manual installation script only pulls the latest third-party app store content once. You need to run this script again for subsequent store content or version updates.
+手动安装脚本仅拉取一次最新的第三方应用商店内容，后续商店内容或版本更新需要再次执行此脚本。
 
 ```bash
 curl -sSL https://install.lifebus.top/app_install.sh | bash
 ```
 
-## Update Store Content
+## 更新商店内容
 
-### Operation Steps
+### 操作步骤
 
-1. **Access Store Settings**
-   Navigate to the App Store via the left sidebar and click to enter the Store Settings page.
+1. **进入商店设置**
+   通过左侧导航栏进入应用商店，点击进入商店设置页面。
 
-2. **Execute Update Operation**
 
-   ![Update Store Content](/img/deploy/install-1panel-00.png)
+2. **执行更新操作**
 
-   #### v1 Version
-   Click the "Update App List" button in the upper right corner of the store page.
+   ![更新商店内容](/img/deploy/install-1panel-00.png)
+   
+   #### v1 版本
+   在商店页面的右上角点击「更新应用列表」按钮。
 
-   ![Update Store Content](/img/deploy/install-1panel-01.png)
+   ![更新商店内容](/img/deploy/install-1panel-01.png)
 
-   #### v2 Version
-   Click the "Sync Local Apps" button in the upper left corner of the store page.
+   #### v2 版本
+   在商店页面的左上角点击「同步本地应用」按钮。
 
-## Install Application
+## 安装应用
 
-### App Search and Selection
+### 应用搜索与选择
 
-![Installation](/img/deploy/install-1panel-02.png)
+![安装](/img/deploy/install-1panel-02.png)
 
-1. **Search for AMMDS App**
-   Search for the "ammds" app in the App Store.
+1. **搜索 AMMDS 应用**
+   在应用商店中搜索「ammds」应用。
 
-2. **Version Selection**
-   The system will display two versions of the AMMDS app:
-   - **Compatible Version**: Suitable for devices with lower hardware configurations
-   - **Latest Version**: Suitable for devices with higher hardware configurations
+2. **版本选择**
+   系统会显示两个版本的 AMMDS 应用：
+   - **兼容版**：适用于硬件配置较低的设备
+   - **最新版**：适用于硬件配置较高的设备
 
-   ![Installation](/img/deploy/install-1panel-03.png)
+   ![安装](/img/deploy/install-1panel-03.png)
 
-### Installation Parameter Configuration
+### 安装参数配置
 
-After clicking the install button, a parameter configuration panel will appear.
+点击安装按钮后，系统会弹出参数配置面板。
 
-#### Basic Configuration
+#### 基本配置
 
-- **Name**: It is recommended to fill in "ammds", or customize as needed
-- **Version**: It is recommended to select "Latest Version" to get the latest features
-- **Network Mode**: If there are no special requirements, it is recommended to keep the default configuration
-- **Data Persistence Path**: Fill in the absolute path on the server for storing AMMDS application data
-- **WebUI Port**: It is recommended to fill in 8080, or customize as needed
-- **API Port**: It is recommended to fill in 8081, or customize as needed
+- **名称**：建议填写「ammds」，也可根据需要自定义
+- **版本**：建议选择「最新版」以获取最新功能
+- **网络模式**：如无特殊需求，建议保持默认配置
+- **数据持久化路径**：填写服务器上的绝对路径，用于存储 AMMDS 应用数据
+- **WebUI 端口**：建议填写 8080，也可根据需要自定义
+- **API 端口**：建议填写 8081，也可根据需要自定义
 
-Other parameters are optional and can be filled in according to actual needs.
+其他参数为可选配置，可根据实际需求填写。
 
-![Installation](/img/deploy/install-1panel-04.png)
+![安装](/img/deploy/install-1panel-04.png)
 
-#### Mount Directory Settings
+#### 挂载目录设置
 
-**Custom Mount Directory**: It is recommended to fill in the directory where media files are located, which is optional.
+**自定义挂载目录**：建议填写媒体文件所在目录，为可选项。
 
-![Installation](/img/deploy/install-1panel-05.png)
+![安装](/img/deploy/install-1panel-05.png)
 
-#### Port Access Configuration
+#### 端口访问配置
 
-**You must check the "External Port Access" option**, otherwise you will not be able to access the WebUI and API via the network.
+**必须勾选「端口外部访问」选项**，否则无法通过网络访问 WebUI 和 API。
 
-Click the "Confirm" button to start installing the AMMDS application.
+点击「确认」按钮，开始安装 AMMDS 应用。
 
-## Installation Complete
+## 安装完成
 
-![Installation Complete](/img/deploy/install-1panel-06.png)
+![安装完成](/img/deploy/install-1panel-06.png)
 
-### Verify Installation Success
+### 验证安装成功
 
-After installation is complete, you can view the installed AMMDS application in the "Installed" tab.
+安装完成后，在「已安装」选项卡中可以查看已安装的 AMMDS 应用。
 
-### Management Function Introduction
+### 管理功能介绍
 
-The application card provides multiple quick operation buttons, including:
-- **Terminal**: Access the application container terminal
-- **Logs**: View application running logs
-- **Start**: Start the application service
-- **Stop**: Stop the application service
-- **Restart**: Restart the application service
-- **Uninstall**: Remove the application
-- **Rebuild**: Rebuild the application container
+应用卡片上提供多种快捷操作按钮，包括：
+- **终端**：访问应用容器终端
+- **日志**：查看应用运行日志
+- **启动**：启动应用服务
+- **停止**：停止应用服务
+- **重启**：重启应用服务
+- **卸载**：移除应用
+- **重建**：重新构建应用容器
 
-## Access Application
+## 访问应用
 
-![Access Application](/img/deploy/install-1panel-07.png)
+![访问应用](/img/deploy/install-1panel-07.png)
 
-### Access Method
+### 访问方式
 
-After installation is complete, you can access AMMDS's WebUI and API interfaces through a browser:
+安装完成后，可通过浏览器访问 AMMDS 的 WebUI 和 API 接口：
 
-- **WebUI Address**: http://&lt;ServerIP&gt;:&lt;WebUIPort&gt;
-- **API Address**: http://&lt;ServerIP&gt;:&lt;APIPort&gt;
+- **WebUI 地址**：http://&lt;服务器IP&gt;:&lt;WebUI端口&gt;
+- **API 地址**：http://&lt;服务器IP&gt;:&lt;API端口&gt;
 
-### Default Login Information
+### 默认登录信息
 
-- **Username**: ammds
-- **Password**: ammds
+- **用户名**：ammds
+- **密码**：ammds
 
-:::info Security Tip
-After first login, please immediately change the default password to ensure system security.
+:::info 安全提示
+首次登录后，请立即修改默认密码，以确保系统安全。
 :::
 
-## Advanced Attempts
+## 高级尝试
 
-### Custom Configuration
+### 自定义配置
 
-If you are familiar with Docker container management, you can perform more detailed settings for the AMMDS application through 1Panel's advanced configuration options, including:
+如果您熟悉 Docker 容器管理，可以通过 1Panel 的高级配置选项对 AMMDS 应用进行更加精细的设置，包括：
 
-- Resource limit adjustments (CPU, memory)
-- Environment variable configuration
-- Advanced network settings
-- Storage volume management
+- 资源限制调整（CPU、内存）
+- 环境变量配置
+- 网络高级设置
+- 存储卷管理
 
-### Multi-Instance Deployment
+### 多实例部署
 
-For users who need to isolate different functional scenarios, you can deploy multiple AMMDS instances in 1Panel, distinguished by different ports and data paths.
+对于需要隔离不同功能场景的用户，可以在 1Panel 中部署多个 AMMDS 实例，通过不同的端口和数据路径进行区分。
 
-## Warnings and Precautions
+## 警告和注意事项
 
-### Security Warnings
+### 安全警告
 
-:::danger Important Security Tips
+:::danger 重要安全提示
 
-- **Official Sources**: Only obtain application installation scripts from official channels, avoid using third-party download sources
-- **Password Security**: Set strong passwords and change them regularly, avoid using weak passwords
-- **Port Security**: Ensure to modify default ports to reduce the risk of attacks
-- **External Access**: Configure port external access according to actual needs, avoid unnecessary exposure
-
-:::
-
-### System Requirements
-
-:::info System Configuration Requirements
-
-#### Minimum Configuration
-
-- Operating System: Linux distribution (supporting 1Panel installation)
-- Processor: Intel Core i3 or equivalent performance
-- Memory: 4GB RAM
-- Disk Space: At least 10GB of available space
-- Network: Broadband internet connection
-
-#### Recommended Configuration
-
-- Operating System: Linux distribution (supporting 1Panel installation)
-- Processor: Intel Core i5 or equivalent performance
-- Memory: 8GB RAM or more
-- Disk Space: 20GB of available space
-- Network: Stable broadband internet connection
+- **官方来源**：仅从官方渠道获取应用安装脚本，避免使用第三方下载源
+- **密码安全**：设置强密码并定期更换，避免使用弱密码
+- **端口安全**：确保修改默认端口，减少被攻击的风险
+- **外部访问**：根据实际需求配置端口外部访问，避免不必要的暴露
 
 :::
 
-### Usage Precautions
+### 系统要求
 
-- **Data Backup**: Regularly back up AMMDS configuration files and important data
-- **Resource Management**: Monitor server resource usage to avoid excessive resource occupation
-- **Network Connection**: Ensure stable network connection, especially when downloading resources and updating
-- **System Maintenance**: Regularly update 1Panel and related applications to ensure system stability
+:::info 系统配置要求
 
-### Troubleshooting
+#### 最低配置
 
-#### Common Issues
+- 操作系统：Linux 发行版（支持 1Panel 安装）
+- 处理器：Intel Core i3 或同等性能
+- 内存：4GB RAM
+- 磁盘空间：至少 10GB 可用空间
+- 网络：宽带互联网连接
 
-- **Installation Failure**: Check if network connection is normal and if disk space is sufficient
-- **Startup Abnormality**: View application logs for detailed error information
-- **Access Failure**: Check if port configuration is correct and if firewall allows access
-- **Upgrade Failure**: Try uninstalling the old version first and then installing the new version
+#### 推荐配置
 
-#### Contact Information
+- 操作系统：Linux 发行版（支持 1Panel 安装）
+- 处理器：Intel Core i5 或同等性能
+- 内存：8GB RAM 或更多
+- 磁盘空间：20GB 可用空间
+- 网络：稳定的宽带互联网连接
 
-If you encounter unsolvable problems, please visit the official GitHub repository to submit an Issue or seek help.
+:::
 
-## Best Practices
+### 使用注意事项
 
-### Daily Maintenance
+- **数据备份**：定期备份 AMMDS 的配置文件和重要数据
+- **资源管理**：监控服务器资源使用情况，避免资源过度占用
+- **网络连接**：确保稳定的网络连接，特别是在下载资源和更新时
+- **系统维护**：定期更新 1Panel 和相关应用，确保系统稳定性
 
-- **Regular Updates**: Keep 1Panel and AMMDS updated to the latest versions to get the latest features and security fixes
-- **Status Monitoring**: Regularly check application running status and server resource usage
-- **Cache Cleaning**: Regularly clean application cache to optimize storage space usage
+### 故障排除
 
-### Optimization Configuration
+#### 常见问题
 
-- **Resource Allocation**: Reasonably allocate application resource limits based on server performance
-- **Network Optimization**: Configure reasonable network settings to ensure smooth application access
-- **Storage Planning**: Reasonably plan data storage paths for easy management and backup
+- **安装失败**：检查网络连接是否正常，磁盘空间是否充足
+- **启动异常**：查看应用日志获取详细错误信息
+- **访问失败**：检查端口配置是否正确，防火墙是否允许访问
+- **升级失败**：尝试先卸载旧版本再安装新版本
 
-### Security Hardening
+#### 联系方式
 
-- **Regular Password Changes**: Regularly update login passwords and access credentials
-- **Access Control**: Configure access control policies according to actual needs
-- **Log Auditing**: Regularly check application logs to promptly discover abnormal situations
+如遇到无法解决的问题，请访问官方 GitHub 仓库提交 Issue 或寻求帮助。
 
-### Community Participation
+## 最佳实践
 
-- **Feedback Issues**: Provide timely feedback when encountering problems to help improve the product
-- **Share Experience**: Participate in community discussions and share usage experience and best practices
-- **Contribute Code**: If capable, you can participate in project development and contribute code
+### 日常维护
+
+- **定期更新**：保持 1Panel 和 AMMDS 为最新版本，获取最新功能和安全修复
+- **监控状态**：定期检查应用运行状态和服务器资源使用情况
+- **清理缓存**：定期清理应用缓存，优化存储空间使用
+
+### 优化配置
+
+- **资源分配**：根据服务器性能合理分配应用资源限制
+- **网络优化**：配置合理的网络设置，确保应用访问流畅
+- **存储规划**：合理规划数据存储路径，便于管理和备份
+
+### 安全加固
+
+- **定期密码更换**：定期更新登录密码和访问凭证
+- **访问控制**：根据实际需求配置访问控制策略
+- **日志审计**：定期检查应用日志，及时发现异常情况
+
+### 社区参与
+
+- **反馈问题**：遇到问题及时反馈，帮助改进产品
+- **分享经验**：参与社区讨论，分享使用经验和最佳实践
+- **贡献代码**：如有能力，可参与项目开发，贡献代码

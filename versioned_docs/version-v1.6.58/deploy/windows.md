@@ -3,386 +3,386 @@ sidebar_position: 4
 sidebar_label: "Windows"
 ---
 
-# Windows Deployment Guide
+# Windows部署指南
 
-Microsoft Windows (referred to as Windows) is a series of proprietary commercial operating systems developed by Microsoft Corporation, featuring a graphical user interface as its core characteristic. It is widely used on personal computers, servers, and other devices. This guide will detail the deployment process of AMMDS in a Windows environment.
+Microsoft Windows（简称Windows）是微软公司开发的一系列专有商业操作系统，以图形用户界面为核心特性，广泛应用于个人电脑、服务器等设备。本指南将详细介绍AMMDS在Windows环境下的部署流程。
 
 <!-- truncate -->
 
-## Download
+## 下载
 
-![AMMDS Launcher Download Page](/img/deploy/install-windows-00.png)
+![AMMDS Launcher下载页面](/img/deploy/install-windows-00.png)
 
-### Official Release Address
+### 官方发行地址
 
 [AMMDS Launcher GitHub Releases](https://github.com/QYG2297248353/AMMDS-Launcher/releases)
 
-### Available Installation Package Types
+### 可用安装包类型
 
-| File Name         | Type             | Description                                                                                                                                      |
-| ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ammds-setup.exe` | Installer        | Complete AMMDS Launcher installation package, including automatic installation wizard and all necessary components                               |
-| `ammds.zip`       | Portable Version | Green, no-install version that can be run directly after extraction, suitable for temporary use or environments without administrator privileges |
+| 文件名            | 类型     | 说明                                                                 |
+| ----------------- | -------- | -------------------------------------------------------------------- |
+| `ammds-setup.exe` | 安装程序 | 完整的AMMDS Launcher安装包，包含自动安装向导和所有必要组件           |
+| `ammds.zip`       | 便携版   | 绿色免安装版本，解压后即可直接运行，适合临时使用或无管理员权限的环境 |
 
-### Recommended Download
+### 推荐下载
 
-**Recommended Download:** `ammds-setup.exe`
+**推荐下载：** `ammds-setup.exe`
 
-Using the installer ensures all dependent components are correctly installed and provides a better system integration experience.
+使用安装程序可以确保所有依赖组件正确安装，并获得更好的系统集成体验。
 
-## Installation
+## 安装
 
-### Preconditions
+### 前置条件
 
-- Operating System: Windows 10 or higher
-- Permissions: Administrator privileges required for installation
-- Network: Internet connection required for first launch to download necessary resources
+- 操作系统：Windows 10 或更高版本
+- 权限：需要管理员权限进行安装
+- 网络：首次启动需要联网下载必要资源
 
-### Installation Steps
+### 安装步骤
 
-1. **Launch the Installer**
+1. **启动安装程序**
 
-   Double-click the downloaded `ammds-setup.exe` file to start the installation wizard.
+   双击下载的`ammds-setup.exe`文件，启动安装向导。
 
-2. **Select Installation Language**
+2. **选择安装语言**
 
-   ![Installation Language Selection Interface](/img/deploy/install-windows-01.png)
+   ![安装语言选择界面](/img/deploy/install-windows-01.png)
 
-   In the language selection interface, select **Simplified Chinese** as the installation language, then click "OK".
+   在语言选择界面中，选择**简体中文**作为安装语言，然后点击“确定”。
 
-3. **Select Additional Components**
+3. **选择附加组件**
 
-   ![Additional Components Selection Interface](/img/deploy/install-windows-02.png)
+   ![附加组件选择界面](/img/deploy/install-windows-02.png)
 
-   In the component selection interface, the system will list all available additional components. It is recommended to **select all components** to get complete functionality:
-   - Core Components: AMMDS Launcher main program
-   - Dependencies: Required runtime environment
-   - System Integration: Tray icon and auto-start functionality
+   在组件选择界面中，系统会列出所有可用的附加组件。建议**勾选所有组件**以获得完整功能：
+   - 核心组件：AMMDS Launcher主程序
+   - 依赖库：必要的运行时环境
+   - 系统集成：托盘图标和自动启动功能
 
-4. **Start Installation**
+4. **开始安装**
 
-   ![Installation Confirmation Interface](/img/deploy/install-windows-03.png)
+   ![安装确认界面](/img/deploy/install-windows-03.png)
 
-   After confirming the installation configuration, click the "Install" button to start the installation process.
+   确认安装配置后，点击“安装”按钮开始安装过程。
 
-5. **Installation Progress**
+5. **安装进度**
 
-   ![Installation Progress Interface](/img/deploy/install-windows-04.png)
+   ![安装进度界面](/img/deploy/install-windows-04.png)
 
-   The installer will display the current installation progress and status. Please wait patiently for the installation to complete.
+   安装程序会显示当前安装进度和状态，请耐心等待安装完成。
 
-6. **Complete Installation**
+6. **完成安装**
 
-   ![Installation Completion Interface](/img/deploy/install-windows-05.png)
+   ![安装完成界面](/img/deploy/install-windows-05.png)
 
-   After installation is complete, click the "Finish" button to exit the installation wizard.
+   安装完成后，点击“完成”按钮退出安装向导。
 
-### First Launch
+### 首次启动
 
-After installation is complete, the system will automatically start AMMDS Launcher and display the official documentation homepage.
+安装完成后，系统会自动启动AMMDS Launcher，并显示官方文档首页。
 
-![First Launch White Screen Status](/img/deploy/install-windows-06.png)
+![首次启动白屏状态](/img/deploy/install-windows-06.png)
 
-**Note:** If a white screen appears during the first launch, this is a normal initialization process. The system is downloading necessary resource files in the background. Please wait patiently, and the page will automatically refresh after the download is complete.
+**注意：** 如果首次启动时出现白屏现象，这是正常的初始化过程。后台正在下载必要的资源文件，请耐心等待，下载完成后页面会自动刷新。
 
-![AMMDS Launcher Main Interface](/img/deploy/install-windows-07.png)
+![AMMDS Launcher主界面](/img/deploy/install-windows-07.png)
 
-After the resource download is complete, the system will automatically enter the AMMDS Launcher main interface, where you can start using all features.
+资源下载完成后，系统将自动进入AMMDS Launcher主界面，此时您可以开始使用所有功能。
 
-### Installation Notes
+### 安装注意事项
 
-- Do not close the installation window during the installation process
-- Ensure network connection is normal during first launch
-- If installation fails, check if you have sufficient disk space and administrator privileges
+- 安装过程中请勿关闭安装窗口
+- 首次启动时请确保网络连接正常
+- 如遇到安装失败，请检查是否有足够的磁盘空间和管理员权限
 
-## Upgrade
+## 升级
 
-### Pre-upgrade Preparation
+### 升级前准备
 
-- **Backup Data**: It is recommended to backup AMMDS configuration files and important data before upgrading
-- **Close Program**: Ensure AMMDS Launcher is completely closed, including the tray icon
-- **Download New Version**: Download the latest version of `ammds-setup.exe` from the official GitHub Releases page
+- **备份数据**：升级前建议备份AMMDS的配置文件和重要数据
+- **关闭程序**：确保AMMDS Launcher已完全关闭，包括托盘图标
+- **下载新版本**：从官方GitHub Releases页面下载最新版本的`ammds-setup.exe`
 
-### Upgrade Steps
+### 升级步骤
 
-1. **Launch the Upgrade Program**
+1. **启动升级程序**
 
-   Double-click the downloaded new version of `ammds-setup.exe` file to start the upgrade wizard.
+   双击下载的新版`ammds-setup.exe`文件，启动升级向导。
 
-2. **Follow the Upgrade Wizard**
+2. **跟随升级向导**
 
-   The upgrade wizard will automatically detect the installed version and prompt for an overwrite upgrade. Follow the wizard prompts to complete the upgrade process.
+   升级向导会自动检测已安装的版本，并提示进行覆盖升级。按照向导提示完成升级过程。
 
-3. **Complete the Upgrade**
+3. **完成升级**
 
-   After the upgrade is complete, click the "Finish" button to exit the wizard, and the system will automatically start the new version of AMMDS Launcher.
+   升级完成后，点击“完成”按钮退出向导，系统会自动启动新版AMMDS Launcher。
 
-### Upgrade Mechanism Description
+### 升级机制说明
 
-AMMDS Launcher uses an **overwrite upgrade** mechanism with the following characteristics:
+AMMDS Launcher采用**覆盖式升级**机制，具体特点如下：
 
-- Preserve user configuration and data: The upgrade process will retain existing configuration files and data directories
-- Update core components: Automatically replace old version executable files and dependency libraries
-- Maintain system integration: Tray icon, auto-start, and other system integration settings will be preserved
+- 保留用户配置和数据：升级过程会保留现有的配置文件和数据目录
+- 更新核心组件：自动替换旧版本的可执行文件和依赖库
+- 保持系统集成：托盘图标、自动启动等系统集成设置会被保留
 
-### Post-upgrade Verification
+### 升级后验证
 
-After the upgrade is complete, it is recommended to perform the following verifications:
+升级完成后，建议进行以下验证：
 
-1. Check if AMMDS Launcher starts normally
-2. Verify if the version number has been updated (can be viewed on the About page)
-3. Confirm all features are working normally
-4. Check if data and configurations are completely preserved
+1. 检查AMMDS Launcher是否正常启动
+2. 验证版本号是否已更新（可在关于页面查看）
+3. 确认所有功能是否正常工作
+4. 检查数据和配置是否完整保留
 
-### Upgrade Notes
+### 升级注意事项
 
-- Do not close the upgrade window during the upgrade process
-- If upgrade fails, try uninstalling the old version first and then installing the new version
-- Major version upgrades may require re-downloading some resource files
+- 升级过程中请勿关闭升级窗口
+- 如遇到升级失败，可尝试先卸载旧版本再安装新版本
+- 重大版本升级可能需要重新下载部分资源文件
 
-## System Tray Management
+## 系统托盘管理
 
-![AMMDS Launcher Tray Menu](/img/deploy/install-windows-08.png)
+![AMMDS Launcher托盘菜单](/img/deploy/install-windows-08.png)
 
-### Tray Function Overview
+### 托盘功能概述
 
-After AMMDS Launcher is installed, it will create a dedicated icon in the Windows system tray, providing quick access and management functions. By right-clicking on the tray icon, you can open the function menu and perform various operations.
+AMMDS Launcher安装完成后，会在Windows系统托盘中创建一个专用图标，提供快速访问和管理功能。通过右键点击托盘图标，可以打开功能菜单，执行各种操作。
 
-### Tray Menu Functions
+### 托盘菜单功能
 
-| Menu Item               | Function Description                              | Technical Description                                                                           |
-| ----------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| **Open Data Directory** | Open AMMDS resource storage directory             | Directly navigate to `%APPDATA%\AMMDS` directory, containing data, configuration, and log files |
-| **Start**               | Start AMMDS Launcher service                      | Start background service process, ready to receive connections                                  |
-| **Restart**             | Restart AMMDS Launcher                            | Stop existing process first, then restart, used to apply configuration changes                  |
-| **Stop**                | Stop AMMDS Launcher service                       | Stop background service process, release system resources                                       |
-| **Exit**                | Completely exit AMMDS Launcher                    | Stop service and remove tray icon, completely release all resources                             |
-| **Open Panel**          | Open AMMDS Launcher main interface                | Start and display Web management interface, used for configuring and managing AMMDS             |
-| **Start Auto-start**    | Toggle auto-start functionality at system startup | Add or remove AMMDS Launcher from Windows startup items                                         |
+| 菜单项           | 功能说明                   | 技术说明                                                  |
+| ---------------- | -------------------------- | --------------------------------------------------------- |
+| **打开数据目录** | 打开AMMDS的资源存放目录    | 直接定位到`%APPDATA%\AMMDS`目录，包含数据、配置和日志文件 |
+| **启动**         | 启动AMMDS Launcher服务     | 启动后台服务进程，准备接收连接                            |
+| **重启**         | 重启AMMDS Launcher         | 先停止现有进程，再重新启动，用于应用配置更改              |
+| **停止**         | 停止AMMDS Launcher服务     | 停止后台服务进程，释放系统资源                            |
+| **退出**         | 完全退出AMMDS Launcher     | 停止服务并移除托盘图标，完全释放所有资源                  |
+| **打开面板**     | 打开AMMDS Launcher主界面   | 启动并显示Web管理界面，用于配置和管理AMMDS                |
+| **启动自动启动** | 切换系统启动时自动启动功能 | 在Windows启动项中添加或移除AMMDS Launcher                 |
 
-### Tray Icon Status Explanation
+### 托盘图标状态说明
 
-- **Color Icon**: AMMDS Launcher service is running
-- **Gray Icon**: AMMDS Launcher service has stopped
-- **Blinking Icon**: AMMDS Launcher is in the process of starting or restarting
+- **彩色图标**：AMMDS Launcher服务正在运行
+- **灰色图标**：AMMDS Launcher服务已停止
+- **闪烁图标**：AMMDS Launcher正在启动或重启过程中
 
-### Usage Suggestions
+### 使用建议
 
-- **Daily Management**: Use the tray menu for quick start, stop, and restart operations
-- **Troubleshooting**: When encountering problems, you can try to solve them through the restart function
-- **System Optimization**: If AMMDS is not used for a long time, it is recommended to use the exit function to completely release resources
-- **Auto-start**: For scenarios that require continuous operation, it is recommended to enable the auto-start function
+- **日常管理**：使用托盘菜单进行快速的启动、停止和重启操作
+- **故障排查**：当遇到问题时，可通过重启功能尝试解决
+- **系统优化**：若长时间不使用AMMDS，建议使用退出功能完全释放资源
+- **自动启动**：对于需要持续运行的场景，建议启用自动启动功能
 
-## Run Logs and Data Management
+## 运行日志与数据管理
 
-### Data Directory Structure
+### 数据目录结构
 
-![AMMDS Data Directory Structure](/img/deploy/install-windows-09.png)
+![AMMDS数据目录结构](/img/deploy/install-windows-09.png)
 
-All AMMDS data and configuration files are stored in a dedicated data directory, with the default path: `%APPDATA%\AMMDS`
+AMMDS的所有数据和配置文件存储在专用的数据目录中，默认路径为：`%APPDATA%\AMMDS`
 
-**Directory Structure Explanation:**
+**目录结构说明：**
 
-| Directory | Function Description          | Technical Details                                                                                                                        |
-| --------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `data`    | Store AMMDS resource files    | Contains model files, configuration templates, presets and other core resources, which will be automatically downloaded on first startup |
-| `db`      | Store AMMDS database files    | Contains user configurations, operation history, task records and other structured data                                                  |
-| `logs`    | Store AMMDS running log files | Contains system logs, error records, resource download logs, etc.                                                                        |
+| 目录   | 功能说明              | 技术细节                                                   |
+| ------ | --------------------- | ---------------------------------------------------------- |
+| `data` | 存储AMMDS资源文件     | 包含模型文件、配置模板、预设等核心资源，首次启动会自动下载 |
+| `db`   | 存储AMMDS数据库文件   | 包含用户配置、运行历史、任务记录等结构化数据               |
+| `logs` | 存储AMMDS运行日志文件 | 包含系统日志、错误记录、资源下载日志等                     |
 
-### Log File Description
+### 日志文件说明
 
-![AMMDS Resource Download Log](/img/deploy/install-windows-10.png)
+![AMMDS资源下载日志](/img/deploy/install-windows-10.png)
 
-#### Log File Storage Structure
+#### 日志文件存储结构
 
-AMMDS log files are mainly stored in two locations:
+AMMDS的日志文件主要存储在两个位置：
 
-**1. AMMDS Core Logs (data/logs directory)**
-| Log File | Function Description |
-|----------|---------------------|
-| `data/logs/ammds.log` | System running log, recording AMMDS startup, stop, errors and other system events |
-| `data/logs/ammds-202x-xx-xx.log` | Date-named running log, recording AMMDS detailed running status and operation records |
-| `data/logs/ammds-error.log` | Error log, specifically recording error information during system operation |
+**1. AMMDS核心日志（data/logs目录）**
+| 日志文件 | 功能说明 |
+|---------|----------|
+| `data/logs/ammds.log` | 系统运行日志，记录AMMDS的启动、停止、错误等系统事件 |
+| `data/logs/ammds-202x-xx-xx.log` | 日期命名的运行日志，记录AMMDS的详细运行状态和操作记录 |
+| `data/logs/ammds-error.log` | 错误日志，专门记录系统运行过程中的错误信息 |
 
-**2. Windows Launcher Logs (logs directory)**
-| Log File | Function Description |
-|----------|---------------------|
-| `logs/launcher.log` | Launcher log, recording Windows AMMDS Launcher startup process, configuration information and system integration status |
+**2. Windows启动器日志（logs目录）**
+| 日志文件 | 功能说明 |
+|---------|----------|
+| `logs/launcher.log` | 启动器日志，记录Windows AMMDS Launcher的启动过程、配置信息和系统集成状态 |
 
-#### Log Content Interpretation
+### 日志内容解读
 
-#### AMMDS Core Log Content
+#### AMMDS核心日志内容
 
-**1. System Running Log (`data/logs/ammds.log`)**
+**1. 系统运行日志 (`data/logs/ammds.log`)**
 
-- Records AMMDS startup and stop events
-- System-level errors and warning information
-- Configuration loading and initialization status
-- Service startup and stop status
+- 记录AMMDS的启动和停止事件
+- 系统级错误和警告信息
+- 配置加载和初始化状态
+- 服务启动和停止状态
 
-**2. Detailed Running Log (`data/logs/ammds-202x-xx-xx.log`)**
+**2. 运行详细日志 (`data/logs/ammds-202x-xx-xx.log`)**
 
-- Detailed operation records and status changes
-- User operations and system responses
-- Resource usage and performance metrics
-- Scheduled task execution status
+- 详细的操作记录和状态变化
+- 用户操作和系统响应
+- 资源使用情况和性能指标
+- 定时任务执行情况
 
-**3. Error Log (`data/logs/ammds-error.log`)**
+**3. 错误日志 (`data/logs/ammds-error.log`)**
 
-- Detailed error stack information
-- Context of exception occurrence
-- Time and conditions of error occurrence
-- Possible error cause analysis
+- 详细的错误堆栈信息
+- 异常发生的上下文
+- 错误发生的时间和条件
+- 可能的错误原因分析
 
-#### Windows Launcher Log Content
+#### Windows启动器日志内容
 
-**Launcher Log (`logs/launcher.log`)**
+**启动器日志 (`logs/launcher.log`)**
 
-- Launcher startup process and configuration loading
-- System integration status (tray icon, auto-start)
-- Communication status with AMMDS core
-- Launcher's own errors and warnings
+- Launcher启动过程和配置加载
+- 系统集成状态（托盘图标、自动启动）
+- 与AMMDS核心的通信状态
+- 启动器自身的错误和警告
 
-#### Resource Download Log
+#### 资源下载日志
 
-**Resource Download Log** (included in relevant log files):
+**资源下载日志**（包含在相关日志文件中）：
 
-- Resource file name and version information
-- Download progress and speed statistics
-- Download status (success/failure/retry)
-- Download timestamp and duration
-- Download server information
+- 资源文件名称和版本信息
+- 下载进度和速度统计
+- 下载状态（成功/失败/重试）
+- 下载时间戳和耗时
+- 下载服务器信息
 
-:::info Progress Indicator
-When the log shows the progress has reached 100%, it means all necessary resource files have been downloaded completely
+:::info 进度指示
+当日志中显示进度达到100%时，表示所有必要的资源文件已下载完成
 :::
 
-### Log Usage Methods
+### 日志使用方法
 
-#### 1. Troubleshooting
+#### 1. 故障排查
 
-**AMMDS Core Issues**
+**AMMDS核心问题**
 
-- Check `data/logs/ammds-error.log` for detailed error information
-- Refer to `data/logs/ammds.log` to understand system startup and initialization status
-- Analyze `data/logs/ammds-202x-xx-xx.log` to view operation records before and after the error occurred
+- 查看 `data/logs/ammds-error.log` 获取详细的错误信息
+- 参考 `data/logs/ammds.log` 了解系统启动和初始化状态
+- 分析 `data/logs/ammds-202x-xx-xx.log` 查看错误发生前后的操作记录
 
-**Launcher Issues**
+**启动器问题**
 
-- Check `logs/launcher.log` to understand the launcher startup process and configuration status
-- Check the communication status with AMMDS core
+- 查看 `logs/launcher.log` 了解启动器启动过程和配置状态
+- 检查与AMMDS核心的通信状态
 
-#### 2. Resource Management
+#### 2. 资源管理
 
-**Resource Download Issues**
+**资源下载问题**
 
-- Analyze download records in the logs to troubleshoot failed resource downloads
-- Check download server connection status
-- Confirm resource file version and integrity
+- 分析日志中的下载记录，排查下载失败的资源
+- 检查下载服务器连接状态
+- 确认资源文件版本和完整性
 
-**Disk Space Management**
+**磁盘空间管理**
 
-- Monitor log file sizes and regularly clean up expired logs
-- Analyze resource file download volume and plan disk space reasonably
+- 监控日志文件大小，定期清理过期日志
+- 分析资源文件下载量，合理规划磁盘空间
 
-#### 3. Performance Analysis
+#### 3. 性能分析
 
-**System Performance**
+**系统性能**
 
-- Analyze timestamps in the logs to understand the execution time of various operations
-- Monitor resource usage and optimize system configuration
-- Identify performance bottlenecks and adjust system parameters
+- 分析日志中的时间戳，了解各操作的执行时间
+- 监控资源使用情况，优化系统配置
+- 识别性能瓶颈，调整系统参数
 
-**Startup Time Optimization**
+**启动时间优化**
 
-- Analyze startup process time consumption in `logs/launcher.log`
-- Check initialization time in `data/logs/ammds.log`
-- Optimize startup items and configurations to reduce startup time
+- 分析 `logs/launcher.log` 中的启动过程耗时
+- 检查 `data/logs/ammds.log` 中的初始化时间
+- 优化启动项和配置，减少启动时间
 
-#### 4. Log File Management
+#### 4. 日志文件管理
 
-**Log Rotation**
+**日志轮转**
 
-- AMMDS automatically performs log rotation, generating date-named log files
-- Expired logs will be compressed or cleaned up to maintain reasonable disk usage
+- AMMDS会自动进行日志轮转，生成日期命名的日志文件
+- 过期日志会被压缩或清理，保持合理的磁盘占用
 
-**Log Backup**
+**日志备份**
 
-- Regularly back up important log files, especially error logs
-- Back up current logs before system upgrades for problem comparison analysis
+- 定期备份重要的日志文件，特别是错误日志
+- 在系统升级前备份当前日志，便于问题对比分析
 
-**Log Level Adjustment**
+**日志级别调整**
 
-- Adjust log levels as needed to balance detail and performance impact
-- Use detailed logs when debugging issues, and standard logs during normal operation
+- 根据需要调整日志级别，平衡详细程度和性能影响
+- 调试问题时使用详细日志，正常运行时使用标准日志
 
-### First Launch Notes
+### 首次启动注意事项
 
-:::warning First Launch Reminder
-When launching AMMDS for the first time, the system will perform the following operations. Please wait patiently:
+:::warning 首次启动提示
+首次启动AMMDS时，系统会执行以下操作，请耐心等待：
 
-- **Resource Download**: Automatically download necessary resource files, including model files, dependency libraries, etc.
-- **Time Estimation**: Depending on network speed, first launch may take 5-30 minutes
-- **Network Requirements**: Please ensure a stable network connection to avoid interrupting the network during download
-- **Disk Space**: Sufficient disk space is required to store downloaded resource files, it is recommended to reserve at least 10GB of space
+- **资源下载**：自动下载必要的资源文件，包括模型文件、依赖库等
+- **时间预估**：根据网络速度不同，首次启动可能需要5-30分钟不等
+- **网络要求**：请确保网络连接稳定，避免在下载过程中中断网络
+- **磁盘空间**：需要足够的磁盘空间存储下载的资源文件，建议预留至少10GB空间
   :::
 
-## Warnings and Notes
+## 警告和注意事项
 
-### Security Warnings
+### 安全警告
 
-:::danger Important Security Tips
+:::danger 重要安全提示
 
-- **Official Source**: Only download AMMDS installation packages from the official GitHub Releases page, avoid using third-party download sources
-- **Antivirus Software**: If you encounter antivirus software prompts during installation, please confirm it is a false positive and add trust
-- **Administrator Privileges**: Installation and upgrade processes require administrator privileges, please ensure you run the installer as an administrator
+- **官方来源**：仅从官方GitHub Releases页面下载AMMDS安装包，避免使用第三方下载源
+- **杀毒软件**：安装过程中如遇杀毒软件提示，请确认是误报后添加信任
+- **管理员权限**：安装和升级过程需要管理员权限，请确保以管理员身份运行安装程序
   :::
 
-### System Requirements
+### 系统要求
 
-:::info System Configuration Requirements
+:::info 系统配置要求
 
-#### Minimum Configuration
+#### 最低配置
 
-- Operating System: Windows 10 64-bit
-- Processor: Intel Core i3 or equivalent performance
-- Memory: 4GB RAM
-- Disk Space: At least 10GB available space
-- Network: Broadband internet connection
+- 操作系统：Windows 10 64位
+- 处理器：Intel Core i3或同等性能
+- 内存：4GB RAM
+- 磁盘空间：至少10GB可用空间
+- 网络：宽带互联网连接
 
-#### Recommended Configuration
+#### 推荐配置
 
-- Operating System: Windows 10/11 64-bit
-- Processor: Intel Core i5 or equivalent performance
-- Memory: 8GB RAM or more
-- Disk Space: 20GB available space
-- Network: Stable broadband internet connection
+- 操作系统：Windows 10/11 64位
+- 处理器：Intel Core i5或同等性能
+- 内存：8GB RAM或更多
+- 磁盘空间：20GB可用空间
+- 网络：稳定的宽带互联网连接
 
 :::
 
-### Usage Notes
+### 使用注意事项
 
-- **Data Backup**: Regularly back up AMMDS data directory, especially important configuration files and model files
-- **Resource Management**: Monitor disk space usage and clean up unnecessary resource files in time
-- **Network Connection**: Ensure a stable network connection, especially when downloading resources and updates
-- **System Maintenance**: Regularly update Windows system and related drivers to ensure system stability
+- **数据备份**：定期备份AMMDS的数据目录，特别是重要的配置文件和模型文件
+- **资源管理**：监控磁盘空间使用情况，及时清理不需要的资源文件
+- **网络连接**：确保稳定的网络连接，特别是在下载资源和更新时
+- **系统维护**：定期更新Windows系统和相关驱动，确保系统稳定性
 
-### Troubleshooting
+### 故障排除
 
-#### Common Issues
+#### 常见问题
 
-- **Installation Failure**: Check administrator privileges and disk space
-- **White Screen on Startup**: Wait for resource download to complete, or check network connection
-- **Function Abnormalities**: View log files to locate issues, or restart AMMDS Launcher
-- **Upgrade Failure**: Try uninstalling the old version first and then installing the new version
+- **安装失败**：检查管理员权限和磁盘空间
+- **启动白屏**：等待资源下载完成，或检查网络连接
+- **功能异常**：查看日志文件定位问题，或重启AMMDS Launcher
+- **升级失败**：尝试先卸载旧版本再安装新版本
 
-#### Contact Information
+#### 联系方式
 
-If you encounter problems that cannot be resolved, please visit the official GitHub repository to submit an Issue or seek help
+如遇到无法解决的问题，请访问官方GitHub仓库提交Issue或寻求帮助
 
-### Best Practices
+### 最佳实践
 
-- **Regular Updates**: Keep AMMDS Launcher updated to the latest version to get the latest features and security fixes
-- **Reasonable Configuration**: Configure AMMDS parameters reasonably based on system performance to avoid excessive resource usage
-- **Safe Usage**: Follow the official documentation guidelines and avoid modifying core configuration files
-- **Community Participation**: Participate in the AMMDS community, share usage experience and provide feedback on issues
+- **定期更新**：保持AMMDS Launcher为最新版本，获取最新功能和安全修复
+- **合理配置**：根据系统性能合理配置AMMDS参数，避免资源过度占用
+- **安全使用**：遵循官方文档指导，避免修改核心配置文件
+- **社区参与**：参与AMMDS社区，分享使用经验和反馈问题

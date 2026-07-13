@@ -5,56 +5,56 @@ sidebar_label: "Docker Compose"
 
 # Docker Compose 
 
-Docker Compose is a tool for defining and running multi-container Docker applications. With a single YAML file (docker-compose.yml), you can configure all the services of your application, and then start all services with just one command. It's ideal for quick deployment and management in development, testing, and staging environments.
+Docker Compose 是一个用于定义和运行多容器 Docker 应用程序的工具。通过单个 YAML 文件（docker-compose.yml），您可以配置应用程序的所有服务，然后只需一个命令即可启动所有服务。它非常适合在开发、测试和 staging 环境中快速部署和管理应用程序。
 
 <!-- truncate -->
 
-## Create Service
+## 创建服务
 
-### Create Application Directory
+### 创建应用目录
 
-First, create a directory named `ammds` to store related files:
+首先，创建一个名为 `ammds` 的目录来存储相关文件：
 
 ```bash
 mkdir ammds && cd ammds
 ```
 
-### Create Configuration File
+### 创建配置文件
 
-Create and edit a `docker-compose.yml` file in the `ammds` directory. Paste the following content into the file:
+在 `ammds` 目录中创建并编辑 `docker-compose.yml` 文件。将以下内容粘贴到文件中：
 
 ```yaml
 services:
   ammds:
-    image: qyg2297248353/ammds:latest  # Docker image name and version tag
-    container_name: AMMDS  # Container name
+    image: qyg2297248353/ammds:latest  # Docker 镜像名称和版本标签
+    container_name: AMMDS  # 容器名称
     ports:
-      - "8080:80"  # Port mapping: host port 8080 maps to container port 80
+      - "8080:80"  # 端口映射：主机端口 8080 映射到容器端口 80
     volumes:
-      - ./data:/ammds/data  # Mount current directory's data folder to /ammds/data in container
-      - ./db:/ammds/db  # Mount current directory's db folder to /ammds/db in container
-      - ./download:/ammds/download  # Mount current directory's download folder to /ammds/download in container
-      - ./media:/media  # Mount current directory's media folder to /media in container
-    restart: always  # Set container to always restart automatically on failure
+      - ./data:/ammds/data  # 将当前目录的 data 文件夹挂载到容器的 /ammds/data
+      - ./db:/ammds/db  # 将当前目录的 db 文件夹挂载到容器的 /ammds/db
+      - ./download:/ammds/download  # 将当前目录的 download 文件夹挂载到容器的 /ammds/download
+      - ./media:/media  # 将当前目录的 media 文件夹挂载到容器的 /media
+    restart: always  # 设置容器在失败时总是自动重启
     environment:
-      - TZ=Asia/Shanghai  # Set timezone to Asia/Shanghai
+      - TZ=Asia/Shanghai  # 设置时区为 Asia/Shanghai
     networks:
-      - ammds-network  # Use custom network
+      - ammds-network  # 使用自定义网络
 
 networks:
-  ammds-network:  # Custom network configuration
-    driver: bridge  # Use Docker's default bridge network driver
+  ammds-network:  # 自定义网络配置
+    driver: bridge  # 使用 Docker 的默认 bridge 网络驱动
 ```
 
 :::note
-Please mount your local media directory to the container yourself. Do not use `/ammds` as the media mount directory prefix to avoid data loss.
+请自行将本地媒体目录挂载到容器中。不要使用 `/ammds` 作为媒体挂载目录前缀，以避免数据丢失。
 
-**Example:** If your host directory is `/mnt/movie`, the recommended mount format is `- /mnt/movie:/mnt/movie`
+**示例：** 如果您的主机目录是 `/mnt/movie`，推荐的挂载格式是 `- /mnt/movie:/mnt/movie`
 :::
 
-## Special Configuration for Cloud Drive Users
+## 云盘用户的特殊配置
 
-If you use cloud drive mounting like CloudDrive, use the following configuration in your `docker-compose.yml` file:
+如果您使用像 CloudDrive 这样的云盘挂载，请在 `docker-compose.yml` 文件中使用以下配置：
 
 ```yaml
 services:
@@ -85,48 +85,48 @@ networks:
     driver: bridge
 ```
 
-### Special Notes for Cloud Drive Users
+### 云盘用户特别说明
 
-- `:rw,rshared`: In addition to basic read-write permissions, `rshared` maintains shared propagation between containers
-- `cap_add: - SYS_ADMIN`: Allows the container to access system resources
-- `devices: - "/dev/fuse:/dev/fuse"`: Allows the container to access FUSE devices
-- `security_opt: - apparmor:unconfined`: Allows the container to use unrestricted AppArmor configuration
+- `:rw,rshared`：除了基本的读写权限外，`rshared` 还能在容器之间保持共享传播
+- `cap_add: - SYS_ADMIN`：允许容器访问系统资源
+- `devices: - "/dev/fuse:/dev/fuse"`：允许容器访问 FUSE 设备
+- `security_opt: - apparmor:unconfined`：允许容器使用不受限制的 AppArmor 配置
 
 :::warning
-This deployment solution is not suitable for "cloud drive mounting + directory monitoring" scheme. Please use "scheduled scanning" instead of "directory monitoring".
+此部署方案不适用于 "云盘挂载 + 目录监控" 方案。请使用 "定时扫描" 代替 "目录监控"。
 :::
 
-## Start Service
+## 启动服务
 
-Use the following command to start the service. This will run the AMMDS container in the background and apply all configurations from the docker-compose.yml file:
+使用以下命令启动服务。这将在后台运行 AMMDS 容器并应用 docker-compose.yml 文件中的所有配置：
 
 ```bash
 docker compose up -d
 ```
 
-## Stop Service
+## 停止服务
 
-If you need to stop and remove the service, you can use the following command:
+如果您需要停止并移除服务，可以使用以下命令：
 
 ```bash
 docker compose down
 ```
 
-## Access Service
+## 访问服务
 
-You can access the service through a browser:
+您可以通过浏览器访问服务：
 
 ```
 http://127.0.0.1:8080
 ```
 
-Access URL format: `Host IP Address + Service Port`
+访问 URL 格式：`主机 IP 地址 + 服务端口`
 
-## Default Credentials
+## 默认凭据
 
-- **Username**: `ammds`
-- **Password**: `ammds`
+- **用户名**：`ammds`
+- **密码**：`ammds`
 
 :::tip
-If you can't see the credentials clearly, please switch to light mode.
+如果您无法清晰看到凭据，请切换到浅色模式。
 :::

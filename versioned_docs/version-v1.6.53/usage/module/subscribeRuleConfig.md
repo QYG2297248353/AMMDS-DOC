@@ -1,69 +1,69 @@
 ---
 sidebar_position: 4
-sidebar_label: "Subscription Rule Configuration"
+sidebar_label: "订阅规则配置"
 ---
 
-# Subscription Rule Configuration
+# 订阅规则配置
 
-Subscription rule configuration is used to set subscription preferences and download parameters for movie content before task execution, ensuring the system can automatically obtain and manage movie resources according to your needs.
+订阅规则配置用于在任务执行前，设置影视内容的订阅偏好和下载参数，确保系统能够按照您的需求自动获取和管理影视资源。
 
 <!-- truncate -->
 
-## Access Subscription Rule Configuration
+## 访问订阅规则配置
 
-You can access the subscription rule configuration page through the following path:
+您可以通过以下路径访问订阅规则配置页面：
 
-**Task Management >> Subscription Rules**
+**任务管理 >> 订阅规则**
 
-## Configuration Interface
+## 配置界面
 
-![Subscription Rule Configuration](/img/usage/module/subscribe-config-01.png)
+![订阅规则配置](/img/usage/module/subscribe-config-01.png)
 
-## Configuration Item Description
+## 配置项说明
 
-### Chinese Priority
+### 中字优先
 
-**Function Description**: After enabling this option, the system will prioritize searching for and downloading movie versions with Chinese subtitles or Chinese dubbing.
+**功能说明**：开启此选项后，系统会优先搜索和下载带有中文字幕或中文配音的影视版本。
 
-**Applicable Scenario**: If you prefer watching Chinese content, you can enable this option to increase the probability of obtaining Chinese versions.
+**适用场景**：如果您更偏好观看中文内容，可以开启此选项，提高获取到中文版本的概率。
 
-### Search Order
+### 搜索顺序
 
-**Function Description**: Set the priority order of search sources. The system will sequentially obtain movie resources from each search source according to the order you specify.
+**功能说明**：设置搜索源的优先级顺序，系统会按照您指定的顺序依次从各个搜索源获取影视资源。
 
-**Configuration Suggestion**: Place search sources with higher resource quality and faster update speed at the front to improve the efficiency of obtaining high-quality resources.
+**配置建议**：将您认为资源质量更高、更新速度更快的搜索源排在前面，以提高获取到优质资源的效率。
 
-### Download Directory
+### 下载目录
 
-**Function Description**: Specify the download directory path for the downloader.
+**功能说明**：指定下载器的下载目录路径。
 
-**Important Tips**:
+**重要提示**：
 
-:::warning Notes
-- This path has no direct relationship with the AMMDS system itself and needs to be set according to the configuration of the downloader you use
-- Please ensure the specified directory exists and has write permissions
-- It is recommended to use absolute paths to avoid path resolution errors caused by relative paths
+:::warning 注意事项
+- 此路径与 AMMDS 系统本身没有直接关系，需要根据您使用的下载器的配置进行设置
+- 请确保指定的目录存在且具有可写权限
+- 建议使用绝对路径，避免使用相对路径导致的路径解析错误
 :::
 
-## Configuration Example
+## 配置示例
 
-The following is a typical subscription rule configuration example:
+以下是一个典型的订阅规则配置示例：
 
-1. **Chinese Priority**: Enabled
-2. **Search Order**: Search Source A → Search Source B → Search Source C
-3. **Download Directory**: `D:\Downloads\Movies`
+1. **中字优先**：开启
+2. **搜索顺序**：搜索源 A → 搜索源 B → 搜索源 C
+3. **下载目录**：`D:\Downloads\Movies`
 
-## Common Questions
+## 常见问题
 
-### Q: Why is a non-Chinese version still downloaded even when Chinese priority is set?
+### Q: 为什么设置了中字优先但还是下载到了非中字版本？
 
-**A**: It may be because the Chinese version of the current movie resource has not been released yet. The system will download other versions when no Chinese version is available to ensure you can obtain the resource in a timely manner.
+**A**：可能是因为当前影视资源尚未发布中字版本，系统会在没有中字版本的情况下，下载其他版本以确保您能够及时获取到资源。
 
-### Q: What problems can be caused by incorrect download directory settings?
+### Q: 下载目录设置错误会导致什么问题？
 
-**A**: If the download directory is set incorrectly, it may cause the following problems:
-- The downloader cannot save files normally
-- The system cannot find downloaded files
-- Download failure due to insufficient storage space
+**A**：如果下载目录设置错误，可能会导致以下问题：
+- 下载器无法正常保存文件
+- 系统无法找到下载完成的文件
+- 存储空间不足时的下载失败
 
-Please ensure the correct download directory path is set.
+请确保设置正确的下载目录路径。

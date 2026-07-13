@@ -5,58 +5,58 @@ sidebar_label: "NexusPHP"
 
 # NexusPHP
 
-NexusPHP was initiated and developed by the Nexus team of Zhejiang University. It is an open-source PT (Private Tracker, a type of BT download) software focused on providing a complete, organized, and user-reputation-and-knowledge-oriented resource sharing community solution.
+NexusPHP 由浙江大学的 Nexus 团队发起并开发完成，是一款专注于提供完整、有序、重视用户信誉和知识的资源分享社区解决方案的 PT（Private Tracker，即私有的 Tracker 服务器，是 BT 下载的一种）开源软件。
 
-:::info Private Site Note
-This site requires registration by invitation and has certain thresholds.
+:::info 私有站点说明
+该站点需要通过邀请注册，具有一定门槛。
 :::
 
 <!-- truncate -->
 
-## Plugin Configuration
+## 插件配置
 
-![Plugin Configuration](/img/plugin/nexusphp-01.png)
+![插件配置](/img/plugin/nexusphp-01.png)
 
-### Basic Configuration
+### 基本配置
 
-- **Enable Status**：Controls whether to enable the NexusPHP plugin.
-- **Search Function**：Whether to enable the search function of NexusPHP, the default value is disabled.
-- **Sync User Information**：Whether to enable the user information synchronization function of NexusPHP, the default value is disabled. User information is used for site ranking display.
-- **Alert Notification**：Whether to enable the alert notification function of NexusPHP, the default value is disabled.
+- **启用状态**：控制是否启用 NexusPHP 插件。
+- **检索功能**：是否启用 NexusPHP 的检索功能，默认值为关闭状态。
+- **同步用户信息**：是否启用 NexusPHP 的用户信息同步功能，默认值为关闭状态。用户信息用于站点榜展示。
+- **告警通知**：是否启用 NexusPHP 的告警通知功能，默认值为关闭状态。
 
-![Alert Notification](/img/plugin/nexusphp-02.png)
+![告警通知](/img/plugin/nexusphp-02.png)
 
-## NexusPHP Site Module
+## NexusPHP 站点模块
 
-Click the "Add Site" button in the upper right corner to add a site.
+点击右上角「添加站点」按钮，进行站点添加。
 
-:::warning Version Requirement
-NexusPHP site version must be 1.9.0 or higher.
+:::warning 版本要求
+NexusPHP 站点版本必须在 1.9.0 以上。
 
-**How to check version**：At the bottom of the NexusPHP site page, in the `Powered by NexusPHP` section, click on NexusPHP to view the site version.
+**查看版本方法**：在 NexusPHP 站点页面底部 `Powered by NexusPHP` 处，通过点击 NexusPHP 查看站点版本。
 :::
 
-![Add Site](/img/plugin/nexusphp-03.png)
+![添加站点](/img/plugin/nexusphp-03.png)
 
-### Site Configuration Items
+### 站点配置项
 
-- **Enable**：Whether to enable this site, the default value is disabled.
-- **Site Name**：Site name, used for display in the plugin. In addition to manual input, you can select common site names from the drop-down menu, and the system will automatically fill in the site address.
-- **Site Address**：Site address, used to access the site, the default value is empty.
+- **是否启用**：是否启用该站点，默认值为关闭状态。
+- **站点名称**：站点名称，用于在插件中显示。除手动输入外，可通过下拉选择常见站点名称，系统会自动填充站点地址。
+- **站点地址**：站点地址，用于访问站点，默认值为空。
 
-![Site Token](/img/plugin/nexusphp-04.png)
+![站点令牌](/img/plugin/nexusphp-04.png)
 
-- **Site Token**：Created by clicking the create button in "Control Panel >> Settings Home >> Access Token".
+- **站点令牌**：在「控制面板 >> 設定首页 >> 访问令牌」中通过创建按钮进行创建。
 
-:::info Permission Requirements
-**Default Permissions**：Get torrent list, view torrent details, publish torrents, view basic user information.
+:::info 权限要求
+**默认权限**：获取种子列表、查看种子详情、发布种子、查看用户基本信息。
 
-**Minimum Permission Requirements**：Get torrent list, view torrent details, view basic user information.
+**最低权限要求**：获取种子列表、查看种子详情、查看用户基本信息。
 
-**Insufficient Permissions**：When permissions are insufficient, the system will prompt `Insufficient permissions` and cannot add this site normally.
+**权限不足**：缺少权限时，系统会提示 `权限不足`，无法正常添加此站点。
 :::
 
-- **Site Logo**：Site Logo, used for display in the plugin, the default value is empty.
+- **站点 Logo**：站点 Logo，用于在插件中显示，默认值为空。
 
 
 

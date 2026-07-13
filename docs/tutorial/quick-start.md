@@ -1,56 +1,73 @@
 ---
 sidebar_position: 2
-sidebar_label: "Quick Start"
+sidebar_label: "快速入门"
 ---
 
-# Quick Start
+# 快速入门
 
 :::info
-Welcome to AMMDS! This guide will help you deploy AMMDS using one of the supported methods: Windows, Feiniu Nas, or Docker.
+欢迎使用 AMMDS！本指南将帮助您使用支持的方法之一部署 AMMDS：Windows、飞牛 Nas 或 Docker。
 :::
 
-## 🚀 Deployment Methods
+## 🚀 部署方法
 
-### Windows Deployment
+### Windows 部署
 
 :::note
-**Package Type**: EXE Setup Package
+**包类型**：EXE 安装包
 :::
 
-For Windows users, we provide a straightforward executable setup package:
+对于 Windows 用户，我们提供了简单直观的可执行安装包：
 
-1. Download the latest `ammds-setup.exe` from the [AMMDS Launcher releases page](https://github.com/QYG2297248353/AMMDS-Launcher/releases)
-2. Locate the downloaded `ammds-setup.exe` file
-3. Right-click and select **Run as administrator**
-4. Follow the intuitive on-screen wizard to complete the installation
-5. The service will start automatically after installation completes
+1. 从 [AMMDS Launcher 发布页面](https://github.com/QYG2297248353/AMMDS-Launcher/releases) 下载最新的 `ammds-setup.exe`
+2. 找到下载的 `ammds-setup.exe` 文件
+3. 右键单击并选择 **以管理员身份运行**
+4. 按照直观的屏幕向导完成安装
+5. 安装完成后，服务将自动启动
 
 ---
 
-### Feiniu Nas Deployment
+### 飞牛 Nas 部署
 
 :::note
-**Package Type**: FPK (Feiniu Package)
+**包类型**：FPK（飞牛包）
 :::
 
-For Feiniu Nas users, we offer an FPK package designed for direct import into the Feiniu App Store:
+对于飞牛 Nas 用户，我们提供了一个 FPK 包，专为直接导入飞牛应用商店而设计：
 
-1. Download the latest `AMMDS.offline.fpk` from the [Feiniu Nas releases page](https://github.com/QYG2297248353/AMMDS-Offline-FnNas/releases)
-2. Access your Feiniu Nas dashboard
-3. Open the **Feiniu App Store**
-4. Select **Import Local Package** and locate the downloaded FPK file
-5. Follow the prompts to complete the installation
-6. The service will be managed through the Feiniu Nas App Store interface
+1. 从 [飞牛 Nas 发布页面](https://github.com/QYG2297248353/AMMDS-Offline-FnNas/releases) 下载最新的 `AMMDS.offline.fpk`
+2. 访问您的飞牛 Nas 仪表盘
+3. 打开 **飞牛应用商店**
+4. 选择 **导入本地包** 并找到下载的 FPK 文件
+5. 按照提示完成安装
+6. 服务将通过飞牛 Nas 应用商店界面进行管理
 
 ---
 
-### Docker Deployment
+### 威联通 Nas 部署
 
 :::note
-**Package Type**: Docker Image
+**包类型**：QKPG（威联通包）
 :::
 
-For users with Docker installed, deploy AMMDS with a single command:
+对于威联通 Nas 用户，我们提供了一个 FPK 包，专为直接导入威联通应用商店而设计：
+
+1. 从 [威联通 Nas 发布页面](https://github.com/QYG2297248353/AMMDS-Offline-QNAP/releases) 下载最新的 `AMMDS_x86.qkpg` 或 `AMMDS_arm.qkpg`
+2. 访问您的威联通 Nas 仪表盘
+3. 打开 **威联通应用商店**
+4. 选择 **导入本地包** 并找到下载的 QKPG 文件
+5. 按照提示完成安装
+6. 服务将通过威联通 Nas 应用商店界面进行管理
+
+---
+
+### Docker 部署
+
+:::note
+**包类型**：Docker 镜像
+:::
+
+对于已安装 Docker 的用户，使用单个命令部署 AMMDS：
 
 ```bash showLineNumbers title="Docker Command"
 docker run -itd \
@@ -62,52 +79,52 @@ docker run -itd \
    qyg2297248353/ammds:latest
 ```
 
-#### Docker Command Breakdown
+#### Docker 命令说明
 
-| Option | Description |
+| 选项 | 描述 |
 |--------|-------------|
-| `-itd` | Run container in interactive mode with pseudo-TTY, detached from terminal |
-| `--name AMMDS` | Assigns the name "AMMDS" for easy container management |
-| `-p 8080:80` | Maps host port 8080 to container port 80 (web interface) |
-| `-v $(pwd)/data:/ammds/data` | Persistent storage for application data |
-| `-v $(pwd)/db:/ammds/db` | Persistent storage for database files |
-| `--restart always` | Automatically restarts the container if it stops unexpectedly |
-| `qyg2297248353/ammds:latest` | Uses the latest AMMDS Docker image |
+| `-itd` | 在交互式模式下运行容器，带有伪 TTY，与终端分离 |
+| `--name AMMDS` | 为容器分配名称 "AMMDS"，便于管理 |
+| `-p 8080:80` | 将主机端口 8080 映射到容器端口 80（Web 界面） |
+| `-v $(pwd)/data:/ammds/data` | 用于应用数据的持久存储 |
+| `-v $(pwd)/db:/ammds/db` | 用于数据库文件的持久存储 |
+| `--restart always` | 如果容器意外停止，自动重启容器 |
+| `qyg2297248353/ammds:latest` | 使用最新的 AMMDS Docker 镜像 |
 
 ---
 
-## 🌐 Accessing the Service
+## 🌐 访问服务
 
-After successful deployment, access AMMDS through your web browser:
+成功部署后，通过您的 Web 浏览器访问 AMMDS：
 
-1. Open your preferred web browser
-2. Navigate to `http://localhost:8080` (replace `localhost` with your server's IP if deploying remotely)
-3. You will see the AMMDS login page
+1. 打开您喜欢的 Web 浏览器
+2. 导航到 `http://localhost:8080`（如果是远程部署，请将 `localhost` 替换为您的服务器 IP）
+3. 您将看到 AMMDS 登录页面
 
-### 📝 Default Credentials
+### 📝 默认凭据
 
-| Credential | Value |
+| 凭据 | 值 |
 |------------|-------|
-| **Username** | `ammds` |
-| **Password** | `ammds` |
+| **用户名** | `ammds` |
+| **密码** | `ammds` |
 
-### 💡 First Time Access Tips
+### 💡 首次访问提示
 
 :::warning
-If you don't see the login page immediately, please be patient. The system may still be downloading and initializing resources in the background. This process can take a few minutes depending on your network speed.
+如果您没有立即看到登录页面，请耐心等待。系统可能仍在后台下载和初始化资源。根据您的网络速度，此过程可能需要几分钟时间。
 :::
 
-- After logging in, **immediately change your default password** from the Settings menu
-- Explore the intuitive dashboard to familiarize yourself with AMMDS features
-- Check the system status in the bottom right corner to ensure all services are running
+- 登录后，**立即从设置菜单更改默认密码**
+- 探索直观的仪表板，熟悉 AMMDS 的功能
+- 检查右下角的系统状态，确保所有服务都在运行
 
-## 📋 Next Steps
+## 📋 后续步骤
 
-1. **Check the Documentation**: Review the [Introduction](/docs/intro) for detailed usage instructions
-2. **Configure Preferences**: Customize your experience in the Settings menu
-3. **Add Media Sources**: Connect your media libraries to start using AMMDS
-4. **Explore Features**: Try out the various tools and functionalities available
+1. **查看文档**：查看 [介绍](/docs/intro) 获取详细的使用说明
+2. **配置首选项**：在设置菜单中自定义您的体验
+3. **添加媒体源**：连接您的媒体库以开始使用 AMMDS
+4. **探索功能**：尝试使用各种可用的工具和功能
 
 ---
 
-Enjoy using AMMDS! 🎉
+祝您使用 AMMDS 愉快！ 🎉

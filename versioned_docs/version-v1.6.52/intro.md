@@ -1,78 +1,78 @@
 ---
 sidebar_position: 1
-sidebar_label: "Introduction"
+sidebar_label: "简介"
 ---
 
-# Introduction
+# 简介
 
-AMMDS (Adult Movie MetaData Scraper) is a private data platform designed to help you manage and enjoy your personal media library.
+AMMDS (Adult Movie MetaData Scraper) 是一个私人数据平台，旨在帮助您管理和享受个人媒体库。
 
 <!-- truncate -->
 
-:::warning Warm Reminder
-This software is an offline product, and data is manually entered by users. Please do not promote this product in China. If necessary, use the abbreviation: `AMMDS`.
+:::warning 温馨提醒
+本软件为离线产品，数据由用户手动录入。请不要在中国境内推广此产品，必要时使用缩写：`AMMDS`。
 :::
 
-:::note Plugin Reminder
-Integrated plugins require network functionality. If any integrated plugin is enabled, it will be deemed that you have agreed to access the network connection.
+:::note 插件提醒
+集成插件需要网络功能。如果启用了任何集成插件，将被视为您已同意访问网络连接。
 :::
 
 <img src="/img/ammds-social-card.png" alt="ammds" style={{ borderRadius: "2em" }} />
 
-## About Us
+## 关于我们
 
-We are a group of people who love technology and innovation. Our team members not only have a deep background in software engineering but also have a unique passion for movies and TV series. This inspired us to create AMMDS, a platform designed specifically for managing and enjoying personal media libraries.
+我们是一群热爱技术和创新的人。我们的团队成员不仅拥有深厚的软件工程背景，还对电影和电视剧有着独特的热情。这启发我们创建了 AMMDS，一个专门为管理和享受个人媒体库而设计的平台。
 
-## Project Origin
+## 项目起源
 
-One day, when we were discussing how to better save, share, organize, and collect movies and TV series, we found that there was a lack of an application that could automatically organize, enrich metadata, and support multi-platform access on the market. So, we decided to develop such a tool, which not only helps users easily manage their media collections but also automatically matches local files with online metadata through intelligent algorithms, greatly improving organization efficiency.
+有一天，当我们讨论如何更好地保存、分享、组织和收集电影和电视剧时，我们发现市场上缺乏一个能够自动组织、丰富元数据并支持多平台访问的应用程序。因此，我们决定开发这样一个工具，它不仅帮助用户轻松管理媒体收藏，还通过智能算法自动匹配本地文件与在线元数据，大大提高了组织效率。
 
-## Features
+## 功能特性
 
-AMMDS offers a comprehensive set of features to enhance your media library management experience:
+AMMDS 提供了一套全面的功能，以增强您的媒体库管理体验：
 
-### 🎬 Movie Library Management
-Easily manage personal media libraries, support multiple video formats, automatically scrape metadata, and create exclusive media libraries.
+### 🎬 电影库管理
+轻松管理个人媒体库，支持多种视频格式，自动抓取元数据，创建专属媒体库。
 
-### 👤 Automatic Actor Recognition
-Automatically identify actor information in movies and TV series, provide detailed actor profiles and filmographies, making it easy to find and browse.
+### 👤 自动演员识别
+自动识别电影和电视剧中的演员信息，提供详细的演员资料和作品列表，方便查找和浏览。
 
-### 📄 Automatic Metadata Scraping
-Automatically obtain metadata for movies and TV series from the internet, including covers, introductions, ratings, etc., enriching your media library information.
+### 📄 自动元数据抓取
+自动从互联网获取电影和电视剧的元数据，包括封面、简介、评分等，丰富您的媒体库信息。
 
-### 📤 Sharing Functionality
-Support sharing media libraries with friends or family, easily share your media collections, and create a home theater experience.
+### 📤 分享功能
+支持与朋友或家人分享媒体库，轻松分享您的媒体收藏，打造家庭影院体验。
 
-### 🔌 Plugin Integration
-Provide rich plugin support, easily integrate into existing media servers or players, and expand more functions.
+### 🔌 插件集成
+提供丰富的插件支持，轻松集成到现有的媒体服务器或播放器中，扩展更多功能。
 
-### 🌐 Multi-source Scraping
-Support scraping movie and TV series information from multiple data sources (such as TMDB, Douban, etc.), ensuring comprehensive and accurate data.
+### 🌐 多源抓取
+支持从多个数据源（如 TMDB、豆瓣等）抓取电影和电视剧信息，确保数据全面准确。
 
-### 🤖 Intelligent Matching
-Automatically match local files with online metadata through intelligent algorithms, reducing manual operations and improving organization efficiency.
+### 🤖 智能匹配
+通过智能算法自动匹配本地文件与在线元数据，减少手动操作，提高组织效率。
 
-### ⚡ Batch Processing
-Support batch processing of multiple video files, improving management efficiency.
+### ⚡ 批量处理
+支持批量处理多个视频文件，提高管理效率。
 
-### 🏷️ Custom Tags
-Support custom tags for personalized classification and management of film resources.
+### 🏷️ 自定义标签
+支持自定义标签，对电影资源进行个性化分类和管理。
 
-### 🖥️ Cross-platform Support
-Support running on multiple platforms such as Windows, macOS, Linux, manage your media library anytime, anywhere.
+### 🖥️ 跨平台支持
+支持在 Windows、macOS、Linux 等多个平台上运行，随时随地管理您的媒体库。
 
-## Join Us
+## 加入我们
 
-If you like this application or it has helped you, please consider supporting our project. Your support will help us continue to develop and maintain this application, providing users with a better experience.
+如果您喜欢这个应用程序或它对您有所帮助，请考虑支持我们的项目。您的支持将帮助我们继续开发和维护这个应用程序，为用户提供更好的体验。
 
-## Quick Start
+## 快速开始
 
-- [Official Website](https://ammds.lifebus.top/)
-- [GitHub Repository](https://github.com/QYG2297248353/AMMDS-Docker)
+- [官方网站](https://ammds.lifebus.top/)
+- [GitHub 仓库](https://github.com/QYG2297248353/AMMDS-Docker)
 
-### Official Groups
+### 官方群组
 
-- Telegram Channel: [Join Telegram Channel](https://t.me/ammds_official)
-- Telegram Group: [Join Telegram Group](https://t.me/+9bvCp3LqLUo1N2Q1)
-- Discord: [Join Discord Server](https://discord.gg/sxkpPZzPeJ)
-- QQ Group: [Join QQ Group](https://qm.qq.com/q/ZTXsLnEAM4) (443266144)
+- Telegram 频道：[加入 Telegram 频道](https://t.me/ammds_official)
+- Telegram 群组：[加入 Telegram 群组](https://t.me/+9bvCp3LqLUo1N2Q1)
+- Discord：[加入 Discord 服务器](https://discord.gg/sxkpPZzPeJ)
+- QQ 群：[加入 QQ 群](https://qm.qq.com/q/ZTXsLnEAM4) (443266144)

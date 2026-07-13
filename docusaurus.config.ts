@@ -200,7 +200,7 @@ const config: Config = {
       {
         name: "description",
         content:
-          "AMMDS 是高效的媒体元数据抓取与整理工具，支持电影/视频自动刮削、海报下载、演员与标签管理，兼容 Emby、Jellyfin、Plex 等服务，助你构建专业媒体库。",
+          "高效的媒体元数据刮削与整理工具，支持电影/视频自动刮削、海报下载、演员与标签管理，兼容 Emby、Jellyfin、Plex 等服务，助你构建专业媒体库。",
       },
       {
         name: "keywords",

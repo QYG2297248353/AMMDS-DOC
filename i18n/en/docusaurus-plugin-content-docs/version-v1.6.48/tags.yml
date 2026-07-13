@@ -1,0 +1,6 @@
+release:
+  label: "Release"
+  permalink: "/release"
+  description: "Release notes"
+
+

@@ -1,94 +1,94 @@
 ---
 sidebar_position: 6
-sidebar_label: "Site Authentication"
+sidebar_label: "站点认证"
 ---
 
-# Site Authentication
+# 站点认证
 
-Site authentication is an important feature. After authentication, you can enable advanced features such as leaderboards and search, enhancing the system's user experience and functional completeness.
+站点认证是一项重要功能，通过认证后，可开启榜单、检索等高级功能，提升系统的使用体验和功能完整性。
 
 <!-- truncate -->
 
-## Accessing the Site Authentication Page
+## 访问站点认证页面
 
-You can access the site authentication page through the following path:
+您可以通过以下路径访问站点认证页面：
 
-**Backend top right corner avatar dropdown menu >> Site Authentication**
+**后台右上角头像下拉菜单 >> 站点认证**
 
-## Authentication Interface
+## 认证界面
 
-![Site Authentication Page](/img/usage/module/site-authentication-01.png)
-![Site Authentication Page](/img/usage/module/site-authentication-02.png)
+![站点认证页面](/img/usage/module/site-authentication-01.png)
+![站点认证页面](/img/usage/module/site-authentication-02.png)
 
-## Authentication Method
+## 认证方法
 
-### Select Authentication Site
+### 选择认证站点
 
-Based on your needs, select the site for which you have an account from the dropdown list.
+根据您的需求，从下拉列表中选择您拥有账号的站点。
 
-### Fill in Authentication Information
+### 填写认证信息
 
-Fill in the following authentication information for the selected site:
+为选择的站点填写以下认证信息：
 
-- **UID**: The unique identifier of the site user, usually a number, and for some sites, it is the username filled in during registration
-- **PassKey**: The site key, a security credential used to verify user identity
+- **UID**：站点用户的唯一标识符，一般为数字，部分站点为注册时填写的用户名
+- **PassKey**：站点密钥，用于验证用户身份的安全凭证
 
-### Submit Authentication
+### 提交认证
 
-After filling in the information, click the submit button to complete the authentication process.
+填写完成后，点击提交按钮完成认证过程。
 
-## How to Obtain UID and PassKey
+## UID 与 PassKey 获取方法
 
-### Obtaining UID
+### UID 获取
 
-- The UID of most sites can be viewed on the user profile page
-- The UID of some sites will be displayed in user settings or account information
-- The UID of a few sites is the username used during registration
+- 大多数站点的 UID 可以在用户个人资料页面查看
+- 部分站点的 UID 会显示在用户设置或账户信息中
+- 少数站点的 UID 为注册时使用的用户名
 
-### Obtaining PassKey
+### PassKey 获取
 
-The method of obtaining PassKey may vary for different sites, and it can generally be obtained through the following channels:
+不同站点的 PassKey 获取方式可能有所不同，一般可以通过以下途径获取：
 
-- **Site Settings**: Look for API key or PassKey options in user settings or security settings
-- **Profile**: Some sites provide PassKey viewing or resetting functions on the profile page
-- **Account Security**: Look for key management options on account security-related pages
+- **站点设置**：在用户设置或安全设置中查找 API 密钥或 PassKey 选项
+- **个人资料**：部分站点在个人资料页面提供 PassKey 查看或重置功能
+- **账户安全**：在账户安全相关页面查找密钥管理选项
 
-## Notes
+## 注意事项
 
-:::warning Important Note
-- **Protect your PassKey**: PassKey is equivalent to your site account password, do not disclose it to others
-- **Fill in authentication information correctly**: Ensure that UID and PassKey are filled in correctly to avoid authentication failure
-- **Update authentication regularly**: If you modify relevant information on the site, you may need to re-authenticate
-- **Comply with site rules**: When using the site authentication function, please comply with the usage rules and terms of each site
+:::warning 重要提示
+- **保护好您的 PassKey**：PassKey 相当于您的站点账户密码，请勿泄露给他人
+- **正确填写认证信息**：确保 UID 和 PassKey 填写正确，避免认证失败
+- **定期更新认证**：如果您在站点修改了相关信息，可能需要重新进行认证
+- **遵守站点规则**：使用站点认证功能时，请遵守各站点的使用规则和条款
 :::
 
-## Frequently Asked Questions
+## 常见问题
 
-### Q: What is the function of site authentication?
+### Q: 站点认证有什么作用？
 
-**A**: After site authentication, you can use advanced features such as leaderboards and search in the system, enhancing the system's user experience and functional completeness.
+**A**: 站点认证后，您可以使用系统的榜单、检索等高级功能，提升系统的使用体验和功能完整性。
 
-### Q: What should I do if authentication fails?
+### Q: 认证失败怎么办？
 
-**A**: Authentication failure may be due to the following reasons:
-- UID or PassKey is filled in incorrectly
-- The site server is temporarily unavailable
-- Network connection issues
+**A**: 认证失败可能有以下原因：
+- UID 或 PassKey 填写错误
+- 站点服务器暂时不可用
+- 网络连接问题
 
-Please check if the authentication information is correct, confirm that the site is accessible normally, and then try authentication again.
+请检查认证信息是否正确，确认站点可正常访问后重新尝试认证。
 
-### Q: Can I authenticate multiple sites at the same time?
+### Q: 可以同时认证多个站点吗？
 
-**A**: Yes, you can authenticate multiple different sites as needed, and the authentication information of each site is independent of each other.
+**A**: 是的，您可以根据需要认证多个不同的站点，每个站点的认证信息相互独立。
 
-### Q: What should I do if PassKey is leaked?
+### Q: PassKey 泄露了怎么办？
 
-**A**: If your PassKey is accidentally leaked, please reset your PassKey at the corresponding site immediately and update the authentication information in the system.
+**A**: 如果您的 PassKey 不慎泄露，请立即在对应站点重置您的 PassKey，并在系统中更新认证信息。
 
-## Best Practices
+## 最佳实践
 
-- **Check authentication status regularly**: Ensure that your site authentication remains valid
-- **Use a secure network environment**: Ensure a secure network environment when performing site authentication
-- **Save authentication information**: It is recommended to properly save your authentication information for future use
-- **Follow site rules**: When using the site authentication function, strictly comply with the usage rules of each site
-- **Update authentication information in a timely manner**: When you modify relevant information on the site, update the authentication information in the system in a timely manner
+- **定期检查认证状态**：确保您的站点认证保持有效状态
+- **使用安全的网络环境**：在进行站点认证时，确保使用安全的网络环境
+- **保存好认证信息**：建议妥善保存您的认证信息，以便后续需要时使用
+- **遵循站点规则**：使用站点认证功能时，严格遵守各站点的使用规则
+- **及时更新认证信息**：当您在站点修改了相关信息时，及时更新系统中的认证信息

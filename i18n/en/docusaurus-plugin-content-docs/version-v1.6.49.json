@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "v1.6.49",
+    "description": "The label for version v1.6.49"
+  },
+  "sidebar.guideSidebar.category.Tutorial": {
+    "message": "Tutorial",
+    "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Deploy": {
+    "message": "Deploy",
+    "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Usage": {
+    "message": "Usage",
+    "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Module": {
+    "message": "Module",
+    "description": "The label for category 'Module' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Scrape": {
+    "message": "Scrape",
+    "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Plugin": {
+    "message": "Plugin",
+    "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Metadata": {
+    "message": "Metadata",
+    "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Site Search": {
+    "message": "Site Search",
+    "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Push Notice": {
+    "message": "Push Notice",
+    "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.Media Server": {
+    "message": "Media Server",
+    "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  }
+}
