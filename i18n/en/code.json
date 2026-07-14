@@ -1,5 +1,5 @@
 {
-  "AMMDS Logo": {
+  "AMMDS 标志": {
     "message": "AMMDS Logo",
     "description": "AMMDS website logo"
   },
@@ -23,7 +23,7 @@
     "message": "Learn More",
     "description": "Learn More button text"
   },
-  "AMMDS - Adult Movie MetaData Scraper": {
+  "AMMDS - 成人影片元数据刮削器": {
     "message": "AMMDS - Adult Movie MetaData Scraper",
     "description": "Website description"
   },

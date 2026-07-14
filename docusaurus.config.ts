@@ -4,15 +4,19 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "AMMDS Documentation",
-  titleDelimiter: " | ",
-  tagline: "Personal video data management platform",
-  favicon: "img/favicon.ico",
   url: "https://ammds.lifebus.top",
   baseUrl: "/",
+  favicon: "img/favicon.ico",
+  titleDelimiter: " | ",
+  tagline: "Personal video data management platform",
   organizationName: "QYG2297248353",
   projectName: "AMMDS-Docker",
   staticDirectories: ["static"],
   onBrokenLinks: "throw",
+  storage: {
+    type: 'localStorage',
+    namespace: true,
+  },
   future: {
     v4: true,
   },
@@ -20,23 +24,32 @@ const config: Config = {
     version: "v1.6.60",
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "zh-Hans", "ja", "ko"],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans", "en", "ja", "ko"],
+    path: "i18n",
     localeConfigs: {
-      en: {
-        label: "English",
-        htmlLang: "en-US",
-      },
       "zh-Hans": {
         label: "简体中文",
+        direction: 'ltr',
+        translate: false,
         htmlLang: "zh-Hans",
+      },
+      en: {
+        label: "English",
+        direction: 'ltr',
+        translate: true,
+        htmlLang: "en-US",
       },
       ja: {
         label: "日本語",
+        direction: 'ltr',
+        translate: true,
         htmlLang: "ja-JP",
       },
       ko: {
         label: "한국어",
+        direction: 'ltr',
+        translate: true,
         htmlLang: "ko-KR",
       },
     },
@@ -296,13 +309,13 @@ const config: Config = {
       },
       items: [
         {
-          label: "Guide",
+          label: "指南",
           type: "docSidebar",
           sidebarId: "guideSidebar",
           position: "left",
         },
         {
-          label: "Blog",
+          label: "博客",
           to: "/blog",
           position: "left",
         },
@@ -325,23 +338,23 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "文档",
           items: [
             {
-              label: "Guide",
+              label: "指南",
               to: "/docs/intro",
             },
           ],
         },
         {
-          title: "Community",
+          title: "社区",
           items: [
             {
-              label: "Telegram Channel",
+              label: "Telegram 频道",
               href: "https://t.me/ammds_official",
             },
             {
-              label: "Telegram Group",
+              label: "Telegram 群组",
               href: "https://t.me/+9bvCp3LqLUo1N2Q1",
             },
             {
@@ -349,16 +362,16 @@ const config: Config = {
               href: "https://discord.gg/sxkpPZzPeJ",
             },
             {
-              label: "QQ Group",
+              label: "QQ 群",
               href: "https://qm.qq.com/q/ZTXsLnEAM4",
             },
           ],
         },
         {
-          title: "More",
+          title: "更多",
           items: [
             {
-              label: "Blog",
+              label: "博客",
               to: "/blog",
             },
             {

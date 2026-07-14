@@ -3,47 +3,47 @@
     "message": "latest",
     "description": "The label for version current"
   },
-  "sidebar.guideSidebar.category.Tutorial": {
+  "sidebar.guideSidebar.category.使用教程": {
     "message": "Tutorial",
     "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Deploy": {
+  "sidebar.guideSidebar.category.部署": {
     "message": "Deploy",
     "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Usage": {
+  "sidebar.guideSidebar.category.使用说明": {
     "message": "Usage",
     "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Module": {
+  "sidebar.guideSidebar.category.模块": {
     "message": "Module",
     "description": "The label for category 'Module' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Scrape": {
+  "sidebar.guideSidebar.category.刮削": {
     "message": "Scrape",
     "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Plugin": {
+  "sidebar.guideSidebar.category.插件": {
     "message": "Plugin",
     "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Metadata": {
+  "sidebar.guideSidebar.category.元数据": {
     "message": "Metadata",
     "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Site Search": {
+  "sidebar.guideSidebar.category.站点搜索": {
     "message": "Site Search",
     "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Push Notice": {
+  "sidebar.guideSidebar.category.推送通知": {
     "message": "Push Notice",
     "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Media Server": {
+  "sidebar.guideSidebar.category.媒体服务器": {
     "message": "Media Server",
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Auxiliary": {
+  "sidebar.guideSidebar.category.辅助功能": {
     "message": "Auxiliary",
     "description": "The label for category 'Auxiliary' in sidebar 'guideSidebar'"
   }

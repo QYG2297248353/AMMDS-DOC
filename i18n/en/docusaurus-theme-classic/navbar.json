@@ -7,11 +7,11 @@
     "message": "AMMDS Documentation Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Guide": {
+  "item.label.指南": {
     "message": "Guide",
     "description": "Navbar item with label Guide"
   },
-  "item.label.Blog": {
+  "item.label.博客": {
     "message": "Blog",
     "description": "Navbar item with label Blog"
   },
