@@ -7,8 +7,6 @@ sidebar_label: "WebHook"
 
 WebHook 플러그인은 AMMDS 플랫폼에 지정된 WebHook URL로 푸시 알림을 보낼 수 있는 기능을 제공하여 사용자가 실시간 시스템 이벤트 알림을 받을 수 있도록 합니다. WebHook을 통해 사용자는 AMMDS 플랫폼의 다양한 이벤트(작업 완료, 시스템 알림, 상태 변경 등)를 외부 시스템으로 실시간으로 푸시하여 타사 서비스와의 통합을 실현할 수 있습니다.
 
-<!-- truncate -->
-
 ## 플러그인 구성
 
 ![플러그인 구성](/img/plugin/webhook-01.png)

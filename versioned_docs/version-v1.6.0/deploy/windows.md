@@ -7,4 +7,3 @@ sidebar_label: "Windows"
 
 Microsoft Windows is a proprietary graphical operating system developed and marketed by Microsoft. Microsoft Windows. Developer · Microsoft. Source model.
 
-<!-- truncate -->

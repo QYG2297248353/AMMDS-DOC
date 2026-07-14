@@ -7,8 +7,6 @@ sidebar_label: "소개"
 
 AMMDS (Adult Movie MetaData Scraper)는 개인 미디어 라이브러리를 관리하고 즐기기 위한 개인 데이터 플랫폼입니다.
 
-<!-- truncate -->
-
 :::warning 주의
 이 소프트웨어는 오프라인 제품이며 데이터는 사용자가 수동으로 입력합니다. 중국 내에서 이 제품을 홍보하지 마십시오. 필요한 경우 약어 `AMMDS`를 사용하십시오.
 :::

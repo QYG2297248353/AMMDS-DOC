@@ -7,8 +7,6 @@ sidebar_label: "Number Completion Configuration"
 
 Number completion is a helper feature that automatically fills in missing parts when recognizing video numbers (番号), making the recognition more accurate and complete.
 
-<!-- truncate -->
-
 ## Access Number Completion Configuration
 
 Go to:

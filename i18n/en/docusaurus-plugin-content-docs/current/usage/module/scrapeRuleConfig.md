@@ -9,8 +9,6 @@ Scrape configuration tells the system how to find movie info online (posters, de
 
 > **What's "scraping"?** Scraping means the system automatically searches online for movie information — like title, poster, cast, description (collectively called "metadata") — and downloads it to go with your video files.
 
-<!-- truncate -->
-
 ## Access Scrape Configuration
 
 You can find the scrape rule config page here:

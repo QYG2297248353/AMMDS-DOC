@@ -7,8 +7,6 @@ sidebar_label: "Network Proxy Configuration"
 
 Network proxy configuration is used to set the proxy server used by the program when accessing network resources, ensuring the program can normally access resources that require a proxy to access.
 
-<!-- truncate -->
-
 ## Access Network Proxy Configuration
 
 You can access the network proxy configuration page through the following two paths:

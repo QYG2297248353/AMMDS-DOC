@@ -7,8 +7,6 @@ sidebar_label: "Scan Configuration"
 
 Scan configuration is used to set how the system identifies and processes media files before task execution, ensuring the scanning process can accurately and efficiently identify your movie resources.
 
-<!-- truncate -->
-
 ## Access Scan Configuration
 
 You can access the scan rule configuration page through the following path:

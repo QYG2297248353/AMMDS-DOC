@@ -9,8 +9,6 @@ Prowlarr is a powerful indexer manager and proxy tool specifically designed for 
 
 Official website: [https://prowlarr.com/](https://prowlarr.com/)
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Prowlarr Plugin Configuration](/img/plugin/prowlarr-01.png)

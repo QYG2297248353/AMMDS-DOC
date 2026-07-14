@@ -9,8 +9,6 @@ ThePornDB is a professional adult video metadata management tool primarily used 
 
 Official Website: [https://theporndb.net/](https://theporndb.net/)
 
-<!-- truncate -->
-
 ## Core Features
 
 - 🎯 **Automatic Matching**: Intelligently identifies video files and automatically matches corresponding metadata

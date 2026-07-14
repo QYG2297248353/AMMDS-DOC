@@ -7,8 +7,6 @@ sidebar_label: "Metatube"
 
 MetaTube 是一款专为 Jellyfin、Emby 和 Plex 设计的开源媒体元数据刮削插件后端，主要用于自动获取影片信息（包括海报、简介、演员、制作工作室、评分等）。该插件能够有效解决中文资源识别率低的问题，通过自建 API 实现高精度的媒体库「海报墙」管理。
 
-<!-- truncate -->
-
 ## 特性
 
 MetaTube 插件具有以下核心特性：

@@ -7,8 +7,6 @@ sidebar_label: "Subscription Rule Configuration"
 
 Subscription rule configuration is used to set subscription preferences and download parameters for movie content before task execution, ensuring the system can automatically obtain and manage movie resources according to your needs.
 
-<!-- truncate -->
-
 ## Access Subscription Rule Configuration
 
 You can access the subscription rule configuration page through the following path:

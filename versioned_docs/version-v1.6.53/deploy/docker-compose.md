@@ -7,8 +7,6 @@ sidebar_label: "Docker Compose"
 
 Docker Compose 是一个用于定义和运行多容器 Docker 应用程序的工具。通过单个 YAML 文件（docker-compose.yml），您可以配置应用程序的所有服务，然后只需一个命令即可启动所有服务。它非常适合在开发、测试和 staging 环境中快速部署和管理应用程序。
 
-<!-- truncate -->
-
 ## 创建服务
 
 ### 创建应用目录

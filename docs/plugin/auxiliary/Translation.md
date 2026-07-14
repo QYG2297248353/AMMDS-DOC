@@ -9,8 +9,6 @@ sidebar_label: "智能翻译"
 
 这个插件是系统层面的翻译方案，支持好几种翻译引擎和 AI 模型。你可以根据实际情况，选最合适的翻译方式。
 
-<!-- truncate -->
-
 ## 插件配置
 
 ![智能翻译插件配置](/img/plugin/translation-01.png)

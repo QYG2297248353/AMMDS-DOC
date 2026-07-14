@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Microsoft Windows（간단히 Windows）는 마이크로소프트사가 개발한 일련의 독점 상용 운영 체제로，그래픽 사용자 인터페이스를 핵심 특성으로，개인 컴퓨터，서버 등의 기기에서 널리 사용됩니다. 본 가이드는 Windows 환경에서 AMMDS를 배포하는 과정을 자세히 설명합니다.
 
-<!-- truncate -->
-
 ## 다운로드
 
 ![AMMDS Launcher 다운로드 페이지](/img/deploy/install-windows-00.png)

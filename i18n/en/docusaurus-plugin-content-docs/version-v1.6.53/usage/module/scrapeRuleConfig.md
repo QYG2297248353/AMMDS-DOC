@@ -7,8 +7,6 @@ sidebar_label: "Scrape Configuration"
 
 Scrape configuration is used to set how the system obtains movie metadata from the network, how to organize file directory structure, and other scrape-related parameters before task execution, ensuring the scrape process can efficiently and accurately obtain and organize movie resources.
 
-<!-- truncate -->
-
 ## Access Scrape Configuration
 
 You can access the scrape rule configuration page through the following path:

@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Windows（マイクロソフト Windows）はマイクロソフトが開発したデスクトップ OS で、パソコンやサーバーで広く使われています。ここでは Windows に AMMDS をデプロイする方法を紹介します。
 
-<!-- truncate -->
-
 ## ダウンロード
 
 ![AMMDS Launcher下载页面](/img/deploy/install-windows-00.png)

@@ -9,4 +9,3 @@ tags: [ammds, release]
 
 AMMDS v1.6.50 发布, 修复了很多东西.
 
-<!-- truncate -->

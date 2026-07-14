@@ -7,8 +7,6 @@ sidebar_label: "WebHook"
 
 WebHook插件为AMMDS平台提供了向指定WebHook URL发送推送通知的能力，使用户能够实时接收系统事件通知。通过WebHook，用户可以将AMMDS平台的各类事件（如任务完成、系统告警、状态变更等）实时推送到外部系统，实现与第三方服务的集成。
 
-<!-- truncate -->
-
 ## 插件配置
 
 ![插件配置](/img/plugin/webhook-01.png)

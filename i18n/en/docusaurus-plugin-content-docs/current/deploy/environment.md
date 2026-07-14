@@ -7,8 +7,6 @@ sidebar_label: "Environment"
 
 **Environment variables** are like little notes you pass to AMMDS — you give them when starting the container to tell it things like "use this port," "set this timezone," "here's the admin password," etc. No need to open the web UI to configure them; everything is set up at launch.
 
-<!-- truncate -->
-
 ## Supported Configurations
 
 The following environment variables can be used to customize AMMDS:

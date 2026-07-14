@@ -7,8 +7,6 @@ sidebar_label: "Network Proxy Configuration"
 
 Network proxy configuration lets you set which proxy server the program uses when accessing the internet. Some network resources need a proxy to be accessible — this is exactly what it's for.
 
-<!-- truncate -->
-
 ## Access Network Proxy Configuration
 
 You can get to the proxy config page through either of these:

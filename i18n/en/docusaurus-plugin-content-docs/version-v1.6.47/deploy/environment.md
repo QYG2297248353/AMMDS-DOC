@@ -7,8 +7,6 @@ sidebar_label: "Environment"
 
 When deploying, quick deployment using environment variables is supported.
 
-<!-- truncate -->
-
 ## Supported Configurations
 
 The following environment variables are supported for customizing your AMMDS deployment:

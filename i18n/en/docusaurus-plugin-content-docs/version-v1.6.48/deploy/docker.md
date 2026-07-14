@@ -7,8 +7,6 @@ sidebar_label: "Docker"
 
 Docker is an open-source platform for automating the deployment, scaling, and management of applications. It uses containerization technology to package applications and their dependencies into independent containers, ensuring consistent operation across any environment. Containers are lightweight and portable, making them ideal for microservices architectures and CI/CD workflows.
 
-<!-- truncate -->
-
 ## One-click Run
 
 ```bash

@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Windows（微软 Windows）是微软开发的桌面操作系统，广泛用于个人电脑和服务器。下面介绍如何在 Windows 上部署 AMMDS。
 
-<!-- truncate -->
-
 ## 下载
 
 ![AMMDS Launcher下载页面](/img/deploy/install-windows-00.png)

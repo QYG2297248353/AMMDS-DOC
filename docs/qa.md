@@ -7,8 +7,6 @@ sidebar_label: "常见问题"
 
 这里汇总了使用 AMMDS 时常见的问题和解决办法。
 
-<!-- truncate -->
-
 ## 🚀 部署问题
 
 <details>

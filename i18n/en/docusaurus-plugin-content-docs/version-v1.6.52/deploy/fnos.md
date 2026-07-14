@@ -7,8 +7,6 @@ sidebar_label: "FnOS"
 
 FnOS is a NAS system crafted by a team of veteran enthusiasts, integrating local AI models to provide efficient and secure storage solutions for homes and businesses. This guide will detail the deployment process of AMMDS in the FnOS environment.
 
-<!-- truncate -->
-
 ## Deployment Methods Overview
 
 AMMDS offers two deployment methods on FnOS:

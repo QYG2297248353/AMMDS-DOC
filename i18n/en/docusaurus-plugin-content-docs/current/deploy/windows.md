@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Windows (Microsoft Windows) is a desktop operating system developed by Microsoft, widely used on personal computers and servers. Here's how to deploy AMMDS on Windows.
 
-<!-- truncate -->
-
 ## Download
 
 ![AMMDS Launcher Download Page](/img/deploy/install-windows-00.png)

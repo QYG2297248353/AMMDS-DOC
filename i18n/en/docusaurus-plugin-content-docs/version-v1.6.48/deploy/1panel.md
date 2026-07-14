@@ -7,8 +7,6 @@ sidebar_label: "1Panel"
 
 1Panel is a powerful server management panel that provides an intuitive web interface to help users efficiently manage applications, websites, files, databases, and large language models (LLMs) on Linux servers. This guide will detail the deployment process of AMMDS in a 1Panel environment.
 
-<!-- truncate -->
-
 ## Install Third-Party App Store
 
 This solution is applicable to both 1Panel v1 and v2 versions.

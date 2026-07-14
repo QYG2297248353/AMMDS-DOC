@@ -11,8 +11,6 @@ M-Team is a comprehensive discussion forum with diverse discussion sections and 
 This site requires registration by invitation and has certain thresholds.
 :::
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/m-team-01.png)

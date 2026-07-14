@@ -7,8 +7,6 @@ sidebar_label: "Scan Configuration"
 
 Scan configuration tells the system what to process, what to skip, and how to identify media files when scanning.
 
-<!-- truncate -->
-
 ## Access Scan Configuration
 
 You can find the scan rule config page here:

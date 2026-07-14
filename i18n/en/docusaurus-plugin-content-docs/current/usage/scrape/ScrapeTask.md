@@ -9,8 +9,6 @@ The scrape task is the second step in organizing your movies. Simply put: the sy
 
 > **What does "scraping" mean?** Scraping is when the system automatically searches online for movie information — cover images, plot summaries, cast, ratings, etc. (collectively called "metadata") — and downloads it to match up with your video files. Think of it as "tagging" your movie files.
 
-<!-- truncate -->
-
 ## Prerequisites
 
 Before running a scrape task, make sure the following is ready:

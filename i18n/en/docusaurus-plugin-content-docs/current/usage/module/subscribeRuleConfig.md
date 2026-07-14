@@ -7,8 +7,6 @@ sidebar_label: "Subscription Rule Configuration"
 
 Subscription rules tell the system what kind of content you want, where to find it, and where to save it — so it can work automatically based on your preferences.
 
-<!-- truncate -->
-
 ## Access Subscription Rule Configuration
 
 Go to:

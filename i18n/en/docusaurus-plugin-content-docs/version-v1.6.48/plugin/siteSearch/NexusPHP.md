@@ -11,8 +11,6 @@ NexusPHP was initiated and developed by the Nexus team of Zhejiang University. I
 This site requires registration by invitation and has certain thresholds.
 :::
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/nexusphp-01.png)

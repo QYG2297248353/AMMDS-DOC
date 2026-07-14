@@ -7,8 +7,6 @@ sidebar_label: "1Panel"
 
 1Panel is a server management panel that lets you manage apps, websites, files, databases, and large language models (LLMs) through a web interface. Here's how to deploy AMMDS on 1Panel.
 
-<!-- truncate -->
-
 ## Install Third-Party App Store
 
 This solution works with both 1Panel v1 and v2.

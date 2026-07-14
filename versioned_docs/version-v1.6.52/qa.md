@@ -7,8 +7,6 @@ sidebar_label: "常见问题"
 
 使用过程中常见的问题。
 
-<!-- truncate -->
-
 ## 🚀 部署问题
 
 <details>

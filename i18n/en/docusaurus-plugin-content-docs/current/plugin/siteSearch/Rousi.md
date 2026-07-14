@@ -11,8 +11,6 @@ Rousi (肉丝) is a platform specializing in high-quality, efficient comprehensi
 This site requires registration by invitation and has certain thresholds.
 :::
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Rousi Plugin Configuration](/img/plugin/rousi-01.png)

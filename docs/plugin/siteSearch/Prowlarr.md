@@ -9,8 +9,6 @@ Prowlarr 是一个专为影音自动化设计的索引器管理工具，用 .NET
 
 官网：[https://prowlarr.com/](https://prowlarr.com/)
 
-<!-- truncate -->
-
 ## 插件配置
 
 ![Prowlarr 插件配置](/img/plugin/prowlarr-01.png)

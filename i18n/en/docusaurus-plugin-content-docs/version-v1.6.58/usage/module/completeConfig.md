@@ -7,8 +7,6 @@ sidebar_label: "Number Completion Configuration"
 
 Number completion configuration is an auxiliary number recognition function used to complete numbers in recognition results during organization, improving the accuracy and completeness of number recognition.
 
-<!-- truncate -->
-
 ## Access Number Completion Configuration
 
 You can access the number completion rule configuration page through the following path:

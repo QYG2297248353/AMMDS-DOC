@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Microsoft Windows（简称Windows）是微软公司开发的一系列专有商业操作系统，以图形用户界面为核心特性，广泛应用于个人电脑、服务器等设备。本指南将详细介绍AMMDS在Windows环境下的部署流程。
 
-<!-- truncate -->
-
 ## 下载
 
 ![AMMDS Launcher下载页面](/img/deploy/install-windows-00.png)

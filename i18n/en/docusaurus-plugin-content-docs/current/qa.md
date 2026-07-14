@@ -7,8 +7,6 @@ sidebar_label: "Q&A"
 
 Here's a collection of common questions and solutions when using AMMDS.
 
-<!-- truncate -->
-
 ## 🚀 Deployment Issues
 
 <details>

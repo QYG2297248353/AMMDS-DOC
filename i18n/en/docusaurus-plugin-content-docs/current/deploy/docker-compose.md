@@ -7,8 +7,6 @@ sidebar_label: "Docker Compose"
 
 Docker Compose is a "one-click launch tool." If you need to start several containers that work together, typing out a bunch of commands is tedious. Compose lets you put all your configuration in one file, and from then on you just run one command to get everything up and running.
 
-<!-- truncate -->
-
 ## Create Service
 
 ### Create Application Directory

@@ -7,8 +7,6 @@ sidebar_label: "Site Authentication"
 
 Site authentication is how the system "introduces itself" to a website. Once authenticated, you can use advanced features like leaderboards and search.
 
-<!-- truncate -->
-
 ## Accessing the Site Authentication Page
 
 Go to:

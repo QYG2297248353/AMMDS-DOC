@@ -7,8 +7,6 @@ sidebar_label: "자주 묻는 질문"
 
 AMMDS를 사용할 때 자주 발생하는 문제와 해결 방법을 모아두었습니다.
 
-<!-- truncate -->
-
 ## 🚀 배포 문제
 
 <details>

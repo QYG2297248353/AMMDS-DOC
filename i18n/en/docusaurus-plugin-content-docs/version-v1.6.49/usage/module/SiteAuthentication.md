@@ -7,8 +7,6 @@ sidebar_label: "Site Authentication"
 
 Site authentication is an important feature. After authentication, you can enable advanced features such as leaderboards and search, enhancing the system's user experience and functional completeness.
 
-<!-- truncate -->
-
 ## Accessing the Site Authentication Page
 
 You can access the site authentication page through the following path:

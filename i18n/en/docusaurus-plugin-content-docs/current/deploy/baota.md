@@ -7,8 +7,6 @@ sidebar_label: "Baota Panel"
 
 Baota Panel (bt.cn) is a server management tool that turns complex command-line operations into buttons and switches on a web page. Just click around to manage websites, databases, SSL certificates, and more — no need to memorize a bunch of commands.
 
-<!-- truncate -->
-
 ## Prerequisites
 
 Before you start, make sure you have these two things ready:

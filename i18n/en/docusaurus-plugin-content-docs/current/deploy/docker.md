@@ -7,8 +7,6 @@ sidebar_label: "Docker"
 
 Docker is like a "lightweight virtual machine." It packages the software you need and its runtime environment into a "container," so no matter which machine you move to, it just works out of the box — no need to reconfigure a bunch of stuff.
 
-<!-- truncate -->
-
 ## One-click Run
 
 ```bash

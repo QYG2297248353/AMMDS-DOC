@@ -7,8 +7,6 @@ sidebar_label: "Create Scan Task"
 
 The scan task is the first step in organizing your movies. The system looks through your specified folders for movie files based on the scan rules you configured, and generates a list of files to process. This way, you can pick and choose which ones to scrape — no junk files get processed.
 
-<!-- truncate -->
-
 ## Access Task List
 
 Go to:

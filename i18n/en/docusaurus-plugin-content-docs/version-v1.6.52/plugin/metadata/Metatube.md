@@ -7,8 +7,6 @@ sidebar_label: "Metatube"
 
 MetaTube is an open-source media metadata scraping plugin backend designed specifically for Jellyfin, Emby, and Plex. It is primarily used to automatically retrieve video information, including posters, synopses, cast members, production studios, ratings, and more. This plugin effectively solves the problem of low recognition rates for Chinese resources, enabling high-precision "poster wall" management of media libraries through a self-built API.
 
-<!-- truncate -->
-
 ## Features
 
 The MetaTube plugin offers the following core features:

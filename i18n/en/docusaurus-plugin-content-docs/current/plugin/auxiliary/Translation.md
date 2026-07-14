@@ -9,8 +9,6 @@ The Smart Translation plugin lets the AMMDS platform translate between multiple 
 
 This plugin provides a system-level translation solution supporting multiple translation engines and AI models. You can pick the best translation method for your specific needs.
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Smart Translation Plugin Configuration](/img/plugin/translation-01.png)

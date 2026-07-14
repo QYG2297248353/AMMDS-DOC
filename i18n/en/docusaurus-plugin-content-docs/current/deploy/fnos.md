@@ -7,8 +7,6 @@ sidebar_label: "FnOS"
 
 FnOS is a NAS (home storage server) system built by a team of veteran enthusiasts, featuring built-in local AI models for easy data management at home or in the office. Here's how to deploy AMMDS on FnOS.
 
-<!-- truncate -->
-
 ## Deployment Methods
 
 AMMDS offers two installation methods on FnOS:

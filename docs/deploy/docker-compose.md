@@ -7,8 +7,6 @@ sidebar_label: "Docker Compose"
 
 Docker Compose 就是一个"一键启动工具"。如果你需要启动好几个容器配合工作，手打一堆命令太麻烦，Compse 让你把所有配置写在一个文件里，以后只需要敲一行命令就能全部搞定。
 
-<!-- truncate -->
-
 ## 创建服务
 
 ### 创建应用目录

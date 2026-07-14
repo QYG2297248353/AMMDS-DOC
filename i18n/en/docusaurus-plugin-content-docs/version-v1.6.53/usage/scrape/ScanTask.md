@@ -7,8 +7,6 @@ sidebar_label: "Create Scan Task"
 
 Scan task is the first step in the scraping process, used to scan files in the target directory according to scan rules and generate scan result files. Through scan tasks, you can selectively scrape files, improve scraping efficiency, and avoid scraping junk files.
 
-<!-- truncate -->
-
 ## Access Task List
 
 You can access the task list page through the following path:

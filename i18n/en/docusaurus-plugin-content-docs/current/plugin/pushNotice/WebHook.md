@@ -7,8 +7,6 @@ sidebar_label: "WebHook"
 
 The WebHook plugin lets AMMDS send push notifications to specified WebHook URLs, so you can receive real-time system event notifications. Through WebHook, you can push AMMDS events (like task completion, system alerts, status changes, etc.) to external systems and integrate with third-party services.
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/webhook-01.png)

@@ -7,8 +7,6 @@ sidebar_label: "よくある質問"
 
 使用中によくある質問です。
 
-<!-- truncate -->
-
 ## 🚀 デプロイに関する質問
 
 <details>

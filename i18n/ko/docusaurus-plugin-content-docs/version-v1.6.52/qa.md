@@ -7,8 +7,6 @@ sidebar_label: "자주 묻는 질문"
 
 사용 중에 자주 발생하는 문제입니다.
 
-<!-- truncate -->
-
 ## 🚀 배포 문제
 
 <details>

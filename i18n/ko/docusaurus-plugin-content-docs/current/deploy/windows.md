@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Windows(마이크로소프트 Windows)는 마이크로소프트가 개발한 데스크톱 운영 체제로, 개인용 PC와 서버에서 널리 사용됩니다. 아래에서는 Windows에 AMMDS를 배포하는 방법을 설명합니다.
 
-<!-- truncate -->
-
 ## 다운로드
 
 ![AMMDS Launcher 다운로드 페이지](/img/deploy/install-windows-00.png)

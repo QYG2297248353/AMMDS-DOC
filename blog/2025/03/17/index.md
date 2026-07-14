@@ -9,4 +9,3 @@ tags: [ammds, feature]
 
 支持 Rousi (肉丝) 站点认证, 可以在 AMMDS 中使用 Rousi 站点的认证信息.
 
-<!-- truncate -->

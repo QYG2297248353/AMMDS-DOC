@@ -11,8 +11,6 @@ NexusPHP is an open-source PT (Private Tracker — a type of BT download) softwa
 This site requires registration by invitation and has certain thresholds.
 :::
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Plugin Configuration](/img/plugin/nexusphp-01.png)

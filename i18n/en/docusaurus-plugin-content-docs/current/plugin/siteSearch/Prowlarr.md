@@ -9,8 +9,6 @@ Prowlarr is an indexer manager built for media automation, using .NET/React. It 
 
 Official Site: [https://prowlarr.com/](https://prowlarr.com/)
 
-<!-- truncate -->
-
 ## Plugin Configuration
 
 ![Prowlarr Plugin Configuration](/img/plugin/prowlarr-01.png)

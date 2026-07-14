@@ -7,8 +7,6 @@ sidebar_label: "Windows"
 
 Microsoft Windows（略してWindows）は、マイクロソフト社が開発した一連の専有商用オペレーティングシステムであり、グラフィカルユーザーインターフェースを中核機能とし、パーソナルコンピュータ、サーバーなどのデバイスに広く適用されています。このガイドでは、Windows環境でのAMMDSのデプロイ手順について詳しく説明します。
 
-<!-- truncate -->
-
 ## ダウンロード
 
 ![AMMDS Launcher下载页面](/img/deploy/install-windows-00.png)

@@ -7,8 +7,6 @@ sidebar_label: "Execute Scrape Task"
 
 Scrape task is the second step in the scraping process. It is used to scrape scan result files according to scraping rules, obtain movie metadata, generate final movie files, and complete movie organization work.
 
-<!-- truncate -->
-
 ## Prerequisites
 
 Before executing a scrape task, please ensure the following conditions are met:
