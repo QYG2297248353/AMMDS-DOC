@@ -14,7 +14,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <img src="/img/ammds-transparent.png" alt={translate({ message: 'AMMDS 标志', description: 'AMMDS website logo' })} className={styles.logo} />
+        <img src="/img/ammds-transparent.png" alt={translate({ message: 'AMMDS Logo', description: 'AMMDS website logo' })} className={styles.logo} />
         <Heading as="h1" className="hero__title">
           <Translate id="homepage.title" description="AMMDS website title">AMMDS</Translate>
         </Heading>

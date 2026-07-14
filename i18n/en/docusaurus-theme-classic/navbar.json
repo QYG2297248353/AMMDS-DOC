@@ -9,11 +9,11 @@
   },
   "item.label.指南": {
     "message": "Guide",
-    "description": "Navbar item with label Guide"
+    "description": "Navbar item with label 指南"
   },
   "item.label.博客": {
     "message": "Blog",
-    "description": "Navbar item with label Blog"
+    "description": "Navbar item with label 博客"
   },
   "item.label.GitHub": {
     "message": "GitHub",

@@ -5,46 +5,46 @@
   },
   "sidebar.guideSidebar.category.使用教程": {
     "message": "Tutorial",
-    "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
+    "description": "The label for category '使用教程' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.部署": {
     "message": "Deploy",
-    "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
+    "description": "The label for category '部署' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.使用说明": {
     "message": "Usage",
-    "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
+    "description": "The label for category '使用说明' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.模块": {
     "message": "Module",
-    "description": "The label for category 'Module' in sidebar 'guideSidebar'"
+    "description": "The label for category '模块' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.刮削": {
     "message": "Scrape",
-    "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
+    "description": "The label for category '刮削' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.插件": {
     "message": "Plugin",
-    "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
+    "description": "The label for category '插件' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.元数据": {
     "message": "Metadata",
-    "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
+    "description": "The label for category '元数据' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.站点搜索": {
     "message": "Site Search",
-    "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
+    "description": "The label for category '站点搜索' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.推送通知": {
     "message": "Push Notice",
-    "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
+    "description": "The label for category '推送通知' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.媒体服务器": {
     "message": "Media Server",
-    "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+    "description": "The label for category '媒体服务器' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.辅助功能": {
     "message": "Auxiliary",
-    "description": "The label for category 'Auxiliary' in sidebar 'guideSidebar'"
+    "description": "The label for category '辅助功能' in sidebar 'guideSidebar'"
   }
 }

@@ -1,50 +1,50 @@
 {
   "version.label": {
-    "message": "current",
+    "message": "latest",
     "description": "The label for version current"
   },
-  "sidebar.guideSidebar.category.Tutorial": {
-    "message": "튜토리얼",
-    "description": "The label for category 'Tutorial' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.使用教程": {
+    "message": "使用教程",
+    "description": "The label for category '使用教程' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Deploy": {
-    "message": "배포",
-    "description": "The label for category 'Deploy' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.部署": {
+    "message": "部署",
+    "description": "The label for category '部署' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Plugin": {
-    "message": "플러그인",
-    "description": "The label for category 'Plugin' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.使用说明": {
+    "message": "使用说明",
+    "description": "The label for category '使用说明' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Metadata": {
-    "message": "메타데이터",
-    "description": "The label for category 'Metadata' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.模块": {
+    "message": "模块",
+    "description": "The label for category '模块' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Site Search": {
-    "message": "사이트 검색",
-    "description": "The label for category 'Site Search' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.刮削": {
+    "message": "刮削",
+    "description": "The label for category '刮削' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Push Notice": {
-    "message": "푸시 알림",
-    "description": "The label for category 'Push Notice' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.插件": {
+    "message": "插件",
+    "description": "The label for category '插件' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Media Server": {
-    "message": "미디어 서버",
-    "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.元数据": {
+    "message": "元数据",
+    "description": "The label for category '元数据' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Usage": {
-    "message": "사용법",
-    "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.站点搜索": {
+    "message": "站点搜索",
+    "description": "The label for category '站点搜索' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Module": {
-    "message": "모듈",
-    "description": "The label for category 'Module' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.推送通知": {
+    "message": "推送通知",
+    "description": "The label for category '推送通知' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Scrape": {
-    "message": "스크래핑",
-    "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.媒体服务器": {
+    "message": "媒体服务器",
+    "description": "The label for category '媒体服务器' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.Auxiliary": {
-    "message": "Auxiliary",
-    "description": "The label for category 'Auxiliary' in sidebar 'guideSidebar'"
+  "sidebar.guideSidebar.category.辅助功能": {
+    "message": "辅助功能",
+    "description": "The label for category '辅助功能' in sidebar 'guideSidebar'"
   }
 }
