@@ -32,7 +32,7 @@
     "description": "The label for category 'Media Server' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Usage": {
-    "message": "チュートリアル",
+    "message": "使用方法",
     "description": "The label for category 'Usage' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Module": {

@@ -4,47 +4,47 @@
     "description": "The label for version current"
   },
   "sidebar.guideSidebar.category.使用教程": {
-    "message": "使用教程",
+    "message": "チュートリアル",
     "description": "The label for category '使用教程' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.部署": {
-    "message": "部署",
+    "message": "デプロイ",
     "description": "The label for category '部署' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.使用说明": {
-    "message": "使用说明",
+    "message": "使用方法",
     "description": "The label for category '使用说明' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.模块": {
-    "message": "模块",
+    "message": "モジュール",
     "description": "The label for category '模块' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.刮削": {
-    "message": "刮削",
+    "message": "スクレイピング",
     "description": "The label for category '刮削' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.插件": {
-    "message": "插件",
+    "message": "プラグイン",
     "description": "The label for category '插件' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.元数据": {
-    "message": "元数据",
+    "message": "メタデータ",
     "description": "The label for category '元数据' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.站点搜索": {
-    "message": "站点搜索",
+    "message": "サイト検索",
     "description": "The label for category '站点搜索' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.推送通知": {
-    "message": "推送通知",
+    "message": "プッシュ通知",
     "description": "The label for category '推送通知' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.媒体服务器": {
-    "message": "媒体服务器",
+    "message": "メディアサーバー",
     "description": "The label for category '媒体服务器' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.辅助功能": {
-    "message": "辅助功能",
+    "message": "補助機能",
     "description": "The label for category '辅助功能' in sidebar 'guideSidebar'"
   }
 }

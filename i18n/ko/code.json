@@ -24,7 +24,7 @@
     "description": "Learn More button text"
   },
   "AMMDS - 成人影片元数据刮削器": {
-    "message": "AMMDS - 成人影片元数据刮削器",
+    "message": "AMMDS - 성인 영화 메타데이터 스크래퍼",
     "description": "Website description"
   },
   "AMMDS - Adult Movie MetaData Scraper": {
@@ -140,7 +140,7 @@
     "description": "Latest Updates section title"
   },
   "homepage.updates.description": {
-    "message": "AMMDS의 최신 발전과 버전 업데이트를随时了解하세요",
+    "message": "AMMDS의 최신 발전과 버전 업데이트를 수시로 확인하세요",
     "description": "Latest Updates section description"
   },
   "homepage.updates.blog": {

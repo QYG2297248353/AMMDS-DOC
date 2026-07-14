@@ -44,7 +44,7 @@
     "description": "The label for category 'Scrape' in sidebar 'guideSidebar'"
   },
   "sidebar.guideSidebar.category.Auxiliary": {
-    "message": "Auxiliary",
+    "message": "보조 기능",
     "description": "The label for category 'Auxiliary' in sidebar 'guideSidebar'"
   }
 }
