@@ -24,7 +24,7 @@ const config: Config = {
     version: "v1.6.60",
   },
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "zh-Hans",
     locales: ["zh-Hans", "en", "ja", "ko"],
     path: "i18n",
     localeConfigs: {
@@ -124,6 +124,10 @@ const config: Config = {
         blog: {
           blogTitle: "AMMDS 博客",
           blogDescription: "AMMDS 开发博客日志",
+          blogSidebarTitle: "最近的帖子",
+          path: 'blog',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 'ALL',
           showReadingTime: true,
           readingTime: ({ content, locale, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({
