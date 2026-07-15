@@ -1,0 +1,20 @@
+studio:
+  label: Studio
+  permalink: /studio
+  description: Studio tag description
+
+ammds:
+  label: AMMDS
+  permalink: /ammds
+  description: AMMDS tag description
+
+release:
+  label: Release
+  permalink: /release
+  description: Release tag description
+
+
+feature:
+  label: Feature
+  permalink: /feature
+  description: Feature tag description
