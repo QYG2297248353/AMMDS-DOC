@@ -793,7 +793,7 @@
     "message": "문서 검색",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
-  "AMMDS Documentation": {
+  "AMMDS 官方文档": {
     "message": "AMMDS 문서",
     "description": "Website title"
   }

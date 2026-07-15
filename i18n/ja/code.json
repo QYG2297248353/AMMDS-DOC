@@ -793,7 +793,7 @@
     "message": "新しい検索結果を取得しています...",
     "description": "The paragraph for fetching new search results"
   },
-  "AMMDS Documentation": {
+  "AMMDS 官方文档": {
     "message": "AMMDS ドキュメント",
     "description": "Website title"
   }

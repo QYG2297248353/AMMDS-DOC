@@ -793,8 +793,8 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
-  "AMMDS Documentation": {
-    "message": "AMMDS Documentation",
+  "AMMDS 官方文档": {
+    "message": "AMMDS Official Documentation",
     "description": "Website title"
   }
 }
