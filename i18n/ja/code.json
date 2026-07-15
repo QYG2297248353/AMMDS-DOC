@@ -27,10 +27,6 @@
     "message": "AMMDS - アダルト映画メタデータスクレイパー",
     "description": "Website description"
   },
-  "AMMDS - Adult Movie MetaData Scraper": {
-    "message": "AMMDS - アダルト映画メタデータスクレイパー",
-    "description": "Website description"
-  },
   "homepage.quickStart.title": {
     "message": "クイックスタート",
     "description": "Quick Start section title"
@@ -796,5 +792,9 @@
   "theme.SearchPage.fetchingNewResults": {
     "message": "新しい検索結果を取得しています...",
     "description": "The paragraph for fetching new search results"
+  },
+  "AMMDS Documentation": {
+    "message": "AMMDS ドキュメント",
+    "description": "Website title"
   }
 }

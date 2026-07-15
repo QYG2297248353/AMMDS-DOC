@@ -47,7 +47,7 @@ export default function Home(): ReactNode {
 
   return (
     <Layout
-      title={translate({ message: siteConfig.title, description: 'Website title' })}
+      title={translate({ message: 'AMMDS Documentation', description: 'Website title' })}
       description={translate({ message: 'AMMDS - 成人影片元数据刮削器', description: 'Website description' })}>
       <HomepageHeader />
       <main>

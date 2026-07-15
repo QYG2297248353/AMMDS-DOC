@@ -792,5 +792,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "AMMDS Documentation": {
+    "message": "AMMDS Documentation",
+    "description": "Website title"
   }
 }

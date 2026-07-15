@@ -27,10 +27,6 @@
     "message": "AMMDS - 성인 영화 메타데이터 스크래퍼",
     "description": "Website description"
   },
-  "AMMDS - Adult Movie MetaData Scraper": {
-    "message": "AMMDS - 성인 영화 메타데이터 스크래퍼",
-    "description": "Website description"
-  },
   "homepage.quickStart.title": {
     "message": "빠른 시작",
     "description": "Quick Start section title"
@@ -796,5 +792,9 @@
   "theme.SearchModal.placeholder": {
     "message": "문서 검색",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "AMMDS Documentation": {
+    "message": "AMMDS 문서",
+    "description": "Website title"
   }
 }
