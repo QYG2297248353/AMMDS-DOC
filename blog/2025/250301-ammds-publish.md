@@ -8,7 +8,7 @@ date: 2025-03-01
 
 ## 激动人心的时刻
 
-我们很高兴地宣布，AMMDS（Advanced Multi-Media Development System）v1.0.0 正式发布！
+我们很高兴地宣布，AMMDS（Advanced Multimedia Data Management System）v1.0.0 正式发布！
 
 {/* truncate */}
 

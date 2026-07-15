@@ -103,7 +103,7 @@ AMMDS（Advanced Multi-Media Development System）是新一代的私人数据平
 
 | 维度 | Movie_Data_Capture | tinyMediaManager | AMMDS |
 |------|:---:|:---:|:---:|
-| 开源 | ✅ | ✅ | ❌（商业） |
+| 开源 | ✅ | ✅ | ❌ 部分商业 |
 | 图形界面 | ❌ | ✅ | ✅（Web） |
 | 服务端运行 | ❌ | ❌ | ✅ |
 | 批量刮削 | ✅ | ✅ | ✅ |

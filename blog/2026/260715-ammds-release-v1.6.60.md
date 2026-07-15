@@ -51,7 +51,7 @@ Windows 原生客户端 AMMDS Launcher 经过三个月的公测，正式版随 v
 
 ```bash
 # 拉取最新镜像
-docker pull ghcr.io/mengshou/ammds:latest
+docker pull ghcr.io/mengshou/ammds:latest  # 国内用户可替换为 qyg2297248353/ammds:latest（Docker Hub）
 
 # 重新启动容器
 docker compose down

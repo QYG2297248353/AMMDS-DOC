@@ -8,7 +8,7 @@ date: 2025-10-01
 
 ## 概述
 
-AMMDS（Advanced Multi-Media Development System）是一个功能强大的私人数据平台，支持元数据刮削、站点认证、资源检索、榜单管理等功能。本文将详细介绍如何使用 Docker 部署 AMMDS，涵盖 Docker Compose 配置、环境变量说明、目录挂载建议以及常见问题排查。
+AMMDS（Advanced Multimedia Data Management System）是一个功能强大的私人数据管理平台，支持元数据刮削、站点认证、资源检索、榜单管理等功能。本文将详细介绍如何使用 Docker 部署 AMMDS，涵盖 Docker Compose 配置、环境变量说明、目录挂载建议以及常见问题排查。
 
 {/* truncate */}
 
@@ -46,7 +46,7 @@ version: '3.8'
 
 services:
   ammds:
-    image: qyg2297248353/ammds-server:latest
+    image: qyg2297248353/ammds:latest
     container_name: ammds
     restart: unless-stopped
     ports:
@@ -58,8 +58,9 @@ services:
       - /path/to/your/downloads:/downloads:ro
     environment:
       - TZ=Asia/Shanghai
-      - ASPNETCORE_URLS=http://+:7000
-      - ConnectionStrings__DefaultConnection=DataSource=/app/data/ammds.db
+      - SERVER_PORT=7000        # SpringBoot 应用监听端口
+      - SPRING_PROFILES_ACTIVE=prod
+      - AMMDS_HOME=/app/data
     networks:
       - ammds-network
 
@@ -91,21 +92,21 @@ AMMDS 支持通过环境变量进行配置，以下是主要的环境变量：
 | 变量名 | 说明 | 默认值 | 是否必填 |
 |:-------|:-----|:-------|:---------|
 | `TZ` | 时区设置 | `Asia/Shanghai` | 推荐配置 |
-| `ASPNETCORE_URLS` | 服务监听地址 | `http://+:7000` | 推荐配置 |
-| `ConnectionStrings__DefaultConnection` | 数据库连接字符串 | `DataSource=/app/data/ammds.db` | 否 |
-| `AMMDS__DataDir` | 数据目录路径 | `/app/data` | 否 |
-| `AMMDS__LogLevel` | 日志级别 | `Information` | 否 |
-| `AMMDS__EnableHttps` | 是否启用 HTTPS | `false` | 否 |
+| `SERVER_PORT` | 服务监听端口 | `7000` | 推荐配置 |
+| `SPRING_PROFILES_ACTIVE` | SpringBoot 激活配置文件 | `prod` | 否 |
+| `AMMDS_HOME` | 数据目录路径 | `/app/data` | 否 |
+| `AMMDS_LOG_LEVEL` | 日志级别 | `INFO` | 否 |
+| `AMMDS_ENABLE_HTTPS` | 是否启用 HTTPS | `false` | 否 |
 
 ### 高级配置示例
 
 ```yaml
 environment:
   - TZ=Asia/Shanghai
-  - ASPNETCORE_URLS=http://+:7000
-  - AMMDS__LogLevel=Debug
-  - AMMDS__EnableHttps=false
-  - AMMDS__MaxConcurrentScrapes=5
+  - SERVER_PORT=7000
+  - AMMDS_LOG_LEVEL=DEBUG
+  - AMMDS_ENABLE_HTTPS=false
+  - AMMDS_MAX_CONCURRENT_SCRAPES=5
 ```
 
 ## 目录挂载建议

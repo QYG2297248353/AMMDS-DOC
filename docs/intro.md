@@ -5,7 +5,7 @@ sidebar_label: "简介"
 
 # 简介
 
-AMMDS (Adult Movie MetaData Scraper) 是一个私人数据平台，帮你轻松管理你的个人电影库。
+AMMDS (Advanced Multimedia Data Management System) 是一个私人数据管理平台，帮你轻松管理你的个人媒体库。
 
 :::warning 温馨提醒
 本软件为离线产品，数据由用户手动录入。请不要在中国境内推广此产品，必要时使用缩写：`AMMDS`。

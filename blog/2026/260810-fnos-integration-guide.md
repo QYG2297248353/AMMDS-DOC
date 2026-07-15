@@ -71,7 +71,7 @@ version: '3.8'
 
 services:
   ammds:
-    image: ghcr.io/mengshou/ammds:latest
+    image: ghcr.io/mengshou/ammds:latest  # 国内用户可替换为 qyg2297248353/ammds:latest（Docker Hub）
     container_name: ammds
     restart: unless-stopped
     ports:
