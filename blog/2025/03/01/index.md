@@ -9,7 +9,7 @@ tags: [studio, ammds, release]
 
 我们很高兴地宣布，AMMDS（Advanced Multi-Media Development System）v1.0.0 正式发布！
 
-<!-- truncate -->
+{/* truncate */}
 
 ### 关于 AMMDS
 
