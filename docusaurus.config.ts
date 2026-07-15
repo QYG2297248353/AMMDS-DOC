@@ -3,12 +3,12 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "AMMDS Documentation",
+  title: "AMMDS 官方文档",
   url: "https://ammds.lifebus.top",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   titleDelimiter: " | ",
-  tagline: "Personal video data management platform",
+  tagline: "个人影视数据管理平台",
   organizationName: "QYG2297248353",
   projectName: "AMMDS-Docker",
   staticDirectories: ["static"],
@@ -24,7 +24,7 @@ const config: Config = {
     version: "v1.6.60",
   },
   i18n: {
-    defaultLocale: "zh-Hans",
+    defaultLocale: "en",
     locales: ["zh-Hans", "en", "ja", "ko"],
     path: "i18n",
     localeConfigs: {
@@ -122,8 +122,8 @@ const config: Config = {
           showLastUpdateTime: true,
         },
         blog: {
-          blogTitle: "AMMDS Blog",
-          blogDescription: "AMMDS Development Blog",
+          blogTitle: "AMMDS 博客",
+          blogDescription: "AMMDS 开发博客日志",
           showReadingTime: true,
           readingTime: ({ content, locale, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({

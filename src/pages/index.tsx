@@ -43,11 +43,11 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
-  const version = siteConfig.customFields?.version || "v1.6.49";
+  const version = siteConfig.customFields?.version || "v1.6.60";
 
   return (
     <Layout
-      title={translate({ message: 'AMMDS Documentation', description: 'Website title' })}
+      title={translate({ message: 'AMMDS 官方文档', description: 'Website title' })}
       description={translate({ message: 'AMMDS - 成人影片元数据刮削器', description: 'Website description' })}>
       <HomepageHeader />
       <main>
