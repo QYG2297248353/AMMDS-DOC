@@ -9,6 +9,8 @@ tags: [studio, ammds, release]
 
 我们很高兴地宣布，AMMDS（Advanced Multi-Media Development System）v1.0.0 正式发布！
 
+<!-- truncate -->
+
 ### 关于 AMMDS
 
 AMMDS 是一款先进的多媒体开发系统，旨在为开发者提供一站式的多媒体内容创作和管理解决方案。它集成了多种实用工具和组件，帮助开发者更高效地构建和部署多媒体应用。
