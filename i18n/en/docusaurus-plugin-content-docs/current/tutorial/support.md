@@ -34,7 +34,7 @@ If you like our work and want to support us in continuing development, consider 
 **Preferred Sponsorship Platforms:**
 
 - [Aifadian (爱发电)](https://afdian.com/a/qyg2297248353)
-- Online Store (Alipay): [足迹店铺](https://shop.lifebus.top/)
+- Online Store (Alipay): [足迹店铺](https://store.lifebus.top/)
 
 ## Our Commitment
 
@@ -52,5 +52,5 @@ AMMDS is a data management platform built for movie and TV enthusiasts. It helps
 Have questions or need help? Feel free to reach out through any of these channels:
 
 - Email: [support@lifebus.top](mailto:support@lifebus.top)
-- Online Store: [足迹店铺](https://shop.lifebus.top/)
+- Online Store: [足迹店铺](https://store.lifebus.top/)
 - GitHub Support: [AMMDS on GitHub](https://github.com/QYG2297248353/AMMDS-Docker)
