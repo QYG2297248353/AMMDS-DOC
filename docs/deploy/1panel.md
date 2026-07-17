@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
 sidebar_label: "1Panel"
+title: "1Panel 部署指南"
+description: "了解如何在 1Panel 服务器管理面板上通过应用商店部署 AMMDS，包括安装、配置和访问管理。"
+keywords: [AMMDS, 1Panel, 服务器面板, 应用商店, 部署]
+tags: [deploy]
 ---
 
 # 1Panel 部署指南

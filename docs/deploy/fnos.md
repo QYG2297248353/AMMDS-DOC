@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "飞牛Nas"
+title: "飞牛 FnOS 部署指南"
+description: "了解如何在飞牛 FnOS 系统上通过 FPK 离线应用安装或 Docker 方式部署 AMMDS。"
+keywords: [AMMDS, 飞牛FnOS, Nas, FPK, Docker部署]
+tags: [deploy]
 ---
 
 # 飞牛 FnOS 部署指南

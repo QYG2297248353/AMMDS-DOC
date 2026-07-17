@@ -1,4 +1,8 @@
 ---
+title: Telegram
+description: Telegram 插件让 AMMDS 能通过 Telegram 机器人发送实时推送通知，支持文字、图片等多种消息格式。
+keywords: [Telegram, 推送通知, 机器人, Bot, 消息推送]
+tags: [plugin, push-notice]
 sidebar_position: 1
 sidebar_label: "Telegram"
 ---

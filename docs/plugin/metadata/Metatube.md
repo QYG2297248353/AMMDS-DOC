@@ -1,4 +1,8 @@
 ---
+title: Metatube
+description: MetaTube 是一个开源工具，专门为 Jellyfin、Emby 和 Plex 等媒体服务器抓取影片信息，支持高精度识别中文资源。
+keywords: [MetaTube, 元数据, 刮削, 海报墙, Jellyfin]
+tags: [plugin, metadata]
 sidebar_position: 1
 sidebar_label: "Metatube"
 ---

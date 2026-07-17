@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "宝塔面板"
+title: "宝塔面板"
+description: "了解如何在宝塔面板（bt.cn）上通过 Docker 管理功能部署 AMMDS，包括容器创建、挂载目录和端口配置。"
+keywords: [AMMDS, 宝塔面板, Docker, 服务器管理, 部署]
+tags: [deploy]
 ---
 
 # 宝塔面板

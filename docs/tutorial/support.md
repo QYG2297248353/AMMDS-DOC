@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "支持我们"
+title: "支持我们"
+description: "了解如何通过成为会员、分享推荐、贡献数据、提建议或赞助等方式支持 AMMDS 项目。"
+keywords: [AMMDS, 支持, 赞助, 开源, 贡献]
+tags: [tutorial]
 ---
 
 # 支持我们

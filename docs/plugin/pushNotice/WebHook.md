@@ -1,4 +1,8 @@
 ---
+title: WebHook
+description: WebHook 插件让 AMMDS 能向指定的 WebHook 地址发送推送通知，与第三方服务对接，支持自定义请求头和请求体。
+keywords: [WebHook, 推送通知, 事件回调, 系统集成, 自动化]
+tags: [plugin, push-notice]
 sidebar_position: 2
 sidebar_label: "WebHook"
 ---

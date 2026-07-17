@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
 sidebar_label: "环境变量"
+title: "环境变量"
+description: "了解 AMMDS 支持的环境变量配置，包括端口、用户权限、运行模式、插件地址等参数说明。"
+keywords: [AMMDS, 环境变量, 配置, Docker, 参数设置]
+tags: [deploy, environment]
 ---
 
 # 环境变量

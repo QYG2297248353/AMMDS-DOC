@@ -1,4 +1,8 @@
 ---
+title: Emby
+description: Emby 插件让 AMMDS 与 Emby 媒体服务器连接，实现元数据同步和媒体库管理。
+keywords: [Emby, 媒体服务器, 元数据同步, 媒体库管理, 插件]
+tags: [plugin, media-server]
 sidebar_position: 2
 sidebar_label: "Emby"
 ---

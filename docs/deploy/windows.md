@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Windows"
+title: "Windows部署指南"
+description: "了解如何在 Windows 系统上通过安装程序或便携版部署 AMMDS，包含安装、升级、托盘管理及日志说明。"
+keywords: [AMMDS, Windows, 安装部署, 启动器, 桌面端]
+tags: [deploy]
 ---
 
 # Windows部署指南

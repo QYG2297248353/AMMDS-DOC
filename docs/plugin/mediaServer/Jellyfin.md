@@ -1,4 +1,8 @@
 ---
+title: Jellyfin
+description: Jellyfin 插件让 AMMDS 与 Jellyfin 媒体服务器深度集成，实现元数据同步、演员头像自动补全等功能。
+keywords: [Jellyfin, 媒体服务器, 元数据同步, 头像补全, 开源]
+tags: [plugin, media-server]
 sidebar_position: 1
 sidebar_label: "Jellyfin"
 ---

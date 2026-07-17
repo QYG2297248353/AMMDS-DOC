@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "执行刮削任务"
+title: "执行刮削任务"
+description: "刮削任务是整理电影的第二步，系统根据刮削规则自动获取电影元数据并整理文件到指定位置。"
+keywords: [AMMDS, 刮削任务, 元数据, 电影刮削]
+tags: [usage, scrape]
 ---
 
 # 执行刮削任务

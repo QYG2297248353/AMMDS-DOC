@@ -1,4 +1,8 @@
 ---
+title: 智能翻译
+description: 智能翻译插件为 AMMDS 平台提供多语言翻译能力，支持机器翻译和 AI 翻译两种技术，满足多种翻译场景。
+keywords: [翻译, 机器翻译, AI翻译, 多语言, 智能翻译]
+tags: [plugin, auxiliary]
 sidebar_position: 1
 sidebar_label: "智能翻译"
 ---

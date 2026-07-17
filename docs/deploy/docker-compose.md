@@ -1,9 +1,13 @@
 ---
 sidebar_position: 2
 sidebar_label: "Docker Compose"
+title: "Docker Compose"
+description: "了解如何使用 Docker Compose 一键部署 AMMDS，包括配置文件编写、云盘特殊配置和服务管理。"
+keywords: [AMMDS, Docker Compose, 容器编排, 部署, 配置]
+tags: [deploy]
 ---
 
-# Docker Compose 
+# Docker Compose
 
 Docker Compose 就是一个"一键启动工具"。如果你需要启动好几个容器配合工作，手打一堆命令太麻烦，Compse 让你把所有配置写在一个文件里，以后只需要敲一行命令就能全部搞定。
 

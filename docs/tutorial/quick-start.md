@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "快速入门"
+title: "快速入门"
+description: "快速了解 AMMDS 的多种部署方式，包括 Windows、飞牛 Nas、威联通 Nas 和 Docker 部署方法。"
+keywords: [AMMDS, 快速入门, 部署指南, Docker, 安装]
+tags: [tutorial, deploy]
 ---
 
 # 快速入门

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "创建扫描任务"
+title: "创建扫描任务"
+description: "创建扫描任务是整理电影的第一步，系统根据扫描规则在指定文件夹中查找电影文件并生成待处理清单。"
+keywords: [AMMDS, 扫描任务, 文件扫描, 整理模式]
+tags: [usage, scan]
 ---
 
 # 创建扫描任务

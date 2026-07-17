@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Docker"
+title: "Docker"
+description: "了解如何使用 Docker 一键部署 AMMDS，包括基本命令、参数说明和云盘用户的特殊配置。"
+keywords: [AMMDS, Docker, 容器部署, 云盘, 一键运行]
+tags: [deploy]
 ---
 
 # Docker

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "订阅规则配置"
+title: "订阅规则配置"
+description: "订阅规则配置用来告诉系统想要什么样的资源，包括中字优先、搜索顺序和下载目录等设置。"
+keywords: [AMMDS, 订阅规则, 资源订阅, 下载配置]
+tags: [usage, config, subscribe]
 ---
 
 # 订阅规则配置

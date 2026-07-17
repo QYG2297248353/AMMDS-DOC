@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "刮削配置"
+title: "刮削配置"
+description: "刮削配置用来设置从网上获取电影信息的方式以及文件整理格式，包括字符过滤、目录整理等。"
+keywords: [AMMDS, 刮削配置, 刮削规则, 元数据刮削, 文件整理]
+tags: [usage, config, scrape]
 ---
 
 # 刮削配置

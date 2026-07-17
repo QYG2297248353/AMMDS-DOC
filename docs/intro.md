@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "简介"
+title: 简介
+description: AMMDS (Advanced Multimedia Data Management System) 是一个私人数据管理平台，帮你轻松管理你的个人媒体库，支持电影管理、自动元数据抓取、多平台部署等功能。
+keywords: [AMMDS, 媒体管理, 电影库, 私人数据管理, 多媒体管理]
+tags: []
 ---
 
 # 简介

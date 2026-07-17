@@ -1,4 +1,8 @@
 ---
+title: Fanza DMM
+description: Fanza DMM 插件提供 FANZA 平台的元数据采集功能，支持排行榜数据和影视检索。
+keywords: [Fanza, DMM, 元数据, 排行榜, 影视检索]
+tags: [plugin, metadata]
 sidebar_position: 4
 sidebar_label: "Fanza DMM"
 ---

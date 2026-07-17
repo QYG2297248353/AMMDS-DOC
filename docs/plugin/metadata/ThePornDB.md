@@ -1,4 +1,8 @@
 ---
+title: ThePornDB
+description: ThePornDB 是一个专业的成人视频元数据管理工具，支持自动匹配视频元数据，兼容 Plex、Jellyfin 等主流媒体服务器。
+keywords: [ThePornDB, 元数据, Stash-Box, 视频管理, 刮削]
+tags: [plugin, metadata]
 sidebar_position: 2
 sidebar_label: "ThePornDB"
 ---

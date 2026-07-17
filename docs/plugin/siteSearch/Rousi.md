@@ -1,4 +1,8 @@
 ---
+title: Rousi
+description: Rousi（肉丝）是一个提供高质量综合站点搜索服务的插件，支持 RSS 和 API 集成。
+keywords: [Rousi, 肉丝, 站点搜索, RSS, API]
+tags: [plugin, site-search]
 sidebar_position: 3
 sidebar_label: "Rousi"
 ---

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "挂载关系"
+title: "挂载关系详解"
+description: "用大白话讲解 AMMDS 的挂载关系，包括 Docker 部署挂载、媒体整理挂载逻辑和数据流向。"
+keywords: [AMMDS, 挂载, Docker, 媒体整理, 数据目录]
+tags: [usage, mount]
 ---
 
 # 挂载关系详解

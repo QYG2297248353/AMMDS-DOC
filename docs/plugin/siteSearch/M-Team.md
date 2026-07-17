@@ -1,4 +1,8 @@
 ---
+title: M-Team
+description: M-Team 是一个综合讨论区插件，提供各种讨论版块和群组功能，支持 API 集成和账户保护通知。
+keywords: [M-Team, 站点搜索, 讨论区, PT, API]
+tags: [plugin, site-search]
 sidebar_position: 1
 sidebar_label: "M-Team"
 ---

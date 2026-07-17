@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
 sidebar_label: "常见问题"
+title: 常见问题
+description: 汇总了使用 AMMDS 时常见的部署和使用问题及解决办法，包括 Docker 部署、系统配置、插件集成等问题的排查与修复。
+keywords: [AMMDS, 常见问题, 故障排除, 部署问题, FAQ]
+tags: [faq]
 ---
 
 # 常见问题

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "番号补全配置"
+title: "番号补全配置"
+description: "番号补全是辅助功能，用于在识别影片编号时自动补全缺失部分，让识别结果更准确。"
+keywords: [AMMDS, 番号补全, 影片编号, 正则匹配]
+tags: [usage, config]
 ---
 
 # 番号补全配置

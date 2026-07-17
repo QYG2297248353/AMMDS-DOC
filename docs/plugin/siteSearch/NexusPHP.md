@@ -1,4 +1,8 @@
 ---
+title: NexusPHP
+description: NexusPHP 插件用于 PT 站的站点搜索和管理，支持搜索功能、用户信息同步和告警通知。
+keywords: [NexusPHP, PT, 站点搜索, 私有种子, 浙江大学]
+tags: [plugin, site-search]
 sidebar_position: 2
 sidebar_label: "NexusPHP"
 ---

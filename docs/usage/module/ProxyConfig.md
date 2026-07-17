@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
 sidebar_label: "网络代理配置"
+title: "网络代理配置"
+description: "网络代理配置用来设置程序上网时使用的代理服务器，支持 HTTP、SOCKS4、SOCKS5 协议。"
+keywords: [AMMDS, 代理配置, 网络代理, HTTP代理, SOCKS代理]
+tags: [usage, config, proxy]
 ---
 
 # 网络代理配置

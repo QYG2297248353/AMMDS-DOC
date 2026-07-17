@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "扫描配置"
+title: "扫描配置"
+description: "扫描配置用来告诉系统扫描文件时如何处理，包括格式限制、忽略目录、文件识别规则等。"
+keywords: [AMMDS, 扫描配置, 扫描规则, 文件识别]
+tags: [usage, config, scan]
 ---
 
 # 扫描配置

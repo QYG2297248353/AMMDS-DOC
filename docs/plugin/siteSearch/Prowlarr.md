@@ -1,4 +1,8 @@
 ---
+title: Prowlarr
+description: Prowlarr 是一个专为影音自动化设计的索引器管理工具，统一管理 BT 种子站和 Usenet 索引器，并能与 Sonarr、Radarr 等应用无缝同步。
+keywords: [Prowlarr, 索引器, BT, Usenet, Sonarr]
+tags: [plugin, site-search]
 sidebar_position: 4
 sidebar_label: "Prowlarr"
 ---

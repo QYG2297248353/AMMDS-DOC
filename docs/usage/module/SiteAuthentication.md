@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "站点认证"
+title: "站点认证"
+description: "站点认证功能让系统与网站对接身份，认证通过后可使用榜单、检索等高级功能。"
+keywords: [AMMDS, 站点认证, UID, PassKey, 身份验证]
+tags: [usage, auth]
 ---
 
 # 站点认证
