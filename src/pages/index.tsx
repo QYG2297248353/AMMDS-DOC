@@ -97,23 +97,23 @@ export default function Home(): ReactNode {
             <p className={styles.sectionDescription}><Translate id="homepage.community.description" description="Community & Support section description">加入我们的社区，获取帮助与支持</Translate></p>
             <div className={styles.communityLinks}>
               <a href="https://github.com/QYG2297248353/AMMDS-Docker" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
-                <span className={styles.communityIcon}>🔗</span>
+                <img src="/img/app/GitHub.svg" alt="GitHub" className={styles.communityIcon} />
                 <span><Translate id="homepage.community.github" description="GitHub link text">GitHub</Translate></span>
               </a>
               <a href="https://t.me/ammds_official" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
-                <span className={styles.communityIcon}>💬</span>
+                <img src="/img/app/Telegram.svg" alt="Telegram" className={styles.communityIcon} />
                 <span><Translate id="homepage.community.telegramChannel" description="Telegram Channel link text">Telegram 频道</Translate></span>
               </a>
               <a href="https://t.me/+9bvCp3LqLUo1N2Q1" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
-                <span className={styles.communityIcon}>👥</span>
+                <img src="/img/app/Telegram.svg" alt="Telegram" className={styles.communityIcon} />
                 <span><Translate id="homepage.community.telegramGroup" description="Telegram Group link text">Telegram 群组</Translate></span>
               </a>
               <a href="https://discord.gg/sxkpPZzPeJ" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
-                <span className={styles.communityIcon}>🎮</span>
+                <img src="/img/app/Discord.svg" alt="Discord" className={styles.communityIcon} />
                 <span><Translate id="homepage.community.discord" description="Discord link text">Discord</Translate></span>
               </a>
               <a href="https://qm.qq.com/q/ZTXsLnEAM4" target="_blank" rel="noopener noreferrer" className={styles.communityLink}>
-                <span className={styles.communityIcon}>💬</span>
+                <img src="/img/app/QQ.svg" alt="QQ" className={styles.communityIcon} />
                 <span><Translate id="homepage.community.qqGroup" description="QQ Group link text">QQ 群</Translate></span>
               </a>
             </div>
@@ -126,12 +126,18 @@ export default function Home(): ReactNode {
             <Heading as="h2" className={styles.sectionTitle}><Translate id="homepage.sponsorship.title" description="Sponsorship section title">赞助支持</Translate></Heading>
             <p className={styles.sectionDescription}><Translate id="homepage.sponsorship.description" description="Sponsorship section description">您的支持是我们持续前进的动力</Translate></p>
             <div className={styles.sponsorshipCard}>
+              <div className={styles.sponsorshipImage}>
+                <img src="/img/logo.svg" alt="AMMDS Logo" className={styles.sponsorshipLogo} />
+              </div>
               <div className={styles.sponsorshipContent}>
                 <h3><Translate id="homepage.sponsorship.store" description="Online Store title">前往在线商店</Translate></h3>
                 <p><Translate id="homepage.sponsorship.store.description" description="Online Store description">购买产品和服务，支持 AMMDS 发展</Translate></p>
                 <a href="https://store.lifebus.top/" target="_blank" rel="noopener noreferrer" className="button button--secondary button--lg">
                   <Translate id="homepage.sponsorship.store.button" description="Go to Store button text">前往商店</Translate>
                 </a>
+              </div>
+              <div className={styles.sponsorshipImage}>
+                <img src="/img/wechat-support.jpg" alt="微信赞赏码" className={styles.wechatQr} />
               </div>
             </div>
           </div>
