@@ -137,7 +137,7 @@ curl -sSL https://install.lifebus.top/app_install.sh | bash
 - **用户名**：ammds
 - **密码**：ammds
 
-:::info 安全提示
+:::info[安全提示]
 首次登录后，请立即修改默认密码，确保安全。
 :::
 
@@ -160,7 +160,7 @@ curl -sSL https://install.lifebus.top/app_install.sh | bash
 
 ### 安全警告
 
-:::danger 重要安全提示
+:::danger[重要安全提示]
 
 - **官方来源**：只从官方渠道获取安装脚本，别用第三方来源
 - **密码安全**：设置强密码，定期更换
@@ -171,7 +171,7 @@ curl -sSL https://install.lifebus.top/app_install.sh | bash
 
 ### 系统要求
 
-:::info 系统配置要求
+:::info[系统配置要求]
 
 #### 最低配置
 

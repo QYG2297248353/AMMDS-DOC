@@ -11,11 +11,11 @@ tags: []
 
 AMMDS (Advanced Multimedia Data Management System) 是一个私人数据管理平台，帮你轻松管理你的个人媒体库。
 
-:::warning 温馨提醒
+:::warning[温馨提醒]
 本软件为离线产品，数据由用户手动录入。请不要在中国境内推广此产品，必要时使用缩写：`AMMDS`。
 :::
 
-:::note 插件提醒
+:::note[插件提醒]
 集成插件需要网络功能。如果启用了任何集成插件，将被视为您已同意访问网络连接。
 :::
 

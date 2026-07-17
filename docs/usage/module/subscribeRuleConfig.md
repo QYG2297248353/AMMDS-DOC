@@ -41,7 +41,7 @@ tags: [usage, config, subscribe]
 
 **重要提醒**：
 
-:::warning 注意事项
+:::warning[注意事项]
 - 这个路径跟 AMMDS 系统本身没啥关系，要根据你用的下载器的配置来设置
 - 确保这个文件夹存在，并且有写入权限
 - 建议用绝对路径（比如 `D:\Downloads\Movies`），别用相对路径，免得路径搞错

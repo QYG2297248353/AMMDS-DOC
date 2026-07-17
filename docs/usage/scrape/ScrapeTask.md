@@ -31,11 +31,11 @@ tags: [usage, scrape]
 + [FanzaDMM 插件](/docs/plugin/metadata/FanzaDmm)
 + [Madou 插件](/docs/plugin/metadata/Madou)
 
-:::warning 重要提醒
+:::warning[重要提醒]
 没开启元数据插件，就拿不到电影信息，刮削必然会失败。
 :::
 
-:::info 数据来源声明
+:::info[数据来源声明]
 本软件不提供任何源数据，所有电影信息都来自你自己配置的插件服务。
 :::
 
@@ -114,10 +114,10 @@ tags: [usage, scrape]
 
 ## 注意事项
 
-:::caution 注意
+:::caution[注意]
 刮削任务可能要跑挺久，具体取决于文件数量和网速，耐心等着就行。
 :::
 
-:::tip 提示
+:::tip[提示]
 想让刮削效果更好，建议文件名尽量规范，包含必要的识别信息（比如影片编号、标题等）。
 :::
