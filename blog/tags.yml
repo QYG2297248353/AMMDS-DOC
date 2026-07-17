@@ -57,3 +57,23 @@ guide:
   label: Guide
   permalink: /guide
   description: 操作指南
+
+movie:
+  label: Movie
+  permalink: /movie
+  description: 电影相关
+
+stephen-chow:
+  label: 周星驰
+  permalink: /stephen-chow
+  description: 周星驰电影专题
+
+comedy:
+  label: Comedy
+  permalink: /comedy
+  description: 喜剧电影
+
+classic:
+  label: Classic
+  permalink: /classic
+  description: 经典回顾
