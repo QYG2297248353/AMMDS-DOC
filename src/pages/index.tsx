@@ -127,15 +127,11 @@ export default function Home(): ReactNode {
             <p className={styles.sectionDescription}><Translate id="homepage.sponsorship.description" description="Sponsorship section description">您的支持是我们持续前进的动力</Translate></p>
             <div className={styles.sponsorshipCard}>
               <div className={styles.sponsorshipContent}>
-                <h3><Translate id="homepage.sponsorship.afdian" description="Sponsor AMMDS on 爱发电 title">赞助 AMMDS 开发</Translate></h3>
-                <p><Translate id="homepage.sponsorship.afdian.description" description="Sponsor AMMDS on 爱发电 description">赞助 AMMDS 开发，获取独家权益</Translate></p>
-                <a href="https://afdian.com/a/qyg2297248353" target="_blank" rel="noopener noreferrer" className="button button--secondary button--lg">
-                  <Translate id="homepage.sponsorship.afdian.button" description="Go to 爱发电 button text">前往爱发电</Translate>
+                <h3><Translate id="homepage.sponsorship.store" description="Online Store title">前往在线商店</Translate></h3>
+                <p><Translate id="homepage.sponsorship.store.description" description="Online Store description">购买产品和服务，支持 AMMDS 发展</Translate></p>
+                <a href="https://store.lifebus.top/" target="_blank" rel="noopener noreferrer" className="button button--secondary button--lg">
+                  <Translate id="homepage.sponsorship.store.button" description="Go to Store button text">前往商店</Translate>
                 </a>
-              </div>
-              <div className={styles.sponsorshipImage}>
-                <img src="/img/afd-logo-white.png" alt={translate({ message: '爱发电', description: '爱发电 logo white' })} className={styles.afdLogoWhite} />
-                <img src="/img/afd-logo-purple.png" alt={translate({ message: '爱发电', description: '爱发电 logo purple' })} className={styles.afdLogoPurple} />
               </div>
             </div>
           </div>

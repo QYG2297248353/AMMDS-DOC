@@ -33,7 +33,6 @@ If you like our work and want to support us in continuing development, consider 
 
 **Preferred Sponsorship Platforms:**
 
-- [Aifadian (爱发电)](https://afdian.com/a/qyg2297248353)
 - Online Store (Alipay): [足迹店铺](https://store.lifebus.top/)
 
 ## Our Commitment

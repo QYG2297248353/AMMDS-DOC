@@ -115,21 +115,17 @@
     "message": "귀하의 지원은 우리가 계속 발전하는 원동력입니다",
     "description": "Sponsorship section description"
   },
-  "homepage.sponsorship.afdian": {
-    "message": "爱发电에서 AMMDS 후원",
-    "description": "Sponsor AMMDS on 爱发电 title"
+  "homepage.sponsorship.store": {
+    "message": "온라인 스토어 방문",
+    "description": "Online Store title"
   },
-  "homepage.sponsorship.afdian.description": {
-    "message": "AMMDS 개발을 지원하고 특별 혜택을 받으세요",
-    "description": "Sponsor AMMDS on 爱发电 description"
+  "homepage.sponsorship.store.description": {
+    "message": "제품과 서비스를 구매하여 AMMDS 개발 지원",
+    "description": "Online Store description"
   },
-  "homepage.sponsorship.afdian.button": {
-    "message": "爱发电로 이동",
-    "description": "Go to 爱发电 button text"
-  },
-  "爱发电": {
-    "message": "爱发电",
-    "description": "爱发电 logo purple"
+  "homepage.sponsorship.store.button": {
+    "message": "스토어로 이동",
+    "description": "Go to Store button text"
   },
   "homepage.updates.title": {
     "message": "최신 업데이트",

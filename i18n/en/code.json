@@ -115,21 +115,17 @@
     "message": "Your support is our driving force to continue advancing",
     "description": "Sponsorship section description"
   },
-  "homepage.sponsorship.afdian": {
-    "message": "Sponsor AMMDS on 爱发电",
-    "description": "Sponsor AMMDS on 爱发电 title"
+  "homepage.sponsorship.store": {
+    "message": "Visit Our Online Store",
+    "description": "Online Store title"
   },
-  "homepage.sponsorship.afdian.description": {
-    "message": "Support AMMDS development and get exclusive benefits",
-    "description": "Sponsor AMMDS on 爱发电 description"
+  "homepage.sponsorship.store.description": {
+    "message": "Purchase products and services to support AMMDS development",
+    "description": "Online Store description"
   },
-  "homepage.sponsorship.afdian.button": {
-    "message": "Go to 爱发电",
-    "description": "Go to 爱发电 button text"
-  },
-  "爱发电": {
-    "message": "爱发电",
-    "description": "爱发电 logo purple"
+  "homepage.sponsorship.store.button": {
+    "message": "Go to Store",
+    "description": "Go to Store button text"
   },
   "homepage.updates.title": {
     "message": "Latest Updates",

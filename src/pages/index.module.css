@@ -177,29 +177,6 @@
   align-items: center;
 }
 
-.sponsorshipImage img {
-  max-width: 100%;
-  height: auto;
-  transition: opacity 0.3s ease;
-}
-
-.afdLogoWhite {
-  display: block;
-}
-
-.afdLogoPurple {
-  display: none;
-}
-
-/* Dark mode styles */
-[data-theme='dark'] .afdLogoWhite {
-  display: none;
-}
-
-[data-theme='dark'] .afdLogoPurple {
-  display: block;
-}
-
 /* Latest Updates Section */
 .latestUpdates {
   padding: 4rem 0;
