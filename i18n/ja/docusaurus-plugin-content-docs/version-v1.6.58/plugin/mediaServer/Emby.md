@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
-sidebar_label: "Emby"
+sidebar_label: Emby
+title: Emby
+description: Emby プラグインを使用して AMMDS を Emby メディアサーバーに接続し、メタデータの同期とメディアライブラリ管理を実現します。
+keywords: [Emby, メディアサーバー, メタデータ同期, メディアライブラリ管理, プラグイン]
+tags: [plugin, media-server]
 ---
 
 # Emby

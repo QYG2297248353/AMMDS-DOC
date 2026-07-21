@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Jellyfin"
+title: "Jellyfin"
+description: "The Jellyfin plugin deeply integrates AMMDS with the Jellyfin media server, enabling metadata sync and automatic actor avatar completion."
+keywords: [Jellyfin, media server, metadata sync, avatar completion, open source]
+tags: [plugin, media-server]
 ---
 
 # Jellyfin

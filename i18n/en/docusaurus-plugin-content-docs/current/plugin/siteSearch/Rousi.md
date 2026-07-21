@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "Rousi"
+title: "Rousi"
+description: "Rousi is a plugin providing high-quality comprehensive site search services, supporting RSS and API integration."
+keywords: [Rousi, site search, RSS, API]
+tags: [plugin, site-search]
 ---
 
 # Rousi

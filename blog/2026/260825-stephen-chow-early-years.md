@@ -2,7 +2,7 @@
 slug: stephen-chow-early-years
 title: 周星驰早期成名之路：从霹雳先锋到赌圣时代（1988-1991）
 authors: [ms]
-tags: [movie, stephen-chow, classic]
+tags: [movie, stephen-chow, comedy, classic]
 date: 2026-08-25
 ---
 

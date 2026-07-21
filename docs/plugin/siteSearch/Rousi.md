@@ -9,6 +9,10 @@ sidebar_label: "Rousi"
 
 # Rousi
 
+本文介绍 Rousi（肉丝）插件的配置方法，用于高质量综合站点搜索服务。
+
+{/* truncate */}
+
 Rousi（肉丝）是一个专门提供高质量、高效率综合站点搜索服务的平台。
 
 :::info[私有站点说明]

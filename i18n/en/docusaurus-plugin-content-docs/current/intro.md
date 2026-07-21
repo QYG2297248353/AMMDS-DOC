@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Introduction"
+title: "Introduction"
+description: "AMMDS (Advanced Multimedia Data Management System) is a private data management platform that helps you easily manage your personal media library, supporting movie management, automatic metadata scraping, and multi-platform deployment."
+keywords: [AMMDS, media management, movie library, private data management, multimedia management]
+tags: []
 ---
 
 # Introduction

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "번호 완성 구성"
+title: "번호 완성 구성"
+description: "번호 완성은 보조 기능으로, 영화 번호를 인식할 때 누락된 부분을 자동으로 완성하여 인식 결과를 더 정확하게 만듭니다."
+keywords: [AMMDS, 번호 완성, 영화 번호, 정규식 매칭]
+tags: [usage, config]
 ---
 
 # 번호 완성 구성

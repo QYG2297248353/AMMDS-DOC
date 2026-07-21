@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 5
 sidebar_label: "Network Proxy Configuration"
+title: Network Proxy Configuration
+description: Network proxy configuration is used to set the proxy server for the program when accessing the internet, supporting HTTP, SOCKS4, and SOCKS5 protocols.
+keywords: [AMMDS, proxy configuration, network proxy, HTTP proxy, SOCKS proxy]
+tags: [usage, config, proxy]
 ---
-
 # Network Proxy Configuration
 
 Network proxy configuration is used to set the proxy server used by the program when accessing network resources, ensuring the program can normally access resources that require a proxy to access.

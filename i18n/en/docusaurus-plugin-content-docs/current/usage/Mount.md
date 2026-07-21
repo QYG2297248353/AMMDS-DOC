@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Mounting Relationships"
+title: "Mounting Relationships Explained"
+description: "An easy-to-understand explanation of AMMDS mounting relationships, including Docker deployment mounts, media organization mount logic, and data flow."
+keywords: [AMMDS, mount, Docker, media organization, data directory]
+tags: [usage, mount]
 ---
 
 # Mounting Relationships Explained

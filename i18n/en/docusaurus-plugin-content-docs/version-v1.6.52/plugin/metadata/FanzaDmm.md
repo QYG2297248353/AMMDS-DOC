@@ -1,11 +1,14 @@
----
+﻿---
 sidebar_position: 4
 sidebar_label: "Fanza DMM"
+title: Fanza DMM
+description: The Fanza DMM plugin provides metadata collection functionality for the FANZA platform, supporting ranking data and video search.
+keywords: [Fanza, DMM, metadata, rankings, video search]
+tags: [plugin, metadata]
 ---
-
 # Fanza DMM
 
-FANZA is Japan's leading adult content platform, offering online DVD sales, video rental, and streaming services. The platform has established partnerships with multiple well-known studios, launched exclusive channel services, and provides a subscription-based "見放題 ch" (all-you-can-watch) service covering most video content on the platform.
+FANZA is Japan's leading adult content platform, offering online DVD sales, video rental, and streaming services. The platform has established partnerships with multiple well-known studios, launched exclusive channel services, and provides a subscription-based "瑕嬫斁椤?ch" (all-you-can-watch) service covering most video content on the platform.
 
 ## Plugin Configuration
 

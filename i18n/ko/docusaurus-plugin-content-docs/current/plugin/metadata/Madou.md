@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "麻豆传媒映画"
+title: "麻豆传媒映画"
+description: "麻豆传媒映画 플러그인은 AMMDS가 마두 미디어의 영화 및 배우 정보를 수집할 수 있도록 하며, 메타데이터 캐싱 메커니즘을 지원합니다."
+keywords: [麻豆传媒, 메타데이터, 배우 정보, 영화 수집, 플러그인]
+tags: [plugin, metadata]
 ---
 
 # 麻豆传媒映画

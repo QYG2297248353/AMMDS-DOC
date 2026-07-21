@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 3
-sidebar_label: "FnOS"
+sidebar_label: FnOS
+title: FnOS Deployment Guide
+description: Learn how to deploy AMMDS on the FnOS system via FPK offline app installation or Docker.
+keywords: [AMMDS, FnOS, NAS, FPK, Docker deployment]
+tags: [deploy]
 ---
-
 # FnOS Deployment Guide
 
 FnOS is a NAS system crafted by a team of veteran enthusiasts, integrating local AI models to provide efficient and secure storage solutions for homes and businesses. This guide will detail the deployment process of AMMDS in the FnOS environment.

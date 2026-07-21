@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "Telegram"
+sidebar_label: Telegram
+title: Telegram
+description: The Telegram plugin allows AMMDS to send real-time push notifications through Telegram bots, supporting text, images, and other message formats.
+keywords: [Telegram, push notification, bot, message push]
+tags: [plugin, push-notice]
 ---
-
 # Telegram
 
 Telegram is a cloud-based instant messaging platform that supports sending and receiving various message formats including text, voice, video, and images. This plugin provides Telegram message push capabilities for AMMDS, enabling real-time notification of system events.

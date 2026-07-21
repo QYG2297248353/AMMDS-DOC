@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "WebHook"
+title: "WebHook"
+description: "WebHook プラグインは、AMMDS が指定された WebHook アドレスにプッシュ通知を送信し、サードパーティサービスと連携できるようにします。カスタムリクエストヘッダーとリクエストボディをサポートします。"
+keywords: [WebHook, プッシュ通知, イベントコールバック, システム統合, 自動化]
+tags: [plugin, push-notice]
 ---
 
 # WebHook

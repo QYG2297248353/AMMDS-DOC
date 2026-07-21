@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "麻豆传媒映画"
+title: "麻豆传媒映画"
+description: "麻豆传媒映画プラグインは、AMMDS が麻豆传媒の動画と俳優情報を収集できるようにし、メタデータキャッシュ機構をサポートします。"
+keywords: [麻豆传媒, メタデータ, 俳優情報, 動画収集, プラグイン]
+tags: [plugin, metadata]
 ---
 
 # 麻豆传媒映画

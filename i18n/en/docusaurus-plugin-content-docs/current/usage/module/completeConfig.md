@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "Number Completion Configuration"
+title: "Number Completion Configuration"
+description: "Number completion is an auxiliary feature that automatically fills in missing parts when identifying video IDs, making recognition more accurate."
+keywords: [AMMDS, number completion, video ID, regex matching]
+tags: [usage, config]
 ---
 
 # Number Completion Configuration

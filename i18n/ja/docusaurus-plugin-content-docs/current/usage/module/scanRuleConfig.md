@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "スキャン設定"
+title: "スキャン設定"
+description: "スキャン設定は、システムがファイルをスキャンする際の処理方法を指示するためのものです。フォーマット制限、除外ディレクトリ、ファイル認識ルールなどが含まれます。"
+keywords: [AMMDS, スキャン設定, スキャンルール, ファイル認識]
+tags: [usage, config, scan]
 ---
 
 # スキャン設定

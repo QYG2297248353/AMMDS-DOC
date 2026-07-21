@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "스크래핑 작업 실행"
+title: "스크래핑 작업 실행"
+description: "스크래핑 작업은 영화 정리의 두 번째 단계입니다. 시스템이 스크래핑 규칙에 따라 자동으로 영화 메타데이터를 가져오고 파일을 지정된 위치에 정리합니다."
+keywords: [AMMDS, 스크래핑 작업, 메타데이터, 영화 스크래핑]
+tags: [usage, scrape]
 ---
 
 # 스크래핑 작업 실행

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 2
-sidebar_label: "Emby"
+sidebar_label: Emby
+title: Emby
+description: The Emby plugin connects AMMDS with Emby media server, enabling metadata synchronization and media library management.
+keywords: [Emby, media server, metadata synchronization, media library management, plugin]
+tags: [plugin, media-server]
 ---
-
 # Emby
 
 Emby is a powerful multimedia management application suite designed for organizing, managing, and sharing digital media files. Through this plugin, AMMDS can integrate with Emby media server to implement metadata synchronization and media library management.
@@ -27,7 +30,7 @@ Emby is a powerful multimedia management application suite designed for organizi
 ### Configuration Notes
 
 - **Service Address**: Please use the server's actual network address. Avoid using `localhost` or `127.0.0.1`, as this may cause connection failures in containerized deployments
-- **API Key**: Can be generated in the Emby management interface under "System" → "Advanced" → "API Keys"
+- **API Key**: Can be generated in the Emby management interface under "System" 鈫?"Advanced" 鈫?"API Keys"
 - **Bind User**: You must first enter the correct service address and API key and save before you can select a user from the dropdown list
 
 ### Connection Verification

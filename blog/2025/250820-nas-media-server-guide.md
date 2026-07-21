@@ -2,7 +2,7 @@
 slug: nas-media-server-guide
 title: 用 NAS 搭建私人影音库：从入门到进阶
 authors: [ms]
-tags: [tutorial, feature]
+tags: [tutorial, guide, nas, feature]
 date: 2025-08-20
 ---
 

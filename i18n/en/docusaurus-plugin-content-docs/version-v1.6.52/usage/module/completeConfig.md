@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 3
 sidebar_label: "Number Completion Configuration"
+title: ID Completion Configuration
+description: ID Completion is an auxiliary feature that automatically fills in missing parts when identifying video IDs, making recognition results more accurate.
+keywords: [AMMDS, ID completion, video ID, regex matching]
+tags: [usage, config]
 ---
-
 # Number Completion Configuration
 
 Number completion configuration is an auxiliary number recognition function used to complete numbers in recognition results during organization, improving the accuracy and completeness of number recognition.

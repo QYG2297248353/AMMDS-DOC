@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Emby"
+title: "Emby"
+description: "The Emby plugin connects AMMDS with the Emby media server for metadata sync and media library management."
+keywords: [Emby, media server, metadata sync, media library management, plugin]
+tags: [plugin, media-server]
 ---
 
 # Emby

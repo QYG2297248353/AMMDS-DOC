@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "スマート翻訳"
+sidebar_label: スマート翻訳
+title: スマート翻訳
+description: スマート翻訳プラグインは AMMDS プラットフォームに多言語翻訳機能を提供します。機械翻訳と AI 翻訳の2つの技術をサポートし、さまざまな翻訳シナリオに対応します。
+keywords: [翻訳, 機械翻訳, AI翻訳, 多言語, スマート翻訳]
+tags: [plugin, auxiliary]
 ---
 
 # スマート翻訳

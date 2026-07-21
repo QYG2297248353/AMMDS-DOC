@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "스캔 구성"
+sidebar_label: 스캔 구성
+title: 스캔 설정
+description: "스캔 설정은 파일 스캔 시 처리 방법을 지정합니다. 형식 제한, 무시 디렉토리, 파일 인식 규칙 등을 포함합니다."
+keywords: [AMMDS, 스캔 설정, 스캔 규칙, 파일 인식]
+tags: [usage, config, scan]
 ---
 
 # 스캔 구성

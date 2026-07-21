@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "Docker"
+sidebar_label: Docker
+title: Docker
+description: "Docker를 사용하여 AMMDS를 원클릭 배포하는 방법을 설명합니다. 기본 명령어, 매개변수 설명 및 클라우드 스토리지 사용자를 위한 특수 설정을 포함합니다."
+keywords: [AMMDS, Docker, 컨테이너 배포, 클라우드 스토리지, 원클릭 실행]
+tags: [deploy]
 ---
 
 # Docker

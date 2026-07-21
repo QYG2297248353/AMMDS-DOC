@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "스크래핑 구성"
+title: "스크래핑 구성"
+description: "스크래핑 구성은 인터넷에서 영화 정보를 가져오는 방식과 파일 정리 형식을 설정합니다. 문자 필터링, 디렉터리 정리 등을 포함합니다."
+keywords: [AMMDS, 스크래핑 구성, 스크래핑 규칙, 메타데이터 스크래핑, 파일 정리]
+tags: [usage, config, scrape]
 ---
 
 # 스크래핑 구성

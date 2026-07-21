@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "ThePornDB"
+title: "ThePornDB"
+description: "ThePornDB는 전문적인 성인 비디오 메타데이터 관리 도구로, 비디오 메타데이터 자동 매칭을 지원하며 Plex, Jellyfin 등 주요 미디어 서버와 호환됩니다."
+keywords: [ThePornDB, 메타데이터, Stash-Box, 비디오 관리, 스크래핑]
+tags: [plugin, metadata]
 ---
 
 # ThePornDB

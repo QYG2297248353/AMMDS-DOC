@@ -9,6 +9,10 @@ tags: [deploy]
 
 # Windows部署指南
 
+本文详细介绍如何在 Windows 系统上通过安装程序或便携版部署 AMMDS，包含安装、升级、托盘管理及日志说明。
+
+{/* truncate */}
+
 Windows（微软 Windows）是微软开发的桌面操作系统，广泛用于个人电脑和服务器。下面介绍如何在 Windows 上部署 AMMDS。
 
 ## 下载

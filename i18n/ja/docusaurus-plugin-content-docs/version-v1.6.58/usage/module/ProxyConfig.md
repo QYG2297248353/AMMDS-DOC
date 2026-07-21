@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
-sidebar_label: "ネットワークプロキシ設定"
+sidebar_label: ネットワークプロキシ設定
+title: ネットワークプロキシ設定
+description: ネットワークプロキシ設定は、プログラムがインターネットにアクセスする際に使用するプロキシサーバーを設定します。HTTP、SOCKS4、SOCKS5 プロトコルをサポートします。
+keywords: [AMMDS, プロキシ設定, ネットワークプロキシ, HTTPプロキシ, SOCKSプロキシ]
+tags: [usage, config, proxy]
 ---
 
 # ネットワークプロキシ設定

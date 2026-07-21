@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 4
-sidebar_label: "Windows"
+sidebar_label: Windows
+title: Windows Deployment Guide
+description: Learn how to deploy AMMDS on Windows through installer or portable version, including installation, upgrade, tray management, and log instructions.
+keywords: [AMMDS, Windows, installation deployment, launcher, desktop]
+tags: [deploy]
 ---
-
 # Windows Deployment Guide
 
 Microsoft Windows (referred to as Windows) is a series of proprietary commercial operating systems developed by Microsoft Corporation, featuring a graphical user interface as its core characteristic. It is widely used on personal computers, servers, and other devices. This guide will detail the deployment process of AMMDS in a Windows environment.

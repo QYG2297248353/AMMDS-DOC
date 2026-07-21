@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "スキャンタスクの作成"
+sidebar_label: スキャンタスクの作成
+title: スキャンタスクの作成
+description: スキャンタスクの作成は映画整理の最初のステップです。システムがスキャンルールに従って指定フォルダ内の映画ファイルを検索し、処理待ちリストを生成します。
+keywords: [AMMDS, スキャンタスク, ファイルスキャン, 整理モード]
+tags: [usage, scan]
 ---
 
 # スキャンタスクの作成

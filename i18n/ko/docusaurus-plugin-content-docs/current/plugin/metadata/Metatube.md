@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Metatube"
+title: "Metatube"
+description: "MetaTube는 Jellyfin, Emby 및 Plex 등의 미디어 서버를 위해 영화 정보를 가져오는 오픈 소스 도구로, 중국어 리소스의 고정밀 인식을 지원합니다."
+keywords: [MetaTube, 메타데이터, 스크래핑, 포스터 월, Jellyfin]
+tags: [plugin, metadata]
 ---
 
 # Metatube

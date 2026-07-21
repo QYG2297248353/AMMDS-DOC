@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Docker Compose"
+title: "Docker Compose"
+description: "Learn how to deploy AMMDS with Docker Compose in one click, including configuration file setup, cloud drive special configuration, and service management."
+keywords: [AMMDS, Docker Compose, container orchestration, deployment, configuration]
+tags: [deploy]
 ---
 
 # Docker Compose

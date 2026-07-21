@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Windows"
+title: "Windows Deployment Guide"
+description: "Learn how to deploy AMMDS on Windows via installer or portable version, including installation, upgrade, tray management, and log instructions."
+keywords: [AMMDS, Windows, installation deployment, launcher, desktop]
+tags: [deploy]
 ---
 
 # Windows Deployment Guide

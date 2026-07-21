@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 4
 sidebar_label: "Subscription Rule Configuration"
+title: Subscription Rule Configuration
+description: Subscription rule configuration tells the system what kind of resources you want, including priority for Chinese subtitles, search order, and download directory settings.
+keywords: [AMMDS, subscription rules, resource subscription, download configuration]
+tags: [usage, config, subscribe]
 ---
-
 # Subscription Rule Configuration
 
 Subscription rule configuration is used to set subscription preferences and download parameters for movie content before task execution, ensuring the system can automatically obtain and manage movie resources according to your needs.
@@ -48,7 +51,7 @@ You can access the subscription rule configuration page through the following pa
 The following is a typical subscription rule configuration example:
 
 1. **Chinese Priority**: Enabled
-2. **Search Order**: Search Source A → Search Source B → Search Source C
+2. **Search Order**: Search Source A 鈫?Search Source B 鈫?Search Source C
 3. **Download Directory**: `D:\Downloads\Movies`
 
 ## Common Questions

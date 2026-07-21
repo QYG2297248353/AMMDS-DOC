@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Windows"
+title: "Windows 배포 가이드"
+description: "Windows 시스템에서 설치 프로그램 또는 휴대용 버전을 통해 AMMDS를 배포하는 방법을 알아보세요. 설치, 업그레이드, 트레이 관리 및 로그 설명을 포함합니다."
+keywords: [AMMDS, Windows, 설치, 배포, 런처, 데스크톱]
+tags: [deploy]
 ---
 
 # Windows 배포 가이드

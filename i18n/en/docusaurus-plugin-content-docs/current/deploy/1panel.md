@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
 sidebar_label: "1Panel"
+title: "1Panel Deployment Guide"
+description: "Learn how to deploy AMMDS on the 1Panel server management panel through the app store, including installation, configuration, and access management."
+keywords: [AMMDS, 1Panel, server panel, app store, deployment]
+tags: [deploy]
 ---
 
 # 1Panel Deployment Guide

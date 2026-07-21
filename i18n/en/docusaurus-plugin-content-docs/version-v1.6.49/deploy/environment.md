@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 99
-sidebar_label: "Environment"
+sidebar_label: Environment
+title: Environment Variables
+description: Learn about the environment variable configurations supported by AMMDS, including port, user permissions, running mode, plugin address, and other parameter descriptions.
+keywords: [AMMDS, environment variables, configuration, Docker, parameter settings]
+tags: [deploy, environment]
 ---
-
 # Environment Variables
 
 When deploying, quick deployment using environment variables is supported.

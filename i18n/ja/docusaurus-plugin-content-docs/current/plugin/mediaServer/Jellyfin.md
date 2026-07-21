@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Jellyfin"
+title: "Jellyfin"
+description: "Jellyfin プラグインにより、AMMDS は Jellyfin メディアサーバーと深く統合し、メタデータの同期、俳優のプロフィール写真の自動補完などの機能を実現します。"
+keywords: [Jellyfin, メディアサーバー, メタデータ同期, プロフィール写真補完, オープンソース]
+tags: [plugin, media-server]
 ---
 
 # Jellyfin

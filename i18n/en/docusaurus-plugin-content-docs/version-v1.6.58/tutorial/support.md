@@ -1,11 +1,14 @@
----
+﻿---
 sidebar_position: 1
 sidebar_label: "Support Me"
+title: Support Us
+description: Learn how to support the AMMDS project by becoming a member, sharing recommendations, contributing data, suggesting ideas, or sponsoring.
+keywords: [AMMDS, support, sponsor, open source, contribute]
+tags: [tutorial]
 ---
-
 # Support Me
 
-🥳 Let's grow together!
+馃コ Let's grow together!
 
 Welcome to the AMMDS support page! Thank you for your attention and support. Every bit of support you provide will directly help us improve and expand AMMDS's features and services, providing a better experience for you and other users.
 
@@ -33,7 +36,7 @@ If you like our work and want to support our continuous development, please cons
 
 **Preferred Sponsorship Platforms:**
 
-- Online Store (Alipay): [足迹店铺](https://store.lifebus.top/)
+- Online Store (Alipay): [瓒宠抗搴楅摵](https://store.lifebus.top/)
 
 ## Our Commitment
 
@@ -51,6 +54,6 @@ AMMDS is a data management platform designed specifically for movie and TV enthu
 Have any questions or need help? Please don't hesitate to contact us through the following methods:
 
 - Email: [support@lifebus.top](mailto:support@lifebus.top)
-- Online Store: [足迹店铺](https://store.lifebus.top/)
+- Online Store: [瓒宠抗搴楅摵](https://store.lifebus.top/)
 - GitHub Support: [AMMDS on GitHub](https://github.com/QYG2297248353/AMMDS-Docker)
 

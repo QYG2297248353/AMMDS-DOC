@@ -2,7 +2,7 @@
 slug: why-metadata-scraping
 title: 为什么影视库需要元数据刮削？主流工具对比
 authors: [ms]
-tags: [tutorial]
+tags: [tutorial, guide]
 date: 2025-05-20
 ---
 

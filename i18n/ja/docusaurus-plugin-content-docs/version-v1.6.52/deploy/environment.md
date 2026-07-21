@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
-sidebar_label: "環境変数"
+sidebar_label: 環境変数
+title: 環境変数
+description: AMMDS がサポートする環境変数の設定について説明します。ポート、ユーザー権限、実行モード、プラグインアドレスなどのパラメーター。
+keywords: [AMMDS, 環境変数, 設定, Docker, パラメーター設定]
+tags: [deploy, environment]
 ---
 
 # 環境変数

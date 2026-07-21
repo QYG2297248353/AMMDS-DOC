@@ -9,6 +9,10 @@ sidebar_label: "Telegram"
 
 # Telegram
 
+本文介绍 Telegram 插件的配置方法，用于通过 Telegram 机器人发送实时推送通知。
+
+{/* truncate */}
+
 Telegram 是一款基于云端的即时通讯软件，可以发文字、语音、视频、图片等多种消息。这个插件让 AMMDS 能通过 Telegram 给你发推送通知，系统有什么动静都能实时通知你。
 
 ## 插件配置

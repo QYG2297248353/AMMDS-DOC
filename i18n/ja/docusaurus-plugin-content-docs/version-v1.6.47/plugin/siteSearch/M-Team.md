@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "M-Team"
+sidebar_label: M-Team
+title: M-Team
+description: M-Team は総合ディスカッションフォーラムプラグインです。さまざまな議論板とグループ機能を提供し、API 統合とアカウント保護通知をサポートします。
+keywords: [M-Team, サイト検索, フォーラム, PT, API]
+tags: [plugin, site-search]
 ---
 
 # M-Team

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "Docker"
+sidebar_label: Docker
+title: Docker
+description: Learn how to deploy AMMDS with a single Docker command, including basic commands, parameter descriptions, and special configurations for cloud drive users.
+keywords: [AMMDS, Docker, container deployment, cloud drive, one-click run]
+tags: [deploy]
 ---
-
 # Docker
 
 Docker is an open-source platform for automating the deployment, scaling, and management of applications. It uses containerization technology to package applications and their dependencies into independent containers, ensuring consistent operation across any environment. Containers are lightweight and portable, making them ideal for microservices architectures and CI/CD workflows.

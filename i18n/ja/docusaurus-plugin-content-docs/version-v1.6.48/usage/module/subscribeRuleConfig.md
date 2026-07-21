@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
-sidebar_label: "サブスクリプションルール設定"
+sidebar_label: サブスクリプションルール設定
+title: 購読ルール設定
+description: 購読ルール設定は、システムが希望するリソースの種類を指定します。中国語字幕優先、検索順序、ダウンロードディレクトリなどの設定を含みます。
+keywords: [AMMDS, 購読ルール, リソース購読, ダウンロード設定]
+tags: [usage, config, subscribe]
 ---
 
 # サブスクリプションルール設定

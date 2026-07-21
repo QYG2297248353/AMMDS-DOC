@@ -9,6 +9,10 @@ sidebar_label: "Bitmagnet"
 
 # Bitmagnet
 
+本文介绍 Bitmagnet 插件的配置方法，用于自托管 BT 种子搜索和内容分类。
+
+{/* truncate */}
+
 Bitmagnet 是一个自托管的 BitTorrent DHT 爬虫、内容分类器和种子搜索引擎，使用 Go 语言开发。它通过爬取 DHT 网络自动发现种子，对内容进行分类和元数据增强，并提供 Web UI、GraphQL API 以及 Torznab 兼容接口，可与 Sonarr、Radarr 等 Servarr 套件无缝集成。
 
 官网：[https://bitmagnet.io/](https://bitmagnet.io/)

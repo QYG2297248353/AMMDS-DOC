@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Create Scan Task"
+title: "Creating Scan Tasks"
+description: "Creating a scan task is the first step in organizing movies. The system searches for movie files in the specified folder based on scan rules and generates a pending list."
+keywords: [AMMDS, scan task, file scanning, organization mode]
+tags: [usage, scan]
 ---
 
 # Create Scan Task

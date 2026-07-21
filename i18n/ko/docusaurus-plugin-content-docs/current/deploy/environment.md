@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
 sidebar_label: "환경 변수"
+title: "환경 변수"
+description: "AMMDS가 지원하는 환경 변수 구성을 알아보세요. 포트, 사용자 권한, 실행 모드, 플러그인 주소 등의 매개변수 설명을 포함합니다."
+keywords: [AMMDS, 환경 변수, 구성, Docker, 매개변수 설정]
+tags: [deploy, environment]
 ---
 
 # 환경 변수

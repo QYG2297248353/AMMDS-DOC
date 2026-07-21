@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Docker"
+title: "Docker"
+description: "Docker を使って AMMDS をワンクリックでデプロイする方法を紹介します。基本コマンド、パラメータ説明、クラウドストレージユーザー向けの特別設定について解説します。"
+keywords: [AMMDS, Docker, コンテナデプロイ, クラウドストレージ, ワンクリック実行]
+tags: [deploy]
 ---
 
 # Docker

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 4
-sidebar_label: "Prowlarr"
+sidebar_label: Prowlarr
+title: Prowlarr
+description: Prowlarr is an indexer management tool designed for media automation, unifying BT tracker and Usenet indexer management with seamless synchronization to Sonarr, Radarr, and other apps.
+keywords: [Prowlarr, indexer, BT, Usenet, Sonarr]
+tags: [plugin, site-search]
 ---
-
 # Prowlarr
 
 Prowlarr is a powerful indexer manager and proxy tool specifically designed for media automation, built on the .NET/React technology stack. It serves as a centralized hub that unifies the management of hundreds of Torrent trackers and Usenet indexers, seamlessly synchronizing with applications like Sonarr, Radarr, Lidarr, and Readarr.

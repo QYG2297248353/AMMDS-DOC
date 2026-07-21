@@ -9,6 +9,10 @@ sidebar_label: "M-Team"
 
 # M-Team
 
+本文介绍 M-Team 插件的配置方法，用于 PT 站点的搜索和管理。
+
+{/* truncate */}
+
 M-Team 是一个综合讨论区，有各种讨论版块和群组，大家可以在这里聊时事和各种资讯。
 
 :::info[私有站点说明]

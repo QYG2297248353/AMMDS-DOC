@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Smart Translation"
+title: "Smart Translation"
+description: "The Smart Translation plugin provides multilingual translation capabilities for the AMMDS platform, supporting both machine translation and AI translation technologies."
+keywords: [Translation, machine translation, AI translation, multilingual, smart translation]
+tags: [plugin, auxiliary]
 ---
 
 # Smart Translation

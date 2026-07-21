@@ -1,16 +1,99 @@
+deploy:
+  label: "배포"
+  permalink: "/deploy"
+  description: "Docker, Windows, FnOS, 1Panel, 바오타 패널 등 다양한 플랫폼 배포 방법"
+
+tutorial:
+  label: "튜토리얼"
+  permalink: "/tutorial"
+  description: "시작 가이드 및 빠른 시작 튜토리얼"
+
+usage:
+  label: "사용법"
+  permalink: "/usage"
+  description: "시스템 기능 사용 가이드 및 조작 방법"
+
+config:
+  label: "설정"
+  permalink: "/config"
+  description: "스캔, 스크래핑, 구독 등 다양한 규칙 설정"
+
+scan:
+  label: "스캔"
+  permalink: "/scan"
+  description: "파일 스캔 관련 기능"
+
+scrape:
+  label: "스크래핑"
+  permalink: "/scrape"
+  description: "메타데이터 스크래핑 관련 기능"
+
+subscribe:
+  label: "구독"
+  permalink: "/subscribe"
+  description: "구독 규칙 관련 설정"
+
+mount:
+  label: "마운트"
+  permalink: "/mount"
+  description: "디렉토리 마운트 및 데이터 저장소"
+
+proxy:
+  label: "프록시"
+  permalink: "/proxy"
+  description: "네트워크 프록시 설정"
+
+auth:
+  label: "인증"
+  permalink: "/auth"
+  description: "사이트 인증 및 신원 확인"
+
+environment:
+  label: "환경 변수"
+  permalink: "/environment"
+  description: "환경 변수 설정"
+
+faq:
+  label: "FAQ"
+  permalink: "/faq"
+  description: "자주 묻는 질문 및 문제 해결"
+
 plugin:
   label: "플러그인"
   permalink: "/plugin"
-  description: "플러그인 관련"
-
+  description: "플러그인 설정 및 사용 방법"
 
 metadata:
   label: "메타데이터"
   permalink: "/metadata"
-  description: "메타데이터 관련"
-
+  description: "메타데이터 플러그인 설정 및 사용 방법"
 
 release:
   label: "릴리스"
   permalink: "/release"
-  description: "릴리스 관련"
+  description: "버전 릴리스 및 업데이트 정보"
+
+site-search:
+  label: "사이트 검색"
+  permalink: "/site-search"
+  description: "사이트 검색 플러그인 설정 및 사용 방법"
+
+push-notice:
+  label: "푸시 알림"
+  permalink: "/push-notice"
+  description: "푸시 알림 플러그인 설정 및 사용 방법"
+
+media-server:
+  label: "미디어 서버"
+  permalink: "/media-server"
+  description: "미디어 서버 플러그인 설정 및 사용 방법"
+
+auxiliary:
+  label: "보조 기능"
+  permalink: "/auxiliary"
+  description: "보조 기능 플러그인 설정 및 사용 방법"
+
+downloader:
+  label: "다운로더"
+  permalink: "/downloader"
+  description: "다운로더 플러그인 설정 및 사용 방법"

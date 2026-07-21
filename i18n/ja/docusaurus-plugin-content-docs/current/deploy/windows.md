@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Windows"
+title: "Windows デプロイガイド"
+description: "Windows システムでインストーラーパッケージまたはポータブル版を使用して AMMDS をデプロイする方法を紹介します。インストール、アップグレード、トレイ管理、ログについて説明します。"
+keywords: [AMMDS, Windows, インストールデプロイ, ランチャー, デスクトップ版]
+tags: [deploy]
 ---
 
 # Windows デプロイガイド

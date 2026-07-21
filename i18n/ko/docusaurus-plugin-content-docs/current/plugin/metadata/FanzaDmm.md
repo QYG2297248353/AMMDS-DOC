@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Fanza DMM"
+title: "Fanza DMM"
+description: "Fanza DMM 플러그인은 FANZA 플랫폼의 메타데이터 수집 기능을 제공하며, 순위 데이터 및 영화 검색을 지원합니다."
+keywords: [Fanza, DMM, 메타데이터, 순위, 영화 검색]
+tags: [plugin, metadata]
 ---
 
 # Fanza DMM

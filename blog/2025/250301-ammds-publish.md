@@ -2,7 +2,7 @@
 slug: ammds-publish
 title: AMMDS v1.0.0 正式发布
 authors: [ms]
-tags: [studio, ammds, release]
+tags: [studio, ammds, release, feature]
 date: 2025-03-01
 ---
 

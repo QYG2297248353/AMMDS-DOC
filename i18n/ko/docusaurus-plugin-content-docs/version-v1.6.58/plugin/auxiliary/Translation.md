@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "스마트 번역"
+sidebar_label: 스마트 번역
+title: 스마트 번역
+description: 스마트 번역 플러그인은 AMMDS 플랫폼에 다국어 번역 기능을 제공합니다. 기계 번역과 AI 번역 두 가지 기술을 지원하여 다양한 번역 시나리오를 충족합니다.
+keywords: [번역, 기계 번역, AI 번역, 다국어, 스마트 번역]
+tags: [plugin, auxiliary]
 ---
 
 # 스마트 번역

@@ -1,6 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 99
 sidebar_label: "Madou Media"
+title: "Madou Media"
+description: "The Madou Media plugin lets AMMDS collect Madou Media's video and actor information, supporting a metadata caching mechanism."
+keywords: [Madou Media, metadata, actor info, video collection, plugin]
+tags: [plugin, metadata]
 ---
 
 # Madou Media

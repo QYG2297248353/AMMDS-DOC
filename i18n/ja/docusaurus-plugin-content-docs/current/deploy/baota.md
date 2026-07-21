@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "宝塔パネル"
+title: "宝塔パネル"
+description: "宝塔パネル（bt.cn）の Docker 管理機能を使って AMMDS をデプロイする方法を紹介します。コンテナ作成、ディレクトリマウント、ポート設定について解説します。"
+keywords: [AMMDS, 宝塔パネル, Docker, サーバー管理, デプロイ]
+tags: [deploy]
 ---
 
 # 宝塔パネル

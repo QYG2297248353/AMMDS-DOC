@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "Telegram"
+sidebar_label: Telegram
+title: Telegram
+description: "Telegram 플러그인을 사용하여 AMMDS가 Telegram 봇을 통해 실시간 푸시 알림을 보낼 수 있습니다. 텍스트, 이미지 등 여러 메시지 형식을 지원합니다."
+keywords: [Telegram, 푸시 알림, 봇, Bot, 메시지推送]
+tags: [plugin, push-notice]
 ---
 
 # Telegram

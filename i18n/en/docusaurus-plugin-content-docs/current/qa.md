@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
 sidebar_label: "Q&A"
+title: "FAQ"
+description: "A collection of common deployment and usage questions and solutions when using AMMDS, including Docker deployment, system configuration, and plugin integration troubleshooting."
+keywords: [AMMDS, FAQ, troubleshooting, deployment issues, Q&A]
+tags: [faq]
 ---
 
 # Q&A

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "Metatube"
+sidebar_label: Metatube
+title: Metatube
+description: MetaTube is an open-source tool designed to scrape video information for media servers like Jellyfin, Emby, and Plex, supporting high-precision recognition of Chinese resources.
+keywords: [MetaTube, metadata, scraping, poster wall, Jellyfin]
+tags: [plugin, metadata]
 ---
-
 # Metatube
 
 MetaTube is an open-source media metadata scraping plugin backend designed specifically for Jellyfin, Emby, and Plex. It is primarily used to automatically retrieve video information, including posters, synopses, cast members, production studios, ratings, and more. This plugin effectively solves the problem of low recognition rates for Chinese resources, enabling high-precision "poster wall" management of media libraries through a self-built API.
@@ -11,13 +14,13 @@ MetaTube is an open-source media metadata scraping plugin backend designed speci
 
 The MetaTube plugin offers the following core features:
 
-- 🎯 **High-precision Identification**: Optimized recognition algorithm for Chinese resources, greatly improving recognition success rate
-- 🌍 **Multi-platform Support**: Compatible with mainstream media servers such as Jellyfin, Emby, and Plex
-- 📦 **Dual Service Modes**: Supports both remote deployment and built-in service operation modes
-- 🔐 **Secure Authentication**: Ensures service access security through TOKEN mechanism
-- 🌐 **Multiple Deployment Options**: Supports local Docker deployment and Koyeb cloud service deployment
-- 📝 **Automatic Translation**: Built-in multiple translation services, supporting automatic metadata translation
-- 🎭 **Rich Data Sources**: Integrates multiple actor and video data providers
+- 馃幆 **High-precision Identification**: Optimized recognition algorithm for Chinese resources, greatly improving recognition success rate
+- 馃實 **Multi-platform Support**: Compatible with mainstream media servers such as Jellyfin, Emby, and Plex
+- 馃摝 **Dual Service Modes**: Supports both remote deployment and built-in service operation modes
+- 馃攼 **Secure Authentication**: Ensures service access security through TOKEN mechanism
+- 馃寪 **Multiple Deployment Options**: Supports local Docker deployment and Koyeb cloud service deployment
+- 馃摑 **Automatic Translation**: Built-in multiple translation services, supporting automatic metadata translation
+- 馃幁 **Rich Data Sources**: Integrates multiple actor and video data providers
 
 ## Deployment Options
 
@@ -199,7 +202,7 @@ Please record the access address and TOKEN for subsequent AMMDS plugin configura
 
 ## Plugin Configuration
 
-In the AMMDS management interface, access the configuration page through "Integrated Applications" → "Metadata" → "Metatube".
+In the AMMDS management interface, access the configuration page through "Integrated Applications" 鈫?"Metadata" 鈫?"Metatube".
 
 ### Service Modes
 
@@ -214,7 +217,7 @@ Only one service mode is active at a time, and the built-in service has higher p
 
 ### Quick Operations
 
-![Metatube 插件配置](/img/plugin/metatube-01.png)
+![Metatube 鎻掍欢閰嶇疆](/img/plugin/metatube-01.png)
 
 The following quick operations are available in the upper right corner of the configuration page:
 
@@ -226,7 +229,7 @@ The following quick operations are available in the upper right corner of the co
 
 ### Configuration Parameters
 
-![Metatube 插件配置](/img/plugin/metatube-02.png)
+![Metatube 鎻掍欢閰嶇疆](/img/plugin/metatube-02.png)
 
 #### Basic Configuration
 
@@ -261,7 +264,7 @@ If a TOKEN is configured when deploying the Metatube service, this option must b
 
 #### Translation Configuration
 
-![Metatube 插件配置](/img/plugin/metatube-03.png)
+![Metatube 鎻掍欢閰嶇疆](/img/plugin/metatube-03.png)
 
 | Parameter | Description | Default Value |
 |-----------|-------------|---------------|
@@ -275,7 +278,7 @@ After enabling auto-translation, titles, descriptions, and other fields will be 
 
 ### Testing Module
 
-![Metatube 插件测试](/img/plugin/metatube-04.png)
+![Metatube 鎻掍欢娴嬭瘯](/img/plugin/metatube-04.png)
 
 **Quick Operations**:
 
@@ -283,7 +286,7 @@ After enabling auto-translation, titles, descriptions, and other fields will be 
 - **Built-in Application Info**: Displays application information (version number, configuration, etc.) of the built-in Metatube service
 - **Remote Application Info**: Displays application information (version number, configuration, etc.) of the remote Metatube service
 
-![Metatube 插件测试](/img/plugin/metatube-05.png)
+![Metatube 鎻掍欢娴嬭瘯](/img/plugin/metatube-05.png)
 
 **Application Info Display**:
 

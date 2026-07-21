@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Fanza DMM"
+title: "Fanza DMM"
+description: "Fanza DMM プラグインは FANZA プラットフォームのメタデータ収集機能を提供し、ランキングデータと動画検索をサポートします。"
+keywords: [Fanza, DMM, メタデータ, ランキング, 動画検索]
+tags: [plugin, metadata]
 ---
 
 # Fanza DMM

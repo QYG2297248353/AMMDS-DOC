@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
 sidebar_label: "Mounting Relationships"
+title: Mount Relationship Guide
+description: A plain-language explanation of AMMDS mount relationships, including Docker deployment mounts, media organization mount logic, and data flow.
+keywords: [AMMDS, mount, Docker, media organization, data directory]
+tags: [usage, mount]
 ---
-
 # Mounting Relationships Explained
 
 This document details the mounting relationships related to AMMDS, including mounting logic during deployment and media organization, helping you understand the system's directory structure and data flow.
@@ -142,7 +145,7 @@ Specifically:
 
 ### 4. AMMDS and Movie Files Relationship
 
-When processing movie files, AMMDS goes through the following流程:
+When processing movie files, AMMDS goes through the following娴佺▼:
 
 1. **Scanning Phase**: AMMDS scans unorganized movie files in the `/data/download` directory
 2. **Scraping Phase**: Based on file names or file content, AMMDS retrieves movie metadata from the internet (such as titles, posters, descriptions, etc.)
@@ -204,43 +207,43 @@ flowchart TD
 
 ```
 /data/
-├── download/           # Unorganized movie files
-│   ├── movie1.mp4      # Movie files
-│   └── ...
-└── media/              # Organized movie files
-    ├── Movies/         # Movie directory
-    │   ├── Movie 1 (2023)/
-    │   │   ├── Movie 1 (2023).mp4
-    │   │   └── poster.jpg
-    │   └── ...
-    └── ...
+鈹溾攢鈹€ download/           # Unorganized movie files
+鈹?  鈹溾攢鈹€ movie1.mp4      # Movie files
+鈹?  鈹斺攢鈹€ ...
+鈹斺攢鈹€ media/              # Organized movie files
+    鈹溾攢鈹€ Movies/         # Movie directory
+    鈹?  鈹溾攢鈹€ Movie 1 (2023)/
+    鈹?  鈹?  鈹溾攢鈹€ Movie 1 (2023).mp4
+    鈹?  鈹?  鈹斺攢鈹€ poster.jpg
+    鈹?  鈹斺攢鈹€ ...
+    鈹斺攢鈹€ ...
 ```
 
 #### AMMDS Container Directory Structure
 
 ```
 /ammds/
-├── data/               # Mapped from host's /data
-│   ├── config.json     # Configuration files
-│   └── ...
-├── db/                 # Mapped from host's /data/db
-│   ├── ammds.db        # Database files
-│   └── ...
-├── download/           # Mapped from host's /data/download
-│   ├── movie1.mp4
-│   └── ...
+鈹溾攢鈹€ data/               # Mapped from host's /data
+鈹?  鈹溾攢鈹€ config.json     # Configuration files
+鈹?  鈹斺攢鈹€ ...
+鈹溾攢鈹€ db/                 # Mapped from host's /data/db
+鈹?  鈹溾攢鈹€ ammds.db        # Database files
+鈹?  鈹斺攢鈹€ ...
+鈹溾攢鈹€ download/           # Mapped from host's /data/download
+鈹?  鈹溾攢鈹€ movie1.mp4
+鈹?  鈹斺攢鈹€ ...
 /media/                  # Mapped from host's /data/media
-├── Movies/
-└── ...
+鈹溾攢鈹€ Movies/
+鈹斺攢鈹€ ...
 ```
 
 #### Jellyfin Container Directory Structure
 
 ```
 /data/
-└── media/              # Mapped from host's /data/media
-    ├── Movies/
-    └── ...
+鈹斺攢鈹€ media/              # Mapped from host's /data/media
+    鈹溾攢鈹€ Movies/
+    鈹斺攢鈹€ ...
 ```
 
 ## III. Complete Mounting Relationship Diagram

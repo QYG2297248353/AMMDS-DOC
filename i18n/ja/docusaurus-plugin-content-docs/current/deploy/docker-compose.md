@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Docker Compose"
+title: "Docker Compose"
+description: "Docker Compose を使って AMMDS をワンクリックでデプロイする方法を紹介します。設定ファイルの作成、クラウドストレージ向け特別設定、サービスの管理について解説します。"
+keywords: [AMMDS, Docker Compose, コンテナオーケストレーション, デプロイ, 設定]
+tags: [deploy]
 ---
 
 # Docker Compose

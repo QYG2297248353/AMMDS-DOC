@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "M-Team"
+sidebar_label: M-Team
+title: M-Team
+description: M-Team is a comprehensive discussion forum plugin providing various discussion boards and group features, with API integration and account protection notifications.
+keywords: [M-Team, site search, forum, PT, API]
+tags: [plugin, site-search]
 ---
-
 # M-Team
 
 M-Team is a comprehensive discussion forum with diverse discussion sections and combined groups, providing discussion on current affairs and information worldwide.
@@ -17,16 +20,16 @@ This site requires registration by invitation and has certain thresholds.
 
 ### Basic Configuration
 
-- **Enable Status**：Controls whether to enable the M-Team plugin.
-- **Service Address**：M-Team API server address. The default value is `https://api.m-team.io/api`, which can be modified according to actual conditions.
+- **Enable Status**锛欳ontrols whether to enable the M-Team plugin.
+- **Service Address**锛歁-Team API server address. The default value is `https://api.m-team.io/api`, which can be modified according to actual conditions.
   
   Currently, there are three M-Team API server addresses:
   - https://api.m-team.cc/api
   - https://api.m-team.io/api
   - https://api2.m-team.cc/api
-- **Passkey**：Key used for authentication, which can be obtained by clicking the "Send to Email" button in "Console >> Settings >> Home >> Passkey" and checking the result in the email. The default value is empty.
-- **Access Token**：Token used for API access, which can be created by clicking the "Create Access Token" button in "Console >> Settings >> Laboratory >> Access Token". The default value is empty.
+- **Passkey**锛欿ey used for authentication, which can be obtained by clicking the "Send to Email" button in "Console >> Settings >> Home >> Passkey" and checking the result in the email. The default value is empty.
+- **Access Token**锛歍oken used for API access, which can be created by clicking the "Create Access Token" button in "Console >> Settings >> Laboratory >> Access Token". The default value is empty.
 
 ![Access Token](/img/plugin/m-team-02.png)
 
-- **Account Protection Notification**：If the account has not logged in again for more than 14 days, the system will send a notification reminder, requiring re-login to protect the account from being deleted.
+- **Account Protection Notification**锛欼f the account has not logged in again for more than 14 days, the system will send a notification reminder, requiring re-login to protect the account from being deleted.

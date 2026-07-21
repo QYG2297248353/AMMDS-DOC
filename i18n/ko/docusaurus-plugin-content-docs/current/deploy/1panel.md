@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
 sidebar_label: "1Panel"
+title: "1Panel 배포 가이드"
+description: "1Panel 서버 관리 패널에서 앱 스토어를 통해 AMMDS를 배포하는 방법을 알아보세요. 설치, 구성 및 액세스 관리를 포함합니다."
+keywords: [AMMDS, 1Panel, 서버 패널, 앱 스토어, 배포]
+tags: [deploy]
 ---
 
 # 1Panel 배포 가이드

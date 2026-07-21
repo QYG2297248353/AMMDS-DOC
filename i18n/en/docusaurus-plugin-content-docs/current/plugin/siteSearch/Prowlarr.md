@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Prowlarr"
+title: "Prowlarr"
+description: "Prowlarr is an indexer management tool designed for media automation, unifying BT tracker sites and Usenet indexers, with seamless sync to Sonarr, Radarr, and other apps."
+keywords: [Prowlarr, indexer, BT, Usenet, Sonarr]
+tags: [plugin, site-search]
 ---
 
 # Prowlarr

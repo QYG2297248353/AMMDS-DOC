@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
 sidebar_label: "자주 묻는 질문"
+title: "자주 묻는 질문"
+description: "AMMDS 사용 시 자주 발생하는 배포 및 사용 문제와 해결 방법을 모아놓았습니다. Docker 배포, 시스템 구성, 플러그인 통합 등의 문제 진단 및 수정을 포함합니다."
+keywords: [AMMDS, 자주 묻는 질문, 문제 해결, 배포 문제, FAQ]
+tags: [faq]
 ---
 
 # 자주 묻는 질문

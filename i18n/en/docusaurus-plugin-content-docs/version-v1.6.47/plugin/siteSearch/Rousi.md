@@ -1,11 +1,14 @@
----
+﻿---
 sidebar_position: 3
-sidebar_label: "Rousi"
+sidebar_label: Rousi
+title: Rousi
+description: Rousi is a plugin providing high-quality comprehensive site search services, supporting RSS and API integration.
+keywords: [Rousi, site search, RSS, API]
+tags: [plugin, site-search]
 ---
-
 # Rousi
 
-Rousi (肉丝) is a platform focused on providing high-quality, efficient comprehensive site search services.
+Rousi (鑲変笣) is a platform focused on providing high-quality, efficient comprehensive site search services.
 
 Private site: This site requires registration by invitation and has certain thresholds.
 

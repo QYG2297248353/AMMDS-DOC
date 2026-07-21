@@ -1,16 +1,99 @@
+deploy:
+  label: "Deploy"
+  permalink: "/deploy"
+  description: "Deployment methods for various platforms, including Docker, Windows, FnOS, 1Panel, Baota Panel, etc."
+
+tutorial:
+  label: "Tutorial"
+  permalink: "/tutorial"
+  description: "Getting started guides and quick-start tutorials"
+
+usage:
+  label: "Usage"
+  permalink: "/usage"
+  description: "System feature usage guides and operation instructions"
+
+config:
+  label: "Configuration"
+  permalink: "/config"
+  description: "Various rule configurations including scanning, scraping, subscription, etc."
+
+scan:
+  label: "Scan"
+  permalink: "/scan"
+  description: "File scanning related features"
+
+scrape:
+  label: "Scrape"
+  permalink: "/scrape"
+  description: "Metadata scraping related features"
+
+subscribe:
+  label: "Subscribe"
+  permalink: "/subscribe"
+  description: "Subscription rule related configurations"
+
+mount:
+  label: "Mount"
+  permalink: "/mount"
+  description: "Directory mounting and data storage"
+
+proxy:
+  label: "Proxy"
+  permalink: "/proxy"
+  description: "Network proxy configuration"
+
+auth:
+  label: "Authentication"
+  permalink: "/auth"
+  description: "Site authentication and identity verification"
+
+environment:
+  label: "Environment"
+  permalink: "/environment"
+  description: "Environment variable configuration"
+
+faq:
+  label: "FAQ"
+  permalink: "/faq"
+  description: "Frequently asked questions and troubleshooting"
+
 plugin:
   label: "Plugin"
   permalink: "/plugin"
-  description: "Plugin documentation"
-
+  description: "Plugin configuration and usage guides"
 
 metadata:
   label: "Metadata"
   permalink: "/metadata"
-  description: "Metadata documentation"
-
+  description: "Metadata plugin configuration and usage guides"
 
 release:
   label: "Release"
   permalink: "/release"
-  description: "Release notes"
+  description: "Version releases and update notes"
+
+site-search:
+  label: "Site Search"
+  permalink: "/site-search"
+  description: "Site search plugin configuration and usage guides"
+
+push-notice:
+  label: "Push Notice"
+  permalink: "/push-notice"
+  description: "Push notification plugin configuration and usage guides"
+
+media-server:
+  label: "Media Server"
+  permalink: "/media-server"
+  description: "Media server plugin configuration and usage guides"
+
+auxiliary:
+  label: "Auxiliary"
+  permalink: "/auxiliary"
+  description: "Auxiliary function plugin configuration and usage guides"
+
+downloader:
+  label: "Downloader"
+  permalink: "/downloader"
+  description: "Downloader plugin configuration and usage guides"

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "Introduction"
+sidebar_label: Introduction
+title: Introduction
+description: AMMDS (Advanced Multimedia Data Management System) is a private data management platform that helps you easily manage your personal media library, supporting movie management, automatic metadata scraping, multi-platform deployment, and more.
+keywords: [AMMDS, media management, movie library, private data management, multimedia management]
+tags: []
 ---
-
 # Introduction
 
 AMMDS (Adult Movie MetaData Scraper) is a private data platform designed to help you manage and enjoy your personal media library.
@@ -29,34 +32,34 @@ One day, when we were discussing how to better save, share, organize, and collec
 
 AMMDS offers a comprehensive set of features to enhance your media library management experience:
 
-### 🎬 Movie Library Management
+### 馃幀 Movie Library Management
 Easily manage personal media libraries, support multiple video formats, automatically scrape metadata, and create exclusive media libraries.
 
-### 👤 Automatic Actor Recognition
+### 馃懁 Automatic Actor Recognition
 Automatically identify actor information in movies and TV series, provide detailed actor profiles and filmographies, making it easy to find and browse.
 
-### 📄 Automatic Metadata Scraping
+### 馃搫 Automatic Metadata Scraping
 Automatically obtain metadata for movies and TV series from the internet, including covers, introductions, ratings, etc., enriching your media library information.
 
-### 📤 Sharing Functionality
+### 馃摛 Sharing Functionality
 Support sharing media libraries with friends or family, easily share your media collections, and create a home theater experience.
 
-### 🔌 Plugin Integration
+### 馃攲 Plugin Integration
 Provide rich plugin support, easily integrate into existing media servers or players, and expand more functions.
 
-### 🌐 Multi-source Scraping
+### 馃寪 Multi-source Scraping
 Support scraping movie and TV series information from multiple data sources (such as TMDB, Douban, etc.), ensuring comprehensive and accurate data.
 
-### 🤖 Intelligent Matching
+### 馃 Intelligent Matching
 Automatically match local files with online metadata through intelligent algorithms, reducing manual operations and improving organization efficiency.
 
-### ⚡ Batch Processing
+### 鈿?Batch Processing
 Support batch processing of multiple video files, improving management efficiency.
 
-### 🏷️ Custom Tags
+### 馃彿锔?Custom Tags
 Support custom tags for personalized classification and management of film resources.
 
-### 🖥️ Cross-platform Support
+### 馃枼锔?Cross-platform Support
 Support running on multiple platforms such as Windows, macOS, Linux, manage your media library anytime, anywhere.
 
 ## Join Us

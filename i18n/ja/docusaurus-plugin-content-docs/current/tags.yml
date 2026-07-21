@@ -1,16 +1,99 @@
-plugin:
-  label: "Plugin"
-  permalink: "/plugin"
-  description: "プラグイン関連"
+deploy:
+  label: "デプロイ"
+  permalink: "/deploy"
+  description: "Docker、Windows、FnOS、1Panel、宝塔パネルなど、各プラットフォームへのデプロイ方法"
 
+tutorial:
+  label: "チュートリアル"
+  permalink: "/tutorial"
+  description: "入門ガイドとクイックスタートチュートリアル"
+
+usage:
+  label: "使い方"
+  permalink: "/usage"
+  description: "システム機能の使用方法と操作ガイド"
+
+config:
+  label: "設定"
+  permalink: "/config"
+  description: "スキャン、スクレイピング、サブスクリプションなどの各種ルール設定"
+
+scan:
+  label: "スキャン"
+  permalink: "/scan"
+  description: "ファイルスキャン関連機能"
+
+scrape:
+  label: "スクレイピング"
+  permalink: "/scrape"
+  description: "メタデータスクレイピング関連機能"
+
+subscribe:
+  label: "サブスクリプション"
+  permalink: "/subscribe"
+  description: "サブスクリプションルール関連設定"
+
+mount:
+  label: "マウント"
+  permalink: "/mount"
+  description: "ディレクトリマウントとデータストレージ"
+
+proxy:
+  label: "プロキシ"
+  permalink: "/proxy"
+  description: "ネットワークプロキシ設定"
+
+auth:
+  label: "認証"
+  permalink: "/auth"
+  description: "サイト認証と本人確認"
+
+environment:
+  label: "環境変数"
+  permalink: "/environment"
+  description: "環境変数の設定"
+
+faq:
+  label: "FAQ"
+  permalink: "/faq"
+  description: "よくある質問とトラブルシューティング"
+
+plugin:
+  label: "プラグイン"
+  permalink: "/plugin"
+  description: "プラグインの設定と使用方法"
 
 metadata:
-  label: "Metadata"
+  label: "メタデータ"
   permalink: "/metadata"
-  description: "メタデータ関連"
-
+  description: "メタデータプラグインの設定と使用方法"
 
 release:
-  label: "Release"
+  label: "リリース"
   permalink: "/release"
-  description: "リリース関連"
+  description: "バージョンリリースと更新情報"
+
+site-search:
+  label: "サイト検索"
+  permalink: "/site-search"
+  description: "サイト検索プラグインの設定と使用方法"
+
+push-notice:
+  label: "プッシュ通知"
+  permalink: "/push-notice"
+  description: "プッシュ通知プラグインの設定と使用方法"
+
+media-server:
+  label: "メディアサーバー"
+  permalink: "/media-server"
+  description: "メディアサーバープラグインの設定と使用方法"
+
+auxiliary:
+  label: "補助機能"
+  permalink: "/auxiliary"
+  description: "補助機能プラグインの設定と使用方法"
+
+downloader:
+  label: "ダウンローダー"
+  permalink: "/downloader"
+  description: "ダウンローダープラグインの設定と使用方法"

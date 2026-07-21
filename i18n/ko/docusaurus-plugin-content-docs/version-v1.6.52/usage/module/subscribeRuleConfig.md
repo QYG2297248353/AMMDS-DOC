@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
-sidebar_label: "구독 규칙 구성"
+sidebar_label: 구독 규칙 구성
+title: 구독 규칙 설정
+description: "구독 규칙 설정은 시스템이 원하는 리소스의 종류를 지정합니다. 자막 우선순위, 검색 순서, 다운로드 디렉토리 등의 설정을 포함합니다."
+keywords: [AMMDS, 구독 규칙, 리소스 구독, 다운로드 설정]
+tags: [usage, config, subscribe]
 ---
 
 # 구독 규칙 구성

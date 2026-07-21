@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Execute Scrape Task"
+title: "Executing Scrape Tasks"
+description: "Scrape tasks are the second step in organizing movies. The system automatically fetches movie metadata based on scrape rules and organizes files to the specified location."
+keywords: [AMMDS, scrape task, metadata, movie scraping]
+tags: [usage, scrape]
 ---
 
 # Execute Scrape Task

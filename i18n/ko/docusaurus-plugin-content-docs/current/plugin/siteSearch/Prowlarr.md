@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Prowlarr"
+title: "Prowlarr"
+description: "Prowlarr는 미디어 자동화를 위해 설계된 인덱서 관리 도구로, BT 트래커와 Usenet 인덱서를 통합 관리하고 Sonarr, Radarr 등의 애플리케이션과 원활하게 동기화됩니다."
+keywords: [Prowlarr, 인덱서, BT, Usenet, Sonarr]
+tags: [plugin, site-search]
 ---
 
 # Prowlarr

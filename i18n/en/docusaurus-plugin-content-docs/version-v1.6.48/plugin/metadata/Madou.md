@@ -1,11 +1,14 @@
----
+﻿---
 sidebar_position: 3
-sidebar_label: "麻豆传媒映画"
+sidebar_label: 楹昏眴浼犲獟鏄犵敾
+title: Madou Media
+description: The Madou Media plugin allows AMMDS to collect movie and actor information from Madou Media, with metadata caching support.
+keywords: [Madou Media, metadata, actor information, video collection, plugin]
+tags: [plugin, metadata]
 ---
+# 楹昏眴浼犲獟鏄犵敾
 
-# 麻豆传媒映画
-
-麻豆传媒映画 is a media company focused on adult content production and distribution, registered in California, USA, with server infrastructure deployed within the United States. This plugin provides AMMDS with the ability to collect video and actor metadata from 麻豆传媒映画.
+楹昏眴浼犲獟鏄犵敾 is a media company focused on adult content production and distribution, registered in California, USA, with server infrastructure deployed within the United States. This plugin provides AMMDS with the ability to collect video and actor metadata from 楹昏眴浼犲獟鏄犵敾.
 
 ## Plugin Configuration
 

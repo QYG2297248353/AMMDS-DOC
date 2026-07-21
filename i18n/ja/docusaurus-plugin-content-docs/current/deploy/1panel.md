@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
 sidebar_label: "1Panel"
+title: "1Panel デプロイガイド"
+description: "1Panel サーバー管理パネルのアプリストアを使って AMMDS をデプロイする方法を紹介します。インストール、設定、アクセス管理について説明します。"
+keywords: [AMMDS, 1Panel, サーバーパネル, アプリストア, デプロイ]
+tags: [deploy]
 ---
 
 # 1Panel デプロイガイド

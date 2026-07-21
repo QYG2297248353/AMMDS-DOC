@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Emby"
+title: "Emby"
+description: "Emby 플러그인은 AMMDS를 Emby 미디어 서버와 연결하여 메타데이터 동기화 및 미디어 라이브러리 관리를 실현합니다."
+keywords: [Emby, 미디어 서버, 메타데이터 동기화, 미디어 라이브러리 관리, 플러그인]
+tags: [plugin, media-server]
 ---
 
 # Emby

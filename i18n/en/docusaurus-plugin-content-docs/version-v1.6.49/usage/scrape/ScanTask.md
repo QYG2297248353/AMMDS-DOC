@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
 sidebar_label: "Create Scan Task"
+title: Create Scan Task
+description: Creating a scan task is the first step in organizing movies. The system searches for movie files in specified folders based on scan rules and generates a pending list.
+keywords: [AMMDS, scan task, file scanning, organization mode]
+tags: [usage, scan]
 ---
-
 # Create Scan Task
 
 Scan task is the first step in the scraping process, used to scan files in the target directory according to scan rules and generate scan result files. Through scan tasks, you can selectively scrape files, improve scraping efficiency, and avoid scraping junk files.

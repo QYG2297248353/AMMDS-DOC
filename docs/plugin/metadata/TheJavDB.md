@@ -9,6 +9,10 @@ sidebar_label: "TheJavDB"
 
 # TheJavDB
 
+本文介绍 TheJavDB 插件的配置方法，用于获取 JAV 影片的标题、演员、发行日期等元数据信息。
+
+{/* truncate */}
+
 TheJavDB 是一个 JAV（日本成人视频）元数据数据库，提供全面的影片信息检索功能。通过 TheJavDB 插件，AMMDS 可以自动获取影片的标题、演员、发行日期、片商、类别等元数据，帮你快速构建完整的媒体库信息。
 
 官网：[https://thejavdb.net/](https://thejavdb.net/)

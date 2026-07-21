@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: "番号補完設定"
+sidebar_label: 番号補完設定
+title: 番号補完設定
+description: 番号補完は補助機能で、映像番号を識別する際に不足部分を自動補完し、認識結果の精度を高めます。
+keywords: [AMMDS, 番号補完, 映像番号, 正規表現マッチング]
+tags: [usage, config]
 ---
 
 # 番号補完設定

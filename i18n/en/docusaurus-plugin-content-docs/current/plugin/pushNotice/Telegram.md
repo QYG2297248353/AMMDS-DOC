@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Telegram"
+title: "Telegram"
+description: "The Telegram plugin lets AMMDS send real-time push notifications via Telegram bots, supporting text, images, and other message formats."
+keywords: [Telegram, push notification, bot, message push]
+tags: [plugin, push-notice]
 ---
 
 # Telegram

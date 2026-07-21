@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 2
 sidebar_label: "Scrape Configuration"
+title: Scrape Configuration
+description: Scrape configuration is used to set how to retrieve movie information from the internet and file organization formats, including character filtering, directory organization, etc.
+keywords: [AMMDS, scrape configuration, scraping rules, metadata scraping, file organization]
+tags: [usage, config, scrape]
 ---
-
 # Scrape Configuration
 
 Scrape configuration is used to set how the system obtains movie metadata from the network, how to organize file directory structure, and other scrape-related parameters before task execution, ensuring the scrape process can efficiently and accurately obtain and organize movie resources.
@@ -268,5 +271,5 @@ The following is a typical scrape configuration example:
 ### Q: How to customize directory structure?
 
 **A**: By combining variables provided by the system, for example:
-- `${studio}/${actor}/${number}`: Organize by studio → actor → number hierarchy
-- `${year}/${month}/${title_safe}`: Organize by year → month → title hierarchy
+- `${studio}/${actor}/${number}`: Organize by studio 鈫?actor 鈫?number hierarchy
+- `${year}/${month}/${title_safe}`: Organize by year 鈫?month 鈫?title hierarchy

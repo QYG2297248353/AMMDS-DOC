@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
-sidebar_label: "NexusPHP"
+sidebar_label: NexusPHP
+title: NexusPHP
+description: "NexusPHP 플러그인은 PT 사이트의 사이트 검색 및 관리를 지원합니다. 검색 기능, 사용자 정보 동기화 및 알림을 제공합니다."
+keywords: [NexusPHP, PT, 사이트 검색, 프라이빗 트래커, Zhejiang University]
+tags: [plugin, site-search]
 ---
 
 # NexusPHP

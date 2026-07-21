@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: "飛牛Nas"
+sidebar_label: 飛牛Nas
+title: 飛牛 FnOS デプロイガイド
+description: 飛牛 FnOS システムで FPK オフラインアプリインストールまたは Docker を使用して AMMDS をデプロイする方法を説明します。
+keywords: [AMMDS, 飛牛FnOS, Nas, FPK, Dockerデプロイ]
+tags: [deploy]
 ---
 
 # 飛牛 FnOS デプロイガイド

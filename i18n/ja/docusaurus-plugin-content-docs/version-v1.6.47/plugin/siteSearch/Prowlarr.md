@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
-sidebar_label: "Prowlarr"
+sidebar_label: Prowlarr
+title: Prowlarr
+description: Prowlarr はメディア自動化のためのインデクサー管理ツールです。BT トラッカーと Usenet インデクサーを一元管理し、Sonarr、Radarr などのアプリとシームレスに同期します。
+keywords: [Prowlarr, インデクサー, BT, Usenet, Sonarr]
+tags: [plugin, site-search]
 ---
 
 # Prowlarr

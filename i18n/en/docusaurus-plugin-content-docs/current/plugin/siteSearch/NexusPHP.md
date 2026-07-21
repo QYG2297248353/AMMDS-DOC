@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "NexusPHP"
+title: "NexusPHP"
+description: "The NexusPHP plugin provides PT site search and management, supporting search functionality, user info sync, and alert notifications."
+keywords: [NexusPHP, PT, site search, private tracker]
+tags: [plugin, site-search]
 ---
 
 # NexusPHP

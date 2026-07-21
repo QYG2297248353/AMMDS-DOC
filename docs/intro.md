@@ -9,6 +9,10 @@ tags: []
 
 # 简介
 
+本文介绍 AMMDS 项目的整体概况，包括项目起源、核心功能和如何加入社区等信息。
+
+{/* truncate */}
+
 AMMDS (Advanced Multimedia Data Management System) 是一个私人数据管理平台，帮你轻松管理你的个人媒体库。
 
 :::warning[温馨提醒]

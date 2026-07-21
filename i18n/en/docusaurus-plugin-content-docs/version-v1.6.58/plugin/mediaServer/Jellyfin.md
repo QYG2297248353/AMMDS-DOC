@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "Jellyfin"
+sidebar_label: Jellyfin
+title: Jellyfin
+description: The Jellyfin plugin deeply integrates AMMDS with the Jellyfin media server, enabling metadata synchronization, automatic actor avatar completion, and more.
+keywords: [Jellyfin, media server, metadata synchronization, avatar completion, open source]
+tags: [plugin, media-server]
 ---
-
 # Jellyfin
 
 Jellyfin is an open-source multimedia management application suite designed for organizing, managing, and sharing digital media files. Through this plugin, AMMDS can establish deep integration with Jellyfin media server to implement advanced features such as metadata synchronization and automatic actor avatar completion.
@@ -28,7 +31,7 @@ Jellyfin is an open-source multimedia management application suite designed for 
 ### Configuration Notes
 
 - **Service Address**: Please use the server's actual network address. Avoid using `localhost` or `127.0.0.1`, as this may cause connection failures in containerized deployments
-- **API Key**: Can be generated in the Jellyfin management interface under "System" → "Advanced" → "API Keys"
+- **API Key**: Can be generated in the Jellyfin management interface under "System" 鈫?"Advanced" 鈫?"API Keys"
 - **Bind User**: You must first enter the correct service address and API key and save before you can select a user from the dropdown list
 - **Auto Completion**: When enabled, the system will automatically complete missing actor avatars in the media library, provided that corresponding actor avatars have been added in AMMDS
 

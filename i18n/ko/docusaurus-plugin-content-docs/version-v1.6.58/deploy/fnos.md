@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: "飞牛Nas"
+sidebar_label: 飞牛Nas
+title: Fnos FnOS 배포 가이드
+description: Fnos FnOS 시스템에서 FPK 오프라인 앱 설치 또는 Docker를 통해 AMMDS를 배포하는 방법을 설명합니다.
+keywords: [AMMDS, FnosFnOS, Nas, FPK, Docker 배포]
+tags: [deploy]
 ---
 
 # 飞牛 FnOS 배포 가이드

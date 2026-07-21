@@ -2,7 +2,7 @@
 slug: ammds-release-v1.0.23
 title: 发布 AMMDS v1.0.23 — 漫画刮削上线
 authors: [ms]
-tags: [ammds, release]
+tags: [ammds, release, feature]
 date: 2025-04-15
 ---
 

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Scan Configuration"
+title: "Scan Configuration"
+description: "Scan configuration tells the system how to handle files during scanning, including format restrictions, ignore directories, and file recognition rules."
+keywords: [AMMDS, scan configuration, scan rules, file recognition]
+tags: [usage, config, scan]
 ---
 
 # Scan Configuration

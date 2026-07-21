@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 2
-sidebar_label: "ThePornDB"
+sidebar_label: ThePornDB
+title: ThePornDB
+description: ThePornDB is a professional adult video metadata management tool that supports automatic video metadata matching, compatible with mainstream media servers like Plex and Jellyfin.
+keywords: [ThePornDB, metadata, Stash-Box, video management, scraping]
+tags: [plugin, metadata]
 ---
-
 # ThePornDB
 
 ThePornDB is a professional adult video metadata management tool primarily used for renaming video files, ensuring that media server plugins like Plex, Jellyfin, and Stash scripts can automatically match metadata without manual intervention. The tool supports both server mode and command-line mode operation, providing an efficient solution for media library management.
@@ -11,11 +14,11 @@ Official Website: [https://theporndb.net/](https://theporndb.net/)
 
 ## Core Features
 
-- 🎯 **Automatic Matching**: Intelligently identifies video files and automatically matches corresponding metadata
-- 🔧 **Multi-Mode Operation**: Supports both server mode and command-line mode
-- 🌍 **Multi-Platform Compatibility**: Seamlessly integrates with mainstream media servers like Plex and Jellyfin
-- 📦 **Rich Data Sources**: Provides comprehensive video metadata information
-- 🔗 **Stash-Box Support**: Compatible with Stash-Box metadata management system
+- 馃幆 **Automatic Matching**: Intelligently identifies video files and automatically matches corresponding metadata
+- 馃敡 **Multi-Mode Operation**: Supports both server mode and command-line mode
+- 馃實 **Multi-Platform Compatibility**: Seamlessly integrates with mainstream media servers like Plex and Jellyfin
+- 馃摝 **Rich Data Sources**: Provides comprehensive video metadata information
+- 馃敆 **Stash-Box Support**: Compatible with Stash-Box metadata management system
 
 # Stash-Box
 
@@ -71,7 +74,7 @@ Log in to the selected Stash-Box instance, generate and obtain an API key in use
 
 ### Configuration Information
 
-In the AMMDS management interface, access the configuration page through "Integrated Applications" → "Metadata" → "ThePornDB".
+In the AMMDS management interface, access the configuration page through "Integrated Applications" 鈫?"Metadata" 鈫?"ThePornDB".
 
 ![ThePornDB Plugin Configuration](/img/plugin/theporndb-01.png)
 

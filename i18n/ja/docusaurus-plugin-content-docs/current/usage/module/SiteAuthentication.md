@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "サイト認証"
+title: "サイト認証"
+description: "サイト認証機能により、システムがサイトと連携して認証を行います。認証後はランキングや検索などの高度な機能が利用可能になります。"
+keywords: [AMMDS, サイト認証, UID, PassKey, 身元認証]
+tags: [usage, auth]
 ---
 
 # サイト認証

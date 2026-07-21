@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
-sidebar_label: "スクレイピング設定"
+sidebar_label: スクレイピング設定
+title: スクレイピング設定
+description: スクレイピング設定は、インターネットから映画情報を取得する方法とファイル整理形式を設定します。文字フィルタリング、ディレクトリ整理などを含みます。
+keywords: [AMMDS, スクレイピング設定, スクレイピングルール, メタデータ取得, ファイル整理]
+tags: [usage, config, scrape]
 ---
 
 # スクレイピング設定

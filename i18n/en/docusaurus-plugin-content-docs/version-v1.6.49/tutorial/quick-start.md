@@ -1,15 +1,18 @@
----
+﻿---
 sidebar_position: 2
 sidebar_label: "Quick Start"
+title: Quick Start
+description: Learn about the various deployment methods for AMMDS, including Windows, FnOS NAS, and Docker deployment.
+keywords: [AMMDS, quick start, deployment guide, Docker, installation]
+tags: [tutorial, deploy]
 ---
-
 # Quick Start
 
 :::info
 Welcome to AMMDS! This guide will help you deploy AMMDS using one of the supported methods: Windows, Feiniu Nas, or Docker.
 :::
 
-## 🚀 Deployment Methods
+## 馃殌 Deployment Methods
 
 ### Windows Deployment
 
@@ -76,7 +79,7 @@ docker run -itd \
 
 ---
 
-## 🌐 Accessing the Service
+## 馃寪 Accessing the Service
 
 After successful deployment, access AMMDS through your web browser:
 
@@ -84,14 +87,14 @@ After successful deployment, access AMMDS through your web browser:
 2. Navigate to `http://localhost:8080` (replace `localhost` with your server's IP if deploying remotely)
 3. You will see the AMMDS login page
 
-### 📝 Default Credentials
+### 馃摑 Default Credentials
 
 | Credential | Value |
 |------------|-------|
 | **Username** | `ammds` |
 | **Password** | `ammds` |
 
-### 💡 First Time Access Tips
+### 馃挕 First Time Access Tips
 
 :::warning
 If you don't see the login page immediately, please be patient. The system may still be downloading and initializing resources in the background. This process can take a few minutes depending on your network speed.
@@ -101,7 +104,7 @@ If you don't see the login page immediately, please be patient. The system may s
 - Explore the intuitive dashboard to familiarize yourself with AMMDS features
 - Check the system status in the bottom right corner to ensure all services are running
 
-## 📋 Next Steps
+## 馃搵 Next Steps
 
 1. **Check the Documentation**: Review the [Introduction](/docs/intro) for detailed usage instructions
 2. **Configure Preferences**: Customize your experience in the Settings menu
@@ -110,4 +113,4 @@ If you don't see the login page immediately, please be patient. The system may s
 
 ---
 
-Enjoy using AMMDS! 🎉
+Enjoy using AMMDS! 馃帀

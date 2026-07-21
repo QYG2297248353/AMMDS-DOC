@@ -2,7 +2,7 @@
 slug: kung-fu-soccer
 title: 功夫女足：25 年后，周星驰还给女足的一封情书
 authors: [ms]
-tags: [movie, stephen-chow, comedy]
+tags: [movie, stephen-chow, comedy, classic]
 date: 2026-12-05
 ---
 

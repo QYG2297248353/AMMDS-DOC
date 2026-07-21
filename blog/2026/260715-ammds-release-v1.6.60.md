@@ -2,7 +2,7 @@
 slug: ammds-release-v1.6.60
 title: 发布 AMMDS v1.6.60
 authors: [ms]
-tags: [ammds, release]
+tags: [ammds, release, feature]
 date: 2026-07-15
 ---
 

@@ -9,6 +9,10 @@ sidebar_label: "NexusPHP"
 
 # NexusPHP
 
+本文介绍 NexusPHP 插件的配置方法，用于 PT 站的站点搜索、用户信息同步和告警通知。
+
+{/* truncate */}
+
 NexusPHP 是由浙江大学的 Nexus 团队开发的一款开源软件，专门用来搭建 PT 站（Private Tracker，即私有种子服务器，是 BT 下载的一种）。它注重用户的信誉和知识分享，帮助大家建立有序的资源分享社区。
 
 :::info[私有站点说明]

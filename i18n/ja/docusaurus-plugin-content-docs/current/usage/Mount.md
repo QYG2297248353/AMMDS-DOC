@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "マウント関係"
+title: "マウント関係の詳細説明"
+description: "AMMDS のマウント関係についてわかりやすく説明します。Docker デプロイ時のマウント、メディア整理のマウントロジック、データの流れについて解説します。"
+keywords: [AMMDS, マウント, Docker, メディア整理, データディレクトリ]
+tags: [usage, mount]
 ---
 
 # マウント関係の詳細説明

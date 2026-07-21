@@ -9,6 +9,10 @@ tags: [deploy]
 
 # Docker Compose
 
+本文详细介绍如何使用 Docker Compose 部署 AMMDS，包括配置文件编写、云盘特殊配置和服务管理等步骤。
+
+{/* truncate */}
+
 Docker Compose 就是一个"一键启动工具"。如果你需要启动好几个容器配合工作，手打一堆命令太麻烦，Compse 让你把所有配置写在一个文件里，以后只需要敲一行命令就能全部搞定。
 
 ## 创建服务

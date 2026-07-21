@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
-sidebar_label: "ThePornDB"
+sidebar_label: ThePornDB
+title: ThePornDB
+description: ThePornDB はプロフェッショナルな成人動画メタデータ管理ツールです。動画メタデータの自動マッチングをサポートし、Plex、Jellyfin などの主流メディアサーバーと互換性があります。
+keywords: [ThePornDB, メタデータ, Stash-Box, 動画管理, スクレイピング]
+tags: [plugin, metadata]
 ---
 
 # ThePornDB

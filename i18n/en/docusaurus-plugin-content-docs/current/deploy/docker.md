@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Docker"
+title: "Docker"
+description: "Learn how to deploy AMMDS with Docker in one click, including basic commands, parameter descriptions, and cloud drive special configuration."
+keywords: [AMMDS, Docker, container deployment, cloud drive, one-click run]
+tags: [deploy]
 ---
 
 # Docker

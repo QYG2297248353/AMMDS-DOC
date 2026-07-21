@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "WebHook"
+title: "WebHook"
+description: "WebHook 플러그인은 AMMDS가 지정된 WebHook 주소로 푸시 알림을 보내고 타사 서비스와 연동할 수 있도록 합니다. 사용자 정의 요청 헤더 및 본문을 지원합니다."
+keywords: [WebHook, 푸시 알림, 이벤트 콜백, 시스템 통합, 자동화]
+tags: [plugin, push-notice]
 ---
 
 # WebHook

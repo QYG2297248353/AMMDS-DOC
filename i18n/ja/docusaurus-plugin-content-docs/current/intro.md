@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "概要"
+title: "概要"
+description: "AMMDS (Advanced Multimedia Data Management System) は、個人メディアライブラリを簡単に管理できるプライベートデータ管理プラットフォームです。映画管理、自動メタデータ取得、マルチプラットフォーム展開などの機能をサポートします。"
+keywords: [AMMDS, メディア管理, ムービーライブラリ, プライベートデータ管理, マルチメディア管理]
+tags: []
 ---
 
 # 概要

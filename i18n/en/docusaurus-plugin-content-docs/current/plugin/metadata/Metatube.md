@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Metatube"
+title: "Metatube"
+description: "MetaTube is an open-source tool that scrapes video information for media servers like Jellyfin, Emby, and Plex, with high-precision Chinese resource recognition."
+keywords: [MetaTube, metadata, scraping, poster wall, Jellyfin]
+tags: [plugin, metadata]
 ---
 
 # Metatube

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
-sidebar_label: "M-Team"
+sidebar_label: M-Team
+title: M-Team
+description: M-Team is a comprehensive discussion forum plugin providing various discussion boards and group features, with API integration and account protection notifications.
+keywords: [M-Team, site search, forum, PT, API]
+tags: [plugin, site-search]
 ---
-
 # M-Team
 
 M-Team is a comprehensive discussion forum with diverse discussion sections and combined groups, providing discussion on current affairs and information worldwide.

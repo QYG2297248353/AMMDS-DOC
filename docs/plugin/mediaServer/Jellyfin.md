@@ -9,6 +9,10 @@ sidebar_label: "Jellyfin"
 
 # Jellyfin
 
+本文介绍 Jellyfin 插件的配置方法，让 AMMDS 与 Jellyfin 媒体服务器深度集成，实现元数据同步和演员头像自动补全。
+
+{/* truncate */}
+
 Jellyfin 是一套开源的多媒体管理工具，专门用来整理、管理和分享你的数字媒体文件。通过这个插件，AMMDS 可以和 Jellyfin 媒体服务器深度集成，实现元数据同步、演员头像自动补全等功能。
 
 ## 插件配置

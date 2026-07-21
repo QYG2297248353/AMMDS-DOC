@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Quick Start"
+title: "Quick Start"
+description: "Quickly learn about the various deployment methods for AMMDS, including Windows, FnOS, QNAP NAS, and Docker deployment."
+keywords: [AMMDS, quick start, deployment guide, Docker, installation]
+tags: [tutorial, deploy]
 ---
 
 # Quick Start

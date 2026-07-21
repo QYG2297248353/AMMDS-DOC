@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "Scrape Configuration"
+title: "Scrape Configuration"
+description: "Scrape configuration tells the system how to fetch movie information from the internet and how to format organized files, including character filtering and directory organization."
+keywords: [AMMDS, scrape configuration, scrape rules, metadata scraping, file organization]
+tags: [usage, config, scrape]
 ---
 
 # Scrape Configuration

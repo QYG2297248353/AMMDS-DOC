@@ -2,7 +2,7 @@
 slug: jellyfin-vs-emby-vs-plex
 title: 开源媒体服务器三强对比：Jellyfin vs Emby vs Plex
 authors: [ms]
-tags: [tutorial]
+tags: [comparison, tutorial, guide]
 date: 2025-07-01
 ---
 

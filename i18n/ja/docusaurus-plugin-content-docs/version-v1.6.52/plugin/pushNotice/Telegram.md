@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "Telegram"
+sidebar_label: Telegram
+title: Telegram
+description: Telegram プラグインを使用して AMMDS が Telegram ボット経由でリアルタイムプッシュ通知を送信できます。テキスト、画像など複数のメッセージ形式をサポートします。
+keywords: [Telegram, プッシュ通知, ボット, Bot, メッセージ配信]
+tags: [plugin, push-notice]
 ---
 
 # Telegram

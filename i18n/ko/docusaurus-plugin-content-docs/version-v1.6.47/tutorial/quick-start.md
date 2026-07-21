@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
-sidebar_label: "빠른 시작"
+sidebar_label: 빠른 시작
+title: 빠른 시작
+description: "AMMDS의 다양한 배포 방법을 빠르게 이해할 수 있습니다. Windows, Fnos Nas, QNAP Nas 및 Docker 배포 방법을 포함합니다."
+keywords: [AMMDS, 빠른 시작, 배포 가이드, Docker, 설치]
+tags: [tutorial, deploy]
 ---
 
 # 빠른 시작

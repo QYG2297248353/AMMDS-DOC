@@ -2,7 +2,7 @@
 slug: pt-ecosystem-intro
 title: PT 站点生态入门：从 NexusPHP 到多站统一管理
 authors: [ms]
-tags: [tutorial, ammds]
+tags: [tutorial, guide, ammds]
 date: 2025-04-01
 ---
 

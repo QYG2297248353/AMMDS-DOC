@@ -9,6 +9,10 @@ sidebar_label: "Metatube"
 
 # Metatube
 
+本文介绍 MetaTube 插件的部署和配置方法，用于为 Jellyfin、Emby 等媒体服务器抓取影片元数据。
+
+{/* truncate */}
+
 MetaTube 是一个开源工具，专门给 Jellyfin、Emby 和 Plex 这类媒体服务器抓取影片信息。它能自动获取海报、简介、演员、制作公司、评分等数据。这个插件特别擅长识别中文资源，通过自建 API 帮你把媒体库整理成漂亮的「海报墙」。
 
 ## 特性

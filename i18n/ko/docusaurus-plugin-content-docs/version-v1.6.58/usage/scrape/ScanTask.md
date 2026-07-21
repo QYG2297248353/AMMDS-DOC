@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "스캔 작업 생성"
+sidebar_label: 스캔 작업 생성
+title: 스캔 작업 생성
+description: 스캔 작업 생성은 영화 정리의 첫 번째 단계입니다. 시스템이 스캔 규칙에 따라 지정된 폴더에서 영화 파일을 검색하고 대기 목록을 생성합니다.
+keywords: [AMMDS, 스캔 작업, 파일 스캔, 정리 모드]
+tags: [usage, scan]
 ---
 
 # 스캔 작업 생성

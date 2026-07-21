@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "소개"
+sidebar_label: 소개
+title: 소개
+description: "AMMDS (Advanced Multimedia Data Management System)는 개인 미디어 라이브러리를 쉽게 관리할 수 있는 개인 데이터 플랫폼입니다. 영화 관리, 자동 메타데이터 수집, 멀티플랫폼 배포 등의 기능을 지원합니다."
+keywords: [AMMDS, 미디어 관리, 영화 라이브러리, 개인 데이터 관리, 멀티미디어 관리]
+tags: []
 ---
 
 # 소개

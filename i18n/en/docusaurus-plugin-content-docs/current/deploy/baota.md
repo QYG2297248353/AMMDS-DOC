@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "Baota Panel"
+title: "Baota Panel"
+description: "Learn how to deploy AMMDS on Baota Panel (bt.cn) via Docker management, including container creation, mount directory, and port configuration."
+keywords: [AMMDS, Baota Panel, Docker, server management, deployment]
+tags: [deploy]
 ---
 
 # Baota Panel

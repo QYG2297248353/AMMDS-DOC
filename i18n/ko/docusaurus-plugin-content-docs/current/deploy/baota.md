@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "宝塔 패널"
+title: "宝塔 패널"
+description: "宝塔 패널(bt.cn)에서 Docker 관리 기능을 통해 AMMDS를 배포하는 방법을 알아보세요. 컨테이너 생성, 마운트 디렉터리 및 포트 구성을 포함합니다."
+keywords: [AMMDS, 宝塔 패널, Docker, 서버 관리, 배포]
+tags: [deploy]
 ---
 
 # 宝塔 패널

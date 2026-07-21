@@ -9,6 +9,10 @@ sidebar_label: "ThePornDB"
 
 # ThePornDB
 
+本文介绍 ThePornDB 插件的配置方法，用于自动匹配成人视频元数据，兼容 Plex、Jellyfin 等媒体服务器。
+
+{/* truncate */}
+
 ThePornDB 是一个专业的成人视频元数据管理工具，主要功能是重命名视频文件，让 Plex、Jellyfin 等媒体服务器和 Stash 脚本能自动匹配元数据，不用你手动一个一个改。它支持服务器模式和命令行模式，管理媒体库很方便。
 
 官网：[https://theporndb.net/](https://theporndb.net/)

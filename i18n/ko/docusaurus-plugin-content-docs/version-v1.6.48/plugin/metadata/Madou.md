@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: "麻豆传媒映画"
+sidebar_label: 麻豆传媒映画
+title: Madou 미디어 영화
+description: Madou 미디어 영화 플러그인을 사용하여 AMMDS가 Madou 미디어의 영상 및 배우 정보를 수집할 수 있도록 합니다. 메타데이터 캐시 메커니즘을 지원합니다.
+keywords: [Madou 미디어, 메타데이터, 배우 정보, 영상 수집, 플러그인]
+tags: [plugin, metadata]
 ---
 
 # 麻豆传媒映画

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "Support Us"
+title: "Support Us"
+description: "Learn how to support the AMMDS project by becoming a member, sharing recommendations, contributing data, providing suggestions, or sponsoring."
+keywords: [AMMDS, support, sponsorship, open source, contribution]
+tags: [tutorial]
 ---
 
 # Support Us

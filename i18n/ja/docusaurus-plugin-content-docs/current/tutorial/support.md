@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "サポート"
+title: "サポート"
+description: "メンバーシップ、共有・推薦、データ貢献、提案、スポンサーなどを通じて AMMDS プロジェクトをサポートする方法をご紹介します。"
+keywords: [AMMDS, サポート, スポンサー, オープンソース, 貢献]
+tags: [tutorial]
 ---
 
 # サポート

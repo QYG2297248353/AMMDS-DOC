@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "마운트 관계"
+sidebar_label: 마운트 관계
+title: 마운트 관계 상세
+description: "AMMDS의 마운트 관계를 알기 쉽게 설명합니다. Docker 배포 시 마운트, 미디어 정리 마운트 로직 및 데이터 흐름을 포함합니다."
+keywords: [AMMDS, 마운트, Docker, 미디어 정리, 데이터 디렉토리]
+tags: [usage, mount]
 ---
 
 # 마운트 관계 상세 설명

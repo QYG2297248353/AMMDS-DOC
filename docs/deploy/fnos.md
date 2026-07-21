@@ -9,6 +9,10 @@ tags: [deploy]
 
 # 飞牛 FnOS 部署指南
 
+本文介绍如何在飞牛 FnOS 系统上通过 FPK 离线应用安装或 Docker 方式部署 AMMDS。
+
+{/* truncate */}
+
 飞牛 FnOS 是一款专为 NAS（家庭存储服务器）设计的系统，由骨灰级玩家团队打造，内置了 AI 本地模型，方便家庭和企业管理数据。下面介绍如何在飞牛 FnOS 上部署 AMMDS。
 
 ## 部署方式

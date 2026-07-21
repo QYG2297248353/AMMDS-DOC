@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 sidebar_label: "Site Authentication"
+title: "Site Authentication"
+description: "The site authentication feature lets the system authenticate with websites, granting access to advanced features like rankings and search after authentication."
+keywords: [AMMDS, site authentication, UID, PassKey, identity verification]
+tags: [usage, auth]
 ---
 
 # Site Authentication

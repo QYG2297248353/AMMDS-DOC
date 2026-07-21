@@ -2,7 +2,7 @@
 slug: docker-deploy-ammds
 title: Docker 部署 AMMDS 完整指南
 authors: [ms]
-tags: [tutorial, ammds]
+tags: [tutorial, guide, docker, ammds]
 date: 2025-10-01
 ---
 

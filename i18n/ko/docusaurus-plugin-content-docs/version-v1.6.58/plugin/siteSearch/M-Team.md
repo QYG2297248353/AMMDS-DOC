@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "M-Team"
+sidebar_label: M-Team
+title: M-Team
+description: M-Team은 종합 토론 포럼 플러그인입니다. 다양한 토론 게시판과 그룹 기능을 제공하며 API 통합 및 계정 보호 알림을 지원합니다.
+keywords: [M-Team, 사이트 검색, 토론장, PT, API]
+tags: [plugin, site-search]
 ---
 
 # M-Team

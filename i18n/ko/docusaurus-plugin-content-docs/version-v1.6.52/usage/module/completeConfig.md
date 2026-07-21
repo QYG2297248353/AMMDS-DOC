@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: "번호 완성 구성"
+sidebar_label: 번호 완성 구성
+title: 번호 완성 설정
+description: "번호 완성은 보조 기능으로, 영상 번호를 식별할 때 누락된 부분을 자동으로 보완하여 인식 결과의 정확도를 높입니다."
+keywords: [AMMDS, 번호 완성, 영상 번호, 정규식 매칭]
+tags: [usage, config]
 ---
 
 # 번호 완성 구성

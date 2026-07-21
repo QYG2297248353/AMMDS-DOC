@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
-sidebar_label: "Rousi"
+sidebar_label: Rousi
+title: Rousi
+description: Rousi(로우시)는 고품질 종합 사이트 검색 서비스를 제공하는 플러그인입니다. RSS 및 API 통합을 지원합니다.
+keywords: [Rousi, 로우시, 사이트 검색, RSS, API]
+tags: [plugin, site-search]
 ---
 
 # Rousi

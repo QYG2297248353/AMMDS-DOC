@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "WebHook"
+title: "WebHook"
+description: "The WebHook plugin lets AMMDS send push notifications to specified WebHook URLs, integrating with third-party services, supporting custom request headers and body."
+keywords: [WebHook, push notification, event callback, system integration, automation]
+tags: [plugin, push-notice]
 ---
 
 # WebHook

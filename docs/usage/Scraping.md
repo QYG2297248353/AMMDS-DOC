@@ -4,10 +4,14 @@ sidebar_label: "刮削流程"
 title: "刮削流程"
 description: "用大白话讲解 AMMDS 的刮削流程，包括从TMDB等网站获取元数据、分类整理电影数据。"
 keywords: [AMMDS, 刮削流程, Docker, 媒体整理, 数据目录]
-tags: [usage, scraping]
+tags: [usage, scrape]
 ---
 
 # 刮削流程详解
+
+本文详细讲解 AMMDS 的整套刮削流程，从挂载影视目录到扫描文件、识别影片编号、刮削元数据和整理文件。
+
+{/* truncate */}
 
 本文用大白话给你讲清楚 AMMDS 的整套刮削流程——从你挂载好影视目录开始，到扫描文件、识别影片编号、刮削元数据、整理文件，一步不落。
 

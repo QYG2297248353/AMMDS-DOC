@@ -1,6 +1,10 @@
 ---
 sidebar_position: 4
 sidebar_label: "Subscription Rule Configuration"
+title: "Subscription Rule Configuration"
+description: "Subscription rule configuration tells the system what kind of resources you want, including Chinese subtitle priority, search order, and download directory settings."
+keywords: [AMMDS, subscription rules, resource subscription, download configuration]
+tags: [usage, config, subscribe]
 ---
 
 # Subscription Rule Configuration

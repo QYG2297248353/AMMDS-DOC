@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 1
 sidebar_label: "Scan Configuration"
+title: Scan Configuration
+description: Scan configuration tells the system how to handle files when scanning, including format restrictions, ignore directories, file recognition rules, etc.
+keywords: [AMMDS, scan configuration, scan rules, file recognition]
+tags: [usage, config, scan]
 ---
-
 # Scan Configuration
 
 Scan configuration is used to set how the system identifies and processes media files before task execution, ensuring the scanning process can accurately and efficiently identify your movie resources.

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 99
-sidebar_label: "よくある質問"
+sidebar_label: よくある質問
+title: よくある質問
+description: AMMDS を使用する際によくあるデプロイや使用に関する問題とその解決方法をまとめました。Docker デプロイ、システム設定、プラグイン統合などのトラブルシューティングと修正を含みます。
+keywords: [AMMDS, よくある質問, トラブルシューティング, デプロイ問題, FAQ]
+tags: [faq]
 ---
 
 # よくある質問

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 2
 sidebar_label: "クイックスタート"
+title: "クイックスタート"
+description: "Windows、飛牛 Nas、QNAP Nas、Docker など、AMMDS の複数のデプロイ方法を簡単にご紹介します。"
+keywords: [AMMDS, クイックスタート, デプロイガイド, Docker, インストール]
+tags: [tutorial, deploy]
 ---
 
 # クイックスタート

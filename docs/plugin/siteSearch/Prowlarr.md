@@ -9,6 +9,10 @@ sidebar_label: "Prowlarr"
 
 # Prowlarr
 
+本文介绍 Prowlarr 插件的配置方法，用于统一管理 BT 种子站和 Usenet 索引器，实现影音自动化搜索。
+
+{/* truncate */}
+
 Prowlarr 是一个专为影音自动化设计的索引器管理工具，用 .NET/React 技术做的。它可以当做一个集中管理平台，统一管理几百个 BT 种子站和 Usenet 索引器，并且能和 Sonarr、Radarr、Lidarr、Readarr 这些应用无缝同步。
 
 官网：[https://prowlarr.com/](https://prowlarr.com/)

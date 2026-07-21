@@ -9,6 +9,10 @@ tags: [tutorial, deploy]
 
 # 快速入门
 
+本文介绍 AMMDS 的多种部署方式，包括 Windows、飞牛 Nas 和 Docker 部署方法。
+
+{/* truncate */}
+
 :::info
 欢迎使用 AMMDS！跟着本指南，你可以用 Windows、飞牛 Nas 或 Docker 来部署。
 :::

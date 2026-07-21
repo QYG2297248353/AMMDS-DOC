@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
 sidebar_label: "지원하기"
+title: "지원하기"
+description: "멤버십 가입, 공유 및 추천, 데이터 기여, 제안 제출 또는 후원 등을 통해 AMMDS 프로젝트를 지원하는 방법을 알아보세요."
+keywords: [AMMDS, 지원, 후원, 오픈 소스, 기여]
+tags: [tutorial]
 ---
 
 # 지원하기

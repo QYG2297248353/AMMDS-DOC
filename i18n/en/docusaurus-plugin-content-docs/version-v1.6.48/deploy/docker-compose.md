@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 2
 sidebar_label: "Docker Compose"
+title: Docker Compose
+description: Learn how to deploy AMMDS with Docker Compose, including configuration file writing, special cloud drive configuration, and service management.
+keywords: [AMMDS, Docker Compose, container orchestration, deployment, configuration]
+tags: [deploy]
 ---
-
 # Docker Compose 
 
 Docker Compose is a tool for defining and running multi-container Docker applications. With a single YAML file (docker-compose.yml), you can configure all the services of your application, and then start all services with just one command. It's ideal for quick deployment and management in development, testing, and staging environments.

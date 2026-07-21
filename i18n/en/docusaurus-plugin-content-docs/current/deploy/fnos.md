@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "FnOS"
+title: "FnOS Deployment Guide"
+description: "Learn how to deploy AMMDS on FnOS via FPK offline app installation or Docker."
+keywords: [AMMDS, FnOS, Nas, FPK, Docker deployment]
+tags: [deploy]
 ---
 
 # FnOS Deployment Guide

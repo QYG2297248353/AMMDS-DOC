@@ -2,7 +2,7 @@
 slug: stephen-chow-director-era
 title: 周星驰导演时代：功夫到美人鱼的商业传奇（2004-至今）
 authors: [ms]
-tags: [movie, stephen-chow, comedy]
+tags: [movie, stephen-chow, comedy, classic]
 date: 2026-11-10
 ---
 

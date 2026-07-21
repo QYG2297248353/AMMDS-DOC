@@ -1,6 +1,10 @@
 ---
 sidebar_position: 3
 sidebar_label: "Rousi"
+title: "Rousi"
+description: "Rousi（肉丝）は高品質な総合サイト検索サービスを提供するプラグインで、RSS および API 統合をサポートします。"
+keywords: [Rousi, 肉丝, サイト検索, RSS, API]
+tags: [plugin, site-search]
 ---
 
 # Rousi

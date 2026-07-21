@@ -1,6 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 sidebar_label: "Fanza DMM"
+title: "Fanza DMM"
+description: "The Fanza DMM plugin provides metadata collection from the FANZA platform, supporting ranking data and video search."
+keywords: [Fanza, DMM, metadata, ranking, video search]
+tags: [plugin, metadata]
 ---
 
 # Fanza DMM

@@ -1,6 +1,10 @@
 ---
 sidebar_position: 1
-sidebar_label: "サポートする"
+sidebar_label: サポートする
+title: サポート
+description: メンバー登録、共有・推薦、データ提供、提案、スポンサーなど、AMMDS プロジェクトをサポートする方法を紹介します。
+keywords: [AMMDS, サポート, スポンサー, オープンソース, 貢献]
+tags: [tutorial]
 ---
 
 # サポートする

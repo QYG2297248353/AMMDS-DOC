@@ -1,28 +1,31 @@
----
+﻿---
 sidebar_position: 99
-sidebar_label: "Q&A"
+sidebar_label: Q&A
+title: Frequently Asked Questions
+description: A collection of common deployment and usage issues when using AMMDS and their solutions, including Docker deployment, system configuration, plugin integration troubleshooting and fixes.
+keywords: [AMMDS, FAQ, troubleshooting, deployment issues]
+tags: [faq]
 ---
-
 # Q&A
 
 Problems frequently encountered during use.
 
-## 🚀 Deployment Issues
+## 馃殌 Deployment Issues
 
 <details>
-  <summary>🔍 Log shows CPU does not support x86-64-v2?</summary>
+  <summary>馃攳 Log shows CPU does not support x86-64-v2?</summary>
   
   Your device's CPU is too old. You can choose images with the `ol8` tag.
 </details>
 
 <details>
-  <summary>⌛ Why is there no response after the first deployment?</summary>
+  <summary>鈱?Why is there no response after the first deployment?</summary>
   
   During the first deployment, the system needs to download and initialize necessary resource files, which takes some time. Please wait a few minutes. If there's still no response, try refreshing the page.
 </details>
 
 <details>
-  <summary>⏬ Resource download is very slow?</summary>
+  <summary>鈴?Resource download is very slow?</summary>
   
   Due to the large size of resource files, the download speed may be slow. You can try the following methods to speed it up:
   - Change network environment, such as configuring HTTP_PROXY and HTTPS_PROXY environment variables to accelerate the network
@@ -30,7 +33,7 @@ Problems frequently encountered during use.
 </details>
 
 <details>
-  <summary>📁 Monitoring directory registration failed, and the startup exits immediately?</summary>
+  <summary>馃搧 Monitoring directory registration failed, and the startup exits immediately?</summary>
   
   This usually happens due to incorrect configuration files or environment variables. Please check if the application's configuration files are correct and ensure environment variables are set properly.
   
@@ -51,22 +54,22 @@ Problems frequently encountered during use.
 
 ---
 
-## 💡 Usage Issues
+## 馃挕 Usage Issues
 
 <details>
-  <summary>🖱️ Why is there no response when clicking the menu?</summary>
+  <summary>馃柋锔?Why is there no response when clicking the menu?</summary>
   
   This usually happens because the page is temporarily stuck or resources are not fully loaded. Try refreshing the page. If the problem persists, check the browser console for error messages.
 </details>
 
 <details>
-  <summary>⚪ Why is it a white screen after opening?</summary>
+  <summary>鈿?Why is it a white screen after opening?</summary>
   
   This is usually caused by incomplete loading of web resources. Try refreshing the page. If the problem persists, check the browser console for error messages. It is recommended to keep the network connection stable to avoid network fluctuations.
 </details>
 
 <details>
-  <summary>☁️ How to mount cloud disk .strm files?</summary>
+  <summary>鈽侊笍 How to mount cloud disk .strm files?</summary>
   
   Cloud disk users can first mount cloud disk files locally (.strm) through Alist, alist-strm, NetMount, etc., and then mount them to the application.
   
@@ -74,7 +77,7 @@ Problems frequently encountered during use.
 </details>
 
 <details>
-  <summary>🌍 Timezone error, system time is incorrect?</summary>
+  <summary>馃實 Timezone error, system time is incorrect?</summary>
   
   This usually happens because the application's timezone is inconsistent with the server's timezone. Please check if the application's timezone settings are correct and ensure they are consistent with the server's timezone.
   
@@ -88,7 +91,7 @@ Problems frequently encountered during use.
 </details>
 
 <details>
-  <summary>🔌 [Metatube] 404 (Not Found)</summary>
+  <summary>馃攲 [Metatube] 404 (Not Found)</summary>
   
   Check if the MetaTube plugin's server address is configured correctly. If you are using a custom domain, ensure the domain resolution is correct. If you are using a reverse proxy, ensure the reverse proxy configuration is correct. Check if the MetaTube container logs are normal and ensure there are no error messages. 
   

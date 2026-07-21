@@ -1,6 +1,10 @@
 ---
 sidebar_position: 5
 sidebar_label: "네트워크 프록시 구성"
+title: "네트워크 프록시 구성"
+description: "네트워크 프록시 구성은 프로그램이 인터넷에 접속할 때 사용할 프록시 서버를 설정합니다. HTTP, SOCKS4, SOCKS5 프로토콜을 지원합니다."
+keywords: [AMMDS, 프록시 구성, 네트워크 프록시, HTTP 프록시, SOCKS 프록시]
+tags: [usage, config, proxy]
 ---
 
 # 네트워크 프록시 구성

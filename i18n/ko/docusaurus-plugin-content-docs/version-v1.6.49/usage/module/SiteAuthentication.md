@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
-sidebar_label: "사이트 인증"
+sidebar_label: 사이트 인증
+title: 사이트 인증
+description: "사이트 인증 기능을 통해 시스템이 사이트와 연동하여 신원을 확인합니다. 인증 후에는 순위, 검색 등의 고급 기능을 사용할 수 있습니다."
+keywords: [AMMDS, 사이트 인증, UID, PassKey, 신원 확인]
+tags: [usage, auth]
 ---
 
 # 사이트 인증

@@ -9,6 +9,10 @@ sidebar_label: "WebHook"
 
 # WebHook
 
+本文介绍 WebHook 插件的配置方法，用于向指定地址发送系统事件推送通知，与第三方服务对接。
+
+{/* truncate */}
+
 WebHook 插件让 AMMDS 能向指定的 WebHook 地址发推送通知，让你实时收到系统事件的通知。通过 WebHook，你可以把 AMMDS 的各种事件（比如任务完成、系统告警、状态变化等）实时推送到外部系统，和第三方服务对接。
 
 ## 插件配置

@@ -1,8 +1,11 @@
----
+﻿---
 sidebar_position: 2
 sidebar_label: "Execute Scrape Task"
+title: Execute Scrape Task
+description: Scraping is the second step in organizing movies. The system automatically retrieves movie metadata based on scraping rules and organizes files to the specified location.
+keywords: [AMMDS, scrape task, metadata, movie scraping]
+tags: [usage, scrape]
 ---
-
 # Execute Scrape Task
 
 Scrape task is the second step in the scraping process. It is used to scrape scan result files according to scraping rules, obtain movie metadata, generate final movie files, and complete movie organization work.
