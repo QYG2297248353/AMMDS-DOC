@@ -3,7 +3,7 @@ title: 麻豆传媒映画
 description: 麻豆传媒映画插件让 AMMDS 能采集麻豆传媒的影视和演员信息，支持元数据缓存机制。
 keywords: [麻豆传媒, 元数据, 演员信息, 影视采集, 插件]
 tags: [plugin, metadata]
-sidebar_position: 3
+sidebar_position: 99
 sidebar_label: "麻豆传媒映画"
 ---
 

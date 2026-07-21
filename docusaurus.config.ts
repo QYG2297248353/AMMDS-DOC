@@ -19,6 +19,10 @@ const config: Config = {
   },
   future: {
     v4: true,
+    faster: {
+      rspackBundler: false,
+      rspackPersistentCache: false,
+    },
   },
   customFields: {
     version: "v1.6.60",

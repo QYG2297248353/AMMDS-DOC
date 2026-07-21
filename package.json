@@ -62,6 +62,9 @@
       "last 5 safari version"
     ]
   },
+  "overrides": {
+    "html-webpack-plugin": "5.6.7"
+  },
   "engines": {
     "node": ">=20.0"
   }

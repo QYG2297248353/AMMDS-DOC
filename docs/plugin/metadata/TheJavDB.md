@@ -3,7 +3,7 @@ title: TheJavDB
 description: TheJavDB 是一个 JAV（日本成人视频）元数据数据库，提供全面的影片信息检索和元数据刮削功能。
 keywords: [TheJavDB, JavDB, 元数据, 刮削, JAV, 影片检索]
 tags: [plugin, metadata]
-sidebar_position: 1
+sidebar_position: 4
 sidebar_label: "TheJavDB"
 ---
 
