@@ -46,5 +46,9 @@
   "sidebar.guideSidebar.category.辅助功能": {
     "message": "보조 기능",
     "description": "The label for category '辅助功能' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.站点资源": {
+    "message": "사이트 리소스",
+    "description": "The label for category '站点资源' in sidebar 'guideSidebar'"
   }
 }

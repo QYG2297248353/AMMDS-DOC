@@ -46,5 +46,9 @@
   "sidebar.guideSidebar.category.辅助功能": {
     "message": "Auxiliary",
     "description": "The label for category '辅助功能' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.站点资源": {
+    "message": "Site Resources",
+    "description": "The label for category '站点资源' in sidebar 'guideSidebar'"
   }
 }
