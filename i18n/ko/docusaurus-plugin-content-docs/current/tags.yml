@@ -97,3 +97,8 @@ downloader:
   label: "다운로더"
   permalink: "/downloader"
   description: "다운로더 플러그인 설정 및 사용 방법"
+
+api:
+  label: "API"
+  permalink: "/api"
+  description: "개방형 API 인터페이스 문서 관련"

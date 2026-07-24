@@ -18,5 +18,9 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.开放平台": {
+    "message": "오픈 플랫폼",
+    "description": "Navbar item with label 开放平台"
   }
 }

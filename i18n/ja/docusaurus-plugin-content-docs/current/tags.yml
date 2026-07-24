@@ -97,3 +97,8 @@ downloader:
   label: "ダウンローダー"
   permalink: "/downloader"
   description: "ダウンローダープラグインの設定と使用方法"
+
+api:
+  label: "API"
+  permalink: "/api"
+  description: "オープンAPIインターフェースドキュメント関連"

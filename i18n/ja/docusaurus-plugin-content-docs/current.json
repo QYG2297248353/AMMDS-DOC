@@ -31,10 +31,6 @@
     "message": "メタデータ",
     "description": "The label for category '元数据' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.站点搜索": {
-    "message": "サイト検索",
-    "description": "The label for category '站点搜索' in sidebar 'guideSidebar'"
-  },
   "sidebar.guideSidebar.category.推送通知": {
     "message": "プッシュ通知",
     "description": "The label for category '推送通知' in sidebar 'guideSidebar'"

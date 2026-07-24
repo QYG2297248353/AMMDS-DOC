@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.openApiSidebar.category.使用概述": {
+    "message": "Overview",
+    "description": "The label for category '使用概述' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.接口详情": {
+    "message": "API Details",
+    "description": "The label for category '接口详情' in sidebar 'openApiSidebar'"
+  }
+}

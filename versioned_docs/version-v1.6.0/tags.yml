@@ -1,6 +1,39 @@
+deploy:
+  label: "部署"
+  permalink: "/deploy"
+  description: "各平台部署方式，包括 Docker、Windows、飞牛 FnOS、1Panel、宝塔面板等"
+
+tutorial:
+  label: "教程"
+  permalink: "/tutorial"
+  description: "入门指南和快速上手教程"
+
+usage:
+  label: "使用说明"
+  permalink: "/usage"
+  description: "系统功能使用说明和操作指南"
+
+environment:
+  label: "环境变量"
+  permalink: "/environment"
+  description: "环境变量配置说明"
+
+plugin:
+  label: "插件"
+  permalink: "/plugin"
+  description: "插件相关配置和使用说明"
+
+faq:
+  label: "常见问题"
+  permalink: "/faq"
+  description: "常见问题解答和故障排除"
+
 release:
-  label: "Release"
+  label: "发布"
   permalink: "/release"
-  description: "Release notes"
+  description: "版本发布和更新相关"
 
-
+api:
+  label: "API"
+  permalink: "/api"
+  description: "开放 API 接口文档相关"

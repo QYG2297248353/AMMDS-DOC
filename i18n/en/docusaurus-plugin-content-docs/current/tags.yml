@@ -97,3 +97,8 @@ downloader:
   label: "Downloader"
   permalink: "/downloader"
   description: "Downloader plugin configuration and usage guides"
+
+api:
+  label: "API"
+  permalink: "/api"
+  description: "Open API documentation related"

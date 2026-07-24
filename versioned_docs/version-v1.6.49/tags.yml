@@ -1,16 +1,104 @@
-plugin:
-  label: "Plugin"
-  permalink: "/plugin"
-  description: "Plugin documentation"
+deploy:
+  label: "部署"
+  permalink: "/deploy"
+  description: "各平台部署方式，包括 Docker、Windows、飞牛 FnOS、1Panel、宝塔面板等"
 
+tutorial:
+  label: "教程"
+  permalink: "/tutorial"
+  description: "入门指南和快速上手教程"
+
+usage:
+  label: "使用说明"
+  permalink: "/usage"
+  description: "系统功能使用说明和操作指南"
+
+config:
+  label: "配置"
+  permalink: "/config"
+  description: "各类规则配置，包括扫描、刮削、订阅等"
+
+scan:
+  label: "扫描"
+  permalink: "/scan"
+  description: "文件扫描相关功能"
+
+scrape:
+  label: "刮削"
+  permalink: "/scrape"
+  description: "元数据刮削相关功能"
+
+subscribe:
+  label: "订阅"
+  permalink: "/subscribe"
+  description: "订阅规则相关配置"
+
+mount:
+  label: "挂载"
+  permalink: "/mount"
+  description: "目录挂载和数据存储相关"
+
+proxy:
+  label: "代理"
+  permalink: "/proxy"
+  description: "网络代理配置相关"
+
+environment:
+  label: "环境变量"
+  permalink: "/environment"
+  description: "环境变量配置说明"
+
+auth:
+  label: "认证"
+  permalink: "/auth"
+  description: "站点认证和身份验证相关"
+
+plugin:
+  label: "插件"
+  permalink: "/plugin"
+  description: "插件相关配置和使用说明"
 
 metadata:
-  label: "Metadata"
+  label: "元数据"
   permalink: "/metadata"
-  description: "Metadata documentation"
-
+  description: "元数据插件配置和使用说明"
 
 release:
-  label: "Release"
+  label: "发布"
   permalink: "/release"
-  description: "Release notes"
+  description: "版本发布和更新相关"
+
+site-search:
+  label: "站点搜索"
+  permalink: "/site-search"
+  description: "站点搜索插件配置和使用说明"
+
+push-notice:
+  label: "推送通知"
+  permalink: "/push-notice"
+  description: "推送通知插件配置和使用说明"
+
+media-server:
+  label: "媒体服务器"
+  permalink: "/media-server"
+  description: "媒体服务器插件配置和使用说明"
+
+auxiliary:
+  label: "辅助功能"
+  permalink: "/auxiliary"
+  description: "辅助功能插件配置和使用说明"
+
+downloader:
+  label: "下载器"
+  permalink: "/downloader"
+  description: "下载器插件配置和使用说明"
+
+faq:
+  label: "常见问题"
+  permalink: "/faq"
+  description: "常见问题解答和故障排除"
+
+api:
+  label: "API"
+  permalink: "/api"
+  description: "开放 API 接口文档相关"

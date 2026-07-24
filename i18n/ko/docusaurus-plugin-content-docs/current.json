@@ -31,10 +31,6 @@
     "message": "메타데이터",
     "description": "The label for category '元数据' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.站点搜索": {
-    "message": "사이트 검색",
-    "description": "The label for category '站点搜索' in sidebar 'guideSidebar'"
-  },
   "sidebar.guideSidebar.category.推送通知": {
     "message": "푸시 알림",
     "description": "The label for category '推送通知' in sidebar 'guideSidebar'"

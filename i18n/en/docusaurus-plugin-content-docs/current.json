@@ -31,10 +31,6 @@
     "message": "Metadata",
     "description": "The label for category '元数据' in sidebar 'guideSidebar'"
   },
-  "sidebar.guideSidebar.category.站点搜索": {
-    "message": "Site Search",
-    "description": "The label for category '站点搜索' in sidebar 'guideSidebar'"
-  },
   "sidebar.guideSidebar.category.推送通知": {
     "message": "Push Notice",
     "description": "The label for category '推送通知' in sidebar 'guideSidebar'"
