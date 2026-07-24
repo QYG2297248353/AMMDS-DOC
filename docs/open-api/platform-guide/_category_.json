@@ -1,0 +1,8 @@
+{
+  "label": "开放平台说明",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "了解 AMMDS 开放平台的基本概念、API Key 创建与管理、接入指南等。"
+  }
+}

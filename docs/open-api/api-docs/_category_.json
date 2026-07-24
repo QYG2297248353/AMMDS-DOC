@@ -1,0 +1,8 @@
+{
+  "label": "API详情",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "AMMDS 开放 API 接口详情，按功能分类提供完整的接口文档。"
+  }
+}

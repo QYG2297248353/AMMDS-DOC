@@ -323,6 +323,12 @@ const config: Config = {
           position: "left",
         },
         {
+          label: "开放API",
+          type: "docSidebar",
+          sidebarId: "openApiSidebar",
+          position: "left",
+        },
+        {
           label: "博客",
           to: "/blog",
           position: "left",
