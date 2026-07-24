@@ -1,8 +1,16 @@
 ---
 sidebar_position: 2
+title: "创建与管理密钥"
+description: "了解如何开启 AMMDS 开放 API、创建与管理 API Key，以及使用 API Key 进行接口鉴权的详细步骤。"
+keywords: [AMMDS, API Key, 鉴权, 密钥管理, 安全]
+tags: [api]
 ---
 
 # 创建与管理密钥
+
+本文介绍如何在 AMMDS 系统管理后台开启开放 API、创建与管理 API Key，以及调用接口时的鉴权方式。
+
+{/* truncate */}
 
 ## 前置条件
 

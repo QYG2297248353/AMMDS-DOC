@@ -1,8 +1,16 @@
 ---
 sidebar_position: 2
+title: "系统 API"
+description: "AMMDS 系统相关 API 接口，包括服务健康检查等操作。"
+keywords: [AMMDS, 系统API, 健康检查]
+tags: [api]
 ---
 
 # 系统 API
+
+本文介绍 AMMDS 系统相关 API 接口，包括服务健康检查等操作。
+
+{/* truncate */}
 
 ## 健康检查
 

@@ -1,8 +1,16 @@
 ---
 sidebar_position: 4
+title: "翻译 API"
+description: "AMMDS 翻译服务 API 接口，包括语言识别和文本翻译功能。"
+keywords: [AMMDS, 翻译API, 语言识别, 文本翻译]
+tags: [api]
 ---
 
 # 翻译 API
+
+本文介绍 AMMDS 翻译服务 API 接口，包括语言识别和文本翻译功能。
+
+{/* truncate */}
 
 ## 语言识别
 

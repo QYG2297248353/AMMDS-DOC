@@ -1,8 +1,16 @@
 ---
 sidebar_position: 5
+title: "附录"
+description: "AMMDS 开放 API 的补充参考信息，包括语言代码表和数据源枚举值。"
+keywords: [AMMDS, 附录, 语言代码, 数据源]
+tags: [api]
 ---
 
 # 附录
+
+本文提供 AMMDS 开放 API 的补充参考信息，包括语言代码表和数据源枚举值。
+
+{/* truncate */}
 
 ## A. 语言代码表
 

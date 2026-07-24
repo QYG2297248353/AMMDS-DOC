@@ -1,8 +1,16 @@
 ---
 sidebar_position: 3
+title: "影视 API"
+description: "AMMDS 影视相关 API 接口，包括影视导入、详情查询、检索匹配等操作。"
+keywords: [AMMDS, 影视API, 元数据, 导入, 检索]
+tags: [api]
 ---
 
 # 影视 API
+
+本文介绍 AMMDS 影视相关 API 接口，包括影视导入、详情查询、检索匹配等操作。
+
+{/* truncate */}
 
 ## 影视导入
 

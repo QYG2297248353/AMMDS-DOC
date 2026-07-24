@@ -97,3 +97,8 @@ downloader:
   label: "下载器"
   permalink: "/downloader"
   description: "下载器插件配置和使用说明"
+
+api:
+  label: "API"
+  permalink: "/api"
+  description: "开放 API 接口文档相关"

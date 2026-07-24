@@ -1,8 +1,16 @@
 ---
 sidebar_position: 1
+title: "平台概述"
+description: "了解 AMMDS 开放 API 的能力范围、使用流程和基础信息，包括影视管理、系统管理和翻译服务等功能。"
+keywords: [AMMDS, 开放API, 平台概述, RESTful, 集成]
+tags: [api]
 ---
 
 # 平台概述
+
+本文介绍 AMMDS 开放 API 的能力范围、使用流程和基础信息，帮助开发者快速了解和接入开放平台。
+
+{/* truncate */}
 
 AMMDS 开放 API 是一套基于 HTTP 协议的 RESTful 接口，允许开发者通过编程方式集成 AMMDS 的影视元数据管理能力。通过开放 API，您可以实现影视数据的导入、检索、翻译等功能。
 

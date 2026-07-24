@@ -207,6 +207,18 @@ const config: Config = {
         ignorePatterns: ["/tags/**"],
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'open-api',
+        path: 'open-api',
+        routeBasePath: 'open-api',
+        sidebarPath: './sidebars/open-api.ts',
+        editUrl: "https://github.com/QYG2297248353/AMMDS-Doc/tree/master/",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
   ],
   themes: ["@docusaurus/theme-mermaid"],
   markdown: {
@@ -323,9 +335,10 @@ const config: Config = {
           position: "left",
         },
         {
-          label: "开放API",
+          label: "开放平台",
           type: "docSidebar",
           sidebarId: "openApiSidebar",
+          docsPluginId: "open-api",
           position: "left",
         },
         {

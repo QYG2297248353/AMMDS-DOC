@@ -1,8 +1,16 @@
 ---
 sidebar_position: 1
+title: "API 概述"
+description: "AMMDS 开放 API 的基础信息，包括 Base URL、鉴权方式、统一响应格式和通用错误码说明。"
+keywords: [AMMDS, API, 开放接口, RESTful, 鉴权]
+tags: [api]
 ---
 
-# 概述
+# API 概述
+
+本文介绍 AMMDS 开放 API 的基础信息，涵盖 Base URL、鉴权方式、统一响应格式和通用错误码。
+
+{/* truncate */}
 
 ## 基础信息
 
