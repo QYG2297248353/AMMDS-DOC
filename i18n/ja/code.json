@@ -8,7 +8,7 @@
     "description": "AMMDS website title"
   },
   "homepage.subtitle": {
-    "message": "アダルト映画メタデータスクレイパー",
+    "message": "R18 映画メタデータスクレイパー",
     "description": "AMMDS website subtitle"
   },
   "homepage.description": {
@@ -23,8 +23,8 @@
     "message": "詳しく知る",
     "description": "Learn More button text"
   },
-  "AMMDS - 成人影片元数据刮削器": {
-    "message": "AMMDS - アダルト映画メタデータスクレイパー",
+  "AMMDS - R18 影片元数据刮削器": {
+    "message": "AMMDS - R18 映画メタデータスクレイパー",
     "description": "Website description"
   },
   "homepage.quickStart.title": {

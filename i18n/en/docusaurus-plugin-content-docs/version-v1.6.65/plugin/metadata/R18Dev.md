@@ -2,7 +2,7 @@
 sidebar_position: 5
 sidebar_label: "R18Dev"
 title: "R18Dev"
-description: "R18Dev is a JAV (Japanese Adult Video) metadata database providing comprehensive video info retrieval and metadata scraping functionality."
+description: "R18Dev is a JAV (Japanese R18 Video) metadata database providing comprehensive video info retrieval and metadata scraping functionality."
 keywords: [R18Dev, JavDB, metadata, scraping, JAV, video search]
 tags: [plugin, metadata]
 ---

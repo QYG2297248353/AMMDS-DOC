@@ -1,6 +1,6 @@
 ---
 title: "R18Dev"
-description: "R18Dev は JAV（日本成人動画）メタデータデータベースで、包括的な動画情報検索とメタデータスクレイピング機能を提供します。"
+description: "R18Dev は JAV（日本R18 動画）メタデータデータベースで、包括的な動画情報検索とメタデータスクレイピング機能を提供します。"
 keywords: [R18Dev, JavDB, メタデータ, スクレイピング, JAV, 動画検索]
 tags: [plugin, metadata]
 sidebar_position: 5

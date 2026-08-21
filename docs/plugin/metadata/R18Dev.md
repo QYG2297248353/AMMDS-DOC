@@ -1,6 +1,6 @@
 ---
 title: R18Dev
-description: R18Dev 是一个 JAV（日本成人视频）元数据数据库，提供全面的影片信息检索和元数据刮削功能。
+description: R18Dev 是一个 JAV（日本R18 视频）元数据数据库，提供全面的影片信息检索和元数据刮削功能。
 keywords: [R18Dev, JavDB, 元数据, 刮削, JAV, 影片检索]
 tags: [plugin, metadata]
 sidebar_position: 5

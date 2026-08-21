@@ -158,7 +158,7 @@ volumes:
 - **JavBus 刮削**：适合日本影视资源
 - **Metatube 刮削**：提供额外的元数据源
 - **FANZA DMM 刮削**：面向日本影视的高质量数据源
-- **ThePornDB 刮削**：面向成人内容
+- **ThePornDB 刮削**：面向R18 内容
 
 每个插件可能需要配置 API Key 或 Cookie，请根据页面提示操作。
 

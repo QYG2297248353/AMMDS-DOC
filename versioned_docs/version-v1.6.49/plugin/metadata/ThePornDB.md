@@ -5,7 +5,7 @@ sidebar_label: "ThePornDB"
 
 # ThePornDB
 
-ThePornDB 是一款专业的成人视频元数据管理工具，主要用于重命名视频文件，确保 Plex、Jellyfin 等媒体服务器插件和 Stash 脚本能够自动匹配元数据，无需用户手动干预。该工具支持服务器模式和命令行模式运行，为媒体库管理提供高效解决方案。
+ThePornDB 是一款专业的R18 视频元数据管理工具，主要用于重命名视频文件，确保 Plex、Jellyfin 等媒体服务器插件和 Stash 脚本能够自动匹配元数据，无需用户手动干预。该工具支持服务器模式和命令行模式运行，为媒体库管理提供高效解决方案。
 
 官网：[https://theporndb.net/](https://theporndb.net/)
 
@@ -19,7 +19,7 @@ ThePornDB 是一款专业的成人视频元数据管理工具，主要用于重�
 
 # Stash-Box
 
-Stash-Box 是一个基于 Go 语言开发的自托管元数据管理系统，专为组织和提供多样化的内容集合而设计，同时满足 SFW（安全内容）和 NSFW（成人内容）的管理需求。
+Stash-Box 是一个基于 Go 语言开发的自托管元数据管理系统，专为组织和提供多样化的内容集合而设计，同时满足 SFW（安全内容）和 NSFW（R18 内容）的管理需求。
 
 官网：[https://docs.stashapp.cc/](https://docs.stashapp.cc/)
 

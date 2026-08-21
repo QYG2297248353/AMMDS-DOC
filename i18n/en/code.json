@@ -8,7 +8,7 @@
     "description": "AMMDS website title"
   },
   "homepage.subtitle": {
-    "message": "Adult Movie MetaData Scraper",
+    "message": "R18 MetaData Scraper",
     "description": "AMMDS website subtitle"
   },
   "homepage.description": {
@@ -23,8 +23,8 @@
     "message": "Learn More",
     "description": "Learn More button text"
   },
-  "AMMDS - 成人影片元数据刮削器": {
-    "message": "AMMDS - Adult Movie MetaData Scraper",
+  "AMMDS - R18 影片元数据刮削器": {
+    "message": "AMMDS - R18 MetaData Scraper",
     "description": "Website description"
   },
   "homepage.quickStart.title": {

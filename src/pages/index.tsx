@@ -18,7 +18,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           <Translate id="homepage.title" description="AMMDS website title">AMMDS</Translate>
         </Heading>
-        <p className="hero__subtitle"><Translate id="homepage.subtitle" description="AMMDS website subtitle">成人影片元数据刮削器</Translate></p>
+        <p className="hero__subtitle"><Translate id="homepage.subtitle" description="AMMDS website subtitle">R18 影片元数据刮削器</Translate></p>
         <p className={styles.description}>
           <Translate id="homepage.description" description="AMMDS website main description">
             通过智能元数据刮削、演员识别、多源数据匹配等功能，打造专属于您的私人家庭影院体验
@@ -48,7 +48,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={translate({ message: 'AMMDS 官方文档', description: 'Website title' })}
-      description={translate({ message: 'AMMDS - 成人影片元数据刮削器', description: 'Website description' })}>
+      description={translate({ message: 'AMMDS - R18 影片元数据刮削器', description: 'Website description' })}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

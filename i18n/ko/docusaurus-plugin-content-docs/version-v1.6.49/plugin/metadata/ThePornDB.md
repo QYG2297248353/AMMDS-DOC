@@ -2,14 +2,14 @@
 sidebar_position: 2
 sidebar_label: ThePornDB
 title: ThePornDB
-description: "ThePornDB는 전문적인 성인 비디오 메타데이터 관리 도구입니다. 자동 비디오 메타데이터 매칭을 지원하며 Plex, Jellyfin 등 주요 미디어 서버와 호환됩니다."
+description: "ThePornDB는 전문적인 R18 비디오 메타데이터 관리 도구입니다. 자동 비디오 메타데이터 매칭을 지원하며 Plex, Jellyfin 등 주요 미디어 서버와 호환됩니다."
 keywords: [ThePornDB, 메타데이터, Stash-Box, 비디오 관리, 스크레이핑]
 tags: [plugin, metadata]
 ---
 
 # ThePornDB
 
-ThePornDB는 전문적인 성인 비디오 메타데이터 관리 도구로，주로 비디오 파일의 이름을 바꾸는 데 사용되어 Plex、Jellyfin 등의 미디어 서버 플러그인과 Stash 스크립트가 사용자의 수동 조작 없이 자동으로 메타데이터를 매칭할 수 있도록 합니다. 이 도구는 서버 모드와 명령줄 모드로 실행할 수 있으며，미디어 라이브러리 관리를 위한 효율적인 솔루션을 제공합니다.
+ThePornDB는 전문적인 R18 비디오 메타데이터 관리 도구로，주로 비디오 파일의 이름을 바꾸는 데 사용되어 Plex、Jellyfin 등의 미디어 서버 플러그인과 Stash 스크립트가 사용자의 수동 조작 없이 자동으로 메타데이터를 매칭할 수 있도록 합니다. 이 도구는 서버 모드와 명령줄 모드로 실행할 수 있으며，미디어 라이브러리 관리를 위한 효율적인 솔루션을 제공합니다.
 
 공식 사이트：[https://theporndb.net/](https://theporndb.net/)
 
@@ -23,7 +23,7 @@ ThePornDB는 전문적인 성인 비디오 메타데이터 관리 도구로，�
 
 # Stash-Box
 
-Stash-Box는 Go 언어로 개발된 자체 호스팅 메타데이터 관리 시스템으로，SFW（안전한 콘텐츠）와 NSFW（성인 콘텐츠）의 관리 요구 사항을 동시에 충족하면서 다양한 콘텐츠 컬렉션을 조직화하고 제공하도록 설계되었습니다.
+Stash-Box는 Go 언어로 개발된 자체 호스팅 메타데이터 관리 시스템으로，SFW（안전한 콘텐츠）와 NSFW（R18 콘텐츠）의 관리 요구 사항을 동시에 충족하면서 다양한 콘텐츠 컬렉션을 조직화하고 제공하도록 설계되었습니다.
 
 공식 사이트：[https://docs.stashapp.cc/](https://docs.stashapp.cc/)
 

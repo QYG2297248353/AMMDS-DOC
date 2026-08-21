@@ -2,7 +2,7 @@
 sidebar_position: 5
 sidebar_label: "R18Dev"
 title: "R18Dev"
-description: "R18Dev는 JAV(일본 성인 비디오) 메타데이터 데이터베이스로, 포괄적인 영화 정보 검색 및 메타데이터 스크래핑 기능을 제공합니다."
+description: "R18Dev는 JAV(일본 R18 비디오) 메타데이터 데이터베이스로, 포괄적인 영화 정보 검색 및 메타데이터 스크래핑 기능을 제공합니다."
 keywords: [R18Dev, JavDB, 메타데이터, 스크래핑, JAV, 영화 검색]
 tags: [plugin, metadata]
 ---

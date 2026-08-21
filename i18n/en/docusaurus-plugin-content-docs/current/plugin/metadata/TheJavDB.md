@@ -2,14 +2,14 @@
 sidebar_position: 4
 sidebar_label: "TheJavDB"
 title: "TheJavDB"
-description: "TheJavDB is a JAV (Japanese Adult Video) metadata database providing comprehensive video info retrieval and metadata scraping functionality."
+description: "TheJavDB is a JAV (Japanese R18 Video) metadata database providing comprehensive video info retrieval and metadata scraping functionality."
 keywords: [TheJavDB, JavDB, metadata, scraping, JAV, video search]
 tags: [plugin, metadata]
 ---
 
 # TheJavDB
 
-TheJavDB 是一个 JAV（日本成人视频）元数据数据库，提供全面的影片信息检索功能。通过 TheJavDB 插件，AMMDS 可以自动获取影片的标题、演员、发行日期、片商、类别等元数据，帮你快速构建完整的媒体库信息。
+TheJavDB 是一个 JAV（日本R18 视频）元数据数据库，提供全面的影片信息检索功能。通过 TheJavDB 插件，AMMDS 可以自动获取影片的标题、演员、发行日期、片商、类别等元数据，帮你快速构建完整的媒体库信息。
 
 官网：[https://thejavdb.net/](https://thejavdb.net/)
 
