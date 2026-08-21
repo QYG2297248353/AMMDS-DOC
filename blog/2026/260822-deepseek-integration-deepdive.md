@@ -3,7 +3,7 @@ slug: deepseek-integration-deepdive
 title: DeepSeek 大模型集成深度解析：让 AMMDS 拥有 AI 对话助手
 authors: [ms]
 tags: [ammds, feature, plugin]
-date: 2026-08-22
+date: 2026-08-20
 ---
 
 在 v1.6.66 中，AMMDS 正式接入了 DeepSeek 大模型，为平台引入了 AI 对话能力。但这次集成并不只是“接一个聊天 API”这么简单——我们一并构建了知识库系统、会话管理器、模型自动迁移与错误码封装等一整套机制，让 AI 真正“懂” AMMDS。本文将带大家深入了解这套集成的设计思路与使用方式。

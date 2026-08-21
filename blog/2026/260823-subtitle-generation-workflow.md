@@ -3,7 +3,7 @@ slug: subtitle-generation-workflow
 title: AMMDS 字幕生成与翻译工作流实战
 authors: [ms]
 tags: [ammds, feature, tutorial]
-date: 2026-08-23
+date: 2026-08-20
 ---
 
 很多影视资源——尤其是冷门剧集、纪录片、海外综艺——并没有现成字幕，导致在媒体服务器上“只能看画面”。自 v1.6.64 接入 VibeVoice、v1.6.66 增补字幕翻译后，AMMDS 已经能帮你为整目录视频自动生成字幕，并一键转成双语版本。本文以一次完整的“日剧批量生成中文字幕”为例，演示整套工作流的实战用法。

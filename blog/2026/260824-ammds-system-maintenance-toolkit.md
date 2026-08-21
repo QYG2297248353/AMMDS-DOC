@@ -3,7 +3,7 @@ slug: ammds-system-maintenance-toolkit
 title: AMMDS 系统维护工具箱升级：FFmpeg、系统检查、日志导出与封面裁剪
 authors: [ms]
 tags: [ammds, feature, guide]
-date: 2026-08-24
+date: 2026-08-20
 ---
 
 伴随 v1.6.64 与 v1.6.66 两个版本，AMMDS 在“功能智能化”之外，也悄悄补齐了一整套系统维护工具。从音视频基础依赖 FFmpeg 的自动管理，到一键系统检查、按需导出运行日志，再到封面裁剪工具箱与优雅关机，这些都是让 AMMDS 更“好管”的关键拼图。本文带你一次看懂这套维护工具箱的用法。

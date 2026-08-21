@@ -3,7 +3,7 @@ slug: stephen-chow-early-years
 title: 周星驰早期成名之路：从霹雳先锋到赌圣时代（1988-1991）
 authors: [ms]
 tags: [movie, stephen-chow, comedy, classic]
-date: 2026-08-25
+date: 2026-08-12
 ---
 
 周星驰（Stephen Chow），华语影坛最具影响力的喜剧巨星之一。他的演艺生涯始于 TVB 电视台的龙套岁月，而后凭借独特的"无厘头"喜剧风格，在短短数年间从一个默默无闻的电视演员蜕变为香港影坛的票房保证。本文将回顾周星驰早期（1988-1991）的成名之路，看看这位喜剧之王是如何踏上巅峰的。
