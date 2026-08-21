@@ -1,0 +1,9 @@
+{
+  "label": "사용 가이드",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

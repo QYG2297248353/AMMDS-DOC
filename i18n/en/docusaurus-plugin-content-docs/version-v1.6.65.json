@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "v1.6.65",
+    "description": "The label for version v1.6.65"
+  },
+  "sidebar.guideSidebar.category.使用教程": {
+    "message": "Tutorial",
+    "description": "The label for category '使用教程' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.部署": {
+    "message": "Deploy",
+    "description": "The label for category '部署' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.使用说明": {
+    "message": "Usage",
+    "description": "The label for category '使用说明' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.模块": {
+    "message": "Module",
+    "description": "The label for category '模块' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.刮削": {
+    "message": "Scrape",
+    "description": "The label for category '刮削' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.插件": {
+    "message": "Plugin",
+    "description": "The label for category '插件' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.元数据": {
+    "message": "Metadata",
+    "description": "The label for category '元数据' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.推送通知": {
+    "message": "Push Notice",
+    "description": "The label for category '推送通知' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体服务器": {
+    "message": "Media Server",
+    "description": "The label for category '媒体服务器' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.辅助功能": {
+    "message": "Auxiliary",
+    "description": "The label for category '辅助功能' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.站点资源": {
+    "message": "Site Resources",
+    "description": "The label for category '站点资源' in sidebar 'guideSidebar'"
+  }
+}

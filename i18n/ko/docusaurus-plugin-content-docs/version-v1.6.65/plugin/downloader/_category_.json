@@ -1,0 +1,9 @@
+{
+  "label": "다운로더",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

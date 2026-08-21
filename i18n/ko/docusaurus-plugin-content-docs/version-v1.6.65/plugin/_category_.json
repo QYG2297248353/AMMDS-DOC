@@ -1,0 +1,9 @@
+{
+  "label": "플러그인",
+  "position": 5,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index"
+  }
+}
