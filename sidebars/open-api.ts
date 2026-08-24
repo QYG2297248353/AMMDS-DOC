@@ -21,6 +21,16 @@ const sidebars: SidebarsConfig = {
         'api-docs/appendix',
       ],
     },
+    {
+      type: 'category',
+      label: '备份恢复',
+      items: [
+        'backup-restore/overview',
+        'backup-restore/package-structure',
+        'backup-restore/custom-package',
+        'backup-restore/ai-guide',
+      ],
+    },
   ],
 };
 
