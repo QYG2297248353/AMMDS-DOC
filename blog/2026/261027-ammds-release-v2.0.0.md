@@ -30,7 +30,7 @@ v2.0.0 是一次「收口」性质的版本：商城从可编辑后台收敛为�
 - 按表格顺序逐行检测，每行实时回显可访问性与耗时
 - 判定标准是「后端能否拿到 HTTP 响应」：401/403/404 同样算可访问，只有解析失败、超时、连接重置、TLS 失败才算不可访问
 
-详细说明见[网络与连通性](/docs/dashboard/network)。
+详细说明见[网络与连通性](/docs/backend/dashboard/network)。
 
 ## M-Team 搜索测试：检索 → 详情 → 导入
 
@@ -72,7 +72,7 @@ M-Team 插件的搜索测试模块补全了详情能力：
 
 ## 相关文档
 
-- [网络与连通性](/docs/dashboard/network)
+- [网络与连通性](/docs/backend/dashboard/network)
 - [M-Team DMM 元数据](/docs/integration/metadata/m-team-dmm)
-- [系统检查](/docs/system/system-check)
+- [系统检查](/docs/backend/system/system-check)
 - [开发平台概览](/open-api/getting-started/overview)

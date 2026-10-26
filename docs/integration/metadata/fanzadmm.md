@@ -58,9 +58,9 @@ https://api.video.dmm.co.jp/graphql
 点击「测试连接」会请求 FANZA 的固定站点地址 `https://api.video.dmm.co.jp`，用于判断当前网络能否访问该服务。它不校验任何凭据，也不代表 GraphQL 端点一定可用。
 
 :::tip[连接成功但检索为空]
-先确认「启用状态」与「影视检索」都已打开并保存，再检查关键词是否能归一为 DMM 支持的番号；部分内容受地区限制，必要时在[系统配置](/docs/system/config)中配置代理。
+先确认「启用状态」与「影视检索」都已打开并保存，再检查关键词是否能归一为 DMM 支持的番号；部分内容受地区限制，必要时在[系统配置](/docs/backend/system/config)中配置代理。
 :::
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TheJavDB](/docs/integration/metadata/thejavdb) · [R18.dev](/docs/integration/metadata/r18dev) · [刮削任务](/docs/task/scrape) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TheJavDB](/docs/integration/metadata/thejavdb) · [R18.dev](/docs/integration/metadata/r18dev) · [刮削任务](/docs/backend/task/scrape) · [常见问题](/docs/faq)

@@ -82,7 +82,7 @@ AMMDS 通过以下三种方式访问你的影视目录：
 - **怎么扫**：按什么规则匹配文件（格式、大小、忽略项等）
 - **怎么整理**：扫完后文件放哪、怎么改名
 
-具体操作步骤看[创建扫描任务](/docs/task/scan)。
+具体操作步骤看[创建扫描任务](/docs/backend/task/scan)。
 
 ### 2. 扫描做了什么
 
@@ -123,7 +123,7 @@ flowchart LR
     EXTRACT --> RECORDS
 ```
 
-扫描配置的详细说明，看[扫描配置](/docs/task/config)。
+扫描配置的详细说明，看[扫描配置](/docs/backend/task/config)。
 
 ---
 
@@ -166,7 +166,7 @@ flowchart TD
     READY_SCRAPE --> NEXT_STEP["进入刮削整理阶段"]
 ```
 
-详细操作参考[执行刮削任务](/docs/task/scrape)。
+详细操作参考[执行刮削任务](/docs/backend/task/scrape)。
 
 ---
 
@@ -242,7 +242,7 @@ flowchart TD
 没开启元数据插件就拿不到电影信息，刮削必然会失败。刮削之前确认一下插件配好了没有。
 :::
 
-刮削配置和整理模式的详细说明，看[刮削配置](/docs/task/config)。
+刮削配置和整理模式的详细说明，看[刮削配置](/docs/backend/task/config)。
 
 ---
 

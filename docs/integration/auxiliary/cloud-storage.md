@@ -134,4 +134,4 @@ S3 测试全程不触碰你配置的存储桶，不影响已有备份。测试�
 | 资源仍保存在本地 | 未开启「资源存储到 S3」 | 打开开关并保存，新上传资源才会转存 |
 | 备份被自动清理 | 保留份数限制 | 调大「保留份数」或设为 `0` |
 
-完整的备份恢复入口与其它系统级操作见[备份与恢复](/docs/system/backup-restore)；系统级参数见[系统配置](/docs/system/config)。
+完整的备份恢复入口与其它系统级操作见[备份与恢复](/docs/backend/system/backup-restore)；系统级参数见[系统配置](/docs/backend/system/config)。

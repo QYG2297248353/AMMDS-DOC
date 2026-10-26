@@ -75,4 +75,4 @@ Bangumi（bgm.tv）是番组计划数据库，适合为动画、番剧补充条�
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TMDB](/docs/integration/metadata/tmdb) · [TheTVDB](/docs/integration/metadata/tvdb) · [刮削任务](/docs/task/scrape) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TMDB](/docs/integration/metadata/tmdb) · [TheTVDB](/docs/integration/metadata/tvdb) · [刮削任务](/docs/backend/task/scrape) · [常见问题](/docs/faq)

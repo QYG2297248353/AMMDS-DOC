@@ -130,4 +130,4 @@ docker logs -f AMMDS
 | 无法写入媒体目录 | 容器内用户与宿主机目录属主不一致 | 调整 `PUID` / `PGID`，或修正目录权限 |
 | 客户端发现不到服务 | 只映射了 TCP 端口 | 增加 `47823/udp`、`47824/udp` 映射，或手动填写地址 |
 
-需要更细的连通性排查，见[网络与连通性](/docs/dashboard/network)。
+需要更细的连通性排查，见[网络与连通性](/docs/backend/dashboard/network)。

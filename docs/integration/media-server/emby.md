@@ -76,7 +76,7 @@ API 密钥对应的账号需要有管理媒体库的权限；「服务地址」�
 - **不删媒体文件**：同步不触碰 Emby 上的影片文件，只更新元数据与图片。
 - **解绑只删本地关系**：不影响 Emby 侧已有数据。
 - **自动补全依赖本地数据**：本地演员库没有的演员，补全补不出来。
-- **路径与网络**：Emby 与 AMMDS 之间的连通性可用[网络与连通性](/docs/dashboard/network)先做初筛，自建服务的连通性在插件页测试。
+- **路径与网络**：Emby 与 AMMDS 之间的连通性可用[网络与连通性](/docs/backend/dashboard/network)先做初筛，自建服务的连通性在插件页测试。
 
 ## 常见问题
 
@@ -92,5 +92,5 @@ API 密钥对应的账号需要有管理媒体库的权限；「服务地址」�
 
 - [插件集成总览](/docs/integration/overview)
 - [Jellyfin](/docs/integration/media-server/jellyfin)｜[MetaTube](/docs/integration/metadata/metatube)
-- [刮削任务](/docs/task/scrape)｜[订阅管理](/docs/subscribe/manage)
-- [系统配置](/docs/system/config)｜[常见问题](/docs/faq)
+- [刮削任务](/docs/backend/task/scrape)｜[订阅管理](/docs/backend/subscribe/manage)
+- [系统配置](/docs/backend/system/config)｜[常见问题](/docs/faq)

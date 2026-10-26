@@ -87,4 +87,4 @@ TMDB（The Movie Database）提供电影、剧集与演员元数据，接口需�
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TheTVDB](/docs/integration/metadata/tvdb) · [刮削任务](/docs/task/scrape) · [影视](/docs/media/movie) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TheTVDB](/docs/integration/metadata/tvdb) · [刮削任务](/docs/backend/task/scrape) · [影视](/docs/backend/media/movie) · [常见问题](/docs/faq)

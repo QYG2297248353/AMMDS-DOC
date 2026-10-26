@@ -22,7 +22,7 @@ M-Team（馒头）是综合类 PT 站。接入后它同时承担两件事：作�
 | 主要用途 | 订阅检索与下载、DMM 元数据检索 |
 
 :::note[网络要求]
-M-Team 使用独立域名提供 API，与站点网页域名不同。启用前建议先在[网络与连通性](/docs/dashboard/network)中确认 `M-Team` 与 `M-Team API` 均显示可访问。
+M-Team 使用独立域名提供 API，与站点网页域名不同。启用前建议先在[网络与连通性](/docs/backend/dashboard/network)中确认 `M-Team` 与 `M-Team API` 均显示可访问。
 :::
 
 ## 配置项
@@ -84,7 +84,7 @@ M-Team 使用独立域名提供 API，与站点网页域名不同。启用前建
 | 提示配置丢失 | 服务地址或存取令牌为空 | 补齐后保存，再执行一次检索 |
 | 账户保护通知频繁提醒 | 站点对未登录账号有封禁策略 | 用浏览器登录一次站点，必要时关闭提醒 |
 
-更多排查思路见[常见问题](/docs/faq)，订阅侧的检索行为见[订阅检索](/docs/subscribe/search)。
+更多排查思路见[常见问题](/docs/faq)，订阅侧的检索行为见[订阅检索](/docs/backend/subscribe/search)。
 
 ## 相关页面
 
@@ -92,4 +92,4 @@ M-Team 使用独立域名提供 API，与站点网页域名不同。启用前建
 - [KamePT](/docs/integration/indexer/kamept)｜[Rousi](/docs/integration/indexer/rousi)｜[NexusPHP](/docs/integration/indexer/nexusphp)
 - [Prowlarr](/docs/integration/indexer/prowlarr)｜[BitMagnet](/docs/integration/indexer/bitmagnet)
 - [qBittorrent](/docs/integration/downloader/qbittorrent)｜[IYUU](/docs/integration/downloader/iyuu)
-- [订阅检索](/docs/subscribe/search)｜[订阅下载](/docs/subscribe/downloader)
+- [订阅检索](/docs/backend/subscribe/search)｜[订阅下载](/docs/backend/subscribe/downloader)

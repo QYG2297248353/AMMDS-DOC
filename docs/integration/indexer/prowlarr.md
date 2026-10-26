@@ -74,5 +74,5 @@ Prowlarr 是索引器与代理管理工具，把多个站点的检索能力聚�
 
 - [插件集成总览](/docs/integration/overview)
 - [M-Team](/docs/integration/indexer/m-team)｜[NexusPHP](/docs/integration/indexer/nexusphp)｜[BitMagnet](/docs/integration/indexer/bitmagnet)
-- [订阅检索](/docs/subscribe/search)｜[订阅下载](/docs/subscribe/downloader)
-- [网络与连通性](/docs/dashboard/network)｜[常见问题](/docs/faq)
+- [订阅检索](/docs/backend/subscribe/search)｜[订阅下载](/docs/backend/subscribe/downloader)
+- [网络与连通性](/docs/backend/dashboard/network)｜[常见问题](/docs/faq)

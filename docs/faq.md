@@ -8,7 +8,7 @@ sidebar_position: 99
 
 # 常见问题
 
-这里按主题汇总使用中最容易卡住的问题。每条先说明原因，再给可以照做的步骤；如果现象与描述不符，请先按[系统检查](/docs/system/system-check)做一次体检，再到[日志](/docs/system/logs)看具体报错。
+这里按主题汇总使用中最容易卡住的问题。每条先说明原因，再给可以照做的步骤；如果现象与描述不符，请先按[系统检查](/docs/backend/system/system-check)做一次体检，再到[日志](/docs/backend/system/logs)看具体报错。
 
 {/* truncate */}
 
@@ -115,7 +115,7 @@ java -agentlib:native-image-agent=config-output-dir=./META-INF/native-image -jar
 
 **原因**：番号识别失败（文件名不含可识别番号或写法特殊）、命中的数据源没有该条目，或数据源返回空字段。
 
-**处理**：在[扫描任务](/docs/task/scan)结果里确认识别出的番号是否正确；检查识别规则是否覆盖该命名方式；换一个已启用的数据源重试，详见[刮削任务](/docs/task/scrape)。
+**处理**：在[扫描任务](/docs/backend/task/scan)结果里确认识别出的番号是否正确；检查识别规则是否覆盖该命名方式；换一个已启用的数据源重试，详见[刮削任务](/docs/backend/task/scrape)。
 
 ### 刮削一直失败，日志提示服务连接失败
 
@@ -141,7 +141,7 @@ java -agentlib:native-image-agent=config-output-dir=./META-INF/native-image -jar
 
 **原因**：下载器目录与扫描目录不一致，或扫描任务未触发。
 
-**处理**：确认下载器的保存路径在扫描目录内，再手动运行一次扫描，见[扫描任务](/docs/task/scan)。
+**处理**：确认下载器的保存路径在扫描目录内，再手动运行一次扫描，见[扫描任务](/docs/backend/task/scan)。
 
 ## 备份与恢复
 
@@ -155,7 +155,7 @@ java -agentlib:native-image-agent=config-output-dir=./META-INF/native-image -jar
 
 **原因**：导出时没勾选「同时导出图像文件」，包内图片字段仍是原机器的本地路径或外链。
 
-**处理**：保留原 `data` 目录即可直接复用；否则重新导出并勾选图片，或对缺失项重新刮削。说明见[备份与恢复](/docs/system/backup-restore)。
+**处理**：保留原 `data` 目录即可直接复用；否则重新导出并勾选图片，或对缺失项重新刮削。说明见[备份与恢复](/docs/backend/system/backup-restore)。
 
 ### 想连配置一起备份
 
@@ -189,7 +189,7 @@ java -agentlib:native-image-agent=config-output-dir=./META-INF/native-image -jar
 
 **原因**：许可证未激活、已过期，或已超出离线宽限期。水印只影响展示，不锁功能。
 
-**处理**：到[许可证](/docs/system/license)查看状态与提示条，按提示激活或刷新；套餐缺少基础授权时联系维护人员。
+**处理**：到[许可证](/docs/backend/system/license)查看状态与提示条，按提示激活或刷新；套餐缺少基础授权时联系维护人员。
 
 ### 「开始 7 天试用」按钮是灰的
 

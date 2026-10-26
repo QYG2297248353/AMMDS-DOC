@@ -92,4 +92,4 @@ MeiliSearch 是自托管的全文搜索引擎。配置服务地址与 API Key �
 | 搜索无结果 | 该类型尚未重建，或关键词不匹配 | 重建对应类型后重试 |
 | 数据不更新 | 自动索引关闭 | 打开自动索引或手动重建 |
 
-网络层面的连通性可结合[网络与连通性](/docs/dashboard/network)一起排查；其它插件的结构说明见[插件总览](/docs/integration/overview)。
+网络层面的连通性可结合[网络与连通性](/docs/backend/dashboard/network)一起排查；其它插件的结构说明见[插件总览](/docs/integration/overview)。

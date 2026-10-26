@@ -44,7 +44,7 @@ curl -s http://127.0.0.1:8080/api/v1/health/check
 | `data` | 固定 `true` |
 
 :::note[它不检查什么]
-健康检查只证明进程在运行。数据库、磁盘、外部服务与插件状态请使用 **系统 → 系统检查**，或参考[系统检查](/docs/system/system-check)。
+健康检查只证明进程在运行。数据库、磁盘、外部服务与插件状态请使用 **系统 → 系统检查**，或参考[系统检查](/docs/backend/system/system-check)。
 :::
 
 ## 使用建议

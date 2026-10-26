@@ -69,7 +69,7 @@ ThePornDB 的 `theporndb_api_key` 与 Stash 客户端密钥是两套凭据。Sta
 | Stash 影视 | 在已配置的 Stash 客户端中检索 | 查看详情，点「导入影视库」 |
 | Stash 演员 | 在已配置的 Stash 客户端中检索 | 查看详情，点「导入演员库」 |
 
-检索仅用于验证与手动补录，日常刮削由[刮削任务](/docs/task/scrape)按配置自动完成。
+检索仅用于验证与手动补录，日常刮削由[刮削任务](/docs/backend/task/scrape)按配置自动完成。
 
 ## 榜单采集
 
@@ -77,4 +77,4 @@ ThePornDB 的 `theporndb_api_key` 与 Stash 客户端密钥是两套凭据。Sta
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TheJavDB](/docs/integration/metadata/thejavdb) · [R18.dev](/docs/integration/metadata/r18dev) · [影视](/docs/media/movie) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TheJavDB](/docs/integration/metadata/thejavdb) · [R18.dev](/docs/integration/metadata/r18dev) · [影视](/docs/backend/media/movie) · [常见问题](/docs/faq)

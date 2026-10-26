@@ -60,7 +60,7 @@ BitMagnet 至少需要 Web 端口 `3333` 与 DHT 端口 `3334`（TCP/UDP），�
 - **检索实现**：向 `/graphql` 提交 `torrentContent.search` 查询，参数为关键词、页码、每页条数与排序字段（默认按相关度倒序）。
 - **结果字段**：包含命中总数与当前页条目，条目可继续查看文件列表与目录树。
 - **文件查看**：按 info hash 查询 `torrent.files`，支持分页列表与不分页目录树，用于判断资源内容与体积。
-- **下载衔接**：磁力结果可直接推送到下载器，具体操作见[磁力检索](/docs/subscribe/magnet)。
+- **下载衔接**：磁力结果可直接推送到下载器，具体操作见[磁力检索](/docs/backend/subscribe/magnet)。
 
 :::info[不参与订阅排序]
 BitMagnet 不在订阅配置的「搜索顺序」里，订阅自动下载不会走它。它服务的是磁力检索页面，适合按关键词找冷门资源。
@@ -79,5 +79,5 @@ BitMagnet 不在订阅配置的「搜索顺序」里，订阅自动下载不会�
 
 - [插件集成总览](/docs/integration/overview)
 - [Prowlarr](/docs/integration/indexer/prowlarr)｜[NexusPHP](/docs/integration/indexer/nexusphp)｜[M-Team](/docs/integration/indexer/m-team)
-- [磁力检索](/docs/subscribe/magnet)｜[订阅检索](/docs/subscribe/search)
-- [qBittorrent](/docs/integration/downloader/qbittorrent)｜[网络与连通性](/docs/dashboard/network)
+- [磁力检索](/docs/backend/subscribe/magnet)｜[订阅检索](/docs/backend/subscribe/search)
+- [qBittorrent](/docs/integration/downloader/qbittorrent)｜[网络与连通性](/docs/backend/dashboard/network)

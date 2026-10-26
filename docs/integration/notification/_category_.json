@@ -1,6 +1,6 @@
 {
-  "label": "通知推送",
-  "position": 5,
+  "label": "推送通知",
+  "position": 4,
   "link": {
     "type": "generated-index",
     "slug": "/integration/notification",

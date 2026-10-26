@@ -68,4 +68,4 @@ sidebar_position: 7
 | 填写 Key 后仍无数据 | Key 类型不是「Web 服务」或配额用尽 | 在高德控制台核对 Key 类型与用量 |
 | 想确认改动是否生效 | 页面读取的是已保存的配置 | 保存后刷新工作台，再查看天气卡片 |
 
-跨域与代理层面的排查可参考[网络与连通性](/docs/dashboard/network)。
+跨域与代理层面的排查可参考[网络与连通性](/docs/backend/dashboard/network)。

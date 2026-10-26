@@ -75,7 +75,7 @@ export default function Home(): ReactNode {
                 <div className={styles.quickStartCard}>
                   <h3><Translate id="homepage.quickStart.support" description="Support section title">3. 故障排查</Translate></h3>
                   <p><Translate id="homepage.quickStart.support.description" description="Support step description">从系统检查与网络连通性入手定位问题</Translate></p>
-                  <Link to="/docs/system/system-check"><Translate id="homepage.quickStart.viewSupport" description="View Support Guide link text">查看系统检查</Translate></Link>
+                  <Link to="/docs/backend/system/system-check"><Translate id="homepage.quickStart.viewSupport" description="View Support Guide link text">查看系统检查</Translate></Link>
                 </div>
               </div>
               <div className="col col--6">

@@ -65,4 +65,4 @@ DoH 端点常被网络策略拦截，属于预期现象，通常不影响其他�
 
 升级或更换网络环境后，先跑一次连通性清单，把结果当作基线。之后出现刮削问题，再跑一次，对比哪几行从可访问变成了不可访问——这比逐条试插件快得多。
 
-相关文档：[网络与连通性](/docs/dashboard/network) · [系统检查](/docs/system/system-check) · [常见问题](/docs/faq)
+相关文档：[网络与连通性](/docs/backend/dashboard/network) · [系统检查](/docs/backend/system/system-check) · [常见问题](/docs/faq)

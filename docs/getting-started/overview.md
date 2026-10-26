@@ -76,4 +76,4 @@ Docker 镜像内部还会启动后端 `8080` 端口，但它只在容器内被 N
 
 1. 用浏览器打开访问地址，使用默认管理员账号登录，见[首次登录与初始化](/docs/getting-started/first-login)。
 2. 需要调整端口、上传大小、调度开关等，见[环境变量与启动参数](/docs/getting-started/environment)。
-3. 部署或运行异常时，先看[系统检查](/docs/system/system-check)与[常见问题](/docs/faq)。
+3. 部署或运行异常时，先看[系统检查](/docs/backend/system/system-check)与[常见问题](/docs/faq)。

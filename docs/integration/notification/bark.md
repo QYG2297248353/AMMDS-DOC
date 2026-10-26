@@ -104,5 +104,5 @@ Bark 与其它渠道共用同一套通知内容，常见场景包括：
 
 - [插件集成总览](/docs/integration/overview)
 - [Telegram](/docs/integration/notification/telegram)｜[WebHook](/docs/integration/notification/webhook)
-- [系统配置](/docs/system/config)｜[网络与连通性](/docs/dashboard/network)
-- [订阅管理](/docs/subscribe/manage)｜[常见问题](/docs/faq)
+- [系统配置](/docs/backend/system/config)｜[网络与连通性](/docs/backend/dashboard/network)
+- [订阅管理](/docs/backend/subscribe/manage)｜[常见问题](/docs/faq)

@@ -46,25 +46,36 @@ AMMDS（Adult Media Metadata Database System）是一套**私有化部署的影�
 - **漫画 / 小说**：章节与阅读进度管理，支持压缩包导入
 - **标签库**：类型、标签、用户分类三层组织
 
-### 任务与自动化
+### 任务管理
 
 - 扫描任务：按目录识别媒体文件，支持定时与目录监听
 - 刮削任务：按番号匹配数据源并写回元数据、图片与 NFO
 - 任务配置、任务记录与失败重试
 - 定时任务（Cron）统一调度
 
-### 订阅与下载
+### 订阅检索
 
 - 站点检索：M-Team、Rousi、FSM、NexusPHP、Prowlarr 等
 - 磁力检索：BitMagnet
 - 订阅管理：按番号订阅、自动匹配、失败重试
 - 下载推送：qBittorrent、Transmission，辅种由 IYUU 完成
 
-### 插件集成
+### 集成应用
 
-按用途分为六类：元数据源、站点索引、下载器、媒体服务器、通知推送、辅助工具，共 30+ 个集成项。每个插件都有独立的配置页与连通性测试。
+按用途分为六类：元数据、站点资源、下载器、推送通知、媒体服务器、辅助工具，共 30+ 个集成项。每个插件都有独立的配置页与连通性测试。
 
-### 信息中心
+### 前台站点
+
+后台维护的数据会在前台以访客界面呈现，二者共用同一套账号与内容：
+
+- **浏览**：影视、剧集、演员、漫画、小说、资讯的列表与详情
+- **阅读**：漫画与小说内置阅读器，记录阅读进度
+- **互动**：收藏、订阅、分享页（可带提取码）、用户公共主页
+- **商店**：官方商城的商品、购物车、结算与订单查询
+
+详见[前台站点导览](/docs/site/overview)。
+
+### 信息管理
 
 - RSS 订阅与热门 RSS 榜单
 - 系统消息与官方通告
@@ -96,13 +107,23 @@ AMMDS（Adult Media Metadata Database System）是一套**私有化部署的影�
 
 ## 文档怎么读
 
+文档按产品结构分为五块：**快速开始**、**后台功能**、**插件集成**、**前台站点**、**常见问题**。
+
 | 你的目标 | 建议阅读顺序 |
 | --- | --- |
 | 第一次部署 | [部署方式总览](/docs/getting-started/overview) → [首次登录](/docs/getting-started/first-login) |
-| 想先把媒体库跑起来 | [影视](/docs/media/movie) → [扫描任务](/docs/task/scan) → [刮削任务](/docs/task/scrape) |
+| 先熟悉界面 | [后台功能总览](/docs/backend) → [仪表盘](/docs/backend/dashboard/overview) → [前台站点导览](/docs/site/overview) |
+| 想先把媒体库跑起来 | [影视](/docs/backend/media/movie) → [扫描任务](/docs/backend/task/scan) → [刮削任务](/docs/backend/task/scrape) |
 | 想接入站点与下载器 | [插件总览](/docs/integration/overview) → [M-Team](/docs/integration/indexer/m-team) → [qBittorrent](/docs/integration/downloader/qbittorrent) |
-| 排查故障 | [系统检查](/docs/system/system-check) → [网络连通性](/docs/dashboard/network) → [常见问题](/docs/faq) |
+| 想把媒体库开放给家人 | [前台站点导览](/docs/site/overview) → [分享](/docs/site/share) → [用户主页](/docs/site/user) |
+| 排查故障 | [系统检查](/docs/backend/system/system-check) → [网络连通性](/docs/backend/dashboard/network) → [常见问题](/docs/faq) |
 | 对接第三方程序 | [开发平台](/open-api/getting-started/overview) |
+
+:::tip[文档结构与界面一致]
+- **后台功能** 对应登录后的后台菜单：仪表盘、任务、媒体、订阅检索、信息、集成应用、工具箱、系统管理、官方商城。
+- **插件集成** 单独成章，因为集成项有 30 多个，且每项都有自己的配置与测试方式。
+- **前台站点** 介绍未登录/已登录访客看到的页面，包括分享页与用户主页。
+:::
 
 ## 加入社区
 
@@ -115,4 +136,4 @@ AMMDS（Adult Media Metadata Database System）是一套**私有化部署的影�
 
 ## 支持项目
 
-如果你觉得 AMMDS 有帮助，可以通过官方商城购买会员或订阅服务支持持续开发。会员权益与许可证的对应关系见[许可证](/docs/system/license)。
+如果你觉得 AMMDS 有帮助，可以通过官方商城购买会员或订阅服务支持持续开发。会员权益与许可证的对应关系见[许可证](/docs/backend/system/license)。

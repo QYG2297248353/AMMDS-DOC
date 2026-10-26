@@ -97,4 +97,4 @@ MetaTube 是面向影视元数据的聚合刮削服务，支持多个影片与�
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TMDB](/docs/integration/metadata/tmdb) · [刮削任务](/docs/task/scrape) · [影视](/docs/media/movie) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TMDB](/docs/integration/metadata/tmdb) · [刮削任务](/docs/backend/task/scrape) · [影视](/docs/backend/media/movie) · [常见问题](/docs/faq)

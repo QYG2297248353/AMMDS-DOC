@@ -110,5 +110,5 @@ NexusPHP 是一套建站程序，同一个插件可以同时管理多个基于�
 
 - [插件集成总览](/docs/integration/overview)
 - [NexusPHP](/docs/integration/indexer/nexusphp)｜[Rousi](/docs/integration/indexer/rousi)｜[M-Team](/docs/integration/indexer/m-team)
-- [订阅检索](/docs/subscribe/search)｜[磁力检索](/docs/subscribe/magnet)
+- [订阅检索](/docs/backend/subscribe/search)｜[磁力检索](/docs/backend/subscribe/magnet)
 - [常见问题](/docs/faq)

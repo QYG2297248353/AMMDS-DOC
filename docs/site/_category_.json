@@ -1,0 +1,9 @@
+{
+  "label": "前台站点",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/site",
+    "description": "访客看到的前台页面：影视、剧集、演员、漫画、小说、资讯、分享页、商店与用户主页。"
+  }
+}

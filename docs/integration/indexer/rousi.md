@@ -58,7 +58,7 @@ Rousi（肉丝）是综合类 PT 站。插件把它的 **RSS 服务**与 **API �
 | 测试RSS连接 | 「RSS服务地址」 | 判断站点主域名是否可达，通常用于 RSS 相关功能 |
 | 测试API连接 | 「API服务地址」 | 判断检索接口是否可达，订阅检索依赖它 |
 
-两个按钮都只做连通性探测，不校验 PassKey。凭据是否正确，最直接的方式是在[订阅检索](/docs/subscribe/search)中用番号试搜一次。
+两个按钮都只做连通性探测，不校验 PassKey。凭据是否正确，最直接的方式是在[订阅检索](/docs/backend/subscribe/search)中用番号试搜一次。
 
 ## 在订阅检索中的作用
 
@@ -81,5 +81,5 @@ Rousi（肉丝）是综合类 PT 站。插件把它的 **RSS 服务**与 **API �
 
 - [插件集成总览](/docs/integration/overview)
 - [M-Team](/docs/integration/indexer/m-team)｜[KamePT](/docs/integration/indexer/kamept)｜[NexusPHP](/docs/integration/indexer/nexusphp)
-- [订阅检索](/docs/subscribe/search)｜[订阅下载](/docs/subscribe/downloader)
+- [订阅检索](/docs/backend/subscribe/search)｜[订阅下载](/docs/backend/subscribe/downloader)
 - [qBittorrent](/docs/integration/downloader/qbittorrent)｜[IYUU](/docs/integration/downloader/iyuu)

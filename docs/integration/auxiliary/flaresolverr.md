@@ -76,4 +76,4 @@ AMMDS 不下载、不托管 FlareSolverr，也不随应用启动它。你需要�
 | 开启后明显变慢 | 每个请求都经过挑战服务 | 仅在需要的站点场景下开启，或缩小使用范围 |
 | 同步代理后全部超时 | FlareSolverr 无法使用该代理 | 关闭同步，让 FlareSolverr 直连；或修正代理地址 |
 
-抓取链路的其它排查手段见[刮削任务](/docs/task/scrape)与[网络与连通性](/docs/dashboard/network)。
+抓取链路的其它排查手段见[刮削任务](/docs/backend/task/scrape)与[网络与连通性](/docs/backend/dashboard/network)。

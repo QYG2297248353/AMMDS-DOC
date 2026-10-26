@@ -64,9 +64,9 @@ TheJavDB 以番号为入口返回影片标题、发行信息、演员、分类�
 ## 注意事项
 
 - TheJavDB 只按番号检索，关键词需要能归一为番号；无法识别番号的文件不会命中。
-- 该页面没有导入按钮，检索结果用于核对数据；自动入库发生在[刮削任务](/docs/task/scrape)中。
+- 该页面没有导入按钮，检索结果用于核对数据；自动入库发生在[刮削任务](/docs/backend/task/scrape)中。
 - 与其他元数据源同时启用时，最终采用哪一条结果由刮削与识别规则决定。
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [R18.dev](/docs/integration/metadata/r18dev) · [FANZA DMM](/docs/integration/metadata/fanzadmm) · [刮削任务](/docs/task/scrape) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [R18.dev](/docs/integration/metadata/r18dev) · [FANZA DMM](/docs/integration/metadata/fanzadmm) · [刮削任务](/docs/backend/task/scrape) · [常见问题](/docs/faq)

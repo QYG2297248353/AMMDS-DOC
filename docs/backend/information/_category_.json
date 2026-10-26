@@ -1,0 +1,9 @@
+{
+  "label": "信息管理",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/backend/information",
+    "description": "RSS、系统消息、实例互通与分享。"
+  }
+}

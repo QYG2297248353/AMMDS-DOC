@@ -90,5 +90,5 @@ Jellyfin 是开源媒体服务器。接入 AMMDS 后，媒体库条目、播放�
 
 - [插件集成总览](/docs/integration/overview)
 - [Emby](/docs/integration/media-server/emby)｜[MetaTube](/docs/integration/metadata/metatube)
-- [刮削任务](/docs/task/scrape)｜[订阅管理](/docs/subscribe/manage)
-- [系统配置](/docs/system/config)｜[常见问题](/docs/faq)
+- [刮削任务](/docs/backend/task/scrape)｜[订阅管理](/docs/backend/subscribe/manage)
+- [系统配置](/docs/backend/system/config)｜[常见问题](/docs/faq)

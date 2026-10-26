@@ -1,0 +1,9 @@
+{
+  "label": "商城与账号",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "slug": "/backend/account",
+    "description": "官方商城、个人资料与站点认证。"
+  }
+}

@@ -67,4 +67,4 @@ R18.dev 既提供在线 API，也提供可离线导入的 SQL 数据包。AMMDS 
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TheJavDB](/docs/integration/metadata/thejavdb) · [ThePornDB / StashBox](/docs/integration/metadata/theporndb) · [刮削任务](/docs/task/scrape) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TheJavDB](/docs/integration/metadata/thejavdb) · [ThePornDB / StashBox](/docs/integration/metadata/theporndb) · [刮削任务](/docs/backend/task/scrape) · [常见问题](/docs/faq)

@@ -104,5 +104,5 @@ Telegram 是 AMMDS 的主力通知渠道，也是唯一支持**反向控制**的
 
 - [插件集成总览](/docs/integration/overview)
 - [Bark](/docs/integration/notification/bark)｜[WebHook](/docs/integration/notification/webhook)
-- [系统配置](/docs/system/config)｜[网络与连通性](/docs/dashboard/network)
-- [订阅检索](/docs/subscribe/search)｜[常见问题](/docs/faq)
+- [系统配置](/docs/backend/system/config)｜[网络与连通性](/docs/backend/dashboard/network)
+- [订阅检索](/docs/backend/subscribe/search)｜[常见问题](/docs/faq)

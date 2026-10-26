@@ -67,7 +67,7 @@ qBittorrent 是 AMMDS 的下载执行端。订阅匹配到资源后，种子由�
 3. **回查状态**：系统按标签回查任务，任务完成则标记订阅完成并推送通知；任务消失则记为失败。
 4. **辅种**：IYUU 补下的种子同样由 qBittorrent 承接，当前版本自动辅种仅支持 qBittorrent 客户端。
 
-订阅侧的完整链路见[订阅下载](/docs/subscribe/downloader)，辅种配置见[IYUU](/docs/integration/downloader/iyuu)。
+订阅侧的完整链路见[订阅下载](/docs/backend/subscribe/downloader)，辅种配置见[IYUU](/docs/integration/downloader/iyuu)。
 
 ## 种子管理
 
@@ -87,5 +87,5 @@ qBittorrent 是 AMMDS 的下载执行端。订阅匹配到资源后，种子由�
 
 - [插件集成总览](/docs/integration/overview)
 - [Transmission](/docs/integration/downloader/transmission)｜[IYUU](/docs/integration/downloader/iyuu)
-- [订阅下载](/docs/subscribe/downloader)｜[订阅管理](/docs/subscribe/manage)
+- [订阅下载](/docs/backend/subscribe/downloader)｜[订阅管理](/docs/backend/subscribe/manage)
 - [M-Team](/docs/integration/indexer/m-team)｜[Prowlarr](/docs/integration/indexer/prowlarr)

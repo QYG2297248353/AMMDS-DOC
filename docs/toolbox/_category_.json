@@ -1,9 +1,0 @@
-{
-  "label": "工具箱",
-  "position": 8,
-  "link": {
-    "type": "generated-index",
-    "slug": "/toolbox",
-    "description": "辅种、媒体编辑、字幕、转码、下载器与媒体服务器工具。"
-  }
-}

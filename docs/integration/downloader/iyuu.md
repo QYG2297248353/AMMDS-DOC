@@ -103,5 +103,5 @@ IYUU 是基于种子特征码的交叉索引服务：拿你已经在做种的种
 
 - [插件集成总览](/docs/integration/overview)
 - [qBittorrent](/docs/integration/downloader/qbittorrent)｜[Transmission](/docs/integration/downloader/transmission)
-- [订阅下载](/docs/subscribe/downloader)｜[订阅管理](/docs/subscribe/manage)
+- [订阅下载](/docs/backend/subscribe/downloader)｜[订阅管理](/docs/backend/subscribe/manage)
 - [Telegram](/docs/integration/notification/telegram)｜[WebHook](/docs/integration/notification/webhook)

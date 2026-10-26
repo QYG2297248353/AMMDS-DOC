@@ -107,4 +107,4 @@ Docker 镜像内 Nginx 的 `client_max_body_size` 为 10G；若把 `AMMDS_MAX_FI
 | 当前端口 | 工作台「系统信息」卡片详情中的「监听地址」 |
 | 版本与运行环境 | 工作台「系统信息」卡片 |
 | 插件连通性 | 头像菜单 → **系统检查** 中的插件检查项 |
-| 代理与网络 | 「系统配置 → 网络配置」，以及[网络与连通性](/docs/dashboard/network) |
+| 代理与网络 | 「系统配置 → 网络配置」，以及[网络与连通性](/docs/backend/dashboard/network) |

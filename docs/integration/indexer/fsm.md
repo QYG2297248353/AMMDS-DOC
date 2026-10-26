@@ -79,5 +79,5 @@ API TOKEN 决定能不能检索，PassKey 决定能不能下载。两个都填�
 
 - [插件集成总览](/docs/integration/overview)
 - [M-Team](/docs/integration/indexer/m-team)｜[NexusPHP](/docs/integration/indexer/nexusphp)｜[Rousi](/docs/integration/indexer/rousi)
-- [订阅检索](/docs/subscribe/search)｜[订阅下载](/docs/subscribe/downloader)
+- [订阅检索](/docs/backend/subscribe/search)｜[订阅下载](/docs/backend/subscribe/downloader)
 - [qBittorrent](/docs/integration/downloader/qbittorrent)｜[IYUU](/docs/integration/downloader/iyuu)

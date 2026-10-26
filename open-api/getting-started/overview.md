@@ -23,7 +23,7 @@ tags: [api]
 此外，界面上还有两类面向外部系统的能力：
 
 - **WebHook 通知**：AMMDS 主动向你的地址推送事件，属于出站集成，配置见[WebHook](/docs/integration/notification/webhook)。
-- **实例互通**：两个 AMMDS 实例之间互相添加好友、共享检索，属于实例间协议，配置见[实例互通](/docs/information/interop)。
+- **实例互通**：两个 AMMDS 实例之间互相添加好友、共享检索，属于实例间协议，配置见[实例互通](/docs/backend/information/interop)。
 
 ## 开放 API 能力范围
 

@@ -70,5 +70,5 @@ Transmission 常用端口是 `9091`，而这里的默认值是 `8080`（与 qBit
 
 - [插件集成总览](/docs/integration/overview)
 - [qBittorrent](/docs/integration/downloader/qbittorrent)｜[IYUU](/docs/integration/downloader/iyuu)
-- [订阅下载](/docs/subscribe/downloader)｜[订阅管理](/docs/subscribe/manage)
-- [网络与连通性](/docs/dashboard/network)｜[常见问题](/docs/faq)
+- [订阅下载](/docs/backend/subscribe/downloader)｜[订阅管理](/docs/backend/subscribe/manage)
+- [网络与连通性](/docs/backend/dashboard/network)｜[常见问题](/docs/faq)

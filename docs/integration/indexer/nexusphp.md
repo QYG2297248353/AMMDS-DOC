@@ -101,5 +101,5 @@ NexusPHP 是一套广泛使用的 PT 建站程序。这个插件不是「一站�
 
 - [插件集成总览](/docs/integration/overview)
 - [KamePT](/docs/integration/indexer/kamept)｜[Rousi](/docs/integration/indexer/rousi)｜[FSM](/docs/integration/indexer/fsm)
-- [订阅检索](/docs/subscribe/search)｜[订阅下载](/docs/subscribe/downloader)
+- [订阅检索](/docs/backend/subscribe/search)｜[订阅下载](/docs/backend/subscribe/downloader)
 - [IYUU](/docs/integration/downloader/iyuu)｜[常见问题](/docs/faq)

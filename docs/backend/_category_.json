@@ -1,0 +1,9 @@
+{
+  "label": "后台功能",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/backend",
+    "description": "与后台菜单一致的功能文档：仪表盘、任务管理、媒体管理、订阅检索、信息管理、工具箱、商城与账号、系统管理。"
+  }
+}

@@ -57,4 +57,4 @@ sidebar_position: 9
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [MetaTube](/docs/integration/metadata/metatube) · [影视](/docs/media/movie) · [扫描任务](/docs/task/scan) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [MetaTube](/docs/integration/metadata/metatube) · [影视](/docs/backend/media/movie) · [扫描任务](/docs/backend/task/scan) · [常见问题](/docs/faq)

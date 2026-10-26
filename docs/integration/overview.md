@@ -42,7 +42,7 @@ AMMDS 的「集成应用」集中管理所有外部服务：元数据源、站�
 5. 使用「连接测试」确认网络与凭据，再用「资源检索 / 搜索测试 / 番号检索」做一次端到端验证。
 
 :::tip[生效时机]
-配置保存后立即对后续任务生效，但不会回补已经执行过的扫描或刮削。修改优先级、语言、图片地址后，需要重新执行[刮削任务](/docs/task/scrape)才能看到新结果。
+配置保存后立即对后续任务生效，但不会回补已经执行过的扫描或刮削。修改优先级、语言、图片地址后，需要重新执行[刮削任务](/docs/backend/task/scrape)才能看到新结果。
 :::
 
 ## 配置的保存与回填
@@ -76,7 +76,7 @@ AMMDS 的「集成应用」集中管理所有外部服务：元数据源、站�
 | 检索测试 | 走完整业务链路，确认能取到数据并写入本地库 | 影视检索、演员检索、番号检索、搜索测试、导入 |
 
 :::warning[「可访问」不等于「可用」]
-多数健康检查只要收到目标服务器的任意 HTTP 响应就判定成功，401、403、404 也算网络可达。若连接测试通过但检索为空，应继续检查密钥、配额、子开关与关键词，而不是继续排查网络。域名级连通性可在[网络与连通性](/docs/dashboard/network)中查看。
+多数健康检查只要收到目标服务器的任意 HTTP 响应就判定成功，401、403、404 也算网络可达。若连接测试通过但检索为空，应继续检查密钥、配额、子开关与关键词，而不是继续排查网络。域名级连通性可在[网络与连通性](/docs/backend/dashboard/network)中查看。
 :::
 
 ## 密钥类配置的安全提示
@@ -104,17 +104,17 @@ AMMDS 的「集成应用」集中管理所有外部服务：元数据源、站�
 | 现象 | 优先检查 |
 | --- | --- |
 | 保存后插件仍不参与刮削 | 「启用状态」与影视 / 剧集 / 元数据检索子开关是否都已打开并保存 |
-| 连接测试失败 | 服务地址协议与端口、容器网络、DNS、代理；参见[网络与连通性](/docs/dashboard/network) |
+| 连接测试失败 | 服务地址协议与端口、容器网络、DNS、代理；参见[网络与连通性](/docs/backend/dashboard/network) |
 | 连接测试成功但检索为空 | 密钥是否有效、配额是否耗尽、关键词是否为该源支持的番号格式 |
 | 返回 401 / 403 | 令牌过期、权限不足，或站点要求 User-Agent / 鉴权头 |
 | 返回 429 或频繁超时 | 触发站点限速，调大请求间隔并降低并发 |
 | 图片无法显示 | 图片基础地址被网络阻断，或站点有防盗链 |
 
-更完整的配置项与系统级开关见[系统配置](/docs/system/config)；仍无法定位时查阅[常见问题](/docs/faq)。
+更完整的配置项与系统级开关见[系统配置](/docs/backend/system/config)；仍无法定位时查阅[常见问题](/docs/faq)。
 
 ## 相关页面
 
 - 元数据源：[MetaTube](/docs/integration/metadata/metatube)、[TMDB](/docs/integration/metadata/tmdb)、[TheTVDB](/docs/integration/metadata/tvdb)、[Bangumi](/docs/integration/metadata/bangumi)
 - 更多元数据源：[ThePornDB / StashBox](/docs/integration/metadata/theporndb)、[TheJavDB](/docs/integration/metadata/thejavdb)、[R18.dev](/docs/integration/metadata/r18dev)、[FANZA DMM](/docs/integration/metadata/fanzadmm)、[麻豆](/docs/integration/metadata/madou)、[M-Team DMM 元数据](/docs/integration/metadata/m-team-dmm)
 - 站点接入：[M-Team](/docs/integration/indexer/m-team)
-- 使用链路：[扫描任务](/docs/task/scan) → [刮削任务](/docs/task/scrape) → [影视](/docs/media/movie)
+- 使用链路：[扫描任务](/docs/backend/task/scan) → [刮削任务](/docs/backend/task/scrape) → [影视](/docs/backend/media/movie)

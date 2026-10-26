@@ -1,0 +1,9 @@
+{
+  "label": "仪表盘",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/backend/dashboard",
+    "description": "工作台、榜单与网络状态。"
+  }
+}

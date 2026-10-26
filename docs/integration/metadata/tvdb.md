@@ -70,4 +70,4 @@ TheTVDB 主要提供剧集（含季与集）元数据，同一套检索接口也
 
 ## 相关页面
 
-[插件总览](/docs/integration/overview) · [TMDB](/docs/integration/metadata/tmdb) · [Bangumi](/docs/integration/metadata/bangumi) · [刮削任务](/docs/task/scrape) · [常见问题](/docs/faq)
+[插件总览](/docs/integration/overview) · [TMDB](/docs/integration/metadata/tmdb) · [Bangumi](/docs/integration/metadata/bangumi) · [刮削任务](/docs/backend/task/scrape) · [常见问题](/docs/faq)
