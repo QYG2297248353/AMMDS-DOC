@@ -1,0 +1,9 @@
+{
+  "label": "系统管理",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "slug": "/system",
+    "description": "系统配置、系统检查、备份恢复、存储、日志、密钥与许可证。"
+  }
+}

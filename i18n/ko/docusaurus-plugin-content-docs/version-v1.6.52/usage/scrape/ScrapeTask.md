@@ -23,11 +23,11 @@ tags: [usage, scrape]
 
 영상 메타데이터를获取하는 핵심인 관련 메타데이터 플러그인이 활성화되고正确하게 구성되어 있는지 확인하세요：
 
-+ [Metatube 플러그인](/docs/plugin/metadata/Metatube)
-+ [ThePornDB 플러그인](/docs/plugin/metadata/ThePornDB)
-+ [StashBox 플러그인](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM 플러그인](/docs/plugin/metadata/FanzaDmm)
-+ [Madou 플러그인](/docs/plugin/metadata/Madou)
++ [Metatube 플러그인](/docs/integration/metadata/metatube)
++ [ThePornDB 플러그인](/docs/integration/metadata/theporndb)
++ [StashBox 플러그인](/docs/integration/metadata/theporndb)
++ [FanzaDMM 플러그인](/docs/integration/metadata/fanzadmm)
++ [Madou 플러그인](/docs/integration/metadata/madou)
 
 :::warning 중요한 경고
 관련 메타데이터 플러그인을 활성화하지 않으면 영상 메타데이터를获取할 수 없어 스크래핑이失败합니다.

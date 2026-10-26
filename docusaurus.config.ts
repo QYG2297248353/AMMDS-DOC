@@ -25,7 +25,7 @@ const config: Config = {
     },
   },
   customFields: {
-    version: "v1.6.66",
+    version: "v2.0.0",
   },
   i18n: {
     defaultLocale: "zh-Hans",
@@ -284,7 +284,7 @@ const config: Config = {
     announcementBar: {
       id: "announcement_bar",
       content:
-        '🎉️ <a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases/v1.6.66">AMMDS v1.6.66</a> (公测版) 已发布！🥳️',
+        '🎉️ <a target="_blank" rel="noopener noreferrer" href="https://github.com/QYG2297248353/AMMDS-Docker/releases">AMMDS v2.0.0</a> 已发布，文档同步重写：指南按功能路由重组，新增开发平台与博客。🥳️',
       textColor: "#091E42",
       isCloseable: true,
     },
@@ -335,7 +335,7 @@ const config: Config = {
           position: "left",
         },
         {
-          label: "开放平台",
+          label: "开发平台",
           type: "docSidebar",
           sidebarId: "openApiSidebar",
           docsPluginId: "open-api",

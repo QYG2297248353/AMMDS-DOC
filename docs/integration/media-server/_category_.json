@@ -1,0 +1,9 @@
+{
+  "label": "媒体服务器",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/integration/media-server",
+    "description": "Jellyfin / Emby 媒体服务器集成。"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "接入指南",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/getting-started",
+    "description": "鉴权、通用约定与第一个调用示例。"
+  }
+}

@@ -23,11 +23,11 @@ tags: [usage, scrape]
 
 動画のメタデータを取得するための鍵となる関連メタデータプラグインが有効になっていて正しく設定されていることを確認してください：
 
-+ [Metatube プラグイン](/docs/plugin/metadata/Metatube)
-+ [ThePornDB プラグイン](/docs/plugin/metadata/ThePornDB)
-+ [StashBox プラグイン](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM プラグイン](/docs/plugin/metadata/FanzaDmm)
-+ [Madou プラグイン](/docs/plugin/metadata/Madou)
++ [Metatube プラグイン](/docs/integration/metadata/metatube)
++ [ThePornDB プラグイン](/docs/integration/metadata/theporndb)
++ [StashBox プラグイン](/docs/integration/metadata/theporndb)
++ [FanzaDMM プラグイン](/docs/integration/metadata/fanzadmm)
++ [Madou プラグイン](/docs/integration/metadata/madou)
 
 :::warning 重要な注意事項
 関連するメタデータプラグインが有効になっていないと、動画のメタデータを取得できず、スクレイピングに失敗します。

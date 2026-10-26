@@ -25,11 +25,11 @@ You need internet access to look up movie info online.
 
 Make sure the relevant metadata plugins are enabled and configured. These are the tools that find movie info for you:
 
-+ [Metatube Plugin](/docs/plugin/metadata/Metatube)
-+ [ThePornDB Plugin](/docs/plugin/metadata/ThePornDB)
-+ [StashBox Plugin](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM Plugin](/docs/plugin/metadata/FanzaDmm)
-+ [Madou Plugin](/docs/plugin/metadata/Madou)
++ [Metatube Plugin](/docs/integration/metadata/metatube)
++ [ThePornDB Plugin](/docs/integration/metadata/theporndb)
++ [StashBox Plugin](/docs/integration/metadata/theporndb)
++ [FanzaDMM Plugin](/docs/integration/metadata/fanzadmm)
++ [Madou Plugin](/docs/integration/metadata/madou)
 
 :::warning Important
 Without metadata plugins enabled, the system can't fetch movie info — scraping will definitely fail.

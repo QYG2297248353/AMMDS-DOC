@@ -1,0 +1,9 @@
+{
+  "label": "下载器",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/integration/downloader",
+    "description": "种子与磁力下载器、辅种服务。"
+  }
+}

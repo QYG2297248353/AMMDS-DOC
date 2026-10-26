@@ -1,0 +1,9 @@
+{
+  "label": "媒体库",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/media",
+    "description": "影视、剧集、演员、系列、厂牌、漫画、小说与标签的使用方法。"
+  }
+}

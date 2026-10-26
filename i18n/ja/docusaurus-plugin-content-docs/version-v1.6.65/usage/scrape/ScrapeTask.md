@@ -25,11 +25,11 @@ tags: [usage, scrape]
 
 関連するメタデータプラグインが有効になっており、正しく設定されていることを確認してください。これらのプラグインは動画情報を見つけるための重要なツールです：
 
-+ [Metatube プラグイン](/docs/plugin/metadata/Metatube)
-+ [ThePornDB プラグイン](/docs/plugin/metadata/ThePornDB)
-+ [StashBox プラグイン](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM プラグイン](/docs/plugin/metadata/FanzaDmm)
-+ [Madou プラグイン](/docs/plugin/metadata/Madou)
++ [Metatube プラグイン](/docs/integration/metadata/metatube)
++ [ThePornDB プラグイン](/docs/integration/metadata/theporndb)
++ [StashBox プラグイン](/docs/integration/metadata/theporndb)
++ [FanzaDMM プラグイン](/docs/integration/metadata/fanzadmm)
++ [Madou プラグイン](/docs/integration/metadata/madou)
 
 :::warning 重要な注意事項
 メタデータプラグインが有効になっていないと、動画情報を取得できず、スクレイピングは必ず失敗します。

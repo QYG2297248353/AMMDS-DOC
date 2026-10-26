@@ -12,49 +12,49 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: <Translate id="homepage.features.library.title" description="Movie Library Management feature title">影片库管理</Translate>,
+    title: <Translate id="homepage.features.library.title" description="Movie Library Management feature title">影视库管理</Translate>,
     icon: '🎬',
-    description: <Translate id="homepage.features.library.description" description="Movie Library Management feature description">支持多种视频格式，自动刮削元数据，打造个性化影片库</Translate>,
+    description: <Translate id="homepage.features.library.description" description="Movie Library Management feature description">按番号识别本地文件，统一管理标题、简介、海报、剧照与收藏状态</Translate>,
   },
   {
-    title: <Translate id="homepage.features.actorRecognition.title" description="Automatic Actor Recognition feature title">自动演员识别</Translate>,
+    title: <Translate id="homepage.features.actorRecognition.title" description="Automatic Actor Recognition feature title">剧集与演员</Translate>,
     icon: '👤',
-    description: <Translate id="homepage.features.actorRecognition.description" description="Automatic Actor Recognition feature description">自动识别影片中的演员信息，提供详细的演员介绍和作品列表</Translate>,
+    description: <Translate id="homepage.features.actorRecognition.description" description="Automatic Actor Recognition feature description">支持季集结构与剧集文件匹配，演员资料库自动关联作品</Translate>,
   },
   {
     title: <Translate id="homepage.features.metadataScraping.title" description="Automatic Metadata Scraping feature title">自动元数据刮削</Translate>,
     icon: '📄',
-    description: <Translate id="homepage.features.metadataScraping.description" description="Automatic Metadata Scraping feature description">自动从互联网获取影片元数据，包括海报、简介、评分等信息</Translate>,
+    description: <Translate id="homepage.features.metadataScraping.description" description="Automatic Metadata Scraping feature description">多数据源按优先级回填字段，缺失项可二次补全，统一写入媒体库</Translate>,
   },
   {
-    title: <Translate id="homepage.features.sharing.title" description="Sharing Functionality feature title">共享功能</Translate>,
-    icon: '📤',
-    description: <Translate id="homepage.features.sharing.description" description="Sharing Functionality feature description">与朋友或家人共享您的影片库，轻松分享您的影视收藏</Translate>,
+    title: <Translate id="homepage.features.comicNovel.title" description="Comic and Novel feature title">漫画与小说</Translate>,
+    icon: '📚',
+    description: <Translate id="homepage.features.comicNovel.description" description="Comic and Novel feature description">相册与书籍管理、章节阅读进度，支持压缩包导入</Translate>,
+  },
+  {
+    title: <Translate id="homepage.features.subscribe.title" description="Subscribe and Download feature title">订阅与下载</Translate>,
+    icon: '🔍',
+    description: <Translate id="homepage.features.subscribe.description" description="Subscribe and Download feature description">站点检索、磁力检索与按番号订阅，命中后自动推送到下载器</Translate>,
+  },
+  {
+    title: <Translate id="homepage.features.automation.title" description="Task Automation feature title">任务自动化</Translate>,
+    icon: '⚙️',
+    description: <Translate id="homepage.features.automation.description" description="Task Automation feature description">扫描、刮削、定时任务与失败重试，全流程留痕可查</Translate>,
   },
   {
     title: <Translate id="homepage.features.plugin.title" description="Plugin Integration feature title">插件集成</Translate>,
     icon: '🔌',
-    description: <Translate id="homepage.features.plugin.description" description="Plugin Integration feature description">提供丰富的插件支持，轻松集成现有媒体服务器或播放器</Translate>,
+    description: <Translate id="homepage.features.plugin.description" description="Plugin Integration feature description">元数据源、站点索引、下载器、媒体服务器与通知渠道，按需启用</Translate>,
   },
   {
-    title: <Translate id="homepage.features.multiSource.title" description="Multi-source Scraping feature title">多源刮削</Translate>,
-    icon: '🌐',
-    description: <Translate id="homepage.features.multiSource.description" description="Multi-source Scraping feature description">支持从多个数据源刮取影片信息，确保数据全面准确</Translate>,
+    title: <Translate id="homepage.features.toolbox.title" description="Toolbox feature title">工具箱</Translate>,
+    icon: '🧰',
+    description: <Translate id="homepage.features.toolbox.description" description="Toolbox feature description">视频转码、字幕识别、海报裁剪、辅种与文件浏览器</Translate>,
   },
   {
-    title: <Translate id="homepage.features.intelligentMatching.title" description="Intelligent Matching feature title">智能匹配</Translate>,
-    icon: '🤖',
-    description: <Translate id="homepage.features.intelligentMatching.description" description="Intelligent Matching feature description">通过智能算法自动匹配本地文件与线上元数据，减少人工操作</Translate>,
-  },
-  {
-    title: <Translate id="homepage.features.batchProcessing.title" description="Batch Processing feature title">批量处理</Translate>,
-    icon: '⚡',
-    description: <Translate id="homepage.features.batchProcessing.description" description="Batch Processing feature description">支持批量处理多个视频文件，提高管理效率</Translate>,
-  },
-  {
-    title: <Translate id="homepage.features.customTags.title" description="Custom Tags feature title">自定义标签</Translate>,
-    icon: '🏷️',
-    description: <Translate id="homepage.features.customTags.description" description="Custom Tags feature description">支持自定义标签，对影片资源进行个性化分类管理</Translate>,
+    title: <Translate id="homepage.features.openPlatform.title" description="Open Platform feature title">开放能力</Translate>,
+    icon: '🔗',
+    description: <Translate id="homepage.features.openPlatform.description" description="Open Platform feature description">开放 API、Mihon 阅读器协议与实例互通，方便接入现有系统</Translate>,
   },
 ];
 

@@ -1,0 +1,9 @@
+{
+  "label": "Mihon 阅读器",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/mihon",
+    "description": "把漫画库接入 Mihon / Tachiyomi 类阅读器。"
+  }
+}

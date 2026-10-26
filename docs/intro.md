@@ -1,82 +1,118 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 sidebar_label: "简介"
 title: 简介
-description: AMMDS (Advanced Multimedia Data Management System) 是一个私人数据管理平台，帮你轻松管理你的个人媒体库，支持电影管理、自动元数据抓取、多平台部署等功能。
-keywords: [AMMDS, 媒体管理, 电影库, 私人数据管理, 多媒体管理]
+description: AMMDS 是私有化部署的影视媒体数据中心，覆盖元数据刮削、媒体库管理、订阅下载、插件集成与系统运维，本文介绍其定位、能力边界与文档导航。
+keywords: [AMMDS, 影视管理, 媒体库, 元数据刮削, 私有化部署, 文档导航]
 tags: []
 ---
 
 # 简介
 
-本文介绍 AMMDS 项目的整体概况，包括项目起源、核心功能和如何加入社区等信息。
+本文介绍 AMMDS 的定位、核心能力与文档导航，帮助你在十分钟内判断它是否适合自己，并找到对应的使用说明。
 
 {/* truncate */}
 
-AMMDS (Advanced Multimedia Data Management System) 是一个私人数据管理平台，帮你轻松管理你的个人媒体库。
+AMMDS（Adult Media Metadata Database System）是一套**私有化部署的影视媒体数据中心**：扫描本地视频文件、识别番号、从多个数据源刮削元数据，再把整理好的结果同步到 Jellyfin / Emby 等媒体服务器。数据全部保存在你自己的机器上，不依赖任何云端账号。
 
-:::warning[温馨提醒]
-本软件为离线产品，数据由用户手动录入。请不要在中国境内推广此产品，必要时使用缩写：`AMMDS`。
+:::warning[使用前提]
+本软件为离线产品，数据由用户手动录入与维护。请遵守你所在地区的法律法规，不要在中国境内推广本产品；必要交流时请使用缩写 `AMMDS`。
 :::
 
-:::note[插件提醒]
-集成插件需要网络功能。如果启用了任何集成插件，将被视为您已同意访问网络连接。
+:::note[网络说明]
+元数据刮削、订阅检索、通知推送等能力依赖外网访问。启用任一集成插件即视为你已同意程序按配置访问对应网络服务。
 :::
 
-<img src="/img/ammds-social-card.png" alt="ammds" style={{ borderRadius: "2em" }} />
+<img src="/img/ammds-social-card.png" alt="AMMDS" style={{ borderRadius: "2em" }} />
 
-## 关于我们
+## 它解决什么问题
 
-我们是一群热爱技术和电影的人。团队成员有丰富的软件开发经验，同时也对电影和电视剧充满热情。所以我们做了 AMMDS 这个平台，专门用来管理和享受你的个人媒体库。
+| 痛点 | AMMDS 的做法 |
+| --- | --- |
+| 文件名混乱、番号写法不统一 | 按识别规则提取番号并归一，同一部片子的多种写法合并为一条记录 |
+| 手动整理海报、简介、演员工作量大 | 多数据源自动刮削，缺失字段可按优先级回填补全 |
+| 不同媒体服务器元数据格式不一致 | 统一元数据模型，再按 Jellyfin / Emby 的字段规范写入 |
+| 资源检索、下载、入库相互割裂 | 订阅 → 检索 → 推送下载器 → 入库 → 同步媒体服务器，全链路串联 |
+| 长期运行缺乏可观测性 | 任务记录、运行日志、系统检查与网络连通性诊断 |
 
-## 项目起源
+## 核心能力
 
-我们找了好一阵子，发现市面上缺少一个好用的工具——能自动整理电影信息、补全封面和简介，还能在多个设备上访问。所以我们就自己动手做了 AMMDS。它能自动匹配你电脑上的视频文件和网上的影片信息，省去手动整理的麻烦。
+### 媒体库
 
-## 功能特性
+- **影视**：识别番号、刮削元数据、管理海报/剧照、收藏与标签
+- **剧集**：季与集结构、剧集文件匹配、NFO 生成
+- **演员**：演员资料库、作品关联、头像与别名
+- **系列 / 厂牌**：按系列聚合作品，厂牌规则与别名归并
+- **漫画 / 小说**：章节与阅读进度管理，支持压缩包导入
+- **标签库**：类型、标签、用户分类三层组织
 
-### 🎬 电影库管理
-轻松管理你的电影库，支持多种视频格式，自动获取影片信息，搭建属于你自己的电影库。
+### 任务与自动化
 
-### 👤 自动演员识别
-自动识别影片中的演员，给出详细的演员资料和作品列表，方便你查找和浏览。
+- 扫描任务：按目录识别媒体文件，支持定时与目录监听
+- 刮削任务：按番号匹配数据源并写回元数据、图片与 NFO
+- 任务配置、任务记录与失败重试
+- 定时任务（Cron）统一调度
 
-### 📄 自动元数据抓取
-自动从网上获取电影和电视剧的封面、简介、评分等信息，让你的电影库更丰富。
+### 订阅与下载
 
-### 📤 分享功能
-支持跟朋友或家人分享你的电影库，打造家庭影院体验。
+- 站点检索：M-Team、Rousi、FSM、NexusPHP、Prowlarr 等
+- 磁力检索：BitMagnet
+- 订阅管理：按番号订阅、自动匹配、失败重试
+- 下载推送：qBittorrent、Transmission，辅种由 IYUU 完成
 
-### 🔌 插件集成
-支持安装各种插件，能轻松对接你现有的媒体服务器或播放器，扩展更多功能。
+### 插件集成
 
-### 🌐 多源抓取
-支持从 TMDB、豆瓣等多个数据源获取影片信息，保证数据全面又准确。
+按用途分为六类：元数据源、站点索引、下载器、媒体服务器、通知推送、辅助工具，共 30+ 个集成项。每个插件都有独立的配置页与连通性测试。
 
-### 🤖 智能匹配
-通过智能算法自动匹配本地文件和网上的影片信息，减少手动操作，省时省力。
+### 信息中心
 
-### ⚡ 批量处理
-支持一次处理多个视频文件，提高管理效率。
+- RSS 订阅与热门 RSS 榜单
+- 系统消息与官方通告
+- 实例互通（好友、资源共享）
+- 分享链接（带提取码与有效期）
 
-### 🏷️ 自定义标签
-支持自定义标签，对电影资源进行个性化分类和管理。
+### 系统管理
 
-### 🖥️ 跨平台支持
-支持 Windows、macOS、Linux 等多个平台，随时随地管理你的电影库。
+系统配置、系统检查、存储管理、备份恢复、运行日志、登录日志、密钥管理、许可证。
 
-## 加入我们
+### 开放能力
 
-如果你觉得这个应用不错，或者它对你有帮助，可以考虑支持一下我们的项目。你的支持能让我们继续开发和维护，给更多用户提供好用的体验。
+- **开放 API**：`/api/v1/**`，API Key 鉴权，供第三方程序调用
+- **Mihon 接入**：为第三方漫画阅读器提供标准接口
+- **Telegram Bot**：通过指令完成检索、订阅、下载与系统控制
 
-## 快速开始
+## 版本与授权
+
+| 项目 | 说明 |
+| --- | --- |
+| 当前版本 | 2.0.0 |
+| 技术栈 | Java 21、Spring Boot 4、H2/PostgreSQL、Vue 3、TypeScript |
+| 部署形态 | Docker、Windows/Linux 原生 JAR、NAS 应用包、GraalVM 原生镜像 |
+| 授权 | 专有软件（Proprietary License），非开源 |
+
+:::info[能力边界]
+文档只描述当前版本已经实现的功能。规划中的能力（如部分数据源、Plex 同步）不会以"已支持"的口径出现；如果你在界面中找不到文档提到的入口，通常是版本不一致，请先核对版本号。
+:::
+
+## 文档怎么读
+
+| 你的目标 | 建议阅读顺序 |
+| --- | --- |
+| 第一次部署 | [部署方式总览](/docs/getting-started/overview) → [首次登录](/docs/getting-started/first-login) |
+| 想先把媒体库跑起来 | [影视](/docs/media/movie) → [扫描任务](/docs/task/scan) → [刮削任务](/docs/task/scrape) |
+| 想接入站点与下载器 | [插件总览](/docs/integration/overview) → [M-Team](/docs/integration/indexer/m-team) → [qBittorrent](/docs/integration/downloader/qbittorrent) |
+| 排查故障 | [系统检查](/docs/system/system-check) → [网络连通性](/docs/dashboard/network) → [常见问题](/docs/faq) |
+| 对接第三方程序 | [开发平台](/open-api/getting-started/overview) |
+
+## 加入社区
 
 - [官方网站](https://ammds.lifebus.top/)
 - [GitHub 仓库](https://github.com/QYG2297248353/AMMDS-Docker)
+- Telegram 频道：[t.me/ammds_official](https://t.me/ammds_official)
+- Telegram 群组：[t.me/+9bvCp3LqLUo1N2Q1](https://t.me/+9bvCp3LqLUo1N2Q1)
+- Discord：[discord.gg/sxkpPZzPeJ](https://discord.gg/sxkpPZzPeJ)
+- QQ 群：[443266144](https://qm.qq.com/q/ZTXsLnEAM4)
 
-### 官方群组
+## 支持项目
 
-- Telegram 频道：[加入 Telegram 频道](https://t.me/ammds_official)
-- Telegram 群组：[加入 Telegram 群组](https://t.me/+9bvCp3LqLUo1N2Q1)
-- Discord：[加入 Discord 服务器](https://discord.gg/sxkpPZzPeJ)
-- QQ 群：[加入 QQ 群](https://qm.qq.com/q/ZTXsLnEAM4) (443266144)
+如果你觉得 AMMDS 有帮助，可以通过官方商城购买会员或订阅服务支持持续开发。会员权益与许可证的对应关系见[许可证](/docs/system/license)。

@@ -1,0 +1,9 @@
+{
+  "label": "通知推送",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/integration/notification",
+    "description": "通知渠道配置。"
+  }
+}

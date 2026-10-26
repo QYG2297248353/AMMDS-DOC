@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: 2
 sidebar_label: "Execute Scrape Task"
 title: Execute Scrape Task
@@ -22,11 +22,11 @@ Organizing files requires obtaining movie metadata through the internet, so you 
 
 Please confirm that relevant metadata plugins are enabled and correctly configured. These plugins are the key to obtaining movie metadata:
 
-+ [Metatube Plugin](/docs/plugin/metadata/Metatube)
-+ [ThePornDB Plugin](/docs/plugin/metadata/ThePornDB)
-+ [StashBox Plugin](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM Plugin](/docs/plugin/metadata/FanzaDmm)
-+ [Madou Plugin](/docs/plugin/metadata/Madou)
++ [Metatube Plugin](/docs/integration/metadata/metatube)
++ [ThePornDB Plugin](/docs/integration/metadata/theporndb)
++ [StashBox Plugin](/docs/integration/metadata/theporndb)
++ [FanzaDMM Plugin](/docs/integration/metadata/fanzadmm)
++ [Madou Plugin](/docs/integration/metadata/madou)
 
 :::warning Important Reminder
 Without enabling relevant metadata plugins, you will not be able to obtain movie metadata, which will cause scraping to fail.

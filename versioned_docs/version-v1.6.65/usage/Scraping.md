@@ -59,14 +59,14 @@ AMMDS 通过以下三种方式访问你的影视目录：
 
 简单说就是：不管你是用 Docker 还是直接跑程序，都得让 AMMDS 知道你放电影的文件路径在哪。
 
-- **Docker 用户**：在 `docker-compose.yml` 里配好目录映射（具体怎么配，看[挂载关系详解](/docs/usage/Mount)）
+- **Docker 用户**：在 `docker-compose.yml` 里配好目录映射（具体怎么配，看[挂载关系详解](/docs/getting-started/docker)）
 - **二进制用户**：直接在配置里填你电脑上的文件夹路径
 - **NAS 用户**：先用 SMB 或 NFS 把远程目录挂载到本地，再告诉 AMMDS
 
 路径配好后，AMMDS 就能找到你的电影文件了。
 
 :::tip
-如果你是 Docker 新手，建议先看[挂载关系详解](/docs/usage/Mount)，搞明白挂载是怎么回事，后面才不会搞丢数据。
+如果你是 Docker 新手，建议先看[挂载关系详解](/docs/getting-started/docker)，搞明白挂载是怎么回事，后面才不会搞丢数据。
 :::
 
 ---
@@ -82,7 +82,7 @@ AMMDS 通过以下三种方式访问你的影视目录：
 - **怎么扫**：按什么规则匹配文件（格式、大小、忽略项等）
 - **怎么整理**：扫完后文件放哪、怎么改名
 
-具体操作步骤看[创建扫描任务](/docs/usage/scrape/ScanTask)。
+具体操作步骤看[创建扫描任务](/docs/task/scan)。
 
 ### 2. 扫描做了什么
 
@@ -123,7 +123,7 @@ flowchart LR
     EXTRACT --> RECORDS
 ```
 
-扫描配置的详细说明，看[扫描配置](/docs/usage/module/scanRuleConfig)。
+扫描配置的详细说明，看[扫描配置](/docs/task/config)。
 
 ---
 
@@ -166,7 +166,7 @@ flowchart TD
     READY_SCRAPE --> NEXT_STEP["进入刮削整理阶段"]
 ```
 
-详细操作参考[执行刮削任务](/docs/usage/scrape/ScrapeTask)。
+详细操作参考[执行刮削任务](/docs/task/scrape)。
 
 ---
 
@@ -185,10 +185,10 @@ flowchart TD
 **① 检索元数据**
 
 系统通过你配置的数据源插件去搜索影片的详细信息。可用的数据源插件有：
-- [Metatube](/docs/plugin/metadata/Metatube)
-- [ThePornDB](/docs/plugin/metadata/ThePornDB)
-- [FanzaDMM](/docs/plugin/metadata/FanzaDmm)
-- [Madou](/docs/plugin/metadata/Madou)
+- [Metatube](/docs/integration/metadata/metatube)
+- [ThePornDB](/docs/integration/metadata/theporndb)
+- [FanzaDMM](/docs/integration/metadata/fanzadmm)
+- [Madou](/docs/integration/metadata/madou)
 - 本地数据
 
 **② 数据匹配**
@@ -242,7 +242,7 @@ flowchart TD
 没开启元数据插件就拿不到电影信息，刮削必然会失败。刮削之前确认一下插件配好了没有。
 :::
 
-刮削配置和整理模式的详细说明，看[刮削配置](/docs/usage/module/scrapeRuleConfig)。
+刮削配置和整理模式的详细说明，看[刮削配置](/docs/task/config)。
 
 ---
 
@@ -273,7 +273,7 @@ flowchart LR
 
 ### 3. 后续操作
 
-整理好的文件会按你配置的目录格式存放，之后可以用 [Jellyfin](/docs/plugin/mediaServer/Jellyfin) 或 [Emby](/docs/plugin/mediaServer/Emby) 这类媒体服务器来搭建影视库，在线观看。
+整理好的文件会按你配置的目录格式存放，之后可以用 [Jellyfin](/docs/integration/media-server/jellyfin) 或 [Emby](/docs/integration/media-server/emby) 这类媒体服务器来搭建影视库，在线观看。
 
 ---
 

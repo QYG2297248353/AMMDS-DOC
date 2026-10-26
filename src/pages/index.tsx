@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -10,7 +10,6 @@ import Translate, { translate } from '@docusaurus/Translate';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -18,16 +17,16 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           <Translate id="homepage.title" description="AMMDS website title">AMMDS</Translate>
         </Heading>
-        <p className="hero__subtitle"><Translate id="homepage.subtitle" description="AMMDS website subtitle">R18 影片元数据刮削器</Translate></p>
+        <p className="hero__subtitle"><Translate id="homepage.subtitle" description="AMMDS website subtitle">私人影视媒体数据中心</Translate></p>
         <p className={styles.description}>
           <Translate id="homepage.description" description="AMMDS website main description">
-            通过智能元数据刮削、演员识别、多源数据匹配等功能，打造专属于您的私人家庭影院体验
+            从扫描识别、元数据刮削到订阅下载与媒体服务器同步，把私人影视收藏整理成可长期维护的媒体库
           </Translate>
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/tutorial/quick-start">
+            to="/docs/getting-started/overview">
             <Translate id="homepage.button.quickStart" description="Quick Start button text">快速开始</Translate>
           </Link>
           <Link
@@ -43,12 +42,12 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
-  const version = siteConfig.customFields?.version || "v1.6.60";
+  const version = siteConfig.customFields?.version || 'v2.0.0';
 
   return (
     <Layout
       title={translate({ message: 'AMMDS 官方文档', description: 'Website title' })}
-      description={translate({ message: 'AMMDS - R18 影片元数据刮削器', description: 'Website description' })}>
+      description={translate({ message: 'AMMDS - 私人影视媒体数据中心', description: 'Website description' })}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
@@ -61,29 +60,29 @@ export default function Home(): ReactNode {
               <div className="col col--6">
                 <div className={styles.quickStartCard}>
                   <h3><Translate id="homepage.quickStart.installation" description="Installation step title">1. 安装部署</Translate></h3>
-                  <p><Translate id="homepage.quickStart.installation.description" description="Installation step description">选择最适合您的部署方式，包括 Docker、Windows、Linux 等多种方式</Translate></p>
-                  <Link to="/docs/deploy/docker"><Translate id="homepage.quickStart.viewDeployment" description="View Deployment Guide link text">查看部署指南</Translate></Link>
+                  <p><Translate id="homepage.quickStart.installation.description" description="Installation step description">Docker、Windows / Linux 原生运行、NAS 应用包与 GraalVM 原生镜像</Translate></p>
+                  <Link to="/docs/getting-started/docker"><Translate id="homepage.quickStart.viewDeployment" description="View Deployment Guide link text">查看部署指南</Translate></Link>
                 </div>
               </div>
               <div className="col col--6">
                 <div className={styles.quickStartCard}>
-                  <h3><Translate id="homepage.quickStart.start" description="Quick Start step title">2. 快速上手</Translate></h3>
-                  <p><Translate id="homepage.quickStart.start.description" description="Quick Start step description">只需几个简单步骤即可快速使用 AMMDS</Translate></p>
-                  <Link to="/docs/tutorial/quick-start"><Translate id="homepage.quickStart.viewQuickStart" description="View Quick Start Guide link text">查看快速上手</Translate></Link>
+                  <h3><Translate id="homepage.quickStart.start" description="Quick Start step title">2. 首次配置</Translate></h3>
+                  <p><Translate id="homepage.quickStart.start.description" description="Quick Start step description">登录后按顺序完成基础配置，再开始扫描与刮削</Translate></p>
+                  <Link to="/docs/getting-started/first-login"><Translate id="homepage.quickStart.viewQuickStart" description="View Quick Start Guide link text">查看首次配置</Translate></Link>
                 </div>
               </div>
               <div className="col col--6">
                 <div className={styles.quickStartCard}>
-                  <h3><Translate id="homepage.quickStart.support" description="Support & Help step title">3. 支持与帮助</Translate></h3>
-                  <p><Translate id="homepage.quickStart.support.description" description="Support & Help step description">获取技术支持并查找 AMMDS 的常见问题解答</Translate></p>
-                  <Link to="/docs/tutorial/support"><Translate id="homepage.quickStart.viewSupport" description="View Support Guide link text">查看帮助指南</Translate></Link>
+                  <h3><Translate id="homepage.quickStart.support" description="Support section title">3. 故障排查</Translate></h3>
+                  <p><Translate id="homepage.quickStart.support.description" description="Support step description">从系统检查与网络连通性入手定位问题</Translate></p>
+                  <Link to="/docs/system/system-check"><Translate id="homepage.quickStart.viewSupport" description="View Support Guide link text">查看系统检查</Translate></Link>
                 </div>
               </div>
               <div className="col col--6">
                 <div className={styles.quickStartCard}>
                   <h3><Translate id="homepage.quickStart.questions" description="Common Questions step title">4. 常见问题</Translate></h3>
-                  <p><Translate id="homepage.quickStart.questions.description" description="Common Questions step description">查找关于 AMMDS 的常见问题解答</Translate></p>
-                  <Link to="/docs/qa"><Translate id="homepage.quickStart.viewQuestions" description="View Common Questions link text">查看常见问题</Translate></Link>
+                  <p><Translate id="homepage.quickStart.questions.description" description="Common Questions step description">部署、刮削、订阅与备份的常见问题汇总</Translate></p>
+                  <Link to="/docs/faq"><Translate id="homepage.quickStart.viewQuestions" description="View Common Questions link text">查看常见问题</Translate></Link>
                 </div>
               </div>
             </div>
@@ -132,7 +131,7 @@ export default function Home(): ReactNode {
               <div className={styles.sponsorshipContent}>
                 <h3><Translate id="homepage.sponsorship.store" description="Online Store title">前往在线商店</Translate></h3>
                 <p><Translate id="homepage.sponsorship.store.description" description="Online Store description">购买产品和服务，支持 AMMDS 发展</Translate></p>
-                <a href="https://store.lifebus.top/" target="_blank" rel="noopener noreferrer" className="button button--secondary button--lg">
+                <a href="https://store.ammds.lifebus.top/" target="_blank" rel="noopener noreferrer" className="button button--secondary button--lg">
                   <Translate id="homepage.sponsorship.store.button" description="Go to Store button text">前往商店</Translate>
                 </a>
               </div>

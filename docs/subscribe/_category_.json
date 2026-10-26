@@ -1,0 +1,9 @@
+{
+  "label": "订阅与下载",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/subscribe",
+    "description": "站点检索、磁力检索、订阅管理与下载推送。"
+  }
+}

@@ -29,11 +29,11 @@ tags: [usage, scrape]
 
 确认已经开启并配好了相关的元数据插件，这些插件是帮你找到电影信息的关键工具：
 
-+ [Metatube 插件](/docs/plugin/metadata/Metatube)
-+ [ThePornDB 插件](/docs/plugin/metadata/ThePornDB)
-+ [StashBox 插件](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM 插件](/docs/plugin/metadata/FanzaDmm)
-+ [Madou 插件](/docs/plugin/metadata/Madou)
++ [Metatube 插件](/docs/integration/metadata/metatube)
++ [ThePornDB 插件](/docs/integration/metadata/theporndb)
++ [StashBox 插件](/docs/integration/metadata/theporndb)
++ [FanzaDMM 插件](/docs/integration/metadata/fanzadmm)
++ [Madou 插件](/docs/integration/metadata/madou)
 
 :::warning[重要提醒]
 没开启元数据插件，就拿不到电影信息，刮削必然会失败。

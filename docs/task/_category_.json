@@ -1,0 +1,9 @@
+{
+  "label": "任务与自动化",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/task",
+    "description": "扫描、刮削、任务配置与定时调度。"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "label": "站点资源",
-  "position": 2,
-  "collapsible": true,
-  "collapsed": true,
-  "link": {
-    "type": "generated-index"
-  }
-}

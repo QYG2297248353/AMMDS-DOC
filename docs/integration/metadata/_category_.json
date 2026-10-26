@@ -1,0 +1,9 @@
+{
+  "label": "元数据源",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/integration/metadata",
+    "description": "影视与演员元数据的数据源配置。"
+  }
+}

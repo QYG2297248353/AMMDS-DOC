@@ -1,8 +1,9 @@
 {
-  "label": "开放API",
+  "label": "开发平台",
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "AMMDS 开放 API 文档，了解如何通过 API 接口与 AMMDS 进行集成。"
+    "slug": "/overview",
+    "description": "通过开放 API、Mihon 阅读器协议与备份包规范把 AMMDS 接入你的系统。"
   }
 }

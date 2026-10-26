@@ -19,11 +19,11 @@ sidebar_label: "执行刮削任务"
 
 请确认已开启并正确配置相关元数据插件，这些插件是获取影视元数据的关键：
 
-+ [Metatube 插件](/docs/plugin/metadata/Metatube)
-+ [ThePornDB 插件](/docs/plugin/metadata/ThePornDB)
-+ [StashBox 插件](/docs/plugin/metadata/ThePornDB)
-+ [FanzaDMM 插件](/docs/plugin/metadata/FanzaDmm)
-+ [Madou 插件](/docs/plugin/metadata/Madou)
++ [Metatube 插件](/docs/integration/metadata/metatube)
++ [ThePornDB 插件](/docs/integration/metadata/theporndb)
++ [StashBox 插件](/docs/integration/metadata/theporndb)
++ [FanzaDMM 插件](/docs/integration/metadata/fanzadmm)
++ [Madou 插件](/docs/integration/metadata/madou)
 
 :::warning 重要提醒
 没有开启相关元数据插件，将无法获取影视元数据，会导致刮削失败。
