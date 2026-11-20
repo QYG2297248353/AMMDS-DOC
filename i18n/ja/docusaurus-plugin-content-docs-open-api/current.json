@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "latest",
+    "description": "The label for version current"
+  },
+  "sidebar.openApiSidebar.category.开始接入": {
+    "message": "はじめに",
+    "description": "The label for category '开始接入' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.接口速查": {
+    "message": "APIリファレンス",
+    "description": "The label for category '接口速查' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器": {
+    "message": "漫画リーダー",
+    "description": "The label for category '漫画阅读器' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.备份包": {
+    "message": "バックアップパッケージ",
+    "description": "The label for category '备份包' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.开始接入.link.generated-index.title": {
+    "message": "はじめに",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.开始接入.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.开始接入.link.generated-index.description": {
+    "message": "オープンプラットフォームの概要、API キーの取得、初回呼び出しを説明します。",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.开始接入.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.接口速查.link.generated-index.title": {
+    "message": "API リファレンス",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.接口速查.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.接口速查.link.generated-index.description": {
+    "message": "リクエストとレスポンスの一般規則と、よく使うエンドポイントの一覧です。",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.接口速查.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.title": {
+    "message": "漫画リーダー",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.description": {
+    "message": "Mihon などのリーダーアプリで AMMDS の漫画を直接読む方法です。",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.备份包.link.generated-index.title": {
+    "message": "バックアップパッケージ",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.备份包.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.备份包.link.generated-index.description": {
+    "message": "バックアップパッケージの構造、完全な形式仕様、そしてクロールデータをAIに標準パッケージに作らせる方法。",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.备份包.link.generated-index.description'"
+  }
+}

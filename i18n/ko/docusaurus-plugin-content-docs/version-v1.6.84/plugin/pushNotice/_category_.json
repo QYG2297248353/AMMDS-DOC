@@ -1,0 +1,9 @@
+{
+  "label": "푸시 알림",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

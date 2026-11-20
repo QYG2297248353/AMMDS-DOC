@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="AMMDS 用户协议：说明自托管媒体库的账号权限、内容版权、元数据刮削、外部集成、使用规范与责任边界。"
+    />
+    <title>用户协议 - AMMDS</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --primary: #5b6ef5;
+        --primary-dark: #3f4cc4;
+        --primary-soft: #eef1ff;
+        --accent: #d94f76;
+        --accent-soft: #fff0f4;
+        --text: #1f2740;
+        --text-muted: #5d6577;
+        --bg: #f4f6fc;
+        --surface: #ffffff;
+        --surface-soft: #f7f9ff;
+        --border: #e3e8f4;
+        --hero-from: #4854c9;
+        --hero-to: #5f3fc0;
+        --page-top: #e9edff;
+        --page-bottom: #f4f6fc;
+        --link-hover: #a8375a;
+        --shadow-sm: 0 2px 10px rgba(47, 58, 96, 0.06);
+        --shadow-md: 0 14px 36px rgba(47, 58, 96, 0.12);
+        --radius: 16px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary: #8f9cff;
+          --primary-dark: #b4beff;
+          --primary-soft: #232b4d;
+          --accent: #ff9ab4;
+          --accent-soft: #3a2430;
+          --text: #e7eaf4;
+          --text-muted: #a4adc4;
+          --bg: #0e1220;
+          --surface: #161c2c;
+          --surface-soft: #1b2234;
+          --border: #2a334a;
+          --hero-from: #4a58c9;
+          --hero-to: #6b4fd0;
+          --page-top: #151b30;
+          --page-bottom: #0e1220;
+          --link-hover: #ffb3c8;
+          --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
+          --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.38);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          sans-serif;
+        font-size: clamp(16.5px, 15.6px + 0.24vw, 17px);
+        line-height: 1.9;
+        overflow-x: hidden;
+        overflow-wrap: anywhere;
+        color: var(--text);
+        background-color: var(--bg);
+        background-image: linear-gradient(
+          180deg,
+          var(--page-top) 0,
+          var(--page-bottom) 340px
+        );
+        background-repeat: no-repeat;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: var(--primary-dark);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      .skip-link:focus-visible {
+        outline: 2px solid var(--primary-dark);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: clamp(12px, 3vw, 24px);
+        z-index: 1200;
+        padding: 0.6rem 1rem;
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--text);
+        box-shadow: var(--shadow-md);
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        top: 12px;
+      }
+
+      .progress {
+        position: fixed;
+        inset: 0 0 auto 0;
+        height: 3px;
+        z-index: 1100;
+        pointer-events: none;
+      }
+
+      .progress__bar {
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        transition: transform 0.12s linear;
+      }
+
+      .container {
+        width: 100%;
+        max-width: clamp(820px, 90vw, 1080px);
+        margin: 0 auto;
+        padding: clamp(20px, 4.5vw, 44px) clamp(16px, 2.4vw, 26px)
+          clamp(56px, 8vw, 88px);
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: clamp(24px, 4vw, 36px);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.38rem 0.85rem;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .hero h1 {
+        margin: 0.9rem 0 0.75rem;
+        font-size: clamp(1.65rem, 1.25rem + 2.2vw, 2.35rem);
+        line-height: 1.25;
+        letter-spacing: 0.01em;
+        overflow-wrap: anywhere;
+      }
+
+      .subtitle {
+        max-width: 42rem;
+        margin: 0 auto 1.1rem;
+        color: var(--text-muted);
+        font-size: clamp(0.98rem, 0.95rem + 0.15vw, 1.05rem);
+      }
+
+      .date-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.55rem;
+      }
+
+      .date-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 0.85rem;
+        border-radius: 999px;
+        background: var(--surface);
+        box-shadow: var(--shadow-sm);
+        color: var(--text-muted);
+        font-size: 0.86rem;
+      }
+
+      .date-pill--updated {
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+        box-shadow: none;
+        font-weight: 600;
+      }
+
+      .meta-line {
+        margin: 0.9rem 0 0;
+        color: var(--text-muted);
+        font-size: 0.84rem;
+      }
+
+      .card {
+        margin-bottom: clamp(16px, 2.4vw, 22px);
+        padding: clamp(18px, 2.4vw, 26px);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .summary {
+        background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 0 16px 36px rgba(64, 74, 180, 0.22);
+      }
+
+      .summary h2 {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 1rem;
+        font-size: 1.08rem;
+        line-height: 1.4;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .summary-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+        min-width: 0;
+        padding: 0.9rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .summary-item svg {
+        flex: 0 0 auto;
+        margin-top: 0.15rem;
+      }
+
+      .summary-item strong {
+        display: block;
+        margin-bottom: 0.15rem;
+        font-size: 0.92rem;
+      }
+
+      .summary-item span {
+        display: block;
+        color: #ffffff;
+        font-size: 0.86rem;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+      }
+
+      .lead p {
+        margin: 0 0 0.85rem;
+      }
+
+      .lead p:last-child {
+        margin-bottom: 0;
+      }
+
+      .toc-title {
+        margin: 0 0 0.75rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+      }
+
+      .toc ol {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.15rem 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: toc;
+      }
+
+      .toc li {
+        min-width: 0;
+      }
+
+      .toc a {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.32rem 0.15rem;
+        border-radius: 6px;
+        color: var(--text);
+        text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+
+      .toc a::before {
+        counter-increment: toc;
+        content: counter(toc, decimal-leading-zero);
+        padding-top: 0.12rem;
+        color: var(--text-muted);
+        font-size: 0.76rem;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .toc a:hover {
+        color: var(--primary-dark);
+      }
+
+      .section {
+        scroll-margin-top: 24px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-icon {
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+
+      .section-icon--accent {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .section h2 {
+        margin: 0.18rem 0 0;
+        font-size: clamp(1.08rem, 1rem + 0.45vw, 1.3rem);
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+      }
+
+      .section p {
+        margin: 0 0 1rem;
+      }
+
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-intro {
+        color: var(--text-muted);
+      }
+
+      .section strong {
+        color: var(--text);
+      }
+
+      .section ul {
+        margin: 0 0 1rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      .section li {
+        position: relative;
+        margin-bottom: 0.45rem;
+        padding-left: 1.25rem;
+      }
+
+      .section li:last-child {
+        margin-bottom: 0;
+      }
+
+      .section li::before {
+        position: absolute;
+        top: 0.78em;
+        left: 0.15rem;
+        width: 0.32rem;
+        height: 0.32rem;
+        border-radius: 50%;
+        background: var(--primary);
+        content: "";
+      }
+
+      .callout {
+        margin: 1.1rem 0 0;
+        padding: 0.9rem 1rem;
+        border-left: 3px solid var(--primary);
+        border-radius: 0 10px 10px 0;
+        background: var(--surface-soft);
+        font-size: 0.95rem;
+      }
+
+      .callout p {
+        margin: 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .contact-card {
+        min-width: 0;
+        padding: 0.9rem 1rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--surface-soft);
+      }
+
+      .contact-label {
+        margin-bottom: 0.25rem;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+      }
+
+      .contact-value {
+        font-weight: 600;
+        overflow-wrap: anywhere;
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        padding: 1.5rem 0 0;
+        border-top: 1px solid var(--border);
+        color: var(--text-muted);
+        font-size: 0.84rem;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0.25rem 0;
+        overflow-wrap: anywhere;
+      }
+
+      .back-to-top {
+        position: fixed;
+        right: clamp(14px, 4vw, 28px);
+        bottom: clamp(14px, 4vw, 28px);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(44px, 5vw, 48px);
+        height: clamp(44px, 5vw, 48px);
+        border: none;
+        border-radius: 50%;
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(64, 74, 180, 0.36);
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition: opacity 0.25s ease, transform 0.25s ease,
+          visibility 0.25s ease, background-color 0.2s ease;
+      }
+
+      .back-to-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .back-to-top:hover {
+        background: var(--primary-dark);
+      }
+
+      @media (max-width: 600px) {
+        .toc ol {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+      <header class="hero">
+        <span class="badge">
+          <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          使用规则
+        </span>
+        <h1>AMMDS 用户协议</h1>
+        <p class="subtitle">
+          本协议说明你与站点运营者之间的权利义务，适用于 AMMDS 自托管媒体库的访问、账号、内容管理与外部集成。
+        </p>
+        <div class="date-row">
+          <span class="date-pill">
+            <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            生效日期：2026年01月01日
+          </span>
+          <span class="date-pill date-pill--updated">
+            <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1.06 6.7 2.82L21 8"/><path d="M21 3v5h-5"/></svg>
+            更新日期：2026年11月14日
+          </span>
+        </div>
+        <p class="meta-line">全文约 7,400 字 · 建议阅读约 15 分钟</p>
+      </header>
+
+      <aside class="card summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          核心要点
+        </h2>
+        <ul class="summary-grid">
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span><strong>自托管软件</strong>AMMDS 提供软件能力，具体实例由部署者搭建、配置和运营。</span>
+          </li>
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span><strong>账号安全</strong>初始化管理员权限最高，请使用强密码并妥善保管所有登录凭据。</span>
+          </li>
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span><strong>内容合法</strong>导入、刮削与分享的媒体内容，须具备合法来源和相应授权。</span>
+          </li>
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span><strong>风险自担</strong>第三方数据源、网盘与推送服务由你评估可用性并承担相应风险。</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="card lead">
+        <p>
+          在逐条阅读之前，有三件事值得先说明。第一，AMMDS 是一套可以自行部署的媒体库系统，它把影视、漫画、小说、资讯与商城等模块放在同一套账号和权限体系之下；你实际访问的页面、能看到的片库、可用的功能，取决于某个具体实例的部署方式，而不是软件本身的固定形态。实例的数据库、媒体文件、播放记录与日志都存放在部署者指定的服务器或本机，软件作者既不托管也不接收这些数据。
+        </p>
+        <p>
+          第二，“本站”与“我们”指的是这个实例的部署者或运营者，可能是个人，也可能是团队或公司。软件作者只提供程序代码与文档，不提供中央服务器，也不会接收实例内产生的账号、媒体或日志数据；除非作者本人也部署了某个实例，否则作者并不是本站的运营主体，也不对本站的内容、数据或运营行为负责。
+        </p>
+        <p>
+          第三，本协议与你点击“同意”、注册、登录或实际使用服务的行为共同构成约定。如果你不同意其中任何内容，请停止使用本站；如果你代表组织使用本站，应确保已经获得该组织的合法授权。
+        </p>
+      </div>
+
+      <nav class="card toc" aria-labelledby="toc-title">
+        <h2 class="toc-title" id="toc-title">目录</h2>
+        <ol>
+          <li><a href="#sec1">协议范围与接受</a></li>
+          <li><a href="#sec2">服务说明</a></li>
+          <li><a href="#sec3">账号、初始化与权限</a></li>
+          <li><a href="#sec4">用户内容与版权</a></li>
+          <li><a href="#sec5">元数据刮削与第三方数据源</a></li>
+          <li><a href="#sec6">网盘、存储与推送等外部集成</a></li>
+          <li><a href="#sec7">使用规范</a></li>
+          <li><a href="#sec8">知识产权</a></li>
+          <li><a href="#sec9">免责与责任限制</a></li>
+          <li><a href="#sec10">协议的变更与终止</a></li>
+          <li><a href="#sec11">适用法律与争议解决</a></li>
+          <li><a href="#sec12">联系我们</a></li>
+        </ol>
+      </nav>
+
+      <main id="main">
+        <section class="card section" id="sec1" aria-labelledby="sec1-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </span>
+            <h2 id="sec1-title">一、协议范围与接受</h2>
+          </div>
+          <p class="section-intro">
+            本节要解决的是协议的适用边界：它约束谁、覆盖哪些功能，以及在什么时点对你产生效力。先把这些问题说明白，后面的条款才有确定的落点。
+          </p>
+          <p>
+            本协议适用于本站提供的全部页面、接口与功能，包括但不限于影视与剧集浏览、漫画与小说阅读、资讯栏目、商城模块、个人主页、搜索与筛选、播放记录、收藏与评分、评论与提及，以及后台管理、开放接口和随实例启用的扩展功能。无论你是未注册的访客、普通用户还是管理员，只要访问或使用上述功能，本协议都可能适用。
+          </p>
+          <p>
+            你通过初始化页面创建站点、注册账号、登录、浏览内容、调用接口，或者在界面上点击“同意”“继续”等按钮，即表示你已经阅读并接受本协议。若你不同意本协议的任何内容，应停止使用本站。你如果在注册流程中代表某个组织或团队，则应确认自己拥有代表该组织接受本协议的权限。
+          </p>
+          <p>
+            本协议与《隐私政策》共同构成你使用本站的完整约定。隐私政策重点说明个人信息的处理方式，本协议重点说明服务规则与责任边界；两者就同一事项表述不一致时，以隐私政策中对个人信息保护更有利的约定为准。站点运营者针对具体功能发布的公告、社区规则或使用指引，属于本协议的补充；如与本协议冲突，就该具体功能优先适用补充规则。
+          </p>
+        </section>
+
+        <section class="card section" id="sec2" aria-labelledby="sec2-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <h2 id="sec2-title">二、服务说明</h2>
+          </div>
+          <p class="section-intro">
+            本节说明 AMMDS 实际提供什么、不提供什么，以及为什么同一套软件在不同站点上的体验会有明显差异。理解这一点，有助于你判断哪些问题应由站点运营者解决，哪些问题超出了软件本身的范围。
+          </p>
+          <p>
+            从功能上看，AMMDS 把影视、剧集、漫画、小说、资讯与商城放在同一套媒体库框架中。它可以帮助运营者整理媒体条目、展示元数据与海报、记录播放进度、维护收藏与评分、组织评论与标签，并提供个人主页与站内检索。管理员还可以配置媒体目录、数据源、缓存策略、用户角色和访问规则。不同实例可能只启用其中一部分模块，具体以本站实际展示的入口为准。
+          </p>
+          <p>
+            需要明确的是，AMMDS 软件本身不是内容提供方。程序不附带任何影视、漫画、小说或资讯内容，也不内置海报、字幕或播放地址；这些内容由站点运营者自行导入、连接或配置。软件不会预先审查本站内容的合法性，也不对内容的真实性、完整性和可用性作出承诺。你看到的一切媒体条目，其来源与授权应由站点运营者负责说明。
+          </p>
+          <p>
+            同一套软件在不同实例上的表现可能差别很大。服务器的性能、带宽、磁盘容量、是否启用转码、连接了哪些网盘或对象存储、配置了哪些刮削源、注册是开放、邀请还是审核制、是否设置访问频率限制，都会影响加载速度、画质、可用功能和内容范围。这些差异属于部署与运营选择，不构成软件本身的缺陷。
+          </p>
+          <p>
+            站点运营者可以出于维护、升级、安全或运营策略的需要，调整功能、迁移数据、限制访问、暂停或终止部分服务。运营者会尽合理努力减少影响，但不承诺服务永不中断，也不承诺特定功能永久保留。若本站提供付费访问或商城兑换，相关价格、交付方式和退款规则应由运营者在单独页面中说明；除非明确说明，AMMDS 软件本身不参与收款与结算。
+          </p>
+        </section>
+
+        <section class="card section" id="sec3" aria-labelledby="sec3-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <h2 id="sec3-title">三、账号、初始化与权限</h2>
+          </div>
+          <p class="section-intro">
+            本节处理账号从创建、授权到注销的全过程，重点解释首次初始化生成的管理员账号为何需要格外谨慎。账号不仅是登录凭证，也是权限、内容归属和操作记录的载体。
+          </p>
+          <p>
+            实例首次启动时，AMMDS 会引导部署者完成初始化：创建初始管理员账号，并设置站点名称、数据库、媒体目录、缓存位置、邮件与数据源等基础信息。这个初始管理员通常拥有系统最高权限，可以管理用户、媒体库、刮削源、存储连接、通知渠道和系统配置，也可以查看日志、重置密码和删除内容。由于初始化账号往往与站点恢复能力绑定，请务必使用真实可用的邮箱和足够强度的唯一密码；如果实例提供二次验证，也应一并开启。
+          </p>
+          <p>
+            权限体系通常区分为管理员、普通用户与访客。管理员可以调整全站配置并查看较大范围的数据；普通用户依据角色和媒体库授权访问内容、维护个人资料、发表评论或使用商城功能；访客可能只能浏览公开页面。具体权限以本站的角色设置为准，运营者可以随时调整。你不应尝试访问超出自身权限的页面、接口或他人数据，也不应使用他人的账号进行操作。
+          </p>
+          <p>
+            账号仅限你本人使用，不得转让、出借、出租或出售。请妥善保管密码、API 令牌、WebDAV 密码、邀请链接和登录 Cookie，这些凭据在功能上等同于账号本身。如果你的账号出现异常登录、凭据泄露或设备丢失，应立即修改密码并通知站点运营者；运营者在核实风险后，可以采取强制重置密码、撤销会话或临时冻结账号等措施。
+          </p>
+          <p>
+            对于长期未登录、违反本协议或存在安全风险的账号，运营者可以依据本站公示的规则进行限制、停用或删除。账号注销后，相关个人资料与访问权限会按《隐私政策》的说明处理，但为满足安全审计、争议处理或法律要求所必需的部分记录，可能在必要期限内继续保留。注销前请自行导出需要保留的数据。
+          </p>
+        </section>
+
+        <section class="card section" id="sec4" aria-labelledby="sec4-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </span>
+            <h2 id="sec4-title">四、用户内容与版权</h2>
+          </div>
+          <p class="section-intro">
+            本节明确“你放进去的东西”归谁、你作出了哪些承诺，以及收到侵权投诉时站点可以怎样处理。媒体库的特殊性在于，文件、目录名、封面和简介都可能涉及他人的权利。
+          </p>
+          <p>
+            用户内容不仅指你上传的视频、音频或电子书文件，也包括你导入的目录结构与文件名、字幕、NFO 信息、封面与背景图、简介与评论、标签与评分、收藏夹、头像、附件以及在商城或反馈表单中提交的文字和图片。只要内容由你提交、导入或以你的账号生成，就可能被视为本协议所称的用户内容。
+          </p>
+          <p>
+            你对自己创作或合法拥有的内容保留权利。为了向你提供存储、转码、切片、缓存、播放、展示、备份和同步等服务，你授予站点运营者一项非独占、免许可费、仅限实现上述目的且在本站运营范围内的许可。该许可随着内容删除或账号注销而终止，但已经形成的备份、日志以及依法必须保留的记录除外。运营者不得超出提供服务所必需的范围使用你的内容，也不得擅自将其出售给第三方。
+          </p>
+          <p>
+            你承诺：对导入和分享的内容拥有合法来源与必要授权；内容不侵犯他人的著作权、商标权、肖像权、隐私权或其他合法权益；内容不违反法律法规与公序良俗；不包含恶意代码、钓鱼链接或用于规避访问控制的内容。你应自行了解所在地区关于媒体复制、传播和观看的规定，并承担因内容不合法而产生的责任。
+          </p>
+          <p>
+            收到权利人或其授权代表的有效通知后，运营者可以要求你补充说明来源，也可以先行删除、下架或限制访问涉嫌侵权的内容。对于多次侵权或明显恶意上传的账号，运营者可以限制功能、暂停使用直至终止服务。本站没有事先审查全部内容的义务，但保留对内容进行抽查、分类、隐藏或清理的权利，以便维护站点秩序和合规要求。
+          </p>
+          <p>
+            媒体文件与元数据的备份由运营者按其策略执行，不构成对你的承诺。对于无法重新获取的珍贵内容，请自行保留副本；因误删、存储故障、迁移或第三方网盘策略变化造成的数据丢失，应按本协议第九节的责任划分处理。
+          </p>
+        </section>
+
+        <section class="card section" id="sec5" aria-labelledby="sec5-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <h2 id="sec5-title">五、元数据刮削与第三方数据源</h2>
+          </div>
+          <p class="section-intro">
+            刮削是 AMMDS 体验的核心，也是实例主动与外部数据源通信的主要环节。本节说明启用刮削后哪些识别字段会发往你选择的数据源、刮削结果为何可能不准确，以及你可以怎样控制这一过程。
+          </p>
+          <p>
+            媒体条目的元数据默认只写入部署者自己的数据库，软件作者不接收。只有当你或管理员主动为某个媒体库启用刮削时，AMMDS 才会把完成匹配所必需的识别字段发送给对应的数据源；未启用刮削时，不会有任何匹配请求发往外部。常见字段包括影片或剧集的标题、原始标题、年份、类型、季集编号、外部 ID（如 IMDb、TMDB 标识）、文件名或目录名，以及语言和地区偏好。不同类型的数据源还可能需要不同的参数。发送的是用于识别的字段，而不是你的账号密码或个人资料。
+          </p>
+          <p>
+            可配置的数据源通常包括 TMDB、TVDB、豆瓣、Bangumi、MetaTube 等，也可能包含运营者自行接入的第三方或私有接口。不同数据源的覆盖范围、语言、分级和访问限制各不相同，运营者可以调整优先级、启用或停用某一来源。刮削返回的简介、海报、背景图、演职员、剧集列表和评分等结果，会写入部署者自己的数据库；图片可能被下载缓存，也可能以远程地址的方式引用，具体取决于存储与代理配置。
+          </p>
+          <p>
+            刮削结果由第三方数据源决定，本站不对其准确性、完整性或时效性作出保证。数据源可能改名、下架条目、调整接口、限制频率或变更授权方式，导致匹配失败、信息缺失或封面无法显示。运营者可以设置匹配规则和人工修正入口，但无法保证每个条目都完全正确。对于自动匹配结果，你应在使用前自行核对。
+          </p>
+          <p>
+            你应遵守各数据源的使用条款与速率限制，不得利用本站对数据源进行批量抓取、缓存牟利、绕过访问控制或实施其他滥用行为。若你不希望相关识别字段发送到外部，可以请求管理员关闭对应刮削源，或改为手动填写元数据；这样做可能降低匹配成功率，并影响海报、简介和剧集信息的完整性。
+          </p>
+        </section>
+
+        <section class="card section" id="sec6" aria-labelledby="sec6-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </span>
+            <h2 id="sec6-title">六、网盘、存储与推送等外部集成</h2>
+          </div>
+          <p class="section-intro">
+            除刮削外，AMMDS 还能连接网盘、对象存储、头像服务与推送通道。本节说明这些集成的边界：所有集成默认关闭，连接与启用都由部署者在配置中决定，使用风险则由运营者与用户各自评估。
+          </p>
+          <p>
+            以 115 网盘为例，实例可以在管理员配置后执行离线下载、转存、目录同步或生成 STRM 文件等操作。为此，必要的账号凭据、Cookie、文件标识、目录路径和请求参数会发送给对应服务商。网盘服务商可能对第三方客户端、下载频率或分享行为设置限制，也可能因风控而要求重新验证。由此导致的下载失败、链接失效或账号受限，应由使用该集成的运营者与用户自行处理。
+          </p>
+          <p>
+            AMMDS 也支持通过 WebDAV 挂载远程媒体目录，或以 S3 兼容对象存储保存媒体、缓存和备份。启用这类集成时，站点需要配置服务地址、端口、存储桶、路径和访问密钥。数据实际存放在哪里、由谁管理、是否跨境，取决于运营者选择的存储服务。请使用最小权限的专用凭据，并定期轮换密钥；不要把管理密钥暴露在前端页面或公开仓库中。
+          </p>
+          <p>
+            头像默认使用本地图片或本地生成的图案。若部署者主动启用 Gravatar，AMMDS 只会发送规范化邮箱的哈希值去查询头像，不会发送邮箱原文；若启用 DiceBear，图案可以在浏览器本地生成，也可以指向部署者自建的头像服务。这两项都可以在配置中关闭，关闭后不会产生任何头像请求。
+          </p>
+          <p>
+            推送通知用于让管理员或用户及时获知任务状态。AMMDS 可以接入 Bark、Ntfy、Gotify、Telegram、邮件以及通用 Webhook 等渠道。通知内容可能包含媒体标题、任务结果、错误摘要、时间戳和接收端标识；相关令牌、机器人地址或 Webhook URL 会保存在实例配置中。第三方推送服务可能会留存消息，请避免在通知中传递密码、密钥等敏感信息。
+          </p>
+          <p>
+            所有外部集成都由其运营方独立提供，本站无法保证其持续可用、安全或无差错。只有在你或管理员主动启用某个集成后，必要数据才会发送给对应第三方；你可以随时在后台关闭集成或删除凭据，但第三方已经接收的数据仍需按其自身政策处理。对于因第三方服务中断、策略变化或数据处理行为造成的损失，应按本协议第九节确定责任。
+          </p>
+        </section>
+
+        <section class="card section" id="sec7" aria-labelledby="sec7-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </span>
+            <h2 id="sec7-title">七、使用规范</h2>
+          </div>
+          <p class="section-intro">
+            本节列出使用本站时不可逾越的底线。它的目的不是限制正常浏览与分享，而是保护站点、其他用户和第三方服务的稳定与安全。
+          </p>
+          <p>
+            你不得利用本站上传、发布、传播或分享违反法律法规、公序良俗的内容，也不得侵犯他人的著作权、商标权、肖像权、隐私权或名誉权。不得发布诈骗、赌博、洗钱、恶意软件、钓鱼链接、骚扰信息，或包含他人敏感个人信息的内容。对于明显违法或高风险的内容，运营者可以不经事先通知先行删除或限制访问。
+          </p>
+          <p>
+            你不得未经授权访问他人账号、后台页面、服务器、数据库或接口，不得进行撞库、暴力破解、会话劫持、权限提升或漏洞利用。不得对本站实施扫描、压力测试、拒绝服务攻击、自动化爬取或其他可能影响稳定性的行为。发现安全漏洞时，应通过本协议末尾提供的方式负责任地报告，而不是公开披露或利用漏洞获取利益。
+          </p>
+          <p>
+            你不得绕过访问控制、地区限制、频率限制或付费规则，不得转售、出租站点访问权限，不得批量注册账号或滥用邀请机制，不得通过商城、积分、兑换或优惠活动实施欺诈。未经运营者书面许可，不得将本站用于商业分发、代下载、代刮削或其他超出个人正常使用的用途。
+          </p>
+          <ul>
+            <li>禁止上传或传播违法、侵权、恶意或欺骗性内容。</li>
+            <li>禁止入侵、扫描、压测、爬取或干扰站点正常运行。</li>
+            <li>禁止共享、转售账号或绕过访问与付费限制。</li>
+            <li>禁止滥用商城、积分、邀请或通知功能。</li>
+            <li>禁止冒用他人身份、伪造来源或删除权利标识。</li>
+          </ul>
+          <p>
+            违反上述规范的，运营者可以视情节采取提醒、删除内容、限制功能、暂停账号、终止服务等措施，并保留向监管机关或司法机关报告的权利。对于正在发生的攻击、数据泄露或严重违法内容，运营者可以立即采取临时处置措施。你若认为处置有误，可以通过申诉渠道说明情况，运营者会在核实后作出调整。
+          </p>
+        </section>
+
+        <section class="card section" id="sec8" aria-labelledby="sec8-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94"/><path d="M9.69 8h11.48"/><path d="M7.38 12l5.74-9.94"/><path d="M9.69 16L3.95 6.06"/><path d="M14.31 16H2.83"/><path d="M16.62 12l-5.74 9.94"/></svg>
+            </span>
+            <h2 id="sec8-title">八、知识产权</h2>
+          </div>
+          <p class="section-intro">
+            本节区分三个层次的知识产权：软件本身、站点运营者制作的内容，以及来自第三方的媒体与元数据。把这三者分开，才能判断某个使用行为是否越界。
+          </p>
+          <p>
+            AMMDS 的软件代码、名称、标识、界面设计、图标与文档，其知识产权归相应权利人所有，并受著作权、商标权及相关法律保护。你可以在软件许可或运营者授权的范围内使用本站，但不得删除权利声明，不得将软件或界面冒充为自己开发的产品，不得进行超出法律允许范围的反向工程、破解或商业再分发。
+          </p>
+          <p>
+            站点运营者自行撰写的站内说明、栏目编排、视觉设计和自建数据库结构，归运营者或其许可方所有。用户提交的内容仍按第四节处理，运营者不得仅因提供存储或展示服务而主张取得用户内容的完整所有权。
+          </p>
+          <p>
+            影视、漫画、小说、资讯的标题、简介、海报、剧照、演职员信息与评分，通常来自数据源或原始权利人。本站展示这些内容是为了识别和介绍媒体条目，不构成对这些素材的授权。你不得将刮削获得的图片、简介或数据用于商业出版、批量建站、训练模型或其他超出正常浏览的范围；如需二次使用，应自行向权利人取得许可。
+          </p>
+          <p>
+            如果你向运营者或软件作者提交功能建议、问题反馈或改进方案，视为允许对方在改进产品和服务时使用这些信息，且无需支付报酬或承担保密义务，但双方另有书面约定的除外。请不要在反馈中附带不属于你的商业秘密或受保密约束的材料。
+          </p>
+        </section>
+
+        <section class="card section" id="sec9" aria-labelledby="sec9-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <h2 id="sec9-title">九、免责与责任限制</h2>
+          </div>
+          <p class="section-intro">
+            本节说明服务按现状提供，以及在出现故障、数据丢失或第三方问题时责任如何划分。它不是要逃避应负的责任，而是把自托管场景中可预见的风险提前讲清楚。
+          </p>
+          <p>
+            本站按“现状”和“可获得”的状态提供服务，不对服务不中断、无错误、内容准确、适销或适合特定用途作出明示或默示保证。运营者会以合理努力维护服务，但无法保证所有功能在任何设备、网络或浏览器上都可用。你应在使用前自行判断服务是否满足需求，并对重要内容保留独立副本。
+          </p>
+          <p>
+            因硬件故障、磁盘损坏、误操作、升级迁移、恶意攻击、断电、网络中断、不可抗力或其他非运营者所能合理控制的原因造成的数据丢失、服务中断或体验下降，运营者在法律允许的范围内不承担赔偿责任。备份是降低风险的手段，而不是绝对保障；对于无法重建的媒体文件、元数据和日志，请自行做好离线备份。
+          </p>
+          <p>
+            刮削数据源、115 网盘、WebDAV 或 S3 服务商、推送通道、DNS、CDN 与网络运营商均由独立第三方运营。其服务中断、接口变更、内容下架、账号限制或数据处理行为，不属于本站能够控制的范围。本站不对第三方的可用性、安全性或合法性作出保证，也不对因使用第三方服务而产生的直接或间接损失负责。
+          </p>
+          <p>
+            在法律允许的最大范围内，运营者不对间接损失、附带损失、惩罚性损失、利润损失、商誉损失或数据损失承担赔偿责任。若相关服务为付费服务，运营者的累计赔偿责任以你在索赔发生前十二个月内为该服务实际支付的费用为上限；若服务免费，则以法律允许的最低责任限额为准。本条不排除或限制依法不得排除或限制的责任，包括因故意或重大过失造成的人身损害责任。
+          </p>
+          <p>
+            因你违反本协议、侵害他人权利、违法使用本站或违反第三方服务条款而产生的索赔、处罚和损失，应由你自行承担；给运营者或第三方造成损失的，你应依法赔偿。
+          </p>
+          <div class="callout">
+            <p>
+              如果你所在地区的消费者保护法律赋予你不可放弃的权利，本协议中的责任限制不排除这些权利；在存在冲突时，优先适用对你更有利的强制性规定。
+            </p>
+          </div>
+        </section>
+
+        <section class="card section" id="sec10" aria-labelledby="sec10-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            </span>
+            <h2 id="sec10-title">十、协议的变更与终止</h2>
+          </div>
+          <p class="section-intro">
+            协议会随着功能演进和法规变化而更新。本节说明更新如何告知、你如何选择，以及服务终止后哪些条款仍然有效。
+          </p>
+          <p>
+            运营者可以根据功能调整、安全需要或法律法规变化修订本协议。更新后的文本会在本页面发布，并同步修改顶部的“更新日期”。对于涉及权利义务重大变化的条款，运营者应通过站内公告、弹窗或邮件等方式在合理期限内提醒；你可以定期查看本页面，以了解最新版本。
+          </p>
+          <p>
+            更新生效后，你继续使用本站即视为接受修订后的协议。如果你不同意更新内容，应停止使用本站，并可以联系运营者申请注销账号、删除相关数据。你在更新前已经产生的行为，仍适用行为发生时有效的协议版本。
+          </p>
+          <p>
+            你可以随时停止使用本站。停止使用并不自动删除账号与数据；如需删除，应通过账号设置或本协议末尾的联系方式提出申请。注销前请自行导出收藏、评论、播放记录或其他需要保留的信息。账号注销后，相关数据将按《隐私政策》的说明处理。
+          </p>
+          <p>
+            如果你严重违反本协议、侵害他人权益、危害站点安全，或站点因经营调整、合规要求而停止服务，运营者可以限制、暂停或终止你的访问权限，并删除相应内容。对于因不可抗力或第三方原因导致的服务终止，运营者会尽合理努力提前告知并协助导出数据，但不承担超出法律规定的责任。
+          </p>
+          <p>
+            协议终止后，关于知识产权、免责与责任限制、适用法律与争议解决的条款，以及终止前已经产生的权利义务，继续有效。其他条款在终止后不再适用。
+          </p>
+        </section>
+
+        <section class="card section" id="sec11" aria-labelledby="sec11-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M7 8l-4 7a4 4 0 0 0 8 0z"/><path d="M17 8l-4 7a4 4 0 0 0 8 0z"/></svg>
+            </span>
+            <h2 id="sec11-title">十一、适用法律与争议解决</h2>
+          </div>
+          <p class="section-intro">
+            本节说明协议适用哪里的法律，以及发生争议时先做什么、再做什么。清晰的争议路径可以减少误解，也能让双方在问题扩大前找到沟通窗口。
+          </p>
+          <p>
+            本协议的订立、效力、解释、履行与争议解决，适用中华人民共和国法律，不包括冲突法规则。若你所在国家或地区的强制性消费者保护规定提供了更高水平的保护，则在当地法律要求的范围内优先适用。本站服务主体位于中国新疆维吾尔自治区，实际运营者可能因部署位置不同而有所差异，具体以本页面末尾公示的信息为准。
+          </p>
+          <p>
+            因本协议或使用本站产生的争议，双方应先通过友好协商解决。提出争议时，请尽可能说明账号、时间、具体功能和诉求，并附上必要的截图、日志或交易记录。运营者会在工作时间内确认收到，并在合理期限内给出处理意见。很多问题来自配置错误或数据源异常，通过沟通即可解决。
+          </p>
+          <p>
+            协商不成的，任何一方可以依法向有管辖权的人民法院提起诉讼。若法律对消费者合同、网络服务合同规定了特别的管辖规则，则按该规则执行。在争议处理期间，双方仍应继续履行不受争议影响的其他义务。
+          </p>
+          <p>
+            本协议部分条款被认定无效或不可执行的，不影响其余条款的效力，双方应以最接近原条款目的的有效约定替代。运营者可以将本协议项下的权利义务转让给关联主体或服务承接方，但应提前通知并确保你的权益不受实质影响。标题仅为阅读方便，不影响条款解释。本协议以中文版本为准，其他语言的翻译仅供参考。
+          </p>
+        </section>
+
+        <section class="card section" id="sec12" aria-labelledby="sec12-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <h2 id="sec12-title">十二、联系我们</h2>
+          </div>
+          <p class="section-intro">
+            本节提供协议疑问、侵权通知、安全报告与数据权利请求的沟通渠道。把问题发到正确的入口，通常比在公开区域留言更快得到处理。
+          </p>
+          <p>
+            如果你对本协议有疑问，或认为站内内容侵犯了你的合法权益，请通过下方邮箱联系。为了便于核实，请在邮件中说明你的账号或用户 ID、涉及的具体页面与条目、问题发生时间、你的诉求，并附上必要的截图、日志或权利证明。涉及版权投诉时，请说明作品名称、权利归属、被指侵权内容的位置以及你希望采取的处理方式。
+          </p>
+          <p>
+            如果你发现安全漏洞，请以负责任的方式报告，并尽量避免访问、修改或公开他人的数据。运营者会在确认问题后评估影响并安排修复；在修复完成前，请不要公开披露可被利用的细节。对于一般咨询，我们会在工作时间内回复；复杂请求可能需要更长时间核实。
+          </p>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-label">电子邮箱</div>
+              <div class="contact-value"><a href="mailto:support@lifebus.top">support@lifebus.top</a></div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">服务时间</div>
+              <div class="contact-value">工作日 10:00-18:00</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">服务主体</div>
+              <div class="contact-value">新疆萌森软件开发工作室</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>版权所有 © 2023-2026 新疆萌森软件开发工作室</p>
+        <p>统一社会信用代码：91652301MACHE3T54</p>
+        <p>成立日期：2023年4月28日</p>
+      </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script>
+      (function () {
+        var bar = document.getElementById("progressBar");
+        var btn = document.getElementById("backToTop");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var ticking = false;
+
+        function update() {
+          var doc = document.documentElement;
+          var max = doc.scrollHeight - doc.clientHeight;
+          var top = window.scrollY || doc.scrollTop || 0;
+          var ratio = max > 0 ? Math.min(1, Math.max(0, top / max)) : 0;
+          bar.style.transform = "scaleX(" + ratio + ")";
+          btn.classList.toggle("is-visible", top > 320);
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+          }
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true });
+        update();
+
+        btn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: reduceMotion.matches ? "auto" : "smooth"
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "label": "接口速查",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "请求与返回的通用规则，以及常用接口速查表。"
+  }
+}

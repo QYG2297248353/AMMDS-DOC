@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "AMMDS Blog",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "AMMDS Development Blog",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Recent posts",
+    "description": "The label for the left sidebar"
+  }
+}

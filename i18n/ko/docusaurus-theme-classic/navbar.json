@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "AMMDS",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "AMMDS 문서 로고",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.指南": {
+    "message": "가이드",
+    "description": "Navbar item with label 指南"
+  },
+  "item.label.开放平台": {
+    "message": "오픈 플랫폼",
+    "description": "Navbar item with label 开放平台"
+  },
+  "item.label.博客": {
+    "message": "블로그",
+    "description": "Navbar item with label 博客"
+  }
+}

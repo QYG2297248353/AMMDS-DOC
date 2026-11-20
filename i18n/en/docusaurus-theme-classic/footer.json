@@ -1,0 +1,50 @@
+{
+  "link.title.文档": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=文档 in the footer"
+  },
+  "link.title.社区": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=社区 in the footer"
+  },
+  "link.title.更多": {
+    "message": "More",
+    "description": "The title of the footer links column with title=更多 in the footer"
+  },
+  "link.item.label.指南": {
+    "message": "Guide",
+    "description": "The label of footer link with label=指南 linking to /docs/intro"
+  },
+  "link.item.label.Telegram 频道": {
+    "message": "Telegram Channel",
+    "description": "The label of footer link with label=Telegram 频道 linking to https://t.me/ammds_official"
+  },
+  "link.item.label.Telegram 群组": {
+    "message": "Telegram Group",
+    "description": "The label of footer link with label=Telegram 群组 linking to https://t.me/+9bvCp3LqLUo1N2Q1"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/sxkpPZzPeJ"
+  },
+  "link.item.label.QQ 群": {
+    "message": "QQ Group",
+    "description": "The label of footer link with label=QQ 群 linking to https://qm.qq.com/q/ZTXsLnEAM4"
+  },
+  "link.item.label.博客": {
+    "message": "Blog",
+    "description": "The label of footer link with label=博客 linking to /blog"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/QYG2297248353/AMMDS-Docker"
+  },
+  "link.item.label.Docker Hub": {
+    "message": "Docker Hub",
+    "description": "The label of footer link with label=Docker Hub linking to https://hub.docker.com/r/qyg2297248353/ammds"
+  },
+  "copyright": {
+    "message": "Copyright © 2023-2026 新疆萌森软件开发工作室",
+    "description": "The footer copyright"
+  }
+}

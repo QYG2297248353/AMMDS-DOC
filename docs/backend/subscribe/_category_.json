@@ -1,0 +1,9 @@
+{
+  "label": "订阅检索",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "找资源、订阅更新、推送到下载器并自动入库。",
+    "slug": "/backend/subscribe"
+  }
+}

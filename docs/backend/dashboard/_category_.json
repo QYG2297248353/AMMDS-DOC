@@ -1,0 +1,9 @@
+{
+  "label": "工作台",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "登录后第一眼看到的页面，以及网络状态与榜单。",
+    "slug": "/backend/dashboard"
+  }
+}

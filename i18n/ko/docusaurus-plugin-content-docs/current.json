@@ -1,0 +1,150 @@
+{
+  "version.label": {
+    "message": "latest",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.快速开始": {
+    "message": "빠른 시작",
+    "description": "The label for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.快速开始.link.generated-index.title": {
+    "message": "빠른 시작",
+    "description": "The generated-index page title for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.快速开始.link.generated-index.description": {
+    "message": "프로젝트 이해부터 설치 방법 선택, 첫 실행과 첫 미디어 정리까지 순서대로 따라 하면 됩니다.",
+    "description": "The generated-index page description for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理": {
+    "message": "관리자",
+    "description": "The label for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理.link.generated-index.title": {
+    "message": "관리자",
+    "description": "The generated-index page title for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理.link.generated-index.description": {
+    "message": "로그인 후 관리자 메뉴와 대응: 대시보드, 작업, 미디어, 검색과 구독, 정보, 라이프 아카이브, 도구 상자, 계정, 시스템.",
+    "description": "The generated-index page description for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘": {
+    "message": "대시보드",
+    "description": "The label for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘.link.generated-index.title": {
+    "message": "대시보드",
+    "description": "The generated-index page title for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘.link.generated-index.description": {
+    "message": "로그인 직후 보이는 화면과 네트워크 진단, 순위 정보입니다.",
+    "description": "The generated-index page description for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理": {
+    "message": "작업 관리",
+    "description": "The label for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理.link.generated-index.title": {
+    "message": "작업 관리",
+    "description": "The generated-index page title for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理.link.generated-index.description": {
+    "message": "파일 스캔, 메타데이터 수집, 예약 작업으로 파일을 자동으로 인식하고 보완합니다.",
+    "description": "The generated-index page description for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理": {
+    "message": "미디어 관리",
+    "description": "The label for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理.link.generated-index.title": {
+    "message": "미디어 관리",
+    "description": "The generated-index page title for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理.link.generated-index.description": {
+    "message": "영화, 드라마, 배우, 만화, 소설과 시리즈, 제작사, 태그를 정리합니다.",
+    "description": "The generated-index page description for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索": {
+    "message": "검색과 구독",
+    "description": "The label for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索.link.generated-index.title": {
+    "message": "검색과 구독",
+    "description": "The generated-index page title for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索.link.generated-index.description": {
+    "message": "리소스 검색, 업데이트 구독, 다운로더로 전달 및 자동 입고.",
+    "description": "The generated-index page description for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理": {
+    "message": "정보 관리",
+    "description": "The label for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理.link.generated-index.title": {
+    "message": "정보 관리",
+    "description": "The generated-index page title for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理.link.generated-index.description": {
+    "message": "시스템 메시지, RSS, 공유 링크, 인스턴스 연동.",
+    "description": "The generated-index page description for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱": {
+    "message": "도구 상자",
+    "description": "The label for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱.link.generated-index.title": {
+    "message": "도구 상자",
+    "description": "The generated-index page title for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱.link.generated-index.description": {
+    "message": "파일, 이미지, 자막, 트랜스코딩을 일괄 처리하는 도구 모음.",
+    "description": "The generated-index page description for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城": {
+    "message": "계정과 스토어",
+    "description": "The label for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城.link.generated-index.title": {
+    "message": "계정과 스토어",
+    "description": "The generated-index page title for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城.link.generated-index.description": {
+    "message": "프로필, 공식 스토어, 로그인 보안.",
+    "description": "The generated-index page description for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理": {
+    "message": "시스템 관리",
+    "description": "The label for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理.link.generated-index.title": {
+    "message": "시스템 관리",
+    "description": "The generated-index page title for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理.link.generated-index.description": {
+    "message": "시스템 설정, 백업 및 복원, 시스템 점검, 로그, 라이선스 등 일상적인 유지보수.",
+    "description": "The generated-index page description for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用": {
+    "message": "통합 앱",
+    "description": "The label for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用.link.generated-index.title": {
+    "message": "통합 앱",
+    "description": "The generated-index page title for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用.link.generated-index.description": {
+    "message": "영화 정보 사이트, 리소스 사이트, 다운로더, 플레이어, 알림, 유틸리티를 범주별로 한 페이지씩 설명합니다.",
+    "description": "The generated-index page description for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点": {
+    "message": "공개 사이트",
+    "description": "The label for category '前台站点' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点.link.generated-index.title": {
+    "message": "공개 사이트",
+    "description": "The generated-index page title for category '前台站点' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点.link.generated-index.description": {
+    "message": "관리자 로그인 없이 볼 수 있는 페이지: 탐색, 공유, 스토어, 프로필.",
+    "description": "The generated-index page description for category '前台站点' in sidebar 'guideSidebar'"
+  }
+}

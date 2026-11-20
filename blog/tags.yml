@@ -1,0 +1,64 @@
+studio:
+  label: Studio
+  permalink: /studio
+  description: 工作室相关
+
+ammds:
+  label: AMMDS
+  permalink: /ammds
+  description: AMMDS 项目相关
+
+release:
+  label: Release
+  permalink: /release
+  description: 版本发布
+
+feature:
+  label: Feature
+  permalink: /feature
+  description: 功能特性
+
+tutorial:
+  label: Tutorial
+  permalink: /tutorial
+  description: 教程与指南
+
+plugin:
+  label: Plugin
+  permalink: /plugin
+  description: 插件相关
+
+opensource:
+  label: Open Source
+  permalink: /opensource
+  description: 开源相关
+
+docker:
+  label: Docker
+  permalink: /docker
+  description: Docker 部署相关
+
+nas:
+  label: NAS
+  permalink: /nas
+  description: NAS 相关
+
+comparison:
+  label: Comparison
+  permalink: /comparison
+  description: 产品对比
+
+community:
+  label: Community
+  permalink: /community
+  description: 社区动态
+
+guide:
+  label: Guide
+  permalink: /guide
+  description: 操作指南
+
+movie:
+  label: Movie
+  permalink: /movie
+  description: 媒体与影片相关

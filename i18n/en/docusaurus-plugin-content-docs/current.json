@@ -1,0 +1,150 @@
+{
+  "version.label": {
+    "message": "latest",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.快速开始": {
+    "message": "Quick Start",
+    "description": "The label for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.快速开始.link.generated-index.title": {
+    "message": "Quick Start",
+    "description": "The generated-index page title for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.快速开始.link.generated-index.description": {
+    "message": "From understanding the project and choosing an install method to first launch and importing your first media — follow along in order.",
+    "description": "The generated-index page description for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理": {
+    "message": "Administration",
+    "description": "The label for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理.link.generated-index.title": {
+    "message": "Administration",
+    "description": "The generated-index page title for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理.link.generated-index.description": {
+    "message": "Matches the admin menu after login: dashboard, tasks, media, search & subscribe, information, life archive, toolbox, account and system.",
+    "description": "The generated-index page description for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘": {
+    "message": "Dashboard",
+    "description": "The label for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘.link.generated-index.title": {
+    "message": "Dashboard",
+    "description": "The generated-index page title for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘.link.generated-index.description": {
+    "message": "What you see right after login, plus network diagnostics and rankings.",
+    "description": "The generated-index page description for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理": {
+    "message": "Tasks",
+    "description": "The label for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理.link.generated-index.title": {
+    "message": "Tasks",
+    "description": "The generated-index page title for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理.link.generated-index.description": {
+    "message": "File scanning, metadata scraping and scheduled tasks — let the app recognize and complete your files automatically.",
+    "description": "The generated-index page description for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理": {
+    "message": "Media",
+    "description": "The label for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理.link.generated-index.title": {
+    "message": "Media",
+    "description": "The generated-index page title for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理.link.generated-index.description": {
+    "message": "Organizing films, series, actors, comics and novels, plus series, studios and tags.",
+    "description": "The generated-index page description for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索": {
+    "message": "Search & Subscribe",
+    "description": "The label for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索.link.generated-index.title": {
+    "message": "Search & Subscribe",
+    "description": "The generated-index page title for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索.link.generated-index.description": {
+    "message": "Search for resources, subscribe to updates, push to a downloader and import automatically.",
+    "description": "The generated-index page description for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理": {
+    "message": "Information",
+    "description": "The label for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理.link.generated-index.title": {
+    "message": "Information",
+    "description": "The generated-index page title for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理.link.generated-index.description": {
+    "message": "System messages, RSS, share links and instance interconnection.",
+    "description": "The generated-index page description for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱": {
+    "message": "Toolbox",
+    "description": "The label for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱.link.generated-index.title": {
+    "message": "Toolbox",
+    "description": "The generated-index page title for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱.link.generated-index.description": {
+    "message": "Tools for batch-processing files, images, subtitles and transcoding.",
+    "description": "The generated-index page description for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城": {
+    "message": "Account & Store",
+    "description": "The label for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城.link.generated-index.title": {
+    "message": "Account & Store",
+    "description": "The generated-index page title for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城.link.generated-index.description": {
+    "message": "Profile, official store and login security.",
+    "description": "The generated-index page description for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理": {
+    "message": "System",
+    "description": "The label for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理.link.generated-index.title": {
+    "message": "System",
+    "description": "The generated-index page title for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理.link.generated-index.description": {
+    "message": "System settings, backup & restore, plus routine checks, logs, licenses and other maintenance.",
+    "description": "The generated-index page description for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用": {
+    "message": "Integrations",
+    "description": "The label for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用.link.generated-index.title": {
+    "message": "Integrations",
+    "description": "The generated-index page title for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用.link.generated-index.description": {
+    "message": "Film data sites, resource sites, downloaders, players, notifications and utilities — one page per category.",
+    "description": "The generated-index page description for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点": {
+    "message": "Public Site",
+    "description": "The label for category '前台站点' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点.link.generated-index.title": {
+    "message": "Public Site",
+    "description": "The generated-index page title for category '前台站点' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点.link.generated-index.description": {
+    "message": "Pages visible without admin login: browse, share, store and profile.",
+    "description": "The generated-index page description for category '前台站点' in sidebar 'guideSidebar'"
+  }
+}

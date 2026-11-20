@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "latest",
+    "description": "The label for version current"
+  },
+  "sidebar.openApiSidebar.category.开始接入": {
+    "message": "Getting Started",
+    "description": "The label for category '开始接入' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.接口速查": {
+    "message": "API Reference",
+    "description": "The label for category '接口速查' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器": {
+    "message": "Comic Reader",
+    "description": "The label for category '漫画阅读器' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.备份包": {
+    "message": "Backup Package",
+    "description": "The label for category '备份包' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.开始接入.link.generated-index.title": {
+    "message": "Getting Started",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.开始接入.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.开始接入.link.generated-index.description": {
+    "message": "Learn what the open platform offers, get an API key, and make your first call.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.开始接入.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.接口速查.link.generated-index.title": {
+    "message": "API Reference",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.接口速查.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.接口速查.link.generated-index.description": {
+    "message": "Common rules for requests and responses, plus a quick reference of common endpoints.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.接口速查.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.title": {
+    "message": "Comic Reader",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.description": {
+    "message": "Read comics stored in AMMDS directly with reader apps like Mihon.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.备份包.link.generated-index.title": {
+    "message": "Backup Package",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.备份包.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.备份包.link.generated-index.description": {
+    "message": "Backup package structure, the complete format spec, and how to have AI turn crawled data into a standard backup package.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.备份包.link.generated-index.description'"
+  }
+}

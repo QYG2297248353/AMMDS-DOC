@@ -1,0 +1,57 @@
+name: Build and Deploy AMMDS Doc site
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-dist
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: master
+
+      - name: Check Release Tag Format
+        run: |
+          if [[ ! "${{ github.event.release.tag_name }}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?$ ]]; then
+            echo "Error: Release tag must be in format vX.Y.Z or vX.Y.Z.N"
+            exit 1
+          fi
+          echo "Release tag format is valid: ${{ github.event.release.tag_name }}"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with Docusaurus
+        run: npm run build
+
+      - name: Create dist.zip
+        run: |
+          zip -r dist.zip build
+
+      - name: Upload dist.zip to Release
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./dist.zip
+          asset_name: dist.zip
+          asset_content_type: application/zip

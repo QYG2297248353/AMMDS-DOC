@@ -1,0 +1,8 @@
+{
+  "label": "备份包",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "备份包结构、完整格式规范，以及让 AI 把爬取数据做成标准备份包的方法。"
+  }
+}

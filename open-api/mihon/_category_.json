@@ -1,0 +1,8 @@
+{
+  "label": "漫画阅读器",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "用 Mihon 这类阅读器直接看 AMMDS 里的漫画。"
+  }
+}

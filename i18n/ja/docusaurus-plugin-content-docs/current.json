@@ -1,0 +1,150 @@
+{
+  "version.label": {
+    "message": "latest",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.快速开始": {
+    "message": "クイックスタート",
+    "description": "The label for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.快速开始.link.generated-index.title": {
+    "message": "クイックスタート",
+    "description": "The generated-index page title for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.快速开始.link.generated-index.description": {
+    "message": "プロジェクトの理解、インストール方法の選択、初回起動と最初のメディア整理まで、順を追って進めます。",
+    "description": "The generated-index page description for category '快速开始' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理": {
+    "message": "管理画面",
+    "description": "The label for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理.link.generated-index.title": {
+    "message": "管理画面",
+    "description": "The generated-index page title for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.后台管理.link.generated-index.description": {
+    "message": "ログイン後の管理メニューに対応：ダッシュボード、タスク、メディア、検索と購読、情報、ライフアーカイブ、ツールボックス、アカウント、システム。",
+    "description": "The generated-index page description for category '后台管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘": {
+    "message": "ダッシュボード",
+    "description": "The label for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘.link.generated-index.title": {
+    "message": "ダッシュボード",
+    "description": "The generated-index page title for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.仪表盘.link.generated-index.description": {
+    "message": "ログイン直後に表示される画面と、ネットワーク診断やランキング。",
+    "description": "The generated-index page description for category '仪表盘' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理": {
+    "message": "タスク管理",
+    "description": "The label for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理.link.generated-index.title": {
+    "message": "タスク管理",
+    "description": "The generated-index page title for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.任务管理.link.generated-index.description": {
+    "message": "ファイルスキャン、メタデータ取得、定期タスクで、ファイルを自動的に認識・補完します。",
+    "description": "The generated-index page description for category '任务管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理": {
+    "message": "メディア管理",
+    "description": "The label for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理.link.generated-index.title": {
+    "message": "メディア管理",
+    "description": "The generated-index page title for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.媒体管理.link.generated-index.description": {
+    "message": "映画、ドラマ、俳優、コミック、小説、そしてシリーズ、スタジオ、タグの整理。",
+    "description": "The generated-index page description for category '媒体管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索": {
+    "message": "検索と購読",
+    "description": "The label for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索.link.generated-index.title": {
+    "message": "検索と購読",
+    "description": "The generated-index page title for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.订阅检索.link.generated-index.description": {
+    "message": "リソースの検索、更新の購読、ダウンローダーへの連携と自動取り込み。",
+    "description": "The generated-index page description for category '订阅检索' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理": {
+    "message": "情報管理",
+    "description": "The label for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理.link.generated-index.title": {
+    "message": "情報管理",
+    "description": "The generated-index page title for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.信息管理.link.generated-index.description": {
+    "message": "システムメッセージ、RSS、共有リンク、インスタンス連携。",
+    "description": "The generated-index page description for category '信息管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱": {
+    "message": "ツールボックス",
+    "description": "The label for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱.link.generated-index.title": {
+    "message": "ツールボックス",
+    "description": "The generated-index page title for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.工具箱.link.generated-index.description": {
+    "message": "ファイル、画像、字幕、トランスコードを一括処理するツール群。",
+    "description": "The generated-index page description for category '工具箱' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城": {
+    "message": "アカウントとストア",
+    "description": "The label for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城.link.generated-index.title": {
+    "message": "アカウントとストア",
+    "description": "The generated-index page title for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.个人中心与商城.link.generated-index.description": {
+    "message": "プロフィール、公式ストア、ログインセキュリティ。",
+    "description": "The generated-index page description for category '个人中心与商城' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理": {
+    "message": "システム管理",
+    "description": "The label for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理.link.generated-index.title": {
+    "message": "システム管理",
+    "description": "The generated-index page title for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.系统管理.link.generated-index.description": {
+    "message": "システム設定、バックアップと復元、およびシステムチェック、ログ、ライセンスなどの保守作業。",
+    "description": "The generated-index page description for category '系统管理' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用": {
+    "message": "連携アプリ",
+    "description": "The label for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用.link.generated-index.title": {
+    "message": "連携アプリ",
+    "description": "The generated-index page title for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.集成应用.link.generated-index.description": {
+    "message": "映画情報サイト、リソースサイト、ダウンローダー、プレイヤー、通知、ユーティリティをカテゴリごとに1ページで。",
+    "description": "The generated-index page description for category '集成应用' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点": {
+    "message": "公開サイト",
+    "description": "The label for category '前台站点' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点.link.generated-index.title": {
+    "message": "公開サイト",
+    "description": "The generated-index page title for category '前台站点' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.前台站点.link.generated-index.description": {
+    "message": "管理画面にログインせずに見られるページ：ブラウズ、共有、ストア、プロフィール。",
+    "description": "The generated-index page description for category '前台站点' in sidebar 'guideSidebar'"
+  }
+}

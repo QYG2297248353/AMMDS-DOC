@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="AMMDS 隐私政策：说明自托管媒体库如何处理账号、媒体元数据、日志、Gravatar、刮削数据源、网盘与推送通知等信息。"
+    />
+    <title>隐私政策 - AMMDS</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --primary: #5b6ef5;
+        --primary-dark: #3f4cc4;
+        --primary-soft: #eef1ff;
+        --accent: #d94f76;
+        --accent-soft: #fff0f4;
+        --text: #1f2740;
+        --text-muted: #5d6577;
+        --bg: #f4f6fc;
+        --surface: #ffffff;
+        --surface-soft: #f7f9ff;
+        --border: #e3e8f4;
+        --hero-from: #4854c9;
+        --hero-to: #5f3fc0;
+        --page-top: #e9edff;
+        --page-bottom: #f4f6fc;
+        --link-hover: #a8375a;
+        --shadow-sm: 0 2px 10px rgba(47, 58, 96, 0.06);
+        --shadow-md: 0 14px 36px rgba(47, 58, 96, 0.12);
+        --radius: 16px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary: #8f9cff;
+          --primary-dark: #b4beff;
+          --primary-soft: #232b4d;
+          --accent: #ff9ab4;
+          --accent-soft: #3a2430;
+          --text: #e7eaf4;
+          --text-muted: #a4adc4;
+          --bg: #0e1220;
+          --surface: #161c2c;
+          --surface-soft: #1b2234;
+          --border: #2a334a;
+          --hero-from: #4a58c9;
+          --hero-to: #6b4fd0;
+          --page-top: #151b30;
+          --page-bottom: #0e1220;
+          --link-hover: #ffb3c8;
+          --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
+          --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.38);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          sans-serif;
+        font-size: clamp(16.5px, 15.6px + 0.24vw, 17px);
+        line-height: 1.9;
+        overflow-x: hidden;
+        overflow-wrap: anywhere;
+        color: var(--text);
+        background-color: var(--bg);
+        background-image: linear-gradient(
+          180deg,
+          var(--page-top) 0,
+          var(--page-bottom) 340px
+        );
+        background-repeat: no-repeat;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: var(--primary-dark);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+        overflow-wrap: anywhere;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      .skip-link:focus-visible {
+        outline: 2px solid var(--primary-dark);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: clamp(12px, 3vw, 24px);
+        z-index: 1200;
+        padding: 0.6rem 1rem;
+        border-radius: 10px;
+        background: var(--surface);
+        color: var(--text);
+        box-shadow: var(--shadow-md);
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        top: 12px;
+      }
+
+      .progress {
+        position: fixed;
+        inset: 0 0 auto 0;
+        height: 3px;
+        z-index: 1100;
+        pointer-events: none;
+      }
+
+      .progress__bar {
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        transition: transform 0.12s linear;
+      }
+
+      .container {
+        width: 100%;
+        max-width: clamp(820px, 90vw, 1080px);
+        margin: 0 auto;
+        padding: clamp(20px, 4.5vw, 44px) clamp(16px, 2.4vw, 26px)
+          clamp(56px, 8vw, 88px);
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: clamp(24px, 4vw, 36px);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.38rem 0.85rem;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .hero h1 {
+        margin: 0.9rem 0 0.75rem;
+        font-size: clamp(1.65rem, 1.25rem + 2.2vw, 2.35rem);
+        line-height: 1.25;
+        letter-spacing: 0.01em;
+        overflow-wrap: anywhere;
+      }
+
+      .subtitle {
+        max-width: 42rem;
+        margin: 0 auto 1.1rem;
+        color: var(--text-muted);
+        font-size: clamp(0.98rem, 0.95rem + 0.15vw, 1.05rem);
+      }
+
+      .date-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.55rem;
+      }
+
+      .date-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 0.85rem;
+        border-radius: 999px;
+        background: var(--surface);
+        box-shadow: var(--shadow-sm);
+        color: var(--text-muted);
+        font-size: 0.86rem;
+      }
+
+      .date-pill--updated {
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+        box-shadow: none;
+        font-weight: 600;
+      }
+
+      .meta-line {
+        margin: 0.9rem 0 0;
+        color: var(--text-muted);
+        font-size: 0.84rem;
+      }
+
+      .card {
+        margin-bottom: clamp(16px, 2.4vw, 22px);
+        padding: clamp(18px, 2.4vw, 26px);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .summary {
+        background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 0 16px 36px rgba(64, 74, 180, 0.22);
+      }
+
+      .summary h2 {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 1rem;
+        font-size: 1.08rem;
+        line-height: 1.4;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .summary-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+        min-width: 0;
+        padding: 0.9rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .summary-item svg {
+        flex: 0 0 auto;
+        margin-top: 0.15rem;
+      }
+
+      .summary-item strong {
+        display: block;
+        margin-bottom: 0.15rem;
+        font-size: 0.92rem;
+      }
+
+      .summary-item span {
+        display: block;
+        color: #ffffff;
+        font-size: 0.86rem;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+      }
+
+      .lead p {
+        margin: 0 0 0.85rem;
+      }
+
+      .lead p:last-child {
+        margin-bottom: 0;
+      }
+
+      .toc-title {
+        margin: 0 0 0.75rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+      }
+
+      .toc ol {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.15rem 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: toc;
+      }
+
+      .toc li {
+        min-width: 0;
+      }
+
+      .toc a {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.32rem 0.15rem;
+        border-radius: 6px;
+        color: var(--text);
+        text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+
+      .toc a::before {
+        counter-increment: toc;
+        content: counter(toc, decimal-leading-zero);
+        padding-top: 0.12rem;
+        color: var(--text-muted);
+        font-size: 0.76rem;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .toc a:hover {
+        color: var(--primary-dark);
+      }
+
+      .section {
+        scroll-margin-top: 24px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-icon {
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+
+      .section-icon--accent {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .section h2 {
+        margin: 0.18rem 0 0;
+        font-size: clamp(1.08rem, 1rem + 0.45vw, 1.3rem);
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+      }
+
+      .section p {
+        margin: 0 0 1rem;
+      }
+
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-intro {
+        color: var(--text-muted);
+      }
+
+      .section strong {
+        color: var(--text);
+      }
+
+      .section ul {
+        margin: 0 0 1rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      .section li {
+        position: relative;
+        margin-bottom: 0.45rem;
+        padding-left: 1.25rem;
+      }
+
+      .section li:last-child {
+        margin-bottom: 0;
+      }
+
+      .section li::before {
+        position: absolute;
+        top: 0.78em;
+        left: 0.15rem;
+        width: 0.32rem;
+        height: 0.32rem;
+        border-radius: 50%;
+        background: var(--primary);
+        content: "";
+      }
+
+      .callout {
+        margin: 1.1rem 0 0;
+        padding: 0.9rem 1rem;
+        border-left: 3px solid var(--primary);
+        border-radius: 0 10px 10px 0;
+        background: var(--surface-soft);
+        font-size: 0.95rem;
+      }
+
+      .callout p {
+        margin: 0;
+      }
+
+      .table-wrap {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 1.1rem 0;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+      }
+
+      table {
+        width: 100%;
+        min-width: 540px;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+
+      caption {
+        padding: 0.75rem 0.9rem;
+        color: var(--text-muted);
+        font-size: 0.84rem;
+        text-align: left;
+        caption-side: top;
+      }
+
+      th,
+      td {
+        padding: 0.65rem 0.85rem;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        vertical-align: top;
+        overflow-wrap: break-word;
+      }
+
+      thead th {
+        background: var(--primary-soft);
+        color: var(--text);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .contact-card {
+        min-width: 0;
+        padding: 0.9rem 1rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--surface-soft);
+      }
+
+      .contact-label {
+        margin-bottom: 0.25rem;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+      }
+
+      .contact-value {
+        font-weight: 600;
+        overflow-wrap: anywhere;
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        padding: 1.5rem 0 0;
+        border-top: 1px solid var(--border);
+        color: var(--text-muted);
+        font-size: 0.84rem;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0.25rem 0;
+        overflow-wrap: anywhere;
+      }
+
+      .back-to-top {
+        position: fixed;
+        right: clamp(14px, 4vw, 28px);
+        bottom: clamp(14px, 4vw, 28px);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(44px, 5vw, 48px);
+        height: clamp(44px, 5vw, 48px);
+        border: none;
+        border-radius: 50%;
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(64, 74, 180, 0.36);
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition: opacity 0.25s ease, transform 0.25s ease,
+          visibility 0.25s ease, background-color 0.2s ease;
+      }
+
+      .back-to-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .back-to-top:hover {
+        background: var(--primary-dark);
+      }
+
+      @media (max-width: 600px) {
+        .toc ol {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+      <header class="hero">
+        <span class="badge">
+          <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          隐私与数据
+        </span>
+        <h1>AMMDS 隐私政策</h1>
+        <p class="subtitle">
+          本政策说明 AMMDS 自托管媒体库会接触哪些信息、如何使用与保存，以及你在数据方面可以提出哪些请求。
+        </p>
+        <div class="date-row">
+          <span class="date-pill">
+            <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            生效日期：2026年01月01日
+          </span>
+          <span class="date-pill date-pill--updated">
+            <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1.06 6.7 2.82L21 8"/><path d="M21 3v5h-5"/></svg>
+            更新日期：2026年11月14日
+          </span>
+        </div>
+        <p class="meta-line">全文约 8,000 字 · 建议阅读约 18 分钟</p>
+      </header>
+
+      <aside class="card summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          核心要点
+        </h2>
+        <ul class="summary-grid">
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span><strong>数据留在实例</strong>账号、媒体元数据与日志保存在部署者控制的服务器或本机，软件作者不接收。</span>
+          </li>
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            <span><strong>按需连接外部</strong>刮削、Gravatar 与 DiceBear、网盘、推送默认关闭，仅在配置并启用后发送必要数据。</span>
+          </li>
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8.5-3.5L21 6z"/></svg>
+            <span><strong>不出售不画像</strong>不将信息出售给第三方，也不用于广告投放或跨站追踪。</span>
+          </li>
+          <li class="summary-item">
+            <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span><strong>可查可改可删</strong>你可以通过站点管理员行使访问、更正、删除与撤回同意等权利。</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="card lead">
+        <p>
+          AMMDS 是一套可以自行部署的媒体库系统。与由单一公司集中运营的在线服务不同，本站的账号、媒体资料、播放记录和日志通常存放在部署者自己的服务器、数据库或对象存储中。因此，本政策描述的是 AMMDS 在功能层面会处理哪些数据，以及部署者应当如何对待这些数据；具体到某一个站点，实际做法仍取决于该站点的配置与管理。
+        </p>
+        <p>
+          本政策中的“本站”指你正在访问的 AMMDS 实例，“我们”指该实例的部署者或运营者。软件作者不运营你的实例，也不会接收实例内产生的账号、媒体或日志数据；这些数据不会回传到任何官方服务器。只有运营者主动配置了外部数据源、网盘、头像或推送服务时，必要的数据才会按照相应功能的说明发送给第三方。
+        </p>
+        <p>
+          如果你是普通用户或访客，建议在注册前了解本站由谁运营、是否开放注册、数据保存在哪里；如果你是部署者或管理员，建议把本政策与你的实际配置对照阅读，并在站点内补充说明存储位置、备份周期和删除方式，避免政策描述与实际做法不一致。
+        </p>
+      </div>
+
+      <nav class="card toc" aria-labelledby="toc-title">
+        <h2 class="toc-title" id="toc-title">目录</h2>
+        <ol>
+          <li><a href="#sec1">引言与适用范围</a></li>
+          <li><a href="#sec2">本站会处理哪些信息</a></li>
+          <li><a href="#sec3">信息的使用目的</a></li>
+          <li><a href="#sec4">Cookie、本地存储与日志</a></li>
+          <li><a href="#sec5">元数据刮削与数据源</a></li>
+          <li><a href="#sec6">头像、Gravatar 与 DiceBear</a></li>
+          <li><a href="#sec7">网盘、WebDAV/S3 与外部集成</a></li>
+          <li><a href="#sec8">推送通知</a></li>
+          <li><a href="#sec9">存储地点、期限与删除</a></li>
+          <li><a href="#sec10">信息共享与披露</a></li>
+          <li><a href="#sec11">你的权利</a></li>
+          <li><a href="#sec12">未成年人保护</a></li>
+          <li><a href="#sec13">安全措施</a></li>
+          <li><a href="#sec14">政策的更新与联系我们</a></li>
+        </ol>
+      </nav>
+
+      <main id="main">
+        <section class="card section" id="sec1" aria-labelledby="sec1-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
+            <h2 id="sec1-title">一、引言与适用范围</h2>
+          </div>
+          <p class="section-intro">
+            本节界定本政策适用于谁、覆盖哪些场景，以及文中几个关键概念的含义。先把适用范围说清楚，后面的说明才不会与你的实际使用场景错位。
+          </p>
+          <p>
+            本政策适用于你通过网页、移动端页面、开放接口或随实例启用的客户端访问 AMMDS 时产生的个人信息处理活动。无论你是未注册的访客、注册用户、管理员，还是通过 API 或 WebDAV 连接本站的客户端，只要你的信息被本站处理，本政策都可能适用。本政策覆盖账号、媒体库、评论与个人主页、搜索、通知、日志以及外部集成等场景。
+          </p>
+          <p>
+            为便于阅读，本政策中的“个人信息”指能够单独或与其他信息结合识别特定自然人的信息，例如邮箱、账号标识、IP 地址和设备信息；“敏感个人信息”指一旦泄露或被不当使用，容易导致人格尊严受到侵害或人身、财产安全受到危害的信息。AMMDS 默认不要求用户提供身份证件、生物识别或精确位置等敏感信息；“处理”包括收集、存储、使用、加工、传输、提供、删除等环节。
+          </p>
+          <p>
+            本政策与《用户协议》共同构成你使用本站的约定。用户协议侧重服务规则与责任边界，本政策侧重个人信息保护；两者就个人信息处理表述不一致时，以本政策为准。若运营者针对某个具体功能发布了补充说明，例如商城兑换所需的联系信息或活动报名信息，该说明与本政策共同适用。
+          </p>
+          <p>
+            本政策不适用于你通过本站跳转到的第三方网站或服务。刮削数据源、网盘、对象存储、推送平台和头像服务均有各自的隐私政策，本站无法控制其数据处理行为。你在启用相关集成前，应阅读对应服务商的说明，并自行判断是否接受其条款。
+          </p>
+        </section>
+
+        <section class="card section" id="sec2" aria-labelledby="sec2-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </span>
+            <h2 id="sec2-title">二、本站会处理哪些信息</h2>
+          </div>
+          <p class="section-intro">
+            本节按信息来源梳理本站可能接触到的数据类别，帮助你在使用具体功能前判断会留下什么记录。并非每个实例都会启用全部功能，实际处理范围以本站配置和页面提示为准。
+          </p>
+          <p>
+            <strong>账号与身份信息。</strong>注册或初始化时，本站会处理用户名、邮箱地址、密码的不可逆哈希、昵称、用户 ID、头像、角色与权限、注册时间、最后登录时间等。手机号、社交链接和个人简介通常为选填项。管理员邮箱还可能用于接收系统通知、安全告警或密码重置邮件。本站不会以明文形式保存你的密码。
+          </p>
+          <p>
+            <strong>媒体库与使用记录。</strong>当你浏览、播放、收藏、评分或评论时，本站会记录相应的媒体条目、播放进度、收藏关系、评分内容、评论文字、标签和操作时间。媒体文件的路径、目录名、文件大小、哈希或外部标识可能被用于识别与刮削。若站点启用了站内搜索统计，搜索关键词也可能被记录，用于改进检索结果和排查异常。
+          </p>
+          <p>
+            <strong>设备与访问日志。</strong>为保障安全和排查故障，部署者服务器通常会记录访问时间、IP 地址、请求路径、HTTP 状态、浏览器与设备标识、来源页面、登录尝试和错误堆栈。这些日志可能与其他信息结合用于识别异常访问、暴力破解或滥用行为。日志的详细程度与保存期限由运营者配置。
+          </p>
+          <p>
+            <strong>浏览器本地存储。</strong>本站会使用 Cookie 或 localStorage 保存登录会话、语言、主题、落地页偏好、播放音量与部分界面状态。这些数据主要留在你的浏览器中，不会随每次请求全部发往站点服务器。你可以通过浏览器设置查看和清除它们。
+          </p>
+          <p>
+            <strong>你主动提供的信息。</strong>在初始化站点、完善资料、提交反馈、填写表单或使用商城兑换时，你可能会主动提供文字、图片、联系方式或收货信息。此类信息的使用目的应在相应页面中说明；如果商城模块涉及配送或售后，运营者应单独告知所需字段与保存期限。
+          </p>
+        </section>
+
+        <section class="card section" id="sec3" aria-labelledby="sec3-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <h2 id="sec3-title">三、信息的使用目的</h2>
+          </div>
+          <p class="section-intro">
+            处理信息本身不是目的，信息应当服务于具体、可解释的功能。本节把常见用途与必要性对应起来，便于你判断某项处理是否超出了合理范围。
+          </p>
+          <p>
+            账号信息主要用于完成注册、登录、身份验证、密码重置、权限校验和个人主页展示。没有邮箱和账号标识，本站无法区分不同用户，也无法在忘记密码时恢复访问。角色与权限信息用于决定你能看到哪些媒体库、能否发表评论、能否使用商城或管理功能。@ 提及、关注或站内互动也依赖账号标识来完成。
+          </p>
+          <p>
+            媒体库数据用于展示条目详情、记录播放进度、同步收藏与评分、生成继续观看列表，以及在你主动使用时提供搜索和筛选结果。若站点启用了基于站内行为的推荐，推荐逻辑应只在本地使用这些记录，并向你说明关闭方式；本站默认不将播放记录用于跨站广告画像。
+          </p>
+          <p>
+            管理员邮箱与通知配置用于发送系统级消息，例如任务失败、磁盘空间不足、许可证状态、安全告警或服务异常。推送内容应尽量精简，避免包含密码、密钥或完整的敏感文件路径。你可以调整通知渠道或关闭非必要通知。
+          </p>
+          <p>
+            访问日志用于安全审计、异常登录识别、滥用防护、故障排查和性能分析。当出现账号被盗、接口被刷或服务异常时，日志是定位问题的重要依据。运营者应限制日志访问权限，避免将其用于与安全无关的用户画像。
+          </p>
+          <p>
+            在法律法规要求或配合合法监管、司法程序时，本站可能需要在必要范围内使用或提供相关信息。除此之外，本站不会将你的个人信息出售、出租给第三方，也不会用于广告投放。若未来引入统计分析或自动化决策功能，运营者应另行说明其目的、范围和退出方式，涉及重大影响的应征得你的同意。
+          </p>
+        </section>
+
+        <section class="card section" id="sec4" aria-labelledby="sec4-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </span>
+            <h2 id="sec4-title">四、Cookie、本地存储与日志</h2>
+          </div>
+          <p class="section-intro">
+            本节说明浏览器端保存了什么、为什么需要这些数据，以及清除之后会发生什么。理解 Cookie 与 localStorage 的区别，有助于你在便利和安全之间作出选择。
+          </p>
+          <p>
+            Cookie 是站点服务器写入浏览器的小段数据，会在后续请求中自动携带。本站使用必要的 Cookie 维持登录会话、识别用户身份、防止跨站请求伪造，并在你选择“记住我”时延长登录有效期。禁用这些 Cookie 通常会导致无法登录、操作被拒绝或偏好无法保存。本站默认不使用第三方广告 Cookie。
+          </p>
+          <p>
+            localStorage 是浏览器提供的本地键值存储，容量比 Cookie 大，但不会随每次请求自动发送。本站可能用它保存主题、语言、落地页、播放音量、目录展开状态等偏好。由于 localStorage 可被同源脚本读取，运营者应通过内容安全策略、输入过滤和依赖更新降低跨站脚本风险，避免在其中保存密码或长期令牌。
+          </p>
+          <p>
+            如果运营者额外接入统计分析、错误监控或客服组件，这些组件可能设置自己的 Cookie 或发起网络请求。此类接入应在本政策或站点公告中说明，并提供关闭方式。未经说明，本站不主动部署跨站广告追踪、社交插件或数据买卖类脚本。
+          </p>
+          <p>
+            访问日志由服务器生成，记录请求时间、IP、路径、状态码、设备信息等。日志的保存期限由运营者配置，超过期限后应自动清理或手动清理。运营者应限制日志的访问权限，仅在安全审计、故障排查和合规需要时使用，并避免将日志长期用于与安全无关的分析。
+          </p>
+          <p>
+            你可以在浏览器中清除 Cookie 和 localStorage，也可以使用隐私模式访问本站。清除后，登录状态可能丢失，主题和播放偏好会重置，部分需要会话的功能需要重新验证。若你怀疑账号在公共设备上未退出，请主动清除站点数据并修改密码。
+          </p>
+        </section>
+
+        <section class="card section" id="sec5" aria-labelledby="sec5-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <h2 id="sec5-title">五、元数据刮削与数据源</h2>
+          </div>
+          <p class="section-intro">
+            刮削需要把少量识别字段发送给外部数据源。本节说明发送什么、可能发往哪里，以及你可以通过哪些配置减少外发。
+          </p>
+          <p>
+            刮削默认关闭。启用后，本站才会把媒体条目的标题、原始标题、年份、类型、季集编号、外部 ID、文件名或目录名、语言与地区等信息发送给选定的数据源；这些条目的元数据仍保存在部署者自己的数据库中。这些字段用于让数据源判断你要匹配的是哪部作品。本站不会为了刮削发送你的账号密码、播放记录或邮箱地址；数据源可能看到发起请求的服务器 IP、请求时间和查询参数。
+          </p>
+          <p>
+            常见数据源包括 TMDB、TVDB、豆瓣、Bangumi、MetaTube，以及运营者自行配置的第三方或私有接口。不同来源的隐私政策、服务器位置和保留策略不同，部分服务可能位于境外。运营者可以根据内容类型和语言选择来源，也可以设置多个来源的优先级；你应了解本站实际启用了哪些来源。
+          </p>
+          <p>
+            刮削返回的简介、海报、背景图、演职员、剧集列表和评分会写入本站数据库。图片可能被下载到本地缓存，也可能以远程 URL 的方式引用；无论哪种方式，加载图片时都可能向数据源或其 CDN 暴露你的 IP 地址和请求路径。若站点配置了图片代理，请求会先经过本站服务器，再由本站转发。
+          </p>
+          <p>
+            如果你不希望识别字段外发，可以请求管理员关闭对应刮削源，或改为手动填写元数据、使用本地图片。关闭后，条目仍可正常浏览，但自动匹配、海报和剧集信息可能缺失。运营者也可以在网络层限制出站访问，只允许必要的域名，从而降低数据外发的范围。
+          </p>
+        </section>
+
+        <section class="card section" id="sec6" aria-labelledby="sec6-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+            </span>
+            <h2 id="sec6-title">六、头像、Gravatar 与 DiceBear</h2>
+          </div>
+          <p class="section-intro">
+            头像看似小事，却是最容易把账号标识发送到外部的一环。本节说明 Gravatar 与 DiceBear 的工作方式、可关闭的选项，以及头像加载失败时的本地兜底。
+          </p>
+          <p>
+            Gravatar 使用邮箱地址的哈希来关联头像。启用该功能时，AMMDS 会对规范化后的邮箱地址计算 SHA-256 哈希，并把哈希发送到 gravatar.com 查询对应头像；邮箱原文不会随请求发送。不过，如果第三方已经知道你的邮箱，仍可以通过相同哈希进行关联，因此哈希并不等于匿名。
+          </p>
+          <p>
+            是否启用 Gravatar 由站点配置和个人设置决定。你可以在个人资料中关闭外部头像，改为上传本地图片或使用系统生成的图案。关闭后，本站不会再为你的账号请求 Gravatar；已经由 Gravatar 返回的公开资料，仍需按该服务的政策处理。
+          </p>
+          <p>
+            Gravatar 可能返回昵称、个人主页链接等公开资料，具体取决于你在该平台的设置。请求过程会向 gravatar.com 及其 CDN 暴露本站服务器的 IP、请求时间和哈希值。若站点启用了头像代理，请求会经过本站转发，但第三方仍可能看到代理服务器的地址。
+          </p>
+          <p>
+            当 Gravatar 不可用、哈希无匹配或你未设置头像时，本站会使用 DiceBear 等方案生成兜底头像，例如基于用户名首字或颜色生成图案，避免出现破图。DiceBear 的图案默认在浏览器本地绘制，不产生外部请求；只有部署者把它指向外部或自建的 DiceBear 服务时，请求才会发往该地址。对隐私要求较高的用户，建议直接上传本地头像。
+          </p>
+        </section>
+
+        <section class="card section" id="sec7" aria-labelledby="sec7-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </span>
+            <h2 id="sec7-title">七、网盘、WebDAV/S3 与外部集成</h2>
+          </div>
+          <p class="section-intro">
+            当实例把媒体库指向 115、WebDAV 或 S3 时，数据会在多个系统之间流动。本节说明流动的范围、凭据的敏感程度，以及运营者应当采取的最小化措施。
+          </p>
+          <p>
+            115 集成默认关闭。部署者主动连接 115 网盘后，本站才会处理账号凭据、Cookie、文件标识、目录路径、下载链接和转存请求。离线下载、转存、目录同步与 STRM 生成都依赖这些信息。网盘服务商会记录请求并可能对第三方客户端进行限制，由此产生的账号风控、链接失效或下载失败，应由使用该集成的运营者与用户自行评估。
+          </p>
+          <p>
+            使用 WebDAV 时，本站需要服务地址、端口、用户名和密码或应用专用密码；使用 S3 兼容存储时，需要端点、存储桶、区域和访问密钥。数据实际存放在自建服务器、国内云还是境外云，由运营者选择。运营者应使用最小权限的专用凭据，限制可访问的目录或桶，并定期轮换密钥。
+          </p>
+          <p>
+            STRM 文件、缓存索引和下载记录可能包含指向网盘的链接或文件标识。这些内容应被视为敏感数据，不应公开分享或提交到公共仓库。若本站提供导出功能，导出文件也可能包含上述信息，请在导出后妥善保管。
+          </p>
+          <p>
+            运营者对存储集成负有配置责任：应避免使用主账号的高权限密钥，限制管理后台的访问来源，启用 HTTPS，监控异常请求，并在人员变动或凭据泄露时及时撤销。普通用户如果对数据去向有疑问，应向站点管理员了解实际使用的存储服务与位置。
+          </p>
+          <p>
+            关闭集成后，本站不再发起新的外部请求，但第三方已经接收或留存的数据不会因此自动删除。你需要按照对应服务商的流程另行申请删除。对于历史备份中的副本，则按运营者的备份轮换策略自然过期。
+          </p>
+        </section>
+
+        <section class="card section" id="sec8" aria-labelledby="sec8-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </span>
+            <h2 id="sec8-title">八、推送通知</h2>
+          </div>
+          <p class="section-intro">
+            推送让管理员及时知道任务失败或系统异常，但也意味着部分内容会经过第三方通道。本节说明发送什么、可能被谁看到，以及如何关闭。
+          </p>
+          <p>
+            推送渠道默认关闭。AMMDS 可以接入 Bark、Ntfy、Gotify、Telegram、邮件和通用 Webhook 等通知渠道。配置通常由管理员完成，也可能允许用户为自己的账号绑定接收端。不同渠道的认证方式不同，例如设备令牌、应用密钥、机器人 Token、Chat ID 或 Webhook URL。
+          </p>
+          <p>
+            通知内容通常包括标题、正文、时间戳、任务状态、媒体标题、错误摘要和跳转链接。为了便于定位问题，错误信息可能包含文件路径或服务地址。运营者应避免在通知中传递密码、访问密钥、完整邮箱列表或其他不必要的个人信息。
+          </p>
+          <p>
+            第三方推送平台可能在其服务器上留存消息，Telegram 等云端聊天服务还可能长期保存聊天记录。邮件在传输过程中是否加密取决于链路配置，收件服务器也可能留存副本。建议优先使用自托管的 Ntfy 或 Gotify，或使用 HTTPS 的 Webhook，并限制接收端的访问权限。
+          </p>
+          <p>
+            你可以随时关闭不需要的通知渠道，删除已经保存的令牌或 Webhook 地址，并检查接收端是否仍有历史消息。关闭后，本站不会再向该渠道发送新通知，但已经发送的内容需由你或接收平台自行清理。
+          </p>
+        </section>
+
+        <section class="card section" id="sec9" aria-labelledby="sec9-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </span>
+            <h2 id="sec9-title">九、存储地点、期限与删除</h2>
+          </div>
+          <p class="section-intro">
+            自托管并不意味着数据会永久保存。本节说明数据放在哪里、通常保留多久、删除时会发生什么，以及为什么备份中的副本可能延迟消失。
+          </p>
+          <p>
+            本站的数据通常存放在运营者控制的服务器、数据库、缓存目录或对象存储中。具体位置由运营者选择，可能位于境内，也可能位于境外；AMMDS 软件不提供统一的云端托管，也不会把实例数据上传到官方服务器。若运营者使用第三方云服务，数据所在地还受该服务商的区域配置约束。
+          </p>
+          <p>
+            账号信息一般在账户存续期间保留，账号注销后删除或匿名化；媒体元数据保留到条目被删除或站点执行清理；访问日志按运营者配置的期限保留，常见做法是数天到数月；浏览器本地存储保留到你主动清除、会话结束或达到过期时间；备份则按轮换周期自然过期。法律法规要求保留的记录，可能在必要期限内继续保存。
+          </p>
+          <p>
+            删除账号或内容时，本站会从主存储中移除相应记录，并解除关联。由于备份、日志归档和缓存的存在，副本不会在同一时刻全部消失；运营者应在备份轮换后完成最终清理。若数据已经提供给第三方，例如推送平台或网盘服务商，则需按照第三方的流程另行删除。
+          </p>
+          <div class="table-wrap">
+            <table>
+              <caption>
+                常见数据类别的保存情况示例。实际期限以本站管理员配置为准。
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">数据类别</th>
+                  <th scope="col">主要用途</th>
+                  <th scope="col">常见保存期限</th>
+                  <th scope="col">删除方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>账号与资料</td>
+                  <td>登录、权限、个人主页</td>
+                  <td>账户存续期间</td>
+                  <td>注销后删除或匿名化</td>
+                </tr>
+                <tr>
+                  <td>媒体元数据</td>
+                  <td>展示、检索、刮削结果</td>
+                  <td>直至条目删除或清理</td>
+                  <td>删除条目或整库清理</td>
+                </tr>
+                <tr>
+                  <td>播放与互动记录</td>
+                  <td>进度、收藏、评论</td>
+                  <td>账户存续期间或按站点配置</td>
+                  <td>用户删除或随账号注销</td>
+                </tr>
+                <tr>
+                  <td>访问日志</td>
+                  <td>安全审计、故障排查</td>
+                  <td>由运营者配置，通常数天至数月</td>
+                  <td>到期自动清理</td>
+                </tr>
+                <tr>
+                  <td>浏览器本地存储</td>
+                  <td>会话、主题、偏好</td>
+                  <td>至清除、会话结束或过期</td>
+                  <td>浏览器清除站点数据</td>
+                </tr>
+                <tr>
+                  <td>备份副本</td>
+                  <td>灾难恢复</td>
+                  <td>按备份轮换周期</td>
+                  <td>轮换后自然过期</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            如果你需要保留某些数据，请在注销或删除前自行导出。账号注销可能导致个人主页、评论、收藏和播放记录一并移除，且无法恢复；运营者在核实身份后执行删除，但可能保留必要的安全审计记录以应对争议或法律要求。
+          </p>
+        </section>
+
+        <section class="card section" id="sec10" aria-labelledby="sec10-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <h2 id="sec10-title">十、信息共享与披露</h2>
+          </div>
+          <p class="section-intro">
+            本节说明什么情况下信息会离开实例，以及本站不会做什么。对自托管服务而言，最重要的原则是最小必要和可解释。
+          </p>
+          <p>
+            本站不会出售、出租你的个人信息，也不会与广告网络、数据经纪商共享。运营者不应将账号列表、邮箱、播放记录或日志用于与本站服务无关的营销活动。若未来出现合并、收购或服务承接，相关信息可能作为整体资产的一部分转移，但应提前通知你，并要求承接方继续受本政策约束。
+          </p>
+          <p>
+            所有外部集成默认关闭；只有在你或管理员主动启用相应功能时，本站才会向外部服务发送必要数据。例如刮削时发送识别字段，使用 Gravatar 时发送邮箱哈希，连接网盘或对象存储时发送凭据和文件标识，使用推送时发送通知内容。这些共享的范围应限于实现功能所必需，不应额外附带无关的个人信息。
+          </p>
+          <p>
+            你在个人主页、评论或公开列表中主动展示的昵称、头像、用户 ID、简介和社交链接，可能被其他访客看到。请谨慎填写希望公开的信息；对于不希望公开的字段，应避免填写或调整可见性设置。站点无法控制其他用户对你公开信息的复制或转述。
+          </p>
+          <p>
+            在法律法规要求、司法机关或行政机关依法提出要求、处理安全事件或欺诈行为、保护本站或他人合法权益所必需的情况下，本站可能披露必要信息。披露应限于法定或必要的范围，并保留相应记录。对于明显超出范围的请求，运营者应要求对方提供合法依据。
+          </p>
+          <p>
+            经过聚合或匿名化处理、无法识别到具体个人的统计数据，可以用于了解服务使用情况、优化性能和撰写运营报告。此类数据不再属于个人信息，但仍应避免通过组合分析重新识别到个人。
+          </p>
+        </section>
+
+        <section class="card section" id="sec11" aria-labelledby="sec11-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8.5-3.5L21 6z"/></svg>
+            </span>
+            <h2 id="sec11-title">十一、你的权利</h2>
+          </div>
+          <p class="section-intro">
+            本节列出你可以提出的数据请求，以及自托管场景下的行使方式。由于每个实例由不同运营者管理，请求通常需要通过站点管理员处理。
+          </p>
+          <p>
+            你可以要求了解本站是否处理你的个人信息、处理了哪些类型、用于什么目的；可以访问并获取账号资料、个人主页信息和其他由你提供的数据副本；发现信息不准确时，可以要求更正；在符合法律规定的情况下，可以要求删除账号、评论、头像或其他相关信息；你也可以撤回此前对某项集成的同意，或要求限制对特定信息的处理。
+          </p>
+          <p>
+            提出请求时，请说明你的账号或用户 ID、请求类型、涉及的数据范围和联系方式。运营者可能需要验证你的身份，以避免他人冒名删除或获取数据。对于合理的请求，通常不收取费用；对于明显重复、过度或需要大量技术处理的请求，运营者可以在法律允许的范围内拒绝或收取合理成本。
+          </p>
+          <p>
+            某些请求可能受到限制。例如，为履行法律义务、处理争议、保障安全或保护他人权利所必需的信息，可能无法立即删除；删除账号可能导致你无法继续使用本站；备份中的副本需要等待轮换周期结束。运营者应在合理期限内告知处理结果和限制原因。
+          </p>
+          <p>
+            如果你对本站的数据处理有异议，可以先与站点管理员沟通；沟通无果的，可以向有管辖权的个人信息保护监管机构投诉。若本站由组织运营，你也可以向该组织的负责人或数据保护负责人反映。我们建议先通过内部渠道解决，以便更快定位具体配置或数据问题。
+          </p>
+        </section>
+
+        <section class="card section" id="sec12" aria-labelledby="sec12-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            </span>
+            <h2 id="sec12-title">十二、未成年人保护</h2>
+          </div>
+          <p class="section-intro">
+            本节说明本站对未成年人的态度、发现未成年人使用时的处理方式，以及监护人可以做些什么。媒体内容可能包含不适合未成年人的题材，因此需要额外谨慎。
+          </p>
+          <p>
+            本站不向未满十八周岁的未成年人提供服务。未成年人应在监护人陪同下停止注册、登录或使用本站，也不应通过借用他人账号、伪造年龄等方式绕过限制。运营者在注册流程、站点公告或社区规则中明确年龄要求，并可根据内容分级限制访问。
+          </p>
+          <p>
+            如果运营者发现使用者未满十八周岁，可以停用其账号、删除相关个人信息，并视情况通知监护人。对于使用虚假信息注册的账号，监护人可以在提供必要证明后联系运营者申请删除。运营者应在核实身份的前提下处理，避免误删或泄露未成年人信息。
+          </p>
+          <p>
+            监护人应关注未成年人的上网行为，帮助其选择适龄内容，并妥善保管家庭设备上的账号与密码。本站的媒体库内容由运营者导入，是否适合未成年人应由运营者与监护人共同判断；对于明显不适宜的内容，运营者可以通过分级、隐藏或访问限制进行管理。
+          </p>
+          <p>
+            如果当地法律对未成年人使用网络服务规定了不同的年龄门槛或监护人同意要求，则在该法律适用的范围内优先执行。运营者应根据实际服务对象和所在地区，调整注册规则与内容分级策略。
+          </p>
+        </section>
+
+        <section class="card section" id="sec13" aria-labelledby="sec13-title">
+          <div class="section-head">
+            <span class="section-icon">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <h2 id="sec13-title">十三、安全措施</h2>
+          </div>
+          <p class="section-intro">
+            本节说明本站采用的技术与管理措施，以及发生安全事件时的处理方式。任何系统都无法保证绝对安全，因此也需要你配合做好账号与设备防护。
+          </p>
+          <p>
+            在技术层面，账号密码应以不可逆哈希算法保存，登录与敏感操作应通过加密通道传输，管理后台与普通页面应进行权限隔离。数据库、配置文件和备份应限制访问权限，避免直接暴露在公网。运营者还应及时更新依赖、修补已知漏洞、限制上传文件类型，并对异常登录和频繁请求进行监控。
+          </p>
+          <p>
+            在管理层面，运营者应遵循最小权限原则，只授予必要的管理角色，定期清理离职或不再使用的账号，使用独立的强密码和密钥管理工具，并避免在聊天记录、截图或代码仓库中暴露凭据。对涉及导出、删除和批量修改的操作，应保留审计记录。
+          </p>
+          <p>
+            发生安全事件时，运营者应尽快评估影响范围、阻断攻击路径、保存必要证据，并在法律要求或影响较大的情况下通知受影响的用户和监管部门。通知内容应包括事件性质、可能受影响的数据、已采取的措施以及你可以采取的防护建议。
+          </p>
+          <p>
+            你也可以采取一些简单措施：使用与其他网站不同的强密码，不在公共设备上勾选“记住我”，及时退出登录，核对站点域名与 HTTPS 状态，谨慎点击来源不明的链接。发现漏洞或账号异常时，请通过本政策末尾的方式联系运营者，不要在公开区域发布可利用的细节。
+          </p>
+        </section>
+
+        <section class="card section" id="sec14" aria-labelledby="sec14-title">
+          <div class="section-head">
+            <span class="section-icon section-icon--accent">
+              <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            </span>
+            <h2 id="sec14-title">十四、政策的更新与联系我们</h2>
+          </div>
+          <p class="section-intro">
+            本节说明政策如何更新，以及遇到隐私问题、数据请求或安全事件时应该联系谁。把请求发到正确的渠道，可以减少往返并加快处理。
+          </p>
+          <p>
+            随着功能演进、外部服务变化或法律法规调整，运营者可能更新本政策。更新后的文本会在本页面发布，并同步修改顶部的“更新日期”。对于涉及处理目的、信息类型或共享对象的重大变更，运营者应通过站内公告、弹窗或邮件等方式在合理期限内提醒你。
+          </p>
+          <p>
+            更新生效后，你继续使用本站即视为接受修订后的政策。如果你不同意更新内容，应停止使用本站，并可以要求删除账号与相关数据。你可以在本页面查看当前版本；如需了解历史版本，可以向运营者提出请求。
+          </p>
+          <p>
+            如果你对本政策有疑问，或希望行使访问、更正、删除、撤回同意等权利，请通过下方邮箱联系。请在邮件中说明账号或用户 ID、请求类型、涉及的数据范围，并附上必要的证明。涉及安全漏洞时，请提供复现步骤和影响评估，并避免公开披露可利用细节。
+          </p>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-label">电子邮箱</div>
+              <div class="contact-value"><a href="mailto:support@lifebus.top">support@lifebus.top</a></div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">服务时间</div>
+              <div class="contact-value">工作日 10:00-18:00</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">服务主体</div>
+              <div class="contact-value">新疆萌森软件开发工作室</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>版权所有 © 2023-2026 新疆萌森软件开发工作室</p>
+        <p>统一社会信用代码：91652301MACHE3T54</p>
+        <p>成立日期：2023年4月28日</p>
+      </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script>
+      (function () {
+        var bar = document.getElementById("progressBar");
+        var btn = document.getElementById("backToTop");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var ticking = false;
+
+        function update() {
+          var doc = document.documentElement;
+          var max = doc.scrollHeight - doc.clientHeight;
+          var top = window.scrollY || doc.scrollTop || 0;
+          var ratio = max > 0 ? Math.min(1, Math.max(0, top / max)) : 0;
+          bar.style.transform = "scaleX(" + ratio + ")";
+          btn.classList.toggle("is-visible", top > 320);
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+          }
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true });
+        update();
+
+        btn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: reduceMotion.matches ? "auto" : "smooth"
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

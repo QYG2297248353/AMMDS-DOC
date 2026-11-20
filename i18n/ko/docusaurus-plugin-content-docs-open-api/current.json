@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "latest",
+    "description": "The label for version current"
+  },
+  "sidebar.openApiSidebar.category.开始接入": {
+    "message": "시작하기",
+    "description": "The label for category '开始接入' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.接口速查": {
+    "message": "API 참조",
+    "description": "The label for category '接口速查' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器": {
+    "message": "만화 리더",
+    "description": "The label for category '漫画阅读器' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.备份包": {
+    "message": "백업 패키지",
+    "description": "The label for category '备份包' in sidebar 'openApiSidebar'"
+  },
+  "sidebar.openApiSidebar.category.开始接入.link.generated-index.title": {
+    "message": "시작하기",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.开始接入.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.开始接入.link.generated-index.description": {
+    "message": "오픈 플랫폼의 기능, API 키 발급, 첫 호출을 안내합니다.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.开始接入.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.接口速查.link.generated-index.title": {
+    "message": "API 레퍼런스",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.接口速查.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.接口速查.link.generated-index.description": {
+    "message": "요청과 응답의 일반 규칙과 자주 쓰는 엔드포인트 목록입니다.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.接口速查.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.title": {
+    "message": "만화 리더",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.description": {
+    "message": "Mihon 같은 리더 앱에서 AMMDS의 만화를 바로 읽는 방법입니다.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.漫画阅读器.link.generated-index.description'"
+  },
+  "sidebar.openApiSidebar.category.备份包.link.generated-index.title": {
+    "message": "백업 패키지",
+    "description": "The title for generated index 'sidebar.openApiSidebar.category.备份包.link.generated-index.title'"
+  },
+  "sidebar.openApiSidebar.category.备份包.link.generated-index.description": {
+    "message": "백업 패키지 구조, 전체 형식 명세, 그리고 크롤링한 데이터를 AI로 표준 백업 패키지를 만들게 하는 방법.",
+    "description": "The description for generated index 'sidebar.openApiSidebar.category.备份包.link.generated-index.description'"
+  }
+}

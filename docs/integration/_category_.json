@@ -1,0 +1,9 @@
+{
+  "label": "集成应用",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "影片资料网站、资源站点、下载器、播放器、通知与小工具，每类一页讲清楚。",
+    "slug": "/integration"
+  }
+}

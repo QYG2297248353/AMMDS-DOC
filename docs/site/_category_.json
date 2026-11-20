@@ -1,0 +1,9 @@
+{
+  "label": "前台站点",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "不用登录后台也能看的页面：浏览、分享、商店与个人主页。",
+    "slug": "/site"
+  }
+}

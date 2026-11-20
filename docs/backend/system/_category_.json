@@ -1,0 +1,9 @@
+{
+  "label": "系统管理",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "设置项说明、备份恢复，以及系统检查、日志、许可证等日常维护。",
+    "slug": "/backend/system"
+  }
+}

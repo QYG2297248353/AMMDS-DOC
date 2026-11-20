@@ -1,0 +1,104 @@
+{
+  "id": "/?source=pwa",
+  "name": "AMMDS Documentation",
+  "short_name": "AMMDS Docs",
+  "description": "AMMDS 官方文档中心 —— 媒体元数据抓取与管理工具，支持 Emby、Jellyfin、Plex。",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+
+  "icons": [
+    {
+      "src": "/img/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/pwa/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/img/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "categories": [
+    "documentation",
+    "developer",
+    "productivity",
+    "utilities"
+  ],
+
+  "screenshots": [
+    {
+      "src": "/img/pwa/screenshot-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/img/pwa/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "快速开始",
+      "short_name": "Quick Start",
+      "description": "AMMDS 快速安装与使用指南",
+      "url": "/docs/intro?source=pwa",
+      "icons": [
+        {
+          "src": "/img/pwa/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "更新日志",
+      "short_name": "Changelog",
+      "description": "查看 AMMDS 最新版本更新",
+      "url": "/blog?source=pwa",
+      "icons": [
+        {
+          "src": "/img/pwa/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "GitHub",
+      "short_name": "GitHub",
+      "description": "访问 AMMDS GitHub 仓库",
+      "url": "https://github.com/QYG2297248353/AMMDS-Docker",
+      "icons": [
+        {
+          "src": "/img/pwa/icon-maskable-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
